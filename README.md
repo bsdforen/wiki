@@ -11,7 +11,7 @@
 ## Git Repo klonen:
 
 ~~~bash
-~% git clone https://gitea.bsdforen.de/BSDForen.de/dokumentation-sphinx
+~% git clone https://github.com/bsdforen/wiki
 ~~~
 
 ## Sphinx in die virtuelle Python Umgebung installieren:
@@ -33,4 +33,3 @@
 ~% sphinx-autobuild -i "*.swp" -i "*.swx" -b html source build/livehtml
 ~% firefox http://127.0.0.1:8000
 ~~~
-
