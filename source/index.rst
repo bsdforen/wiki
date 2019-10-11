@@ -14,8 +14,9 @@ Wiki
 
    howto/howto_index.rst
    hardware/hardware_index.rst
-   openbsd/openbsd_index.rst
+   spiele/spiele_index.rst
    freebsd/freebsd_index.rst
+   openbsd/openbsd_index.rst
    netbsd/netbsd_index.rst
    dragonflybsd/dragonflybsd_index.rst
 
