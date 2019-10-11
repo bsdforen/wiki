@@ -23,7 +23,7 @@
 ## Dokumentation aus den Quellen erstellen:
 
 ~~~bash
-~% sphinx-build -b html source build/html
+~% sphinx-build -d build/doctrees -b html source build/html
 ~% firefox build/html/index.html
 ~~~
 
