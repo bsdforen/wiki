@@ -11,6 +11,7 @@ Spiele
    battle_realms.txt.rst
    diablo_ii.txt.rst
    starcraft.txt.rst
+   unreal.txt.rst
    unreal_tournament_2004_-_to-crossfire.txt.rst
    unreal_tournament_2004.txt.rst
 
