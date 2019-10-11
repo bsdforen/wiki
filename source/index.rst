@@ -13,6 +13,7 @@ Wiki
    :numbered:
 
    howto/howto_index.rst
+   anwendungen/anwendungen_index.rst
    hardware/hardware_index.rst
    spiele/spiele_index.rst
    freebsd/freebsd_index.rst
