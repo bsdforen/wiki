@@ -47,6 +47,7 @@ Die hier aufgeführten Artikel sind in der Regel
    dsl-router.txt.rst
    dsl_konfigurieren_netbsd.txt.rst
    dvb-t_karte_hauppauge_wintv-hvr_1300.txt.rst
+   dvb_unter_freebsd.txt.rst
    dvd-rip_mit_mencoder.txt.rst
    dvds_brennen.txt.rst
    ed2k-protokoll.txt.rst
@@ -110,6 +111,7 @@ Die hier aufgeführten Artikel sind in der Regel
    postfix_courier_openldap.txt.rst
    postfix_dspam.txt.rst
    postgresql_update.txt.rst
+   poudriere.txt.rst
    poudriere_guide.txt.rst
    putty.txt.rst
    remount_rw.txt.rst
