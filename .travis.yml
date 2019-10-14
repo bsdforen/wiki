@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.6"
+
+sudo: false
+cache: pip
+
+install:
+  - pip install -r requirements.txt
+script:
+  - sphinx-build -d build/doctrees -b html source build/html -nW
