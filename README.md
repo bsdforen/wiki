@@ -1,5 +1,10 @@
 # Sphinx Dokumentation für BSDForen.de
 
+| Branch | Status |
+| --- | --- |
+| `master` | [![Build Status](https://travis-ci.org/bsdforen/wiki.svg?branch=master)](https://travis-ci.org/bsdforen/wiki) |
+| `prod`   | [![Build Status](https://travis-ci.org/bsdforen/wiki.svg?branch=prod)](https://travis-ci.org/bsdforen/wiki) |
+
 ## Virtuelle Python Umgebung erstellen:
 
 ~~~bash
