@@ -12,6 +12,7 @@
 
 ~~~bash
 ~% git clone https://github.com/bsdforen/wiki
+~% cd wiki
 ~~~
 
 ## Sphinx in die virtuelle Python Umgebung installieren:
