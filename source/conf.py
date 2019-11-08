@@ -80,6 +80,8 @@ exclude_patterns = []
 #
 html_theme = 'rtd'
 html_theme_path = ['../.']
+html_css_files = ['css/custom.css']
+html_favicon = '_static/favicon.ico'
 #html_logo = 'images/logo-bsdforen.png'
 #html_theme_options = {
 #    'logo_only': False
