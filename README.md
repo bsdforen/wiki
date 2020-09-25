@@ -5,7 +5,7 @@
 | `master` | [![Build Status](https://travis-ci.org/bsdforen/wiki.svg?branch=master)](https://travis-ci.org/bsdforen/wiki) |
 | `prod`   | [![Build Status](https://travis-ci.org/bsdforen/wiki.svg?branch=prod)](https://travis-ci.org/bsdforen/wiki) |
 
-## Virtuelle Python Umgebung erstellen:
+## Virtuelle Python Umgebung erstellen
 
 ~~~bash
 ~% python3.7 -m venv sphinx
@@ -13,20 +13,20 @@
 ~% pip install --upgrade pip
 ~~~
 
-## Git Repo klonen:
+## Git Repo klonen
 
 ~~~bash
 ~% git clone https://github.com/bsdforen/wiki
 ~% cd wiki
 ~~~
 
-## Sphinx in die virtuelle Python Umgebung installieren:
+## Sphinx in die virtuelle Python Umgebung installieren
 
 ~~~bash
 ~% pip install -U -r requirements.txt
 ~~~
 
-## Dokumentation aus den Quellen erstellen:
+## Dokumentation aus den Quellen erstellen
 
 ~~~bash
 ~% sphinx-build -d build/doctrees -b html source build/html
