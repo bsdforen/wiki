@@ -11,7 +11,7 @@ ssh
   .. image:: ../images/logo-dragonflybsd.png
 
 Tipps und Tricks zum Umgang mit OpenSSH unter \*BSD und Linux. Ein SSH-Client
-für Windows ist `PuTTY <PuTTY>`__.
+für Windows ist `PuTTY <putty.txt>`__.
 
 sshd zum Starten verfügbar machen
 ---------------------------------
