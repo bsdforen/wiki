@@ -1,12 +1,12 @@
 ---
-name: build
+name: deploy
 on:
   push:
     branches:
-      - master
+      - prod
   pull_request:
     branches:
-      - master
+      - prod
 
 jobs:
   build:
@@ -14,10 +14,12 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9]
+        python-version: [3.9]
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
@@ -29,8 +31,15 @@ jobs:
           python3 -m pip install --upgrade pip wheel
           pip install -r requirements.txt
 
-      - name: Test sphinx-build
+      - name: Build page
         run: |
           sphinx-build -d build/doctrees -b html source build -nW
           touch build/.nojekyll
           echo "wiki.bsdforen.de" > build/CNAME
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          keep_files: false
