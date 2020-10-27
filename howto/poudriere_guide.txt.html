@@ -1,0 +1,1038 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.106. Poudriere Guide &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.107. PuTTY" href="putty.txt.html" />
+    <link rel="prev" title="1.105. Poudriere" href="poudriere.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.106. Poudriere Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einfuhrung">1.106.1. Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installieren-sie-die-erforderlichen-ports">1.106.2. Installieren Sie die erforderlichen Ports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#erstellen-sie-ein-ssl-zertifikat-und-einen-schlussel">1.106.3. Erstellen Sie ein SSL-Zertifikat und einen Schlüssel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfigurieren-von-poudriere">1.106.4. Konfigurieren von Poudrière</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#erstellen-der-build-umgebung">1.106.5. Erstellen der Build-Umgebung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#erstellen-einer-port-building-liste-und-festlegen-von-port-optionen">1.106.6. Erstellen einer Port-Building-Liste und Festlegen von Port-Optionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#die-ports-bauen">1.106.7. Die Ports bauen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#einrichten-von-nginx-fur-das-bereitstellen-des-front-ends-und-des-repositorys">1.106.8. Einrichten von Nginx für das Bereitstellen des Front-Ends und des Repositorys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paket-clients-konfigurieren">1.106.9. Paket-Clients konfigurieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#konfigurieren-des-build-servers-fur-die-verwendung-des-eigenen-paket-repos">1.106.9.1. Konfigurieren des Build-Servers für die Verwendung des eigenen Paket-Repos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#konfigurieren-von-remote-clients-fur-die-verwendung-des-repository-ihres-build-rechners">1.106.9.2. Konfigurieren von Remote-Clients für die Verwendung des Repository Ihres Build-Rechners</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cronjob">1.106.10. Cronjob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#befehlsliste">1.106.11. Befehlsliste</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.106. </span>Poudriere Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/poudriere_guide.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="putty.txt.html" class="btn btn-neutral float-right" title="1.107. PuTTY" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="poudriere.txt.html" class="btn btn-neutral float-left" title="1.105. Poudriere" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="poudriere-guide">
+<h1><span class="section-number">1.106. </span>Poudriere Guide<a class="headerlink" href="#poudriere-guide" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<div class="section" id="einfuhrung">
+<h2><span class="section-number">1.106.1. </span>Einführung<a class="headerlink" href="#einfuhrung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Das Ports-System ist eines der größten Vorteile von FreeBSD für
+Benutzer, die Flexibilität und Kontrolle über ihre Software wünschen. Es
+ermöglicht Administratoren das einfache Erstellen und Verwalten von
+quellbasierten Installationen mithilfe eines Systems, das robust und
+vorhersehbar ist.</p>
+<p>Während die Vorteile dieser Funktion groß sind, sind einige der am
+häufigsten gegen die portsbasierte Verwaltung erhobenen Beschwerden die
+Zeit und die Ressourcen, die für die Kompilierung der einzelnen
+Softwareprogramme erforderlich sind. Dies wird noch problematischer,
+wenn Sie eine große Anzahl von Servern verwalten, von denen jeder seine
+eigenen Ports kompiliert. Während FreeBSD-Pakete eine Alternative
+bieten, die die Installation beschleunigt, opfert sie die Kontrolle, die
+Ports gewähren.</p>
+<p>Um dieses Problem zu beheben, können Administratoren eine Anwendung
+namens <a class="reference external" href="https://www.freshports.org/ports-mgmt/poudriere/">poudriere</a>
+verwenden, um benutzerdefinierte Pakete zu erstellen und zu verwalten.
+Während es technisch so angelegt ist, dass es Pakete für eine Vielzahl
+von Architekturen erstellt, wird Poudrière oft als eine
+Paketerstellungsumgebung verwendet, um Pakete für eine gesamte
+Infrastruktur von FreeBSD-Servern zu erstellen und zu hosten.</p>
+</div>
+<div class="section" id="installieren-sie-die-erforderlichen-ports">
+<h2><span class="section-number">1.106.2. </span>Installieren Sie die erforderlichen Ports<a class="headerlink" href="#installieren-sie-die-erforderlichen-ports" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zu Beginn werden wir alle benötigten Ports installieren.</p>
+<p>Zuerst müssen wir Poudriere selbst installieren.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg install poudriere
+</pre></div>
+</div>
+<p>Schließlich wollen wir auch einen Webserver installieren. Dies wird zwei
+Zwecken dienen. Erstens wird dies die Methode sein, mit der unsere
+Maschinen die Pakete herunterladen können, die wir kompilieren werden.
+Zweitens bietet Poudriere eine Weboberfläche, so dass wir den
+Build-Prozess verfolgen und Protokolle überwachen können. In unserem
+Fall verwenden wir den NGINX Webserver:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg install nginx
+</pre></div>
+</div>
+</div>
+<div class="section" id="erstellen-sie-ein-ssl-zertifikat-und-einen-schlussel">
+<h2><span class="section-number">1.106.3. </span>Erstellen Sie ein SSL-Zertifikat und einen Schlüssel<a class="headerlink" href="#erstellen-sie-ein-ssl-zertifikat-und-einen-schlussel" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn wir Pakete mit Poudrière erstellen, wollen wir sie mit einem
+privaten Schlüssel signieren können. Dies stellt sicher, dass all unsere
+Maschinen die erstellten Pakete legitimieren und dass niemand die
+Verbindung zum Build-Rechner abfängt, um schädliche Pakete zu versenden.</p>
+<p>Wir werden sicherstellen, dass wir ein SSL-Verzeichnis haben, das zwei
+Unterverzeichnisse enthält, die keys und certs genannt werden. Wir
+können dies in einem Befehl tun, indem wir Folgendes eingeben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /usr/local/etc/ssl/<span class="o">{</span>keys,certs<span class="o">}</span>
+</pre></div>
+</div>
+<p>Unser privater Schlüssel, der geheim gehalten werden muss, wird im
+Schlüsselverzeichnis abgelegt. Dies wird verwendet, um die Pakete zu
+signieren, die wir erstellen werden.Wir können das Verzeichnis sperren,
+damit Benutzer ohne Root- oder Sudoprivilegien nicht mit dem Verzeichnis
+oder seinen Inhalten interagieren können:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">0600</span> /usr/local/etc/ssl/keys
+</pre></div>
+</div>
+<p>Als nächstes erzeugen wir einen 4096-Bit-Schlüssel namens
+<code class="docutils literal notranslate"><span class="pre">poudriere.key</span></code> und platzieren ihn in unserem <code class="docutils literal notranslate"><span class="pre">keys</span></code> Verzeichnis,
+indem Sie Folgendes eingeben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>openssl genrsa -out /usr/local/etc/ssl/keys/poudriere.key <span class="m">4096</span>
+</pre></div>
+</div>
+<p>Nachdem der Schlüssel generiert wurde, können Sie ein öffentliches
+Zertifikat daraus erstellen, indem Sie Folgendes eingeben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>openssl rsa -in /usr/local/etc/ssl/keys/poudriere.key -pubout -out /usr/local/etc/ssl/certs/poudriere.cert
+</pre></div>
+</div>
+<p>Wir haben jetzt die SSL-Komponenten, die wir benötigen, um Pakete zu
+signieren und die Signaturen zu verifizieren. Später werden wir unsere
+Clients so konfigurieren, dass sie das generierte Zertifikat für die
+Paketverifizierung verwenden.</p>
+</div>
+<div class="section" id="konfigurieren-von-poudriere">
+<h2><span class="section-number">1.106.4. </span>Konfigurieren von Poudrière<a class="headerlink" href="#konfigurieren-von-poudriere" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Jetzt wo wir unser SSL Zertifikat und Schlüssel haben, können wir mit
+der Konfiguration von Poudriere beginnen.</p>
+<p>Die Hauptkonfigurationsdatei befindet sich unter
+<code class="docutils literal notranslate"><span class="pre">/usr/local/etc/poudriere.conf</span></code>. Öffnen Sie diese Datei:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/poudriere.conf
+</pre></div>
+</div>
+<p>Die Poudriere-Konfigurationsdatei ist sehr gut kommentiert und die
+meisten Einstellungen müssen vordefiniert sein. Wir werden einige
+spezifische Änderungen vornehmen, aber die Mehrheit davon intakt lassen.</p>
+<p>Wenn Sie als Dateisystem UFS verwenden muss die folgende Option
+auskommentiert werden:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">NO_ZFS</span><span class="o">=</span>yes
+</pre></div>
+</div>
+<p>Wenn Ihr Server andererseits ZFS verwendet, können Sie poudriere für die
+Verwendung eines bestimmten Pools konfigurieren, indem Sie die Option
+ZPOOL festlegen. In diesem Pool können Sie den Stamm angeben, den
+poudriere für Pakete, Protokolle usw. mit der Option ZROOTFS verwenden
+soll. Beachten Sie, dass diese beiden Optionen nicht festgelegt werden
+sollten, wenn die Option NO_ZFS auf „yes“ gesetzt ist:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># NO_ZFS=yes</span>
+<span class="nv">ZPOOL</span><span class="o">=</span>tank
+<span class="nv">ZROOTFS</span><span class="o">=</span>/poudriere
+</pre></div>
+</div>
+<p>Beim Erstellen von Software verwendet Poudriere eine Art von Jail, um
+das Build-System vom Hauptbetriebssystem zu trennen. Als nächstes müssen
+wir einen gültigen Host ausfüllen, wo der Build-Rechner die Software
+herunterladen kann, die er für die Jails benötigt. Dies wird über die
+FREEBSD_HOST-Option konfiguriert.</p>
+<p>Diese Option sollte bereits vorhanden sein, obwohl sie derzeit nicht auf
+einen gültigen Host festgelegt ist. Sie können dies auf den Standardpfad
+<a class="reference external" href="ftp://ftp.freebsd.org">ftp://ftp.freebsd.org</a> ändern oder einen engeren Spiegel verwenden, wenn
+Sie einen kennen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FREEBSD_HOST</span><span class="o">=</span>ftp://ftp.freebsd.org
+</pre></div>
+</div>
+<p>Als nächstes wollen wir sicher sein, dass unser Datenverzeichnis
+innerhalb der Poudrière-Wurzel korrekt eingestellt ist. Dies wird mit
+der Option POUDRIERE_DATA gesteuert und sollte standardmäßig eingestellt
+werden. Wir werden die Option jedoch auskommentieren, um sicherzugehen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">POUDRIERE_DATA</span><span class="o">=</span><span class="si">${</span><span class="nv">BASEFS</span><span class="si">}</span>/data
+</pre></div>
+</div>
+<p>Die nächsten Optionen, die wir auskommentieren sollten, sind die
+Optionen CHECK_CHANGED_OPTIONS und CHECK_CHANGED_DEPS. Die erste Option
+weist poudriere an, Pakete neu zu erstellen, wenn sich die Optionen
+dafür geändert haben. Die zweite Option weist tells poudriere an, Pakete
+neu zu erstellen, wenn sich Abhängigkeiten seit der letzten Kompilierung
+geändert haben.</p>
+<p>Beide Optionen existieren in der Form, die wir in der
+Konfigurationsdatei haben wollen. Wir müssen sie nur auskommentieren:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CHECK_CHANGED_OPTIONS</span><span class="o">=</span>verbose
+<span class="nv">CHECK_CHANGED_DEPS</span><span class="o">=</span>yes
+</pre></div>
+</div>
+<p>Als nächstes werden wir poudriere auf den SSL-Schlüssel zeigen, den wir
+erstellt haben, damit Pakete während des Builds signiert werden können.
+Die zur Angabe verwendete Option heißt PKG_REPO_SIGNING_KEY. Heben Sie
+die Markierung dieser Option auf, und ändern Sie den Pfad so, dass er
+den Speicherort des SSL-Schlüssels widerspiegelt, den Sie zuvor erstellt
+haben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PKG_REPO_SIGNING_KEY</span><span class="o">=</span>/usr/local/etc/ssl/keys/poudriere.key
+</pre></div>
+</div>
+<p>Schließlich können wir die URL_BASE-Zeichenfolge auf den Domänennamen
+oder die IP-Adresse festlegen, unter der Ihr Server erreichbar ist. Dies
+wird von poudriere verwendet, um Links in der Ausgabe zu erstellen, auf
+die geklickt werden kann. Sie sollten das Protokoll einschließen und den
+Wert mit einem Schrägstrich beenden:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">URL_BASE</span><span class="o">=</span>http://server_domain_or_IP/
+</pre></div>
+</div>
+<p>Wenn Sie mit den Änderungen fertig sind, speichern und schließen Sie die
+Datei.</p>
+</div>
+<div class="section" id="erstellen-der-build-umgebung">
+<h2><span class="section-number">1.106.5. </span>Erstellen der Build-Umgebung<a class="headerlink" href="#erstellen-der-build-umgebung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Als nächstes müssen wir unsere Build-Umgebung konstruieren. Wie bereits
+erwähnt, wird Poudriere Ports in einer isolierten Umgebung mit Jails
+bauen.</p>
+<p>Für unsere Zwecke sieht unser Jails-Aufbaubefehl so aus:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere jail -c -j <span class="m">11</span>-2x64 -v <span class="m">11</span>.2-RELEASE
+</pre></div>
+</div>
+<p>Das wird eine Weile dauern, also seid geduldig. Wenn Sie fertig sind,
+können Sie das installierte Jail sehen, indem Sie Folgendes eingeben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere jail -l
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>JAILNAME        VERSION         ARCH  METHOD TIMESTAMP           PATH
+<span class="m">11</span>-2x64 <span class="m">11</span>.2-RELEASE-p0 amd64 ftp    <span class="m">2018</span>-01-06 <span class="m">20</span>:43:48 /usr/local/poudriere/jails/11-2x64
+</pre></div>
+</div>
+<p>Sobald Sie eine Jail erstellt haben, müssen wir eine Ports-Struktur
+installieren.</p>
+<p>Wir können das Flag -p verwenden, um unseren Ports-Baum zu benennen. Wir
+werden unseren Baum HEAD nennen, da er genau die Verwendung dieses
+Baumes (den „Kopf“ oder den aktuellsten Punkt des Baumes) zusammenfasst.
+Wir werden es regelmäßig aktualisieren, damit es der aktuellsten Version
+der verfügbaren Ports-Struktur entspricht:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere ports -c -p HEAD
+</pre></div>
+</div>
+<p>Auch diese Prozedur wird eine Weile dauern, da die gesamte
+Ports-Struktur abgerufen und extrahiert werden muss. Wenn dies
+abgeschlossen ist, können Sie unseren Ports-Baum anzeigen, indem Sie
+Folgendes eingeben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere ports -l
+</pre></div>
+</div>
+<p>Nachdem dieser Schritt abgeschlossen ist, haben wir nun die Strukturen,
+um unsere Ports zu kompilieren und Pakete zu erstellen. Als nächstes
+können wir damit beginnen, unsere Liste von Ports zusammenzustellen, um
+die Optionen zu erstellen und zu konfigurieren, die wir für jede
+Software benötigen.</p>
+</div>
+<div class="section" id="erstellen-einer-port-building-liste-und-festlegen-von-port-optionen">
+<h2><span class="section-number">1.106.6. </span>Erstellen einer Port-Building-Liste und Festlegen von Port-Optionen<a class="headerlink" href="#erstellen-einer-port-building-liste-und-festlegen-von-port-optionen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wir werden eine Liste von Ports erstellen, die wir direkt Poudriere
+übergeben können.</p>
+<p>Die Datei sollte die Port-Kategorie gefolgt von einem Schrägstrich und
+dem Port-Namen auflisten, um ihre Position in der Ports-Struktur
+widerzuspiegeln:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>port_category/first_port
+port_category/second_port
+port_category/third_port
+</pre></div>
+</div>
+<p>Alle erforderlichen Abhängigkeiten werden ebenfalls automatisch
+erstellt. Sie müssen also nicht die gesamte Abhängigkeitsstruktur der
+Ports aufspüren, die Sie installieren möchten.Sie können diese Datei
+manuell erstellen, aber wenn Ihr Basissystem bereits die meiste Software
+erstellen möchte, können Sie diese Liste mit portmaster erstellen.</p>
+<p>Bevor Sie dies tun, ist es in der Regel eine gute Idee, alle nicht
+benötigten Abhängigkeiten von Ihrem System zu entfernen, um die
+Portliste so sauber wie möglich zu halten. Sie können dies tun, indem
+Sie Folgendes eingeben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg autoremove
+</pre></div>
+</div>
+<p>Danach können wir eine Liste der Software, die wir explizit auf unserem
+Build-System installiert haben, erhalten:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg query -e <span class="s2">&quot;%a==0&quot;</span> <span class="s2">&quot;%o&quot;</span> <span class="p">|</span> sort -d <span class="p">|</span> tee /usr/local/etc/poudriere.d/port-list
+</pre></div>
+</div>
+<p>Überprüfen Sie die Liste. Wenn es Ports gibt, die Sie nicht hinzufügen
+möchten, entfernen Sie die zugehörige Zeile. Dies ist auch eine
+Gelegenheit, zusätzliche Ports hinzuzufügen, die Sie möglicherweise
+benötigen.</p>
+<p>Wenn Sie zum Erstellen Ihrer Ports bestimmte make.conf-Optionen
+verwenden, können Sie für jede Jail innerhalb Ihres Verzeichnisses
+/usr/local/etc/poudriere.d eine Datei make.conf erstellen. Zum Beispiel
+können wir für unser Jail eine make.conf-Datei mit diesem Namen
+erstellen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/poudriere.d/11-2x64-make.conf
+</pre></div>
+</div>
+<p>Ich persönlich erstelle lieber eine globale make.conf die für alle Jails
+gültig ist.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/poudriere.d/make.conf
+</pre></div>
+</div>
+<p>Im Inneren können Sie alle Optionen angeben, die Sie beim Erstellen
+Ihrer Ports verwenden möchten. Wenn Sie beispielsweise keine
+Dokumentation, Beispiele, Unterstützung für die Muttersprache oder
+X11-Unterstützung erstellen möchten, können Sie Folgendes festlegen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">OPTIONS_UNSET</span><span class="o">+=</span> DOCS NLS X11 EXAMPLES
+</pre></div>
+</div>
+<p>Sie können aber auch
+<a class="reference external" href="https://wiki.freebsd.org/Ports/DEFAULT_VERSIONS">Default_Versions</a>
+angeben. In meinem Fall schaut es so aus:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">DEFAULT_VERSIONS</span><span class="o">+=</span> <span class="nv">gcc</span><span class="o">=</span><span class="m">7</span> <span class="nv">linux</span><span class="o">=</span>c7 <span class="nv">mysql</span><span class="o">=</span><span class="m">10</span>.3m <span class="nv">php</span><span class="o">=</span><span class="m">7</span>.2 <span class="nv">samba</span><span class="o">=</span><span class="m">4</span>.7 <span class="nv">ssl</span><span class="o">=</span>openssl
+</pre></div>
+</div>
+<p>In diesem Fall werden alle Pakete und/oder deren Abhängigkeiten mit der
+angegebenen Version gebaut.</p>
+<p>Danach können wir jeden unserer Ports konfigurieren, der Dateien mit den
+ausgewählten Optionen erstellt.</p>
+<p>Sie können alles konfigurieren, das noch nicht mit dem Befehl options
+konfiguriert wurde. Wir sollten sowohl den Port-Baum, den wir erstellt
+haben (mit der Option -p), als auch das Jail, für das wir diese Optionen
+festlegen (mit der Option -j), übergeben. Wir müssen auch die Liste der
+Ports angeben, die wir mit der Option -f konfigurieren möchten.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere options -j <span class="m">11</span>-2x64 -p HEAD -f /usr/local/etc/poudriere.d/port-list
+</pre></div>
+</div>
+<p>Sie sehen einen Dialog für jeden der Ports in der Liste und alle
+Abhängigkeiten, für die keine entsprechenden Optionen im Verzeichnis
+-options festgelegt sind. Die Angaben in Ihrer Datei make.conf werden in
+den Selektionsbildern vorausgewählt. Wählen Sie alle Optionen aus, die
+Sie verwenden möchten.</p>
+<p>Wenn Sie die Optionen für Ihre Ports in Zukunft neu konfigurieren
+möchten, können Sie den obigen Befehl mit der Option -c erneut
+ausführen. Dadurch werden Ihnen alle verfügbaren Konfigurationsoptionen
+angezeigt, unabhängig davon, ob Sie in der Vergangenheit eine Auswahl
+getroffen haben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere options -c -j <span class="m">11</span>-2x64 -p HEAD -f /usr/local/etc/poudriere.d/port-list
+</pre></div>
+</div>
+</div>
+<div class="section" id="die-ports-bauen">
+<h2><span class="section-number">1.106.7. </span>Die Ports bauen<a class="headerlink" href="#die-ports-bauen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Jetzt sind wir endlich bereit, mit dem Aufbau von Ports zu beginnen.</p>
+<p>Geben Sie Folgendes ein, um Ihre Jail zu aktualisieren:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere jail -u -j <span class="m">11</span>-2x64
+</pre></div>
+</div>
+<p>Geben Sie Folgendes ein, um Ihre Ports-Struktur zu aktualisieren:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere ports -u -p HEAD
+</pre></div>
+</div>
+<p>Sobald dies abgeschlossen ist, können wir den Build-Prozess starten.</p>
+<p><strong>Hinweis:</strong> Dies kann ein sehr langer Prozess sein. Wenn Sie über SSH
+mit Ihrem Server verbunden sind, empfehlen wir Ihnen, das <code class="docutils literal notranslate"><span class="pre">screen</span></code>
+Paket zu installieren und eine Sitzung zu starten:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg install screen
+
+rehash
+
+screen
+</pre></div>
+</div>
+<p>Um den Build zu starten, müssen wir nur den Befehl bulk verwenden und
+auf alle unsere einzelnen Teile zeigen, die wir konfiguriert haben. Wenn
+Sie die Werte in diesem Handbuch verwendet haben, sieht der Befehl
+folgendermaßen aus:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere bulk -j <span class="m">11</span>-2x64 -p HEAD -f /usr/local/etc/poudriere.d/port-list
+</pre></div>
+</div>
+<p>Dies startet eine Reihe von Arbeitern (abhängig von Ihrer
+poudrière.conf-Datei oder der Anzahl der verfügbaren CPUs) und beginnt
+mit dem Aufbau der Ports.</p>
+<p>Während des Erstellungsprozesses können Sie jederzeit Informationen über
+den Fortschritt erhalten, indem Sie die STRG-Taste gedrückt halten und t
+drücken.</p>
+<p>Bestimmte Teile des Prozesses produzieren mehr Output als andere.</p>
+</div>
+<div class="section" id="einrichten-von-nginx-fur-das-bereitstellen-des-front-ends-und-des-repositorys">
+<h2><span class="section-number">1.106.8. </span>Einrichten von Nginx für das Bereitstellen des Front-Ends und des Repositorys<a class="headerlink" href="#einrichten-von-nginx-fur-das-bereitstellen-des-front-ends-und-des-repositorys" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Für diesen Schritt muss der <a class="reference external" href="NGINX">NGINX</a> mit Virtualhosts
+eingerichtet sein.</p>
+<p>In der /etc/hosts wird der folgende Hostname eingetragen: 127.0.0.1
+bsd.«domain»</p>
+<p>Damit Poudriere unter NGINX läuft wird unter
+/usr/local/etc/nginx/vhosts/ folgende Datei unter dem Namen
+poudriere.conf mit diesem Inhalt angelegt:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>server <span class="o">{</span>
+  listen <span class="m">80</span> default<span class="p">;</span>
+  server_name bsd.&gt;&lt;domain&gt;&gt;<span class="p">;</span>
+  root /usr/local/share/poudriere/html<span class="p">;</span>
+
+  location /data <span class="o">{</span>
+    <span class="nb">alias</span> /usr/local/poudriere/data/logs/bulk<span class="p">;</span>
+    autoindex on<span class="p">;</span>
+  <span class="o">}</span>
+
+  location /packages <span class="o">{</span>
+    root /usr/local/poudriere/data<span class="p">;</span>
+    autoindex on<span class="p">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Anschließend den NGINX neu starten:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>service nginx restart
+</pre></div>
+</div>
+<p>Als nächstes werden wir eine kleine Änderung an unserer mime.types-Datei
+vornehmen. Wenn Sie bei den aktuellen Einstellungen auf ein Protokoll im
+Webbrowser klicken, wird die Datei heruntergeladen und nicht als
+normaler Text angezeigt. Wir können dieses Verhalten ändern, indem Sie
+Dateien mit der Endung .log als Nur-Text-Dateien markieren.</p>
+<p>Öffnen Sie die Datei Nginx mime.types in Ihrem Texteditor:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/nginx/mime.types
+</pre></div>
+</div>
+<p>Suchen Sie den Eintrag, der den text / plain-Inhaltstyp angibt, und
+hängen Sie das Protokoll an das Ende der aktuellen Liste der Dateitypen
+an, getrennt durch ein Leerzeichen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>text/mathml                         mml<span class="p">;</span>
+text/plain                          txt log<span class="p">;</span>
+text/vnd.sun.j2me.app-descriptor    jad<span class="p">;</span>
+</pre></div>
+</div>
+<p>Jetzt können Sie das Poudriere-Webinterface anzeigen, indem Sie in Ihrem
+Webbrowser zum Domain-Namen oder zur IP-Adresse Ihres Servers gehen
+bsd.&lt;&lt;domain&gt;&gt;</p>
+</div>
+<div class="section" id="paket-clients-konfigurieren">
+<h2><span class="section-number">1.106.9. </span>Paket-Clients konfigurieren<a class="headerlink" href="#paket-clients-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Nachdem Sie nun Pakete erstellt und ein Repository für die
+Bereitstellung Ihrer Pakete konfiguriert haben, können Sie Ihre Clients
+so konfigurieren, dass sie Ihren Server als Quelle für ihre Pakete
+verwenden.</p>
+<div class="section" id="konfigurieren-des-build-servers-fur-die-verwendung-des-eigenen-paket-repos">
+<h3><span class="section-number">1.106.9.1. </span>Konfigurieren des Build-Servers für die Verwendung des eigenen Paket-Repos<a class="headerlink" href="#konfigurieren-des-build-servers-fur-die-verwendung-des-eigenen-paket-repos" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wir können damit beginnen, den Build-Server so zu konfigurieren, dass er
+die Pakete verwendet, die er erstellt hat.</p>
+<p>Zuerst müssen wir ein Verzeichnis für unsere
+Repository-Konfigurationsdateien erstellen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /usr/local/etc/pkg/repos
+</pre></div>
+</div>
+<p>In diesem Verzeichnis können wir unsere Repository-Konfigurationsdatei
+erstellen. Es muss in .conf enden, daher werden wir es poudriere.conf
+nennen, um seinen Zweck zu verdeutlichen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/pkg/repos/poudriere.conf <span class="o">=</span>&gt;
+
+poudriere: <span class="o">{</span>
+    url: <span class="s2">&quot;file:///usr/local/poudriere/data/packages/11-2x64-HEAD&quot;</span>,
+    mirror_type: <span class="s2">&quot;srv&quot;</span>,
+    signature_type: <span class="s2">&quot;pubkey&quot;</span>,
+    pubkey: <span class="s2">&quot;/usr/local/etc/ssl/certs/poudriere.cert&quot;</span>,
+    enabled: yes,
+    priority: <span class="m">100</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Wenn Sie nur Pakete auswählen, die Sie selbst erstellt haben (die
+sicherere Route), können Sie die Prioritätseinstellung weglassen, aber
+Sie sollten die Standard-Repositorys deaktivieren. Sie können dies tun,
+indem Sie eine andere Repo-Datei erstellen, die die
+Standard-Repository-Datei überschreibt und sie deaktiviert:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/pkg/repos/freebsd.conf <span class="o">=</span>&gt;
+
+FreeBSD: <span class="o">{</span>
+    enabled: no
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Unabhängig von Ihrer Konfigurationsauswahl sollten Sie jetzt bereit
+sein, Ihr Repository zu verwenden. Aktualisieren Sie Ihre Paketliste,
+indem Sie Folgendes eingeben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg update
+</pre></div>
+</div>
+<p>Jetzt kann Ihr Server den Befehl pkg verwenden, um Pakete von Ihrem
+lokalen Repository zu installieren.</p>
+</div>
+<div class="section" id="konfigurieren-von-remote-clients-fur-die-verwendung-des-repository-ihres-build-rechners">
+<h3><span class="section-number">1.106.9.2. </span>Konfigurieren von Remote-Clients für die Verwendung des Repository Ihres Build-Rechners<a class="headerlink" href="#konfigurieren-von-remote-clients-fur-die-verwendung-des-repository-ihres-build-rechners" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Einer der überzeugendsten Gründe, Poudriere auf einer Build-Maschine
+einzurichten, besteht darin, diesen Host als Repository für viele andere
+Maschinen zu verwenden. Alles, was wir tun müssen, um dies zum Laufen zu
+bringen, ist das Herunterladen des öffentlichen SSL-Zertifikats von
+unserer Build-Maschine und das Einrichten einer ähnlichen
+Repository-Definition.</p>
+<p>Um von unseren Client-Computern aus eine Verbindung mit unserem
+Build-Host herzustellen, sollten Sie einen SSH-Agenten auf <strong>Ihrem
+lokalen Computer starten</strong>, um Ihre SSH-Schlüsselanmeldeinformationen zu
+speichern.</p>
+<p>Sie müssen Ihren SSH-Schlüssel hinzufügen, indem Sie Folgendes eingeben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-add
+</pre></div>
+</div>
+<p>Anschließend können Sie Ihre lokalen SSH-Anmeldeinformationen an Ihre
+Clientcomputer weiterleiten, wenn Sie die Verbindung mit dem -A-Flag
+herstellen. Auf diese Weise können Sie von Ihrem Clientcomputer aus auf
+einen beliebigen Computer zugreifen, als ob Sie von Ihrem Heimcomputer
+darauf zugreifen würden:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -A freebsd@client_domain_or_IP
+</pre></div>
+</div>
+<p>Sobald Sie sich auf Ihrem Remote-Client-Rechner befinden, müssen Sie
+zuerst die Verzeichnisstruktur erstellen (falls diese nicht existiert),
+damit Sie das Zertifikat speichern können. Wir werden weitermachen und
+ein Verzeichnis für Schlüssel erstellen, damit wir es für zukünftige
+Aufgaben verwenden können:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /usr/local/etc/ssl/<span class="o">{</span>keys,certs<span class="o">}</span>
+</pre></div>
+</div>
+<p>Jetzt können wir uns mit SSH mit unserer Build-Maschine verbinden und
+die Zertifikatsdatei an unseren Client-Rechner zurückleiten. Da wir
+unsere SSH-Zugangsdaten weitergeleitet haben, sollten wir dies tun
+können, ohne ein Passwort anzufordern:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh user@server_domain_or_IP <span class="s1">&#39;cat /usr/local/etc/ssl/certs/poudriere.cert&#39;</span> <span class="p">|</span> tee /usr/local/etc/ssl/certs/poudriere.cert
+</pre></div>
+</div>
+<p>Dieser Befehl stellt mithilfe Ihrer lokalen SSH-Anmeldeinformationen
+eine Verbindung zur Build-Maschine von Ihrem Clientcomputer her. Sobald
+die Verbindung hergestellt ist, zeigt sie den Inhalt Ihrer
+Zertifikatsdatei an und leitet sie durch den SSH-Tunnel zurück zu Ihrem
+Remote-Client-Rechner. Von dort verwenden wir die tee Kombination, um
+das Zertifikat in unser Verzeichnis zu schreiben.</p>
+<p>Sobald dies abgeschlossen ist, können wir unsere
+Repository-Verzeichnisstruktur wie auf dem Build-Rechner selbst
+erstellen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /usr/local/etc/pkg/repos
+</pre></div>
+</div>
+<p>Jetzt können wir eine Repository-Datei erstellen, die der auf der
+Build-Maschine verwendeten ähnlich ist:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/pkg/repos/poudriere.conf <span class="o">=</span>&gt;
+
+poudriere: <span class="o">{</span>
+    url: <span class="s2">&quot;http://server_domain_or_IP/packages/11-2x64-HEAD/&quot;</span>,
+    mirror_type: <span class="s2">&quot;http&quot;</span>,
+    signature_type: <span class="s2">&quot;pubkey&quot;</span>,
+    pubkey: <span class="s2">&quot;/usr/local/etc/ssl/certs/poudriere.cert&quot;</span>,
+    enabled: yes,
+    priority: <span class="m">100</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Wenn Sie nur Ihre kompilierten Pakete verwenden möchten, sollte Ihre
+Datei in etwa so aussehen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere: <span class="o">{</span>
+    url: <span class="s2">&quot;http://server_domain_or_IP/packages/11-2x64-HEAD/&quot;</span>,
+    mirror_type: <span class="s2">&quot;http&quot;</span>,
+    signature_type: <span class="s2">&quot;pubkey&quot;</span>,
+    pubkey: <span class="s2">&quot;/usr/local/etc/ssl/certs/poudriere.cert&quot;</span>,
+    enabled: yes
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Wenn Sie nur Ihre eigenen Pakete verwenden, denken Sie daran, eine
+andere Repository-Konfigurationsdatei zu erstellen, um die
+standardmäßige FreeBSD-Repository-Konfiguration zu überschreiben:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/pkg/repos/freebsd.conf <span class="o">=</span>&gt;
+
+FreeBSD: <span class="o">{</span>
+    enabled: no
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Nachdem Sie fertig sind, aktualisieren Sie Ihre pkg-Datenbank, um mit
+der Verwendung Ihrer benutzerdefinierten kompilierten Pakete zu
+beginnen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg update
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="cronjob">
+<h2><span class="section-number">1.106.10. </span>Cronjob<a class="headerlink" href="#cronjob" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Damit Poudriere automatisch die Jails aktualisiert und die Pakete baut
+werden Sie einen Cronjob einrichten.</p>
+<p>Erstellen Sie folgende Datei unter
+<code class="docutils literal notranslate"><span class="pre">/usr/local/etc/poudriere.d/scripts</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir /usr/local/etc/poudriere.d/scripts
+
+nano /usr/local/etc/poudriere.d/scripts/poudriere-cron.sh <span class="o">=</span>&gt;
+
+<span class="c1">#!/bin/sh</span>
+
+<span class="nv">SCRIPTNAME</span><span class="o">=</span><span class="sb">`</span>basename <span class="s2">&quot;</span><span class="nv">$0</span><span class="s2">&quot;</span><span class="sb">`</span>
+<span class="nv">PORTSTREE</span><span class="o">=</span><span class="s2">&quot;HEAD&quot;</span>
+<span class="nv">POUDRIERE</span><span class="o">=</span><span class="s2">&quot;/usr/local/bin/poudriere&quot;</span>
+<span class="nv">PORTLIST</span><span class="o">=</span><span class="s2">&quot;/usr/local/etc/poudriere.d/port-list&quot;</span>
+<span class="nv">JAIL</span><span class="o">=</span><span class="s2">&quot;11-2x64&quot;</span>
+<span class="nv">REPOS</span><span class="o">=</span><span class="s2">&quot;HEAD&quot;</span>
+<span class="nv">URL</span><span class="o">=</span><span class="s2">&quot;https://bsd.&lt;&lt;domain&gt;&gt;/&quot;</span>
+
+poudriere_build<span class="o">()</span> <span class="o">{</span>
+        <span class="k">for</span> REPO in <span class="nv">$REPOS</span><span class="p">;</span> <span class="k">do</span>
+                <span class="nb">echo</span> <span class="s2">&quot;Started </span><span class="nv">$REPO</span><span class="s2"> (&quot;</span><span class="sb">`</span>/bin/date <span class="p">|</span> /usr/bin/tr -d <span class="s1">&#39;\n&#39;</span><span class="sb">`</span><span class="s2">&quot;)&quot;</span>
+                <span class="s2">&quot;</span><span class="nv">$POUDRIERE</span><span class="s2">&quot;</span> bulk -j <span class="s2">&quot;</span><span class="nv">$JAIL</span><span class="s2">&quot;</span> -p <span class="s2">&quot;</span><span class="nv">$PORTSTREE</span><span class="s2">&quot;</span>  -f <span class="s2">&quot;</span><span class="nv">$PORTLIST</span><span class="s2">&quot;</span> &gt; /dev/null
+                <span class="nb">echo</span> <span class="s2">&quot;    Cleaning </span><span class="nv">$REPO</span><span class="s2"> (&quot;</span><span class="sb">`</span>/bin/date <span class="p">|</span> /usr/bin/tr -d <span class="s1">&#39;\n&#39;</span><span class="sb">`</span><span class="s2">&quot;)&quot;</span>
+                <span class="s2">&quot;</span><span class="nv">$POUDRIERE</span><span class="s2">&quot;</span> pkgclean -j <span class="s2">&quot;</span><span class="nv">$JAIL</span><span class="s2">&quot;</span> -p <span class="s2">&quot;</span><span class="nv">$PORTSTREE</span><span class="s2">&quot;</span> -f <span class="s2">&quot;</span><span class="nv">$PORTLIST</span><span class="s2">&quot;</span> -y &gt; /dev/null
+                <span class="nb">echo</span> <span class="s2">&quot;    Finished </span><span class="nv">$REPO</span><span class="s2"> (&quot;</span><span class="sb">`</span>/bin/date <span class="p">|</span> /usr/bin/tr -d <span class="s1">&#39;\n&#39;</span><span class="sb">`</span><span class="s2">&quot;)&quot;</span>
+        <span class="k">done</span>
+<span class="o">}</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;This is a log of poudriere. Details: </span><span class="nv">$URL</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;[</span><span class="nv">$SCRIPTNAME</span><span class="s2">] Updating ports tree...&quot;</span>
+<span class="s2">&quot;</span><span class="nv">$POUDRIERE</span><span class="s2">&quot;</span> ports -p <span class="s2">&quot;</span><span class="nv">$PORTSTREE</span><span class="s2">&quot;</span> -u &gt; /dev/null
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&quot;    Error updating ports tree.&quot;</span>
+        <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+<span class="nb">echo</span> <span class="s2">&quot;    Ports tree has been updated.&quot;</span>
+
+poudriere_build
+
+<span class="nb">echo</span> <span class="s2">&quot;[</span><span class="nv">$SCRIPTNAME</span><span class="s2">] Cleaning distfiles...&quot;</span>
+<span class="s2">&quot;</span><span class="nv">$POUDRIERE</span><span class="s2">&quot;</span> distclean -p <span class="s2">&quot;</span><span class="nv">$REPOS</span><span class="s2">&quot;</span> -f <span class="s2">&quot;</span><span class="nv">$PORTLIST</span><span class="s2">&quot;</span> -y &gt; /dev/null
+
+<span class="nb">echo</span> <span class="s2">&quot;[</span><span class="nv">$SCRIPTNAME</span><span class="s2">] Finished. (&quot;</span><span class="sb">`</span>/bin/date <span class="p">|</span> /usr/bin/tr -d <span class="s1">&#39;\n&#39;</span><span class="sb">`</span><span class="s2">&quot;)&quot;</span>
+
+<span class="nb">exit</span> <span class="m">0</span>
+</pre></div>
+</div>
+<p>Anschließend ausführbar machen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x /usr/local/etc/poudriere.d/scripts/poudriere-cron.sh
+</pre></div>
+</div>
+<p>Dannach sollten Sie das Script einmal ausführen, um zu testen ob alles
+korrekt läuft.</p>
+<p>Wenn alles passt können Sie in der <code class="docutils literal notranslate"><span class="pre">/etc/crontab</span></code> wie folgt einbinden:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /etc/crontab <span class="o">=</span>&gt;
+
+<span class="m">10</span>      <span class="m">0</span>       *       *       *       root    /usr/local/etc/poudriere.d/scripts/poudriere-cron.sh
+</pre></div>
+</div>
+<p>Der Build-Prozess wird dann jede Nacht ausgeführt. Wenn Sie Pakete
+haben, wie zum Beispiel Chromium, wo der Build länger braucht als 24
+Stunden, kann es hier angepasst werden.</p>
+</div>
+<div class="section" id="befehlsliste">
+<h2><span class="section-number">1.106.11. </span>Befehlsliste<a class="headerlink" href="#befehlsliste" title="Link zu dieser Überschrift">¶</a></h2>
+<p><strong>Poudriere make.conf</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/poudriere.d/make.conf
+</pre></div>
+</div>
+<p><strong>Poudriere conf</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/poudriere.conf
+</pre></div>
+</div>
+<p><strong>Portlist</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano  /usr/local/etc/poudriere.d/port-list
+</pre></div>
+</div>
+<p><strong>Eine neue Jail erstellen</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere jail -c -j <span class="m">11</span>-2x64 -v <span class="m">11</span>.2-RELEASE
+</pre></div>
+</div>
+<p><strong>Eine Jail aktualisieren</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere jail -u -j <span class="m">11</span>-2x64
+</pre></div>
+</div>
+<p><strong>Ports aktualisieren</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere ports -u -p HEAD
+</pre></div>
+</div>
+<p><strong>Unbenutze Pakete entfernen</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere pkgclean -j <span class="m">11</span>-2x64 -p HEAD -f /usr/local/etc/poudriere.d/port-list
+</pre></div>
+</div>
+<p><strong>Optionen für die Portliste setzen</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere options -c -j <span class="m">11</span>-2x64 -p HEAD -f /usr/local/etc/poudriere.d/port-list
+</pre></div>
+</div>
+<p>** Optionen für ein Paket setzen**</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere options -c -j <span class="m">11</span>-2x64 -p HEAD  databases/mariadb103-client
+</pre></div>
+</div>
+<p><strong>Pakete ohne cronjob bauen</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere bulk -j <span class="m">11</span>-2x64 -p HEAD -f /usr/local/etc/poudriere.d/port-list
+</pre></div>
+</div>
+<p><strong>Bei einem Systemupgrade die Options auf die neue Version kopieren</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp -R /usr/local/etc/poudriere.d/11-2x64-HEAD-options/**.* /usr/local/etc/poudriere.d/12-0x64-HEAD-options/
+</pre></div>
+</div>
+<p><strong>Anlegen des Quarterly Ports-Trees</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere ports -c -B branches/2018Q3 -m svn+https -p 2018Q3
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="putty.txt.html" class="btn btn-neutral float-right" title="1.107. PuTTY" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="poudriere.txt.html" class="btn btn-neutral float-left" title="1.105. Poudriere" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

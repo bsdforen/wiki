@@ -1,0 +1,11 @@
+.wy-nav-content {
+  max-width: 100% !important;
+}
+
+.wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+  background: #313641;
+}
+
+.wy-side-nav-search input[type="text"] {
+  border-radius: 0px;
+}

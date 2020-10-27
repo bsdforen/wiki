@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.38. DSL konfigurieren (NetBSD) &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.39. DVB-T Karte Hauppauge WinTV-HVR 1300" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html" />
+    <link rel="prev" title="1.37. DSL-Router" href="dsl-router.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.38. DSL konfigurieren (NetBSD)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dial-on-demand">1.38.1. Dial on Demand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weblinks">1.38.2. Weblinks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.38. </span>DSL konfigurieren (NetBSD)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/dsl_konfigurieren_netbsd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html" class="btn btn-neutral float-right" title="1.39. DVB-T Karte Hauppauge WinTV-HVR 1300" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dsl-router.txt.html" class="btn btn-neutral float-left" title="1.37. DSL-Router" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dsl-konfigurieren-netbsd">
+<h1><span class="section-number">1.38. </span>DSL konfigurieren (NetBSD)<a class="headerlink" href="#dsl-konfigurieren-netbsd" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-netbsd2.png" src="../_images/logo-netbsd2.png" />
+</div>
+<p>Da es keine deutsche Übersetzung für die DSL-Konfiguration unter NetBSD gibt
+(zumindest fand ich keine), habe ich die Passage aus dem Handbuch übersetzt und
+erweitert. Ich hoffe, es hilft einigen NetBSD-Benutzern.</p>
+<p>Zuerst bauen wir eine manuelle Testverbindung via DSL auf. Wenn ihr einen neuen
+Kernel gebaut habt, überprüft, ob ihr auch die Option <code class="docutils literal notranslate"><span class="pre">'pseudo-device</span> <span class="pre">pppoe</span></code>‘
+im Kernel habt. (Diese Option ist im Generic-Kernel). Überprüfen könnt ihr es
+ganz schnell mit folgendem Kommando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ifconfig -C</span>
+<span class="n">tun</span> <span class="n">pppoe</span>
+</pre></div>
+</div>
+<p>Wenn ihr als aus Ausgabe <code class="docutils literal notranslate"><span class="pre">'tun</span> <span class="pre">pppoe</span></code>‘ bekommt, ist alles in Oordnung,
+ansonsten heißt es, den Kernel nochmal kompilieren.</p>
+<p>Fangen wir also mit der manuellen Testverbindung an (manuell deswegen,
+damit wir einen Fehler schneller ausmerzen können, bei einer
+automatischen Einwahl ist die Fehlersuche etwas aufwendiger, deswegen
+dieser Weg).</p>
+<p>Zuerst erstellen wir das pppoe0-Interface und weisen ihr eine Dummy-IP
+zu, die später beim Verbindungsaufbau durch die zugewiesene ersetzt
+wird. Die Befehle müßt ihr als root ausführen. Das Interface, das bei
+mir zum DSL-Modem geht, heißt <code class="docutils literal notranslate"><span class="pre">'ne0</span></code>‘, das interne, das ins LAN geht,
+ist <code class="docutils literal notranslate"><span class="pre">'rtk0</span></code>‘.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ifconfig pppoe0 create</span>
+<span class="c1"># ifconfig pppoe0 inet 0.0.0.0 0.0.0.1 down</span>
+</pre></div>
+</div>
+<p>Als nächtes wird dem pppoe0-Interface die NIC, die zum DSL-Modem geht,
+zugewiesen (hier ne0)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ifconfig ne0 up</span>
+<span class="c1"># pppoectl -e ne0 pppoe0</span>
+</pre></div>
+</div>
+<p>Nun geben wir unseren Loginnamen und das Passwort an (bei myauthname
+kommt der Login hin, bei t-online die T-Onlinenummer, bei myauthsecret
+das Passwort, der rest bleibt so wie er ist).</p>
+<p>Syntax für myauthname bei T-Online:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">anschlusskennung</span><span class="o">+</span><span class="n">t</span><span class="o">-</span><span class="n">online</span><span class="o">-</span><span class="n">nr</span><span class="o">+</span><span class="c1">#0001@t-online.de</span>
+</pre></div>
+</div>
+<p>wenn die Anschlusskennung aus über 12 Zeichen besteht, entfällt die
+Raute.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pppoectl pppoe0 myauthproto=pap &#39;myauthname=000123456789123456789123#0001@t-online.de&#39;&lt;br /&gt; &#39;myauthsecret=01234567&#39; hisauthproto=none</span>
+</pre></div>
+</div>
+<p>Jetzt setzen wir die Anzahl der Fehlerversuche auf eins (sonst versucht
+er ständig, sich einzuwählen mit eventuell falschen Login-Daten. Wenn er
+das sieben mal macht, wird euer Anschluss bis Mitternacht gesperrt)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pppoectl pppoe0 max-auth-failure=1</span>
+</pre></div>
+</div>
+<p>Probieren wir jetzt den Verbindungsaufbau:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ifconfig pppoe0 up</span>
+</pre></div>
+</div>
+<p>Falls ein Ping auf eine Webseite noch nicht geht, müßt ihr wohl noch die
+<code class="docutils literal notranslate"><span class="pre">'/etc/resolv.conf</span></code>‘ editieren und Nameserver eintragen, hier seht ihr
+meine <code class="docutils literal notranslate"><span class="pre">'/etc/resolv.conf</span></code>‘:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cat /etc/resolv.conf</span>
+<span class="n">nameserver</span> <span class="mf">194.152</span><span class="o">.</span><span class="mf">64.35</span>
+<span class="n">nameserver</span> <span class="mf">194.25</span><span class="o">.</span><span class="mf">2.132</span>
+</pre></div>
+</div>
+<p>Wenn ihr nun noch folgende Ausgabe bekommt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pppoectl -d pppoe0</span>
+<span class="n">pppoe0</span><span class="p">:</span> <span class="n">state</span> <span class="o">=</span> <span class="n">session</span>
+<span class="n">Session</span> <span class="n">ID</span><span class="p">:</span> <span class="mh">0x91a</span>
+<span class="n">PADI</span> <span class="n">retries</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">PADR</span> <span class="n">retries</span><span class="p">:</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>das heißt, <code class="docutils literal notranslate"><span class="pre">'state</span> <span class="pre">=</span> <span class="pre">session</span></code>‘, dann habt ihr eine Verbindung via DSL
+mit eurer NetBSD-Kiste, was ihr nun auch mit ifconfig sehen solltet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ifconfig -a</span>
+<span class="n">rtk0</span><span class="p">:</span> <span class="n">flags</span><span class="o">=</span><span class="mi">8843</span><span class="o">&lt;</span><span class="n">UP</span><span class="p">,</span><span class="n">BROADCAST</span><span class="p">,</span><span class="n">RUNNING</span><span class="p">,</span><span class="n">SIMPLEX</span><span class="p">,</span><span class="n">MULTICAST</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">1500</span>
+<span class="n">address</span><span class="p">:</span> <span class="mi">00</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="n">fc</span><span class="p">:</span><span class="n">ca</span><span class="p">:</span><span class="n">da</span><span class="p">:</span><span class="n">df</span>
+<span class="n">media</span><span class="p">:</span> <span class="n">Ethernet</span> <span class="n">none</span> <span class="p">(</span><span class="n">none</span><span class="p">)</span>
+<span class="n">inet</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.200</span> <span class="n">netmask</span> <span class="mh">0xffffff00</span> <span class="n">broadcast</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.255</span>
+<span class="n">ne0</span><span class="p">:</span> <span class="n">flags</span><span class="o">=</span><span class="mi">8863</span><span class="o">&lt;</span><span class="n">UP</span><span class="p">,</span><span class="n">BROADCAST</span><span class="p">,</span><span class="n">NOTRAILERS</span><span class="p">,</span><span class="n">RUNNING</span><span class="p">,</span><span class="n">SIMPLEX</span><span class="p">,</span><span class="n">MULTICAST</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">1500</span>
+<span class="n">address</span><span class="p">:</span> <span class="mi">00</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">95</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">4</span><span class="n">a</span><span class="p">:</span><span class="n">a2</span>
+<span class="n">media</span><span class="p">:</span> <span class="n">Ethernet</span> <span class="n">manual</span>
+<span class="n">lo0</span><span class="p">:</span> <span class="n">flags</span><span class="o">=</span><span class="mi">8009</span><span class="o">&lt;</span><span class="n">UP</span><span class="p">,</span><span class="n">LOOPBACK</span><span class="p">,</span><span class="n">MULTICAST</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">33220</span>
+<span class="n">inet</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="n">netmask</span> <span class="mh">0xff000000</span>
+<span class="n">pppoe0</span><span class="p">:</span> <span class="n">flags</span><span class="o">=</span><span class="mi">8851</span><span class="o">&lt;</span><span class="n">UP</span><span class="p">,</span><span class="n">POINTOPOINT</span><span class="p">,</span><span class="n">RUNNING</span><span class="p">,</span><span class="n">SIMPLEX</span><span class="p">,</span><span class="n">MULTICAST</span><span class="o">&gt;</span> <span class="n">mtu</span> <span class="mi">1492</span>
+<span class="n">inet</span> <span class="mf">217.230</span><span class="o">.</span><span class="mf">135.213</span> <span class="o">-&gt;</span> <span class="mf">217.5</span><span class="o">.</span><span class="mf">98.56</span> <span class="n">netmask</span> <span class="mh">0xff000000</span>
+</pre></div>
+</div>
+<p>Wenn ein Ping funktioniert, und ihr keine Webseiten erreichen könnt,
+habt ihr ein DNS-Problem, das heißt, ihr habt vergessen, einen
+Nameserver in der <code class="docutils literal notranslate"><span class="pre">'/etc/resolv.conf</span></code>‘ einzutragen; wenn ein Ping
+nicht geht (no route to host), aber ihr trotzdem eine IP zugewiesen
+bekommt und <code class="docutils literal notranslate"><span class="pre">'&quot;state</span> <span class="pre">=</span> <span class="pre">session&quot;</span></code>‘ erscheint, habt ihr ein
+Routing-Problem; Per <code class="docutils literal notranslate"><span class="pre">'&quot;netstat</span> <span class="pre">-r&quot;</span></code>‘ oder <code class="docutils literal notranslate"><span class="pre">'&quot;route</span> <span class="pre">show&quot;</span></code>‘ seht ihr
+eure Default-Route bzw. Gateways. Der Default-Gateway muß auf die
+interne IP zeigen, in diesem Fall 217.230.135.213); (bei der
+DSL-Verbindung werden zwei IPs angzeigt, eine lokale und eine von der
+Gegenstelle, da DSL eine Punkt-zu-Punkt-Verbindung ist. Hier in meinem
+Fall ist meine IP, unter der ich auch erreichbar bin, die
+217.230.135.213).</p>
+<p>Mit <code class="docutils literal notranslate"><span class="pre">'route</span> <span class="pre">show</span></code>‘ seht ihr eure IP:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># route show</span>
+<span class="n">Routing</span> <span class="n">tables</span>
+<span class="n">Internet</span><span class="p">:</span>
+<span class="n">Destination</span> <span class="n">Gateway</span> <span class="n">Flags</span>
+<span class="n">default</span> <span class="mf">217.230</span><span class="o">.</span><span class="mf">135.213</span> <span class="n">UG</span>
+<span class="n">loopback</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="n">UGR</span>
+<span class="n">localhost</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="n">UH</span>
+<span class="mf">192.168</span><span class="o">.</span><span class="mf">1.0</span> <span class="n">link</span><span class="c1">#1 U</span>
+<span class="mf">192.168</span><span class="o">.</span><span class="mf">1.5</span> <span class="mi">00</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">5</span><span class="n">a</span><span class="p">:</span><span class="n">d8</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="n">ee</span> <span class="n">UH</span>
+<span class="mf">217.5</span><span class="o">.</span><span class="mf">98.56</span> <span class="mf">217.230</span><span class="o">.</span><span class="mf">135.213</span> <span class="n">UH</span>
+</pre></div>
+</div>
+<p>und bei <code class="docutils literal notranslate"><span class="pre">'netstat</span> <span class="pre">-r</span></code>‘ den DNS-Namen (hier pD9E687D5.dip.t-di…)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># netstat -r</span>
+<span class="n">Routing</span> <span class="n">tables</span>
+<span class="n">Internet</span><span class="p">:</span>
+<span class="n">Destination</span> <span class="n">Gateway</span> <span class="n">Flags</span> <span class="n">Refs</span> <span class="n">Use</span> <span class="n">Mtu</span> <span class="n">Interface</span>
+<span class="n">default</span> <span class="n">pD9E687D5</span><span class="o">.</span><span class="n">dip</span><span class="o">.</span><span class="n">t</span><span class="o">-</span><span class="n">di</span> <span class="n">UGS</span> <span class="mi">0</span> <span class="mi">34</span> <span class="o">-</span> <span class="n">pppoe0</span>
+<span class="n">loopback</span> <span class="n">localhost</span> <span class="n">UGRS</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">33220</span> <span class="n">lo0</span>
+<span class="n">localhost</span> <span class="n">localhost</span> <span class="n">UH</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">33220</span> <span class="n">lo0</span>
+<span class="mf">192.168</span><span class="o">.</span><span class="mi">1</span> <span class="n">link</span><span class="c1">#1 UC 1 0 - rtk0</span>
+<span class="mf">192.168</span><span class="o">.</span><span class="mf">1.5</span> <span class="mi">00</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">5</span><span class="n">a</span><span class="p">:</span><span class="n">d8</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="n">ee</span> <span class="n">UHLc</span> <span class="mi">1</span> <span class="mi">1302</span> <span class="o">-</span> <span class="n">rtk0</span>
+<span class="mf">217.5</span><span class="o">.</span><span class="mf">98.56</span> <span class="n">pD9E687D5</span><span class="o">.</span><span class="n">dip</span><span class="o">.</span><span class="n">t</span><span class="o">-</span><span class="n">di</span> <span class="n">UH</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span> <span class="n">pppoe0</span> <span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
+<span class="n">AppleTalk</span><span class="p">:</span>
+<span class="n">Destination</span> <span class="n">Gateway</span> <span class="n">Flags</span> <span class="n">Refs</span> <span class="n">Use</span> <span class="n">Mtu</span> <span class="n">Interface</span>
+</pre></div>
+</div>
+<p>So sollte es aussehen. Ich nehme an, das sind die häufigsten Fehler, die
+auftauchen, neben dem vertippen. ;-)</p>
+<p>Nachdem die manuelle Verbindung nun hoffentlich funktioniert, sollten
+wir eine automatische Verbindung erstellen lassen, da wir uns ansonsten
+jeden Tag neu einwählen müßten. Dieses Skript wird immer, wenn der
+Server hochfährt, bzw. wenn die Verbindung gekappt wird, den Server neu
+einwählen. Zuerst erstellen wir die <code class="docutils literal notranslate"><span class="pre">'/etc/ifconfig.pppoe0</span></code>‘ Sie
+sollte so aussehen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># cat /etc/ifconfig.pppoe0
+create
+# Mark the physical interface used by this PPPoE interface up
+! /sbin/ifconfig ne0 up
+# Let $int use ne0 as its Ethernet interface
+! /sbin/pppoectl -e ne0 $int
+# Configure authentication
+! /sbin/pppoectl $int myauthproto=pap &#39;myauthname=000123456789320012345678#0001@t-online.de&#39; &#39;myauthsecret=01234567&#39; hisauthproto=none
+# Configure the PPPoE interface itself. These addresses are magic
+# meaning we don&#39;t care about either address and let the remote
+# ppp choose them.
+0.0.0.0 0.0.0.1 up
+</pre></div>
+</div>
+<p>Dann noch ein</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># chmod 700 ifconfig.pppoe0</span>
+</pre></div>
+</div>
+<p>Nun erstellen wir das PPP-Verzeichnis in <code class="docutils literal notranslate"><span class="pre">'/etc/</span></code>‘:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mkdir /etc/ppp</span>
+</pre></div>
+</div>
+<p>Die beiden Skripte <code class="docutils literal notranslate"><span class="pre">'ip-up</span></code>‘ und <code class="docutils literal notranslate"><span class="pre">'ip-down</span></code>‘ kommen in das
+<code class="docutils literal notranslate"><span class="pre">'/etc/ppp/</span></code>‘-Verzeichnis:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cat /etc/ppp/ip-up</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#! /bin/sh
+/sbin/route add default $5
+</pre></div>
+</div>
+<p>Mit dem ip-up wird beim Aufbauen der Verbindung die Default-Route auf
+die interne IP der DSL-Verbindung gesetzt, dies muß jedesmal gemacht
+werden, da bei jedem neuen Verbindungsaufbau eine neue IP zugewiesen
+wird;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cat /etc/ppp/ip-down</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#! /bin/sh
+/sbin/route delete default $5
+</pre></div>
+</div>
+<p>Hier wird die Route beim Verbindungsabbau wieder gelöscht;</p>
+<p>Jetzt muß sie nur noch für root ausführbar gemacht werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># chmod 700 ip-down ip-up</span>
+</pre></div>
+</div>
+<p>Am Ende noch ein <code class="docutils literal notranslate"><span class="pre">'ifwatchd=YES</span></code>‘ in die <code class="docutils literal notranslate"><span class="pre">'/etc/rc.conf</span></code>‘ einfügen
+und fertig. Jetzt sollte sich der Server nach einem Reboot oder beim
+Verbindungsabbau wieder einwählen; ifwatchd ist im übrigen dafür
+zuständig, daß die ip-up und -down-Skripte ausgeführt werden.</p>
+<p>Nun solltet ihr ohne Probleme mit dem Router Online gehen können,
+einwaehlen sollte er sich automatisch; als nächstes konfigurieren wir
+NAT, damit auch alle Rechner hinter dem Router Online gehen können.</p>
+<p>Zuerst setzen wir in der <code class="docutils literal notranslate"><span class="pre">'/etc/sysctl.conf</span></code>‘ folgenden Wert ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obey interface MTUs when calculating MSS</span>
+<span class="n">net</span><span class="o">.</span><span class="n">inet</span><span class="o">.</span><span class="n">tcp</span><span class="o">.</span><span class="n">mss_ifmtu</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">net</span><span class="o">.</span><span class="n">inet</span><span class="o">.</span><span class="n">ip</span><span class="o">.</span><span class="n">forwarding</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>und passen danach noch die <code class="docutils literal notranslate"><span class="pre">'/etc/ipnat.conf</span></code>‘ an bzw. erstellen sie
+mit folgenden Werten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">map</span> <span class="n">pppoe0</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.0</span><span class="o">/</span><span class="mi">24</span> <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">/</span><span class="mi">32</span> <span class="n">portmap</span> <span class="n">tcp</span><span class="o">/</span><span class="n">udp</span> <span class="mi">44000</span><span class="p">:</span><span class="mi">49999</span> <span class="n">mssclamp</span> <span class="mi">1440</span>
+<span class="nb">map</span> <span class="n">pppoe0</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.0</span><span class="o">/</span><span class="mi">24</span> <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">/</span><span class="mi">32</span> <span class="n">mssclamp</span> <span class="mi">1440</span>
+</pre></div>
+</div>
+<p>Meine IP-Range daheim ist 192.168.1.0, mit der Netmask 255.255.255.0
+bzw. /24, diese Werte müßt ihr natürlich an eure anpassen.</p>
+<p>Nun erstellen wir noch die <code class="docutils literal notranslate"><span class="pre">'/etc/ipf.conf</span></code>‘ und zum testen lassen wir
+alle Pakete durch den Paketfilter passieren:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">pass</span> <span class="ow">in</span> <span class="kn">from</span> <span class="nn">any</span> <span class="n">to</span> <span class="nb">any</span>
+<span class="k">pass</span> <span class="n">out</span> <span class="kn">from</span> <span class="nn">any</span> <span class="n">to</span> <span class="nb">any</span>
+</pre></div>
+</div>
+<p>In die <code class="docutils literal notranslate"><span class="pre">'/etc/rc.conf</span></code>‘ müßt ihr noch folgendes eintragen, damit die
+Firewall und NAT immer gestartet werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ipfilter</span><span class="o">=</span><span class="n">YES</span>
+<span class="n">ipnat</span><span class="o">=</span><span class="n">YES</span>
+</pre></div>
+</div>
+<p>Nach einem Neustart oder einem <code class="docutils literal notranslate"><span class="pre">'/etc/rc.d/ipfilter</span> <span class="pre">restart</span></code>‘ und
+<code class="docutils literal notranslate"><span class="pre">'/etc/rc.d/ipnat</span> <span class="pre">restart</span></code>‘, sollten die Clients Online gehen können.
+Ihr müßt natürlich noch den Paketfilter anpassen, sonst ist euer Router
+nach außen offen wie ein Scheunentor.</p>
+<div class="section" id="dial-on-demand">
+<h2><span class="section-number">1.38.1. </span>Dial on Demand<a class="headerlink" href="#dial-on-demand" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zwar findet man in der PPPoE Dokumentation von NetBSD die Angabe, daß
+für PPPoE ein Dial on Demand möglich ist, allerdings scheint es nicht
+ohne weiteres möglich zu sein, dieses umzusetzen. Vergleiche hierzu den
+[<a class="reference external" href="http://www.bsdforen.de/showthread.php?p=66477">http://www.bsdforen.de/showthread.php?p=66477</a> Thread in BSDForen.de].
+&lt;br /&gt;Stand dieser Information: Januar 2005</p>
+</div>
+<div class="section" id="weblinks">
+<h2><span class="section-number">1.38.2. </span>Weblinks<a class="headerlink" href="#weblinks" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.netbsd.org/Documentation/network/pppoe">http://www.netbsd.org/Documentation/network/pppoe</a> -
+PPPoE-Dokumentation von NetBSD</p></li>
+<li><p><a class="reference external" href="http://www.dslweb.de">http://www.dslweb.de</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html" class="btn btn-neutral float-right" title="1.39. DVB-T Karte Hauppauge WinTV-HVR 1300" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dsl-router.txt.html" class="btn btn-neutral float-left" title="1.37. DSL-Router" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

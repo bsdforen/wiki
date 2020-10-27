@@ -1,0 +1,576 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.148. Xmodmap &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.149. Xorg Konfigurieren" href="xorg_config.txt.html" />
+    <link rel="prev" title="1.147. Xfce4 mit gdm" href="xfce4_mit_gdm.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.148. Xmodmap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">1.148.1. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#andern-von-tastenbelegungen">1.148.2. Ändern von Tastenbelegungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#herausfinden-von-keycodes">1.148.3. Herausfinden von Keycodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifier">1.148.4. Modifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel">1.148.5. Beispiel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#us-tastatur-mit-umlauten-und-einigen-sonderzeichen">1.148.6. US-Tastatur mit Umlauten und einigen Sonderzeichen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.148. </span>Xmodmap</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/xmodmap.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="xorg_config.txt.html" class="btn btn-neutral float-right" title="1.149. Xorg Konfigurieren" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="xfce4_mit_gdm.txt.html" class="btn btn-neutral float-left" title="1.147. Xfce4 mit gdm" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="xmodmap">
+<h1><span class="section-number">1.148. </span>Xmodmap<a class="headerlink" href="#xmodmap" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+<img alt="../_images/logo-openbsd2.png" src="../_images/logo-openbsd2.png" />
+<img alt="../_images/logo-netbsd2.png" src="../_images/logo-netbsd2.png" />
+<img alt="../_images/logo-dragonflybsd3.png" src="../_images/logo-dragonflybsd3.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">xmodmap</span></code> ist praktisch zum Anpassen des X11-Keyboard-Layouts, falls z.B. bei
+der Tastatur ein paar Tasten fehlen oder falsch gemappt werden. Aber auch wenn
+das gewünschte Layout nicht vorhanden ist, wie z.B. angepasste Dvorak-Layouts
+oder ähnliches.</p>
+<div class="section" id="installation">
+<h2><span class="section-number">1.148.1. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">xmodmap</span></code> gehört zu Xorg bzw. XFree. Siehe daher X11-Installation des
+jeweiligen Betriebssystems.</p>
+</div>
+<div class="section" id="andern-von-tastenbelegungen">
+<h2><span class="section-number">1.148.2. </span>Ändern von Tastenbelegungen<a class="headerlink" href="#andern-von-tastenbelegungen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zum Ändern von einzelnen Tastenbelegungen kann man auf drei Arten
+vorgehen.</p>
+<ol class="arabic simple">
+<li><p>mit dem Parameter <code class="docutils literal notranslate"><span class="pre">-e</span></code>:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xmodmap -e &quot;keycode 78 = l&quot;
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>über die Standardeingabe:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xmodmap -
+keycode 78 = l
+^D
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>über eine Datei:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat &gt; mymap &lt;&lt; EOF
+keycode 78 = l
+EOF
+$ xmodmap mymap
+</pre></div>
+</div>
+<p>Die Syntax von <code class="docutils literal notranslate"><span class="pre">keycode</span></code> sieht folgendermaßen aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">keycode</span> <span class="o">&lt;</span><span class="n">nummer</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">keysym</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Es können bis zu Acht Keysyms angegeben werden, jedoch sind die letzten
+vier in normalen X11-Umgebungen nicht nutzbar.</p>
+<p>Die erste Keysym ist die Taste bei normalem Drücken, die zweite bei
+gedrücktem Shift, die dritte bei Mode_switch (normalerweise AltGr), die
+vierte wenn sowohl Mode_switch als auch Shift gedrückt sind.</p>
+<p>Um die aktuelle Belegung der Tasten zu bekommen, kann man den Befehl
+<code class="docutils literal notranslate"><span class="pre">xmodmap</span> <span class="pre">-pke</span></code> benutzen.</p>
+<p>Wenn dies in eine Datei umgelenkt wird, ist es einfach, mehrere Tasten
+auf einmal umzuändern und diese dann über die Datei zu laden.</p>
+<p>Zum automatischen Laden beim Start von X11, füge man dann einfach den
+Aufruf in seine <code class="docutils literal notranslate"><span class="pre">.xinitrc</span></code> oder <code class="docutils literal notranslate"><span class="pre">.xsession</span></code> ein, je nachdem welche
+man verwendet.</p>
+<p>Beispiel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xmodmap -pke &gt; ~/.xmodmaprc
+$ vi ~/.xmodmaprc
+// Bearbeiten
+$ vi ~/.xinitrc
+// Einfügen: xmodmap ~/.xmodmaprc
+</pre></div>
+</div>
+</div>
+<div class="section" id="herausfinden-von-keycodes">
+<h2><span class="section-number">1.148.3. </span>Herausfinden von Keycodes<a class="headerlink" href="#herausfinden-von-keycodes" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zum herausfinden von Keycodes einer bestimmten Taste kann man entweder
+die aktuelle Tastenbelegung ansehen und die gewünschte Taste
+heraussuchen, oder man verwendet <code class="docutils literal notranslate"><span class="pre">xev</span></code> und drückt die Taste.</p>
+</div>
+<div class="section" id="modifier">
+<h2><span class="section-number">1.148.4. </span>Modifier<a class="headerlink" href="#modifier" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Einige Tasten sind als Modifier festgelegt. diese bekommt man mit
+<code class="docutils literal notranslate"><span class="pre">xmodmap</span> <span class="pre">-pm</span></code> angezeigt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xmodmap -pm
+xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
+
+shift       Shift_L (0x32),  Shift_R (0x3e)
+lock        Caps_Lock (0x42)
+control     Control_L (0x25),  Control_R (0x6d)
+mod1        Alt_L (0x40),  Alt_L (0x7d),  Meta_L (0x9c)
+mod2        Num_Lock (0x4d)
+mod3
+mod4        Super_L (0x73),  Super_R (0x74),  Super_L (0x7f),  Hyper_L (0x80)
+mod5        Mode_switch (0x5d),  ISO_Level3_Shift (0x71),  ISO_Level3_Shift (0x7c)
+</pre></div>
+</div>
+<p>Will man die Taste für etwas anderes benutzen, sollte man den Modifier
+wegnehmen. dies geschieht mittels</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clear</span> <span class="o">&lt;</span><span class="n">modifier</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Hat man sich vertan oder will man den Modifier auf eine andere Taste
+legen, benutze man</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">add</span> <span class="o">&lt;</span><span class="n">modifier</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">keysym</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Dies ist auch mit mehreren Tasten möglich.</p>
+<p>Wie oben genannt geschieht dies entweder via <code class="docutils literal notranslate"><span class="pre">-e</span></code>, Standardeingabe
+oder in einer Datei.</p>
+</div>
+<div class="section" id="beispiel">
+<h2><span class="section-number">1.148.5. </span>Beispiel<a class="headerlink" href="#beispiel" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Hier eine Beispiel-.xmodmaprc-Datei (legt &lt; &gt; | auf Caps-Lock):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clear</span> <span class="n">lock</span>
+<span class="n">keycode</span> <span class="mi">66</span> <span class="o">=</span> <span class="n">less</span> <span class="n">greater</span> <span class="n">bar</span> <span class="n">brokenbar</span> <span class="n">bar</span> <span class="n">brokenbar</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="us-tastatur-mit-umlauten-und-einigen-sonderzeichen">
+<h2><span class="section-number">1.148.6. </span>US-Tastatur mit Umlauten und einigen Sonderzeichen<a class="headerlink" href="#us-tastatur-mit-umlauten-und-einigen-sonderzeichen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Manchmal kommt es vor, daß man keine deutsche Tastatur zur Verfügung
+hat, beipielsweise im Ausland, und an allen möglichen fremden Rechnern
+mit meist US-amerikanischer Tastatur arbeiten muß, dann ist es
+hilfreich, eine eigene <code class="docutils literal notranslate"><span class="pre">.Xmodmap</span></code> zu erstellen. Ich beziehe mich hier
+auf folgenden Artikel: <a class="reference external" href="http://www.linux-user.de/ausgabe/2002/11/072-keyboard/index.html">LinuxUser
+11/2002:xmodmap</a>,
+der das sehr schön darstellt. Die <code class="docutils literal notranslate"><span class="pre">.Xmodmap</span></code> habe ich aber bei <strong>é</strong>
+und <strong>è</strong> modifiziert und das gebräuchlichere auf &lt;CAPS LOCK&gt;+e gelegt,
+da man doch weit öfter ein <strong>é</strong> benötigt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! CAPS LOCK disable
+clear lock
+!the next line is normally not needed
+!add Mod3 = Mode_switch
+!keysym Caps_Lock = Mode_switch
+!!or
+keycode 66 = Mode_switch Multi_key
+keycode 117 = Mode_switch Multi_key
+! now the key definitions, use xev to look up the keycode
+! number if needed. The first 2 columns after the equal sign
+! are the normal functions of the keys. The last two columns are
+! used when Mode_switch is pressed or Mode_switch + Shift is
+! pressed.
+keycode 39 = s S ssharp
+keycode 38 = a A adiaeresis Adiaeresis
+keycode 30 = u U udiaeresis Udiaeresis
+keycode 32 = o O odiaeresis Odiaeresis
+keycode 14 = 5 percent ssharp  degree
+keycode 26 = e E eacute Eacute
+keycode 28 = t T EuroSign EuroSign
+keycode 27 = r R ecircumflex Ecircumflex
+keycode 25 = w W egrave Egrave
+keycode 31 = i I idiaeresis Idiaeresis
+keycode 21 = equal plus plusminus notsign
+keycode 57 = n N ntilde Ntilde
+keycode 58 = m M Multi_key
+keycode 15 = 6 asciicircum dead_acute  dead_circumflex
+keycode 19 = 0 parenright degree masculine
+keycode 10 = 1 exclam exclamdown onehalf
+keycode 54 = c C ccedilla Ccedilla
+keycode 24 = q Q copyright registered
+</pre></div>
+</div>
+<p>Nach dem Abspeichern im Home-Verzeichnis des jeweiligen Users kann man
+mit <code class="docutils literal notranslate"><span class="pre">xmodmap</span> <span class="pre">.Xmodmap</span></code>, sofort testen, ob es funktioniert. Will man,
+daß die neue Tastaturbelegung beim Einloggen automatisch gestartet wird,
+kann man so vorgehen:</p>
+<p>Zunächst muß man sicherstellen, daß das Kommando beim Einloggen auch
+ausgeführt wird. Je nach Login-Prozedur sollte dies entweder in
+<code class="docutils literal notranslate"><span class="pre">/etc/X11/xinit/xinitrc</span></code> oder in <code class="docutils literal notranslate"><span class="pre">/etc/X11/xdm/Xsession</span></code> geschehen.
+In diesen Dateien sollte sich etwa folgendes relativ weit am Anfang
+finden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/usr/X11R6/lib/X11/xinit/.Xresources
+sysmodmap=/usr/X11R6/lib/X11/xinit/.Xmodmap
+# merge in defaults and keymaps
+if [[x11|-f $sysresources ]]; then
+   xrdb -merge $sysresources
+fi
+if [[x11|-f $sysmodmap ]]; then
+   xmodmap $sysmodmap
+fi
+if [[x11|-f $userresources ]]; then
+   xrdb -merge $userresources
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="xorg_config.txt.html" class="btn btn-neutral float-right" title="1.149. Xorg Konfigurieren" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="xfce4_mit_gdm.txt.html" class="btn btn-neutral float-left" title="1.147. Xfce4 mit gdm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

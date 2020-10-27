@@ -1,0 +1,673 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.146. Wine &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.147. Xfce4 mit gdm" href="xfce4_mit_gdm.txt.html" />
+    <link rel="prev" title="1.145. Windows-Freigabe" href="windows-freigabe.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.146. Wine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#laufwerke-anlegen">1.146.1. Laufwerke anlegen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#einzelne-programme-konfigurieren">1.146.2. Einzelne Programme konfigurieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wine-kthread">1.146.3. wine-kthread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tipps">1.146.4. Tipps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#programme-die-images-benotigen">1.146.5. Programme, die Images benötigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alternativen">1.146.6. Alternativen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verweise">1.146.7. Verweise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.146. </span>Wine</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/wine.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="xfce4_mit_gdm.txt.html" class="btn btn-neutral float-right" title="1.147. Xfce4 mit gdm" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="windows-freigabe.txt.html" class="btn btn-neutral float-left" title="1.145. Windows-Freigabe" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wine">
+<h1><span class="section-number">1.146. </span>Wine<a class="headerlink" href="#wine" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p>Dieser Artikel soll einen Einblick geben, wie Programme die unter <a class="reference external" href="http://www.winehq.org">Wine</a> funktionieren, möglichst komfortabel eingerichtet
+werden. Die Installation von Wine wird nicht erklärt. Ein beliebiges
+Wine-Programm (z.B. <strong>winecfg</strong>) sollte bereits einmal gestartet worden sein,
+damit das Verzeichnis <strong>~/.wine</strong> angelegt ist.</p>
+<div class="section" id="laufwerke-anlegen">
+<h2><span class="section-number">1.146.1. </span>Laufwerke anlegen<a class="headerlink" href="#laufwerke-anlegen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Vorkonfiguriert sind bei Wine die Laufwerke <strong>c:</strong> das auf
+<strong>~/.wine/drive_c</strong> und <strong>z:</strong> das auf <strong>/</strong> zeigt. Eigene Laufwerke
+können auch mit <strong>winecfg</strong> angelegt werden, einfacher und flexibler
+geht es aber von der Konsole aus.</p>
+<p>Um Wine zum Beispiel das CD-Rom Laufwerk zugängig zu machen, wird
+folgendermaßen vorgegangen: &lt;xterm&gt; # cd ~/.wine/dosdevices # ln -s
+/cdrom ‚d:‘ &lt;/xterm&gt;</p>
+</div>
+<div class="section" id="einzelne-programme-konfigurieren">
+<h2><span class="section-number">1.146.2. </span>Einzelne Programme konfigurieren<a class="headerlink" href="#einzelne-programme-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die meisten Programme benötigen eine individuelle Konfiguration, wenn
+sie ordentlich funktionieren sollen. Besonders bei den
+Grafikeinstellungen hat jedes Programm andere Bedürfnisse.</p>
+<p>Wenn also einem Programm vom Standard abweichend konfiguriert werden
+soll, muss <strong>winecfg</strong> gestartet werden. Dort muss in der Kategorie
+<strong>Applications</strong> der Button <strong>Add application…</strong> angewählt werden. Es
+öffnet sich ein Dialog in dem das gewünschten Programm ausgewählt werden
+kann.</p>
+<p>Von jetzt an ist das Programm in der Liste der Anwendungen verfügbar. Am
+Fenstertitel kann ist zu erkennen, für welches Programm wine gerade
+konfiguriert wird. Jetzt können die gewünschten Einstellungen
+vorgenommen und das Programm versuchsweise gestartet werden. Vorher
+jedoch <strong>Apply</strong> und <strong>OK</strong> anwählen. Bis die richtigen Einstellungen
+gefunden sind, musste normalerweise einige Male &lt;xterm&gt; # killall wine
+&lt;/xterm&gt; eingetippt werden. Dann sollte möglichst nur das zu testende
+Programm laufen. &lt;xterm&gt; # wine program.exe &lt;/xterm&gt;</p>
+</div>
+<div class="section" id="wine-kthread">
+<h2><span class="section-number">1.146.3. </span>wine-kthread<a class="headerlink" href="#wine-kthread" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Viele Programme laufen nur mit dem alten <strong>kthread</strong>ing, dass
+inzwischen von <strong>pthread</strong>ing abgelöst wurde besser. Um das alte
+kthread zur Verfügung zu haben gibt es im offiziellen <a class="reference external" href="http://wiki.freebsd.org/Wine#head-fa5231640e75c26b7fb58f5c47770135771ad1ce">FreeBSD
+Wiki</a>
+einen Patch.</p>
+<p>&lt;xterm&gt; # cd /usr/ports/emulators/wine # fetch -o files/patch-kthread
+‚<a class="reference external" href="http://wiki.freebsd.org/Wine?action=AttachFile&amp;do=get&amp;target=patch-kthread">http://wiki.freebsd.org/Wine?action=AttachFile&amp;do=get&amp;target=patch-kthread</a>‘
+&lt;/xterm&gt;</p>
+<p>Nach einem Neubau und erneuter Installation von Wine steht die
+<code class="docutils literal notranslate"><span class="pre">wine-kthread</span></code> Binary zur Verfügung.</p>
+</div>
+<div class="section" id="tipps">
+<h2><span class="section-number">1.146.4. </span>Tipps<a class="headerlink" href="#tipps" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p>In <strong>~/bin</strong> können Skripte angelegt werden, die das Mounten von
+CD-Images und den Programmaufruf wegkapseln.</p></li>
+<li><p>Viele Programme erzeugen Bildfehler, wenn die Grafikoption <strong>Enable
+desktop double buffering</strong> nicht aktiviert ist.</p></li>
+<li><p>Programme, die nur in einer niedrigen Auflösung im Vollbildmodus
+laufen, können komfortabel mit der Option <strong>Emulate a virtual
+desktop</strong> in ein Fenster gesperrt werden. Leider unterstützt wine
+seit einigen Versionen nicht mehr, diese Einstellung seperat ist für
+jedes Programm vorzunehmen.</p></li>
+</ul>
+</div>
+<div class="section" id="programme-die-images-benotigen">
+<h2><span class="section-number">1.146.5. </span>Programme, die Images benötigen<a class="headerlink" href="#programme-die-images-benotigen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn mehrere Programme vorhanden sind, die zum Ausführen <a class="reference external" href="/howto/ISO-Imagesmounten">Images
+mounten</a> müssen, (z.B.
+<a class="reference external" href="/spiele/Starcraft">Starcraft</a> oder
+<a class="reference external" href="/spiele/DiabloII">Diablo II</a>), empfiehlt es sich ein Skript
+anzulegen, das diese Aufgabe standardisiert. Ein solches Skript kann im
+Verzeichnis <strong>~/bin</strong> angelegt werden. Der Nutzer braucht dafür
+natürlich die nötigen <a class="reference external" href="/howto/MountenalsBenutzer">Rechte zum
+Mounten</a>. Dieses Skript funktioniert
+unter FreeBSD, es sollte jedoch nicht allzu schwer sein das zu
+portieren.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+#
+# winexec
+#
+# This script handles running programs with wine that require images to be
+# mounted. Simply populate the required variables and put
+#
+# . winexec
+#
+# at the end of your script to run a program.
+#
+# version 1.1
+
+# User line breaks as delimiters.
+IFS=&#39;
+&#39;
+
+# Set default settings.
+{
+    # The script name, by default taken from the filename.
+    : ${name=&quot;$(echo &quot;$0&quot; | grep -Eo &#39;[^/]+$&#39;)&quot;}
+
+    # Name wine binary.
+    : ${wine_suffix=&quot;&quot;}         # Run a different wine binary.
+    : ${wine_bin=&quot;wine&quot;}            # The wine binary.
+
+    # Set wine directory.
+
+
+    : ${wine_dir=&quot;$HOME/.wine&quot;}     # Configuration folder.
+
+    # Set logfile.
+    : ${wine_log=&quot;$wine_dir/log.$name&quot;} # Name of the logfile
+
+    # Set available actions.
+    : ${exec_default=&quot;run&quot;}         # The command that is used
+                        # when no command is given.
+    : ${exec_actions=&quot;showlog mount umount&quot;}# Other available commands.
+
+    # Set command functions.
+    : ${run_cmd=&quot;winexec_run&quot;}
+    : ${run_pre_cmd=&quot;&quot;}
+    : ${run_after_cmd=&quot;&quot;}
+    : ${mount_cmd=&quot;winexec_mount&quot;}
+    : ${mount_pre_cmd=&quot;&quot;}
+    : ${mount_after_cmd=&quot;&quot;}
+    : ${umount_cmd=&quot;winexec_umount&quot;}
+    : ${umount_pre_cmd=&quot;&quot;}
+    : ${umount_after_cmd=&quot;&quot;}
+    : ${showlog_cmd=&quot;winexec_showlog&quot;}
+    : ${test_cmd=&quot;winexec_test&quot;}
+    : ${cleanup_cmd=&quot;winexec_cleanup&quot;}
+
+    # Mount settings.
+    : ${mount_images=&quot;&quot;}            # A newline separated list
+                        # of images.
+    : ${mount_nodes=&quot;&quot;}         # Set this if you want
+                        # device links to /dev.
+    : ${mount_devices=&quot;$(printf &#39;d\ne\nf\ng\nh\ni\nj\nk\nl&#39;)&quot;}
+                        # List of permitted dos devices.
+    : ${mount_type=&quot;cd9660&quot;}        # The image format.
+    : ${mounted_file=&quot;mounted.$name&quot;}   # Remember mounted devices.
+    : ${loaded_file=&quot;loaded.$name&quot;}     # Remember loaded images.
+
+    # Run settings.
+    : ${run_binary=&quot;&quot;}          # The name of the binary to run.
+    : ${run_folder=&quot;&quot;}          # The folder from where to run.
+    : ${run_parameters=&quot;&quot;}          # Parameters for the program.
+
+    # X settings to restore if changed.
+    : ${x_get_res_cmd=&quot;xrandr | grep \* | grep -Eo &#39;+[0-9]+x[0-9]+&#39;&quot;}
+    : ${x_res=$(eval &quot;$x_get_res_cmd&quot;)}
+    : ${x_set_res_cmd=&quot;xrandr -s $x_res&quot;}
+    : ${x_refresh_cmd=&quot;xgamma -g 1; xrefresh&quot;}
+}
+
+# Mounts the images given in &#39;mount_isos&#39;.
+winexec_mount() {
+    eval &quot;$mount_pre_cmd&quot;
+
+    for image in $mount_images; {
+        echo &quot;Loading image &#39;$image&#39;.&quot;
+        image=$(mdconfig -a -t vnode -f &quot;$image&quot;)
+        echo &quot;$image&quot; &gt;&gt; &quot;$wine_dir/$loaded_file&quot;
+
+        for device in $mount_devices; {
+            device_dir=&quot;$wine_dir/dosdevices/$device:&quot;
+            if [ ! -L &quot;$device_dir&quot; -a ! -e &quot;$device_dir&quot; ]; then
+                echo &quot;Creating device &#39;$device:&#39;.&quot;
+                if [ &quot;$mount_nodes&quot; ]; then
+                    ln -s &quot;/dev/$image&quot; &quot;$device_dir:&quot;
+                fi
+                mkdir &quot;$device_dir&quot;
+                mount -r -t $mount_type &quot;/dev/$image&quot; &quot;$device_dir&quot;
+                echo &quot;$device&quot; &gt;&gt; &quot;$wine_dir/$mounted_file&quot;
+                break
+            fi
+        }
+    }
+
+    eval &quot;$mount_after_cmd&quot;
+}
+
+# Unmount images.
+winexec_umount() {
+    eval &quot;$umount_pre_cmd&quot;
+
+    for device in $(cat &quot;$wine_dir/$mounted_file&quot; 2&gt; /dev/null); {
+        echo &quot;Destroying device &#39;$device:&#39;.&quot;
+        device_dir=&quot;$wine_dir/dosdevices/$device:&quot;
+        umount -f &quot;$device_dir&quot;
+        rmdir &quot;$device_dir&quot; &gt; /dev/null 2&gt;&amp;1
+        rm &quot;$device_dir:&quot; &gt; /dev/null 2&gt;&amp;1
+    }
+    rm &quot;$wine_dir/$mounted_file&quot; &gt; /dev/null 2&gt;&amp;1
+
+    for image in $(cat &quot;$wine_dir/$loaded_file&quot; 2&gt; /dev/null); {
+        echo &quot;Destroying image node &#39;$image&#39;.&quot;
+        mdconfig -d -u &quot;$image&quot;
+    }
+    rm &quot;$wine_dir/$loaded_file&quot; &gt; /dev/null 2&gt;&amp;1
+
+    eval &quot;$umount_after_cmd&quot;
+}
+
+# Show the logfile.
+winexec_showlog() {
+    cat &quot;$wine_log&quot;
+}
+
+# Test weather all required settings are set.
+winexec_test() {
+}
+
+# Cleanup the environment.
+winexec_cleanup() {
+    # Check screnn resolution.
+    if [ &quot;$(eval &quot;$x_get_res_cmd&quot;)&quot; != &quot;$x_res&quot; ]; then
+        eval &quot;$x_set_res_cmd&quot;
+    fi
+
+    # A little screen refresh never hurts.
+    eval &quot;$x_refresh_cmd&quot;
+}
+
+# Run the given binary.
+winexec_run() {
+    eval &quot;$test_cmd&quot;
+    eval &quot;$mount_cmd&quot;
+
+    eval &quot;$run_pre_cmd&quot;
+
+    echo &quot;Running &#39;$run_binary&#39; with &#39;$wine_bin$wine_suffix&#39;.&quot;
+    cd &quot;$run_folder&quot; &amp;&amp; $wine_bin$wine_suffix &quot;$run_binary&quot; $run_parameters &gt; &quot;$wine_log&quot; 2&gt;&amp;1
+
+    eval &quot;$run_after_cmd&quot;
+
+    eval &quot;$cleanup_cmd&quot;
+    eval &quot;$umount_cmd&quot;
+}
+
+# Get the given command.
+command=run
+if [ $1 ]; then
+    command=$1
+fi
+
+# Run the requested action.
+for action in $exec_default $exec_actions; {
+    if [ &quot;$command&quot; = &quot;$action&quot; ]; then
+        eval $&quot;${action}_cmd&quot;
+        exit 0
+    fi
+}
+
+# This happens when a wrong parameter is supplied.
+exit 1
+</pre></div>
+</div>
+</div>
+<div class="section" id="alternativen">
+<h2><span class="section-number">1.146.6. </span>Alternativen<a class="headerlink" href="#alternativen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Leider funktioniert bei weitem nicht alles mit Wine. Zumindest dort, wo
+Performance nicht ganz so wichtig ist, ist die Verwendung virtueller
+Maschinen eine Erwägung wert. Die populärsten Vertreter dieser Kategorie
+sind wohl <a class="reference external" href="/anwendungen/VMWare">VMWare</a> (Closed Source) und
+<a class="reference external" href="/anwendungen/qemu">qemu</a>.</p>
+</div>
+<div class="section" id="verweise">
+<h2><span class="section-number">1.146.7. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.freebsd.org/Wine">http://wiki.freebsd.org/Wine</a> - Porting Wine to FreeBSD</p></li>
+<li><p>Die <a class="reference external" href="http://winehq.org/">Wine Homepage</a>.</p></li>
+<li><p><a class="reference external" href="http://appdb.winehq.org/">AppDB</a>, eine Datenbank der unter Wine
+laufenden Programme.</p></li>
+<li><p><a class="reference external" href="/spiele/Hauptseite#SpielemittelsWine">Spiele mittels Wine</a>.</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=emulators/wine&amp;btnI=lucky">emulators/wine</a>
+in den FreeBSD Ports.</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=emulators/wine&amp;btnI=lucky">emulators/wine</a>
+in Pkgsrc.</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="xfce4_mit_gdm.txt.html" class="btn btn-neutral float-right" title="1.147. Xfce4 mit gdm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="windows-freigabe.txt.html" class="btn btn-neutral float-left" title="1.145. Windows-Freigabe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

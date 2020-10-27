@@ -1,0 +1,1020 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.52. Film-DVD erstellen &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.53. Firewall-Regeln" href="firewall-regeln.txt.html" />
+    <link rel="prev" title="1.51. Festplattenverschlüsselung mit pefs" href="festplattenverschluesselung_mit_pefs.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.52. Film-DVD erstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einleitung">1.52.1. Einleitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aus-den-ports-installieren">1.52.2. Aus den Ports installieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#openbsd">1.52.2.1. OpenBSD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netbsd">1.52.2.2. NetBSD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freebsd">1.52.2.3. FreeBSD</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#film-ins-dvd-format">1.52.3. Film ins „DVD“-Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kontainer">1.52.3.1. Kontainer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#video-und-audio">1.52.3.2. Video und Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dvd-struktur-mit-dvdauthor">1.52.4. DVD-Struktur mit DVDAuthor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nur-abspielen">1.52.4.1. Nur abspielen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mit-menus-und-knopfen">1.52.4.2. Mit Menüs und Knöpfen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#beispiel-code-fur-erweiterte-menus">1.52.4.3. Beispiel-Code für erweiterte Menüs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dvd-struktur-erstellen">1.52.4.4. DVD-Struktur erstellen</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#brennen">1.52.5. Brennen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verweise">1.52.6. Verweise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.52. </span>Film-DVD erstellen</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/film-dvd_erstellen.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="firewall-regeln.txt.html" class="btn btn-neutral float-right" title="1.53. Firewall-Regeln" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="festplattenverschluesselung_mit_pefs.txt.html" class="btn btn-neutral float-left" title="1.51. Festplattenverschlüsselung mit pefs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="film-dvd-erstellen">
+<h1><span class="section-number">1.52. </span>Film-DVD erstellen<a class="headerlink" href="#film-dvd-erstellen" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+<img alt="../_images/logo-openbsd2.png" src="../_images/logo-openbsd2.png" />
+<img alt="../_images/logo-netbsd2.png" src="../_images/logo-netbsd2.png" />
+<img alt="../_images/logo-dragonflybsd3.png" src="../_images/logo-dragonflybsd3.png" />
+</div>
+<p>Dieser Artikel beschäftigt sich mit dem Erstellen von Film-DVDs mit Menüs.</p>
+<div class="section" id="einleitung">
+<h2><span class="section-number">1.52.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Dieses Tutorial beschreibt wie man aus einem Film
+(<em>AVI/MPEG/MP4/MKV/OGG</em>) oder einem DVD Backup wieder eine DVD macht.
+Des weiteren wird behandelt, wie man DVD-Menüs erstellt. Soweit nichts
+anderes geschrieben steht, gilt für alle vier BSDs das Gleiche. Die
+Mencoder-Einstellungen sind zum Teil von der Mplayer-Dokumentation
+übernommen.</p>
+</div>
+<div class="section" id="aus-den-ports-installieren">
+<h2><span class="section-number">1.52.2. </span>Aus den Ports installieren<a class="headerlink" href="#aus-den-ports-installieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wir müssen nun einige Programme aus den Ports installieren.</p>
+<div class="section" id="openbsd">
+<h3><span class="section-number">1.52.2.1. </span>OpenBSD<a class="headerlink" href="#openbsd" title="Link zu dieser Überschrift">¶</a></h3>
+<ol class="arabic simple">
+<li><p>x11/mplayer</p></li>
+<li><p>sysutils/dvd+rw-tool</p></li>
+<li><p>multimedia/mjpegtools</p></li>
+<li><p>multimedia/dvdauthor</p></li>
+</ol>
+<p>Optional:</p>
+<ol class="arabic simple">
+<li><p>audio/normalize</p></li>
+<li><p>multimedia/gimp</p></li>
+</ol>
+</div>
+<div class="section" id="netbsd">
+<h3><span class="section-number">1.52.2.2. </span>NetBSD<a class="headerlink" href="#netbsd" title="Link zu dieser Überschrift">¶</a></h3>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=multimedia/mplayer&amp;btnI=lucky">multimedia/mplayer</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/dvd+rw-tools&amp;btnI=lucky">sysutils/dvd+rw-tools</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=multimedia/mjpegtools&amp;btnI=lucky">multimedia/mjpegtools</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=multimedia/dvdauthor&amp;btnI=lucky">multimedia/dvdauthor</a></p></li>
+</ol>
+<p>Optional:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=audio/normalize&amp;btnI=lucky">audio/normalize</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=graphics/gimp&amp;btnI=lucky">graphics/gimp</a></p></li>
+</ol>
+</div>
+<div class="section" id="freebsd">
+<h3><span class="section-number">1.52.2.3. </span>FreeBSD<a class="headerlink" href="#freebsd" title="Link zu dieser Überschrift">¶</a></h3>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=multimedia/mplayer&amp;btnI=lucky">multimedia/mplayer</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/dvd+rw-tool&amp;btnI=lucky">sysutils/dvd+rw-tool</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=multimedia/mjpegtools&amp;btnI=lucky">multimedia/mjpegtools</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=multimedia/dvdauthor&amp;btnI=lucky">multimedia/dvdauthor</a></p></li>
+</ol>
+<p>Optional:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=audio/normalize&amp;btnI=lucky">audio/normalize</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=graphics/gimp&amp;btnI=lucky">graphics/gimp</a></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="film-ins-dvd-format">
+<h2><span class="section-number">1.52.3. </span>Film ins „DVD“-Format<a class="headerlink" href="#film-ins-dvd-format" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um einen Film ins MPEG2-Format zu konvertieren, verwenden wir hier den
+<a class="reference external" href="/anwendungen/mplayer#mencoder">Mencoder</a>. Man könnte auch den
+Transcode nehmen. Der Transcode hat einfach nicht die gleichen
+Möglichkeiten wie der Mencoder. Mit Mencoder kann man z.B. Filter
+einsetzen, welche die Qualität steigern können. Des weiteren ist es
+einfacher, die Audio/Video-Synchronisation aufrecht zu erhalten.</p>
+<p>Führen wir uns als erstes mal diese Tabelle zu Gemüte:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 24%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Format</p></th>
+<th class="head"><p>Auflösung</p></th>
+<th class="head"><ol class="upperalpha simple" start="22">
+<li><p>Codec</p></li>
+</ol>
+</th>
+<th class="head"><ol class="upperalpha simple">
+<li><p>Codec</p></li>
+</ol>
+</th>
+<th class="head"><ol class="upperalpha simple" start="22">
+<li><p>Bitrate (Max)</p></li>
+</ol>
+</th>
+<th class="head"><ol class="upperalpha simple">
+<li><p>Bitrate (Max)</p></li>
+</ol>
+</th>
+<th class="head"><p>Samplerate</p></th>
+<th class="head"><p>FPS</p></th>
+<th class="head"><p>Seitenverhältnis</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PAL DVD</p></td>
+<td><p>720x576, 704x576, 352x576, 352x288</p></td>
+<td><p>MPEG-2</p></td>
+<td><p>MP2,AC3,PCM</p></td>
+<td><p>9800 kbps</p></td>
+<td><p>1536 kbps</p></td>
+<td><p>48000 Hz</p></td>
+<td><p>25</p></td>
+<td><p>4:3, <em>16:9 (nur für 720x576)</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>NTSC DVD</p></td>
+<td><p>720x480, 704x480, 352x480, 352x240</p></td>
+<td><p>MPEG-2</p></td>
+<td><p>AC3,PCM</p></td>
+<td><p>9800 kbps</p></td>
+<td><p>1536 kbps</p></td>
+<td><p>48000 Hz</p></td>
+<td><p>29.97, 23.97</p></td>
+<td><p>4:3, <em>16:9 (nur für 720x480)</em></p></td>
+</tr>
+</tbody>
+</table>
+<p>Hallte dich soweit an die Infos in der Tabelle. Mit der Bitrate kannst
+du natürlich spielen. Zu erst müssen wir unseren Film in ein
+DVD-konforme Datei umwandeln. Dazu verwenden wir den Mencoder. Wenn du
+dich nicht an die Tabelle hältst, wird der Film nicht mehr konform und
+er wird nicht abgespielt!</p>
+<div class="section" id="kontainer">
+<h3><span class="section-number">1.52.3.1. </span>Kontainer<a class="headerlink" href="#kontainer" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wir brauchen noch einen Kontainer für unsere Audio- und Video-Spur. Es
+gibt nur einen Kontainer, der auch DVD-konform ist, und das ist der
+MPEG-Kontainer. Um dem Mencoder mitzuteilen, welchen Kontainer er
+gebrauchen soll, geben wir ihm folgende Syntax mit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">of</span> <span class="n">mpeg</span> <span class="o">-</span><span class="n">mpegopts</span> <span class="nb">format</span><span class="o">=</span><span class="n">dvd</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="video-und-audio">
+<h3><span class="section-number">1.52.3.2. </span>Video und Audio<a class="headerlink" href="#video-und-audio" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nun kommt die Video- und Audio-Spur an die Reihe. Um es etwas zu
+vereinfachen, wird hier die komplette Syntax angegeben und erst danach
+werden wir darauf eingehen. Die Syntax ist so gewählt, dass sie das
+beste Resultat erzielt. Wenn die Breite und Höhe nur mit <em>B_V</em> und <em>H_V</em>
+angegeben sind, gibt es mehrere Möglichkeiten. In diesem Fall kannst du
+selbst aus der Tabelle die Werte einsetzen. Die Bitrate ist immer mit
+<em>BR</em> angegeben. Auch hier heißt es selbst einsetzen. Tipps gibt es
+dennoch.</p>
+<div class="section" id="pal-dvd-16-9">
+<h4><span class="section-number">1.52.3.2.1. </span>PAL DVD 16/9<a class="headerlink" href="#pal-dvd-16-9" title="Link zu dieser Überschrift">¶</a></h4>
+<p><strong>-lavcopts</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vcodec</span><span class="o">=</span><span class="n">mpeg2video</span><span class="p">:</span><span class="n">vrc_buf_size</span><span class="o">=</span><span class="mi">1835</span><span class="p">:</span><span class="n">vrc_maxrate</span><span class="o">=</span><span class="mi">9800</span><span class="p">:</span><span class="n">vbitrate</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="sa">BR</span><span class="s1">&#39;&#39;</span><span class="p">:</span>\
+<span class="n">keyint</span><span class="o">=</span><span class="mi">15</span><span class="p">:</span><span class="n">trell</span><span class="p">:</span><span class="n">mbd</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">precmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">subcmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">cmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">dia</span><span class="o">=-</span><span class="mi">10</span><span class="p">:</span><span class="n">predia</span><span class="o">=-</span><span class="mi">10</span><span class="p">:</span><span class="n">cbp</span><span class="p">:</span><span class="n">mv0</span><span class="p">:</span>\
+<span class="n">vqmin</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">lmin</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">dc</span><span class="o">=</span><span class="mi">10</span><span class="p">:</span><span class="n">acodec</span><span class="o">=</span><span class="n">ac3</span><span class="p">:</span><span class="n">abitrate</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="sa">BR</span><span class="s1">&#39;&#39;</span><span class="p">:</span><span class="n">aspect</span><span class="o">=</span><span class="mi">16</span><span class="o">/</span><span class="mi">9</span>
+</pre></div>
+</div>
+<p><strong>-vf</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scale</span><span class="o">=</span><span class="mi">720</span><span class="p">:</span><span class="mi">576</span><span class="p">,</span><span class="n">harddup</span>
+</pre></div>
+</div>
+<p><strong>-af</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lavcresample</span><span class="o">=</span><span class="mi">48000</span>
+</pre></div>
+</div>
+<p><strong>sonstiges</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">srate</span> <span class="mi">48000</span> <span class="o">-</span><span class="n">ofps</span> <span class="mi">25</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pal-dvd-4-3">
+<h4><span class="section-number">1.52.3.2.2. </span>PAL DVD 4/3<a class="headerlink" href="#pal-dvd-4-3" title="Link zu dieser Überschrift">¶</a></h4>
+<p><strong>-lavcopts</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vcodec</span><span class="o">=</span><span class="n">mpeg2video</span><span class="p">:</span><span class="n">vrc_buf_size</span><span class="o">=</span><span class="mi">1835</span><span class="p">:</span><span class="n">vrc_maxrate</span><span class="o">=</span><span class="mi">9800</span><span class="p">:</span><span class="n">vbitrate</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="sa">BR</span><span class="s1">&#39;&#39;</span><span class="p">:</span>\
+<span class="n">keyint</span><span class="o">=</span><span class="mi">15</span><span class="p">:</span><span class="n">trell</span><span class="p">:</span><span class="n">mbd</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">precmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">subcmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">cmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">dia</span><span class="o">=-</span><span class="mi">10</span><span class="p">:</span><span class="n">predia</span><span class="o">=-</span><span class="mi">10</span><span class="p">:</span><span class="n">cbp</span><span class="p">:</span><span class="n">mv0</span><span class="p">:</span>\
+<span class="n">vqmin</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">lmin</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">dc</span><span class="o">=</span><span class="mi">10</span><span class="p">:</span><span class="n">acodec</span><span class="o">=</span><span class="n">ac3</span><span class="p">:</span><span class="n">abitrate</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="sa">BR</span><span class="s1">&#39;&#39;</span><span class="p">:</span><span class="n">aspect</span><span class="o">=</span><span class="mi">4</span><span class="o">/</span><span class="mi">3</span>
+</pre></div>
+</div>
+<p><strong>-vf</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scale</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="n">B_V</span><span class="s1">&#39;&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="n">H_V</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">harddup</span>
+</pre></div>
+</div>
+<p><strong>-af</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lavcresample</span><span class="o">=</span><span class="mi">48000</span>
+</pre></div>
+</div>
+<p><strong>sonstiges</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">srate</span> <span class="mi">48000</span> <span class="o">-</span><span class="n">ofps</span> <span class="mi">25</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="erklarung-der-syntax">
+<h4><span class="section-number">1.52.3.2.3. </span>Erklärung der Syntax<a class="headerlink" href="#erklarung-der-syntax" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Leider kann man hier nicht genau auf die einzelnen Punkte eingehen. Das
+würde den Rahmen für dieses HowTo sprengen. Wer mehr wissen will, kann
+<a class="reference external" href="http://www.mplayerhq.hu/DOCS/man/de/mplayer.1.html#CODEC-SPEZIFISCHE%20ENCODING-OPTIONEN%20(NUR%20BEI%20MENCODER)">hier</a>
+mehr dazu lesen. Die wichtigsten Punkte werden wir aber anschauen
+können. Aber wie schon geschrieben, die „Default“-Syntax hier sollte die
+beste Qualität liefern.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Syntax</p></th>
+<th class="head"><p>Erklärung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>-vf</em> <strong>harddup</strong></p></td>
+<td><p>Ist dafür verantwortlich, dass die A/V-Synchronisation aufrecht erhalten bleibt</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>-vf</em> <strong>scale</strong>=<em>W:H</em></p></td>
+<td><p>Ändert die Bildgröße auf W und H</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>-ofps</strong> <em>25</em></p></td>
+<td><p>Zur Sicherheit, dass immer 25 Bilder in der Sekunde kommen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>-lavcopts</em> <strong>vbitrate</strong>=<em>BR</em></p></td>
+<td><p>Gibt die Video-Bitrate an</p></td>
+</tr>
+<tr class="row-even"><td><p><em>-lavcopts</em> <strong>abitrate</strong>=<em>BR</em></p></td>
+<td><p>Gibt die Audio-Bitrate an</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>-lavcopts</em> <strong>vcodec</strong>=<em>mpeg2video</em></p></td>
+<td><p>Gibt den Videocodec an</p></td>
+</tr>
+<tr class="row-even"><td><p><em>-lavcopts</em> <strong>acodec</strong>=<em>ac3</em></p></td>
+<td><p>Gibt den Audiocodec an</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>-lavcopts</em> <strong>aspect</strong>=<em>x/y</em></p></td>
+<td><p>Ändert den Aspect auf x/y</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tipps">
+<h4><span class="section-number">1.52.3.2.4. </span>Tipps<a class="headerlink" href="#tipps" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Nun gibt es einige Tipps und etwas Fachwissen. Das Encoder-Wissen muss
+man sich aneignen, aber mit Hilfe dieses HowTos sollte man im Stande
+sein, eine qualitativ hochwertige DVD zu erstellen. Kommt halt auch
+etwas auf das Ausgangsmaterial an.</p>
+<div class="section" id="ton-ac3">
+<h5><span class="section-number">1.52.3.2.4.1. </span>Ton (AC3)<a class="headerlink" href="#ton-ac3" title="Link zu dieser Überschrift">¶</a></h5>
+<p>AC3 ist nicht gerade der beste Audio-Codec, da er verlustbehaftet ist.
+Mit etwas Wissen kann man es aber etwas erträglicher machen. AC3 ist ein
+Mehrkanal-Ton-Codec und kann 2, 4 oder 6 (5.1) Kanäle beinhalten. Tipps
+für die Bitrate</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Stereo</span> <span class="p">(</span><span class="mi">2</span><span class="o">-</span><span class="n">Kanal</span><span class="p">)</span>        <span class="mi">192</span><span class="n">kbps</span> <span class="n">oder</span> <span class="mi">224</span><span class="n">kbps</span>
+<span class="mi">4</span><span class="o">-</span><span class="n">Kanal</span>                 <span class="mi">320</span><span class="n">kbps</span>
+<span class="mf">5.1</span> <span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="n">Kanal</span><span class="p">)</span>           <span class="mi">384</span><span class="n">kbps</span> <span class="n">oder</span> <span class="mi">448</span><span class="n">kbps</span>
+</pre></div>
+</div>
+<p>Wenn das Ausgangsmaterial 6 oder 4 Kanäle hat, und man will, dass die 6
+(5.1) oder 4 Kanäle auch auf der DVD sind, muss man das dem Mencoder
+auch mitteilen. Man fügt einfach folgendes an:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">channels</span> <span class="mi">6</span>
+<span class="n">bzw</span><span class="o">.</span>
+<span class="o">-</span><span class="n">channels</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<p>Hat das Material Stereo-Ton und man will auf der DVD einen 5.1-Ton, so
+fügt man einfach folgendes an:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">channels</span> <span class="mi">6</span> <span class="o">-</span><span class="n">af</span> <span class="n">pan</span><span class="o">=</span><span class="mi">6</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">delay</span><span class="p">,</span><span class="n">volnorm</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bild-filter">
+<h5><span class="section-number">1.52.3.2.4.2. </span>Bild (Filter)<a class="headerlink" href="#bild-filter" title="Link zu dieser Überschrift">¶</a></h5>
+<p>Jetzt kommt ein wichtiges Thema. Mplayer kennt Filter. Diese Filter kann
+man dazu gebrauchen, die Qualität des Ausgangsmaterials etwas zu
+verbessern. Die Filter funktionieren sehr gut. Ist aber das Bild zu
+schlecht, so wird sich ein Filter auch nicht gerade positiv auswirken,
+da er das Bild zu weich macht. Die Filter werden wie folgt gebraucht:
+<em>-vf</em> filter1,filter2=opt1:opt2,filter3</p>
+<p>Um mehr darüber zu erfahren, bitte in der Manpage nachschauen.</p>
+<p>Dieser Filter versucht, Bildrauschen zu unterdrücken. Er sollte vor
+<em>hharddup</em> stehen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">denoise3d</span>
+</pre></div>
+</div>
+<p>Donald Grafts adaptiver Kernel-Deinterlacer, für Deinterlacing. Er
+sollte nach <em>harddup</em> stehen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kerndeint</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="anamorph">
+<h5><span class="section-number">1.52.3.2.4.3. </span>Anamorph<a class="headerlink" href="#anamorph" title="Link zu dieser Überschrift">¶</a></h5>
+<p>Ein analoges Bild, welches im 16/9-Format ist, aber durch schwarze
+Balken ein 4/3-Seitenverhältnis hat, ist nicht anamorph. Ein anamorphes
+Bild ist im 16/9-Format bzw. hat 720*576 Pixel. Um ein anamorphes Bild
+in ein 4/3-Seitenverhältnis zu verwandeln, kann man den Filter <em>expand</em>
+verwenden. Er fügt dem Bild schwarze Balken an.</p>
+<p>Um ein analoges 16/9-Bild in ein anamorphes Bild zu verwandeln, oder
+einfach auf gut Deutsch die schwarzen Balken zu entfernen, kann man den
+Filter <em>crop</em> nehmen. Das ist sinnvoll, weil man so Bitrate für die
+schwarzen Balken spart.</p>
+<p>Wie man die zwei Filter verwendet, steht in der Manpage von Mplayer.</p>
+</div>
+<div class="section" id="bild-bitrate">
+<h5><span class="section-number">1.52.3.2.4.4. </span>Bild (Bitrate)<a class="headerlink" href="#bild-bitrate" title="Link zu dieser Überschrift">¶</a></h5>
+<p>Eine Frage, die sich jeder hier stellen wird, ist, welche Bitrate ich
+für mein Bild brauche. Das ist auch etwas Erfahrungssache. Auch eine
+Bitrate von 2000kbps ergibt ein Bild. Also Vergleich:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span><span class="nb">min</span> <span class="n">Film</span> <span class="n">bei</span> <span class="mi">5000</span><span class="n">kbps</span> <span class="n">an</span> <span class="mi">720</span><span class="o">*</span><span class="mi">576</span> <span class="p">(</span><span class="mi">16</span><span class="o">/</span><span class="mi">9</span><span class="p">)</span>  <span class="o">=</span>  <span class="mf">2.9</span><span class="n">GB</span>
+<span class="n">mit</span> <span class="mf">1.4</span> <span class="n">GHz</span> <span class="n">an</span> <span class="mi">62</span><span class="nb">min</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Spiele am besten etwas bei deinem ersten Versuch. Du kannst ja während
+des Encodens das Ergebnis betrachten (mit Mplayer). So kannst du noch
+Anpassungen machen.</p>
+</div>
+</div>
+<div class="section" id="zusammenfassung">
+<h4><span class="section-number">1.52.3.2.5. </span>Zusammenfassung<a class="headerlink" href="#zusammenfassung" title="Link zu dieser Überschrift">¶</a></h4>
+<p>So, nun fügen wir alles zusammen. Wer den Mencoder nicht kennt, kann
+jetzt alles mit Copy-&amp;-Paste übernehmen und die Werte eintragen.
+Vielleicht auch noch einen Filter mehr einbauen.</p>
+<div class="section" id="pal-dvd-169-1">
+<span id="id1"></span><h5><span class="section-number">1.52.3.2.5.1. </span>PAL DVD 16/9<a class="headerlink" href="#pal-dvd-169-1" title="Link zu dieser Überschrift">¶</a></h5>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mencoder</span> <span class="n">eingabe_film</span><span class="o">.</span><span class="n">avi</span> <span class="o">-</span><span class="n">oac</span> <span class="n">lavc</span> <span class="o">-</span><span class="n">ovc</span> <span class="n">lavc</span> <span class="o">-</span><span class="n">vf</span> <span class="n">scale</span><span class="o">=</span><span class="mi">720</span><span class="p">:</span><span class="mi">576</span><span class="p">,</span><span class="n">harddup</span> \
+<span class="o">-</span><span class="n">srate</span> <span class="mi">48000</span> <span class="o">-</span><span class="n">af</span> <span class="n">lavcresample</span><span class="o">=</span><span class="mi">48000</span> <span class="o">-</span><span class="n">lavcopts</span> <span class="n">vcodec</span><span class="o">=</span><span class="n">mpeg2video</span><span class="p">:</span><span class="n">vrc_buf_size</span><span class="o">=</span><span class="mi">1835</span><span class="p">:</span>\
+<span class="n">vrc_maxrate</span><span class="o">=</span><span class="mi">9800</span><span class="p">:</span><span class="n">vbitrate</span><span class="o">=</span><span class="n">BR</span><span class="p">:</span><span class="n">keyint</span><span class="o">=</span><span class="mi">15</span><span class="p">:</span><span class="n">trell</span><span class="p">:</span><span class="n">mbd</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">precmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">subcmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">cmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span>\
+<span class="n">dia</span><span class="o">=-</span><span class="mi">10</span><span class="p">:</span><span class="n">predia</span><span class="o">=-</span><span class="mi">10</span><span class="p">:</span><span class="n">cbp</span><span class="p">:</span><span class="n">mv0</span><span class="p">:</span><span class="n">vqmin</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">lmin</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">dc</span><span class="o">=</span><span class="mi">10</span><span class="p">:</span><span class="n">acodec</span><span class="o">=</span><span class="n">ac3</span><span class="p">:</span><span class="n">abitrate</span><span class="o">=</span><span class="n">BR</span><span class="p">:</span><span class="n">aspect</span><span class="o">=</span><span class="mi">16</span><span class="o">/</span><span class="mi">9</span> \
+<span class="o">-</span><span class="n">ofps</span> <span class="mi">25</span> <span class="o">-</span><span class="n">of</span> <span class="n">mpeg</span> <span class="o">-</span><span class="n">mpegopts</span> <span class="nb">format</span><span class="o">=</span><span class="n">dvd</span> <span class="o">-</span><span class="n">o</span> <span class="n">ausgabe_fim</span><span class="o">.</span><span class="n">mpg</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pal-dvd-43-1">
+<span id="id2"></span><h5><span class="section-number">1.52.3.2.5.2. </span>PAL DVD 4/3<a class="headerlink" href="#pal-dvd-43-1" title="Link zu dieser Überschrift">¶</a></h5>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mencoder</span> <span class="n">eingabe_film</span><span class="o">.</span><span class="n">avi</span> <span class="o">-</span><span class="n">oac</span> <span class="n">lavc</span> <span class="o">-</span><span class="n">ovc</span> <span class="n">lavc</span> <span class="o">-</span><span class="n">vf</span> <span class="n">scale</span><span class="o">=</span><span class="n">B_W</span><span class="p">:</span><span class="n">H_W</span><span class="p">,</span><span class="n">harddup</span> \
+<span class="o">-</span><span class="n">srate</span> <span class="mi">48000</span> <span class="o">-</span><span class="n">af</span> <span class="n">lavcresample</span><span class="o">=</span><span class="mi">48000</span> <span class="o">-</span><span class="n">lavcopts</span> <span class="n">vcodec</span><span class="o">=</span><span class="n">mpeg2video</span><span class="p">:</span><span class="n">vrc_buf_size</span><span class="o">=</span><span class="mi">1835</span><span class="p">:</span>\
+<span class="n">vrc_maxrate</span><span class="o">=</span><span class="mi">9800</span><span class="p">:</span><span class="n">vbitrate</span><span class="o">=</span><span class="n">BR</span><span class="p">:</span><span class="n">keyint</span><span class="o">=</span><span class="mi">15</span><span class="p">:</span><span class="n">trell</span><span class="p">:</span><span class="n">mbd</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">precmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">subcmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">cmp</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span>\
+<span class="n">dia</span><span class="o">=-</span><span class="mi">10</span><span class="p">:</span><span class="n">predia</span><span class="o">=-</span><span class="mi">10</span><span class="p">:</span><span class="n">cbp</span><span class="p">:</span><span class="n">mv0</span><span class="p">:</span><span class="n">vqmin</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">lmin</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">dc</span><span class="o">=</span><span class="mi">10</span><span class="p">:</span><span class="n">acodec</span><span class="o">=</span><span class="n">ac3</span><span class="p">:</span><span class="n">abitrate</span><span class="o">=</span><span class="n">BR</span><span class="p">:</span><span class="n">aspect</span><span class="o">=</span><span class="mi">4</span><span class="o">/</span><span class="mi">3</span> \
+<span class="o">-</span><span class="n">ofps</span> <span class="mi">25</span> <span class="o">-</span><span class="n">of</span> <span class="n">mpeg</span> <span class="o">-</span><span class="n">mpegopts</span> <span class="nb">format</span><span class="o">=</span><span class="n">dvd</span> <span class="o">-</span><span class="n">o</span> <span class="n">ausgabe_fim</span><span class="o">.</span><span class="n">mpg</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dvd-struktur-mit-dvdauthor">
+<h2><span class="section-number">1.52.4. </span>DVD-Struktur mit DVDAuthor<a class="headerlink" href="#dvd-struktur-mit-dvdauthor" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um eine DVD-Struktur zu erzeugen brauchen wir den DVDauthor. Wir
+schreiben zuerst eine XML-Datei. Für die ganz faulen gibt es auch GUIs,
+die machen aber bekanntlich selten was man will. Es wird nun nicht mehr
+eine 16/9- und 4/3-Variante geben, da ich nun davon ausgehe, dass jeder
+selbst die Werte ersetzen kann.</p>
+<div class="section" id="nur-abspielen">
+<h3><span class="section-number">1.52.4.1. </span>Nur abspielen<a class="headerlink" href="#nur-abspielen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die einfachste DVD-Struktur ist die „Einlegen und Abspielen“-Variante.
+Dazu schreiben wir folgende XML-Datei.</p>
+<p><strong>dvdauthor.xml</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">vmgm</span> <span class="o">/&gt;</span>
+ <span class="o">&lt;</span><span class="n">titleset</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">titles</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">video</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;pal&quot;</span> <span class="n">aspect</span><span class="o">=</span><span class="s2">&quot;16:9&quot;</span><span class="o">/&gt;</span>
+   <span class="o">&lt;</span><span class="n">audio</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ac3&quot;</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;de&quot;</span><span class="o">/&gt;</span>
+     <span class="o">&lt;</span><span class="n">pgc</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;mein_film.mpg&quot;</span><span class="o">/&gt;</span>
+     <span class="o">&lt;/</span><span class="n">pgc</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">titles</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">titleset</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Kapitel kann man wie folgt machen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+   <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;mein_film.mpg&quot;</span> <span class="n">chapters</span><span class="o">=</span><span class="s2">&quot;00:00:00.000,00:03:05.200, ... &quot;</span><span class="o">/&gt;</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Will man eine ganze Serie auf DVD bannen, so kann man auch so „Kapitel“
+machen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+   <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;mein_film1.mpg&quot;</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;mein_film2.mpg&quot;</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;mein_film3.mpg&quot;</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;mein_film4.mpg&quot;</span><span class="o">&gt;</span>
+   <span class="o">...</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mit-menus-und-knopfen">
+<h3><span class="section-number">1.52.4.2. </span>Mit Menüs und Knöpfen<a class="headerlink" href="#mit-menus-und-knopfen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Mit Menüs und Knöpfen ist es etwas komplizierter. Wer es lieber einfach
+haben will, sollte die „einlegen und abspielen“-Methode nehmen. Ich
+empfehle hier die Verwendung von Gimp.</p>
+<ul class="simple">
+<li><p>Zuerst erzeugen wir ein Bild mit dem Hintergrund und allen Knöpfen in
+der Größe 768*576.</p></li>
+<li><p>Wir skalieren nun das Bild auf 720*576 und speichern es als
+<code class="docutils literal notranslate"><span class="pre">'dvd_menu.ppm</span></code>‘.</p></li>
+<li><p>Es wird nun ein mpeg2-Stream aus dem Bild erstellt.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ppmtoy4m</span> <span class="o">-</span><span class="n">v</span> <span class="mi">0</span> <span class="o">-</span><span class="n">n</span> <span class="mi">720</span> <span class="o">-</span><span class="n">r</span> <span class="o">-</span><span class="n">F</span> <span class="mi">25</span><span class="p">:</span><span class="mi">1</span> <span class="o">-</span><span class="n">A</span> <span class="mi">59</span><span class="p">:</span><span class="mi">54</span> <span class="o">-</span><span class="n">I</span> <span class="n">p</span> <span class="n">dvd_menu</span><span class="o">.</span><span class="n">ppm</span> <span class="o">|</span> \
+<span class="n">mpeg2enc</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">q</span> <span class="mi">6</span> <span class="o">-</span><span class="mi">4</span> <span class="mi">2</span> <span class="o">-</span><span class="mi">2</span> <span class="mi">1</span> <span class="o">-</span><span class="n">R</span> <span class="mi">2</span> <span class="o">-</span><span class="n">b</span> <span class="mi">8000</span> <span class="o">-</span><span class="n">v</span> <span class="mi">0</span> <span class="o">-</span><span class="n">a</span> <span class="mi">2</span> <span class="o">-</span><span class="n">M</span> <span class="mi">2</span> <span class="o">-</span><span class="n">f</span> <span class="mi">8</span> <span class="o">-</span><span class="n">o</span> <span class="n">dvd_menu</span><span class="o">.</span><span class="n">m2v</span>
+<span class="c1">#(ppmtoy4m) -n gibt die Länge des &quot;Films&quot; an und muss gleichlang wie der Sound sein. 25 = 1 sec</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Wir erzeugen nun eine mp2-Datei aus einem Lied. In unserem Fall ist
+der Sound 30 Sekunden lang.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mplayer</span> <span class="n">mein_audio</span><span class="o">.</span><span class="n">ogg</span> <span class="o">-</span><span class="n">ao</span> <span class="n">pcm</span><span class="p">:</span><span class="n">file</span><span class="o">=</span><span class="n">audio</span><span class="o">.</span><span class="n">wav</span>
+<span class="n">toolame</span> <span class="o">-</span><span class="n">s</span> <span class="mi">48000</span> <span class="o">-</span><span class="n">b</span> <span class="mi">224</span> <span class="n">audio</span><span class="o">.</span><span class="n">wav</span> <span class="n">audio_menu</span><span class="o">.</span><span class="n">mp2</span>
+<span class="n">rm</span> <span class="n">audio</span><span class="o">.</span><span class="n">wav</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Nun fügen wir Bild und Ton zusammen. Man braucht immer einen Ton.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mplex -v 0 -f 8 -o dvd_menu.vob dvd_menu.m2v audio_menu.mp2
+* Nun lade ich im Gimp das Anfangsbild &quot;dvd_menu.ppm&quot; und mache eine neue schwarze Ebene.
+* Zum Bearbeiten lassen wir den Hintergrund etwas durchschimmern. Wir ziehen einen Strich durch die Schrift der Knöpfe. Man kann es auch anders animieren, darf aber nicht mehr als vier Farben gebrauchen.
+* Wir speichern nun die obere Schicht (Hintergrund ist schwarz!) als knpf_dvd_pre.png ab.
+* Nun wird das PNG-Bild wie folgt transparent gemacht:
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pngtopnm</span> <span class="n">knpf_dvd_pre</span><span class="o">.</span><span class="n">png</span> <span class="o">|</span> <span class="n">pnmdepth</span> <span class="mi">3</span> <span class="o">|</span> \
+<span class="n">pnmtopng</span> <span class="o">-</span><span class="n">transparent</span> <span class="s2">&quot;#000000&quot;</span> <span class="o">&gt;</span> <span class="n">knpf_dvd</span><span class="o">.</span><span class="n">png</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Nun erstellen wir eine XML-Datei für spumux, <strong>knpf_dvd.xml</strong>:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">subpictures</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">stream</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">spu</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;00:00:00.00&quot;</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;00:00:00.00&quot;</span> <span class="n">highlight</span><span class="o">=</span><span class="s2">&quot;knpf_dvd.png&quot;</span> <span class="n">force</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span> <span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">button</span> <span class="n">x0</span><span class="o">=</span><span class="s2">&quot;50&quot;</span>  <span class="n">y0</span><span class="o">=</span><span class="s2">&quot;420&quot;</span> <span class="n">x1</span><span class="o">=</span><span class="s2">&quot;230&quot;</span> <span class="n">y1</span><span class="o">=</span><span class="s2">&quot;430&quot;</span> <span class="o">/&gt;</span>
+   <span class="c1"># &lt;button x0=&quot;23&quot;  y0=&quot;324&quot; x1=&quot;453&quot; y1=&quot;232&quot; /&gt;</span>
+   <span class="c1"># ...</span>
+  <span class="o">&lt;/</span><span class="n">spu</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">stream</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">subpictures</span><span class="o">&gt;</span>
+<span class="c1"># Die Positionen:</span>
+<span class="c1"># x0 und y0 sind die Koordinaten von der linken oberen Ecke des Buttons</span>
+<span class="c1"># x1 und y1 sind die Koordinaten von der rechten unteren Ecke des Buttons</span>
+<span class="c1"># Diese Koordinaten kann man mit Gimp ganz einfach herausfinden, wenn man knpf_dvd.png über dvd_menu.ppm legt.</span>
+<span class="c1"># Die Reihenfolge sollte man sich fürs dvdauthor.xml merken!</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Jetzt ist spumux an der Reihe.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spumux</span> <span class="o">-</span><span class="n">v</span> <span class="mi">0</span> <span class="o">-</span><span class="n">P</span> <span class="n">knpf_dvd</span><span class="o">.</span><span class="n">xml</span> <span class="o">&lt;</span> <span class="n">dvd_menu</span><span class="o">.</span><span class="n">vob</span> <span class="o">&gt;</span> <span class="n">dvd_menu_knpf</span><span class="o">.</span><span class="n">vob</span>
+<span class="o">*</span> <span class="n">Nun</span> <span class="n">haben</span> <span class="n">wir</span> <span class="n">unser</span> <span class="n">animiertes</span> <span class="n">DVD</span><span class="o">-</span><span class="n">Menü</span> <span class="n">mit</span> <span class="n">Sound</span><span class="o">.</span> <span class="n">Wenn</span> <span class="n">man</span> <span class="n">keinen</span> <span class="n">Sound</span> <span class="n">will</span><span class="p">,</span> <span class="n">muss</span> <span class="n">man</span> <span class="n">dennoch</span> <span class="n">einen</span> <span class="n">Leersound</span> <span class="n">nehmen</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">Nun</span> <span class="n">erzeugen</span> <span class="n">wir</span> <span class="n">unser</span> <span class="o">//</span><span class="n">dvdauthor</span><span class="o">.</span><span class="n">xml</span><span class="o">//.</span> <span class="n">Einfachheitshalber</span> <span class="n">habe</span> <span class="n">ich</span> <span class="n">nur</span> <span class="n">einen</span> <span class="n">Button</span><span class="o">.</span> <span class="n">Wenn</span> <span class="n">man</span> <span class="n">darauf</span> <span class="s2">&quot;klickt&quot;</span> <span class="n">startet</span> <span class="n">der</span> <span class="n">Film</span><span class="o">.</span> <span class="n">Nach</span> <span class="mi">60</span> <span class="n">Sekunden</span> <span class="n">wird</span> <span class="n">automatisch</span> <span class="n">der</span> <span class="n">Film</span> <span class="n">gestartet</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">vmgm</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">menus</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">pgc</span> <span class="n">entry</span><span class="o">=</span><span class="s2">&quot;title&quot;</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;dvd_menu_knpf.vob&quot;</span> <span class="n">pause</span><span class="o">=</span><span class="s2">&quot;60&quot;</span><span class="o">/&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">post</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">post</span><span class="o">&gt;</span>
+     <span class="o">&lt;/</span><span class="n">pgc</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">menus</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">vmgm</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">titleset</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">titles</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">video</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;pal&quot;</span> <span class="n">aspect</span><span class="o">=</span><span class="s2">&quot;16:9&quot;</span><span class="o">/&gt;</span>
+   <span class="o">&lt;</span><span class="n">audio</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ac3&quot;</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;de&quot;</span><span class="o">/&gt;</span>
+     <span class="o">&lt;</span><span class="n">pgc</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;mein_film.mpg&quot;</span><span class="o">/&gt;</span>
+     <span class="o">&lt;/</span><span class="n">pgc</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">titles</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">titleset</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beispiel-code-fur-erweiterte-menus">
+<h3><span class="section-number">1.52.4.3. </span>Beispiel-Code für erweiterte Menüs<a class="headerlink" href="#beispiel-code-fur-erweiterte-menus" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das sind Beispiele aus der Doku. Wenn man sie ganau betrachtet, versteht
+man sie sehr gut. Darum gibt es auch keine Erklärung.</p>
+<div class="section" id="dvd-menu-mit-kapitel">
+<h4><span class="section-number">1.52.4.3.1. </span>DVD-Menü mit Kapitel<a class="headerlink" href="#dvd-menu-mit-kapitel" title="Link zu dieser Überschrift">¶</a></h4>
+<p>dvdauthor.xml:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">vmgm</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">menus</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">pgc</span> <span class="n">entry</span><span class="o">=</span><span class="s2">&quot;title&quot;</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;menu_title.vob&quot;</span> <span class="n">pause</span><span class="o">=</span><span class="s2">&quot;60&quot;</span><span class="o">/&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">titleset</span> <span class="mi">1</span> <span class="n">menu</span> <span class="n">entry</span> <span class="n">root</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">post</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">post</span><span class="o">&gt;</span>
+     <span class="o">&lt;/</span><span class="n">pgc</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">menus</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">vmgm</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">titleset</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">menus</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">pgc</span> <span class="n">entry</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;menu_root.vob&quot;</span> <span class="n">pause</span><span class="o">=</span><span class="s2">&quot;60&quot;</span><span class="o">/&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span> <span class="n">chapter</span> <span class="mi">01</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span> <span class="n">chapter</span> <span class="mi">02</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span> <span class="n">chapter</span> <span class="mi">03</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">post</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">post</span><span class="o">&gt;</span>
+     <span class="o">&lt;/</span><span class="n">pgc</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">menus</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">titles</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">video</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;pal&quot;</span> <span class="n">aspect</span><span class="o">=</span><span class="s2">&quot;16:9&quot;</span><span class="o">/&gt;</span>
+   <span class="o">&lt;</span><span class="n">audio</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;mp2&quot;</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;de&quot;</span><span class="o">/&gt;</span>
+     <span class="o">&lt;</span><span class="n">pgc</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;stream.mpg&quot;</span> <span class="n">chapters</span><span class="o">=</span><span class="s2">&quot;0,0:0:10,0:0:20,0:0:30&quot;</span><span class="o">/&gt;</span>
+       <span class="o">&lt;</span><span class="n">post</span><span class="o">&gt;</span> <span class="n">call</span> <span class="n">vmgm</span> <span class="n">menu</span> <span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">post</span><span class="o">&gt;</span>
+     <span class="o">&lt;/</span><span class="n">pgc</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">titles</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">titleset</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dvd-mit-sprachauswahl">
+<h4><span class="section-number">1.52.4.3.2. </span>DVD mit Sprachauswahl<a class="headerlink" href="#dvd-mit-sprachauswahl" title="Link zu dieser Überschrift">¶</a></h4>
+<p>dvdauthor.xml</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">vmgm</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">menus</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">video</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;pal&quot;</span> <span class="n">aspect</span><span class="o">=</span><span class="s2">&quot;4:3&quot;</span><span class="o">/&gt;</span>
+     <span class="o">&lt;</span><span class="n">pgc</span> <span class="n">entry</span><span class="o">=</span><span class="s2">&quot;title&quot;</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;</span> <span class="p">{</span> <span class="n">g1</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">button</span><span class="o">=</span><span class="mi">3072</span><span class="p">;</span> <span class="p">}</span> <span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;menu_title.vob&quot;</span> <span class="n">pause</span><span class="o">=</span><span class="s2">&quot;60&quot;</span><span class="o">/&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">titleset</span> <span class="mi">1</span> <span class="n">menu</span> <span class="n">entry</span> <span class="n">audio</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">titleset</span> <span class="mi">1</span> <span class="n">menu</span> <span class="n">entry</span> <span class="n">root</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">post</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">post</span><span class="o">&gt;</span>
+     <span class="o">&lt;/</span><span class="n">pgc</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">menus</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">vmgm</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">titleset</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">menus</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">video</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;pal&quot;</span> <span class="n">aspect</span><span class="o">=</span><span class="s2">&quot;4:3&quot;</span><span class="o">/&gt;</span>
+     <span class="o">&lt;</span><span class="n">pgc</span> <span class="n">entry</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;menu_root.vob&quot;</span> <span class="n">pause</span><span class="o">=</span><span class="s2">&quot;60&quot;</span><span class="o">/&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span> <span class="n">chapter</span> <span class="mi">01</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span> <span class="n">chapter</span> <span class="mi">02</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span> <span class="n">chapter</span> <span class="mi">03</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span> <span class="n">chapter</span> <span class="mi">04</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">vmgm</span> <span class="n">menu</span> <span class="n">entry</span> <span class="n">title</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">post</span><span class="o">&gt;</span> <span class="n">jump</span> <span class="n">title</span> <span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">post</span><span class="o">&gt;</span>
+     <span class="o">&lt;/</span><span class="n">pgc</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">pgc</span> <span class="n">entry</span><span class="o">=</span><span class="s2">&quot;audio&quot;</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;</span> <span class="n">button</span><span class="o">=</span><span class="mi">2048</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;menu_audio.vob&quot;</span> <span class="n">pause</span><span class="o">=</span><span class="s2">&quot;inf&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">button</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="o">&gt;</span> <span class="p">{</span> <span class="n">audio</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">g1</span> <span class="n">eq</span> <span class="mi">0</span><span class="p">)</span> <span class="n">jump</span> <span class="n">vmgm</span> <span class="n">menu</span> <span class="n">entry</span> <span class="n">title</span><span class="p">;</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">g1</span> <span class="n">eq</span> <span class="mi">1</span><span class="p">)</span> <span class="n">resume</span><span class="p">;</span>
+                      <span class="p">}</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">button</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="o">&gt;</span> <span class="p">{</span> <span class="n">audio</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">g1</span> <span class="n">eq</span> <span class="mi">0</span><span class="p">)</span> <span class="n">jump</span> <span class="n">vmgm</span> <span class="n">menu</span> <span class="n">entry</span> <span class="n">title</span><span class="p">;</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">g1</span> <span class="n">eq</span> <span class="mi">1</span><span class="p">)</span> <span class="n">resume</span><span class="p">;</span>
+                      <span class="p">}</span> <span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+     <span class="o">&lt;/</span><span class="n">pgc</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">menus</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">titles</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">video</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;pal&quot;</span> <span class="n">aspect</span><span class="o">=</span><span class="s2">&quot;4:3&quot;</span><span class="o">/&gt;</span>
+   <span class="o">&lt;</span><span class="n">audio</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ac3&quot;</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="o">/&gt;</span>
+   <span class="o">&lt;</span><span class="n">audio</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ac3&quot;</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;de&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">pgc</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;</span> <span class="n">g1</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;stream_1.mpg&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;stream_2.mpg&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;stream_3.mpg&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">vob</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;stream_4.mpg&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">post</span><span class="o">&gt;</span> <span class="n">call</span> <span class="n">vmgm</span> <span class="n">menu</span> <span class="mi">1</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">post</span><span class="o">&gt;</span>
+     <span class="o">&lt;/</span><span class="n">pgc</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">titles</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">titleset</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="dvd-struktur-erstellen">
+<h3><span class="section-number">1.52.4.4. </span>DVD-Struktur erstellen<a class="headerlink" href="#dvd-struktur-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>So, nun sind wir fast am Ende. Aus dem XML-File und den Video-Files
+müssen wir jetzt nur noch einen Ordner erstellen, der die DVD-Struktur
+wiederspiegelt. Das macht der DVDauthor zum Glück von selbst.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dvdauthor</span> <span class="o">-</span><span class="n">o</span> <span class="n">DVD_DIR</span> <span class="o">-</span><span class="n">x</span> <span class="n">dvdauthor</span><span class="o">.</span><span class="n">xml</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="brennen">
+<h2><span class="section-number">1.52.5. </span>Brennen<a class="headerlink" href="#brennen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Noch wenige Minuten, bis wir uns einen gemütlichen DVD-Abend machen
+können.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">growisofs</span> <span class="o">-</span><span class="n">Z</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">CD</span> <span class="n">ROM_DEVICE</span> <span class="o">-</span><span class="n">dvd</span><span class="o">-</span><span class="n">video</span> <span class="n">DVD_DIR</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="verweise">
+<h2><span class="section-number">1.52.6. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.mplayerhq.hu/DOCS/HTML/de/menc-feat-vcd-dvd.html">Mplayer-DVD-Anleitung</a>
+(de)</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="firewall-regeln.txt.html" class="btn btn-neutral float-right" title="1.53. Firewall-Regeln" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="festplattenverschluesselung_mit_pefs.txt.html" class="btn btn-neutral float-left" title="1.51. Festplattenverschlüsselung mit pefs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

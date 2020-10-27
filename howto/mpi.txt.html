@@ -1,0 +1,927 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.91. MPI auf FreeBSD &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.92. Multihead mit nv" href="multihead_mit_nv.txt.html" />
+    <link rel="prev" title="1.90. MPD einrichten" href="mpd_einrichten.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.91. MPI auf FreeBSD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#was-ist-mpi">1.91.1. Was ist MPI?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#was-bringt-mit-das">1.91.2. Was bringt mit das?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">1.91.3. Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#openmpi">1.91.3.1. OpenMPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hpl">1.91.3.2. HPL</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#bedienung-von-openmpi-am-beispiel-von-hpl">1.91.4. Bedienung von OpenMPI am Beispiel von HPL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mpi-starten">1.91.4.1. MPI Starten</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fragen">1.91.5. Fragen?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links">1.91.6. Links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.91. </span>MPI auf FreeBSD</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/mpi.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="multihead_mit_nv.txt.html" class="btn btn-neutral float-right" title="1.92. Multihead mit nv" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mpd_einrichten.txt.html" class="btn btn-neutral float-left" title="1.90. MPD einrichten" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mpi-auf-freebsd">
+<h1><span class="section-number">1.91. </span>MPI auf FreeBSD<a class="headerlink" href="#mpi-auf-freebsd" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<div class="section" id="was-ist-mpi">
+<h2><span class="section-number">1.91.1. </span>Was ist MPI?<a class="headerlink" href="#was-ist-mpi" title="Link zu dieser Überschrift">¶</a></h2>
+<p>MPI, das s.g. <a class="reference external" href="http://de.wikipedia.org/wiki/Message_Passing_Interface">Message Passing
+Interface</a>,
+dient dazu um Nachrichten und Daten zwischen verteilten Rechnern und
+parallelisierten Programmen auszutauschen. Es wird insbesonde für
+numerische Berechnungen auf mehreren Rechnern und sogar auf großen
+Clustern eingesetzt, um die Berechnungen erheblich zu beschleunigen.</p>
+</div>
+<div class="section" id="was-bringt-mit-das">
+<h2><span class="section-number">1.91.2. </span>Was bringt mit das?<a class="headerlink" href="#was-bringt-mit-das" title="Link zu dieser Überschrift">¶</a></h2>
+<p>MPI lohnt sich zB schon, wenn man 2 Kerne hat, oder mehrere Rechner, die
+man benutzen möchte. Aber es muss gesagt werden, das sich das nur auf
+MPI basierte Programme beschränkt. Im folgenden wird es eine kleine
+Anleitung zur Installation von OpenMPI, einer freien MPI
+Implementierung, geben und eine Anleitung wie man es mit HPL voll
+ausreizt. HPL, der High Performance Linpack ist ein Benchmark, um die
+Leistungsfähigkeit von Clustern zu testen, mit dem übrigens auch die
+Floating Point Operations per second (Flops) der Top500 Supercomputer
+gemessen werden.</p>
+</div>
+<div class="section" id="installation">
+<h2><span class="section-number">1.91.3. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="openmpi">
+<h3><span class="section-number">1.91.3.1. </span>OpenMPI<a class="headerlink" href="#openmpi" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Zuerst sollte man sein System und insbesondere die Ports auf den
+aktuellsten Stand bringen. Dann installiert man mit einem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd /usr/ports/net/openmpi
+$ make install clean
+</pre></div>
+</div>
+<p>OpenMPI auf allen Rechnern, die man für seinen „Cluster“ benutzen möchte
+und damit ist die Installation auch schon abgeschlossen.</p>
+<div class="section" id="einrichtung-von-ssh-fur-openmpi">
+<h4><span class="section-number">1.91.3.1.1. </span>Einrichtung von SSH für OpenMPI<a class="headerlink" href="#einrichtung-von-ssh-fur-openmpi" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Für den Fall das man mehr als einen Rechner für seinen „Cluster“
+benutzen möchte, lohnt es sich den ssh-agent zu benutzen. So erspart man
+sich das lästige eintippen des Passworts nachdem man sein Programm
+gestartet hat. Zuerst erzeugt man sich ein Schlüsselpaar den man dann
+auf seinen Zielrechner ablegt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen -t rsa Generating public/private rsa key pair.
+Enter file in which to save the key (/home/michi/.ssh/id_rsa): &lt;Enter&gt;
+Enter passphrase (empty for no passphrase): Enter same passphrase again:
+</pre></div>
+</div>
+<p>Man kann die passphrase selbstverständlich auch leer lassen, dann muss
+man keinen ssh-agent benutzen. Trotzdem wird das hier am Beispiel von
+ssh-agent gezeigt, da es nur ein unwesentlicher Mehraufwand ist. Zuerst
+muss aber noch der öffentliche Schlüssel auf den Zielrechner gebracht
+werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat $HOME/.ssh/id_rsa.pub\| ssh [user@]zielrechner &quot;cat &gt;&gt; .ssh/authorized_keys&quot;
+</pre></div>
+</div>
+<p>Beim Login auf den „zielrechner“ sollte danach nach der Passphrase
+gefragt werden. Um sich das zu erparen kann man ssh-agent wie folgt
+benutzen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh-agent $SHELL $ ssh-add Enter passphrase for /home/michi/.ssh/id_rsa:
+Identity added: /home/michi/.ssh/id_rsa (/home/michi/.ssh/id_rsa)
+</pre></div>
+</div>
+<p>Mit ssh-agent $SHELL wird eine neue Shell in der jetzigen gestartet und
+ssh-add fügt den Schlüssel hinzu. Jetzt muss man nur noch einmal die
+Passphrase eingeben und solte sich einloggen können ohne Passphrase,
+solange man mit „exit“ diese Shell nicht verlässt.</p>
+</div>
+</div>
+<div class="section" id="hpl">
+<h3><span class="section-number">1.91.3.2. </span>HPL<a class="headerlink" href="#hpl" title="Link zu dieser Überschrift">¶</a></h3>
+<p>HPL kann <a class="reference external" href="http://www.netlib.org/benchmark/hpl/">hier</a> geholt werden.
+Es braucht aber noch zuerst eine s.g. BLAS Library, die algebraische
+Routinen enthält. Es gibt verschiedene BLAS Libraries, wovon sich die
+GotoBLAS Library als sehr innovativ und effizient (schnell)
+herausgestellt hat. Sie ist
+<a class="reference external" href="http://www.tacc.utexas.edu/resources/software/">hier</a> zu finden,
+wofür man sich aber anmelden muss. Möchte man das nicht kann man auch zu
+einer anderen BLAS Library greifen. zb der cBLAS, die auch in den Ports
+vorhanden ist.</p>
+<div class="section" id="vorraussetzungen">
+<h4><span class="section-number">1.91.3.2.1. </span>Vorraussetzungen<a class="headerlink" href="#vorraussetzungen" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Folgende Dinge sollten installiert sein:</p>
+<ul class="simple">
+<li><p>gmake</p></li>
+<li><p>gcc42</p></li>
+</ul>
+</div>
+<div class="section" id="bauen-der-gotoblas-library">
+<h4><span class="section-number">1.91.3.2.2. </span>Bauen der GotoBLAS Library<a class="headerlink" href="#bauen-der-gotoblas-library" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Als erstes würde ich empfehlen das man die GotoBLAS Library aus den
+Ports baut. Dazu meldet man sich wie oben beschrieben auf der Seite an
+und lädt das Targeknäuell runter und kopiert es in sein
+/usr/ports/distfiles Ordner. Anschließend ist es einfach mit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd /usr/ports/math/gotoblas/
+$ make install clean
+</pre></div>
+</div>
+<p>zu installieren.</p>
+<p>Wenn man wirklich das letzte Quäntchen aus seinem „Cluster“ rausholen
+möchte, dann sollte man GotoBLAS selber mit seinen Optimierungen für
+seine Maschine bauen. Jedoch ist das keine leichte Aufgabe da einige
+Änderungen nötig sind. Ich skizziere hier nur kurz wie man da vorgehen
+könnte: Nachdem man den Tarballen runtergeladen hat packt man die Goto
+aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tar -zxvf GotoBLAS-1.22.tar.gz
+$ cd GotoBLAS
+</pre></div>
+</div>
+<p>Danach muss die Datei „Makefile.rule“ geändert und F_COMPILER angepasst
+werden. Dort und in einigen weiteren sind noch einige Anpassungen nötig
+auf die ich aber jetzt erstmal verzichten möchte, weil das recht
+umfangreich ist. Falls man sich durch die ganzen Makefiles gewühlt hat,
+übersetzt man das Programm mit <strong>G</strong>make:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gmake
+</pre></div>
+</div>
+<p>Es hilft auf jeden Fall mal einen Blick in die Ports Patchfiles zu
+werfen.</p>
+</div>
+<div class="section" id="bauen-von-hpl">
+<h4><span class="section-number">1.91.3.2.3. </span>Bauen von HPL<a class="headerlink" href="#bauen-von-hpl" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Da der fleißige Leser bestimmt schon HPL heruntergeladen hat kann dieses
+nun jetzt auch ausgepackt werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tar -zxvf hpl.tar.gz $ cd hpl
+</pre></div>
+</div>
+<p>Jetzt kopiert man sich am besten ein Makefile aus setup. Es bietet sich
+zB: setup/Make.FreeBSD_PIV_CBLAS an. Und um Schreibarbeit zu sparen
+nennt man es am besten gleich um:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cp setup/Make.FreeBSD_PIV_CBLAS Make.i386
+$ vi Make.i386
+</pre></div>
+</div>
+<p>Jetzt müssen wir dort einige Informationen von Hand eintragen. Da sie
+eigentlich gut beschrieben sind sollte das selbstklärend sein, aber ich
+beschreibe kurz worauf man achten sollte und schreibe ein Beispiel:</p>
+<p>Unbedingt muss man folgende Punkte anpassen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ARCH</span>         <span class="o">=</span> <span class="n">i386</span>
+</pre></div>
+</div>
+<p>Oder wie auch immer man sein Make.xyz file genannt hat. Danach muss man
+die richtigen Pfade zu HPL, MPI, GotoBLAS und den MPI Linkern setzen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>TOPdir       = $(HOME)/hpl
+[...]
+MPdir        = /usr/local/mpi/openmpi
+
+MPinc        = -I$(MPdir)/include
+MPlib        = $(MPdir)/lib/libmpi.so
+[...]
+LAdir        = /usr/local/lib/
+LAinc        =
+LAlib        = $(LAdir)/libgoto.so
+[...]
+CC           = $(MPdir)/bin/mpicc
+[...]
+LINKER       = $(MPdir)/bin/mpif77
+[...]
+</pre></div>
+</div>
+<p>Hier ist ein Beispiel wie es aussehen könnte, wenn man GotoBLAS aus den
+Ports gebaut hat. Aber man kann es nicht oft genug betonen, wie wichtig
+es ist, es sich von vorne bis hinten genau durchzulesen und seine
+passenden Pfade einzutragen!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#
+#  -- High Performance Computing Linpack Benchmark (HPL)
+#     HPL - 1.0a - January 20, 2004
+#     Antoine P. Petitet
+#     University of Tennessee, Knoxville
+#     Innovative Computing Laboratories
+#     (C) Copyright 2000-2004 All Rights Reserved
+#
+#  -- Copyright notice and Licensing terms:
+#
+#  Redistribution  and  use in  source and binary forms, with or without
+#  modification, are  permitted provided  that the following  conditions
+#  are met:
+#
+#  1. Redistributions  of  source  code  must retain the above copyright
+#  notice, this list of conditions and the following disclaimer.
+#
+#  2. Redistributions in binary form must reproduce  the above copyright
+#  notice, this list of conditions,  and the following disclaimer in the
+#  documentation and/or other materials provided with the distribution.
+#
+#  3. All  advertising  materials  mentioning  features  or  use of this
+#  software must display the following acknowledgement:
+#  This  product  includes  software  developed  at  the  University  of
+#  Tennessee, Knoxville, Innovative Computing Laboratories.
+#
+#  4. The name of the  University,  the name of the  Laboratory,  or the
+#  names  of  its  contributors  may  not  be used to endorse or promote
+#  products  derived   from   this  software  without  specific  written
+#  permission.
+#
+#  -- Disclaimer:
+#
+#  THIS  SOFTWARE  IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+#  ``AS IS&#39;&#39; AND ANY EXPRESS OR IMPLIED WARRANTIES,  INCLUDING,  BUT NOT
+#  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+#  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE UNIVERSITY
+#  OR  CONTRIBUTORS  BE  LIABLE FOR ANY  DIRECT,  INDIRECT,  INCIDENTAL,
+#  SPECIAL,  EXEMPLARY,  OR  CONSEQUENTIAL DAMAGES  (INCLUDING,  BUT NOT
+#  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+#  DATA OR PROFITS; OR BUSINESS INTERRUPTION)  HOWEVER CAUSED AND ON ANY
+#  THEORY OF LIABILITY, WHETHER IN CONTRACT,  STRICT LIABILITY,  OR TORT
+#  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+#  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# ######################################################################
+#
+# ----------------------------------------------------------------------
+# - shell --------------------------------------------------------------
+# ----------------------------------------------------------------------
+#
+SHELL        = /bin/sh
+#
+CD           = cd
+CP           = cp
+LN_S         = ln -s
+MKDIR        = mkdir
+RM           = /bin/rm -f
+TOUCH        = touch
+#
+# ----------------------------------------------------------------------
+# - Platform identifier ------------------------------------------------
+# ----------------------------------------------------------------------
+#
+ARCH         = i386
+#
+# ----------------------------------------------------------------------
+# - HPL Directory Structure / HPL library ------------------------------
+# ----------------------------------------------------------------------
+#
+TOPdir       = $(HOME)/hpl
+INCdir       = $(TOPdir)/include
+BINdir       = $(TOPdir)/bin/$(ARCH)
+LIBdir       = $(TOPdir)/lib/$(ARCH)
+#
+HPLlib       = $(LIBdir)/libhpl.a
+#
+# ----------------------------------------------------------------------
+# - Message Passing library (MPI) --------------------------------------
+# ----------------------------------------------------------------------
+# MPinc tells the  C  compiler where to find the Message Passing library
+# header files,  MPlib  is defined  to be the name of  the library to be
+# used. The variable MPdir is only used for defining MPinc and MPlib.
+#
+MPdir        = /usr/local/mpi/openmpi
+
+MPinc        = -I$(MPdir)/include
+MPlib        = $(MPdir)/lib/libmpi.so
+#
+# ----------------------------------------------------------------------
+# - Linear Algebra library (BLAS or VSIPL) -----------------------------
+# ----------------------------------------------------------------------
+# LAinc tells the  C  compiler where to find the Linear Algebra  library
+# header files,  LAlib  is defined  to be the name of  the library to be
+# used. The variable LAdir is only used for defining LAinc and LAlib.
+#
+hi/prog/GotoBLAS
+LAdir       = /usr/local/lib/
+LAinc        =
+LAlib        = $(LAdir)/libgoto.so
+#
+# ----------------------------------------------------------------------
+# - F77 / C interface --------------------------------------------------
+# ----------------------------------------------------------------------
+# You can skip this section  if and only if  you are not planning to use
+# a  BLAS  library featuring a Fortran 77 interface.  Otherwise,  it  is
+# necessary  to  fill out the  F2CDEFS  variable  with  the  appropriate
+# options.  **One and only one**  option should be chosen in **each** of
+# the 3 following categories:
+#
+# 1) name space (How C calls a Fortran 77 routine)
+#
+# -DAdd_              : all lower case and a suffixed underscore  (Suns,
+#                       Intel, ...),                           [default]
+# -DNoChange          : all lower case (IBM RS6000),
+# -DUpCase            : all upper case (Cray),
+# -DAdd__             : the FORTRAN compiler in use is f2c.
+#
+# 2) C and Fortran 77 integer mapping
+#
+# -DF77_INTEGER=int   : Fortran 77 INTEGER is a C int,         [default]
+# -DF77_INTEGER=long  : Fortran 77 INTEGER is a C long,
+# -DF77_INTEGER=short : Fortran 77 INTEGER is a C short.
+#
+# 3) Fortran 77 string handling
+#
+# -DStringSunStyle    : The string address is passed at the string loca-
+#                       tion on the stack, and the string length is then
+#                       passed as  an  F77_INTEGER  after  all  explicit
+#                       stack arguments,                       [default]
+# -DStringStructPtr   : The address  of  a  structure  is  passed  by  a
+#                       Fortran 77  string,  and the structure is of the
+#                       form: struct {char *cp; F77_INTEGER len;},
+# -DStringStructVal   : A structure is passed by value for each  Fortran
+#                       77 string,  and  the  structure is  of the form:
+#                       struct {char *cp; F77_INTEGER len;},
+# -DStringCrayStyle   : Special option for  Cray  machines,  which  uses
+#                       Cray  fcd  (fortran  character  descriptor)  for
+#                       interoperation.
+#
+F2CDEFS      = -DAdd_ -DF77_INTEGER=int -DStringSunStyle
+#
+# ----------------------------------------------------------------------
+# - HPL includes / libraries / specifics -------------------------------
+# ----------------------------------------------------------------------
+#
+HPL_INCLUDES = -I$(INCdir) -I$(INCdir)/$(ARCH) $(LAinc) $(MPinc)
+HPL_LIBS     = $(HPLlib) $(LAlib) $(MPlib)
+#
+# - Compile time options -----------------------------------------------
+#
+# -DHPL_COPY_L           force the copy of the panel L before bcast;
+# -DHPL_CALL_CBLAS       call the cblas interface;
+# -DHPL_CALL_VSIPL       call the vsip  library;
+# -DHPL_DETAILED_TIMING  enable detailed timers;
+#
+# By default HPL will:
+#    *) not copy L before broadcast,
+#    *) call the BLAS Fortran 77 interface,
+#    *) not display detailed timing information.
+#
+HPL_OPTS     =
+#
+# ----------------------------------------------------------------------
+#
+HPL_DEFS     = $(F2CDEFS) $(HPL_OPTS) $(HPL_INCLUDES)
+#
+# ----------------------------------------------------------------------
+# - Compilers / linkers - Optimization flags ---------------------------
+# ----------------------------------------------------------------------
+#
+CC           = $(MPdir)/bin/mpicc
+CCNOOPT      = $(HPL_DEFS)
+CCFLAGS      = $(HPL_DEFS) -fomit-frame-pointer -O3 -funroll-loops
+#
+# On some platforms,  it is necessary  to use the Fortran linker to find
+# the Fortran internals used in the BLAS library.
+#
+#LINKER       = /usr/bin/f77
+#LINKER       = /usr/local/mpi/openmpi/bin/mpif77
+LINKER      = $(MPdir)/bin/mpif77
+CCNOOPT      = $(HPL_DEFS)
+LINKFLAGS    = $(CCFLAGS)
+#
+ARCHIVER     = ar
+ARFLAGS      = r
+RANLIB       = /usr/bin/ranlib
+#
+# ----------------------------------------------------------------------
+</pre></div>
+</div>
+<p>Jetzt da das schlimmste geschafft ist kann ein Versuch gestartet werden,
+HPL zu bauen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gmake arch=i386
+</pre></div>
+</div>
+<p>Falls es Probleme gibt und man etwas an seinem Makefile korrigiert hat
+lohnt sich ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gmake arch=i386 clean
+</pre></div>
+</div>
+<p>bevor man es versucht erneut zu bauen.</p>
+<p>Danach sollte in „bin/i386/“ eine „HPL.dat“ und eine „xhpl“ liegen.</p>
+</div>
+</div>
+</div>
+<div class="section" id="bedienung-von-openmpi-am-beispiel-von-hpl">
+<h2><span class="section-number">1.91.4. </span>Bedienung von OpenMPI am Beispiel von HPL<a class="headerlink" href="#bedienung-von-openmpi-am-beispiel-von-hpl" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Jetzt wo wir HPL installiert haben, müssen wir zuerst die HPL.dat
+anpassen. Doch zuerst sollte man wissen, was HPL eigentlich macht: HPL
+erzeugt eine Matrix und führt anschließend LR-Zerlegung durch und das
+falls mehrere Prozesse gestartet werden, parallel. Die Rechenschritte
+die es dazu benötigt pro Zeit geben dann die „Flops“ an. Was jetzt in
+der HPL.dat steht sind Informationen über die Matrix und das Verfahren
+mit welchem HPL sie zerlegen soll. Hier kann man bei HPL am meisten
+tunen. Die wichtigsten Sachen nun am folgenden Beispiel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HPLinpack</span> <span class="n">benchmark</span> <span class="nb">input</span> <span class="n">file</span>
+<span class="n">Innovative</span> <span class="n">Computing</span> <span class="n">Laboratory</span><span class="p">,</span> <span class="n">University</span> <span class="n">of</span> <span class="n">Tennessee</span>
+<span class="n">HPL</span><span class="o">.</span><span class="n">out</span>      <span class="n">output</span> <span class="n">file</span> <span class="n">name</span> <span class="p">(</span><span class="k">if</span> <span class="nb">any</span><span class="p">)</span>
+<span class="mi">6</span>            <span class="n">device</span> <span class="n">out</span> <span class="p">(</span><span class="mi">6</span><span class="o">=</span><span class="n">stdout</span><span class="p">,</span><span class="mi">7</span><span class="o">=</span><span class="n">stderr</span><span class="p">,</span><span class="n">file</span><span class="p">)</span>
+<span class="mi">1</span>            <span class="c1"># of problems sizes (N)</span>
+<span class="mi">5000</span>  <span class="n">Ns</span>
+<span class="mi">1</span>            <span class="c1"># of NBs</span>
+<span class="mi">200</span>       <span class="n">NBs</span>
+<span class="mi">0</span>            <span class="n">PMAP</span> <span class="n">process</span> <span class="n">mapping</span> <span class="p">(</span><span class="mi">0</span><span class="o">=</span><span class="n">Row</span><span class="o">-</span><span class="p">,</span><span class="mi">1</span><span class="o">=</span><span class="n">Column</span><span class="o">-</span><span class="n">major</span><span class="p">)</span>
+<span class="mi">3</span>            <span class="c1"># of process grids (P x Q)</span>
+<span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span>        <span class="n">Ps</span>
+<span class="mi">2</span> <span class="mi">1</span> <span class="mi">2</span>        <span class="n">Qs</span>
+<span class="mf">16.0</span>         <span class="n">threshold</span>
+<span class="mi">3</span>            <span class="c1"># of panel fact</span>
+<span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span>        <span class="n">PFACTs</span> <span class="p">(</span><span class="mi">0</span><span class="o">=</span><span class="n">left</span><span class="p">,</span> <span class="mi">1</span><span class="o">=</span><span class="n">Crout</span><span class="p">,</span> <span class="mi">2</span><span class="o">=</span><span class="n">Right</span><span class="p">)</span>
+<span class="mi">2</span>            <span class="c1"># of recursive stopping criterium</span>
+<span class="mi">2</span> <span class="mi">4</span>          <span class="n">NBMINs</span> <span class="p">(</span><span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="mi">1</span>            <span class="c1"># of panels in recursion</span>
+<span class="mi">2</span>            <span class="n">NDIVs</span>
+<span class="mi">3</span>            <span class="c1"># of recursive panel fact.</span>
+<span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span>        <span class="n">RFACTs</span> <span class="p">(</span><span class="mi">0</span><span class="o">=</span><span class="n">left</span><span class="p">,</span> <span class="mi">1</span><span class="o">=</span><span class="n">Crout</span><span class="p">,</span> <span class="mi">2</span><span class="o">=</span><span class="n">Right</span><span class="p">)</span>
+<span class="mi">1</span>            <span class="c1"># of broadcast</span>
+<span class="mi">0</span>            <span class="n">BCASTs</span> <span class="p">(</span><span class="mi">0</span><span class="o">=</span><span class="mi">1</span><span class="n">rg</span><span class="p">,</span><span class="mi">1</span><span class="o">=</span><span class="mi">1</span><span class="n">rM</span><span class="p">,</span><span class="mi">2</span><span class="o">=</span><span class="mi">2</span><span class="n">rg</span><span class="p">,</span><span class="mi">3</span><span class="o">=</span><span class="mi">2</span><span class="n">rM</span><span class="p">,</span><span class="mi">4</span><span class="o">=</span><span class="n">Lng</span><span class="p">,</span><span class="mi">5</span><span class="o">=</span><span class="n">LnM</span><span class="p">)</span>
+<span class="mi">1</span>            <span class="c1"># of lookahead depth</span>
+<span class="mi">0</span>            <span class="n">DEPTHs</span> <span class="p">(</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span>
+<span class="mi">2</span>            <span class="n">SWAP</span> <span class="p">(</span><span class="mi">0</span><span class="o">=</span><span class="nb">bin</span><span class="o">-</span><span class="n">exch</span><span class="p">,</span><span class="mi">1</span><span class="o">=</span><span class="n">long</span><span class="p">,</span><span class="mi">2</span><span class="o">=</span><span class="n">mix</span><span class="p">)</span>
+<span class="mi">64</span>           <span class="n">swapping</span> <span class="n">threshold</span>
+<span class="mi">0</span>            <span class="n">L1</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">=</span><span class="n">transposed</span><span class="p">,</span><span class="mi">1</span><span class="o">=</span><span class="n">no</span><span class="o">-</span><span class="n">transposed</span><span class="p">)</span> <span class="n">form</span>
+<span class="mi">0</span>            <span class="n">U</span>  <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">=</span><span class="n">transposed</span><span class="p">,</span><span class="mi">1</span><span class="o">=</span><span class="n">no</span><span class="o">-</span><span class="n">transposed</span><span class="p">)</span> <span class="n">form</span>
+<span class="mi">1</span>            <span class="n">Equilibration</span> <span class="p">(</span><span class="mi">0</span><span class="o">=</span><span class="n">no</span><span class="p">,</span><span class="mi">1</span><span class="o">=</span><span class="n">yes</span><span class="p">)</span>
+<span class="mi">8</span>            <span class="n">memory</span> <span class="n">alignment</span> <span class="ow">in</span> <span class="n">double</span> <span class="p">(</span><span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>5000 ist die Größe unserer Matrix (also eine 5000x5000 Matrix), sie hat
+damit eine Anzahl von 5000*5000 Elemente. Hier unten wird das Prozessor
+Gitter gewählt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>            <span class="c1"># of process grids (P x Q)</span>
+<span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span>        <span class="n">Ps</span>
+<span class="mi">2</span> <span class="mi">1</span> <span class="mi">2</span>        <span class="n">Qs</span>
+</pre></div>
+</div>
+<p>In diesem Fall würden wir 2 Prozesse (2*1) brauchen. Die 3 bedeutet das wir 3
+verschiedene Gitter angegeben haben die HPL alle probieren soll, wobei 2 davon
+gleich sind.</p>
+<div class="section" id="mpi-starten">
+<h3><span class="section-number">1.91.4.1. </span>MPI Starten<a class="headerlink" href="#mpi-starten" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wenn man einen Dual-Core Rechner hat, kann man das sogar auf einem
+Rechner ausprobieren, ohne einen anderen Computer über ein LAN, oder IB
+zu haben. Das sähe dann wie folgt aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mpirun -H localhost -np 2 ./xhpl
+</pre></div>
+</div>
+<p>-H teilt MPI mit auf welchen Hosts er arbeiten soll.  Hier nur auf „locahost“.
+-np sind die maximal auszuführende Anzahl an Prozessen, also 2 in diesem Fall.
+Das wird auch min. benötigt weil in der HPL.dat auch 2 Prozesse angegeben
+haben.</p>
+<p>Anschließend sollte jetzt so etwas wie folgt kommen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mpirun -H localhost -np 2 ./xhpl
+============================================================================
+HPLinpack 1.0a  --  High-Performance Linpack benchmark  --   January 20, 2004
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Labs.,  UTK
+============================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N      :    5000
+NB     :     200
+PMAP   : Row-major process mapping
+P      :       1        2        1
+Q      :       2        1        2
+PFACT  :    Left    Crout    Right
+NBMIN  :       2        4
+NDIV   :       2
+RFACT  :    Left    Crout    Right
+BCAST  :   1ring
+DEPTH  :       0
+SWAP   : Mix (threshold = 64)
+L1     : transposed form
+U      : transposed form
+EQUIL  : yes
+ALIGN  : 8 double precision words
+
+----------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual checks will be computed:
+   1) ||Ax-b||_oo / ( eps * ||A||_1  * N        )
+   2) ||Ax-b||_oo / ( eps * ||A||_1  * ||x||_1  )
+   3) ||Ax-b||_oo / ( eps * ||A||_oo * ||x||_oo )
+- The relative machine precision (eps) is taken to be          1.110223e-16
+- Computational tests pass if scaled residuals are less than           16.0
+
+============================================================================
+T/V                N    NB     P     Q               Time             Gflops
+----------------------------------------------------------------------------
+WR00L2L2        5000   200     1     2               6.87          1.213e+01
+----------------------------------------------------------------------------
+||Ax-b||_oo / ( eps * ||A||_1  * N        ) =        0.0125140 ...... PASSED
+||Ax-b||_oo / ( eps * ||A||_1  * ||x||_1  ) =        0.0082611 ...... PASSED
+||Ax-b||_oo / ( eps * ||A||_oo * ||x||_oo ) =        0.0016126 ...... PASSED
+============================================================================
+T/V                N    NB     P     Q               Time             Gflops
+----------------------------------------------------------------------------
+WR00L2L4        5000   200     1     2               6.78          1.230e+01
+----------------------------------------------------------------------------
+||Ax-b||_oo / ( eps * ||A||_1  * N        ) =        0.0125120 ...... PASSED
+||Ax-b||_oo / ( eps * ||A||_1  * ||x||_1  ) =        0.0082598 ...... PASSED
+||Ax-b||_oo / ( eps * ||A||_oo * ||x||_oo ) =        0.0016123 ...... PASSED
+</pre></div>
+</div>
+<p>D.h. also, das auf diesem Rechner(Dual-Core) HPL mit 2 Prozessen, wo
+jeder Prozess auf einen eigenen Kern gelegt wird, 12,3 GFlops erreicht.</p>
+<p>Für den Fall das man die Gesamtleistung mehrerer Rechner testen möchte:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mpirun -H localhost,host1,host2[...] -np &lt;# processes&gt; ./befehl
+</pre></div>
+</div>
+<p>Das Leben kann man sich auch erleichtern in dem man einfach eine Datei
+der Namen seiner Rechner anlegt und sie dann mit: -machinefile
+&lt;dateinamen&gt; aufruft, wobei jeder Rechner in eine eigene Zeile kommt.</p>
+</div>
+</div>
+<div class="section" id="fragen">
+<h2><span class="section-number">1.91.5. </span>Fragen?<a class="headerlink" href="#fragen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Bei Anregungen, Fragen, oder Problemen bitte im Forum melden.</p>
+</div>
+<div class="section" id="links">
+<h2><span class="section-number">1.91.6. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www-unix.mcs.anl.gov/mpi/">MPI</a></p></li>
+<li><p><a class="reference external" href="http://www.open-mpi.org/">OpenMPI</a></p></li>
+<li><p><a class="reference external" href="http://www.mcs.anl.gov/research/projects/mpich2/">MPICH2</a> Eine
+andere MPI Implementierung</p></li>
+<li><p><a class="reference external" href="http://www.tu-chemnitz.de/informatik/RA/projects/mpihelp/">Referenz</a>
+Sehr sehr nützliche Referenz, wenn man selber MPI programmieren
+möchte.</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="multihead_mit_nv.txt.html" class="btn btn-neutral float-right" title="1.92. Multihead mit nv" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mpd_einrichten.txt.html" class="btn btn-neutral float-left" title="1.90. MPD einrichten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

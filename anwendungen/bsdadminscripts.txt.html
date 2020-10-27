@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.3. BSDAdminScripts &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="2.4. csup" href="csup.txt.html" />
+    <link rel="prev" title="2.2. BMP" href="bmp.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="anwendungen_index.html">2. Anwendungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="anwendungs-liste.txt.html">2.1. Anwendungs-Liste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bmp.txt.html">2.2. BMP</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.3. BSDAdminScripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#buildflags">2.3.1. buildflags</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#beispiele">2.3.1.1. Beispiele</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dokumentation">2.3.1.2. Dokumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#distviper">2.3.2. distviper</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#beispiele-1">2.3.2.1. Beispiele</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dokumentation-1">2.3.2.2. Dokumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pkg-libchk">2.3.3. pkg_libchk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#beispiel">2.3.3.1. Beispiel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saubere-ausgabe">2.3.3.2. Saubere Ausgabe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dokumentation-2">2.3.3.3. Dokumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pkg-upgrade">2.3.4. pkg_upgrade</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#beispiele-2">2.3.4.1. Beispiele</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dokumentation-3">2.3.4.2. Dokumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pkg-validate">2.3.5. pkg_validate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#beispiel-1">2.3.5.1. Beispiel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dokumentation-4">2.3.5.2. Dokumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#portconfig">2.3.6. portconfig</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#beispiele-3">2.3.6.1. Beispiele</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dokumentation-5">2.3.6.2. Dokumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#rcstart">2.3.7. rcstart</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#beispiele-4">2.3.7.1. Beispiele</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dokumentation-6">2.3.7.2. Dokumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#verweise">2.3.8. Verweise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="csup.txt.html">2.4. csup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distcc.txt.html">2.5. Distcc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.txt.html">2.6. Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enlightenment.txt.html">2.7. Enlightenment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firefox.txt.html">2.8. Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox.txt.html">2.9. Fluxbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gimp.txt.html">2.10. Gimp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gitit.txt.html">2.11. gitit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gkrellm.txt.html">2.12. GKrellM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idesk.txt.html">2.13. IDesk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inkscape.txt.html">2.14. Inkscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irssi.txt.html">2.15. Irssi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b.txt.html">2.16. K3b</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libreoffice.txt.html">2.17. LibreOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.txt.html">2.18. Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd.txt.html">2.19. Music Player Daemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpg123.txt.html">2.20. Mpg123</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mplayer.txt.html">2.21. mplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt.txt.html">2.22. Mutt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice.txt.html">2.23. OpenOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg_cutleaves.txt.html">2.24. pkg_cutleaves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone.txt.html">2.25. Plone 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portmaster.txt.html">2.26. Portmaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portsnap.txt.html">2.27. portsnap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portupgrade.txt.html">2.28. portupgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qemu.txt.html">2.29. Qemu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rxvt-unicode.txt.html">2.30. RXVT-Unicode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen.txt.html">2.31. Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tcsh.txt.html">2.32. TCSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive.txt.html">2.33. TeX Live</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunar.txt.html">2.34. Thunar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunderbird.txt.html">2.35. Thunderbird</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torsmo.txt.html">2.36. Torsmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vim.txt.html">2.37. Vim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4.txt.html">2.38. Xfce4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xine.txt.html">2.39. Xine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xpdf.txt.html">2.40. Xpdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xspread.txt.html">2.41. Xspread</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zsh.txt.html">2.42. ZSH</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="anwendungen_index.html"><span class="section-number">2. </span>Anwendungen</a> &raquo;</li>
+        
+      <li><span class="section-number">2.3. </span>BSDAdminScripts</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/anwendungen/bsdadminscripts.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="csup.txt.html" class="btn btn-neutral float-right" title="2.4. csup" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bmp.txt.html" class="btn btn-neutral float-left" title="2.2. BMP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bsdadminscripts">
+<h1><span class="section-number">2.3. </span>BSDAdminScripts<a class="headerlink" href="#bsdadminscripts" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+</div>
+<p>BSDAdminScripts ist eine Sammlung von Skripten für <a class="reference external" href="/FreeBSD">FreeBSD</a>, die
+regelmäßige administrative Tätigkeiten erleichtern sollen.</p>
+<div class="section" id="buildflags">
+<h2><span class="section-number">2.3.1. </span>buildflags<a class="headerlink" href="#buildflags" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Buildflags besteht aus dem <strong>make(1)</strong> Skript <strong>buildflags.mk</strong> und dem
+<strong>awk(1)</strong> Skript <strong>buildflags.awk</strong>. Letzteres ist ein Parser für die
+Syntax von <strong>buildflags.conf</strong>, ersteres importiert das geparste Skript
+in die <strong>/etc/make.conf</strong>.</p>
+<p>Nach der Installation muss noch folgendes in die <strong>/etc/make.conf</strong>
+eintragen werden, um die <strong>buildflags.conf</strong> zu verwenden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># /usr/local/etc/buildflags.conf
+BUILDFLAGS= /usr/local/share/bsdadminscripts/buildflags.mk
+.if exists(${BUILDFLAGS})
+.include &quot;${BUILDFLAGS}&quot;
+.endif
+</pre></div>
+</div>
+<div class="section" id="beispiele">
+<h3><span class="section-number">2.3.1.1. </span>Beispiele<a class="headerlink" href="#beispiele" title="Link zu dieser Überschrift">¶</a></h3>
+<p><a class="align-right reference internal" href="../_images/buildflags.conf.png"><img alt="Screenshot einer buildflags.conf" class="align-right" src="../_images/buildflags.conf.png" style="width: 180px;" /></a> Um <a class="reference external" href="distcc">distcc</a> bei einem
+<strong>buildworld</strong> oder <strong>buildkernel</strong> zu verwenden, in die
+<strong>/usr/local/etc/buildflags.conf</strong> einfach folgendes eingetragen werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span> <span class="o">|</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/*</span><span class="p">{</span><span class="n">USE_DISTCC</span> <span class="n">THREADS</span><span class="o">=</span><span class="mi">4</span> <span class="n">KERNCONF</span><span class="o">=</span><span class="n">MYKERNEL</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>USE_DISTCC</strong> wird von <strong>buildflags.mk</strong> interpretiert, das auch den
+Schalter <strong>USE_CCACHE</strong> zur Verfügung stellt. <strong>THREADS=4</strong> hat den
+gleichen Effekt wie <strong>make</strong> mit dem Parameter ‚-j 4‘ aufzurufen. Die
+Ports bauen als sicher markierte Ports automatisch parallelisiert. Wer
+es riskieren will alles parallelisiert zu bauen, kann
+<strong>FORCE_MAKE_JOBS</strong> setzen. Für Ports würde diese Funktionalität also so
+aussehen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/usr/ports &amp; !*/work*{
+    FORCE_MAKE_JOBS
+    USE_DISTCC
+}
+</pre></div>
+</div>
+<p>Eine Variable die keinen Wert zugewiesen bekommt, erhällt automatisch
+den Wert ‚yes‘. Ein sehr vollständiges Beispiel findet man unter
+<strong>/usr/local/etc/buildflags.conf.sample</strong>. Die Manpage
+<strong>buildflags.conf(1)</strong> enthält eine ausführliche Beschreibung der
+Syntax.</p>
+</div>
+<div class="section" id="dokumentation">
+<h3><span class="section-number">2.3.1.2. </span>Dokumentation<a class="headerlink" href="#dokumentation" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p><strong>buildflags.mk(1)</strong></p></li>
+<li><p><strong>buildflags.conf(1)</strong></p></li>
+<li><p><strong>buildflags.awk(1)</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="distviper">
+<h2><span class="section-number">2.3.2. </span>distviper<a class="headerlink" href="#distviper" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Mit <code class="docutils literal notranslate"><span class="pre">distviper</span></code> können nicht mehr benötigte Distfiles entfernt werden.
+Distfiles sind die Dateien die benötigt werden um einen Port zu
+kompilieren.</p>
+<div class="section" id="beispiele-1">
+<span id="id1"></span><h3><span class="section-number">2.3.2.1. </span>Beispiele<a class="headerlink" href="#beispiele-1" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das folgende Beispiel entfernt alles in <code class="docutils literal notranslate"><span class="pre">/usr/ports/distfiles</span></code> was
+nicht mehr von einem Port benötigt wird.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># distviper</span>
+</pre></div>
+</div>
+<p>Das nächste Beispiel entfernt alles in <code class="docutils literal notranslate"><span class="pre">/usr/ports/distfiles</span></code> was
+nicht mehr von einem installierten Port benötigt wird.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># distviper fast</span>
+</pre></div>
+</div>
+<p>Mit dem nächsten Kommando fragt <code class="docutils literal notranslate"><span class="pre">distviper</span></code> vor dem Löschen von
+Dateien um Erlaubnis.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># distviper -i</span>
+</pre></div>
+</div>
+<p>Es ist auch möglich sich nur von <code class="docutils literal notranslate"><span class="pre">distviper</span></code> anzeigen zu lassen, was
+es tun würde.</p>
+</div>
+<div class="section" id="dokumentation-1">
+<span id="id2"></span><h3><span class="section-number">2.3.2.2. </span>Dokumentation<a class="headerlink" href="#dokumentation-1" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p><strong>distviper(1)</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="pkg-libchk">
+<h2><span class="section-number">2.3.3. </span>pkg_libchk<a class="headerlink" href="#pkg-libchk" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Das Skript <code class="docutils literal notranslate"><span class="pre">pkg_libchk</span></code> prüft installierte Pakete darauf ob sie gegen
+fehlende oder in <code class="docutils literal notranslate"><span class="pre">/usr/local/lib/compat</span></code> liegende Libraries verlinkt
+sind. Das Skript ignoriert dabei Linux Binaries/Libraries und gibt nur
+direkt verlinkte Pakete aus.</p>
+<p>Dadurch werden nur die Pakete gelistet, die auch wirklich neu gebaut
+werden sollten. Wenn also ein Programm wegen fehlender Libraries nicht
+ausgeführt wird und vom Skript nicht aufgelistet wird, dann liegt es an
+einer indirekten Abhängigkeit.</p>
+<p>Die Filterung von indirekten Abhängigkeiten kann auch verhindert werden,
+dann werden Pakete aufgelistet, die momentan nicht funktionsfähig sind,
+statt solchen die neu verlinkt (gebaut) werden müssen.</p>
+<div class="section" id="beispiel">
+<h3><span class="section-number">2.3.3.1. </span>Beispiel<a class="headerlink" href="#beispiel" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Ohne Parameter werden alle Pakete geprüft und alle vermissten Libraries
+werden gelistet.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_libchk</span>
+<span class="n">jdk</span><span class="o">-</span><span class="mf">1.6</span><span class="o">.</span><span class="mf">0.3</span><span class="n">p3</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">jdk1</span><span class="o">.</span><span class="mf">6.0</span><span class="o">/</span><span class="n">jre</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">i386</span><span class="o">/</span><span class="n">libJdbcOdbc</span><span class="o">.</span><span class="n">so</span> <span class="n">misses</span> <span class="n">libodbcinst</span><span class="o">.</span><span class="n">so</span>
+<span class="n">Working</span> <span class="n">on</span> <span class="n">package</span> <span class="mi">339</span> <span class="n">of</span> <span class="mi">697</span><span class="p">:</span> <span class="n">libsigc</span><span class="o">++-</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">18</span>
+</pre></div>
+</div>
+<p>Mit dem Parameter <code class="docutils literal notranslate"><span class="pre">-q</span></code> werden nur die Namen der betroffenen Pakete
+ausgegeben. Es gibt auch keine Statusausgabe. Dadurch kann man die
+Ausgabe zum Beispiel direkt in eine Datei schreiben oder an
+<a class="reference external" href="portupgrade">portupgrade</a> übergeben.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_libchk -q | xargs -o portupgrade -fu</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="saubere-ausgabe">
+<h3><span class="section-number">2.3.3.2. </span>Saubere Ausgabe<a class="headerlink" href="#saubere-ausgabe" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Es gibt einige Meldungen von JDKs und OpenOffice, da diese gegen
+Libraries linken, die nicht vorhanden sind oder erst zur Laufzeit
+gesucht werden. Diese Ausgaben können durch einige Zeilen in der Datei
+<code class="docutils literal notranslate"><span class="pre">/etc/libmap.conf</span></code> unterdrückt werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clean up pkg_libchk output.</span>
+<span class="p">[</span><span class="n">libofficebean</span><span class="o">.</span><span class="n">so</span><span class="p">]</span>
+<span class="n">libjawt</span><span class="o">.</span><span class="n">so</span>  <span class="n">libc</span><span class="o">.</span><span class="n">so</span>
+
+<span class="p">[</span><span class="n">libJdbcOdbc</span><span class="o">.</span><span class="n">so</span><span class="p">]</span>
+<span class="n">libodbcinst</span><span class="o">.</span><span class="n">so</span>  <span class="n">libc</span><span class="o">.</span><span class="n">so</span>
+<span class="n">libodbc</span><span class="o">.</span><span class="n">so</span>  <span class="n">libc</span><span class="o">.</span><span class="n">so</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dokumentation-2">
+<span id="id3"></span><h3><span class="section-number">2.3.3.3. </span>Dokumentation<a class="headerlink" href="#dokumentation-2" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p><strong>pkg_libchk(1)</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="pkg-upgrade">
+<h2><span class="section-number">2.3.4. </span>pkg_upgrade<a class="headerlink" href="#pkg-upgrade" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Mit <code class="docutils literal notranslate"><span class="pre">pkg_upgrade</span></code> können Updates mit Binärpaketen durchgeführt werden.
+Dazu wird keine Kopie des Ports-Tree benötigt. Lediglich ein Paketindex
+wird vom Paketserver geladen.</p>
+<p>Pakete die nicht als Binärpakete verfügbar sind, z.B. wegen
+Lizenzeinschränkungen, werden ignoriert.</p>
+<p>Im Falle eines Konflikts hat das vorhandene Paket Vorrang.</p>
+<p>Downloads werden zum frühest möglichen Zeitpunkt bereits im Hintergrund
+gestartet und parallel von mehreren Mirrors durchgeführt. Leider ist die
+Aktualität der Mirrors sehr schlecht, so dass der Effekt begrenzt ist.
+Erfahrungsgemäß sind von 800 Paketen ca. 200 von den Mirrors zu
+bekommen.</p>
+<p>Das über 2200 Zeilen lange Shell-Skript ist sehr ausführlich
+dokumentiert. Die formatierte Manual-Page ist über 500 Zeilen lang.</p>
+<div class="section" id="beispiele-2">
+<span id="id4"></span><h3><span class="section-number">2.3.4.1. </span>Beispiele<a class="headerlink" href="#beispiele-2" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Der folgende Befehl aktualisiert alle Pakete, sofern sie als Binärpakete
+vorhanden sind.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_upgrade -a</span>
+</pre></div>
+</div>
+<p>Mit dem nächsten Befehl lässt sich lediglich anzeigen was passieren
+würde.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_upgrade -an</span>
+</pre></div>
+</div>
+<p>Und der folgende Befehl listet alle Pakete, die von <code class="docutils literal notranslate"><span class="pre">pkg_upgrade</span></code>
+ignoriert werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_upgrade -d</span>
+</pre></div>
+</div>
+<p>Die Dokumentation enthält weitere Beispiele.</p>
+</div>
+<div class="section" id="dokumentation-3">
+<span id="id5"></span><h3><span class="section-number">2.3.4.2. </span>Dokumentation<a class="headerlink" href="#dokumentation-3" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p><strong>pkg_upgrade(1)</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="pkg-validate">
+<h2><span class="section-number">2.3.5. </span>pkg_validate<a class="headerlink" href="#pkg-validate" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Das pkg_validate Skript prüft Pakete darauf ob noch alle Dateien
+vorhanden sind und die korrekte Prüfsumme haben. Die Ausgabe erfolgt in
+drei Spalten: Prüfsummen Fehler (csum), Fehlende Dateien (miss),
+Paketname (package) und Paket-Ursprung (origin).</p>
+<div class="section" id="beispiel-1">
+<span id="id6"></span><h3><span class="section-number">2.3.5.1. </span>Beispiel<a class="headerlink" href="#beispiel-1" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Um alle Pakete zu prüfen reicht es das Skript ohne Parameter aufzurufen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_validate</span>
+<span class="n">csum</span> <span class="n">miss</span> <span class="n">package</span>                           <span class="n">origin</span>
+   <span class="mi">0</span>    <span class="mi">7</span> <span class="n">apache</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">4_2</span>                    <span class="n">www</span><span class="o">/</span><span class="n">apache22</span>
+   <span class="mi">0</span>    <span class="mi">3</span> <span class="n">gstreamer</span><span class="o">-</span><span class="n">plugins</span><span class="o">-</span><span class="n">bad</span><span class="o">-</span><span class="mf">0.10</span><span class="o">.</span><span class="mi">4_2</span><span class="p">,</span><span class="mi">3</span>  <span class="n">multimedia</span><span class="o">/</span><span class="n">gstreamer</span><span class="o">-</span><span class="n">plugins</span><span class="o">-</span><span class="n">bad</span>
+   <span class="mi">1</span>    <span class="mi">0</span> <span class="n">sdl_ttf</span><span class="o">-</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">8_2</span>                   <span class="n">graphics</span><span class="o">/</span><span class="n">sdl_ttf</span>
+   <span class="mi">1</span>    <span class="mi">0</span> <span class="n">vpnc</span><span class="o">-</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">0_1</span>                      <span class="n">security</span><span class="o">/</span><span class="n">vpnc</span>
+   <span class="mi">1</span>    <span class="mi">0</span> <span class="n">xdm</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">4_2</span>                       <span class="n">x11</span><span class="o">/</span><span class="n">xdm</span>
+<span class="mi">5</span> <span class="n">of</span> <span class="mi">746</span> <span class="n">packages</span> <span class="n">appear</span> <span class="n">to</span> <span class="n">be</span> <span class="n">damaged</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Um eine Unformatierte Ausgabe mit der Pipe als Trennzeichnen zu erhalten
+reicht folgender Aufruf:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_validate -rd\|</span>
+<span class="mi">0</span><span class="o">|</span><span class="mi">7</span><span class="o">|</span><span class="n">apache</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">4_2</span><span class="o">|</span><span class="n">www</span><span class="o">/</span><span class="n">apache22</span>
+<span class="mi">0</span><span class="o">|</span><span class="mi">3</span><span class="o">|</span><span class="n">gstreamer</span><span class="o">-</span><span class="n">plugins</span><span class="o">-</span><span class="n">bad</span><span class="o">-</span><span class="mf">0.10</span><span class="o">.</span><span class="mi">4_2</span><span class="p">,</span><span class="mi">3</span><span class="o">|</span><span class="n">multimedia</span><span class="o">/</span><span class="n">gstreamer</span><span class="o">-</span><span class="n">plugins</span><span class="o">-</span><span class="n">bad</span>
+<span class="mi">1</span><span class="o">|</span><span class="mi">0</span><span class="o">|</span><span class="n">sdl_ttf</span><span class="o">-</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">8_2</span><span class="o">|</span><span class="n">graphics</span><span class="o">/</span><span class="n">sdl_ttf</span>
+<span class="mi">1</span><span class="o">|</span><span class="mi">0</span><span class="o">|</span><span class="n">vpnc</span><span class="o">-</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">0_1</span><span class="o">|</span><span class="n">security</span><span class="o">/</span><span class="n">vpnc</span>
+<span class="mi">1</span><span class="o">|</span><span class="mi">0</span><span class="o">|</span><span class="n">xdm</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">4_2</span><span class="o">|</span><span class="n">x11</span><span class="o">/</span><span class="n">xdm</span>
+</pre></div>
+</div>
+<p>Der Parameter <strong>-r</strong> erzeugt eine unformatierte Ausgabe, der Parameter
+<strong>-d</strong> ändert das Trennzeichen.</p>
+</div>
+<div class="section" id="dokumentation-4">
+<span id="id7"></span><h3><span class="section-number">2.3.5.2. </span>Dokumentation<a class="headerlink" href="#dokumentation-4" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p><strong>pkg_validate(1)</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="portconfig">
+<h2><span class="section-number">2.3.6. </span>portconfig<a class="headerlink" href="#portconfig" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Portconfig führt make Ziele in Ports aus, die portupgrade updaten würde.
+Für diese Funktionalität wird <a class="reference external" href="portupgrade">portupgrade</a> als
+Abhängigkeit benötigt.</p>
+<div class="section" id="beispiele-3">
+<span id="id8"></span><h3><span class="section-number">2.3.6.1. </span>Beispiele<a class="headerlink" href="#beispiele-3" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Um zum Beispiel vor einem</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># portupgrade -a</span>
+</pre></div>
+</div>
+<p>noch einmal alle Konfigurationsdialoge zu kontrollieren, kann einfach</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># portconfig -a</span>
+</pre></div>
+</div>
+<p>ausgeführt werden.</p>
+</div>
+<div class="section" id="dokumentation-5">
+<span id="id9"></span><h3><span class="section-number">2.3.6.2. </span>Dokumentation<a class="headerlink" href="#dokumentation-5" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p><strong>portconfig(1)</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="rcstart">
+<h2><span class="section-number">2.3.7. </span>rcstart<a class="headerlink" href="#rcstart" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Dieses Skript ermöglicht es einfach auf rc.d-Skripte zuzugreifen. Die
+Skripte werden anhand des PROVIDE Schlüsselwortes in den Skripten
+identifiziert. Natürlich können mehrere Skripte angeben oder Regular
+Expressions verwendet werden.</p>
+<div class="section" id="beispiele-4">
+<span id="id10"></span><h3><span class="section-number">2.3.7.1. </span>Beispiele<a class="headerlink" href="#beispiele-4" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Zum Beispiel beendet der Aufruf</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># rcstop &#39;.*sql&#39;</span>
+</pre></div>
+</div>
+<p>alle SQL Server wie MySQL und PostgreSQL. Für Dienste die nicht häufig
+benötigt werden ist oft keinen Eintrag in der <strong>/etc/rc.conf</strong>
+vorhanden. Solche Dienste werden mit dem Befehl <strong>rconestart</strong>
+gestartet.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># rconestart apache22 postgresql</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dokumentation-6">
+<span id="id11"></span><h3><span class="section-number">2.3.7.2. </span>Dokumentation<a class="headerlink" href="#dokumentation-6" title="Link zu dieser Überschrift">¶</a></h3>
+<p>* <strong>rcstart(1)</strong></p>
+</div>
+</div>
+<div class="section" id="verweise">
+<h2><span class="section-number">2.3.8. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/bsdadminscripts&amp;btnI=lucky">sysutils/bsdadminscripts</a></p></li>
+<li><p><a class="reference external" href="http://www.sourceforge.net/projects/bsdadminscripts">Sourceforge
+Projektseite</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="csup.txt.html" class="btn btn-neutral float-right" title="2.4. csup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bmp.txt.html" class="btn btn-neutral float-left" title="2.2. BMP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

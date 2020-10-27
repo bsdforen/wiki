@@ -1,0 +1,546 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.3. FreeBSD auf Singleboard-Computern &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="3.4. Hardware-Guide" href="hardware-guide.txt.html" />
+    <link rel="prev" title="3.2. Dell Inspiron 640m" href="dell_inspiron_640m.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="hardware_index.html">3. Hardware</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="acer_aspire_one.txt.html">3.1. Acer Aspire One</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dell_inspiron_640m.txt.html">3.2. Dell Inspiron 640m</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.3. FreeBSD auf Singleboard-Computern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hardware-beschreibung">3.3.1. Hardware-Beschreibung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pc-engines-wrap">3.3.2. PC-Engines WRAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#soekris-net4801">3.3.3. Soekris net4801</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#freebsd-unterstutzung">3.3.4. FreeBSD-Unterstützung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-an-sbcs-mit-geode-prozessor-anpassen">3.3.5. System an SBCs mit GEODE-Prozessor anpassen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kernel-konfigurationsdatei">3.3.6. Kernel-Konfigurationsdatei</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#betriebssystem-an-sbcs-anpassen">3.3.7. Betriebssystem an SBCs anpassen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-etc-make-conf">3.3.8. File:/etc/make.conf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quellen">3.3.9. Quellen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware-guide.txt.html">3.4. Hardware-Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wlan-hardware_und_-treiber.txt.html">3.5. WLAN-Hardware und -Treiber</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="hardware_index.html"><span class="section-number">3. </span>Hardware</a> &raquo;</li>
+        
+      <li><span class="section-number">3.3. </span>FreeBSD auf Singleboard-Computern</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/hardware/freebsd_auf_singleboard-computern.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="hardware-guide.txt.html" class="btn btn-neutral float-right" title="3.4. Hardware-Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dell_inspiron_640m.txt.html" class="btn btn-neutral float-left" title="3.2. Dell Inspiron 640m" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="freebsd-auf-singleboard-computern">
+<h1><span class="section-number">3.3. </span>FreeBSD auf Singleboard-Computern<a class="headerlink" href="#freebsd-auf-singleboard-computern" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd2.png" src="../_images/logo-freebsd2.png" />
+</div>
+<p>FreeBSD kann man problemlos auf sogenannten Appliances (kleinen,
+engeriesparenden Rechnern ohne Bildschirm, Maus oder Tastatur)
+einsetzen. Bisher habe ich das mit einer Soekris net4801 und einer PC
+Engines wrap 2e.1 ausprobiert.</p>
+<div class="section" id="hardware-beschreibung">
+<h2><span class="section-number">3.3.1. </span>Hardware-Beschreibung<a class="headerlink" href="#hardware-beschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="pc-engines-wrap">
+<h2><span class="section-number">3.3.2. </span>PC-Engines WRAP<a class="headerlink" href="#pc-engines-wrap" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die <a class="reference external" href="http://www.pcengines.ch/wrap.htm">Wireless Router Application
+Platform</a> (kurz: WRAP) ist ein
+Produkt der schweizer Firma
+<a class="reference external" href="http://www.pcengines.ch/PCEngines">http://www.pcengines.ch/PC Engines</a>.
+Sie ist in mehreren Ausführungen mit bis zu drei Netzwerk-, einer
+seriellen und bis zu zwei Mini-PCI-Schnittstellen erhältlich. Tastatur-,
+Maus- und Videoschnittstellen fehlen und lassen sich auch nicht
+nachrüsten. Eine USB-Schnittstelle ist optinal erhältlich und muss
+selbst eingelötet werden. Die Geode-CPU ist mit 233 MHz ausreichend
+schnell, um Router jeder Art zu bauen. Da sowohl IDE- als auch
+SCSI-Schnittstellen fehlen, eignet sich die Hardware nicht für
+Fileserver.</p>
+</div>
+<div class="section" id="soekris-net4801">
+<h2><span class="section-number">3.3.3. </span>Soekris net4801<a class="headerlink" href="#soekris-net4801" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die <a class="reference external" href="http://www.soekris.com/net4801.htm">net4801</a> ist ein Produkt der
+amerikanischen Firma <a class="reference external" href="http://www.soekris.com/">Soekris</a>. Auch hier
+stehen drei Netzwerk-, eine serielle und ein Mini-PCI-Schnittstelle zur
+Verfügung; Tastatur-, Maus- und Video-Schnittstellen fehlen. Darüber
+hinaus bietet die Soekris serienmässig USB und eine zweite interne
+serielle Schnittstelle sowie einen IDE-Notebook-Stecker, über den
+2,5“-Platten auch mit Strom versorgt werden.</p>
+</div>
+<div class="section" id="freebsd-unterstutzung">
+<h2><span class="section-number">3.3.4. </span>FreeBSD-Unterstützung<a class="headerlink" href="#freebsd-unterstutzung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Seit FreeBSD 5.4 unterstützt FreeBSD mit der Kernel-Option <code class="docutils literal notranslate"><span class="pre">CPU_GEODE</span></code>
+die in beiden Appliances verbaute CPU. Für Soekris-Hardware gibt es
+zusätzlich die Option <code class="docutils literal notranslate"><span class="pre">CPU_SOEKRIS</span></code>, die die Ansteuerung der
+Error-Leuchtdiode und des Temperatursensors ermöglicht. Im
+GENERIC-Kernel fehlt die Unterstützung für diese Hardware, deshalb
+benötigt man auf jeden Fall einen selbst gebauten Kernel. Da viele
+SBC-Anwendungen kein vollständiges FreeBSD-System benötigen, baut man
+ein massgeschneidertes Betriebssystem nur für die geplante Anwendung. Da
+die Einstellungen am Build-System auch das Host-FreeBSD betreffen, kann
+man diese Arbeiten auch in einem <a class="reference external" href="/howto/Jails">Jail</a> oder einer
+<code class="docutils literal notranslate"><span class="pre">chroot-Umgebung</span></code> durchführen; z.B. mittels
+<a class="reference external" href="http://www.minibsd.org/">MiniBSD</a>.</p>
+</div>
+<div class="section" id="system-an-sbcs-mit-geode-prozessor-anpassen">
+<h2><span class="section-number">3.3.5. </span>System an SBCs mit GEODE-Prozessor anpassen<a class="headerlink" href="#system-an-sbcs-mit-geode-prozessor-anpassen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die SBC-Hardware unterscheidet sich in einigen Punkten von Standard-PCs,
+insbesondere muss man die CPU-Optimierung an den Prozessor anpassen und
+sich um einen Hardware-Bug im Timer der CPU herumprogrammieren.</p>
+</div>
+<div class="section" id="kernel-konfigurationsdatei">
+<h2><span class="section-number">3.3.6. </span>Kernel-Konfigurationsdatei<a class="headerlink" href="#kernel-konfigurationsdatei" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Folgende Konfigurationsdatei ist sowohl für Soekris als auch WRAP
+einsetzbar. Optionale Teile sind unterhalb der Konfigurationsdatei
+beschrieben, auskommentiert und können bei Bedarf durch entfernen der
+Kommentarzeichen wieder aktiviert werden. Der Schönheit halber sollte
+man im Folgenden eventuell <code class="docutils literal notranslate"><span class="pre">WRAP</span></code> durch <code class="docutils literal notranslate"><span class="pre">SOEKRIS</span></code> ersetzen.</p>
+<p><code class="docutils literal notranslate"><span class="pre">File:/usr/src/sys/i386/conf/WRAP</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># SBC -- Hardware specific kernel configuration file for FreeBSD/i386 on</span>
+<span class="c1"># Soekris net4801</span>
+<span class="c1">#        or PC Engines Wrap</span>
+<span class="c1">#</span>
+<span class="c1"># $cvs: src/sys/i386/conf/WRAP,v 1.2 2007/01/20 23:21:50 soc Exp $</span>
+
+<span class="n">machine</span>         <span class="n">i386</span>
+<span class="n">cpu</span>             <span class="n">I586_CPU</span>         <span class="c1"># I486_CPU und I686_CPU werden nicht gebraucht</span>
+<span class="n">options</span>         <span class="n">CPU_GEODE</span>        <span class="c1"># This option is necessary because the i8254 timecounter is toast.</span>
+<span class="n">ident</span>           <span class="n">SBC</span>
+<span class="n">options</span>         <span class="n">SCHED_4BSD</span>       <span class="c1"># 4BSD scheduler</span>
+<span class="n">options</span>         <span class="n">PREEMPTION</span>       <span class="c1"># Enable kernel thread preemption</span>
+<span class="n">options</span>         <span class="n">INET</span>             <span class="c1"># InterNETworking</span>
+<span class="c1">#1# options     INET6            # IPv6</span>
+</pre></div>
+</div>
+<p>IPv6-Unterstützung benötigt man nur dann, wenn man tatsächlich an einem
+solchen Netzwerk teilnimmt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">options</span>         <span class="n">FFS</span>              <span class="c1"># Berkeley Fast Filesystem</span>
+<span class="n">options</span>         <span class="n">SOFTUPDATES</span>      <span class="c1"># soft updates brauchen kaum Platz, also</span>
+<span class="s1">&#39;rein damit</span>
+<span class="c1">#2# options     UFS_ACL          # Access Control Lists</span>
+</pre></div>
+</div>
+<p>ACLs benötigt man nur für erweiterte Zugriffsrechteverwaltung, z.B. für
+Windows-Fileserver</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#3# options     UFS_DIRHASH      # Große Directories</span>
+</pre></div>
+</div>
+<p>Unterstützung für Directories mit sehr vielen Einträgen: nur für
+Fileserver</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#4# options     MD_ROOT          # MD als root device unterstützen</span>
+</pre></div>
+</div>
+<p>Nur für Systeme, deren Root-Filesystem in einer RAMdisk liegen soll</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#5# options     NFSCLIENT        # Network Filesystem Client</span>
+<span class="c1">#5# options     NFSSERVER        # Network Filesystem Server</span>
+<span class="c1">#6# options     NFS_ROOT         # NFS als root device unterstützen</span>
+<span class="c1">#(benötigt NFSCLIENT)</span>
+</pre></div>
+</div>
+<p>NFS wird nur für Fileserver mit Unix-Clients benötigt. NFS_ROOT lädt das
+Root-Filesystem über NFS. Das ist hilfreich beim Entwicklung eigener
+Erweiterungen, die nur auf der SBC-Hardware getestet werden können.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#7# options     MSDOSFS          # MSDOS Filesystem</span>
+<span class="c1">#7# options     CD9660           # ISO 9660 Filesystem -- nur für CD-Server</span>
+</pre></div>
+</div>
+<p>MSDOSFS und CD9660 benötigt man nur, wenn man solche Dateisysteme
+tatsächlich ansprechen will, z.B. auf USB-Sticks oder für CD-Server.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">options</span>         <span class="n">PROCFS</span>           <span class="c1"># Process filesystem (requires PSEUDOFS)</span>
+ <span class="n">options</span>         <span class="n">PSEUDOFS</span>         <span class="c1"># Pseudo-filesystem framework</span>
+ <span class="n">options</span>         <span class="n">GEOM_GPT</span>         <span class="c1"># GUID Partition Tables.</span>
+ <span class="n">options</span>         <span class="n">COMPAT_43</span>        <span class="c1"># Compatible with BSD 4.3 [[KEEP|THIS!]]</span>
+ <span class="c1">#8# options     COMPAT_FREEBSD4  # Compatible with FreeBSD4</span>
+ <span class="c1">#8# options     COMPAT_FREEBSD5  # Compatible with FreeBSD5</span>
+<span class="n">Kompatibilität</span> <span class="n">zu</span> <span class="n">alten</span> <span class="n">FreeBSD</span><span class="o">-</span><span class="n">Systemen</span> <span class="n">benötigt</span> <span class="n">man</span> <span class="n">nur</span><span class="p">,</span> <span class="n">wenn</span> <span class="n">dies</span> <span class="n">eine</span> <span class="n">Anwendung</span> <span class="n">verlangt</span>
+<span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span>
+ <span class="n">options</span>         <span class="n">SCSI_DELAY</span><span class="o">=</span><span class="mi">3000</span>  <span class="c1">#9# Delay (in ms) before probing SCSI</span>
+</pre></div>
+</div>
+<p>Das SCSI-Delay ist verkürzt, da nur USB-Geräte unterstützt werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">options</span>         <span class="n">SYSVSHM</span>          <span class="c1"># SYSV-style shared memory</span>
+<span class="n">options</span>         <span class="n">SYSVMSG</span>          <span class="c1"># SYSV-style message queues</span>
+<span class="n">options</span>         <span class="n">SYSVSEM</span>          <span class="c1"># SYSV-style semaphores</span>
+<span class="n">options</span>         <span class="n">_KPOSIX_PRIORITY_SCHEDULING</span> <span class="c1"># POSIX P1003_1B real-time</span>
+<span class="n">extensions</span>
+<span class="n">options</span>         <span class="n">ADAPTIVE_GIANT</span>   <span class="c1"># Giant mutex is adaptive.</span>
+
+<span class="n">device</span>          <span class="n">apic</span>             <span class="c1"># I/O APIC</span>
+
+<span class="c1"># Bus support.</span>
+<span class="n">device</span>          <span class="n">pci</span>
+
+<span class="c1"># ATA and ATAPI devices</span>
+<span class="n">device</span>          <span class="n">ata</span>
+<span class="n">options</span>         <span class="n">ATA_STATIC_ID</span>   <span class="c1"># Static device numbering</span>
+<span class="n">device</span>          <span class="n">atadisk</span>         <span class="c1"># ATA disk drives</span>
+<span class="c1">#a# device      ataraid         # ATA RAID drives</span>
+<span class="c1">#a# device      atapicd         # ATAPI CDROM drives</span>
+<span class="c1">#a# device      atapifd         # ATAPI floppy drives</span>
+<span class="c1">#a# device      atapist         # ATAPI tape drives</span>
+</pre></div>
+</div>
+<p>Im ATA-Abschnitt sollten nur die Geräte aktiviert werden, die
+tatsächlich benötigt werden</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add suspend/resume support for the i8254.</span>
+<span class="n">device</span>          <span class="n">pmtimer</span>
+
+<span class="c1"># Serial (COM) ports</span>
+<span class="n">device</span>          <span class="n">sio</span>             <span class="c1"># 8250, 16[[45]]50 based serial ports</span>
+
+<span class="c1"># PCI Ethernet NICs that use the common MII bus controller code.</span>
+<span class="n">device</span>          <span class="n">miibus</span>          <span class="c1"># MII bus support</span>
+<span class="n">device</span>          <span class="n">sis</span>             <span class="c1"># Silicon Integrated Systems SiS 900/SiS 7016</span>
+
+<span class="c1"># Pseudo devices.</span>
+<span class="n">device</span>          <span class="n">loop</span>            <span class="c1"># Network loopback</span>
+<span class="n">device</span>          <span class="n">random</span>          <span class="c1"># Entropy device</span>
+<span class="n">device</span>          <span class="n">ether</span>           <span class="c1"># Ethernet support</span>
+<span class="c1">#n# device      sl              # Kernel SLIP</span>
+<span class="c1">#n# device      ppp             # Kernel PPP</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">ppp</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">sl</span></code> nur dann, falls das Gerät PPP- bzw.
+SLIP-Funktionalität benötigt</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">device</span>          <span class="n">tun</span>             <span class="c1"># Packet tunnel.</span>
+<span class="n">device</span>          <span class="n">pty</span>             <span class="c1"># Pseudo-ttys (telnet etc)</span>
+<span class="n">device</span>          <span class="n">md</span>              <span class="c1"># Memory &quot;disks&quot;</span>
+<span class="n">device</span>          <span class="n">gif</span>             <span class="c1"># IPv6 and IPv4 tunneling</span>
+<span class="n">device</span>          <span class="n">faith</span>           <span class="c1"># IPv6-to-IPv4 relaying (translation)</span>
+
+<span class="c1">### device      bpf             # Berkeley packet filter</span>
+
+<span class="c1"># USB support (Nur für Soekris oder WRAP mit USB-Erweiterung notwendig)</span>
+<span class="c1">#u# device      uhci            # UHCI PCI-&gt;USB interface</span>
+<span class="c1">#u# device      ohci            # OHCI PCI-&gt;USB interface</span>
+<span class="c1">#u# device      usb             # USB Bus (required)</span>
+<span class="c1">#u# device      ugen            # Generic</span>
+<span class="c1">#u# device      umass           # Disks/Mass storage - Requires scbus and</span>
+<span class="c1">#da</span>
+<span class="c1">#u# device      scbus           # SCSI bus (required for SCSI)</span>
+<span class="c1">#u# device      da              # Direct Access (disks)</span>
+</pre></div>
+</div>
+<p>Der USB-Abschnitt kann vollständig entfallen, wenn keine USB-Geräte
+unterstützt werden sollen. Vorsicht: umass (zur Unterstützung von
+USB-Sticks und USB-Festplatten) benötigt die SCSI-Einträge <code class="docutils literal notranslate"><span class="pre">scbus</span></code> und
+<code class="docutils literal notranslate"><span class="pre">da</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wireless NIC cards</span>
+<span class="c1">#w# device          wlan            # 802.11 support</span>
+<span class="c1">#w# device          wlan_wep        # 802.11 WEP support</span>
+<span class="c1">#w# device          wlan_ccmp       # 802.11 CCMP support</span>
+<span class="c1">#w# device          wlan_tkip       # 802.11 TKIP support</span>
+<span class="c1">#w# device          an              # Aironet 4500/4800 802.11 wireless</span>
+<span class="c1">#NICs.</span>
+<span class="c1">#w# device          ath             # Atheros pci/cardbus NIC&#39;s</span>
+<span class="c1">#w# device          ath_hal         # Atheros HAL (Hardware Access Layer)</span>
+<span class="c1">#w# device          ath_rate_sample # SampleRate tx rate control for ath</span>
+<span class="c1">#w# device          awi             # BayStack 660 and others</span>
+<span class="c1">#w# device          ral             # Ralink Technology RT2500 wireless</span>
+<span class="c1">#NICs.</span>
+<span class="c1">#w# device          wi              # WaveLAN/Intersil/Symbol 802.11</span>
+<span class="c1">#wireless NICs.</span>
+<span class="c1">#w# #device         wl              # Older non 802.11 Wavelan wireless</span>
+<span class="c1">#NIC.</span>
+</pre></div>
+</div>
+<p>Der WLAN-Abschnitt kann vollständig entfallen, wenn keine WLAN-Geräte
+unterstützt werden sollen. Andernfalls aktiviert man ausschliesslich die
+benötigten Treiber.</p>
+</div>
+<div class="section" id="betriebssystem-an-sbcs-anpassen">
+<h2><span class="section-number">3.3.7. </span>Betriebssystem an SBCs anpassen<a class="headerlink" href="#betriebssystem-an-sbcs-anpassen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In <code class="docutils literal notranslate"><span class="pre">/etc/make.conf</span></code> schaltet man all die Teile des Betriebssystems
+aus, die man auf Appliances nicht benötigt.</p>
+</div>
+<div class="section" id="file-etc-make-conf">
+<h2><span class="section-number">3.3.8. </span><a class="reference external" href="File:/etc/make.conf">File:/etc/make.conf</a><a class="headerlink" href="#file-etc-make-conf" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>KERNCONF=           WRAP
+CPUTYPE?=           i586/mmx
+CFLAGS=             -O -pipe
+COPTFLAGS=          -O -pipe
+MAKE_SHELL?=        sh
+COMPAT4X=           YES
+BOOTWAIT=           1000
+NO_ACPI=            true
+NO_CVS=             true
+NO_CXX=             true
+NO_DICT=            true
+NO_DYNAMICROOT=     true
+NO_GDB=             true
+NO_GPIB=            true
+NO_I4B=             true
+NO_LPR=             true
+NO_ATM=             true
+NO_GAMES=           true
+
+# Beispiele und man-Pages kann man auf SBCs getrost weglassen:
+NO_SHARE=           true # /usr/share/examples ncht einbinden
+NO_SHAREDOCS=       true # /usr/share/docs nicht einbinden
+NO_INFO=            true # GNU Info-Pages weglassen
+NO_MAN=             true # man-Pages weglassen
+
+# Entwicklungsumgebungen werden auf einem Embedded-System nie
+# benötigt: weg damit.
+NO_FORTRAN=         true #
+NO_OBJC=            true #
+NO_GDB=             true #
+NO_TOOLCHAIN=       true #
+NO_PROFILE=         true #
+
+# Threads und rekursive Libraries werden nur von wenigen Anwendungen
+# benötigt.
+NO_LIBTHR=          true # ...falls keine Anwendung diese benötigt
+NO_LIBC_R=          true # rekursive C-Lib weglassen
+</pre></div>
+</div>
+<p>Ab hier beginnen die optionalen Komponenten. Was genau die einzelnen
+Schalter bewirken wird in <code class="docutils literal notranslate"><span class="pre">make.conf</span></code> genau beschrieben.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NO_BLUETOOTH</span><span class="o">=</span>       <span class="n">true</span> <span class="c1"># Bluetooth-Unterstützung weglassen</span>
+<span class="n">NO_IPFILTER</span><span class="o">=</span>        <span class="n">true</span> <span class="c1"># IPFilter weglassen</span>
+<span class="n">NO_PF</span><span class="o">=</span>              <span class="n">true</span> <span class="c1"># PF weglassen</span>
+<span class="n">NO_AUTHPF</span><span class="o">=</span>          <span class="n">true</span> <span class="c1">#</span>
+<span class="n">NO_INET6</span><span class="o">=</span>           <span class="n">true</span> <span class="c1"># IPv6-Unterstützugn wegassen</span>
+<span class="n">NO_KERBEROS</span><span class="o">=</span>        <span class="n">true</span> <span class="c1"># Kerberos weglassen</span>
+
+<span class="n">NO_USB</span><span class="o">=</span>             <span class="n">true</span> <span class="c1"># USB-Unterstützung entfällt bei Geräten ohne USB-Schnittstelle (Wrap)</span>
+                         <span class="c1"># Vorsicht: umass benötigt da scbus im Kernel!</span>
+
+<span class="n">NO_VINUM</span><span class="o">=</span>           <span class="n">true</span> <span class="c1"># Nur für Fileserver, wird unter 6.x nicht mehr vollständig unterstützt</span>
+
+<span class="c1"># BIND wird nur für DNS benötigt, nicht benutzte Komponenten kann man</span>
+<span class="c1"># weglassen</span>
+<span class="n">NO_BIND_DNSSEC</span><span class="o">=</span>     <span class="n">true</span> <span class="c1"># DNSSEC-Unterstützung (dnssec-keygen(8) und dnssec-signzone(8)) weglassen</span>
+<span class="n">NO_BIND_ETC</span><span class="o">=</span>        <span class="n">true</span> <span class="c1"># Default-Dateien in /var/named/etc/namedb weglassen</span>
+<span class="n">NO_BIND_LIBS_LWRES</span><span class="o">=</span> <span class="n">true</span> <span class="c1"># Resolver-Library weglassen (nur für offline-Rechner!)</span>
+<span class="n">NO_BIND_MTREE</span><span class="o">=</span>      <span class="n">true</span> <span class="c1">#</span>
+<span class="n">NO_BIND_NAMED</span><span class="o">=</span>      <span class="n">true</span> <span class="c1">#</span>
+<span class="n">WITH_BIND_LIBS</span><span class="o">=</span>     <span class="n">true</span> <span class="c1">#</span>
+<span class="n">NO_RCMDS</span><span class="o">=</span>           <span class="n">true</span> <span class="c1"># rsh, rcp... sind böse!</span>
+<span class="n">NO_MODULES</span><span class="o">=</span>         <span class="n">true</span> <span class="c1">#</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="quellen">
+<h2><span class="section-number">3.3.9. </span>Quellen<a class="headerlink" href="#quellen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Grosse Teile dieser Artikels beruhen auf dem Artikel
+„<a class="reference external" href="https://www.bsdforen.de/threads/freebsd-auf-pc-engines-wrap.7987/FreeBSDaufPC-EnginesWRAP">https://www.bsdforen.de/threads/freebsd-auf-pc-engines-wrap.7987/ FreeBSD auf
+PC-Engines WRAP</a>“ von <a class="reference external" href="https://www.bsdforen.de/members/elessar.115/">Elessar</a>.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hardware-guide.txt.html" class="btn btn-neutral float-right" title="3.4. Hardware-Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dell_inspiron_640m.txt.html" class="btn btn-neutral float-left" title="3.2. Dell Inspiron 640m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

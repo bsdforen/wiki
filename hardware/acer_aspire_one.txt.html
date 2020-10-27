@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.1. Acer Aspire One &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="3.2. Dell Inspiron 640m" href="dell_inspiron_640m.txt.html" />
+    <link rel="prev" title="3. Hardware" href="hardware_index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="hardware_index.html">3. Hardware</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. Acer Aspire One</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#status">3.1.1. Status</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#folgende-komponenten-werden-unterstutzt">3.1.1.1. Folgende Komponenten werden unterstützt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#noch-nicht-getestet">3.1.1.2. Noch nicht getestet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#loader-conf">3.1.2. loader.conf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rc-conf">3.1.3. rc.conf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xorg-konfiguration">3.1.4. Xorg-Konfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wlan-ath0">3.1.5. WLAN ath0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dell_inspiron_640m.txt.html">3.2. Dell Inspiron 640m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_auf_singleboard-computern.txt.html">3.3. FreeBSD auf Singleboard-Computern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware-guide.txt.html">3.4. Hardware-Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wlan-hardware_und_-treiber.txt.html">3.5. WLAN-Hardware und -Treiber</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="hardware_index.html"><span class="section-number">3. </span>Hardware</a> &raquo;</li>
+        
+      <li><span class="section-number">3.1. </span>Acer Aspire One</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/hardware/acer_aspire_one.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="dell_inspiron_640m.txt.html" class="btn btn-neutral float-right" title="3.2. Dell Inspiron 640m" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hardware_index.html" class="btn btn-neutral float-left" title="3. Hardware" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="acer-aspire-one">
+<h1><span class="section-number">3.1. </span>Acer Aspire One<a class="headerlink" href="#acer-aspire-one" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Die Inhalte sind arg veraltet!
+Die Inhalte gründen nicht auf dem Stand von <cite>FreeBSD 11/12</cite>
+Dennoch können Inhalte richtig sein.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd2.png" src="../_images/logo-freebsd2.png" />
+</div>
+<p>Hier folgen einige Informationen zur Installation von FreeBSD 8.x STABLE auf
+einem Acer Aspire One (A150X). Einige Einstellungen sollten auch mit anderen
+BSDs funktionieren.</p>
+<div class="section" id="status">
+<h2><span class="section-number">3.1.1. </span>Status<a class="headerlink" href="#status" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="folgende-komponenten-werden-unterstutzt">
+<h3><span class="section-number">3.1.1.1. </span>Folgende Komponenten werden unterstützt<a class="headerlink" href="#folgende-komponenten-werden-unterstutzt" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p>LAN re0</p></li>
+<li><p>Touchpad (synaptics)</p></li>
+<li><p>Sound</p></li>
+<li><p>WLAN ath0 über Madwifi (siehe unten)</p></li>
+</ul>
+</div>
+<div class="section" id="noch-nicht-getestet">
+<h3><span class="section-number">3.1.1.2. </span>Noch nicht getestet<a class="headerlink" href="#noch-nicht-getestet" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p>Webcam</p></li>
+<li><p>Cardreader</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="loader-conf">
+<h2><span class="section-number">3.1.2. </span>loader.conf<a class="headerlink" href="#loader-conf" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um Sound und das Touchpad nutzen zu können, müssen folgende Einträge in
+<strong>/boot/loader.conf</strong> eingefügt werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">snd_hda_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">hw</span><span class="o">.</span><span class="n">psm</span><span class="o">.</span><span class="n">synaptics_support</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rc-conf">
+<h2><span class="section-number">3.1.3. </span>rc.conf<a class="headerlink" href="#rc-conf" title="Link zu dieser Überschrift">¶</a></h2>
+<p>So könnte die <strong>/etc/rc.conf</strong> aussehen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;&lt;Rechnername&gt;&quot;</span>
+<span class="n">wlans_ath0</span><span class="o">=</span><span class="s2">&quot;wlan0&quot;</span>
+<span class="n">ifconfig_re</span><span class="o">=</span><span class="s2">&quot;DHCP&quot;</span>      <span class="c1"># LAN über DHCP</span>
+<span class="n">ifconfig_wlan0</span><span class="o">=</span><span class="s2">&quot;WPA DHCP&quot;</span>   <span class="c1"># WLAN über DHCP</span>
+
+<span class="n">keymap</span><span class="o">=</span><span class="s2">&quot;german.iso&quot;</span>     <span class="c1"># Deutsches Tastaturlayout</span>
+<span class="n">keyrate</span><span class="o">=</span><span class="s2">&quot;fast&quot;</span>
+
+<span class="n">dbus_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">hald_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">polkitd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="xorg-konfiguration">
+<h2><span class="section-number">3.1.4. </span>Xorg-Konfiguration<a class="headerlink" href="#xorg-konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Dies ist die an FreeBSD angepasste <strong>/etc/X11/xorg.conf</strong>-Datei der
+original Linux-Installation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Xorg configuration created by system-config-display</span>
+<span class="n">Section</span> <span class="s2">&quot;ServerFlags&quot;</span>
+<span class="c1">#   Option &quot;DontZap&quot; &quot;yes&quot;</span>
+<span class="c1">#   Option &quot;DontVTSwitch&quot; &quot;yes&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;ServerLayout&quot;</span>
+    <span class="n">Identifier</span>     <span class="s2">&quot;Default Layout&quot;</span>
+    <span class="n">Screen</span>      <span class="mi">0</span>  <span class="s2">&quot;Screen0&quot;</span> <span class="mi">0</span> <span class="mi">0</span>
+<span class="c1">#   InputDevice    &quot;Mouse0&quot; &quot;CorePointer&quot;</span>
+<span class="c1">#   InputDevice    &quot;Synaptics Mouse&quot; &quot;AlwaysCore&quot;</span>
+    <span class="n">InputDevice</span> <span class="s2">&quot;Synaptics_Touchpad&quot;</span>    <span class="s2">&quot;CorePointer&quot;</span>
+
+    <span class="n">InputDevice</span>    <span class="s2">&quot;Keyboard0&quot;</span> <span class="s2">&quot;CoreKeyboard&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;InputDevice&quot;</span>
+    <span class="n">Identifier</span>  <span class="s2">&quot;Keyboard0&quot;</span>
+    <span class="n">Driver</span>      <span class="s2">&quot;kbd&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;XkbModel&quot;</span> <span class="s2">&quot;pc105&quot;</span>
+        <span class="n">Option</span>      <span class="s2">&quot;XkbLayout&quot;</span> <span class="s2">&quot;de,gb,us(euro)&quot;</span>
+        <span class="n">Option</span>      <span class="s2">&quot;XkbOptions&quot;</span> <span class="s2">&quot;grp:alt_shift_toggle&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;InputDevice&quot;</span>
+    <span class="n">Identifier</span>  <span class="s2">&quot;Synaptics_Touchpad&quot;</span>
+    <span class="n">Driver</span>      <span class="s2">&quot;synaptics&quot;</span>
+
+    <span class="n">Option</span>      <span class="s2">&quot;Device&quot;</span>        <span class="s2">&quot;/dev/psm0&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;Protocol&quot;</span>      <span class="s2">&quot;psm&quot;</span>
+
+    <span class="n">Option</span>      <span class="s2">&quot;LeftEdge&quot;</span>      <span class="s2">&quot;1700&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;RightEdge&quot;</span>     <span class="s2">&quot;5300&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;TopEdge&quot;</span>       <span class="s2">&quot;1700&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;BottomEdge&quot;</span>        <span class="s2">&quot;4200&quot;</span>
+
+    <span class="n">Option</span>      <span class="s2">&quot;FingerLow&quot;</span>     <span class="s2">&quot;25&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;FingerHigh&quot;</span>        <span class="s2">&quot;30&quot;</span>
+
+    <span class="n">Option</span>      <span class="s2">&quot;MaxTapTime&quot;</span>        <span class="s2">&quot;180&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;MaxTapMove&quot;</span>        <span class="s2">&quot;220&quot;</span>
+
+    <span class="n">Option</span>      <span class="s2">&quot;VertScrollDelta&quot;</span>   <span class="s2">&quot;100&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;HorizScrollDelta&quot;</span>  <span class="s2">&quot;100&quot;</span>
+
+    <span class="n">Option</span>      <span class="s2">&quot;MinSpeed&quot;</span>      <span class="s2">&quot;0.06&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;MaxSpeed&quot;</span>      <span class="s2">&quot;0.06&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;AccelFactor&quot;</span>       <span class="s2">&quot;0.0010&quot;</span>
+
+    <span class="n">Option</span>      <span class="s2">&quot;ScrollButtonRepeat&quot;</span>    <span class="s2">&quot;100&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;UpDownScrolling&quot;</span>   <span class="s2">&quot;on&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;UpDownRepeat&quot;</span>      <span class="s2">&quot;on&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;LeftRightScrolling&quot;</span>    <span class="s2">&quot;on&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;LeftRightRepeat&quot;</span>   <span class="s2">&quot;on&quot;</span>
+
+    <span class="c1"># &quot;SHMConfig on&quot; seems good works with synclient(1).  But this</span>
+    <span class="c1"># options is insecure.  I recommended &quot;off&quot; as default.</span>
+    <span class="n">Option</span>      <span class="s2">&quot;SHMConfig&quot;</span>     <span class="s2">&quot;off&quot;</span>
+
+    <span class="c1"># If you use circular touchpad, uncomment them.</span>
+<span class="c1">#   Option      &quot;CircularPad&quot;       &quot;on&quot;</span>
+<span class="c1">#   Option      &quot;CircularScrolling&quot; &quot;on&quot;</span>
+<span class="c1">#   Option      &quot;CircScrollDelta&quot;   &quot;0.5&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;InputDevice&quot;</span>
+    <span class="n">Identifier</span>  <span class="s2">&quot;Mouse0&quot;</span>
+    <span class="n">Driver</span>      <span class="s2">&quot;mouse&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;Protocol&quot;</span> <span class="s2">&quot;IMPS/2&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;Device&quot;</span> <span class="s2">&quot;/dev/input/mice&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;ZAxisMapping&quot;</span> <span class="s2">&quot;4 5&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;Emulate3Buttons&quot;</span> <span class="s2">&quot;no&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;Monitor&quot;</span>
+    <span class="n">Identifier</span>  <span class="s2">&quot;Monitor0&quot;</span>
+    <span class="n">Modeline</span>  <span class="s2">&quot;1024x600&quot;</span> <span class="mf">48.96</span> <span class="mi">1024</span> <span class="mi">1064</span> <span class="mi">1168</span> <span class="mi">1312</span> <span class="mi">600</span> <span class="mi">601</span> <span class="mi">604</span> <span class="mi">622</span> <span class="o">-</span><span class="n">HSync</span> <span class="o">+</span><span class="n">VSync</span>
+<span class="c1">#   Option  &quot;Above&quot; &quot;Monitor1&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;Device&quot;</span>
+    <span class="n">Identifier</span>  <span class="s2">&quot;Videocard0&quot;</span>
+    <span class="n">Driver</span>      <span class="s2">&quot;intel&quot;</span>
+<span class="c1">#   Option      &quot;monitor-LVDS&quot; &quot;Monitor0&quot;</span>
+<span class="c1">#   Option      &quot;monitor-VGA&quot; &quot;Monitor1&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;Clone&quot;</span> <span class="s2">&quot;true&quot;</span>
+    <span class="n">Option</span>  <span class="s2">&quot;MonitorLayout&quot;</span> <span class="s2">&quot;LVDS,VGA&quot;</span>
+    <span class="n">BusID</span>   <span class="s2">&quot;PCI:0:2:0&quot;</span>
+<span class="c1">#   Screen  0</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;Screen&quot;</span>
+    <span class="n">Identifier</span> <span class="s2">&quot;Screen0&quot;</span>
+    <span class="n">Device</span>     <span class="s2">&quot;Videocard0&quot;</span>
+    <span class="n">Monitor</span>     <span class="s2">&quot;Monitor0&quot;</span>
+    <span class="n">DefaultDepth</span>     <span class="mi">24</span>
+    <span class="n">SubSection</span> <span class="s2">&quot;Display&quot;</span>
+        <span class="n">Viewport</span>   <span class="mi">0</span> <span class="mi">0</span>
+        <span class="n">Depth</span>     <span class="mi">24</span>
+        <span class="n">Modes</span>    <span class="s2">&quot;1024x600&quot;</span> <span class="s2">&quot;800x600&quot;</span> <span class="s2">&quot;640x480&quot;</span>
+         <span class="n">Virtual</span> <span class="mi">1024</span> <span class="mi">768</span>
+    <span class="n">EndSubSection</span>
+<span class="n">EndSection</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="wlan-ath0">
+<h2><span class="section-number">3.1.5. </span>WLAN ath0<a class="headerlink" href="#wlan-ath0" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der Atheros Chipssatz des One kann mittels madwifi genutzt werden. Dazu
+wird ein Snapshot des <a class="reference external" href="http://madwifi-project.org/">madwifi-Projekts</a>
+heruntergeladen:
+<a class="reference external" href="http://snapshots.madwifi-project.org/madwifi-hal-0.10.5.6/">http://snapshots.madwifi-project.org/madwifi-hal-0.10.5.6/</a>. Der
+<a class="reference external" href="http://snapshots.madwifi-project.org/madwifi-hal-0.10.5.6/madwifi-hal-0.10.5.6-r3879-20081204.tar.gz">http://snapshots.madwifi-project.org/madwifi-hal-0.10.5.6/madwifi-hal-0.10.5.6-r3879-20081204.tar.gz</a>
+wird in diesem Beispiel verwendet.</p>
+<p>Das Archiv wird in einem beliebigen Ordner entpackt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ su -
+Password:
+cd &lt;beliebiger Ordner&gt;
+tar xvfz madwifi-hal-0.10.5.6-r3879-20081204.tar.gz
+</pre></div>
+</div>
+<p>Jetzt die notwendigen Dateien aus dem Madwifi-Ordner in den <code class="docutils literal notranslate"><span class="pre">/usr/src/</span></code>-Ordner
+kopieren:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">madwifi</span><span class="o">-</span><span class="n">hal</span><span class="o">-</span><span class="mf">0.10</span><span class="o">.</span><span class="mf">5.6</span><span class="o">-</span><span class="n">r3879</span><span class="o">-</span><span class="mi">20081204</span>
+<span class="n">cp</span> <span class="o">-</span><span class="n">R</span> <span class="o">*</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ath</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Nun kann der Kernel neu gebaut und installiert werden. Nach
+erfolgreichem Bau des Kernels und der Module den One neustarten. Der
+eingebaute WLAN-Chip sollte nun erkannt und benutzbar sein.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dell_inspiron_640m.txt.html" class="btn btn-neutral float-right" title="3.2. Dell Inspiron 640m" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hardware_index.html" class="btn btn-neutral float-left" title="3. Hardware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.35. Drucken mit Apsfilter &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.36. Drucken mit Windows" href="drucken_mit_windows.txt.html" />
+    <link rel="prev" title="1.34. DNS-Cache" href="dns-cache.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.35. Drucken mit Apsfilter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einleitung">1.35.1. Einleitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-und-einrichtung">1.35.2. Installation und Einrichtung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#erste-druckversuche">1.35.3. Erste Druckversuche</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#drucken-uber-das-netz">1.35.4. Drucken über das Netz</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#drucker-freigeben-server">1.35.4.1. Drucker Freigeben (Server)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#drucker-verwenden-client">1.35.5. Drucker verwenden (Client)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verweise">1.35.6. Verweise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.35. </span>Drucken mit Apsfilter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/drucken_mit_apsfilter.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="drucken_mit_windows.txt.html" class="btn btn-neutral float-right" title="1.36. Drucken mit Windows" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dns-cache.txt.html" class="btn btn-neutral float-left" title="1.34. DNS-Cache" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="drucken-mit-apsfilter">
+<h1><span class="section-number">1.35. </span>Drucken mit Apsfilter<a class="headerlink" href="#drucken-mit-apsfilter" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+<img alt="../_images/logo-openbsd2.png" src="../_images/logo-openbsd2.png" />
+<img alt="../_images/logo-netbsd2.png" src="../_images/logo-netbsd2.png" />
+<img alt="../_images/logo-dragonflybsd3.png" src="../_images/logo-dragonflybsd3.png" />
+</div>
+<p>Dieser Artikel erklärt wie unter FreeBSD mit Hilfe von Apsfilter einfach mit
+dem Lpd ohne CUPS gedruckt werden kann. Außerdem können Drucker über das
+Netzwerk anderen Rechnern zugänglich gemacht werden.</p>
+<div class="section" id="einleitung">
+<h2><span class="section-number">1.35.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Im Gegensatz zum <a class="reference external" href="/howto/CUPS">CUPS</a> Artikel beschreibt dieser
+Artikel eher ein vorgehen wie es im <a class="reference external" href="http://www.freebsd.org/doc/handbook/printing.html">FreeBSD
+Handbuch</a>
+vorgeschlagen wird. Vorteile vom Verzicht auf CUPS sind vor allem der
+deutlich geringere Aufwand bei der Installation, eine sehr einfach zu
+realisierende Samba Freigabe und, dass keine Dateien in <strong>/usr/bin</strong> und
+<strong>/usr/sbin</strong> ersetzt werden müssen.</p>
+</div>
+<div class="section" id="installation-und-einrichtung">
+<h2><span class="section-number">1.35.2. </span>Installation und Einrichtung<a class="headerlink" href="#installation-und-einrichtung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Als erstes sollte der Spooler Daemon aktiviert werden, dazu muss
+folgende Zeile in die Datei <strong>/etc/rc.conf</strong> eingefügt werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lpd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+</pre></div>
+</div>
+<p>Mit dem Kommando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /etc/rc.d/lpd start</span>
+</pre></div>
+</div>
+<p>kann der Daemon ohne einen Systemneustart aktiviert werden.</p>
+<p>Bis auf den Port
+<a class="reference external" href="https://www.google.com/search?q=print/apsfilter&amp;btnI=lucky">print/apsfilter</a>
+werden keine zusätzlichen Programme benötigt. Nach erfolgter
+installation muss folgender Befehl ausgeführt werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/local/share/apsfilter/SETUP</span>
+</pre></div>
+</div>
+<p>Es startet ein Skript, das durch die vollständige Druckerkonfiguration
+führt. Die Schritte sind wie folgt.</p>
+<ul class="simple">
+<li><p>Lizenz bestätigen.</p></li>
+<li><p>Der Autor bittet per Mail über die Verwendung von apsfilter
+informiert zu werden. Dieser Punkt kann übersprungen und später
+nachgeholt werden.</p></li>
+<li><p>Als nächstes erscheint ein Begrüßungsbildschirm, mit der Enter Taste
+beginnt endlich die eigentliche Einrichtung.</p></li>
+</ul>
+<p>Ab hier sollte alles genau gelesen und befolgt werden. Die
+Konfigurationsschritte sollten in der gegebenen Reihenfolge abgearbeitet
+werden. Apsfilter hat keinerlei Standardeinstellungen, also darf kein
+Schritt übersprungen werden. Nach erfolgter Konfiguration sollte auf
+jeden Fall von der Option eine Testseite zu drucken gebrauch gemacht
+werden. Wird die Testseite falsch gedruckt, passt der gewählte Treiber
+nicht zum Drucker. Der Autor dieses Artikels verwendet einen LaserJet 4
+Treiber für einen HP LaserJet 6. Die LaserJet 5 und 6 Treiber führen
+beim Autor zu keinem erkennbaren Druckbild.</p>
+<p>Sollte der Drucker beim Versuch eines Testdrucks keinerlei Reaktion
+zeigen, sollte noch einmal die gesamte Konfiguration geprüft werden. Das
+gilt insbesondere für die Anschlusseinstellungen.</p>
+<p>Wer weitere Konfigurationen vornehmen will, kann dies in der Datei
+<strong>/etc/printcap</strong> erledigen. Dies ist jedoch in der Regel nicht nötig.</p>
+</div>
+<div class="section" id="erste-druckversuche">
+<h2><span class="section-number">1.35.3. </span>Erste Druckversuche<a class="headerlink" href="#erste-druckversuche" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Einfache Textdateien oder Postscript Dokumente sollten jetzt über einen
+einfachen Aufruf funktionieren. Zum Testen kann zum Beispiel eine kurze
+Konfigurationsdatei ausgedruckt werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># lpr /etc/make.conf</span>
+</pre></div>
+</div>
+<p>Mit vorherigem Kommando sollte zum Beispiel die make.conf ausgedruckt
+werden. Es empfiehlt sich auch das Drucken mit häufig verwendeten
+Anwendungen zu testen. Da die meisten Anwendungen ihre Ausgabe in
+Postscript an den Drucker Daemon weitergeben bereitet dies für
+gewöhnlich keinerlei Probleme.</p>
+<p>Die Warteschleife des Druckers kann mit dem Befehl:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># lpq</span>
+</pre></div>
+</div>
+<p>eingesehen werden. Mit dem Parameter <strong>-P</strong> kann ein Drucker explizit
+angegeben werden, das ist dann Sinnvoll, wenn mehrere Drucker verwendet
+werden.</p>
+<p>Um einen Druckauftrag zu Löschen kann der Befehl <strong>lprm</strong> verwendet
+werden. Um die Druckaufträge anderer Benutzer zu manipulieren werden
+Root Zugriffsrechte benötigt.</p>
+</div>
+<div class="section" id="drucken-uber-das-netz">
+<h2><span class="section-number">1.35.4. </span>Drucken über das Netz<a class="headerlink" href="#drucken-uber-das-netz" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Netzdrucke sind recht einfach zu realisieren. Clients benötigen im
+übrigen weder Apsfilter noch Druckertreiber um über das Netz zu drucken.
+Es sei denn es handelt sich um Windows Clients.</p>
+<div class="section" id="drucker-freigeben-server">
+<h3><span class="section-number">1.35.4.1. </span>Drucker Freigeben (Server)<a class="headerlink" href="#drucker-freigeben-server" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die einfachste Möglichkeit Drucker freizugeben ist in der Datei
+<strong>/etc/hosts.lpd</strong> die IP Adressen oder Hostnamen der Rechner von denen
+aus gedruckt werden darf einzufügen. Dazu wird schlicht in jede Zeile
+eine IP Adresse oder ein Hostname eingetragen.</p>
+<p>Auch die Samba Konfiguration ist realtiv trivial. Im folgenden ist die
+Konfigurationsdatei <strong>/usr/local/etc/smb.conf</strong> des Autors angegeben.
+Daraus sollte eigentlich klar werden wie die eigene Konfiguration zu
+erweitern ist.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">global</span><span class="p">]</span>
+<span class="c1"># workgroup = NT-Domain-Name or Workgroup-Name, eg: MIDEARTH</span>
+<span class="n">workgroup</span> <span class="o">=</span> <span class="n">NORAD</span>
+
+<span class="c1"># server string is the equivalent of the NT Description field</span>
+<span class="n">server</span> <span class="n">string</span> <span class="o">=</span> <span class="n">homeKamikaze</span> <span class="n">Samba</span> <span class="n">Server</span>
+
+<span class="c1"># Security mode. Defines in which mode Samba will operate. Possible</span>
+<span class="c1"># values are share, user, server, domain and ads. Most people will want</span>
+<span class="c1"># user level security. See the Samba-HOWTO-Collection for details.</span>
+<span class="n">security</span> <span class="o">=</span> <span class="n">share</span>
+
+<span class="c1"># This option is important for security. It allows you to restrict</span>
+<span class="c1"># connections to machines which are on your local network. The</span>
+<span class="c1"># following example restricts access to two C class networks and</span>
+<span class="c1"># the &quot;loopback&quot; interface. For more examples of the syntax see</span>
+<span class="c1"># the smb.conf man page</span>
+<span class="n">hosts</span> <span class="n">allow</span> <span class="o">=</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.</span> <span class="mf">127.</span>
+
+<span class="c1"># If you want to automatically load your printer list rather</span>
+<span class="c1"># than setting them up individually then you&#39;ll need this</span>
+<span class="n">load</span> <span class="n">printers</span> <span class="o">=</span> <span class="n">yes</span>
+
+<span class="c1"># It should not be necessary to specify the print system type unless</span>
+<span class="c1"># it is non-standard. Currently supported print systems include:</span>
+<span class="c1"># bsd, cups, sysv, plp, lprng, aix, hpux, qnx</span>
+<span class="n">printing</span> <span class="o">=</span> <span class="n">bsd</span>
+
+<span class="c1"># this tells Samba to use a separate log file for each machine</span>
+<span class="c1"># that connects</span>
+<span class="n">log</span> <span class="n">file</span> <span class="o">=</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">samba</span><span class="o">/</span><span class="n">log</span><span class="o">.%</span><span class="n">m</span>
+
+<span class="c1"># Put a capping on the size of the log files (in Kb).</span>
+<span class="nb">max</span> <span class="n">log</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1"># NOTE: If you have a BSD-style print system there is no need to</span>
+<span class="c1"># specifically define each individual printer</span>
+<span class="p">[</span><span class="n">printers</span><span class="p">]</span>
+<span class="n">comment</span> <span class="o">=</span> <span class="n">All</span> <span class="n">Printers</span>
+<span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">spool</span><span class="o">/</span><span class="n">samba</span>
+<span class="n">browseable</span> <span class="o">=</span> <span class="n">no</span>
+<span class="c1"># Set public = yes to allow user &#39;guest account&#39; to print</span>
+<span class="n">guest</span> <span class="n">ok</span> <span class="o">=</span> <span class="n">yes</span>
+<span class="n">writable</span> <span class="o">=</span> <span class="n">no</span>
+<span class="n">printable</span> <span class="o">=</span> <span class="n">yes</span>
+</pre></div>
+</div>
+<p>Wichtig ist hierbei, dass die Sektion für die Drucker <strong>printers</strong>
+heißt, da das Drucken sonst nicht funktionieren wird.</p>
+</div>
+</div>
+<div class="section" id="drucker-verwenden-client">
+<h2><span class="section-number">1.35.5. </span>Drucker verwenden (Client)<a class="headerlink" href="#drucker-verwenden-client" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ein Drucker Client kommt vollständig mit Mitteln aus dem Basissystem
+aus. Leider bedeutet das auch, dass einige Arbeiten, die auf dem Server
+vom Apsfilter Setup erledigt wurden, auf dem Client manuell erfolgen
+müssen.</p>
+<p>Zuerst müssen die Spooler Verzeichnisse (Für die lokale
+Druckwarteschleife) angelegt werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mkdir -p /var/spool/lpd</span>
+<span class="c1"># chown root:daemon /var/spool/lpd</span>
+<span class="c1"># chmod 0755 /var/spool/lpd</span>
+<span class="c1"># cd /var/spool/lpd</span>
+<span class="c1"># mkdir DRUCKER</span>
+</pre></div>
+</div>
+<p><strong>DRUCKER</strong> ist hierbei mit dem Namen zu ersetzen, mit dem der Drucker
+dann im folgenden Schritt in der <strong>/etc/printcap</strong> konfiguriert wird. Im
+folgenden ist die Konfiguration für einen HP LaserJet 6, der als ljet6
+über das Netz freigegeben ist angegeben:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lp</span><span class="o">|</span><span class="n">DRUCKER</span><span class="o">|</span><span class="n">HP</span> <span class="n">LaserJet</span> <span class="mi">6</span><span class="n">L</span><span class="o">|</span><span class="n">ljet4</span><span class="p">;</span><span class="n">r</span><span class="o">=</span><span class="mi">600</span><span class="n">x600</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="n">photo</span><span class="p">;</span><span class="n">c</span><span class="o">=</span><span class="n">gray</span><span class="p">;</span><span class="n">p</span><span class="o">=</span><span class="n">a4</span><span class="p">;</span><span class="n">m</span><span class="o">=</span><span class="n">auto</span><span class="p">:</span>\
+    <span class="p">:</span><span class="n">lp</span><span class="o">=</span><span class="p">:</span>\
+    <span class="p">:</span><span class="n">rm</span><span class="o">=</span><span class="n">HOST</span><span class="p">:</span>\
+    <span class="p">:</span><span class="n">rp</span><span class="o">=</span><span class="n">REMOTE_DRUCKER</span><span class="p">:</span>\
+    <span class="p">:</span><span class="n">sd</span><span class="o">=/</span><span class="n">var</span><span class="o">/</span><span class="n">spool</span><span class="o">/</span><span class="n">lpd</span><span class="o">/</span><span class="n">DRUCKER</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Die erste Zeile kann einfach von der Serverkonfiguration kopiert werden.
+<strong>HOST</strong> muss natürlich mit der IP Adresse des Servers oder dessen
+Hostnamen ersetzt werden. <strong>DRUCKER</strong> wäre im Beispiel als ljet6 zu
+setzen. Theoretisch kann der Drucker auf dem Client und auf dem Server
+unterschiedlich benannt werden. <strong>REMOTE_DRUCKER</strong> sollte also mit dem
+Namen des Druckers auf dem Server ersetzt werden. Üblicherweise ist die
+Benennung jedoch gleich. Der Name <strong>lp</strong> steht immer für den
+Standarddrucker.</p>
+<p>Nun muss lediglich noch der Lpd, wie bereits im Kapitel Installation
+beschrieben auch auf dem Client eingerichtet werden. Damit ist die
+Konfiguration abgeschlossen. Drucken sollte jetzt ohne weiteres möglich
+sein.</p>
+</div>
+<div class="section" id="verweise">
+<h2><span class="section-number">1.35.6. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p>Die Apsfilter <a class="reference external" href="http://www.apsfilter.org">Homepage</a>.</p></li>
+<li><p>Das Apsfilter
+<a class="reference external" href="http://apsfilter.org/docs/apsfilter-handbook-stable.html">Handbuch</a>.</p></li>
+<li><p>Das Kapitel
+<a class="reference external" href="http://www.freebsd.org/doc/handbook/printing.html">Drucken</a> im
+FreeBSD Handbuch.</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=print/apsfilter&amp;btnI=lucky">print/apsfilter</a>
+in den FreeBSD Ports.</p></li>
+<li><p><strong>printcap(5)</strong></p></li>
+<li><p><strong>hosts.lpd(5)</strong></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="drucken_mit_windows.txt.html" class="btn btn-neutral float-right" title="1.36. Drucken mit Windows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dns-cache.txt.html" class="btn btn-neutral float-left" title="1.34. DNS-Cache" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

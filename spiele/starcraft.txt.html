@@ -1,0 +1,404 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.4. Starcraft &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="4.5. Unreal" href="unreal.txt.html" />
+    <link rel="prev" title="4.3. Diablo II" href="diablo_ii.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="spiele_index.html">4. Spiele</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="computerspiele_unter_freebsd.txt.html">4.1. Computerspiele unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="battle_realms.txt.html">4.2. Battle Realms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diablo_ii.txt.html">4.3. Diablo II</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.4. Starcraft</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">4.4.1. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration">4.4.2. Konfiguration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#graphics">4.4.2.1. Graphics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#audio">4.4.2.2. Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#updates-und-battle-net">4.4.3. Updates und Battle.net</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wrapper">4.4.4. Wrapper</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unreal.txt.html">4.5. Unreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal_tournament_2004_-_to-crossfire.txt.html">4.6. Unreal Tournament 2004 - TO:Crossfire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal_tournament_2004.txt.html">4.7. Unreal Tournament 2004</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="spiele_index.html"><span class="section-number">4. </span>Spiele</a> &raquo;</li>
+        
+      <li><span class="section-number">4.4. </span>Starcraft</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/spiele/starcraft.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="unreal.txt.html" class="btn btn-neutral float-right" title="4.5. Unreal" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="diablo_ii.txt.html" class="btn btn-neutral float-left" title="4.3. Diablo II" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="starcraft">
+<h1><span class="section-number">4.4. </span>Starcraft<a class="headerlink" href="#starcraft" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd4.png" src="../_images/logo-freebsd4.png" />
+<img alt="../_images/logo-netbsd4.png" src="../_images/logo-netbsd4.png" />
+</div>
+<p>Hier wird eine Empfehlung dafür gegeben wie man Starcraft mit Hilfe von wine
+betreibt.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Seit der Umstellung von kthread auf pthread unter FreeBSD funktioniert
+Starcraft leider nicht ohne weiteres unter wine. Die Verwendung der Binary
+<a class="reference external" href="/howto/wine#wine-kthread">wine#wine-kthread</a> schafft hier Abhilfe.</p>
+</div>
+<div class="section" id="installation">
+<h2><span class="section-number">4.4.1. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Installation muss leider unter Windows erfolgen, da sie mit wine
+nicht durchführbar ist. Meine Spiele liegen auf einer Fat32 Partition
+die in /mnt/msdos/software gemountet ist. Der Einfachheit halber werde
+ich bei Beispielen meine Verzeichnisstruktur nutzen.</p>
+<p>Nachdem das Spiel für mein OS erreichbar ist muss ich es einmal starten
+damit die Registry Einträge gemacht werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wine /mnt/msdos/software/games/rts/Starcraft/starcraft.exe
+</pre></div>
+</div>
+<p>Selbst wenn das Spiel gleich funktioniert sollte es trotzdem gleich
+beendet werden. Denn jetzt muss noch der korrete Pfad in die Registry
+eingetragen werden. Dazu wird</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ regedit
+</pre></div>
+</div>
+<p>aufgerufen. Sollte das nicht funktionieren geht es wahrscheinlich mit</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wine regedit
+</pre></div>
+</div>
+<p>Es öffnet sich der Registrierungseditor wie unter Windows. Dort
+navigiert man zu <strong>My
+Computer-&gt;HKEY_CURRENT_USER-&gt;Software-&gt;Blizzard-&gt;Starcraft</strong>. Dann wählt
+man <strong>Edit-&gt;new-&gt;String Value</strong>. Den neuen String benennt man nun in
+<strong>InstallPath</strong> um und weist ihm den Wert
+<strong>z:mntmsdossoftwaregamesrtsStarcraft</strong> zu.</p>
+</div>
+<div class="section" id="konfiguration">
+<h2><span class="section-number">4.4.2. </span>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ab hier geht man wie in dem Artikel <a class="reference external" href="/howto/Wine">Wine</a> beschrieben
+vor. Ich liste hier lediglich die Einstellungen die für mich persönlich
+am besten funktionieren.</p>
+<div class="section" id="graphics">
+<h3><span class="section-number">4.4.2.1. </span>Graphics<a class="headerlink" href="#graphics" title="Link zu dieser Überschrift">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 86%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>_</p></th>
+<th class="head"><p>Allow DirectX apps to stop the mouse leaving their window</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>X</p></td>
+<td><p>Enable desktop double buffering</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>X</p></td>
+<td><p>Allow the window manager to control the windows</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>X</p></td>
+<td><p>Emulate a virtual desktop</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>640 x 480</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="audio">
+<h3><span class="section-number">4.4.2.2. </span>Audio<a class="headerlink" href="#audio" title="Link zu dieser Überschrift">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Hardware Acceleration</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Emulation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>X</p></td>
+<td><p>Driver Emulation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="updates-und-battle-net">
+<h2><span class="section-number">4.4.3. </span>Updates und Battle.net<a class="headerlink" href="#updates-und-battle-net" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um Starcraft auf den neusten Stand zu bringen kann man eine Verbindung
+zum Battle.net herstellen. Von dort aus kann man auch an Spielen auf
+Blizzards Servern teilnehmen. Leider verwendet Blizzard für das
+Battle.net Interface eine eigene Engine, die nicht so gut funktioniert
+wie das eigentliche Spiel.</p>
+<p>Die Engine stellt das eigentliche Interface im Hintergrund da, darüber
+kommt in einem eigenen Layer ein Text. Leider ist der Teil dieses Layers
+der unsichtbar sein sollte schwarz und wird zudem nicht aktuallisiert.
+Das heißt man sieht einen haufen teilweise übereinander liegenden
+Textes. Der Hintergrund blitzt lediglich gelegentlich auf.</p>
+<p>Trotzdem kann man mit etwas Übung im Battle.net navigieren und sogar
+Spiele starten oder ihnen beitreten. Wenn das Spiel in die eigentliche
+Starcraft Engine zurückkehrt muss man eine Weile warten. Geduld, das
+Spiel ist nicht abgestürzt.</p>
+<p>Damit heruntergeladene Updates funktionieren muss man wie zu Beginn
+beschrieben InstallPath in der Registry richtig gesetzt haben.</p>
+</div>
+<div class="section" id="wrapper">
+<h2><span class="section-number">4.4.4. </span>Wrapper<a class="headerlink" href="#wrapper" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um das Spiel komfortabler zu starten habe ich mir in <strong>~/bin</strong> ein
+Skript angelegt. Das Skript setzt das Skript im <a class="reference external" href="/howto/Wine#ProgrammedieImagesbenötigen">Wine
+Artikel</a> voraus.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
+
+<span class="n">wine_suffix</span><span class="o">=</span><span class="s2">&quot;-kthread&quot;</span>
+<span class="n">mount_images</span><span class="o">=</span><span class="s2">&quot;/mnt/msdos/vault/images/starcraft.iso</span>
+<span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">msdos</span><span class="o">/</span><span class="n">vault</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">broodwar</span><span class="o">.</span><span class="n">iso</span><span class="s2">&quot;</span>
+<span class="n">run_binary</span><span class="o">=</span><span class="s2">&quot;starcraft.exe&quot;</span>
+<span class="n">run_folder</span><span class="o">=</span><span class="s2">&quot;/mnt/msdos/software/games/rts/Starcraft&quot;</span>
+
+<span class="o">.</span> <span class="n">winexec</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Seit der Version 1.15.2 wird keine CD / keine ISOs mehr zum Spielen benötigt.
+Wie man das einrichtet steht hier:
+<a class="reference external" href="http://us.blizzard.com/support/article.xml?articleId=21150&amp;rhtml=true">http://us.blizzard.com/support/article.xml?articleId=21150&amp;rhtml=true</a> .  Auf
+die mount_images-Option kann im Script also auch verzichtet werden!</p>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="unreal.txt.html" class="btn btn-neutral float-right" title="4.5. Unreal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="diablo_ii.txt.html" class="btn btn-neutral float-left" title="4.3. Diablo II" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

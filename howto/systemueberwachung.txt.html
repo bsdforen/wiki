@@ -1,0 +1,786 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.121. Systemüberwachung &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.122. TeXlive aus dem Quellcode installieren" href="texlive_aus_den_quellen.txt.html" />
+    <link rel="prev" title="1.120. System in RAID1 verwandeln" href="system_in_raid1_verwandeln.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.121. Systemüberwachung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#anlegen-der-rrdtool-datenbank">1.121.1. Anlegen der RRDTool Datenbank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#datenorganistion">1.121.2. Datenorganistion</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#temperatur-datenbank-erstellen">1.121.2.1. Temperatur Datenbank erstellen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#temperatur-protokollierung">1.121.2.2. Temperatur Protokollierung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netzwerk-datenbank-erstellen">1.121.2.3. Netzwerk Datenbank erstellen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netzwerk-durchsatz-protokollieren">1.121.2.4. Netzwerk Durchsatz protokollieren</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#crontab">1.121.3. Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grafische-auswertung">1.121.4. Grafische Auswertung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#shellskript">1.121.4.1. Shellskript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#perl">1.121.4.2. Perl</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#zusammenfassung">1.121.5. Zusammenfassung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verweise">1.121.6. Verweise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.121. </span>Systemüberwachung</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/systemueberwachung.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="texlive_aus_den_quellen.txt.html" class="btn btn-neutral float-right" title="1.122. TeXlive aus dem Quellcode installieren" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="system_in_raid1_verwandeln.txt.html" class="btn btn-neutral float-left" title="1.120. System in RAID1 verwandeln" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="systemuberwachung">
+<h1><span class="section-number">1.121. </span>Systemüberwachung<a class="headerlink" href="#systemuberwachung" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p>Das System läßt sich vielfältig überwachen. Eine praktische Variante
+ist, die gesammelten Informationen grafisch darzustellen. Dadurch läßt
+sich ein guter Überblick gewinnen und es sieht auch noch gut aus. Es
+gibt diverse Programme, die diese Aufgabe erfüllen und weit mehr
+Funktionalität bieten, als hier erwähnt. Für ein paar Infos reichen aber
+durchaus einige Shellskripte aus. Folgende Informationen sollen hier
+erfaßt und grafisch dargestellt werden.</p>
+<ul class="simple">
+<li><p>CPU Temperatur</p></li>
+<li><p>Festplatten Temperatur</p></li>
+<li><p>Netzwerkauslastung</p></li>
+</ul>
+<p>Das Ganze wird mit Hilfe von Shellskripten periodisch ermittelt und dann
+mit RRDTool aufbereitet und grafisch dargestellt. RRDTool findet sich in
+den Ports unter <em>net/rrdtool</em>.</p>
+<p>RRDTool ist für solche Aufgaben hervorragend geeignet, da es die Daten
+in einer Round Robin Datenbank ablegt. Dies bedeutet, es wird je
+Zeitschlitz nur eine festgelegte Anzahl an Werten gespeichert.
+Zusätzlich werden dann die Werte über einen größeren Zeitraum
+konsolidiert und in den nächsten Zeitschlitz geschrieben. Durch dieses
+Verfahren ist zum einem die Größe der Datenbank festgelegt und ändert
+sich auch nicht, zum anderen können so die Daten über einen großen
+Zeitraum gespeichert werden.</p>
+<div class="section" id="anlegen-der-rrdtool-datenbank">
+<h2><span class="section-number">1.121.1. </span>Anlegen der RRDTool Datenbank<a class="headerlink" href="#anlegen-der-rrdtool-datenbank" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Als erstes muß die Datenbank angelegt werden. Dazu muß angegeben werden,
+wie die Daten organisiert und welche Konsolidierungsfunktionen verwendet
+werden sollen.</p>
+</div>
+<div class="section" id="datenorganistion">
+<h2><span class="section-number">1.121.2. </span>Datenorganistion<a class="headerlink" href="#datenorganistion" title="Link zu dieser Überschrift">¶</a></h2>
+<p>RRDTool muß wissen, wieviele Zeitschlitze vorhanden sein und wann diese
+Daten konsolidiert werden sollen.</p>
+<p>Jede Datenbank enthält mindestens eine Data Source (DS), die angibt von
+welchem Typ die erhobenen Daten sind.</p>
+<ul class="simple">
+<li><p>GAUGE, z.B. Temperatur Daten</p></li>
+<li><p>COUNTER, z.B. Bytes/s Netzwerkdurchsatz</p></li>
+<li><p>ABSOLUT Werte, die nach dem Lesen zurückgesetzt werden oder schnell
+zu einem Überlauf führen</p></li>
+<li><p>DERIVE z.B. um den Anteil der Leute festzustellen, die einen Raum
+betreten/verlassen</p></li>
+</ul>
+<p>(Die Beispiele sind aus der man-page.)</p>
+<p>Dann enthält jede Datenbank noch verschiedene Round Robin Archive (RRA),
+die festlegen, wieviele Daten für den jeweiligen Zeitschlitz
+konsolidiert werden sollen.</p>
+<div class="section" id="temperatur-datenbank-erstellen">
+<h3><span class="section-number">1.121.2.1. </span>Temperatur Datenbank erstellen<a class="headerlink" href="#temperatur-datenbank-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Um die Temperatur zu messen, eignet sich eine Data Source vom Typ GAUGE
+sehr gut, da hier keine Durchschnittswerte für das jeweilige
+Zeitintervall gebildet werden. Nun muß noch festgelegt werden, in
+welchem Intervall die Daten erhoben und konsolidiert werden. Am besten
+läßt sich dies an realen Werten nachvollziehen.</p>
+<p>Für 1 Woche (7 Tage) sollen die Daten in 5-Minute Intervallen vorliegen,
+d.h es müssen 2016 Werte gespeichert werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2016</span> <span class="n">Werte</span> <span class="o">/</span> <span class="mi">7</span> <span class="n">Tage</span> <span class="o">=</span> <span class="mi">288</span> <span class="n">Werte</span> <span class="n">pro</span> <span class="n">Tag</span>
+<span class="mi">288</span> <span class="n">Werte</span> <span class="n">pro</span> <span class="n">Tag</span> <span class="o">/</span> <span class="mi">24</span> <span class="n">Stunden</span> <span class="o">=</span> <span class="mi">12</span> <span class="n">Werte</span> <span class="n">pro</span> <span class="n">Stunde</span>
+<span class="mi">12</span> <span class="n">Werte</span> <span class="n">pro</span> <span class="n">Stunde</span> <span class="o">=</span> <span class="n">alle</span> <span class="mi">5</span> <span class="n">Minuten</span> <span class="mi">1</span> <span class="n">Wert</span>
+</pre></div>
+</div>
+<p>Für dieses Archiv brauchen wir alle 5 Minuten 1 Wert.</p>
+<p>Da damit aber die Daten für maximal eine Woche gespeichert werden und
+das etwas wenig ist, sollen für 38 Tage (1 Monat und 1 Woche) die Daten
+konsolidiert und in 30 Minuten Intervallen gespeichert werden. Dafür
+werden 1824 Werte benötigt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1824</span> <span class="n">Werte</span> <span class="o">/</span> <span class="mi">38</span> <span class="n">Tage</span> <span class="o">=</span> <span class="mi">48</span> <span class="n">Werte</span> <span class="n">pro</span> <span class="n">Tag</span>
+<span class="mi">48</span> <span class="n">Werte</span> <span class="n">pro</span> <span class="n">Tag</span> <span class="o">/</span> <span class="mi">24</span> <span class="n">Stunden</span> <span class="o">=</span> <span class="mi">2</span> <span class="n">Werte</span> <span class="n">pro</span> <span class="n">Stunde</span> <span class="p">(</span><span class="n">alle</span> <span class="mi">30</span> <span class="n">Minuten</span> <span class="mi">1</span> <span class="n">Wert</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Nur mit diesen beiden Archiven würden die Daten für ca. 1 Monat und 1
+Woche vorliegen.</p>
+<p>Entsprechend setzt sich die Berechnung fort. Im Überblick sieht das
+Ganze dann so aus:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 21%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Intervall</p></th>
+<th class="head"><p>Anzahl Werte</p></th>
+<th class="head"><p>Dauer</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>5 Minuten</p></td>
+<td><p>2016</p></td>
+<td><p>7 Tage</p></td>
+</tr>
+<tr class="row-odd"><td><p>30 Minuten</p></td>
+<td><p>1824</p></td>
+<td><p>31 Tage (+ 7 Tage)</p></td>
+</tr>
+<tr class="row-even"><td><p>1 Stunde</p></td>
+<td><p>1656</p></td>
+<td><p>31 Tage (+ 31 Tage + 7 Tage)</p></td>
+</tr>
+<tr class="row-odd"><td><p>2 Stunden</p></td>
+<td><p>1176</p></td>
+<td><p>60 Tage (+ 31 Tage + 7 Tage)</p></td>
+</tr>
+<tr class="row-even"><td><p>1 Tag</p></td>
+<td><p>830</p></td>
+<td><p>732 (+ 60 Tage + 31 Tage + 7 Tage)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Ob diese Einteilung sinnvoll ist oder nicht, ist ein anderes Thema.
+Sicherlich könnte man zwischen den Werten für einem Monat und 2 Jahren
+die Daten noch monatsweise konsolidieren und das Archive mit den
+Durchschnittswerten im 2 Stunden Intervall entfernen.</p>
+<p>Per Default ist der zeiltliche Abstand zwischen 2 Werten 300 Sekunden,
+d.h. die Daten werden so konsolidiert, als wären sie alle 5 Minuten
+eingefügt worden.</p>
+<p>Die Datenbank wird nun mit folgendem Befehl angelegt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rrdtool</span> <span class="n">create</span> <span class="n">temperature</span><span class="o">.</span><span class="n">rrd</span>                                       \
+  <span class="n">DS</span><span class="p">:</span><span class="n">cpu_temp</span><span class="p">:</span><span class="n">GAUGE</span><span class="p">:</span><span class="mi">600</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="n">U</span>                                          \
+  <span class="n">DS</span><span class="p">:</span><span class="n">hdd_temp</span><span class="p">:</span><span class="n">GAUGE</span><span class="p">:</span><span class="mi">600</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="n">U</span>                                          \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">AVERAGE</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2016</span>                                             \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">AVERAGE</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">1824</span>                                             \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">AVERAGE</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">1656</span>                                            \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">AVERAGE</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">1176</span>                                            \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">AVERAGE</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">288</span><span class="p">:</span><span class="mi">830</span>                                            \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MIN</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2016</span>                                                 \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MIN</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">1824</span>                                                 \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MIN</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">1656</span>                                                \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MIN</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">1176</span>                                                \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MIN</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">288</span><span class="p">:</span><span class="mi">830</span>                                                \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MAX</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2016</span>                                                 \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MAX</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">1824</span>                                                 \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MAX</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">1656</span>                                                \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MAX</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">1176</span>                                                \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MAX</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">288</span><span class="p">:</span><span class="mi">830</span>
+</pre></div>
+</div>
+<p>Noch ein paar Informationen zu den Parametern:</p>
+<ul class="simple">
+<li><p><strong>DS</strong> gibt die Data Source an</p>
+<ul>
+<li><p>der Name kann frei gewählt werden</p></li>
+<li><p>GAUGE ist der Typ</p></li>
+<li><p>600 gibt an, daß maximal 2 Werte (10 Minuten = 600 Sekunden) kein
+Wert geschrieben werden darf, bevor ein Wert von UNKNOWN
+angenommen wird</p></li>
+<li><p>0 und <em>U</em> sind Minimum bzw. Maximum Werte; <em>U</em> steht hier für
+UNKNOWN und entspricht keiner Obergrenze</p></li>
+</ul>
+</li>
+</ul>
+<p>Nach den Data Sources kommen die Archive mit den
+Konsolidierungsfunktionen, denen die oben erklärten Berechnungen zu
+Grunde liegen.</p>
+<ul class="simple">
+<li><p><strong>RRA</strong> gibt das Round Robin Archive an</p>
+<ul>
+<li><p>AVERAGE ist die Konsolidierungsfunktion</p></li>
+<li><p>1 gibt an, wieviele Werte zur Konsolidierung benötigt werden</p></li>
+<li><p>2016 gibt an wieviele Werte gespeichert werden</p></li>
+</ul>
+</li>
+</ul>
+<p>In diesem Beispiel werden sowohl Mittelwert, Minimun und Maximum Werte
+gespeichert. Daneben gibt es noch die „Konsolidierungsfunktion“ LAST,
+die den letzten Wert angibt. Diese „Funktion“ steht aber immer zur
+Verfügung und muß nicht angegeben werden.</p>
+<p>Über den Data Source Namen kann später auf die gespeicherten
+Konsolidierungsfunktionen zugegriffen werden, um die Werte zu
+visualisieren.</p>
+<p>Nun ist die Datenbank angelegt und kann gefüllt werden.</p>
+</div>
+<div class="section" id="temperatur-protokollierung">
+<h3><span class="section-number">1.121.2.2. </span>Temperatur Protokollierung<a class="headerlink" href="#temperatur-protokollierung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Eine nützliche Information ist die Temperatur der CPU und der
+Festplatte. Die CPU Temperatur läßt sich unter FreeBSD praktisch mittels
+<em>sysctl</em> auslesen. Bei den anderen *BSDs hab ich das nicht getestet,
+dort sollte aber ähnliches funktionieren. Es wäre gut, wenn diejenigen,
+die dort Informationen haben, diese hier ergänzen.</p>
+<p>Unter FreeBSD liest folgendes kleines Shellskript die CPU Temperatur und
+die Festplatten Temperatur aus. <strong>Wichtig:</strong> Das Auslesen der
+Festplatten Temperatur hängt davon ab, ob <em>smartctl</em> mit der Festplatte
+funktioniert. Die ID zum Auslesen der Temperatur Information variiert
+von Hersteller zu Hersteller. Es sollte in jeden Fall auf der Seite der
+<em>smartmontools</em> und des Herstellers nachgeschaut werden. <em>smartctl -A
+/dev/ad0</em> listet alle hersteller-spezifischen Informationen zur ersten
+IDE Platte auf. Damit das Skript als Nicht-root Benutzer ausgeführt
+werden kann, muß der jeweilige Benutzer Mitglied der Gruppe <em>operator</em>
+sein, da dieser Lesezugriff auf <em>/dev/ad0</em> hat.</p>
+<p>Hier nun das Skript:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+
+cpu_temp=&quot;hw.acpi.thermal.tz0.temperature&quot;
+disk=&quot;/dev/ad0&quot;
+
+smartctl=&quot;/usr/local/sbin/smartctl&quot;
+smartarg=&quot;-A&quot;
+option=&quot;194&quot;  # smart option for temp
+cmd=&quot;/sbin/sysctl&quot;
+rrdtool=&quot;/usr/local/bin/rrdtool&quot;
+rrdfile=&quot;temperature.rrd&quot;
+
+h=`$smartctl $smartarg $disk | grep $option | awk &#39;{print $10}&#39;`
+t=`$cmd $cpu_temp | awk &#39;{print $2}&#39; | sed -e s/C//`
+
+# RRD Datenbank aktualisieren
+$rrdtool update $rrdfile N:$t:$h
+</pre></div>
+</div>
+<p>In der letzten Zeile werden die Werte in die RRD Datenbank geschrieben.
+Die Konsolidierung übernimmt RRDTool. Mit dem Parameter <strong>N</strong> übernimmt
+RRDTool die aktuelle Zeit und schreibt die Daten in den aktuellen
+passenen Zeitschlitz. Alternativ könnte man auch anstelle von <strong>N</strong> die
+aktuelle Zeit in Seconds since Epoch angeben.</p>
+</div>
+<div class="section" id="netzwerk-datenbank-erstellen">
+<h3><span class="section-number">1.121.2.3. </span>Netzwerk Datenbank erstellen<a class="headerlink" href="#netzwerk-datenbank-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Der Netzwerkdurchsatz soll von RRDTool analog behandelt werden, d.h. es
+werden zwar andere Typen für die Data Sources verwendet, die Auflösung
+und die Konsolidierungsfunktionen bleiben aber gleich. Hier nun der
+Aufruf, um die Datenbank zu erzeugen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rrdtool</span> <span class="n">create</span> <span class="n">network</span><span class="o">.</span><span class="n">rrd</span>                                           \
+  <span class="n">DS</span><span class="p">:</span><span class="n">inbytes</span><span class="p">:</span><span class="n">COUNTER</span><span class="p">:</span><span class="mi">600</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="n">U</span>                                         \
+  <span class="n">DS</span><span class="p">:</span><span class="n">outbytes</span><span class="p">:</span><span class="n">COUNTER</span><span class="p">:</span><span class="mi">600</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="n">U</span>                                        \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">AVERAGE</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2016</span>                                             \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">AVERAGE</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">1824</span>                                             \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">AVERAGE</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">1656</span>                                            \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">AVERAGE</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">1176</span>                                            \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">AVERAGE</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">288</span><span class="p">:</span><span class="mi">830</span>                                            \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MIN</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2016</span>                                                 \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MIN</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">1824</span>                                                 \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MIN</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">1656</span>                                                \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MIN</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">1176</span>                                                \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MIN</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">288</span><span class="p">:</span><span class="mi">830</span>                                                \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MAX</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2016</span>                                                 \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MAX</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">1824</span>                                                 \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MAX</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">1656</span>                                                \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MAX</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">1176</span>                                                \
+  <span class="n">RRA</span><span class="p">:</span><span class="n">MAX</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">288</span><span class="p">:</span><span class="mi">830</span>
+</pre></div>
+</div>
+<p>Hier wird der Typ COUNTER verwendet, der keine absoluten Werte
+speichert, sondern in diesem Fall die Anzahl der Bytes, die im Mittel in
+den letzten 5 Minuten gesendet/empfangen wurden. Ein Overflow der Bytes,
+die meistens ja in 32bit Integern gezählt werden, erkennt RRDTool
+automatisch. Sollten 64bit Integer benutzt werden, kommt RRDTool auch
+damit klar und erkennt den Overflow.</p>
+</div>
+<div class="section" id="netzwerk-durchsatz-protokollieren">
+<h3><span class="section-number">1.121.2.4. </span>Netzwerk Durchsatz protokollieren<a class="headerlink" href="#netzwerk-durchsatz-protokollieren" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Mit dem Programm <code class="docutils literal notranslate"><span class="pre">statgrab</span></code> (in den Ports unter deve/libstatgrab zu
+finden) lassen sich sehr bequem die benötigten Werte ermitteln.</p>
+<p>Zum einen gibt es ein curses-basiertes Tool (<code class="docutils literal notranslate"><span class="pre">saidar</span></code>), um die Daten
+live anzuzeigen, zum anderen das Tool <code class="docutils literal notranslate"><span class="pre">statgrab</span></code>, das die Daten
+ähnlich wie <code class="docutils literal notranslate"><span class="pre">sysctl</span></code> ausgibt. Dadurch wird die Ermittlung der
+gewünschten Daten stark vereinfacht.</p>
+<p>Um beispielsweise für die Interfaces <code class="docutils literal notranslate"><span class="pre">tun0</span></code>, <code class="docutils literal notranslate"><span class="pre">ste0</span></code> und <code class="docutils literal notranslate"><span class="pre">ste1</span></code> die
+Daten zu sammeln und in die Datenbank einzutragen, kann folgendes
+Shellscript verwendet werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+
+file=&quot;/path/to/rrdfiles/hostname_IF.rrd&quot;
+statgrab=&quot;/usr/local/bin/statgrab&quot;
+rrdtool=&quot;/usr/local/bin/rrdtool&quot;
+ifaces=&quot;tun0 ste0 ste1&quot;
+
+for i in ${ifaces}; do \
+    ibts=`${statgrab} -u net.${i}.rx`; \
+    obts=`${statgrab} -u net.${i}.tx`; \
+    rrdfile=`echo ${file} | sed -e &quot;s/IF/${i}/&quot;`; \
+    call=&quot;${rrdtool} update ${rrdfile} N:${ibts}:${obts}&quot;; \
+    `${call}`
+done
+</pre></div>
+</div>
+<p>Die <code class="docutils literal notranslate"><span class="pre">for</span></code>-Schleife iteriert über die Liste der Interfaces, liest die
+Werte aus, bildet den Namen der RRD Datei und schreibt die Werte.
+Vermutlich lässt sich das Ganze auch einfacher gestalten, aber so
+funktioniert es erstmal. ;-)</p>
+<div class="section" id="fur-faule">
+<h4><span class="section-number">1.121.2.4.1. </span>für Faule<a class="headerlink" href="#fur-faule" title="Link zu dieser Überschrift">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">statgrab</span></code> unterstützt auch MRTG. Mit <code class="docutils literal notranslate"><span class="pre">statgrab-make-mrtg-config</span></code>
+kann man sich eine entsprechende Konfiguration erzeugen und
+<code class="docutils literal notranslate"><span class="pre">statgrab-make-mrtg-index</span></code> hilft bei der Erstellung der Index HTML
+Seite. Verwendet man diese Tools, hat man eine Übersicht der Last, der
+Netzwerkauslastung, der Dateisystembelegegung und noch einige weitere
+Details.</p>
+</div>
+</div>
+</div>
+<div class="section" id="crontab">
+<h2><span class="section-number">1.121.3. </span>Crontab<a class="headerlink" href="#crontab" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um diese Skripte nun alle 5 Minuten auch auszuführen und die Datenbank
+zu aktualisieren, sind folgende 2 Zeilen in der <em>crontab</em> notwendig.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*/</span><span class="mi">5</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">temperature</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">*/</span><span class="mi">5</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">network</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="grafische-auswertung">
+<h2><span class="section-number">1.121.4. </span>Grafische Auswertung<a class="headerlink" href="#grafische-auswertung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Es gibt verschiedene Möglichkeiten, die Daten grafisch darzustellen.</p>
+<ul class="simple">
+<li><p>Die Shellskripte, die alle 5 Minute laufen, erzeugen jeweils die
+Grafiken und stellen sie zur Verfügung (z.B. über einen Webserver).</p></li>
+<li><p>Auf einem Webserver liegt ein CGI Skript, daß die Graphen erzeugt.
+Dies geht z.B. sehr praktisch über Perl mit RRDs oder RRDTool::OO.</p></li>
+</ul>
+<div class="section" id="shellskript">
+<h3><span class="section-number">1.121.4.1. </span>Shellskript<a class="headerlink" href="#shellskript" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Für das Shellskript muß <em>rrdtool graph</em> aufgerufen werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rrdtool</span> <span class="n">graph</span> <span class="n">temperature</span><span class="o">.</span><span class="n">png</span>                                \
+ <span class="o">--</span><span class="n">start</span> <span class="o">-</span><span class="mi">1</span><span class="n">d</span>                                                 \ <span class="c1"># die Daten des letzten Tages</span>
+ <span class="o">--</span><span class="n">title</span> <span class="s2">&quot;CPU/HDD Temperatur&quot;</span>                                \
+ <span class="o">--</span><span class="n">vertical</span><span class="o">-</span><span class="n">label</span> <span class="s2">&quot;°C&quot;</span>                                       \
+ <span class="o">--</span><span class="n">width</span> <span class="mi">400</span> <span class="o">--</span><span class="n">height</span> <span class="mi">150</span>                                    \
+ <span class="o">--</span><span class="n">alt</span><span class="o">-</span><span class="n">y</span><span class="o">-</span><span class="n">grid</span>                                                \ <span class="c1"># bessere Y-Achsen Skalierung</span>
+ <span class="o">--</span><span class="n">interlaced</span>                                                \ <span class="c1"># interlaced PNG Image</span>
+ <span class="s1">&#39;DEF:cpu_temp=temperature.rrd:cpu_temp:AVERAGE&#39;</span>             \ <span class="c1"># CPU Temperatur im Mittel</span>
+ <span class="s1">&#39;DEF:hdd_temp=temperature.rrd:hdd_temp:AVERAGE&#39;</span>             \ <span class="c1"># HDD Temperatur im Mittel</span>
+ <span class="s1">&#39;LINE:cpu_temp#00ff00:CPU Temperatur&#39;</span>                       \
+ <span class="s1">&#39;LINE:hdd_temp#0000ff:HDD Temperatur&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="perl">
+<h3><span class="section-number">1.121.4.2. </span>Perl<a class="headerlink" href="#perl" title="Link zu dieser Überschrift">¶</a></h3>
+<p>RRDTool::OO findet sich in der Ports unter <em>devel/p5-RRDTool-OO</em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/usr/bin/perl -w
+
+use strict;
+use RRDTool:OO;
+
+my $rrd = RRDTool::OO-&gt;new(file =&gt; &quot;network.rrd&quot;);
+
+$rrd-&gt;graph(&quot;network.png&quot;,
+            title          =&gt; &quot;Traffic ste0&quot;,
+            interlaced     =&gt; undef,
+            vertical_label =&gt; &quot;kBytes/s&quot;,
+            units_exponent =&gt; 3,
+            start          =&gt; &quot;-1d&quot;,
+            width          =&gt; 400,
+            height         =&gt; 150,
+            draw           =&gt; { dsname =&gt; &quot;inbytes&quot;,
+                                cfunc  =&gt; &quot;AVERAGE&quot;,
+                                type   =&gt; &quot;area&quot;,
+                                color  =&gt; &quot;008800&quot;,
+                                legend =&gt; &quot;Incoming Bytes/s&quot;
+            },
+            draw           =&gt; { dsname =&gt; &quot;outbytes&quot;,
+                                cfunc  =&gt; &quot;AVERAGE&quot;,
+                                type   =&gt; &quot;line&quot;,
+                                color  =&gt; &quot;55cc02&quot;,
+                                legend =&gt; &quot;Outgoing Bytes/s&quot;
+            }
+           );
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="zusammenfassung">
+<h2><span class="section-number">1.121.5. </span>Zusammenfassung<a class="headerlink" href="#zusammenfassung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Diese Seite deckt sicherlich nur einen Teil der Möglichkeiten von
+RRDTool ab. Ein Link zur RRDTool Seite findet sich am Ende der Seite.
+Dort finden sich eine gute Dokumentation und eine Gallerie, um zu sehen,
+was andere Leute so überwachen.</p>
+<p>Es gibt viele Tools, die viel mehr Informationen sammeln und abdecken,
+von der Inode Nutzung bis zur Apache Auslastung. Dennoch gibt es
+Informationen, die diese nicht abdecken, oder man muß diesen Tools ein
+eigenes Skript unterschieben.</p>
+</div>
+<div class="section" id="verweise">
+<h2><span class="section-number">1.121.6. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/">RRDTool</a></p></li>
+<li><p><a class="reference external" href="http://search.cpan.org/~mschilli/RRDTool-OO-0.13/">RRDTool::OO</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="texlive_aus_den_quellen.txt.html" class="btn btn-neutral float-right" title="1.122. TeXlive aus dem Quellcode installieren" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="system_in_raid1_verwandeln.txt.html" class="btn btn-neutral float-left" title="1.120. System in RAID1 verwandeln" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

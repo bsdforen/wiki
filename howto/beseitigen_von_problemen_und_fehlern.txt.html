@@ -1,0 +1,597 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.17. Beseitigen von Problemen und Fehlern &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.18. Bluetooth" href="bluetooth.txt.html" />
+    <link rel="prev" title="1.16. Batterieüberwachung" href="batterieueberwachung.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.17. Beseitigen von Problemen und Fehlern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wo-liegt-das-problem">1.17.1. Wo liegt das Problem?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#treten-die-probleme-seit-einer-anderung-der-hardware-auf">1.17.1.1. Treten die Probleme seit einer Änderung der Hardware auf?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#treten-die-probleme-seit-einer-anderung-der-software-auf">1.17.1.2. Treten die Probleme seit einer Änderung der Software auf?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kann-das-problem-gelost-werden-in-dem-aktuelle-firmware-bei-hardware-komponenten-eingespielt-wird">1.17.1.3. Kann das Problem gelöst werden, in dem aktuelle Firmware bei Hardware-Komponenten eingespielt wird?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#haufig-auftretende-defekte-bzw-ursachen">1.17.2. Häufig auftretende Defekte bzw. Ursachen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kabelverbindungen">1.17.2.1. Kabelverbindungen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arbeitspeicher">1.17.2.2. Arbeitspeicher</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lufter">1.17.2.3. Lüfter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netzteile">1.17.2.4. Netzteile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#beluftung">1.17.2.5. Belüftung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#luftzirkulation">1.17.2.6. Luftzirkulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#feuchtigkeit">1.17.2.7. Feuchtigkeit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#rechner-sturzt-ab-und-bootet-neu">1.17.3. Rechner stürzt ab und bootet neu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kerneldump">1.17.4. Kerneldump</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dieser-artikel-hat-leider-nicht-geholfen-ich-will-im-forum-fragen">1.17.5. Dieser Artikel hat leider nicht geholfen, ich will im Forum fragen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testprogramme-und-tools">1.17.6. Testprogramme und -Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#siehe-auch">1.17.7. Siehe auch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.17. </span>Beseitigen von Problemen und Fehlern</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/beseitigen_von_problemen_und_fehlern.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="bluetooth.txt.html" class="btn btn-neutral float-right" title="1.18. Bluetooth" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="batterieueberwachung.txt.html" class="btn btn-neutral float-left" title="1.16. Batterieüberwachung" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="beseitigen-von-problemen-und-fehlern">
+<h1><span class="section-number">1.17. </span>Beseitigen von Problemen und Fehlern<a class="headerlink" href="#beseitigen-von-problemen-und-fehlern" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p>Dieser Artikel beschreibt die Ermittlung und Beseitigung von Problemen.</p>
+<div class="section" id="wo-liegt-das-problem">
+<h2><span class="section-number">1.17.1. </span>Wo liegt das Problem?<a class="headerlink" href="#wo-liegt-das-problem" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Rechner sind komplexe Geräte, somit kann man nie mit Sicherheit aufgrund
+weniger Symptome auf die Ursache schließen.</p>
+<p>Folgende Punkte sind daher zu beachten:</p>
+<div class="section" id="treten-die-probleme-seit-einer-anderung-der-hardware-auf">
+<h3><span class="section-number">1.17.1.1. </span>Treten die Probleme seit einer Änderung der Hardware auf?<a class="headerlink" href="#treten-die-probleme-seit-einer-anderung-der-hardware-auf" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In diesem Fall sollte, sofern dies möglich ist, die Hardware-Änderung
+rückgängig gemacht werden und geprüft werden, ob der Fehler weiterhin
+auftritt. Mögliche Ursachen wären:</p>
+<ul class="simple">
+<li><p>Defekt an der neuen Hardware</p></li>
+<li><p>Die neue Hardware funktioniert nicht mit der alten Hardware zusammen</p></li>
+<li><p>Der Treiber der neuen Hardware ist fehlerhaft</p></li>
+</ul>
+</div>
+<div class="section" id="treten-die-probleme-seit-einer-anderung-der-software-auf">
+<h3><span class="section-number">1.17.1.2. </span>Treten die Probleme seit einer Änderung der Software auf?<a class="headerlink" href="#treten-die-probleme-seit-einer-anderung-der-software-auf" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In diesem Fall sollte nach Möglichkeit der alte Stand der Software
+mittels Backup wieder hergestellt werden.</p>
+</div>
+<div class="section" id="kann-das-problem-gelost-werden-in-dem-aktuelle-firmware-bei-hardware-komponenten-eingespielt-wird">
+<h3><span class="section-number">1.17.1.3. </span>Kann das Problem gelöst werden, in dem aktuelle Firmware bei Hardware-Komponenten eingespielt wird?<a class="headerlink" href="#kann-das-problem-gelost-werden-in-dem-aktuelle-firmware-bei-hardware-komponenten-eingespielt-wird" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Immer wieder gibt es Hardware-Komponenten z.B. das Mainboard oder auch
+Festplatten-Controller, die mit fehlerbehafteter Firmware ausgeliefert
+werden. Um solche Fehler der Firmware auszuschließen, empfiehlt es sich,
+auf den Websites der Hersteller nach der akutellen Firmware der
+jeweiligen Komponenten umzusehen. Unter Umständen haben Hersteller auch
+Foren auf den Sites, in denen man auch schon weitere Hilfe zu Problemen
+finden kann.</p>
+</div>
+</div>
+<div class="section" id="haufig-auftretende-defekte-bzw-ursachen">
+<h2><span class="section-number">1.17.2. </span>Häufig auftretende Defekte bzw. Ursachen<a class="headerlink" href="#haufig-auftretende-defekte-bzw-ursachen" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#Arbeitsspeicher">#Arbeitsspeicher</a></p></li>
+<li><p>Lose <a class="reference external" href="#Kabelverbindungen">#Kabelverbindungen</a></p></li>
+<li><p><a class="reference external" href="#Lüfter">#Lüfter</a> von CPU, Grafikkarte oder Chipssatz sind
+verschmutzt oder haben Lagerschaden</p></li>
+<li><p>Zu klein dimensionierte <a class="reference external" href="#Netzteile">#Netzteile</a> (bei zusätzlicher
+Hardware)</p></li>
+<li><p>Unzureichende <a class="reference external" href="#Belüftung">#Belüftung</a> des Rechners</p></li>
+<li><p>Rechner steht in einem Bereich, indem keine
+<a class="reference external" href="#Luftzirkulation">#Luftzirkulation</a> stattfinden kann</p></li>
+<li><p><a class="reference external" href="#Feuchtigkeit">#Feuchtigkeit</a> in Geräten, z.B. Tastatur</p></li>
+</ul>
+<div class="section" id="kabelverbindungen">
+<h3><span class="section-number">1.17.2.1. </span>Kabelverbindungen<a class="headerlink" href="#kabelverbindungen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Kabel wie Netzkabel, Netzwerkkabel, Tastatur- und Mausanschluß sollten
+immer als Erstes überprüft werden. In vielen Fällen liegt das Problem an
+Wackelkontakten. Im Büro sind Reinigungskräfte ab und an auch nicht
+gnädig mit der doch relativ empfindlichen Rechnertechnik.</p>
+<p>Die Stromanschlüsse der Festplatten gehen in der Regel sehr schwergängig
+oder sehr leichgängig. Bei Letzteren und bei Y-Kabelverlängerungen
+sollte mal ggf. mit Kabelbinder die Buchse und den Stecker sichern.</p>
+<p>Nach Arbeiten am Rechner wird auch gerne die zusätzliche Stromversorgung
+für die CPU oder Grafikkarte vergessen anzuschließen. Wenn man Glück
+hat, wird dies vom BIOS der Grafikkarte oder des Motherboards gemeldet.</p>
+</div>
+<div class="section" id="arbeitspeicher">
+<h3><span class="section-number">1.17.2.2. </span>Arbeitspeicher<a class="headerlink" href="#arbeitspeicher" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Ein defekter Arbeitsspeicher kann zu Abstürzen führen, da aufgrund nicht
+mehr konsistenter Daten der Prozessor z.B. unsinnige Befehle oder
+Adressen zur Verarbeitung bekommt. Es gibt einige Speichertestprogramme,
+aber diese können nicht mit Sicherheit Defekte am Speicher erkennen. In
+der Praxis hat sich der Austausch von RAM-Riegeln bewährt, zumal die
+Speicherpreise einen Austausch in der Regel erlauben. Sollte die
+Probleme mit einem Austausch des Speichers nicht behoben sein, kann ein
+Defekt am Speicher zunächst ausgeschlossen werden.</p>
+</div>
+<div class="section" id="lufter">
+<h3><span class="section-number">1.17.2.3. </span>Lüfter<a class="headerlink" href="#lufter" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Lüfter transportieren leider nicht nur Luft, sondern auch Fusseln und
+Staub. Einige regelmäßige Kontrolle kann den Hitzetod vermeiden. Lüfter
+und Kühlkörper lassen sich gut mit Druckluft reinigen.</p>
+</div>
+<div class="section" id="netzteile">
+<h3><span class="section-number">1.17.2.4. </span>Netzteile<a class="headerlink" href="#netzteile" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Netzteile müssen ausreichend dimensioniert sein. Es gibt leider auch
+Fälle, in denen das Netzteil zwar augenscheinlich funktioniert, aber
+tatsächlich nicht ausreichend Strom liefert. In diesem Fall sollte man
+ein Ersatznetzteil ausprobieren, um den Fehler zu lokalisieren. Hier
+findet man auch Informationen, wie man ein Netzteil
+<a class="reference external" href="http://www.pctipp.ch/praxishilfe/kummerkasten/hardware/20737/stromspannung_eines_netzteils_ueberpruefen.html">überprüfen</a>
+kann.</p>
+</div>
+<div class="section" id="beluftung">
+<h3><span class="section-number">1.17.2.5. </span>Belüftung<a class="headerlink" href="#beluftung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Unter Umständen reicht die Belüftung ausschließlich durch das Netzteil
+nicht aus. Es sollte dann ein Zusatzlüfter am Gehäuse angebracht werden.
+Hier gilt: Umso größer der Lüfter, desto leiser der Rechner.</p>
+</div>
+<div class="section" id="luftzirkulation">
+<h3><span class="section-number">1.17.2.6. </span>Luftzirkulation<a class="headerlink" href="#luftzirkulation" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wenn der Rechner zwischen Schreibtisch und Schrank geklemmt und ggf.
+noch mit Büchern oder Gegenständen zugebaut wird, gibt zwangsläufig
+Probleme mit der Wärmeabfuhr. Die vom Rechner abgegebene Wärme wird ohne
+großen Umweg wieder ins Gehäuse gesogen. Der Kühleffekt liegt naturgemäß
+bei Null.</p>
+</div>
+<div class="section" id="feuchtigkeit">
+<h3><span class="section-number">1.17.2.7. </span>Feuchtigkeit<a class="headerlink" href="#feuchtigkeit" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Feuchtigkeit ist der Feind jeder Tastatur und der anderen
+Rechnerkomponenten. So kann es sein, daß eine Tastatur nach einer
+Kaffee- oder Bierdusche schon beim Hochfahren des Rechners, wirre
+Zeichen an den Controller liefert und das System beim Hochfahren schon
+in Schwierigkeiten bringt.</p>
+</div>
+</div>
+<div class="section" id="rechner-sturzt-ab-und-bootet-neu">
+<h2><span class="section-number">1.17.3. </span>Rechner stürzt ab und bootet neu<a class="headerlink" href="#rechner-sturzt-ab-und-bootet-neu" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In diesem Fall sollte folgende Schritte unternommen werden:</p>
+<ul class="simple">
+<li><p>Mit <code class="docutils literal notranslate"><span class="pre">dmesg</span></code> prüfen, ob beim Hochfahren des Rechners Fehler
+angezeigt werden.</p></li>
+<li><p>In <strong>/var/log/messages</strong> nach Ursachen suchen, die zum Absturz
+geführt haben können.</p></li>
+<li><p>Wurden USB-Geräte oder andere Geräte angeschlossen oder abgezogen
+bzw. entfernt?</p></li>
+<li><p><a class="reference external" href="#Kerneldump">#Kerneldump</a> überprüfen.</p></li>
+</ul>
+</div>
+<div class="section" id="kerneldump">
+<h2><span class="section-number">1.17.4. </span>Kerneldump<a class="headerlink" href="#kerneldump" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Beim Absturz versucht das System ein Abbild in der swap-Partition
+anzulegen. Dieses kann nach erneutem Hochfahren des Rechners ausgelesen
+und ausgewertet werden.</p>
+<p>Hierzu für FreeBSD folgende
+<a class="reference external" href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/developers-handbook/kerneldebug.html">Anleitung</a>
+(zur Zeit leider nur in englisch) lesen.</p>
+</div>
+<div class="section" id="dieser-artikel-hat-leider-nicht-geholfen-ich-will-im-forum-fragen">
+<h2><span class="section-number">1.17.5. </span>Dieser Artikel hat leider nicht geholfen, ich will im Forum fragen<a class="headerlink" href="#dieser-artikel-hat-leider-nicht-geholfen-ich-will-im-forum-fragen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Hier können natürlich nicht alle Möglichkeiten der Fehlerbeseitigung
+aufgeführt sein. Im Forum sollte man daher zunächst die
+<strong>Such-Funktion</strong> benutzen und sehen, ob das Problem unter Unterständen
+schon einmal behandelt wurde. Wenn dies nicht der Fall ist, sind
+folgende Angaben zum Problem dringend erforderlich, um eine Antwort zu
+erhalten:</p>
+<ol class="arabic simple">
+<li><p>Welches Betriebssystem wird genutzt und welchen Versionsstand hat es
+(<code class="docutils literal notranslate"><span class="pre">uname</span> <span class="pre">-a</span></code>)?</p></li>
+<li><p>Was wurde gemacht und wie wurde es probiert?</p></li>
+<li><p>Welche man-Pages, Anleitungen, HowTos habe ich schon gelesen?</p></li>
+<li><p>Welche Fehlermeldungen kommen (cut and paste)?</p></li>
+<li><p>Was steht in den Logdateien (Anschnitt aus dem Logfile (z.B.
+<strong>/var/log/messages</strong> oder <code class="docutils literal notranslate"><span class="pre">dmesg</span></code>)?</p></li>
+<li><p>Konfigurationsdateien (sofern vorhanden) anhängen, die mit dem
+Problem zusammenhängen!</p></li>
+</ol>
+</div>
+<div class="section" id="testprogramme-und-tools">
+<h2><span class="section-number">1.17.6. </span>Testprogramme und -Tools<a class="headerlink" href="#testprogramme-und-tools" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Unter FreeBSD gibt es folgende Programme und Tools zum Testen von
+Hardware:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=graphics/lcdtest&amp;btnI=lucky">graphics/lcdtest</a>
+- Testmuster für LCD-Monitore anzeigen</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/memtest&amp;btnI=lucky">sysutils/memtest</a>
+- RAM-Testprogramm</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/memtest86&amp;btnI=lucky">sysutils/memtest86</a>
+- RAM-Testprogramm</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/testdisk&amp;btnI=lucky">sysutils/testdisk</a>
+- Partitionsreparaturprogramm für diverse Partitionstypen
+(<a class="reference external" href="http://www.cgsecurity.org/wiki/TestDisk">http://www.cgsecurity.org/wiki/TestDisk</a>)</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/mbmon&amp;btnI=lucky">sysutils/mbmon</a>
+- Monitor für Temperatur von CPU und Hardware, Geschwindigkeit der
+Ventilatoren im System (CLI-Version)</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/xmbmon&amp;btnI=lucky">sysutils/xmbmon</a>
+- Monitor für Temperatur von CPU und Hardware, Geschwindigkeit der
+Ventilatoren im System (GUI-Version)</p></li>
+</ul>
+<p>&lt;note warning&gt;1. RAM-Testprogramme können einen Fehler aufspüren. Es ist
+aber auch möglich, dass ein Speicherfehler nicht erkannt wird!</p>
+<p>2. Gerade bei neueren Systemen sind u.U. Chips integriert, die von o.g.
+Programmen nicht ausgelesen werden können (mbmon, xmbmon)&lt;/note&gt;</p>
+</div>
+<div class="section" id="siehe-auch">
+<h2><span class="section-number">1.17.7. </span>Siehe auch<a class="headerlink" href="#siehe-auch" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="Datenrettung">Datenrettung</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bluetooth.txt.html" class="btn btn-neutral float-right" title="1.18. Bluetooth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="batterieueberwachung.txt.html" class="btn btn-neutral float-left" title="1.16. Batterieüberwachung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.118. Strato MR2 (OpenBSD) &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.119. Suspend und Resume bei Thinkpads" href="suspend_resume_thinkpad.txt.html" />
+    <link rel="prev" title="1.117. ssh" href="ssh.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.118. Strato MR2 (OpenBSD)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vorbereitung">1.118.1. Vorbereitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#erstellen-des-installationsimages">1.118.2. Erstellen des Installationsimages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">1.118.3. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quellen">1.118.4. Quellen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.118. </span>Strato MR2 (OpenBSD)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/strato_mr2_openbsd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="suspend_resume_thinkpad.txt.html" class="btn btn-neutral float-right" title="1.119. Suspend und Resume bei Thinkpads" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ssh.txt.html" class="btn btn-neutral float-left" title="1.117. ssh" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="strato-mr2-openbsd">
+<h1><span class="section-number">1.118. </span>Strato MR2 (OpenBSD)<a class="headerlink" href="#strato-mr2-openbsd" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-openbsd2.png" src="../_images/logo-openbsd2.png" />
+</div>
+<p>Hier wird die Installation von OpenBSD auf einem Strato MR2 Root Server
+beschrieben. Es wird ein Image, welches den Ramdisk Kernel beinhaltet erstellt
+und auf den Server geladen. Nach einem Reboot des Servers wird automatisch die
+Installationsroutine gestartet. Wichtig ist, dass zu Beginn der Installation
+noch keine Netzwerkverbindung besteht, der Zugriff über eine Remote Console ist
+unbedingt nötig.</p>
+<p>Wer einen älteren Strato Server besitzt und nur per SSH auf den Server
+zugreifen kann, sollte die Variante von
+<a class="reference external" href="http://www.dettus.net">dettus</a> benutzen. Der MR2 kann damit nur
+bearbeitet werden, wenn das Floppy Image von dettus mit den current srcs
+selber erstellt wurde. Also ist meine Variante eigentlich überflüssig…
+aber Quantität ist bekanntlich besser als Qualität und eine Methode mehr
+schadet nicht. Die Images von dettus sind alle mit Releases gebaut, die
+Festplatten können jedoch nur von Current oder dem kommenden Release 4.0
+erkannt werden.</p>
+<p>Es kann sein, dass einige der hier genannten Punkte überflüssig bzw.
+umständlich sind. Nochmal: Das ist meine Variante.</p>
+<div class="section" id="vorbereitung">
+<h2><span class="section-number">1.118.1. </span>Vorbereitung<a class="headerlink" href="#vorbereitung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Bevor der Server bsdfiziert wird, benötigst du die wichtigsten Daten um
+später das Netzwerk einzurichten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IP</span> <span class="n">Adresse</span> <span class="p">:</span>                   <span class="n">ifconfig</span>
+<span class="n">Hostname</span><span class="p">:</span>                      <span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">hostname</span>
+<span class="n">Domainname</span> <span class="n">und</span> <span class="n">DNS</span><span class="p">:</span>            <span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="o">.</span><span class="n">conf</span>
+<span class="n">Default</span> <span class="n">Route</span><span class="p">:</span>                 <span class="n">route</span> <span class="o">-</span><span class="n">n</span>
+</pre></div>
+</div>
+<p>Erstelle ein Image des MBR und lade es auf deinen lokalen Rechner:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dd if=/dev/sda of=mbr.img bs=1k count=1024 *</span>
+<span class="o">*</span> <span class="n">wir</span> <span class="n">wollen</span> <span class="n">ja</span> <span class="n">nicht</span> <span class="n">kleinlich</span> <span class="n">sein</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="erstellen-des-installationsimages">
+<h2><span class="section-number">1.118.2. </span>Erstellen des Installationsimages<a class="headerlink" href="#erstellen-des-installationsimages" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Erstelle ein leeres Images:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dd if=/dev/zero of=empty.img bs=* count=*</span>
+<span class="o">*</span> <span class="mi">10</span><span class="n">Mb</span> <span class="n">sollten</span> <span class="n">locker</span> <span class="n">ausreichen</span>
+</pre></div>
+</div>
+<p>Erstelle ein neues Image aus mbr.img und empty.img:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cat mbr.img empty.img &gt; install.img</span>
+</pre></div>
+</div>
+<p>Lade dir einen Snapshot von bsd.rd vom FTP Server deiner Wahl, z.B.
+<a class="reference external" href="ftp://openbsd.informatik.uni-erlangen.de/pub/OpenBSD/snapshots/i386/cd39.iso">cd39.iso</a>
+auf deinen lokalen Rechner und Mounte das ISO Image oder brenne es auf
+CD (Verschwendung).</p>
+<p>Starte qemu mit dem zusammengebastelten Image und dem gemounteten ISO
+Image bzw. der gemounteten CD:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># qemu -hda install.img -cdrom *Mountpunkt des ISO Images oder CDLW* -boot d</span>
+</pre></div>
+</div>
+<p>Bei der Installation musst du beachten, dass du bei den Sets nur bsd.rd
+auswählst. Die Zeitzone und alles, was nach dem Installieren der Sets
+abgefragt wird, muss nicht auswählt werden, da kein /etc installiert
+wird und somit nichts gespeichert werden kann.</p>
+<p>Nachdem die Installationsroutine beendet ist, erstelle /etc und
+/etc/boot.conf von Hand um sämtliche Ausgaben auf die serielle Konsole
+auszugeben:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mkdir /mnt/etc</span>
+<span class="c1"># cat &quot;set tty com0&quot; &gt; /mnt/etc/boot.conf</span>
+<span class="c1"># cat &quot;stty com0 57600&quot; &gt;&gt; /mnt/etc/boot.conf</span>
+</pre></div>
+</div>
+<p>Starte qemu nach der Installation nochmals und boote vom Image:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># qemu -hda install.img -boot c</span>
+</pre></div>
+</div>
+<p>Schalte gleich um auf die serielle Konsole von qemu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Strg</span> <span class="o">+</span> <span class="n">Alt</span> <span class="o">+</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Sollte hier keine Ausgabe zu sehen sein hast du bestimmt etwas falsch
+gemacht…. Im Normalfall siehst du jetzt ein „boot&gt;“ als Ausgabe. Boote
+jetzt den Ramdisk Kernel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boot</span><span class="o">&gt;</span> <span class="n">boot</span> <span class="n">bsd</span><span class="o">.</span><span class="n">rd</span>
+</pre></div>
+</div>
+<p>Wenn die Installationsroutine startet, hat ja alles geklappt.</p>
+</div>
+<div class="section" id="installation">
+<h2><span class="section-number">1.118.3. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Nachdem das Image erstellt ist, gibt es mehrere Möglichkeiten das Image
+auf den Server zu bekommen, die Einfachste ist vom lokalen Rechner das
+Image über SSH auf den Server zu kopieren:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># bzip2 -c9 install.img | ssh -l root@*server* &quot;bzip2 -cd | dd of=/dev/sda&quot;</span>
+</pre></div>
+</div>
+<p>Alternativ kann die zweite Festplatte oder der Backupserver von Strato
+als Aufbewahrungsort für das Image dienen, falls man es ein zweites Mal
+hochladen muss. Danach den Server im normalen Modus starten. Wenn alles
+richtig durchgeführt wurde siehst du dort wieder boot&gt; und kannst mit</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boot</span><span class="o">&gt;</span> <span class="n">boot</span> <span class="n">bsd</span><span class="o">.</span><span class="n">rd</span>
+</pre></div>
+</div>
+<p>die Installationsroutine starten.</p>
+<p>Bei der Installation halte dich an die <a class="reference external" href="http://www.openbsd.org/faq/faq4.html#Install">OpenBSD
+FAQ</a>. Zu beachten gibt
+es nur wenige Dinge</p>
+<ul class="simple">
+<li><p>kann bei der Installation nicht der komplette Platz der Festplatte
+ausgenutzt werden, beende die Installation mit Strg+c und „leere“ die
+Festplatte komplett:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dd if=/dev/zero of=/dev/wd0c *</span>
+<span class="o">*</span> <span class="n">bs</span> <span class="n">und</span> <span class="n">count</span> <span class="n">bleibt</span> <span class="n">euch</span> <span class="n">überlassen</span><span class="p">,</span> <span class="n">die</span> <span class="n">Platte</span> <span class="n">sollte</span> <span class="n">halt</span> <span class="n">einfach</span> <span class="n">ganz</span> <span class="n">leer</span> <span class="n">sein</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Danach musst du die Installationsroutine erneut starten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># install</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>bei der Netzmaske musste ich 255.255.0.0 wählen, auch wenn das ein
+oder andere Tutorial 255.255.255.0 oder 255.255.255.255 angibt,
+vergleiche einfach die eigene IP und die Default Route, dann kommst
+du schon drauf.</p></li>
+<li><p>bei der Auswahl der Sets muss ein -current System gewählt werden,
+verwende nicht den vorgegebenen Pfad auf dem FTP Server
+pub/OpenBSD/snapshots/i386/ nicht pub/OpenBSD/3.9/i386</p></li>
+<li><p>die Ausgabe der Konsole auf com0 mit „yes“ bestätigen</p></li>
+</ul>
+<p>Ein Neustart und alles sollte funktionieren. Hier noch meine dmesg:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>OpenBSD 3.9-current (GENERIC) #874: Fri Jun  9 13:40:50 MDT 2006
+    deraadt@i386.openbsd.org:/usr/src/sys/arch/i386/compile/GENERIC
+RTC BIOS diagnostic error ce&lt;clock_battery,ROM_cksum,fixed_disk,invalid_time&gt;
+cpu0: AMD Opteron(tm) Processor 146 (&quot;AuthenticAMD&quot; 686-class, 1024KB L2 cache) 2 GHz
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,SSE3
+cpu0: Cool`n&#39;Quiet K8 1996 Mhz: speeds: 2000 1800 1000 Mhz
+real mem  = 1073246208 (1048092K)
+avail mem = 971403264 (948636K)
+using 4256 buffers containing 53764096 bytes (52504K) of memory
+RTC BIOS diagnostic error ce&lt;clock_battery,ROM_cksum,fixed_disk,invalid_time&gt;
+mainbus0 (root)
+bios0 at mainbus0: AT/286+(00) BIOS, date 01/11/06, BIOS32 rev. 0 @ 0xf0010, SMB IOS rev. 2.3 @ 0xf8dc0 (61 entries)
+bios0: Supermicro H8SSL
+pcibios0 at bios0: rev 2.1 @ 0xf0000/0x10000
+pcibios0: PCI IRQ Routing Table rev 1.0 @ 0xf4f50/160 (8 entries)
+pcibios0: no compatible PCI ICU found: ICU vendor 0x1166 product 0x0205
+pcibios0: PCI bus #2 is the last bus
+bios0: ROM list: 0xc0000/0x8000 0xc8000/0x2000! 0xca000/0x1800 0xcb800/0x1800 0xcd000/0x1000
+ipmi at mainbus0 not configured
+cpu0 at mainbus0
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+ppb0 at pci0 dev 1 function 0 &quot;ServerWorks HT-1000 PCI&quot; rev 0x00
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 13 function 0 &quot;ServerWorks HT-1000 PCIX&quot; rev 0xb2
+pci2 at ppb1 bus 2
+bge0 at pci2 dev 3 function 0 &quot;Broadcom BCM5704C&quot; rev 0x10, BCM5704 B0 (0x2100): irq 9, address 00:30:48:58:25:78
+brgphy0 at bge0 phy 1: BCM5704 10/100/1000baseT PHY, rev. 0
+bge1 at pci2 dev 3 function 1 &quot;Broadcom BCM5704C&quot; rev 0x10, BCM5704 B0 (0x2100): irq 5, address 00:30:48:58:25:79
+brgphy1 at bge1 phy 1: BCM5704 10/100/1000baseT PHY, rev. 0
+pciide0 at pci1 dev 14 function 0 &quot;ServerWorks K2 SATA&quot; rev 0x00: DMA
+pciide0: using irq 11 for native-PCI interrupt
+pciide0: port 0: device present, speed: 1.5Gb/s
+wd0 at pciide0 channel 0 drive 0: &lt;HDT722516DLA380&gt;
+wd0: 16-sector PIO, LBA48, 157066MB, 321672960 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 5
+pciide0: port 1: device present, speed: 1.5Gb/s
+wd1 at pciide0 channel 1 drive 0: &lt;HDT722516DLA380&gt;
+wd1: 16-sector PIO, LBA48, 157066MB, 321672960 sectors
+wd1(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 5
+pciide0: port 2: PHY offline
+pciide0: port 3: PHY offline
+pchb0 at pci0 dev 2 function 0 &quot;ServerWorks HT-1000&quot; rev 0x00
+pcib0 at pci0 dev 2 function 2 &quot;ServerWorks HT-1000 LPC&quot; rev 0x00
+ohci0 at pci0 dev 3 function 0 &quot;ServerWorks HT-1000 USB&quot; rev 0x01: irq 10, version 1.0, legacy support
+usb0 at ohci0: USB revision 1.0
+uhub0 at usb0
+uhub0: ServerWorks OHCI root hub, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+ohci1 at pci0 dev 3 function 1 &quot;ServerWorks HT-1000 USB&quot; rev 0x01: irq 10, version 1.0, legacy support
+usb1 at ohci1: USB revision 1.0
+uhub1 at usb1
+uhub1: ServerWorks OHCI root hub, rev 1.00/1.00, addr 1
+uhub1: 2 ports with 2 removable, self powered
+ehci0 at pci0 dev 3 function 2 &quot;ServerWorks HT-1000 USB&quot; rev 0x01: irq 10
+usb2 at ehci0: USB revision 2.0
+uhub2 at usb2
+uhub2: ServerWorks EHCI root hub, rev 2.00/1.00, addr 1
+uhub2: 4 ports with 4 removable, self powered
+vga1 at pci0 dev 5 function 0 &quot;ATI Rage XL&quot; rev 0x27
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+pchb1 at pci0 dev 24 function 0 &quot;AMD AMD64 HyperTransport&quot; rev 0x00
+pchb2 at pci0 dev 24 function 1 &quot;AMD AMD64 Address Map&quot; rev 0x00
+pchb3 at pci0 dev 24 function 2 &quot;AMD AMD64 DRAM Cfg&quot; rev 0x00
+pchb4 at pci0 dev 24 function 3 &quot;AMD AMD64 Misc Cfg&quot; rev 0x00
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5
+pckbd0 at pckbc0 (kbd slot)
+pckbc0: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+midi0 at pcppi0: &lt;PC speaker&gt;
+spkr0 at pcppi0
+npx0 at isa0 port 0xf0/16: using exception 16
+pccom0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pccom0: console
+pccom1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+biomask fdc5 netmask ffe5 ttymask ffe7
+pctr: user-level cycle counter enabled
+nvram: invalid checksum
+dkcsum: wd0 matches BIOS drive 0x80
+wd1: no disk label
+dkcsum: wd1 matches BIOS drive 0x81
+root on wd0a
+rootdev=0x0 rrootdev=0x300 rawdev=0x302
+clock: unknown CMOS layout
+</pre></div>
+</div>
+<p>Danke an sbeh, dettus und alle anderen, die mir bei meinen Problemchen
+geholfen haben.</p>
+</div>
+<div class="section" id="quellen">
+<h2><span class="section-number">1.118.4. </span>Quellen<a class="headerlink" href="#quellen" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.dettus.net/openbsd_at_strato.txt">http://www.dettus.net/openbsd_at_strato.txt</a></p></li>
+<li><p><a class="reference external" href="http://www.openbsd.org">http://www.openbsd.org</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="suspend_resume_thinkpad.txt.html" class="btn btn-neutral float-right" title="1.119. Suspend und Resume bei Thinkpads" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ssh.txt.html" class="btn btn-neutral float-left" title="1.117. ssh" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

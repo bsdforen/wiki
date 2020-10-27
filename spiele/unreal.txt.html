@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.5. Unreal &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="4.6. Unreal Tournament 2004 - TO:Crossfire" href="unreal_tournament_2004_-_to-crossfire.txt.html" />
+    <link rel="prev" title="4.4. Starcraft" href="starcraft.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="spiele_index.html">4. Spiele</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="computerspiele_unter_freebsd.txt.html">4.1. Computerspiele unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="battle_realms.txt.html">4.2. Battle Realms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diablo_ii.txt.html">4.3. Diablo II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="starcraft.txt.html">4.4. Starcraft</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.5. Unreal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vorraussetzungen">4.5.1. Vorraussetzungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#benotigte-pakete">4.5.2. Benötigte Pakete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#die-linux-hosts-datei-bearbeiten">4.5.3. Die Linux hosts Datei bearbeiten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">4.5.4. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#das-spiel-patchen">4.5.5. Das Spiel Patchen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#benotigte-libs-kopieren">4.5.6. Benötigte Libs kopieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#binary-ausfuhrbar-machen">4.5.7. Binary ausführbar machen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spiel-starten">4.5.8. Spiel starten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verwandte-artikel">4.5.9. verwandte Artikel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links">4.5.10. Links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unreal_tournament_2004_-_to-crossfire.txt.html">4.6. Unreal Tournament 2004 - TO:Crossfire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal_tournament_2004.txt.html">4.7. Unreal Tournament 2004</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="spiele_index.html"><span class="section-number">4. </span>Spiele</a> &raquo;</li>
+        
+      <li><span class="section-number">4.5. </span>Unreal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/spiele/unreal.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="unreal_tournament_2004_-_to-crossfire.txt.html" class="btn btn-neutral float-right" title="4.6. Unreal Tournament 2004 - TO:Crossfire" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="starcraft.txt.html" class="btn btn-neutral float-left" title="4.4. Starcraft" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="unreal">
+<h1><span class="section-number">4.5. </span>Unreal<a class="headerlink" href="#unreal" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd4.png" src="../_images/logo-freebsd4.png" />
+</div>
+<p>Dieses HowTo beschreibt die Installation und Einrichtung von Unreal. Hier geht
+es nicht um „Unreal Gold“ oder die Erweiterung „Return to Na Pali“.</p>
+<div class="section" id="vorraussetzungen">
+<h2><span class="section-number">4.5.1. </span>Vorraussetzungen<a class="headerlink" href="#vorraussetzungen" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p>Eine Unreal Installations CD.</p></li>
+<li><p>Den UnrealClassicPatch227i von
+<a class="reference external" href="http://www.oldunreal.com/oldunrealpatches.html">hier</a>.</p></li>
+<li><p>Den UnrealPatch226Final von
+<a class="reference external" href="http://www.oldunreal.com/officialpatches.html">hier</a></p></li>
+</ul>
+</div>
+<div class="section" id="benotigte-pakete">
+<h2><span class="section-number">4.5.2. </span>Benötigte Pakete<a class="headerlink" href="#benotigte-pakete" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Folgende Pakete werden zur Installation bzw. zum Spielen benötigt:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=emulators/linux_base-c6&amp;btnI=lucky">emulators/linux_base-c6</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auf</span> <span class="n">amd64</span> <span class="n">Systemen</span><span class="p">:</span>
+<span class="o">*</span> <span class="p">[[</span><span class="n">freshports</span><span class="o">&gt;</span><span class="n">emulators</span><span class="o">/</span><span class="n">i386</span><span class="o">-</span><span class="n">wine</span><span class="p">]]</span> <span class="n">Nur</span> <span class="n">zur</span> <span class="n">installation</span> <span class="n">des</span> <span class="n">Spiels</span> <span class="n">und</span> <span class="n">der</span> <span class="n">Patches</span><span class="o">.</span>
+<span class="n">auf</span> <span class="n">i386</span> <span class="n">Systemen</span><span class="p">:</span>
+<span class="o">*</span> <span class="p">[[</span><span class="n">freshports</span><span class="o">&gt;</span><span class="n">emulators</span><span class="o">/</span><span class="n">wine</span><span class="p">]]</span> <span class="n">Nur</span> <span class="n">zur</span> <span class="n">Installation</span> <span class="n">des</span> <span class="n">Spiels</span> <span class="n">und</span> <span class="n">der</span> <span class="n">Patches</span><span class="o">.</span>
+<span class="n">Ein</span> <span class="n">Programm</span> <span class="n">zum</span> <span class="n">dearchivieren</span> <span class="n">der</span> <span class="n">Patches</span><span class="p">:</span>
+<span class="o">*</span> <span class="p">[[</span><span class="n">freshports</span><span class="o">&gt;</span><span class="n">archivers</span><span class="o">/</span><span class="n">p7zip</span><span class="p">]]</span> <span class="n">oder</span>
+<span class="o">*</span> <span class="p">[[</span><span class="n">freshports</span><span class="o">&gt;</span><span class="n">archivers</span><span class="o">/</span><span class="n">unzip</span><span class="p">]]</span> <span class="n">oder</span>
+<span class="o">*</span> <span class="p">[[</span><span class="n">freshports</span><span class="o">&gt;</span><span class="n">archivers</span><span class="o">/</span><span class="n">unrar</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="die-linux-hosts-datei-bearbeiten">
+<h2><span class="section-number">4.5.3. </span>Die Linux hosts Datei bearbeiten<a class="headerlink" href="#die-linux-hosts-datei-bearbeiten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Damit im Spiel das Speichern/Laden funktioniert muss der Hostname des
+Rechners in der Datei /compat/linux/etc/hosts eingetragen werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="n">localhost</span> <span class="n">localhost</span><span class="o">.</span><span class="n">localdomain</span> <span class="n">localhost4</span> <span class="n">localhost4</span><span class="o">.</span><span class="n">localdomain4</span> <span class="n">hostname</span>
+                                                                             <span class="o">^^^^^^^^</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2><span class="section-number">4.5.4. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Mit winecfg ein CD Laufwerk anlegen, das auf den Mountpunkt der Unreal
+CD zeigt, da es für die Installation der Patches benötigt wird. <a class="align-center reference internal" href="../_images/unreal-winecfg.png"><img alt="image1" class="align-center" src="../_images/unreal-winecfg.png" style="width: 200px;" /></a></p>
+<p>Unreal mit wine installieren.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># wine /PATH/TO/CD/SETUP.EXE</span>
+</pre></div>
+</div>
+<p>Im Installer dann den Zielpfad eingeben und im Fenster „Select
+Components“ DirectX 5 und den UnrealEd abwählen. <a class="align-center reference internal" href="../_images/unreal-select_components.png"><img alt="image2" class="align-center" src="../_images/unreal-select_components.png" style="width: 200px;" /></a></p>
+</div>
+<div class="section" id="das-spiel-patchen">
+<h2><span class="section-number">4.5.5. </span>Das Spiel Patchen<a class="headerlink" href="#das-spiel-patchen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zuerst den offiziellen Patch 226Final installieren da der Patch 227i
+mindestens den Patch 224 vorraussetzt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># wine /PATH/TO/PATCHES/UnrealPatch226Final.exe</span>
+</pre></div>
+</div>
+<p>Dann den Patch 227i</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># wine /PATH/TO/PATCHES/UnrealClassicPatch227i.exe</span>
+</pre></div>
+</div>
+<p>Und nicht vergessen den Haken bei „Linux native Dateien“ zu setzen.
+<a class="align-center reference internal" href="../_images/unreal-patch227i.png"><img alt="image3" class="align-center" src="../_images/unreal-patch227i.png" style="width: 200px;" /></a></p>
+</div>
+<div class="section" id="benotigte-libs-kopieren">
+<h2><span class="section-number">4.5.6. </span>Benötigte Libs kopieren<a class="headerlink" href="#benotigte-libs-kopieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Im Installationsverzeichnis gibt es im Ordner „Help“ die Datei
+lin_convenience_libs.tar.bz2. Diese muss entpackt und die Dateien in das
+Verzeichnis „System“ verschoben werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /PATH/TO/UNREAL/Help</span>
+<span class="c1"># tar -xjf lin_convenience_libs.tar.bz2</span>
+<span class="c1"># cd lin_convenience_libs</span>
+<span class="c1"># mv * ../../System</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="binary-ausfuhrbar-machen">
+<h2><span class="section-number">4.5.7. </span>Binary ausführbar machen<a class="headerlink" href="#binary-ausfuhrbar-machen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Datei UnrealLinux.bin hat bei mir zu Problemen mit der Maus geführt
+weshalb ich das Spiel über UnrealXLinux.bin starte. Dazu muss diese noch
+ausführbar gemacht werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /PATH/TO/UNREAL/System</span>
+<span class="c1"># chmod u+x UnrealXLinux.bin</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="spiel-starten">
+<h2><span class="section-number">4.5.8. </span>Spiel starten<a class="headerlink" href="#spiel-starten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Nun kann das Spiel endlich gestartet werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /PATH/TO/UNREAL/System</span>
+<span class="c1"># ./UnrealXLinux.bin</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="verwandte-artikel">
+<h2><span class="section-number">4.5.9. </span>verwandte Artikel<a class="headerlink" href="#verwandte-artikel" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Es empfiehlt sich zu diesem Thema auch folgenden Artikel gelesen zu
+haben.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="hauptseite">FreeBSD - Spiele</a></p></li>
+</ul>
+</div>
+<div class="section" id="links">
+<h2><span class="section-number">4.5.10. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.oldunreal.com/index.html">Homepage von Old Unreal</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="unreal_tournament_2004_-_to-crossfire.txt.html" class="btn btn-neutral float-right" title="4.6. Unreal Tournament 2004 - TO:Crossfire" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="starcraft.txt.html" class="btn btn-neutral float-left" title="4.4. Starcraft" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

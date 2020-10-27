@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.31. Screen &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="2.32. TCSH" href="tcsh.txt.html" />
+    <link rel="prev" title="2.30. RXVT-Unicode" href="rxvt-unicode.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="anwendungen_index.html">2. Anwendungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="anwendungs-liste.txt.html">2.1. Anwendungs-Liste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bmp.txt.html">2.2. BMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bsdadminscripts.txt.html">2.3. BSDAdminScripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csup.txt.html">2.4. csup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distcc.txt.html">2.5. Distcc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.txt.html">2.6. Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enlightenment.txt.html">2.7. Enlightenment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firefox.txt.html">2.8. Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox.txt.html">2.9. Fluxbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gimp.txt.html">2.10. Gimp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gitit.txt.html">2.11. gitit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gkrellm.txt.html">2.12. GKrellM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idesk.txt.html">2.13. IDesk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inkscape.txt.html">2.14. Inkscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irssi.txt.html">2.15. Irssi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b.txt.html">2.16. K3b</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libreoffice.txt.html">2.17. LibreOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.txt.html">2.18. Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd.txt.html">2.19. Music Player Daemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpg123.txt.html">2.20. Mpg123</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mplayer.txt.html">2.21. mplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt.txt.html">2.22. Mutt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice.txt.html">2.23. OpenOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg_cutleaves.txt.html">2.24. pkg_cutleaves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone.txt.html">2.25. Plone 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portmaster.txt.html">2.26. Portmaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portsnap.txt.html">2.27. portsnap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portupgrade.txt.html">2.28. portupgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qemu.txt.html">2.29. Qemu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rxvt-unicode.txt.html">2.30. RXVT-Unicode</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.31. Screen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#anwendung">2.31.1. Anwendung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#die-ersten-schritte-mit-screen">2.31.1.1. Die ersten Schritte mit Screen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detachen-und-reattachen">2.31.1.2. Detachen und Reattachen</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration-von-screen">2.31.2. Konfiguration von Screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sonstiges">2.31.3. Sonstiges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verweise">2.31.4. Verweise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tcsh.txt.html">2.32. TCSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive.txt.html">2.33. TeX Live</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunar.txt.html">2.34. Thunar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunderbird.txt.html">2.35. Thunderbird</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torsmo.txt.html">2.36. Torsmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vim.txt.html">2.37. Vim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4.txt.html">2.38. Xfce4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xine.txt.html">2.39. Xine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xpdf.txt.html">2.40. Xpdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xspread.txt.html">2.41. Xspread</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zsh.txt.html">2.42. ZSH</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="anwendungen_index.html"><span class="section-number">2. </span>Anwendungen</a> &raquo;</li>
+        
+      <li><span class="section-number">2.31. </span>Screen</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/anwendungen/screen.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="tcsh.txt.html" class="btn btn-neutral float-right" title="2.32. TCSH" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rxvt-unicode.txt.html" class="btn btn-neutral float-left" title="2.30. RXVT-Unicode" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="screen">
+<h1><span class="section-number">2.31. </span>Screen<a class="headerlink" href="#screen" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+<img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
+<img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
+<img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
+</div>
+<p>Mittels Screen kann man mehrere virtuelle Konsolen nebeneinander laufen
+haben (sog. <em>Multiplexing</em>) und diese Session auch <em>detachen</em>, d.h.
+Screen läuft auch nach dem Ausloggen des Benutzers im Hintergrund
+weiter, so muss man z.B. seinen IRC Clienten beim Ausloggen nicht
+beenden.</p>
+<div class="section" id="anwendung">
+<h2><span class="section-number">2.31.1. </span>Anwendung<a class="headerlink" href="#anwendung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="die-ersten-schritte-mit-screen">
+<h3><span class="section-number">2.31.1.1. </span>Die ersten Schritte mit Screen<a class="headerlink" href="#die-ersten-schritte-mit-screen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nachdem man Screen installiert hat (in den Ports meist unter misc/screen
+zu finden), tippt man</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ screen
+</pre></div>
+</div>
+<p>Nun sollte eine Nachricht auftauchen, welche die Version von Screen und
+GPL enthält. Durch drücken der Enter- oder Leertaste verschwindet die
+Nachricht und man hat eine ganz normale Shell vor sich.</p>
+<p>Die Bedienung von Screen ist vielleicht am Anfang etwas seltsam, man
+gewöhnt sich aber schnell daran. Um eine weiter Shell zu öffnen, drückt
+man <em>Strg+a</em> und dann <em>c</em>. Um nun zurück zur vorherigen Shell zu kommen,
+drückt man <em>Strg+a</em> und <em>p</em> (für previous). Wie man sehen kann, sind
+Befehle für Screen so aufgebaut, dass man erst <em>Strg+a</em> drückt und dann
+die Taste für die jeweilige Aktion.</p>
+<p>Hier ist nun eine kleine Liste mit Befehlen, die für den Anfang sehr
+nützlich sind:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Strg</span><span class="o">+</span><span class="n">a</span> <span class="n">c</span>  <span class="n">Startet</span> <span class="n">eine</span> <span class="n">neue</span> <span class="n">Shell</span>
+<span class="n">Strg</span><span class="o">+</span><span class="n">a</span> <span class="n">p</span>  <span class="n">Zurück</span> <span class="n">zum</span> <span class="n">vorherigen</span> <span class="n">Fenster</span>
+<span class="n">Strg</span><span class="o">+</span><span class="n">a</span> <span class="n">n</span>  <span class="n">Zum</span> <span class="n">nächsten</span> <span class="n">Fenster</span>
+<span class="n">Strg</span><span class="o">+</span><span class="n">a</span> <span class="mi">1</span>  <span class="n">Zeigt</span> <span class="n">das</span> <span class="mf">1.</span> <span class="n">Fenster</span> <span class="n">an</span><span class="p">,</span> <span class="n">Strg</span><span class="o">+</span><span class="n">a</span> <span class="mi">2</span> <span class="n">das</span> <span class="mf">2.</span> <span class="n">usw</span><span class="o">.</span>
+<span class="n">Strg</span><span class="o">+</span><span class="n">a</span> <span class="s2">&quot;  Zeigt eine Liste aller Fenster an</span>
+<span class="n">Strg</span><span class="o">+</span><span class="n">a</span> <span class="n">A</span>  <span class="n">Editiert</span> <span class="n">den</span> <span class="n">Titel</span> <span class="n">des</span> <span class="n">aktuellen</span> <span class="n">Fensters</span>
+</pre></div>
+</div>
+<p>Die Manpage enthält die komplette Liste aller Befehle.</p>
+</div>
+<div class="section" id="detachen-und-reattachen">
+<h3><span class="section-number">2.31.1.2. </span>Detachen und Reattachen<a class="headerlink" href="#detachen-und-reattachen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Mittels dieses Features läuft die Screensession im Hintergrund weiter,
+selbst wenn man sich ausloggt. <em>Strg+a</em> und <em>d</em> drücken und Screen
+detached sich und man ist wieder dort, von wo aus man Screen gestartet
+hat. Nun kann man sich ausloggen und später einfach mittels</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">screen</span> <span class="o">-</span><span class="n">r</span>
+</pre></div>
+</div>
+<p>die vorherige Session wieder in den Vordergrund bringen, d.h.
+reattachen.</p>
+</div>
+</div>
+<div class="section" id="konfiguration-von-screen">
+<h2><span class="section-number">2.31.2. </span>Konfiguration von Screen<a class="headerlink" href="#konfiguration-von-screen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Im Folgenden werden ein paar Tipps zu Optionen der <strong>~/.screenrc</strong>
+aufgezeig, die man evtl. ändern bzw. hinzufügen möchte.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">startup_message</span> <span class="n">off</span>
+</pre></div>
+</div>
+<p>Hiermit verschwindet der Startbildschirm, wenn Screen gestartet wird.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vbell</span> <span class="n">on</span>
+<span class="n">vbell_msg</span> <span class="s2">&quot;AAARGH!!!&quot;</span>
+</pre></div>
+</div>
+<p>Statt eines Pieptons wird vbell_msg angezeigt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bindkey</span> <span class="o">-</span><span class="n">k</span> <span class="n">k8</span> <span class="n">prev</span>
+<span class="n">bindkey</span> <span class="o">-</span><span class="n">k</span> <span class="n">k9</span> <span class="nb">next</span>
+</pre></div>
+</div>
+<p>Mit dieser Option kann man mit der F8 bzw. F9 Taste zum vorherigen bzw.
+zum nächsten Fenster wechseln.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bind</span> <span class="n">K</span> <span class="n">kill</span>
+</pre></div>
+</div>
+<p>Mit <code class="docutils literal notranslate"><span class="pre">Strg+a</span></code> und <code class="docutils literal notranslate"><span class="pre">K</span></code> wird der Befehl für Screen gegeben, das
+aktuelle Fenster zu zerstören.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bind</span> <span class="n">i</span> <span class="n">screen</span> <span class="o">-</span><span class="n">t</span> <span class="n">irssi</span> <span class="n">irssi</span>
+<span class="n">bind</span> <span class="n">l</span> <span class="n">screen</span> <span class="o">-</span><span class="n">t</span> <span class="n">lynx</span> <span class="n">lynx</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">bsdforen</span><span class="o">.</span><span class="n">de</span>
+</pre></div>
+</div>
+<p>Wenn man <code class="docutils literal notranslate"><span class="pre">Strg+a</span></code> und <code class="docutils literal notranslate"><span class="pre">i</span></code> drückt, wird ein Fenster mit dem Titel
+<code class="docutils literal notranslate"><span class="pre">irssi</span></code> geöffnet und irssi in diesem gestartet. Gleiches Schema für
+<code class="docutils literal notranslate"><span class="pre">Strg+a</span></code> und <code class="docutils literal notranslate"><span class="pre">l</span></code>, nur mit lynx.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hardstatus</span> <span class="n">alwayslastline</span> <span class="s2">&quot;%{= dd}%t %W%=</span><span class="si">%c</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Hiermit wird in der untersten Zeile der Konsole eine Statuszeile
+angezeit.</p>
+<p>Eine kurze Erklärung der hier verwendeten Variablen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="p">{</span><span class="o">=</span> <span class="n">dd</span><span class="p">}</span> <span class="n">Setzt</span> <span class="n">die</span> <span class="n">Hintergrundfarbe</span> <span class="n">und</span> <span class="n">die</span> <span class="n">Farbe</span> <span class="n">der</span> <span class="n">Schrift</span> <span class="n">auf</span> <span class="n">Default</span> <span class="p">(</span><span class="n">weiß</span> <span class="n">auf</span> <span class="n">schwarz</span><span class="p">)</span>
+<span class="o">%</span><span class="n">t</span>      <span class="n">Titel</span> <span class="n">des</span> <span class="n">aktuell</span> <span class="n">angezeigten</span> <span class="n">Fensters</span>
+<span class="o">%</span><span class="n">W</span>      <span class="n">Titel</span> <span class="n">aller</span> <span class="n">übrigen</span> <span class="n">Fenster</span>
+<span class="o">%=</span>      <span class="n">Alles</span><span class="p">,</span> <span class="n">was</span> <span class="n">nach</span> <span class="n">diesem</span> <span class="n">Zeichen</span> <span class="n">kommt</span><span class="p">,</span> <span class="n">wird</span> <span class="n">an</span> <span class="n">der</span> <span class="n">rechten</span> <span class="n">Seite</span> <span class="n">der</span> <span class="n">Konsole</span> <span class="n">angezeigt</span>
+<span class="o">%</span><span class="n">c</span>      <span class="n">Uhrzeit</span>
+</pre></div>
+</div>
+<p>Weiteres dazu kann man in der Screen Manpage unter „STRING ESCAPES“
+nachlesen. In strcat’s .screenrc (siehe Anhang) gibt es viele
+Statusline-Beispiele, die man ausprobieren und den eigenen Bedürfnissen
+anpassen kann.</p>
+</div>
+<div class="section" id="sonstiges">
+<h2><span class="section-number">2.31.3. </span>Sonstiges<a class="headerlink" href="#sonstiges" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wer nur das <em>detach</em>-Feature von Screen benötigt, sollte sich mal das
+<a class="reference external" href="http://dtach.sourceforge.net/">dtach</a> Projekt ansehen.</p>
+</div>
+<div class="section" id="verweise">
+<h2><span class="section-number">2.31.4. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.gnu.org/software/screen/">Homepage von GNU/Screen</a></p></li>
+<li><p><a class="reference external" href="http://www4.informatik.uni-erlangen.de/~jnweiger/screen-faq.html">Offizielle Screen
+FAQ</a></p></li>
+<li><p><a class="reference external" href="http://strcat.de/dotfiles/misc/screenrc">strcat’s .screenrc</a> -
+Hilf- und lehrreiche .screenrc</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tcsh.txt.html" class="btn btn-neutral float-right" title="2.32. TCSH" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rxvt-unicode.txt.html" class="btn btn-neutral float-left" title="2.30. RXVT-Unicode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

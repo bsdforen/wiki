@@ -1,0 +1,1481 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.103. Postfix DSPAM &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.104. PostgreSQL Update auf einen neueren Zweig" href="postgresql_update.txt.html" />
+    <link rel="prev" title="1.102. Postfix Courier OpenLDAP" href="postfix_courier_openldap.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.103. Postfix DSPAM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einleitung">1.103.1. Einleitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-der-software">1.103.2. Installation der Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration">1.103.3. Konfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#datenbank-server">1.103.4. Datenbank-Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cyrus-sasl2">1.103.5. Cyrus-SASL2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#postfix">1.103.6. Postfix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#amavisd-new">1.103.7. amavisd-new</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clam-av">1.103.8. Clam-AV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#courier-imap">1.103.9. Courier-IMAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apache">1.103.10. Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dspam">1.103.11. DSPAM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#postfixadmin">1.103.12. Postfixadmin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rest">1.103.13. REST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fehler">1.103.14. Fehler</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.103. </span>Postfix DSPAM</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/postfix_dspam.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="postgresql_update.txt.html" class="btn btn-neutral float-right" title="1.104. PostgreSQL Update auf einen neueren Zweig" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="postfix_courier_openldap.txt.html" class="btn btn-neutral float-left" title="1.102. Postfix Courier OpenLDAP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="postfix-dspam">
+<h1><span class="section-number">1.103. </span>Postfix DSPAM<a class="headerlink" href="#postfix-dspam" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p><strong>How-To: Postfix + Courier-IMAP + [PostgreSQL oder MySQL] + amavisd-new
++ Clam-AV + DSPAM + Postfixadmin + Postgrey auf FreeBSD</strong></p>
+<p>Dieses Dokument beschreibt die Installation und Konfiguration eines
+Datenbank gestützten Mailservers auf Basis von FreeBSD, der über einen
+sehr effektiven Spamfilter verfügt. Die spätere Administration erfolgt
+über Postfixadmin und DSPAM’s CGI’s. Falsch erkannte Spammails können
+später an die Adresse spam&#64; geschickt werden, damit der Filter sie
+erneut trainiert. Das selbe gilt für als Spam erkannte „echte“ Mails
+(false-positives), hierfür gibt es dann notspam&#64;. Das kann man natürlich
+auch über das Webinterface von DSPAM machen. Desweiteren arbeitet der
+Server mit Postgrey, welches dspam eine Menge Arbeit abnehmen sollte ;-)
+Zudem wird mit Postfix Header-Checks und DNSBL-Listen gearbeitet, um den
+groben Schmutz schon direkt am MTA abzufangen.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>In diesem Artikel sind einige Fehler enthalten! Bitte daher die hier
+gemachten Angaben mit Vorsicht benutzen! Eine Überarbeitung findet später
+statt!</p>
+</div>
+<div class="section" id="einleitung">
+<h2><span class="section-number">1.103.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Dieser Artikel beschreibt ein auf FreeBSD angepasstes Vorgehen.  Die
+Installation auf anderen Plattformen wird daher von diesem How-To nicht
+abgedeckt. Diese Installation auf Basis von MySQL wurde bereits einmal
+wissentlich nach diesem How-To erfolgreich durchgeführt. Die Version mit
+PostgreSQL ist durchgeführt, aber noch nicht als funktionierend von einem
+„Dritten“ bestätigt.</p>
+</div>
+<p><strong>Sicherheit</strong></p>
+<p>Das hier angesprochene Mailsystem wurde in den Produktivsystemen in
+einer Jail installiert, die auf die IP-Adresse 127.0.0.2 hört. Wer
+seinen Mailer nicht in einer Jail installieren möchte, der sollte bitte
+die 127.0.0.2 durch 127.0.0.1, bzw localhost ersetzen, ggf. auch durch
+die IP des Hosts, bzw. den richtigen Hostnamen (Dabei sollte man etwas
+nachdenken! *g*). Wer seine Passwörter nicht im Klartext über das
+Internet übertragen mag, sollte sich SSL Vhost’s erstellen. :)</p>
+<p>Tip: Erstelle eine Jail, das ist einfach, schnell, sicher und gut. Mit
+NAT und RDR in PF kann man dann ggf. den Rest erledigen. In den Ports
+ist <a class="reference external" href="/howto/ezjail">ezjail</a> zur schnellen Installation einer Jail zu
+finden. Axel Gruners Jail-Howto eignet sich dafür hervorragend, um sich
+Schritt für Schritt in Jails einzuarbeiten
+<a class="reference external" href="http://www.grunix.de/doku/howto/files/jails.pdf">http://www.grunix.de/doku/howto/files/jails.pdf</a>.</p>
+<p><strong>Kommentar</strong></p>
+<p>Einige FLAVORS, z.B. amavisd-new mit MySQL- oder PostgreSQL-Support zu
+kompilieren macht unter Umständen keinen Sinn, da diese keine
+Auswirkungen auf dieses Setup haben. Es bleibt jedem selbst überlassen,
+ob man später entsprechende Features wie z.B. Blacklisting in über eine
+Datenbank benutzen will.</p>
+<p>Im folgendem Text werden Installationswege auf 2 unterschiedlichen
+Datenbanken aufgezeigt. Die Qual der Wahl: PostgreSQL oder MySQL? Hier
+sollte man das nehmen, womit man sich besser auskennt bzw. entscheiden
+ob es um „mal schnell“ oder Datenintegrität und benötigte Features geht.</p>
+<p><strong>Vorsicht</strong></p>
+<p>Dieses How-To kann man nicht einfach so runterrattern, ohne sich
+gedanken zu machen, was man hier überhaupt tut. Wie schon eben kurz
+erwähnt, werden hier 2 Installationswege, und zwar für PostgreSQL oder
+MySQL beschrieben. Die eigentliche Installation, egal mit welcher
+Datenbank sieht ziemlich gleich aus. Es gibt nur ein paar kleine
+Unterschiede, die im Text dann entsprechend markiert sind.</p>
+<p><strong>Dankeschön</strong></p>
+<p>Vielen Dank an Saintjoe für den Live-Test und das „Adden“ von weiteren
+Features. :-)</p>
+<p><strong>Vorbereitung</strong></p>
+<p><strong>``/etc/make.conf``</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WITH_BDB_VER</span><span class="o">=</span><span class="mi">43</span>
+<span class="n">WITH_PGSQL</span><span class="o">=</span><span class="n">yes</span> <span class="c1"># oder WITH_MYSQL=yes</span>
+<span class="n">CLAMUSER</span><span class="o">=</span><span class="n">vscan</span>
+<span class="n">CLAMGROUP</span><span class="o">=</span><span class="n">vscan</span>
+<span class="n">WITH_APACHE_SUEXEC</span><span class="o">=</span><span class="n">yes</span>
+<span class="n">DSPAM_OWNER</span><span class="o">=</span><span class="n">dspam</span>
+<span class="n">DSPAM_GROUP</span><span class="o">=</span><span class="n">dspam</span>
+<span class="n">WITH_AUTHDAEMON</span><span class="o">=</span><span class="n">yes</span> <span class="c1"># für cyrus-sasl2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-der-software">
+<h2><span class="section-number">1.103.2. </span>Installation der Software<a class="headerlink" href="#installation-der-software" title="Link zu dieser Überschrift">¶</a></h2>
+<p><strong>Datenbank-Server</strong></p>
+<p>MySQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/databases/mysql50-server</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>oder PostgreSQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/databases/postgresql80-server</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>Cyrus-SASL2:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/security/cyrus-sasl2</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>Postfix</p>
+<p>Options: SASL2, SPF, TLS, DB43, [MySQL oder PGSQL] und VDA:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/mail/postfix</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>amavisd-new</p>
+<p>Options: [MySQL oder PGSQL]:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/security/amavisd-new</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>Clam-AV:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/security/clamav</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>Courier-IMAP</p>
+<p>Options: OPENSSL, [AUTH_MYSQL oder AUTH_PGSQL] (Bei Bedarf noch IPV6):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/mail/courier-imap</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>Apache:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/www/apache13-modssl</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>DSPAM</p>
+<p>Options: DEBUG, DAEMON, GRAHAM_BAYES, BURTON_BAYES, RPV, TEST_COND, TRUSTED_USERS, [MYSQL50 oder PGSQL], VIRT_USERS, LONG_USERNAMES, LARGE_SCALE, SENDMAIL_LDA und CGI</p>
+<p>Achtung: die UID/GID müssen nicht 20000 haben, sie sollten allerdings über 1000 liegen, damit Apache suexec mit dem dspam User funktioniert:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pw groupadd dspam -g 20000</span>
+<span class="c1"># pw useradd dspam -u 20000 -g dspam -s &quot;/sbin/nologin&quot; -d &quot;/var/db/dspam&quot; -c &quot;DSPAM User&quot;</span>
+<span class="c1"># cd /usr/ports/mail/dspam</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>Postfixadmin:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/mail/postfixadmin</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>php4-session:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/www/php4-session</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>Folgenden Port bei PostgreSQL zusätzlich installieren:</p>
+<p>php4-pgsql:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/databases/php4-pgsql</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+<p>Postgrey:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/mail/postgrey</span>
+<span class="c1"># make package clean</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="konfiguration">
+<h2><span class="section-number">1.103.3. </span>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="datenbank-server">
+<h2><span class="section-number">1.103.4. </span>Datenbank-Server<a class="headerlink" href="#datenbank-server" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Bei MySQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># echo &quot;mysql_enable=\&quot;YES\&quot;&quot; &gt;&gt; /etc/rc.conf</span>
+<span class="c1"># /usr/local/etc/rc.d/mysql-server.sh start</span>
+<span class="c1"># mysqladmin password NEWMYSQLPW</span>
+</pre></div>
+</div>
+<p>Bei PostgreSQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># echo &quot;postgresql_enable=\&quot;YES\&quot;&quot; &gt;&gt; /etc/rc.conf</span>
+<span class="c1"># /usr/local/etc/rc.d/010.pgsql.sh initdb</span>
+<span class="c1"># cp /usr/local/etc/periodic/daily/502.pgsql /etc/periodic/daily/</span>
+</pre></div>
+</div>
+<p>/usr/local/pgsql/data/pg_hba.conf ← Entsprechend bearbeiten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">host</span>    <span class="n">postfix</span>     <span class="n">postfixadmin</span>    <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span><span class="o">/</span><span class="mi">32</span>      <span class="n">trust</span>
+<span class="n">host</span>    <span class="n">postfix</span>     <span class="n">postfix</span>         <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span><span class="o">/</span><span class="mi">32</span>      <span class="n">trust</span>
+<span class="n">host</span>    <span class="n">dspam</span>       <span class="n">dspam</span>           <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span><span class="o">/</span><span class="mi">32</span>      <span class="n">trust</span>
+</pre></div>
+</div>
+<p>/usr/local/pgsql/data/postgresql.conf ← Entsprechend bearbeiten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">listen_addresses</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.2&#39;</span>
+</pre></div>
+</div>
+<p>Hinweis: An dieser Stelle sollte man sich die Dokumentation zu PostgreSQL 8
+anschauen. Das Tuning eines PostgreSQL Servers ist kein Kinderspiel, wenn man
+sich damit nicht auskennt.</p>
+<p>PostgreSQL starten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/local/etc/rc.d/010.pgsql.sh start</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cyrus-sasl2">
+<h2><span class="section-number">1.103.5. </span>Cyrus-SASL2<a class="headerlink" href="#cyrus-sasl2" title="Link zu dieser Überschrift">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/lib/sasl2/smtpd.conf</span></code> &lt;- Erstellt diese Datei mit
+folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pwcheck_method</span><span class="p">:</span> <span class="n">authdaemond</span>
+<span class="n">log_level</span><span class="p">:</span> <span class="mi">3</span>
+<span class="n">mech_list</span><span class="p">:</span> <span class="n">LOGIN</span> <span class="n">DIGEST</span><span class="o">-</span><span class="n">MD5</span> <span class="n">CRAM</span><span class="o">-</span><span class="n">MD5</span>
+<span class="n">authdaemond_path</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">authdaemond</span><span class="o">/</span><span class="n">socket</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="postfix">
+<h2><span class="section-number">1.103.6. </span>Postfix<a class="headerlink" href="#postfix" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ein SSL Zertifikat für Postfix erstellen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mkdir /usr/local/etc/postfix/ssl</span>
+<span class="c1"># cd /usr/local/etc/postfix/ssl</span>
+<span class="c1"># openssl req -new -x509 -nodes -out smtpd.pem -keyout smtpd.pem -days 3650</span>
+</pre></div>
+</div>
+<p>Verzeichniss erstellen und Permissions setzen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mkdir /usr/local/virtual</span>
+<span class="c1"># chown postfix:postfix /usr/local/virtual</span>
+<span class="c1"># chmod -R 771 /usr/local/virtual</span>
+</pre></div>
+</div>
+<p>Gruppenangehörigkeit erstellen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pw groupmod courier -m postfix</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/postfix/main.cf</span></code> &lt;- Entsprechend bearbeiten.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>smtpd_client_restrictions  =
+    permit_mynetworks,
+    permit_sasl_authenticated,
+    reject_rbl_client dnsbl.sorbs.net,
+    reject_rbl_client sbl-xbl.spamhaus.org,
+    reject_rbl_client list.dsbl.org,
+    permit
+smtpd_helo_restrictions  =
+    permit_mynetworks,
+    permit_sasl_authenticated,
+    reject_invalid_hostname,
+    reject_non_fqdn_hostname,
+    permit
+smtpd_sender_restrictions  =
+    reject_unknown_sender_domain,
+    reject_non_fqdn_sender,
+    permit_mynetworks,
+    permit_sasl_authenticated,
+    reject_rhsbl_sender rhsbl.sorbs.net,
+    reject_rhsbl_sender dsn.rfc-ignorant.org,
+    permit
+smtpd_recipient_restrictions  =
+    reject_unknown_recipient_domain,
+    reject_non_fqdn_recipient,
+    permit_mynetworks,
+    permit_sasl_authenticated,
+    reject_unauth_destination,
+    check_policy_service inet:127.0.0.2:10023,
+    permit
+smtpd_data_restrictions  =
+    permit_mynetworks,
+    reject_unauth_pipelining,
+    permit
+
+smtpd_use_tls = yes
+smtpd_tls_key_file = /usr/local/etc/postfix/ssl/smtpd.pem
+smtpd_tls_cert_file = /usr/local/etc/postfix/ssl/smtpd.pem
+smtpd_tls_CAfile = /usr/local/etc/postfix/ssl/smtpd.pem
+smtpd_tls_loglevel = 1
+smtpd_tls_received_header = yes
+smtpd_tls_session_cache_timeout = 3600s
+tls_random_source = dev:/dev/urandom
+
+smtpd_sasl_auth_enable = yes
+smtpd_sasl2_auth_enable = yes
+smtpd_sasl_security_options = noanonymous
+smtpd_sasl_local_domain = $myhostname
+
+header_checks = pcre:/usr/local/etc/postfix/header_checks.pcre
+</pre></div>
+</div>
+<p>Bei MySQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>relay_domains = proxy:mysql:/usr/local/etc/postfix/sql_relay_domains_maps.cf
+transport_maps = mysql:/usr/local/etc/postfix/sql_transport_maps.cf, pcre:/usr/local/etc/postfix/transport.pcre
+virtual_alias_maps = mysql:/usr/local/etc/postfix/sql_virtual_alias_maps.cf
+virtual_gid_maps = static:125
+virtual_mailbox_base = /usr/local/virtual
+virtual_mailbox_domains = mysql:/usr/local/etc/postfix/sql_virtual_domains_maps.cf
+virtual_mailbox_limit = 51200000
+virtual_mailbox_maps = $transport_maps, mysql:/usr/local/etc/postfix/sql_virtual_mailbox_maps.cf
+virtual_minimum_uid = 125
+virtual_transport = virtual
+virtual_uid_maps = static:125
+virtual_create_maildirsize = yes
+virtual_mailbox_extended = yes
+virtual_mailbox_limit_maps = mysql:/usr/local/etc/postfix/sql_virtual_mailbox_limit_maps.cf
+virtual_mailbox_limit_override = yes
+virtual_maildir_limit_message = Sorry, the user&#39;s maildir has overdrawn his diskspace quota, please try again later.
+virtual_overquota_bounce = yes
+</pre></div>
+</div>
+<p>Bei PostgreSQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>relay_domains = proxy:pgsql:/usr/local/etc/postfix/sql_relay_domains_maps.cf
+transport_maps = pgsql:/usr/local/etc/postfix/sql_transport_maps.cf, pcre:/usr/local/etc/postfix/transport.pcre
+virtual_alias_maps = pgsql:/usr/local/etc/postfix/sql_virtual_alias_maps.cf
+virtual_gid_maps = static:125
+virtual_mailbox_base = /usr/local/virtual
+virtual_mailbox_domains = pgsql:/usr/local/etc/postfix/sql_virtual_domains_maps.cf
+virtual_mailbox_limit = 51200000
+virtual_mailbox_maps = $transport_maps, pgsql:/usr/local/etc/postfix/sql_virtual_mailbox_maps.cf
+virtual_minimum_uid = 125
+virtual_transport = virtual
+virtual_uid_maps = static:125
+virtual_create_maildirsize = yes
+virtual_mailbox_extended = yes
+virtual_mailbox_limit_maps = pgsql:/usr/local/etc/postfix/sql_virtual_mailbox_limit_maps.cf
+virtual_mailbox_limit_override = yes
+virtual_maildir_limit_message = Sorry, the user&#39;s maildir has overdrawn his diskspace quota, please try again later.
+virtual_overquota_bounce = yes
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/postfix/master.cf</span></code> &lt;- Entsprechend bearbeiten.</p>
+<p>Auskommentieren:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">smtp</span>      <span class="n">inet</span>  <span class="n">n</span>       <span class="o">-</span>       <span class="n">n</span>       <span class="o">-</span>       <span class="o">-</span>       <span class="n">smtpd</span>
+<span class="n">pickup</span>    <span class="n">fifo</span>  <span class="n">n</span>       <span class="o">-</span>       <span class="n">n</span>       <span class="mi">60</span>      <span class="mi">1</span>       <span class="n">pickup</span>
+<span class="n">cleanup</span>   <span class="n">unix</span>  <span class="n">n</span>       <span class="o">-</span>       <span class="n">n</span>       <span class="o">-</span>       <span class="mi">0</span>       <span class="n">cleanup</span>
+<span class="n">local</span>     <span class="n">unix</span>  <span class="o">-</span>       <span class="n">n</span>       <span class="n">n</span>       <span class="o">-</span>       <span class="o">-</span>       <span class="n">local</span>
+</pre></div>
+</div>
+<p>Anhängen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>smtp                 inet      n      -      n      -      -      smtpd
+  -o cleanup_service_name=pre-cleanup
+  -o content_filter=smtp-amavis:[[127.0.0.2]]:10024
+
+pickup               fifo      n      -      n      60     1      pickup
+  -o cleanup_service_name=pre-cleanup
+
+smtp-amavis          unix      -      -      n      -      2      lmtp
+  -o smtp_send_xforward_command=yes
+
+127.0.0.2:10025      inet      n      -      n      -      -      smtpd
+  -o cleanup_service_name=pre-cleanup
+  -o content_filter=dspam:dummy
+  -o local_recipient_maps =
+  -o relay_recipient_maps =
+  -o smtpd_restriction_classes =
+  -o smtpd_client_restrictions =
+  -o smtpd_helo_restrictions =
+  -o smtpd_sender_restrictions =
+  -o smtpd_recipient_restrictions=permit_mynetworks,reject
+  -o mynetworks=127.0.0.0/8
+  -o strict_rfc821_envelopes=yes
+  -o smtpd_error_sleep_time=0
+  -o smtpd_soft_error_limit=1001
+  -o smtpd_hard_error_limit=1000
+
+127.0.0.2:10026      inet      n      -      n      -      -      smtpd
+  -o local_recipient_maps =
+  -o relay_recipient_maps =
+  -o smtpd_restriction_classes =
+  -o smtpd_client_restrictions =
+  -o smtpd_helo_restrictions =
+  -o smtpd_sender_restrictions =
+  -o smtpd_recipient_restrictions=permit_mynetworks,reject
+  -o mynetworks=127.0.0.0/8
+  -o strict_rfc821_envelopes=yes
+  -o smtpd_error_sleep_time=0
+  -o smtpd_soft_error_limit=1001
+  -o smtpd_hard_error_limit=1000
+
+dspam                unix   -   n   n   -   -   pipe
+  flags=Rhq user=dspam argv=/usr/local/bin/dspam --mode=teft --user global \
+  --deliver=innocent,spam --feature=chained,noise -i -f ${sender} -- ${recipient}
+
+dspam-spam           unix   -   n   n   -   -   pipe
+  flags=Rhq user=dspam argv=/usr/local/bin/dspam --mode=teft --user global \
+  --class=spam --source=error ${sender} --deliver=spam
+
+dspam-notspam        unix   -   n   n   -   -   pipe
+  flags=Rhq user=dspam argv=/usr/local/bin/dspam --mode=teft --user global \
+  --class=innocent --source=error ${sender} --deliver=innocent
+
+cleanup              unix      n      -      n      -      0      cleanup
+  -o header_checks =
+  -o mime_header_checks =
+  -o nested_header_checks =
+  -o body_checks =
+
+pre-cleanup          unix      n      -      n      -      0      cleanup
+  -o canonical_maps =
+  -o sender_canonical_maps =
+  -o recipient_canonical_maps =
+  -o masquerade_domains =
+  -o always_bcc =
+  -o sender_bcc_maps =
+  -o recipient_bcc_maps =
+
+local                unix      -      n      n      -      -      local
+  -o content_filter =
+  -o myhostname=HOSTNAME
+  -o local_recipient_maps =
+  -o relay_recipient_maps =
+  -o mynetworks=127.0.0.0/8
+  -o mynetworks_style=host
+  -o smtpd_restriction_classes =
+  -o smtpd_client_restrictions =
+  -o smtpd_helo_restrictions =
+  -o smtpd_sender_restrictions =
+  -o smtpd_recipient_restrictions=permit_mynetworks,reject
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/postfix/transport.pcre</span></code> &lt;- Erstellt diese Datei mit
+folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/^spam@(.*)$/       dspam-spam:${1}
+/^notspam@(.*)$/    dspam-notspam:${1}
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/postfix/header_checks.pcre</span></code> &lt;- Erstellt diese Datei
+mit folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>-  Following will block mails with Asian and Cyrillic charsets which is almost spam.
+/^Content-Type:.*charset=&quot;?(big5|euc-jp|euc-kr|euc-tw|gb2312|iso-2022-jp|koi8|ks_c_5601-1987|windows-1251)&quot;?/   REJECT Sorry, we do not accept messages in the ${1} character set.
+/^(From|Subject): .*=\?(big5|euc-jp|euc-kr|euc-tw|gb2312|iso-2022-jp|koi8|ks_c_5601-1987|windows-1251)\?/   REJECT Sorry, we do not accept messages in the ${2} character set.
+
+  -  Following will block mails with potential virus infected attachements.
+  - /^Content-(Type|Disposition):.*(file)?name=.*\.(ade|adp|asd|bas|bat|chm|cmd|com|cpl|crt|dbx|dll|exe|hlp|hta|js|jse|lnk|ocx|pif|scr|shb|shm|shs|vb|vbe|vbs|vbx|vxd|wsf|wsh)/ REJECT Sorry, we do not accept .${3} file types.
+
+  -  These are headers used to track some spam messages.
+/^X-Spam-Flag: YES/     WARN SpamAssassin Confirmed Spam Content
+/^Bel-Tracking: .*/     REJECT Confirmed spam. Go away.
+/^Hel-Tracking: .*/     REJECT Confirmed spam. Go away.
+/^Kel-Tracking: .*/     REJECT Confirmed spam. Go away.
+/^BIC-Tracking: .*/     REJECT Confirmed spam. Go away.
+/^Lid-Tracking: .*/     REJECT Confirmed spam. Go away.
+
+  -  Following will block mails marked as junk.
+/^Precedence: junk/     REJECT Confirmed spam. Go away.
+
+  -  Emails with eronious dates (or dates far in the past) will appear at the top or bottom of your mail client.
+/^Date: .* 19[[0-9]][[0-9]]/    REJECT UBE Header - Past Date #1
+/^Date: .* 200[[0-4]]/      REJECT UBE Header - Past Date #2
+
+  -  This filter will block subjects that contain ISO specifications.
+  - /^Subject: .*\=\?ISO/       REJECT We don&#39;t accept strange character sets.
+
+  -  This will block messages that do not have an address in the From: header.
+/^From: &lt;&gt;/         REJECT You need to specify a return address, otherwise we will not accept your email.
+
+  -  This will block messages that do not have an address in the Return-Path:  header.
+/^Return-Path: &lt;&gt;/      REJECT You need to specify a return address, otherwise we will not accept your email.
+
+  -  Following is a listing of known mass mailer programs.
+/^X-Mailer: .*0001/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*007 Direct Email Easy/                REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*2\.0-b55-VC_IPA/                  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Advanced Mass Sender/             REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Aristotle/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Aureate Group Mail/               REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Avalanche/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Caretop 2604/                 REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Copia emailFacts/                 REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Crescent Internet Tool/               REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*CyberCreek/                   REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*DMailer/                      REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Delphi Mailing System/                REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*DiffondiCool/                 REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Direct Email/                 REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Dynamic Opt-In Emailer/               REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*E-Access/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*E-Mail Delivery Agent/                REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*E-mail sender/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Emailer Platinum/                 REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Entity/                       REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*EVAMAIL/                      REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Extractor/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Floodgate/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*GMail2/                       REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*GOTO Software Sarbacane/              REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*GoldMine/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*GreenRider/                   REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*GRMessageQueue/                   REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Inet_Mail_Out/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*JiXing .{0,30}Design By JohnnieHuang/     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Mail Bomber/                  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Mail Sender/                  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*MailKing/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*MailPro/                      REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*MailWorkZ/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*MailWorkz/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*MailXSender/                  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Mailloop/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*MassE-Mail/                   REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*MaxBulk.Mailer/                   REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Microsoft CDO/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Microsoft Outlook Express 4.72.1712.3/        REJECT Sorry, your mailer was identified as spam mailing software.
+/^X-Mailer: .*Microsoft Outlook Express 5.00.2919.6900 DM/  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*MMailer v3\.0/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Mozilla 4.55/                 REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*MultiMailer/                  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*NetMasters SMTP/                  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*News Breaker Pro/                 REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Out[[Ll]]ook Express 3\.14159/            REJECT Sorry, your mailer was identified as spam mailing software.
+/^X-Mailer: .*Opt-In Lightning/                 REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*PLAUZIUM/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*PersMail/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Power CGI Bulk/                   REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*PowerCampaign/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Prospect Mailer/                  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*RoryMAILER/                   REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*SmartMailer/                  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Sparc12/                      REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*StormPort/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*StormPost/                    REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*Super-Duper-FastMail/             REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*SuperMail-2/                  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*THOR/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*bulk/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*charset(89)/                  REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*commercialmail/                   REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*demography opalescent/                REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*diffondi/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*e-Merge/                      REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*eGroups Message Poster/               REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*jfmailer/                     REJECT Sorry, your mailer was identified as mass mailer program.
+/^X-Mailer: .*jpfree Group Mail Express/            REJECT Sorry, your mailer was identified as mass mailer program.
+
+  -  Some Wordcombinations
+/^Subject: .*Free Money/        REJECT UBE Header - Rule #1
+
+  -  Following Will Block Spams With Many Spaces In The Subject.
+/^Subject: .*            /      REJECT UBE Header - 12 Spaces
+
+  -  Following will block spams with $ values in the subject
+/^Subject: \$[[0-9]][[0-9]]*$/      REJECT Sorry, your mail was identified as spam.
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/postfix/sql_virtual_alias_maps.cf</span></code> &lt;- Erstellt diese
+Datei mit folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">POSTFIXSQLPW</span>
+<span class="n">hosts</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span>
+<span class="n">dbname</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">alias</span>
+<span class="n">select_field</span> <span class="o">=</span> <span class="n">goto</span>
+<span class="n">where_field</span> <span class="o">=</span> <span class="n">address</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/postfix/sql_virtual_domains_maps.cf</span></code> &lt;- Erstellt diese
+Datei mit folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">POSTFIXSQLPW</span>
+<span class="n">hosts</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span>
+<span class="n">dbname</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">domain</span>
+<span class="n">select_field</span> <span class="o">=</span> <span class="n">description</span>
+<span class="n">where_field</span> <span class="o">=</span> <span class="n">domain</span>
+<span class="n">additional_conditions</span> <span class="o">=</span> <span class="ow">and</span> <span class="n">backupmx</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span> <span class="ow">and</span> <span class="n">active</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/postfix/sql_virtual_mailbox_maps.cf</span></code> &lt;- Erstellt diese
+Datei mit folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">POSTFIXSQLPW</span>
+<span class="n">hosts</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span>
+<span class="n">dbname</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">mailbox</span>
+<span class="n">select_field</span> <span class="o">=</span> <span class="n">maildir</span>
+<span class="n">where_field</span> <span class="o">=</span> <span class="n">username</span>
+  <span class="o">-</span> <span class="n">additional_conditions</span> <span class="o">=</span> <span class="ow">and</span> <span class="n">active</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/postfix/sql_virtual_mailbox_limit_maps.cf</span></code> &lt;- Erstellt
+diese Datei mit folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">POSTFIXSQLPW</span>
+<span class="n">hosts</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span>
+<span class="n">dbname</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">mailbox</span>
+<span class="n">select_field</span> <span class="o">=</span> <span class="n">quota</span>
+<span class="n">where_field</span> <span class="o">=</span> <span class="n">username</span>
+  <span class="o">-</span> <span class="n">additional_conditions</span> <span class="o">=</span> <span class="ow">and</span> <span class="n">active</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/postfix/sql_relay_domains_maps.cf</span></code> &lt;- Erstellt diese
+Datei mit folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">POSTFIXSQLPW</span>
+<span class="n">hosts</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span>
+<span class="n">dbname</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">domain</span>
+<span class="n">select_field</span> <span class="o">=</span> <span class="n">domain</span>
+<span class="n">where_field</span> <span class="o">=</span> <span class="n">domain</span>
+<span class="n">additional_conditions</span> <span class="o">=</span> <span class="ow">and</span> <span class="n">backupmx</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/postfix/sql_transport_maps.cf</span></code> &lt;- Erstellt diese Datei
+mit folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">POSTFIXSQLPW</span>
+<span class="n">hosts</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span>
+<span class="n">dbname</span> <span class="o">=</span> <span class="n">postfix</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">domain</span>
+<span class="n">select_field</span> <span class="o">=</span> <span class="n">transport</span>
+<span class="n">where_field</span> <span class="o">=</span> <span class="n">domain</span>
+<span class="n">additional_conditions</span> <span class="o">=</span> <span class="ow">and</span> <span class="n">backupmx</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="amavisd-new">
+<h2><span class="section-number">1.103.7. </span>amavisd-new<a class="headerlink" href="#amavisd-new" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cp /usr/local/etc/amavisd.conf-sample /usr/local/etc/amavisd.conf</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/amavisd.conf</span></code> &lt;- Entsprechend bearbeiten.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$mydomain = &#39;example.org&#39;;      # (no useful default)
+$myhostname = &#39;hostname.example.org&#39;;  # fqdn of this host, default by uname(3)
+$forward_method = &#39;smtp:[[127.0.0.2]]:10025&#39;;  # where to forward checked mail
+$notify_method = &#39;smtp:[[127.0.0.2]]:10026&#39;;   # where to submit notifications
+@bypass_spam_checks_maps  = (1);  # uncomment to DISABLE anti-spam code
+$inet_socket_bind = &#39;127.0.0.2&#39;; # limit socket bind to loopback interface
+@inet_acl = qw(127.0.0.2);  # allow SMTP access only from localhost IP
+@mynetworks = qw( 127.0.0.0/8 );
+$final_virus_destiny      = D_DISCARD;  # (defaults to D_DISCARD)
+$final_banned_destiny     = D_DISCARD;  # (defaults to D_BOUNCE)
+$warnvirussender = 1; # (defaults to false (undef))
+$warnbannedsender = 1;        # (defaults to false (undef))
+$virus_admin = &quot;virus-admins\@$mydomain&quot;;
+
+[[&#39;ClamAV-clamd&#39;,
+  \&amp;ask_daemon, [[&quot;CONTSCAN|{}\n&quot;, &quot;/var/run/clamav/clamd&quot;]],
+  qr/\bOK$/, qr/\bFOUND$/,
+  qr/^.*?: (?!Infected Archive)(.*) FOUND$/ ]],
+</pre></div>
+</div>
+</div>
+<div class="section" id="clam-av">
+<h2><span class="section-number">1.103.8. </span>Clam-AV<a class="headerlink" href="#clam-av" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Manchmal sind Ports doof. :-))</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># chown -R vscan:vscan /var/run/clamav</span>
+<span class="c1"># chown -R vscan:vscan /var/db/clamav</span>
+<span class="c1"># chown -R vscan:vscan /var/log/clamav</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/clamd.conf</span></code> &lt;- Erstellt diese Datei mit folgendem
+Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LogSyslog</span>
+<span class="n">LogVerbose</span>
+<span class="n">LogFacility</span> <span class="n">LOG_MAIL</span>
+<span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="n">pid</span>
+<span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">db</span><span class="o">/</span><span class="n">clamav</span>
+<span class="n">LocalSocket</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span>
+<span class="n">StreamMaxLength</span> <span class="mi">10</span><span class="n">M</span>
+<span class="n">User</span> <span class="n">vscan</span>
+<span class="n">ScanMail</span>
+<span class="n">ScanArchive</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/freshclam.conf</span></code> &lt;- Erstellt diese Datei mit folgendem
+Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LogSyslog</span>
+<span class="n">LogVerbose</span>
+<span class="n">LogFacility</span> <span class="n">LOG_MAIL</span>
+<span class="n">DatabaseOwner</span> <span class="n">vscan</span>
+<span class="n">Checks</span> <span class="mi">12</span>
+<span class="n">DatabaseMirror</span> <span class="n">db</span><span class="o">.</span><span class="n">de</span><span class="o">.</span><span class="n">clamav</span><span class="o">.</span><span class="n">net</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="courier-imap">
+<h2><span class="section-number">1.103.9. </span>Courier-IMAP<a class="headerlink" href="#courier-imap" title="Link zu dieser Überschrift">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/authlib/authdaemonrc</span></code> &lt;- Entsprechend bearbeiten.</p>
+<p>Bei MySQL folgenden Wert ändern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">authmodulelist</span><span class="o">=</span><span class="s2">&quot;authmysql&quot;</span>
+</pre></div>
+</div>
+<p>Bei PostgreSQL folgenden Wert ändern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">authmodulelist</span><span class="o">=</span><span class="s2">&quot;authpgsql&quot;</span>
+</pre></div>
+</div>
+<p>Bei MySQL:</p>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/authlib/authmysqlrc</span></code> &lt;- Erstellt diese Datei mit
+folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">-</span> <span class="n">DEFAULT_DOMAIN</span>      <span class="n">example</span><span class="o">.</span><span class="n">org</span>
+<span class="n">MYSQL_SOCKET</span>        <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">sock</span>
+<span class="n">MYSQL_USERNAME</span>      <span class="n">postfix</span>
+<span class="n">MYSQL_PASSWORD</span>      <span class="n">POSTFIXSQLPW</span>
+<span class="n">MYSQL_DATABASE</span>      <span class="n">postfix</span>
+<span class="n">MYSQL_OPT</span>       <span class="mi">0</span>
+<span class="n">MYSQL_USER_TABLE</span>    <span class="n">mailbox</span>
+<span class="n">MYSQL_CRYPT_PWFIELD</span> <span class="n">password</span>
+<span class="n">MYSQL_UID_FIELD</span>     <span class="s1">&#39;125&#39;</span>
+<span class="n">MYSQL_GID_FIELD</span>     <span class="s1">&#39;125&#39;</span>
+<span class="n">MYSQL_LOGIN_FIELD</span>   <span class="n">username</span>
+<span class="n">MYSQL_HOME_FIELD</span>    <span class="s1">&#39;/usr/local/virtual&#39;</span>
+<span class="n">MYSQL_NAME_FIELD</span>    <span class="n">name</span>
+<span class="n">MYSQL_MAILDIR_FIELD</span> <span class="n">maildir</span>
+<span class="n">MYSQL_QUOTA_FIELD</span>   <span class="n">quota</span>
+  <span class="o">-</span> <span class="n">MYSQL_PORT</span>      <span class="mi">0</span>
+<span class="n">MYSQL_SERVER</span>        <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span>
+</pre></div>
+</div>
+<p>Bei PostgreSQL:</p>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/authlib/authpgsqlrc</span></code> &lt;- Erstellt diese Datei mit
+folgendem Inhalt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">-</span> <span class="n">DEFAULT_DOMAIN</span>      <span class="n">example</span><span class="o">.</span><span class="n">com</span>
+<span class="n">PGSQL_HOST</span>      <span class="o">/</span><span class="n">tmp</span>
+<span class="n">PGSQL_PORT</span>      <span class="mi">5432</span>
+<span class="n">PGSQL_USERNAME</span>      <span class="n">postfix</span>
+<span class="n">PGSQL_PASSWORD</span>      <span class="n">POSTFIXSQLPW</span>
+<span class="n">PGSQL_DATABASE</span>      <span class="n">postfix</span>
+  <span class="o">-</span> <span class="n">PGSQL_OPT</span>       <span class="mi">0</span>
+<span class="n">PGSQL_USER_TABLE</span>    <span class="n">mailbox</span>
+<span class="n">PGSQL_CRYPT_PWFIELD</span> <span class="n">password</span>
+<span class="n">PGSQL_UID_FIELD</span>     <span class="s1">&#39;125&#39;</span>
+<span class="n">PGSQL_GID_FIELD</span>     <span class="s1">&#39;125&#39;</span>
+<span class="n">PGSQL_LOGIN_FIELD</span>   <span class="n">username</span>
+<span class="n">PGSQL_HOME_FIELD</span>    <span class="s1">&#39;/usr/local/virtual&#39;</span>
+<span class="n">PGSQL_NAME_FIELD</span>    <span class="n">name</span>
+<span class="n">PGSQL_MAILDIR_FIELD</span> <span class="n">maildir</span>
+<span class="n">PGSQL_QUOTA_FIELD</span>   <span class="n">quota</span>
+</pre></div>
+</div>
+<p>Wer möchte, kann natürlich auch SSL für den imapd bzw pop3d benutzen.
+Dazu müssen 2 Dateien in <strong>/usr/local/etc/courier-imap/</strong> angepasst
+werden:</p>
+<p>In den Dateien pop3d.cnf/imapd.cnf (als Vorlage
+pop3d.cnf.dist/imapd.cnf.dist benutzen) den [ req_dn ] Abschnitt
+anpassen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[ req_dn ]
+C=countryName Two letters!
+ST=stateOrProvinceName
+L=localityName
+O=organizationName
+OU=OrganizationalUnitName
+CN=ÖFFENTLICHE_IP_DES_HOSTS_ODER_DER_JAIL
+emailAddress=emailAddress
+</pre></div>
+</div>
+<p>Danach:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/local/sbin/mkimapdcert</span>
+<span class="c1"># /usr/local/sbin/mkpop3dcert</span>
+</pre></div>
+</div>
+<p>ausführen.</p>
+</div>
+<div class="section" id="apache">
+<h2><span class="section-number">1.103.10. </span>Apache<a class="headerlink" href="#apache" title="Link zu dieser Überschrift">¶</a></h2>
+<p>(Beispiel für die Einrichtung der DSPAM CGI’s und Postfixadmin mit
+VHost’s)</p>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/apache/httpd.conf</span></code> &lt;- Entsprechend bearbeiten.</p>
+<p>Suchen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span>  <span class="n">AddHandler</span> <span class="n">cgi</span><span class="o">-</span><span class="n">script</span> <span class="o">.</span><span class="n">cgi</span>
+</pre></div>
+</div>
+<p>Ersetzen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AddHandler</span> <span class="n">cgi</span><span class="o">-</span><span class="n">script</span> <span class="o">.</span><span class="n">cgi</span>
+</pre></div>
+</div>
+<p>Anhängen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NameVirtualHost</span> <span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="p">:</span><span class="mi">80</span>
+
+<span class="o">&lt;</span><span class="n">VirtualHost</span> <span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="p">:</span><span class="mi">80</span><span class="o">&gt;</span>
+    <span class="n">DocumentRoot</span> <span class="s2">&quot;/usr/local/www/data/org/example/dspam/html&quot;</span>
+    <span class="n">ServerName</span> <span class="n">dspam</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span>
+    <span class="n">ServerAdmin</span> <span class="n">webmaster</span><span class="nd">@example</span><span class="o">.</span><span class="n">org</span>
+    <span class="n">ErrorLog</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">org</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">dspam</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">dspam</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span><span class="o">-</span><span class="n">error_log</span>
+    <span class="n">CustomLog</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">org</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">dspam</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">dspam</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span><span class="o">-</span><span class="n">access_log</span> <span class="n">common</span>
+
+    <span class="n">User</span> <span class="n">dspam</span>
+    <span class="n">Group</span> <span class="n">dspam</span>
+
+    <span class="o">&lt;</span><span class="n">Directory</span> <span class="s2">&quot;/usr/local/www/data/org/example/dspam/html&quot;</span><span class="o">&gt;</span>
+        <span class="n">Options</span> <span class="n">FollowSymLinks</span> <span class="n">ExecCGI</span>
+        <span class="n">AllowOverride</span> <span class="kc">None</span>
+        <span class="n">Order</span> <span class="n">deny</span><span class="p">,</span><span class="n">allow</span>
+        <span class="n">Deny</span> <span class="kn">from</span> <span class="nn">all</span>
+        <span class="n">AuthType</span> <span class="n">Basic</span>
+        <span class="n">AuthName</span> <span class="s2">&quot;DSPAM Control Center&quot;</span>
+        <span class="n">AuthUserFile</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">org</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">dspam</span><span class="o">/</span><span class="n">etc</span><span class="o">/.</span><span class="n">htpasswd</span>
+        <span class="n">Require</span> <span class="n">valid</span><span class="o">-</span><span class="n">user</span>
+        <span class="n">Satisfy</span> <span class="n">Any</span>
+    <span class="o">&lt;/</span><span class="n">Directory</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">VirtualHost</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">VirtualHost</span> <span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="p">:</span><span class="mi">80</span><span class="o">&gt;</span>
+    <span class="n">DocumentRoot</span> <span class="s2">&quot;/usr/local/www/data/org/example/postfixadmin&quot;</span>
+    <span class="n">ServerName</span> <span class="n">postfixadmin</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span>
+    <span class="n">ServerAdmin</span> <span class="n">webmaster</span><span class="nd">@example</span><span class="o">.</span><span class="n">org</span>
+    <span class="n">ErrorLog</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">org</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">postfixadmin</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">postfixadmin</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span><span class="o">-</span><span class="n">error_log</span>
+    <span class="n">CustomLog</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">org</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">postfixadmin</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">postfixadmin</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span><span class="o">-</span><span class="n">access_log</span> <span class="n">common</span>
+
+    <span class="o">&lt;</span><span class="n">Directory</span> <span class="s2">&quot;/usr/local/www/data/org/example/postfixadmin/admin&quot;</span><span class="o">&gt;</span>
+        <span class="n">Options</span> <span class="n">FollowSymLinks</span>
+        <span class="n">AllowOverride</span> <span class="kc">None</span>
+        <span class="n">Order</span> <span class="n">deny</span><span class="p">,</span><span class="n">allow</span>
+        <span class="n">Deny</span> <span class="kn">from</span> <span class="nn">all</span>
+        <span class="n">AuthType</span> <span class="n">Basic</span>
+        <span class="n">AuthName</span> <span class="s2">&quot;Postfixadmin&quot;</span>
+        <span class="n">AuthUserFile</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">org</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">postfixadmin</span><span class="o">/</span><span class="n">etc</span><span class="o">/.</span><span class="n">htpasswd</span>
+        <span class="n">Require</span> <span class="n">valid</span><span class="o">-</span><span class="n">user</span>
+        <span class="n">Satisfy</span> <span class="n">Any</span>
+    <span class="o">&lt;/</span><span class="n">Directory</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">VirtualHost</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Verzeichnisse für Postfixadmin und DSPAM CGI’s vorbereiten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/local/www/data</span>
+<span class="c1"># mkdir -p org/example</span>
+<span class="c1"># cd org/example</span>
+<span class="c1"># cp -R ../../../vhosts/dspam .</span>
+<span class="c1"># mkdir dspam/html</span>
+<span class="c1"># mv dspam/* dspam/html/</span>
+<span class="c1"># mkdir dspam/etc</span>
+<span class="c1"># mkdir dspam/logs</span>
+<span class="c1"># chmod 555 dspam</span>
+<span class="c1"># cd dspam</span>
+<span class="c1"># chmod 550 etc</span>
+<span class="c1"># chown www:dspam etc</span>
+<span class="c1"># chmod 555 html</span>
+<span class="c1"># chown dspam:dspam html</span>
+<span class="c1"># cd html</span>
+<span class="c1"># chown -R dspam:dspam *</span>
+<span class="c1"># chmod 444 *.*</span>
+<span class="c1"># chmod 554 *.cgi</span>
+<span class="c1"># chmod 555 templates</span>
+<span class="c1"># chmod 444 templates/*</span>
+<span class="c1"># cp admins.sample admins</span>
+<span class="c1"># cp configure.pl.sample configure.pl</span>
+<span class="c1"># cp default.prefs.sample default.prefs</span>
+<span class="c1"># ln -s /usr/local/www/data/org/example/dspam/html/default.prefs /var/db/dspam/default.prefs</span>
+</pre></div>
+</div>
+<p>Bei MySQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/local/www/data/org/example/</span>
+<span class="c1"># cp -R ../../../postfixadmin .</span>
+<span class="c1"># mkdir postfixadmin/etc</span>
+<span class="c1"># mkdir postfixadmin/logs</span>
+<span class="c1"># chown -R root:www postfixadmin</span>
+<span class="c1"># rm postfixadmin/admin/.htaccess</span>
+</pre></div>
+</div>
+<p>Bei PostgreSQL:</p>
+<p>Die aktuelle Version von Postfixadmin 2.10 funktioniert nicht
+einwandfrei mit PostgreSQL, eine gepatchte Version gibt es hier:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd ~</span>
+<span class="c1"># fetch ftp://ftp.logos-bg.net/pub/Nikola/Postfixadmin/postfixadmin-2.1.0.tar.gz</span>
+<span class="c1"># tar xvfz postfixadmin-2.1.0.tar.gz</span>
+<span class="c1"># cd /usr/local/www/data</span>
+<span class="c1"># mkdir -p org/example</span>
+<span class="c1"># cd org/example</span>
+<span class="c1"># cp -R ~/postfixadmin-2.1.0 postfixadmin</span>
+<span class="c1"># mkdir postfixadmin/etc</span>
+<span class="c1"># mkdir postfixadmin/logs</span>
+<span class="c1"># chown -R root:www postfixadmin</span>
+<span class="c1"># rm postfixadmin/admin/.htaccess</span>
+</pre></div>
+</div>
+<p>.htpasswd’s erstellen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">htpasswd</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">org</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">postfixadmin</span><span class="o">/</span><span class="n">etc</span><span class="o">/.</span><span class="n">htpasswd</span> <span class="n">postfixadmin</span>
+<span class="n">htpasswd</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">org</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">dspam</span><span class="o">/</span><span class="n">etc</span><span class="o">/.</span><span class="n">htpasswd</span> <span class="n">root</span>
+<span class="n">htpasswd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">org</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">dspam</span><span class="o">/</span><span class="n">etc</span><span class="o">/.</span><span class="n">htpasswd</span> <span class="k">global</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dspam">
+<h2><span class="section-number">1.103.11. </span>DSPAM<a class="headerlink" href="#dspam" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Datenbank erstellen:</p>
+<p>Bei MySQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mysql -u root -p</span>
+<span class="c1"># mysql&gt; create database dspam;</span>
+<span class="c1"># mysql&gt; grant all on dspam.* to dspam@127.0.0.2 identified by &#39;DSPAMSQLPW&#39;;</span>
+<span class="c1"># mysql&gt; quit;</span>
+<span class="c1"># cd /usr/local/share/examples/dspam/mysql/</span>
+<span class="c1"># mysql dspam -u dspam -p &lt; mysql_objects-4.1.sql</span>
+<span class="c1"># mysql dspam -u dspam -p &lt; virtual_users.sql</span>
+</pre></div>
+</div>
+<p>Bei PostgreSQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># su - pgsql</span>
+<span class="c1"># createuser -P dspam</span>
+<span class="c1"># createdb dspam</span>
+<span class="c1"># psql dspam</span>
+<span class="n">dspam</span><span class="o">=</span><span class="c1"># \i /usr/local/share/examples/dspam/pgsql/pgsql_objects.sql</span>
+<span class="n">dspam</span><span class="o">=</span><span class="c1"># \i /usr/local/share/examples/dspam/pgsql/virtual_users.sql</span>
+<span class="n">dspam</span><span class="o">=</span><span class="c1"># GRANT ALL ON # dspam_neural_data,dspam_neural_decisions,dspam_preferences,dspam_signature_data,dspam_stats,dspam_token_data,dspam_virtual_uids,dspam_virtual_uids_seq TO dspam;</span>
+<span class="n">dspam</span><span class="o">=</span><span class="c1"># alter table &quot;dspam_token_data&quot; alter &quot;token&quot; set statistics 200; analyze;</span>
+<span class="n">dspam</span><span class="o">=</span><span class="c1"># alter table &quot;dspam_signature_data&quot; alter &quot;signature&quot; set statistics 200; analyze;</span>
+<span class="n">dspam</span><span class="o">=</span><span class="c1"># alter table &quot;dspam_neural_data&quot; alter &quot;node&quot; set statistics 200; analyze;</span>
+<span class="n">dspam</span><span class="o">=</span><span class="c1"># alter table &quot;dspam_neural_decisions&quot; alter &quot;signature&quot; set statistics 200; analyze;</span>
+<span class="n">dspam</span><span class="o">=</span><span class="c1"># alter table &quot;dspam_token_data&quot; alter &quot;innocent_hits&quot; set statistics 200; analyze;</span>
+<span class="n">dspam</span><span class="o">=</span><span class="c1"># alter table &quot;dspam_token_data&quot; alter &quot;spam_hits&quot; set statistics 200; analyze;</span>
+<span class="n">dspam</span><span class="o">=</span><span class="c1"># \q</span>
+</pre></div>
+</div>
+<p>Datei kopieren:</p>
+<p>Bei MySQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cp purge-4.1.sql /var/db/dspam/</span>
+</pre></div>
+</div>
+<p>Bei PostgreSQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cp purge.sql /var/db/dspam/</span>
+</pre></div>
+</div>
+<p>CRON-Jobs erstellen:</p>
+<p>Bei MySQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0       0       *       *       *       dspam   /usr/local/bin/dspam_logrotate -a 30 /var/db/dspam/system.log `find /var/db/dspam/data -name &quot;*.log&quot;`
+0       0       *       *       *       dspam   /usr/local/bin/mysql -u dspam -p&#39;DSPAMMYSQLPW&#39; dspam &lt; /var/db/dspam/purge-4.1.sql
+</pre></div>
+</div>
+<p>Bei PostgreSQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0       0       *       *       *       dspam   /usr/local/bin/dspam_logrotate -a 30 /var/db/dspam/system.log `find /var/db/dspam/data -name &quot;*.log&quot;`
+</pre></div>
+</div>
+<p>CRON rehashen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># kill -HUP `cat /var/run/cron.pid`</span>
+</pre></div>
+</div>
+<p>Dateien bearbeiten / erstellen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cp /usr/local/etc/dspam.conf-sample /usr/local/etc/dspam.conf</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/etc/dspam.conf</span></code></p>
+<p>Bei MySQL folgendes verändern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MySQLServer</span>     <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">sock</span>
+<span class="n">MySQLPort</span>
+<span class="n">MySQLUser</span>       <span class="n">dspam</span>
+<span class="n">MySQLPass</span>       <span class="n">DSPAMSQLPW</span>
+<span class="n">MySQLDb</span>         <span class="n">dspam</span>
+<span class="n">MySQLCompress</span>   <span class="n">true</span>
+</pre></div>
+</div>
+<p>Bei PostgreSQL folgendes verändern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PgSQLServer</span>     <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span>
+<span class="n">PgSQLPort</span>       <span class="mi">5432</span>
+<span class="n">PgSQLUser</span>       <span class="n">dspam</span>
+<span class="n">PgSQLPass</span>       <span class="n">DSPAMSQLPW</span>
+<span class="n">PgSQLDb</span>         <span class="n">dspam</span>
+</pre></div>
+</div>
+<p>Berechtigungen setzen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># chown -R dspam:dspam /var/db/dspam</span>
+<span class="c1"># chown dspam:dspam /usr/local/etc/dspam.conf</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/www/data/org/example/dspam/html/configure.pl</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  - !/usr/local/bin/perl
+
+  -  Default DSPAM enviroment
+$CONFIG{&#39;DSPAM_HOME&#39;}   = &quot;/var/db/dspam&quot;;
+$CONFIG{&#39;DSPAM_BIN&#39;}    = &quot;/usr/local/bin&quot;;
+$CONFIG{&#39;DSPAM&#39;}        = $CONFIG{&#39;DSPAM_BIN&#39;} . &quot;/dspam&quot;;
+$CONFIG{&#39;DSPAM_STATS&#39;}  = $CONFIG{&#39;DSPAM_BIN&#39;} . &quot;/dspam_stats&quot;;
+$CONFIG{&#39;DSPAM_ARGS&#39;}   = &quot;--deliver=innocent --class=innocent &quot; .
+                          &quot;--source=error --user %CURRENT_USER% -d %u&quot;;
+$CONFIG{&#39;TEMPLATES&#39;}    = &quot;./templates&quot;;        # Location of HTML templates
+$CONFIG{&#39;ALL_PROCS&#39;}    = &quot;ps auxw&quot;;            # use ps -deaf for Solaris
+$CONFIG{&#39;MAIL_QUEUE&#39;}   = &quot;mailq | grep &#39;^[[0-9,A-F]]&#39; | wc -l&quot;;
+
+  -  Default DSPAM display
+$CONFIG{&#39;HISTORY_SIZE&#39;} = 200;          # Number of items in history
+$CONFIG{&#39;MAX_COL_LEN&#39;}  = 50;           # Max chars in list columns
+$CONFIG{&#39;SORT_DEFAULT&#39;} = &quot;Date&quot;;       # Show quarantine by &quot;Date&quot; or &quot;Rating&quot;
+$CONFIG{&#39;3D_GRAPHS&#39;}    = 1;
+$CONFIG{&#39;LOCAL_DOMAIN&#39;} = &quot;HOSTNAME&quot;;
+
+  -  Add customized settings below
+$CONFIG{&#39;LOCAL_DOMAIN&#39;} = &quot;example.org&quot;;
+
+$ENV{&#39;PATH&#39;} = &quot;$ENV{&#39;PATH&#39;}:$CONFIG{&#39;DSPAM_BIN&#39;}&quot;;
+
+  -  Autodetect filesystem layout and preference options
+  - $CONFIG{&#39;AUTODETECT&#39;} = 1;
+
+  -  Or, if you&#39;re running dspam.cgi as untrusted, it won&#39;t be able to auto-detect
+  -  so you will need to specify some features manually:
+$CONFIG{&#39;AUTODETECT&#39;} = 0;
+$CONFIG{&#39;LARGE_SCALE&#39;} = 1;
+$CONFIG{&#39;DOMAIN_SCALE&#39;} = 0;
+$CONFIG{&#39;PREFERENCES_EXTENSION&#39;} = 1;
+
+$CONFIG{&#39;DSPAM_CGI&#39;} = &quot;dspam.cgi&quot;;
+
+  -  Configuration was successful
+1;
+</pre></div>
+</div>
+<p>Trainingscorpus downloaden, entpacken und DSPAM trainieren:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /root/</span>
+<span class="c1"># fetch http://wiki.bsdforen.de/files/dspam_sa_trainer-bsdforen.tar.gz</span>
+<span class="c1"># tar xvfz dspam_sa_trainer-bsdforen.tar.gz</span>
+<span class="c1"># cd dspam_sa_trainer</span>
+<span class="c1"># ./publiccorpus.pl global</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="postfixadmin">
+<h2><span class="section-number">1.103.12. </span>Postfixadmin<a class="headerlink" href="#postfixadmin" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Bei MySQL:</p>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/www/data/org/example/postfixadmin/DATABASE_MYSQL.TXT</span></code> &lt;-
+Entsprechend bearbeiten.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">user</span> <span class="p">(</span><span class="n">Host</span><span class="p">,</span> <span class="n">User</span><span class="p">,</span> <span class="n">Password</span><span class="p">)</span> <span class="n">VALUES</span> <span class="p">(</span><span class="s1">&#39;127.0.0.2&#39;</span><span class="p">,</span><span class="s1">&#39;postfix&#39;</span><span class="p">,</span><span class="n">password</span><span class="p">(</span><span class="s1">&#39;POSTFIXSQLPW&#39;</span><span class="p">));</span>
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">db</span> <span class="p">(</span><span class="n">Host</span><span class="p">,</span> <span class="n">Db</span><span class="p">,</span> <span class="n">User</span><span class="p">,</span> <span class="n">Select_priv</span><span class="p">)</span> <span class="n">VALUES</span> <span class="p">(</span><span class="s1">&#39;127.0.0.2&#39;</span><span class="p">,</span><span class="s1">&#39;postfix&#39;</span><span class="p">,</span><span class="s1">&#39;postfix&#39;</span><span class="p">,</span><span class="s1">&#39;Y&#39;</span><span class="p">);</span>
+  <span class="o">-</span>  <span class="n">Postfix</span> <span class="n">Admin</span> <span class="n">user</span> <span class="o">&amp;</span> <span class="n">password</span>
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">user</span> <span class="p">(</span><span class="n">Host</span><span class="p">,</span> <span class="n">User</span><span class="p">,</span> <span class="n">Password</span><span class="p">)</span> <span class="n">VALUES</span> <span class="p">(</span><span class="s1">&#39;127.0.0.2&#39;</span><span class="p">,</span><span class="s1">&#39;postfixadmin&#39;</span><span class="p">,</span><span class="n">password</span><span class="p">(</span><span class="s1">&#39;POSTFIXADMINSQLPW&#39;</span><span class="p">));</span>
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">db</span> <span class="p">(</span><span class="n">Host</span><span class="p">,</span> <span class="n">Db</span><span class="p">,</span> <span class="n">User</span><span class="p">,</span> <span class="n">Select_priv</span><span class="p">,</span> <span class="n">Insert_priv</span><span class="p">,</span> <span class="n">Update_priv</span><span class="p">,</span> <span class="n">Delete_priv</span><span class="p">)</span> <span class="n">VALUES</span> <span class="p">(</span><span class="s1">&#39;127.0.0.2&#39;</span><span class="p">,</span> <span class="s1">&#39;postfix&#39;</span><span class="p">,</span> <span class="s1">&#39;postfixadmin&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;</span>
+<span class="n">Y</span><span class="s1">&#39;);</span>
+<span class="n">FLUSH</span> <span class="n">PRIVILEGES</span><span class="p">;</span>
+<span class="n">GRANT</span> <span class="n">USAGE</span> <span class="n">ON</span> <span class="n">postfix</span><span class="o">.*</span> <span class="n">TO</span> <span class="n">postfix</span><span class="o">@</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span><span class="p">;</span>
+<span class="n">GRANT</span> <span class="n">SELECT</span><span class="p">,</span> <span class="n">INSERT</span><span class="p">,</span> <span class="n">DELETE</span><span class="p">,</span> <span class="n">UPDATE</span> <span class="n">ON</span> <span class="n">postfix</span><span class="o">.*</span> <span class="n">TO</span> <span class="n">postfix</span><span class="o">@</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span><span class="p">;</span>
+<span class="n">GRANT</span> <span class="n">USAGE</span> <span class="n">ON</span> <span class="n">postfix</span><span class="o">.*</span> <span class="n">TO</span> <span class="n">postfixadmin</span><span class="o">@</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span><span class="p">;</span>
+<span class="n">GRANT</span> <span class="n">SELECT</span><span class="p">,</span> <span class="n">INSERT</span><span class="p">,</span> <span class="n">DELETE</span><span class="p">,</span> <span class="n">UPDATE</span> <span class="n">ON</span> <span class="n">postfix</span><span class="o">.*</span> <span class="n">TO</span> <span class="n">postfixadmin</span><span class="o">@</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.2</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Datenbank erstellen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mysql -u root -p &lt; /usr/local/www/data/org/example/postfixadmin/DATABASE_MYSQL.TXT</span>
+<span class="c1"># rm /usr/local/www/data/org/example/postfixadmin/DATABASE_MYSQL.TXT</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/www/data/org/example/postfixadmin/config.inc.php</span></code> &lt;-
+Entsprechend bearbeiten.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$CONF[[&#39;database_type&#39;]] = &#39;mysql&#39;;
+$CONF[[&#39;database_host&#39;]] = &#39;127.0.0.2&#39;;
+$CONF[[&#39;database_user&#39;]] = &#39;postfixadmin&#39;;
+$CONF[[&#39;database_password&#39;]] = &#39;POSTFIXADMINSQLPW&#39;;
+$CONF[[&#39;database_name&#39;]] = &#39;postfix&#39;;
+$CONF[[&#39;database_prefix&#39;]] = //;
+</pre></div>
+</div>
+<p>Bei PostgreSQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># su - pgsql</span>
+<span class="c1"># createuser -P postfixadmin</span>
+<span class="c1"># createuser -P postfix</span>
+<span class="c1"># createuser -P vacation</span>
+<span class="c1"># createdb postfix</span>
+<span class="c1"># psql postfix</span>
+<span class="n">postfix</span><span class="o">=</span><span class="c1"># \i /root/postfixadmin-2.1.0/DATABASE_PGSQL.TXT</span>
+<span class="n">postfix</span><span class="o">=</span><span class="c1"># GRANT ALL ON admin,alias,domain,domain_admins,log,mailbox,vacation,vacation_notification TO postfixadmin;</span>
+<span class="n">postfix</span><span class="o">=</span><span class="c1"># GRANT SELECT ON alias,domain,mailbox TO postfix;</span>
+<span class="n">postfix</span><span class="o">=</span><span class="c1"># \q</span>
+<span class="n">logout</span>
+</pre></div>
+</div>
+<p>Verändert diese Werte:</p>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/www/data/org/example/postfixadmin/config.inc.php</span></code> &lt;-
+Entsprechend bearbeiten.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$CONF[[&#39;database_type&#39;]] = &#39;pgsql&#39;;
+$CONF[[&#39;database_host&#39;]] = &#39;127.0.0.2&#39;;
+$CONF[[&#39;database_user&#39;]] = &#39;postfixadmin&#39;;
+$CONF[[&#39;database_password&#39;]] = &#39;POSTFIXADMINSQLPW&#39;;
+$CONF[[&#39;database_name&#39;]] = &#39;postfix&#39;;
+$CONF[[&#39;database_prefix&#39;]] = //;
+</pre></div>
+</div>
+</div>
+<div class="section" id="rest">
+<h2><span class="section-number">1.103.13. </span>REST<a class="headerlink" href="#rest" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die <code class="docutils literal notranslate"><span class="pre">/etc/rc.conf</span></code> um folgende Werte erweitern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clamav_clamd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">amavisd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">sendmail_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">sendmail_flags</span><span class="o">=</span><span class="s2">&quot;-bd&quot;</span>
+<span class="n">sendmail_pidfile</span><span class="o">=</span><span class="s2">&quot;/var/spool/postfix/pid/master.pid&quot;</span>
+<span class="n">sendmail_outbound_enable</span><span class="o">=</span><span class="s2">&quot;NO&quot;</span>
+<span class="n">sendmail_submit_enable</span><span class="o">=</span><span class="s2">&quot;NO&quot;</span>
+<span class="n">sendmail_msp_queue_enable</span><span class="o">=</span><span class="s2">&quot;NO&quot;</span>
+<span class="n">apache_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">courier_authdaemond_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">courier_imap_pop3d_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">courier_imap_imapd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">courier_imap_imapd_ssl_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span> <span class="c1"># Nur wenn SSL benutzt werden soll</span>
+<span class="n">courier_imap_pop3d_ssl_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span> <span class="c1"># Nur wenn SSL benutzt werden soll</span>
+<span class="n">postgrey_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+</pre></div>
+</div>
+<p>Jetzt die Dämonen starten und GO! :-)</p>
+</div>
+<div class="section" id="fehler">
+<h2><span class="section-number">1.103.14. </span>Fehler<a class="headerlink" href="#fehler" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Hier wurde ein komplexes Mailsystem eingerichtet. Spätere Veränderungen
+können auch Fehler enthalten!</p>
+<p>Wir wollen dieses How-To stets erweitern und funktionsfähig halten,
+postet eure Bugs bitte im Forum oder sucht in
+<code class="docutils literal notranslate"><span class="pre">irc.freenode.net</span> <span class="pre">/</span> <span class="pre">#bsdforen.de</span></code> erfahrene Hilfe.</p>
+<p>Hinweis des Bären: in der /etc/login.conf hinzufügen / ändern:
+:maxproc=500: (gegen Fork Bomben) wäre noch sinnvoll. (danach cap_mkdb
+/etc/login.conf nicht vergessen)</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="postgresql_update.txt.html" class="btn btn-neutral float-right" title="1.104. PostgreSQL Update auf einen neueren Zweig" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="postfix_courier_openldap.txt.html" class="btn btn-neutral float-left" title="1.102. Postfix Courier OpenLDAP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

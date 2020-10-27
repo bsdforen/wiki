@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.42. DVDs brennen &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox" href="ed2k-protokoll.txt.html" />
+    <link rel="prev" title="1.41. DVD-Rip mit mencoder" href="dvd-rip_mit_mencoder.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.42. DVDs brennen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#erklarungen-zu-dvd-standards">1.42.1. Erklärungen zu DVD-Standards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#erklarung-der-medien">1.42.1.1. Erklärung der Medien</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#erklarung-der-wesentlichen-unterschiede-zwischen-dvd-und-dvd">1.42.1.2. Erklärung der Wesentlichen Unterschiede zwischen DVD+ und DVD-</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fazit">1.42.1.3. Fazit:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dvds-brennen-unter-freebsd">1.42.2. DVDs-Brennen unter FreeBSD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hardware">1.42.2.1. Hardware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multimedia-software-unter-unix-rippen-decoden-brennen">1.42.2.2. Multimedia-Software unter Unix (rippen, decoden, brennen)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rippen-encoden">1.42.2.3. Rippen, Encoden:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#authoring">1.42.2.4. Authoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#daten-brennen">1.42.2.5. Daten brennen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#anmerkung-zum-dma-modus">1.42.2.6. Anmerkung zum DMA-Modus</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#daten-loschen">1.42.3. Daten löschen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quellen">1.42.4. Quellen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verweise">1.42.5. Verweise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.42. </span>DVDs brennen</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/dvds_brennen.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="ed2k-protokoll.txt.html" class="btn btn-neutral float-right" title="1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dvd-rip_mit_mencoder.txt.html" class="btn btn-neutral float-left" title="1.41. DVD-Rip mit mencoder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dvds-brennen">
+<h1><span class="section-number">1.42. </span>DVDs brennen<a class="headerlink" href="#dvds-brennen" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+<img alt="../_images/logo-openbsd2.png" src="../_images/logo-openbsd2.png" />
+<img alt="../_images/logo-netbsd2.png" src="../_images/logo-netbsd2.png" />
+<img alt="../_images/logo-dragonflybsd3.png" src="../_images/logo-dragonflybsd3.png" />
+</div>
+<p>Dieser Artikel über das Brennen von DVDs gibt nicht nur praktische
+Beispiele, sondern beleuchtet auch Hintergründe über die verschiedenen
+Formate.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Dieser Artikel stammt von <strong>[moR-pH-euS]</strong> und wurde zuerst <a class="reference external" href="http://www.bsdforen.de/showthread.php?t=1894">im Forum</a> veröffentlicht.</p>
+</div>
+<div class="section" id="erklarungen-zu-dvd-standards">
+<h2><span class="section-number">1.42.1. </span>Erklärungen zu DVD-Standards<a class="headerlink" href="#erklarungen-zu-dvd-standards" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die meisten werden wahrscheinlich wissen, dass es zwei verschiedene
+Standards beim DVD-Brennen gibt: DVD+ und DVD-. Um etwas Klarheit in
+diesen Dschungel von verschieden Formaten zu bringen, versuche ich in
+den beiden folgenden Abschnitten einmal die Medien und die wesentlichen
+Unterschiede zwischen diesen beiden „Standards“ zu erklären, da man
+schon wissen sollte wofür die einzelnen Begriffe eigentlich stehen, wenn
+man sich schon damit beschäftigt.</p>
+<div class="section" id="erklarung-der-medien">
+<h3><span class="section-number">1.42.1.1. </span>Erklärung der Medien<a class="headerlink" href="#erklarung-der-medien" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Man muss zu allererst die 5 verschiedenen Standards der beschreibbaren
+DVD-Medien unterscheiden:</p>
+<div class="section" id="dvd-r">
+<h4><span class="section-number">1.42.1.1.1. </span>DVD-R<a class="headerlink" href="#dvd-r" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Der Urahn der beschreibbaren DVD. Das DVD-Forum, das die ursprünglichen
+Standards für die DVDs erarbeitet hat (die sind z.B. auch fuer die
+Region Codes und CSS verantwortlich), steht auf dieser Seite und hat
+diesen Standard auch offiziell anerkannt. Die DVD-R ist stark an der
+DVD-ROM angelehnt und wird deswegen auch von den meisten DVD-Playern
+abgespielt - von ca. 90% (sie hat eine ähnliche Datenstruktur und
+Reflexionseigenschaft wie die DVD-ROM)</p>
+</div>
+<div class="section" id="dvd-rw">
+<h4><span class="section-number">1.42.1.1.2. </span>DVD-RW<a class="headerlink" href="#dvd-rw" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Die DVD-RW ähnelt eigentlich auch der DVD-ROM in der Datenstruktur, kann
+aber zu Problemen mit DVD-Playern und Laufwerken führen, da die
+Reflexionseigenschaften der einer DVD-9 ähneln (also einer DVD-ROM mit
+9GB) und der Laser anhand der Reflexion das Medium erkennt, er dann
+leicht „durcheinander“ kommt und nach falschen Layern sucht (er sucht
+dann z.B. nach der halbtransparenten schicht der DVD-9 anstatt der
+vorhandenen RW-Schicht) - wird auf ungefähr 75% aller DVD-Player
+abgespielt (dieselbe Zahl gilt auch fuer DVD+RW). Die DVD-RW kann bis zu
+1000 x beschrieben werden.</p>
+</div>
+<div class="section" id="id1">
+<h4><span class="section-number">1.42.1.1.3. </span>DVD+R<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Einige Mitglieder des DVD-Forums, haben den DVD+ Standard geschaffen und
+sich zur DVD+RW Alliance zusammengeschlossen. Dieser Standard weicht
+etwas von der Norm ab. Dieses Format wurde allerdings vom Konsortium
+nicht abgesegnet, da einer der Hauptgruende fuer dieses neue Format
+darin besteht keine Lizenzkosten an das DVD-Forum zu zahlen. DVD+R wird
+auf ca. 85% aller DVD-Player abgespielt.</p>
+</div>
+<div class="section" id="id2">
+<h4><span class="section-number">1.42.1.1.4. </span>DVD+RW<a class="headerlink" href="#id2" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Der wesentliche Unterschied zu DVD-RW liegt darin, dass +RW aufgrund
+einer anderen Struktur des Spurrandes beim Brennen Sektoren genauer
+adressieren kann. Dank des hochfrequenten Wobble können Brenner ohne den
+Umweg von Land Pre-Pits? und Linking Sectors direkt an vorhandene
+Datenbestände anknüpfen - auch Lossless Linking genannt. Zudem können
++RW-Writer die Medien auch in Teilen neu beschreiben - interessant für
+standalone Recorder. Für PC-Laufwerke ist diese Fähigkeit dagegen
+weniger relevant. Da die DVD+RW gleiche Reflexionseigenschaften wie die
+DVD-RW hat, kann es zu oben genannten Problemen führen.</p>
+</div>
+<div class="section" id="dvd-ram">
+<h4><span class="section-number">1.42.1.1.5. </span>DVD-RAM<a class="headerlink" href="#dvd-ram" title="Link zu dieser Überschrift">¶</a></h4>
+<p>DVD-RAM führt ein Schattendasein. Es wurde eigentlich für PCs
+entwickelt, d.h. es wurde von vorneherein als reines Datenspeichermedium
+entwickelt. Die Medien lassen sich bis zu 100.000 x beschreiben. Durch
+die besonderen Reflexionseigenschaften der Medien können nur wenige
+DVD-ROM-Laufwerke RAM-Medien lesen, das gilt auch fuer DVD Player. Die
+Medien sind dabei in Caddys, ausser DVD-RAM-Medien vom Typ2 die sich aus
+dem Caddy herausnehmen lassen. Das DVD-RAM Format hat sich bis jetzt nur
+in Japan durchgesetzt, dabei wird es wohl auch bleiben, auch wenn es
+noch DVD-Brenner gibt die auch RAM beherrschen. Hier steht auch das
+DVD-Forum dahinter, die diesen Standard unterstützen.</p>
+</div>
+</div>
+<div class="section" id="erklarung-der-wesentlichen-unterschiede-zwischen-dvd-und-dvd">
+<h3><span class="section-number">1.42.1.2. </span>Erklärung der Wesentlichen Unterschiede zwischen DVD+ und DVD-<a class="headerlink" href="#erklarung-der-wesentlichen-unterschiede-zwischen-dvd-und-dvd" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="dvd">
+<h4><span class="section-number">1.42.1.2.1. </span>DVD-<a class="headerlink" href="#dvd" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Firmen die dahinter stehen bzw. das Konsortium für diesen Standard
+bilden: z.B. Pioneer, Apple, Hitachi, NEC, Samsung, Sharp, Sony</p>
+<p>Kopierschutz:</p>
+<p>Auf den Medien sind die ersten Sektoren durch die Produktion bereits
+vollgeschrieben, damit die Keys zum entschluesseln von DVDs (CSS) nicht
+1:1 kopiert werden können.</p>
+</div>
+<div class="section" id="id3">
+<h4><span class="section-number">1.42.1.2.2. </span>DVD+<a class="headerlink" href="#id3" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Firmen die dahinter stehen bzw. das Konsortium für diesen Standard
+bilden: z.B. Phillips, HP, Sony, Verbatim, Ricoh, Yamaha, Thomson, Dell</p>
+<p>Kopierschutz:</p>
+<p>Der CSS-Bereich ist bei dieser Art Medien nicht vollgeschrieben, da der
+Brenner mit der Firmware, also hardwareseitig, den Kopierschutz
+darstellt.</p>
+<p>DVD+ ist multisessionfähig</p>
+</div>
+</div>
+<div class="section" id="fazit">
+<h3><span class="section-number">1.42.1.3. </span>Fazit:<a class="headerlink" href="#fazit" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Meine Empfehlung wäre es sich einen Multi-DVD-Brenner zu holen, der alle
+oben aufgeführten Standards brennen und verstehen kann (DVD+, DVD- und
+DVD-RAM, das habe ich zumindest gemacht mit dem lg-4040b). Da sich bis
+heute noch nicht abgezeichnet hat, welcher standard sich durchsetzen
+wird, ist das die zur Zeit beste Lösung.</p>
+</div>
+</div>
+<div class="section" id="dvds-brennen-unter-freebsd">
+<h2><span class="section-number">1.42.2. </span>DVDs-Brennen unter FreeBSD<a class="headerlink" href="#dvds-brennen-unter-freebsd" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="hardware">
+<h3><span class="section-number">1.42.2.1. </span>Hardware<a class="headerlink" href="#hardware" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Zuerst solltet ihr einmal mit „dmesg“ sehen, ob euer Brenner überhaupt
+richtig erkannt wird. Bei mir sieht die Ausgabe so aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dmesg</span>
+<span class="n">acd0</span><span class="p">:</span> <span class="n">DVD</span><span class="o">-</span><span class="n">R</span> <span class="o">&lt;</span><span class="n">HL</span><span class="o">-</span><span class="n">DT</span><span class="o">-</span><span class="n">ST</span> <span class="n">DVDRAM</span> <span class="n">GSA</span><span class="o">-</span><span class="mi">4040</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">at</span> <span class="n">ata1</span><span class="o">-</span><span class="n">slave</span> <span class="n">PIO4</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multimedia-software-unter-unix-rippen-decoden-brennen">
+<h3><span class="section-number">1.42.2.2. </span>Multimedia-Software unter Unix (rippen, decoden, brennen)<a class="headerlink" href="#multimedia-software-unter-unix-rippen-decoden-brennen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das hier ist mal eine Liste mit Tools die ich kenne/gefunden habe, ist
+sicherlich eine unvollständige Liste, deswegen ergänzt bitte als
+Anschluss am Thread eure Erfahrungen mit den Tools bzw. postet die Tools
+die ich vergessen habe, damit ich sie später hier noch einbauen kann.
+Danke!</p>
+</div>
+<div class="section" id="rippen-encoden">
+<h3><span class="section-number">1.42.2.3. </span>Rippen, Encoden:<a class="headerlink" href="#rippen-encoden" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="transcode">
+<h4><span class="section-number">1.42.2.3.1. </span>transcode<a class="headerlink" href="#transcode" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Ein sehr mächtiges Tool um Filme zu rippen, encoden, transcoden,
+multiplexen usw.</p>
+<p><a class="reference external" href="http://www.transcoding.org/cgi-bin/transcode">http://www.transcoding.org/cgi-bin/transcode</a> bzw.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">multimedia</span><span class="o">/</span><span class="n">transcode</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dvd-rip">
+<h4><span class="section-number">1.42.2.3.2. </span>dvd::rip<a class="headerlink" href="#dvd-rip" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Wie der Name schon vermuten lässt, ist es ein Perl-Programm um DVDs auf
+die Platte zu rippen (ist ein Frontend für transcode)
+<a class="reference external" href="http://www.exit1.org/dvdrip/">http://www.exit1.org/dvdrip/</a> bzw.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">multimedia</span><span class="o">/</span><span class="n">dvdrip</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mencoder">
+<h4><span class="section-number">1.42.2.3.3. </span>mencoder<a class="headerlink" href="#mencoder" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Mit <a class="reference external" href="/anwendungen/mplayer">mencoder</a> kann man ebenfalls DVDs in einem
+Rutsch rippen und konvertieren. Dazu gibt es auch <a class="reference external" href="DVD-Ripmitmencoder">ein HowTo mit Wrapper
+Skript</a>.</p>
+</div>
+<div class="section" id="cp">
+<h4><span class="section-number">1.42.2.3.4. </span>cp<a class="headerlink" href="#cp" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Wer einfach nur ein <a class="reference external" href="ISOImagesvonoptischenMedienerzeugen">Image</a>
+für eine spätere identische Kopie haben will. Kann einfach mit dem
+Kommando</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cp /dev/acd0 image.iso</span>
+</pre></div>
+</div>
+<p>eine ISO image anlegen. Von einem solchen Image kann auch ein <a class="reference external" href="ISOImagesmounten">Device
+erzeugt werden</a> um es zu mounten oder mit einer
+DVD Software abzuspielen.</p>
+</div>
+<div class="section" id="ldvd9to5">
+<h4><span class="section-number">1.42.2.3.5. </span>LDVD9to5<a class="headerlink" href="#ldvd9to5" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Mit diesem Tool soll man eine DVD-9 auf ein DVD-5 format bekommen, d.h.
+das die 9gb-DVD auf einen normalen DVD-Rohling komprimiert wird, habe
+ich allerdings noch nicht getestet <a class="reference external" href="http://ldvd9to5.gff-clan.net/">http://ldvd9to5.gff-clan.net/</a> bzw.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">multimedia</span><span class="o">/</span><span class="n">ldvd9to5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="klvemkdvd">
+<h4><span class="section-number">1.42.2.3.6. </span>KLVEMKDVD<a class="headerlink" href="#klvemkdvd" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Das ist ein Tool für KDE, dass auch auf die Bibliotheken von KDE und QT
+aufbaut, ist allerdings noch ein Preview-Release;
+<a class="reference external" href="http://lvempeg.sourceforge.net/klvemkdvd.html">http://lvempeg.sourceforge.net/klvemkdvd.html</a></p>
+</div>
+<div class="section" id="dvdbackup">
+<h4><span class="section-number">1.42.2.3.7. </span>dvdbackup<a class="headerlink" href="#dvdbackup" title="Link zu dieser Überschrift">¶</a></h4>
+<p>dvdbackup ist ein Kommandozeilen-Tool um Video-DVDs auf Festplatte zu
+sichern (inklusive Menu, Kapitel, …).
+<a class="reference external" href="http://dvd-create.sourceforge.net/index.shtml">http://dvd-create.sourceforge.net/index.shtml</a> bzw.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">sysutils</span><span class="o">/</span><span class="n">dvdbackup</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="authoring">
+<h3><span class="section-number">1.42.2.4. </span>Authoring<a class="headerlink" href="#authoring" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Tools zum erstellen einer DVD <a class="reference external" href="http://dvdauthor.sourceforge.net/">http://dvdauthor.sourceforge.net/</a> bzw.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">multimedia</span><span class="o">/</span><span class="n">dvdauthor</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="daten-brennen">
+<h3><span class="section-number">1.42.2.5. </span>Daten brennen<a class="headerlink" href="#daten-brennen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wir brauchen jetzt noch Software, um mit dem Brenner auch mal zu
+brennen… Ich benutze hier nur die dvd+rw-tools und growisofs; In den
+Ports findet sich unter</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">sysutils</span><span class="o">/</span><span class="n">dvd</span><span class="o">+</span><span class="n">rw</span><span class="o">-</span><span class="n">tools</span>
+</pre></div>
+</div>
+<p>mit diesem Port kann man DVD-R, DVD-RW, DVD+R und DVD+RW brennen; also:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/sysutils/dvd+rw-tools</span>
+<span class="c1"># make install clean</span>
+</pre></div>
+</div>
+<p>Es gibt auch noch die GNU dvdrecord Tools, die ein verändertes cdrecord
+für DVD-Brenner darstellen, darauf gehe ich aber nicht ein. Wir
+installieren uns zusätzlich noch cdrecord bzw. die cdrtools, da diese
+auch mkisofs enthalten; also:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/sysutils/cdrtools</span>
+<span class="c1"># make install clean</span>
+</pre></div>
+</div>
+<p>Zuerst backen wir uns einen neuen Kernel mit den folgenden Optionen
+(ohne diese Optionen funktioniert es nicht, es solllten eigentlich alle
+Optionen bereits im Kernel enthalten sein, ausser atapicam)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">device</span> <span class="n">ata</span>
+<span class="n">device</span> <span class="n">atapicd</span>
+<span class="n">device</span> <span class="n">atapicam</span>
+<span class="n">device</span> <span class="n">scbus</span>
+<span class="n">device</span> <span class="n">cd</span>
+<span class="n">device</span> <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Das gilt für FreeBSD 4.x und auch FreeBSD 5.x… Diese Optionen sind
+wichtig, da ansonsten der Brenner nicht über die IDE-SCSI-Emulation
+angesprochen werden kann und genau über diesen Weg funktionieren die
+Brennprogramme. Wie man einen Kernel kompiliert, könnt ihr im
+<a class="reference external" href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/kernelconfig.html">FreeBSD-Handbuch</a>
+nachlesen.</p>
+<p>Alternativ kann ab FreeBSD 6 atapicam auch als Modul geladen werden. Die
+restlichen Devices sind teil des Standardkernels (so kann auch auf den
+Neustart verzichtet werden).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># kldload atapicam</span>
+</pre></div>
+</div>
+<p>Nach einem Neustart (hoffe mal das eure Kiste auch mit dem neuen Kernel
+hochfährt ;-) schauen wir mal, ob die Laufwerke jetzt auch ueber
+IDE-SCSI-Emulation noch gefunden werden; Das machen wir am besten mit
+camcontrol bzw. cdrecord und die Ausgabe sieht bei mir so aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@freebsd</span><span class="o">-</span><span class="n">wk</span><span class="o">.</span><span class="n">home</span><span class="c1"># camcontrol devlist</span>
+<span class="o">&lt;</span><span class="n">HL</span><span class="o">-</span><span class="n">DT</span><span class="o">-</span><span class="n">ST</span> <span class="n">DVDRAM</span> <span class="n">GSA</span><span class="o">-</span><span class="mi">4040</span><span class="n">B</span> <span class="n">A300</span><span class="o">&gt;</span> <span class="n">at</span> <span class="n">scbus1</span> <span class="n">target</span> <span class="mi">1</span> <span class="n">lun</span> <span class="mi">0</span> <span class="p">(</span><span class="n">cd0</span><span class="p">,</span><span class="n">pass0</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">PIONEER</span> <span class="n">DVD</span><span class="o">-</span><span class="n">ROM</span> <span class="n">DVD</span><span class="o">-</span><span class="mi">115</span> <span class="mf">1.08</span><span class="o">&gt;</span> <span class="n">at</span> <span class="n">scbus3</span> <span class="n">target</span> <span class="mi">0</span> <span class="n">lun</span> <span class="mi">0</span> <span class="p">(</span><span class="n">cd1</span><span class="p">,</span><span class="n">pass1</span><span class="p">)</span>
+
+<span class="n">root</span><span class="nd">@freebsd</span><span class="o">-</span><span class="n">wk</span><span class="o">.</span><span class="n">home</span><span class="c1"># cdrecord -scanbus</span>
+<span class="n">Cdrecord</span> <span class="mf">2.00</span><span class="o">.</span><span class="mi">3</span> <span class="p">(</span><span class="n">i386</span><span class="o">-</span><span class="n">unknown</span><span class="o">-</span><span class="n">freebsd5</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span> <span class="n">Copyright</span> <span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="mi">1995</span><span class="o">-</span><span class="mi">2002</span> <span class="n">J</span>\<span class="n">xf6rg</span> <span class="n">Sc</span>
+<span class="n">hilling</span>
+<span class="n">Using</span> <span class="n">libscg</span> <span class="n">version</span> <span class="s1">&#39;schily-0.7&#39;</span>
+<span class="n">scsibus1</span><span class="p">:</span>
+<span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span> <span class="mi">101</span><span class="p">)</span> <span class="s1">&#39;HL-DT-ST&#39;</span> <span class="s1">&#39;DVDRAM GSA-4040B&#39;</span> <span class="s1">&#39;A300&#39;</span> <span class="n">Removable</span> <span class="n">CD</span><span class="o">-</span><span class="n">ROM</span>
+<span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span> <span class="mi">102</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span> <span class="mi">103</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span> <span class="mi">104</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span> <span class="mi">105</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span> <span class="mi">106</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span> <span class="mi">107</span><span class="p">)</span> <span class="o">*</span>
+<span class="n">scsibus3</span><span class="p">:</span>
+<span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span> <span class="mi">300</span><span class="p">)</span> <span class="s1">&#39;PIONEER &#39;</span> <span class="s1">&#39;DVD-ROM DVD-115 &#39;</span> <span class="s1">&#39;1.08&#39;</span> <span class="n">Removable</span> <span class="n">CD</span><span class="o">-</span><span class="n">ROM</span>
+<span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span> <span class="mi">301</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span> <span class="mi">302</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span> <span class="mi">303</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span> <span class="mi">304</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span> <span class="mi">305</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span> <span class="mi">306</span><span class="p">)</span> <span class="o">*</span>
+<span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span> <span class="mi">307</span><span class="p">)</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Das funktioniert schon mal… nun haben wir durch die DVD+RW-Tools drei
+neue Kommandos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dvd+rw-booktype</span>
+
+<span class="n">Usage</span><span class="p">:</span> <span class="n">dvd</span><span class="o">+</span><span class="n">rw</span><span class="o">-</span><span class="n">booktype</span> <span class="p">[</span><span class="o">-</span><span class="n">dvd</span><span class="o">-</span><span class="n">rom</span><span class="o">-</span><span class="n">spec</span><span class="o">|-</span><span class="n">dvd</span><span class="o">+</span><span class="n">rw</span><span class="o">-</span><span class="n">spec</span><span class="o">|-</span><span class="n">dvd</span><span class="o">+</span><span class="n">r</span><span class="o">-</span><span class="n">spec</span><span class="o">|-</span><span class="n">inq</span><span class="p">]</span> \
+           <span class="p">[</span><span class="o">-</span><span class="n">media</span><span class="o">|-</span><span class="n">unit</span><span class="o">|-</span><span class="n">unit</span><span class="o">+</span><span class="n">rw</span><span class="o">|-</span><span class="n">unit</span><span class="o">+</span><span class="n">r</span><span class="p">]</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">dvd</span>
+</pre></div>
+</div>
+<p>Hiermit kann man den Booktype vor dem Brennen anscheinend ändern; mit
+dem Booktype erkennt der DVD-Player, um welchen Typ von DVD es sich
+handelt (DVD+R, DVD-ROM usw.) hier findet ihr noch ein paar
+Informationen <a class="reference external" href="http://www.dvdplusrw.org/resources/bitsettings.html">http://www.dvdplusrw.org/resources/bitsettings.html</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># dvd+rw-format
+
+* DVD±RW/-RAM format utility by &lt;appro@fy.chalmers.se&gt;, version 4.10.
+- usage: dvd+rw-format [-force[=full]] [-lead-out|-blank[=full]]
+         [-ssa[=none|default|max]] /dev/cdrom
+</pre></div>
+</div>
+<p>Mit diesem Kommando könnt ihr DVD+RW und DVD-RWs formatieren; (bei
+Intensio DVD-RWs hatte der Erstersteller des vorliegenden HOWTOs
+Probleme).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dvd+rw-mediainfo</span>
+<span class="n">usage</span><span class="p">:</span> <span class="n">dvd</span><span class="o">+</span><span class="n">rw</span><span class="o">-</span><span class="n">mediainfo</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">dvd</span>
+</pre></div>
+</div>
+<p>Wie der Kommandoname schon vermuten lässt, bekommt ihr damit
+Informationen über den eingelegten Rohling; mit growisofs könnt ihr
+Daten-DVDs brennen. Als kleines Beispiel soll folgende Befehlszeile
+dienen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># growisofs -Z /dev/cd0 -R -J *</span>
+</pre></div>
+</div>
+<p>Dieses Kommando brennt alle Dateien im aktuellen Verzeichnis auf die DVD
+(als Dateisystem ISO9660 mit Joliet und Rock-Ridge? als Erweiterung).
+Bei Dual-Layer-DVDs sollte die „-speed=N“-Option zusätzlich verwendet
+werden, da growisofs sonst mit einem I/O-Fehler den Dienst verweigert.
+Weitere Beispiele zum Brennen von Daten mit growisofs finden sich in der
+Manpage.</p>
+<p>Um die volle Geschwindigkeit ausnutzen zu können, muss DMA aktiviert
+sein. DMA ist für CD/DVD-Laufwerke bei FreeBSD bis einschließlich 5.2.1
+standardmäßig deaktiviert; bei FreeBSD 5.3 und höher sollten solche
+Laufwerke bereits im DMA-Modus laufen. Um es zu aktiveren, muss man
+folgenden Eintrag in die /boot/loader.conf einfügen und das System
+neustarten:</p>
+<p>hw.ata.atapi_dma=1</p>
+<p>Ohne DMA würde ein dmesg z.b. folgendes ausgeben:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dmesg</span>
+
+<span class="n">acd0</span><span class="p">:</span> <span class="n">CDRW</span> <span class="o">&lt;</span><span class="n">HL</span><span class="o">-</span><span class="n">DT</span><span class="o">-</span><span class="n">STCD</span><span class="o">-</span><span class="n">RW</span><span class="o">/</span><span class="n">DVD</span> <span class="n">DRIVE</span> <span class="n">GCC</span><span class="o">-</span><span class="mi">4240</span><span class="n">N</span><span class="o">&gt;</span> <span class="n">at</span> <span class="n">ata1</span><span class="o">-</span><span class="n">master</span> <span class="n">PIO4</span>
+</pre></div>
+</div>
+<p>Mit DMA:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dmesg</span>
+
+<span class="n">acd0</span><span class="p">:</span> <span class="n">CDRW</span> <span class="o">&lt;</span><span class="n">HL</span><span class="o">-</span><span class="n">DT</span><span class="o">-</span><span class="n">STCD</span><span class="o">-</span><span class="n">RW</span><span class="o">/</span><span class="n">DVD</span> <span class="n">DRIVE</span> <span class="n">GCC</span><span class="o">-</span><span class="mi">4240</span><span class="n">N</span><span class="o">&gt;</span> <span class="n">at</span> <span class="n">ata1</span><span class="o">-</span><span class="n">master</span> <span class="n">UDMA33</span>
+</pre></div>
+</div>
+<p>Weiter weist die SCSI-Emulation damit eine viel höhere
+Übertragungsgeschwindigkeit aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd0</span> <span class="n">at</span> <span class="n">ata1</span> <span class="n">bus</span> <span class="mi">0</span> <span class="n">target</span> <span class="mi">0</span> <span class="n">lun</span> <span class="mi">0</span>
+<span class="n">cd0</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">HL</span><span class="o">-</span><span class="n">DT</span><span class="o">-</span><span class="n">ST</span> <span class="n">RW</span><span class="o">/</span><span class="n">DVD</span> <span class="n">GCC</span><span class="o">-</span><span class="mi">4240</span><span class="n">N</span> <span class="mi">1202</span><span class="o">&gt;</span> <span class="n">Removable</span> <span class="n">CD</span><span class="o">-</span><span class="n">ROM</span> <span class="n">SCSI</span><span class="o">-</span><span class="mi">0</span> <span class="n">device</span>
+<span class="n">cd0</span><span class="p">:</span> <span class="mf">33.000</span><span class="n">MB</span><span class="o">/</span><span class="n">s</span> <span class="n">transfers</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="anmerkung-zum-dma-modus">
+<h3><span class="section-number">1.42.2.6. </span>Anmerkung zum DMA-Modus<a class="headerlink" href="#anmerkung-zum-dma-modus" title="Link zu dieser Überschrift">¶</a></h3>
+<p>„Ich (tUNIX) bin unter FreeBSD 5.3 mit einem LG 4160B (Firmware: A302)
+in die DMA-Falle getappt. Da bei mir DMA-Modus für Atapi-Geräte
+standardmässig aktiviert war, habe ich diesem Parameter auch keine
+Aufmerksamkeit geschenkt. Die DVDs liessen sich auch einwandfrei
+beschreiben. Allerdings bekam ich beim Lesen der Daten nach dem Mounten
+massig Fehler, welche ständig in einem Abbruch des Lesevorganges
+mündeten.</p>
+<p>Erst nach dem Ausschalten des DMA-Modus lief alles wie gewünscht.“</p>
+</div>
+</div>
+<div class="section" id="daten-loschen">
+<h2><span class="section-number">1.42.3. </span>Daten löschen<a class="headerlink" href="#daten-loschen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Eine DVD-RW könnt ihr mit diesem Befehl löschen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dvd+rw-format -blank /dev/cd1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="quellen">
+<h2><span class="section-number">1.42.4. </span>Quellen<a class="headerlink" href="#quellen" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.dvdforum.com/forum.shtml">http://www.dvdforum.com/forum.shtml</a></p></li>
+<li><p><a class="reference external" href="http://www.dvdrw.com/">http://www.dvdrw.com/</a></p></li>
+<li><p><a class="reference external" href="http://www.dvdrhelp.com/">http://www.dvdrhelp.com/</a></p></li>
+<li><p><a class="reference external" href="http://www.heise.de/ct/02/25/112/default.shtml">http://www.heise.de/ct/02/25/112/default.shtml</a></p></li>
+<li><p><a class="reference external" href="http://fy.chalmers.se/~appro/linux/DVD+RW/">http://fy.chalmers.se/~appro/linux/DVD+RW/</a></p></li>
+<li><p><a class="reference external" href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/creating-dvds.html">http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/creating-dvds.html</a></p></li>
+<li><p><a class="reference external" href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/creating-cds.html">http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/creating-cds.html</a></p></li>
+</ul>
+</div>
+<div class="section" id="verweise">
+<h2><span class="section-number">1.42.5. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="/howto/k3beinrichten">k3b einrichten</a> - KDE-Brennersoftware</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ed2k-protokoll.txt.html" class="btn btn-neutral float-right" title="1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dvd-rip_mit_mencoder.txt.html" class="btn btn-neutral float-left" title="1.41. DVD-Rip mit mencoder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

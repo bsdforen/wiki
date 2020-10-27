@@ -1,0 +1,465 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.29. Qemu &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="2.30. RXVT-Unicode" href="rxvt-unicode.txt.html" />
+    <link rel="prev" title="2.28. portupgrade" href="portupgrade.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="anwendungen_index.html">2. Anwendungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="anwendungs-liste.txt.html">2.1. Anwendungs-Liste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bmp.txt.html">2.2. BMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bsdadminscripts.txt.html">2.3. BSDAdminScripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csup.txt.html">2.4. csup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distcc.txt.html">2.5. Distcc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.txt.html">2.6. Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enlightenment.txt.html">2.7. Enlightenment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firefox.txt.html">2.8. Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox.txt.html">2.9. Fluxbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gimp.txt.html">2.10. Gimp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gitit.txt.html">2.11. gitit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gkrellm.txt.html">2.12. GKrellM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idesk.txt.html">2.13. IDesk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inkscape.txt.html">2.14. Inkscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irssi.txt.html">2.15. Irssi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b.txt.html">2.16. K3b</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libreoffice.txt.html">2.17. LibreOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.txt.html">2.18. Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd.txt.html">2.19. Music Player Daemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpg123.txt.html">2.20. Mpg123</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mplayer.txt.html">2.21. mplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt.txt.html">2.22. Mutt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice.txt.html">2.23. OpenOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg_cutleaves.txt.html">2.24. pkg_cutleaves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone.txt.html">2.25. Plone 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portmaster.txt.html">2.26. Portmaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portsnap.txt.html">2.27. portsnap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portupgrade.txt.html">2.28. portupgrade</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.29. Qemu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vorwort">2.29.1. Vorwort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-von-qemu">2.29.2. Installation von QEMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qemu-mit-bridge">2.29.3. QEMU mit Bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qemu-mit-slirp">2.29.4. QEMU mit SLIRP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-des-clientsystems">2.29.5. Installation des Clientsystems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bridge">2.29.6. Bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slirp">2.29.7. SLIRP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booten-des-clientsystems">2.29.8. Booten des Clientsystems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bridge-1">2.29.9. Bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slirp-1">2.29.10. SLIRP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qemu-ohne-grafik">2.29.11. QEMU ohne Grafik</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bridge-2">2.29.12. Bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slirp-2">2.29.13. SLIRP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getestet-mit">2.29.14. Getestet mit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fehler-bugs">2.29.15. Fehler / Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verweise">2.29.16. Verweise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rxvt-unicode.txt.html">2.30. RXVT-Unicode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen.txt.html">2.31. Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tcsh.txt.html">2.32. TCSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive.txt.html">2.33. TeX Live</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunar.txt.html">2.34. Thunar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunderbird.txt.html">2.35. Thunderbird</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torsmo.txt.html">2.36. Torsmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vim.txt.html">2.37. Vim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4.txt.html">2.38. Xfce4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xine.txt.html">2.39. Xine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xpdf.txt.html">2.40. Xpdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xspread.txt.html">2.41. Xspread</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zsh.txt.html">2.42. ZSH</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="anwendungen_index.html"><span class="section-number">2. </span>Anwendungen</a> &raquo;</li>
+        
+      <li><span class="section-number">2.29. </span>Qemu</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/anwendungen/qemu.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="rxvt-unicode.txt.html" class="btn btn-neutral float-right" title="2.30. RXVT-Unicode" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="portupgrade.txt.html" class="btn btn-neutral float-left" title="2.28. portupgrade" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qemu">
+<h1><span class="section-number">2.29. </span>Qemu<a class="headerlink" href="#qemu" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+</div>
+<p>Qemu ist eine virtuelle Maschine. Es können folgende Gastsysteme benutzt
+werden: Linux, Windows, *BSD und Mac OS X. Es wird die komplette
+Hardware für das Gastsystem emuliert (siehe auch
+<a class="reference external" href="http://de.wikipedia.org/wiki/Qemu">Wikipedia</a>).</p>
+<div class="section" id="vorwort">
+<h2><span class="section-number">2.29.1. </span>Vorwort<a class="headerlink" href="#vorwort" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Für die allgemeine Bedienung von QEMU sehe man sich bitte die
+<a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=qemu&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+6.1-RELEASE+and+Ports&amp;format=html">Manpage</a>
+an. Für einen Screenshot von QEMU siehe bitte
+<a class="reference external" href="http://www.flickr.com/photo_zoom.gne?id=129916359&amp;size=o&amp;context=set-72157594517723353">hier</a>.</p>
+<p>Der von QEMU emulierte Rechner kann über eine Bridge an das eigene
+Netzwerk „angeschlossen“ werden, und verhält sich dann so als wäre er am
+selben Switch wie der Hostrechner. Alternativ kann man QEMU auch mit
+SLIRP (<a class="reference external" href="http://slirp.sourceforge.net">http://slirp.sourceforge.net</a>) betreiben, hier ist die
+Konfiguration einfacher und es funktioniert auch unter FreeBSD 5.x ohne
+root-Rechte. Der Nachteil dabei: es können keine ICMP Pakete nach
+draussen geschickt werden (wie z.B. für ping(8) benötigt). Normale TCP-
+oder UDP-Verbindungen funktionieren aber.</p>
+</div>
+<div class="section" id="installation-von-qemu">
+<h2><span class="section-number">2.29.2. </span>Installation von QEMU<a class="headerlink" href="#installation-von-qemu" title="Link zu dieser Überschrift">¶</a></h2>
+<p>QEMU bringt ein optionales Kernelmodul mit, was die Emulation um einiges
+schneller laufen lässt. Deshalb sollte man QEMU über den Port mit der
+Option WITH_KQEMU bauen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/emulators/qemu</span>
+<span class="c1"># sudo make -DWITH_KQEMU install clean</span>
+</pre></div>
+</div>
+<p>Hierduch wird automatisch der Port kqemu-kmod mitinstalliert, der nach
+jedem Kernelupdate ebenfalls neu kompiliert werden muss.</p>
+<p>Als Beispiel soll FreeBSD als Clientsystem installiert werden. Zuerst
+wird eine neue Imagedatei angelegt, die die Installation beherbergen
+soll:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># qemu-img create FreeBSD.img 4G</span>
+</pre></div>
+</div>
+<p>Damit wird eine 4 GB große Datei angelegt, die als erste Festplatte
+dient.</p>
+</div>
+<div class="section" id="qemu-mit-bridge">
+<h2><span class="section-number">2.29.3. </span>QEMU mit Bridge<a class="headerlink" href="#qemu-mit-bridge" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um die Bridge beim Start von QEMU zu erstellen, wird das folgende Skript
+unter /usr/local/bin/qemu_start gespeichert:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+kldstat -n kqemu || kldload kqemu
+kldstat -n if_tap || kldload if_tap
+kldstat -n bridge || kldload bridge
+sysctl net.link.ether.bridge.enable=1
+sysctl net.link.ether.bridge.config=rl0,$1
+</pre></div>
+</div>
+<p>Hier muss <strong>rl0</strong> mit der Bezeichnung der eigenen Netzwerkkarte ersetzt
+werden.</p>
+<p>Außerdem <em>qemu_start</em> ausführbar machen mit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudo chmod 755 /usr/local/bin/qemu_start</span>
+</pre></div>
+</div>
+<p>Jetzt kann QEMU mit den Parametern <em>-net nic -net tap,script=qemu_start</em>
+gestartet werden und man hat im emulierten System ein Netzwerkinterface,
+das sich so verhält, als sei es mit dem Hostsystem in einem
+physikalischen Netzwerk.</p>
+</div>
+<div class="section" id="qemu-mit-slirp">
+<h2><span class="section-number">2.29.4. </span>QEMU mit SLIRP<a class="headerlink" href="#qemu-mit-slirp" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Alternative zur Bridge ist der Netzwerkmodus mit SLIRP. Hier bekommt
+das Netzwerkinterface des Clientsystems die IP-Informationen von der
+virtuellen Umgebung per DHCP. Um SLIRP benutzen zu können, muss QEMU nur
+mit den Parametern <em>-net nic -net user</em> gestartet werden.</p>
+</div>
+<div class="section" id="installation-des-clientsystems">
+<h2><span class="section-number">2.29.5. </span>Installation des Clientsystems<a class="headerlink" href="#installation-des-clientsystems" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Nachdem die Imagedatei angelegt wurde, brauch man für die Installation
+nur noch ein CD-Image und kann beginnen. Wird vom CD-Laufwerk aus
+installiert, muss zuvor das Modul „aio“ geladen werden, da sonst Qemu
+beim Zugriff auf ATAPI-Geräte abbricht:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># kldstat -n aio || kldload aio</span>
+</pre></div>
+</div>
+<p>Nach der Installation von ist das Modul nicht mehr erforderlich, außer
+man will auf das CD-Laufwerk zugreifen.</p>
+</div>
+<div class="section" id="bridge">
+<h2><span class="section-number">2.29.6. </span>Bridge<a class="headerlink" href="#bridge" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudo qemu -net nic -net tap,script=qemu_start -hda FreeBSD.img -cdrom 6.0-RELEASE-i386-disc1.iso -boot d -k de</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slirp">
+<h2><span class="section-number">2.29.7. </span>SLIRP<a class="headerlink" href="#slirp" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># qemu -net nic -net user -hda FreeBSD.img -cdrom 6.0-RELEASE-i386-disc1.iso -boot d -k de</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="booten-des-clientsystems">
+<h2><span class="section-number">2.29.8. </span>Booten des Clientsystems<a class="headerlink" href="#booten-des-clientsystems" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Danach kann QEMU auch wie folgt gestartet werden:</p>
+</div>
+<div class="section" id="bridge-1">
+<span id="id1"></span><h2><span class="section-number">2.29.9. </span>Bridge<a class="headerlink" href="#bridge-1" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudo qemu -net nic -net tap,script=qemu_start -hda FreeBSD.img -k de</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slirp-1">
+<span id="id2"></span><h2><span class="section-number">2.29.10. </span>SLIRP<a class="headerlink" href="#slirp-1" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># qemu -net nic -net user -hda FreeBSD.img -k de</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="qemu-ohne-grafik">
+<h2><span class="section-number">2.29.11. </span>QEMU ohne Grafik<a class="headerlink" href="#qemu-ohne-grafik" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Im emulierten FreeBSD folgenden Eintrag in die Datei <em>/boot.config</em>
+machen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
+<p>Außerdem in <em>/etc/ttys</em> die Zeile</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ttyd0</span>   <span class="s2">&quot;/usr/libexec/getty std.9600&quot;</span>   <span class="n">dialup</span>  <span class="n">off</span> <span class="n">secure</span>
+</pre></div>
+</div>
+<p>ersetzen durch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ttyd0</span>   <span class="s2">&quot;/usr/libexec/getty std.9600&quot;</span>   <span class="n">vt100</span>  <span class="n">on</span> <span class="n">secure</span>
+</pre></div>
+</div>
+<p>Jetzt das emulierte FreeBSD runterfahren und QEMU beenden.</p>
+<p>QEMU nun folgendermaßen starten:</p>
+</div>
+<div class="section" id="bridge-2">
+<span id="id3"></span><h2><span class="section-number">2.29.12. </span>Bridge<a class="headerlink" href="#bridge-2" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sudo qemu -net nic -net tap,script=qemu_start -hda FreeBSD.img -nographic -parallel null -k de</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slirp-2">
+<span id="id4"></span><h2><span class="section-number">2.29.13. </span>SLIRP<a class="headerlink" href="#slirp-2" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># qemu -net nic -net user -hda FreeBSD.img -nographic -parallel null -k de</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getestet-mit">
+<h2><span class="section-number">2.29.14. </span>Getestet mit<a class="headerlink" href="#getestet-mit" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p>QEMU Version: 0.8 Host: FreeBSD 5.4-RELEASE/i386 Client: FreeBSD
+6.0-RELEASE/i386</p></li>
+<li><p>QEMU Version: 0.8 Host: FreeBSD 7.0-CURRENT/i386 Client: Linux</p></li>
+</ul>
+</div>
+<div class="section" id="fehler-bugs">
+<h2><span class="section-number">2.29.15. </span>Fehler / Bugs<a class="headerlink" href="#fehler-bugs" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p>Sollte HZ vom Client größer sein als vom Host gibt es evtl. Timing
+Probleme.</p></li>
+<li><p>Die verwendete Bridge Implementierung existiert ab FreeBSD 7.0 nicht
+mehr, hier <strong>if_bridge</strong> verwenden.</p></li>
+</ul>
+</div>
+<div class="section" id="verweise">
+<h2><span class="section-number">2.29.16. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.bsdbox.de/?page_id=18">Eine Beispielinstallation mit Windows
+XP</a></p></li>
+<li><p><a class="reference external" href="http://www.bsdforen.de/showthread.php?t=16925">Ein Forenthread hierzu (Modul
+aio)</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=emulators/qemu&amp;btnI=lucky">emulators/qemu</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=emulators/qemu&amp;btnI=lucky">emulators/qemu</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rxvt-unicode.txt.html" class="btn btn-neutral float-right" title="2.30. RXVT-Unicode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="portupgrade.txt.html" class="btn btn-neutral float-left" title="2.28. portupgrade" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

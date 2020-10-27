@@ -1,0 +1,810 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf) &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.3. Apache mit php5 installieren" href="apache_mit_php5_installieren.txt.html" />
+    <link rel="prev" title="1.1. 3D-Grafik-Beschleunigung" href="3d-grafik-beschleunigung.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ipfw-vs-pf">1.2.1. ipfw vs. pf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-ppp-vs-mpd">1.2.2. User-ppp vs. mpd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mpd-einrichten">1.2.3. mpd einrichten</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installation-von-mpd">1.2.3.1. Installation von mpd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#aktivieren-von-netgraph">1.2.3.2. aktivieren von netgraph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#konfiguration-von-mpd">1.2.3.3. Konfiguration von mpd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#aktivieren-von-mpd4">1.2.4. aktivieren von mpd4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#syslog-die-log-inforationen-ausgeben-lassen">1.2.5. syslog die Log-Inforationen ausgeben lassen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mpd4-webinterface">1.2.6. mpd4 Webinterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probleme-beim-setzen-der-default-route">1.2.7. Probleme beim Setzen der Default-Route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pf-einrichten">1.2.8. pf einrichten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pf-einschalten">1.2.9. pf einschalten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#regeln-konfigurieren">1.2.10. Regeln konfigurieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weitere-rechner-hinter-diesem-ins-internet-bringen">1.2.11. Weitere Rechner hinter diesem ins Internet bringen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interne-netzwerkkarte-einrichten">1.2.12. Interne Netzwerkkarte einrichten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ip-forward-aktivieren">1.2.13. IP-Forward aktivieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nat-aktivieren">1.2.14. NAT aktivieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#maximale-segment-grosze">1.2.14.1. Maximale Segment Größe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nameserver-und-dhcp-server-einrichten">1.2.15. Nameserver und DHCP-Server einrichten</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dnsmasq-installieren">1.2.15.1. dnsmasq installieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dnsmasq-konfigurieren">1.2.15.2. dnsmasq konfigurieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dnsmasq-automatisch-mitstarten">1.2.15.3. dnsmasq automatisch mitstarten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dnsmasq-zusammenfassung">1.2.15.4. dnsmasq Zusammenfassung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.2. </span>Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="apache_mit_php5_installieren.txt.html" class="btn btn-neutral float-right" title="1.3. Apache mit php5 installieren" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="3d-grafik-beschleunigung.txt.html" class="btn btn-neutral float-left" title="1.1. 3D-Grafik-Beschleunigung" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="anschluss-an-das-internet-mit-pppoe-mpd-und-firewall-pf">
+<h1><span class="section-number">1.2. </span>Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)<a class="headerlink" href="#anschluss-an-das-internet-mit-pppoe-mpd-und-firewall-pf" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p>Die meisten Rechner sind via PPPoe mit dem Internet verbunden. Diese Anleitung
+beschreibt das Herstellen einer Internetverbindung mit mpd4 und der Absicherung
+mit der Firewall pf.</p>
+<div class="section" id="ipfw-vs-pf">
+<h2><span class="section-number">1.2.1. </span>ipfw vs. pf<a class="headerlink" href="#ipfw-vs-pf" title="Link zu dieser Überschrift">¶</a></h2>
+<p>&lt;&lt;Vorteile von PF&gt;&gt;</p>
+</div>
+<div class="section" id="user-ppp-vs-mpd">
+<h2><span class="section-number">1.2.2. </span>User-ppp vs. mpd<a class="headerlink" href="#user-ppp-vs-mpd" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Auch im FreeBSD-Handbuch wird auf die Konfiguration von User-PPP
+eingegangen, welche sich im wesentlichen in <code class="docutils literal notranslate"><span class="pre">/etc/ppp</span></code> abspielt. Der
+Grund mag sein, dass User-ppp ist im Gegensatz zu mpd Teil des
+Betriebssystems ist.</p>
+<p>User-ppp hat jedoch den entscheidenden Nachteil, dass dieses
+unkompatibel zu der Firewall PF ist. Dieser Fehler äußert sich erst nach
+der 24-Stunden-Trennung des Providers, bei der User-ppp es nicht mehr
+schafft sich neu zu verbinden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deflink</span><span class="p">:</span> <span class="n">Already</span> <span class="ow">in</span> <span class="n">NETWORK</span> <span class="n">phase</span>
+</pre></div>
+</div>
+<p>Multilink PPP Daemon (mpd) funktioniert hingegen mit PF und hat
+ausserdem noch den Vorteil, dass es durch die Verwendung von netgraph
+deutlich weniger CPU-Last erzeugt, da weniger Kontext-Switche anfallen.</p>
+</div>
+<div class="section" id="mpd-einrichten">
+<h2><span class="section-number">1.2.3. </span>mpd einrichten<a class="headerlink" href="#mpd-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="installation-von-mpd">
+<h3><span class="section-number">1.2.3.1. </span>Installation von mpd<a class="headerlink" href="#installation-von-mpd" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Da mpd nicht Teil des Betriebssystems ist, muss dieses über sysinstall
+von CD oder z.B. über die Ports wie folgt installiert werden: &lt;xterm&gt; #
+cd /usr/ports/net/mpd4 # make install clean &lt;/xterm&gt;</p>
+</div>
+<div class="section" id="aktivieren-von-netgraph">
+<h3><span class="section-number">1.2.3.2. </span>aktivieren von netgraph<a class="headerlink" href="#aktivieren-von-netgraph" title="Link zu dieser Überschrift">¶</a></h3>
+<p>mpd benötigt Netgraph, welches ein Kernel-Modul ist und durch die
+Ergänzung der folgenden Zeile in die Datei <code class="docutils literal notranslate"><span class="pre">/boot/loader.conf</span></code> geladen
+wird.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Datei /boot/loader.conf</span>
+<span class="n">ng_ether_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="konfiguration-von-mpd">
+<h3><span class="section-number">1.2.3.3. </span>Konfiguration von mpd<a class="headerlink" href="#konfiguration-von-mpd" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die gesamte Konfirugation von mpd befindet sich in
+<code class="docutils literal notranslate"><span class="pre">/usr/local/etc/mpd4</span></code>. Es ist zu beachten, dass die Einrückungen mit
+&lt;tab&gt; gemacht werden, denn zumindest User-ppp war in der Hinsicht sehr
+wählerisch.</p>
+<p><strong>/usr/local/etc/mpd4/mpd.conf</strong></p>
+<p>An der rot markierten Stelle muss der Benutzer, den Sie für den
+DSL-Zugang vom Provider bekommen haben, eingesetzt werden. <strong>Hinweis: Es
+ist wichtig, dass in den folgenden Konfigurationsdateien die Abschnitte
+mit exakt einem TAB eingerückt werden. Ansonsten werden die
+Konfigurationsdateien fehlerhaft interpretiert</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span><span class="p">:</span>
+       <span class="n">load</span> <span class="n">meinprovider</span>
+<span class="n">meinprovider</span><span class="p">:</span>
+       <span class="n">new</span> <span class="o">-</span><span class="n">i</span> <span class="n">ng0</span> <span class="n">meinprovider</span> <span class="n">PPPoE</span>
+       <span class="nb">set</span> <span class="n">iface</span> <span class="n">addrs</span> <span class="mf">10.2</span><span class="o">.</span><span class="mf">1.1</span> <span class="mf">10.2</span><span class="o">.</span><span class="mf">1.2</span>
+       <span class="nb">set</span> <span class="n">iface</span> <span class="n">route</span> <span class="n">default</span>
+       <span class="nb">set</span> <span class="n">iface</span> <span class="n">enable</span> <span class="n">on</span><span class="o">-</span><span class="n">demand</span>
+       <span class="nb">set</span> <span class="n">iface</span> <span class="n">idle</span> <span class="mi">0</span>
+       <span class="nb">set</span> <span class="n">bundle</span> <span class="n">disable</span> <span class="n">multilink</span>
+       <span class="nb">set</span> <span class="n">auth</span> <span class="n">authname</span> <span class="n">USERNAME</span>
+       <span class="nb">set</span> <span class="n">link</span> <span class="n">no</span> <span class="n">acfcomp</span> <span class="n">protocomp</span>
+       <span class="nb">set</span> <span class="n">link</span> <span class="n">disable</span> <span class="n">pap</span> <span class="n">chap</span>
+       <span class="nb">set</span> <span class="n">link</span> <span class="n">accept</span> <span class="n">pap</span> <span class="n">chap</span>
+       <span class="nb">set</span> <span class="n">link</span> <span class="n">mtu</span> <span class="mi">1456</span>
+       <span class="nb">set</span> <span class="n">link</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span> <span class="mi">10</span> <span class="mi">60</span>
+       <span class="nb">set</span> <span class="n">link</span> <span class="nb">max</span><span class="o">-</span><span class="n">redial</span> <span class="mi">0</span>
+       <span class="nb">set</span> <span class="n">bundle</span> <span class="n">no</span> <span class="n">noretry</span>
+       <span class="nb">set</span> <span class="n">ipcp</span> <span class="n">yes</span> <span class="n">vjcomp</span>
+       <span class="nb">set</span> <span class="n">ipcp</span> <span class="n">ranges</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">0</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">0</span>
+       <span class="n">log</span> <span class="o">+</span><span class="n">link</span>
+       <span class="n">log</span> <span class="o">+</span><span class="n">lcp</span>
+       <span class="n">log</span> <span class="o">+</span><span class="n">auth</span>
+       <span class="nb">set</span> <span class="n">ipcp</span> <span class="n">enable</span> <span class="n">req</span><span class="o">-</span><span class="n">pri</span><span class="o">-</span><span class="n">dns</span>
+       <span class="nb">set</span> <span class="n">ipcp</span> <span class="n">enable</span> <span class="n">req</span><span class="o">-</span><span class="n">sec</span><span class="o">-</span><span class="n">dns</span>
+       <span class="nb">set</span> <span class="n">iface</span> <span class="n">up</span><span class="o">-</span><span class="n">script</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">mpd4</span><span class="o">/</span><span class="n">mpd_dsl</span><span class="o">.</span><span class="n">linkup</span>
+       <span class="nb">open</span>
+</pre></div>
+</div>
+<p><strong>/usr/local/etc/mpd4/mpd.links</strong></p>
+<p>Hier ist zu beachten, dass das Netzwerkinterface eingetragen wird, an
+dem das DSL-Modem direkt über Ethernet angeschlossen ist.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PPPoE</span><span class="p">:</span>
+       <span class="nb">set</span> <span class="n">link</span> <span class="nb">type</span> <span class="n">pppoe</span>
+       <span class="nb">set</span> <span class="n">pppoe</span> <span class="n">iface</span> <span class="n">fxp1</span>
+       <span class="nb">set</span> <span class="n">pppoe</span> <span class="n">service</span> <span class="s2">&quot;foo&quot;</span>
+       <span class="nb">set</span> <span class="n">pppoe</span> <span class="n">disable</span> <span class="n">incoming</span>
+       <span class="nb">set</span> <span class="n">pppoe</span> <span class="n">enable</span> <span class="n">originate</span>
+</pre></div>
+</div>
+<p>Es kann sein, dass bei wenigen Providern bei pppoe service etwas
+bestimmtes eingetragen werden muss. Dies ist aber z.B. bei T-Online und
+GMX nicht der Fall.</p>
+<p><strong>/usr/local/etc/mpd4/mpd.secret</strong></p>
+<p>Aus Sicherheitsgründen wird Benutzername und Passwort getrennt zur
+Konfiguration eingetragen. Die Datei kann mit weiteren
+Dateiberechtigungen versehen werden. Dies ist so zu verstehen, dass in
+der mpd.conf| nur der Benutzername steht und diesem hiermit das
+Passwort zugeordnet wird. Aus diesem Grund muss der USERNAME hier erneut
+angegeben werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">USERNAME</span>    <span class="n">PASSWORT</span>
+</pre></div>
+</div>
+<p><strong>/usr/local/etc/mpd4/mpd_dsl.linkup</strong></p>
+<p>Nach dem Aufbauen einer PPPoe-Verbindung soll ein Reset von pf
+sicherstellen, dass pf auf die veränderte Umgebung wie z.B. eine neue IP
+am DSL-Interface reagieren kann. Gerade beim Reconnect nach der
+24-Stunden-Trennung des Providers ist eine kritische Situation. Dieses
+Skript wird automatisch nach jedem Verbindungsaufbau aufgerufen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+# PF resetten
+/sbin/pfctl -Fa -e -f /etc/pf.conf
+# Nameserver uebenehmen
+echo nameserver $7 &gt;  /etc/resolv.conf
+echo nameserver $9 &gt;&gt; /etc/resolv.conf
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="aktivieren-von-mpd4">
+<h2><span class="section-number">1.2.4. </span>aktivieren von mpd4<a class="headerlink" href="#aktivieren-von-mpd4" title="Link zu dieser Überschrift">¶</a></h2>
+<p>mpd wird durch das Hinzufügen der folgenden Zeile aktiviert:</p>
+<p><strong>/etc/rc.conf</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mpd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+</pre></div>
+</div>
+<p>Hierdurch wird die Verbindung direkt nach dem Booten geöffnet und immer
+offen gehalten, daher ist diese Konfiguration nur sinnvoll, wenn man
+einen Pauschaltarif (neudeutsch Flat-Rate) hat.</p>
+</div>
+<div class="section" id="syslog-die-log-inforationen-ausgeben-lassen">
+<h2><span class="section-number">1.2.5. </span>syslog die Log-Inforationen ausgeben lassen<a class="headerlink" href="#syslog-die-log-inforationen-ausgeben-lassen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>mpd schreibt nach syslog, jedoch werden die Dateien bei der
+Standardkonfiguration nicht in eine Datei geschrieben.</p>
+<ul class="simple">
+<li><p>Das wird wie folgt geändert in der Datei <code class="docutils literal notranslate"><span class="pre">/etc/syslog.conf</span></code>:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!mpd
+*.*                                             /var/log/mpd.log
+#Wichtig, das muss vor der folgenden Zeile eingefügt werden.
+!*
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Anlegen einer leeren Datei, da sonst syslog nicht in diese schreibt:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch /var/log/mpd.log
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>syslog die Konfiguration erneut lesen lassen</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/etc/rc.d/syslogd reload
+</pre></div>
+</div>
+</div>
+<div class="section" id="mpd4-webinterface">
+<h2><span class="section-number">1.2.6. </span>mpd4 Webinterface<a class="headerlink" href="#mpd4-webinterface" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn man das Webinterface von mpd4 benutzen will, dann muss man
+folgendes in der mpd.conf| hinzufügen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">startup</span><span class="p">:</span>
+       <span class="nb">set</span> <span class="n">web</span> <span class="n">ip</span> <span class="n">span</span> <span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span>
+       <span class="nb">set</span> <span class="n">web</span> <span class="n">port</span> <span class="mi">4444</span>
+       <span class="nb">set</span> <span class="n">web</span> <span class="n">user</span> <span class="n">username</span> <span class="n">passwort</span>
+       <span class="nb">set</span> <span class="n">web</span> <span class="nb">open</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="probleme-beim-setzen-der-default-route">
+<h2><span class="section-number">1.2.7. </span>Probleme beim Setzen der Default-Route<a class="headerlink" href="#probleme-beim-setzen-der-default-route" title="Link zu dieser Überschrift">¶</a></h2>
+<p>mpd schafft es nicht die Default-Route über die PPPoe-Verbindung zu
+setzen, wenn bereits eine Systemweite Default-Route definiert ist. Daher
+sollte diese in der /etc/rc.conf| auskommentiert werden</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#defaultrouter=&quot;192.168.32.4&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pf-einrichten">
+<h2><span class="section-number">1.2.8. </span>pf einrichten<a class="headerlink" href="#pf-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="pf-einschalten">
+<h2><span class="section-number">1.2.9. </span>pf einschalten<a class="headerlink" href="#pf-einschalten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Seit FreeBSD 5.3 kann pf als Modul geladen werden, wozu ein Eintrag in
+der /etc/rc.conf| genügt.</p>
+<p id="etcrc-conf-1"><strong>/etc/rc.conf</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pf_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="regeln-konfigurieren">
+<h2><span class="section-number">1.2.10. </span>Regeln konfigurieren<a class="headerlink" href="#regeln-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die hier vorgestellten Beispiel-Regeln blockieren alle Verbindungen vom
+Internet auf den lokalen Rechner, lassen aber alle Verbindungen von dem
+Rechner ins Internet zu:</p>
+<p><strong>/etc/pf.conf</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Definition der Interfaces
+ext_if=&quot;ng0&quot;
+dsl_if=&quot;fxp1&quot;
+int_if=&quot;fxp0&quot;
+# zunaechst alles oeffnen
+pass out all keep state
+pass in all keep state
+# pppoe-Device dicht machen
+pass out on $ext_if all keep state
+block in on $ext_if all
+</pre></div>
+</div>
+<p>Sollen jetzt einzelne Ports wie <strong>ssh</strong> und <strong>https</strong> geöffnet werden,
+dann können folgende Zeilen <strong>unterhalb</strong> o.g. Konfiguration angehängt
+werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>pass in on $ext_if proto tcp from any to any port **ssh** keep state
+pass in on $ext_if proto tcp from any to any port **https** keep state
+</pre></div>
+</div>
+</div>
+<div class="section" id="weitere-rechner-hinter-diesem-ins-internet-bringen">
+<h2><span class="section-number">1.2.11. </span>Weitere Rechner hinter diesem ins Internet bringen<a class="headerlink" href="#weitere-rechner-hinter-diesem-ins-internet-bringen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Bisher wurde dieser eine Rechner mit dem Internet verbunden und durch
+eine Firewall geschützt. In den meisten Fällen existieren jedoch noch
+viel mehr Rechner, die die Internetverbindung mitverwenden sollen.</p>
+</div>
+<div class="section" id="interne-netzwerkkarte-einrichten">
+<h2><span class="section-number">1.2.12. </span>Interne Netzwerkkarte einrichten<a class="headerlink" href="#interne-netzwerkkarte-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Hierzu muss der Rechner eine zweite Netzwerkkarte(hier fxp0) besitzen,
+welche mit dem lokalen Netzwerk (z.B. ein Switch) verbunden ist, in dem
+auch die anderen Rechner hängen. Diese muss z.B. folgende statische IP
+zugewiesen bekommen:</p>
+<p id="etcrc-conf-2"><strong>/etc/rc.conf</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ifconfig_fxp0</span><span class="o">=</span><span class="s2">&quot;inet 192.168.32.99  netmask 255.255.255.0&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ip-forward-aktivieren">
+<h2><span class="section-number">1.2.13. </span>IP-Forward aktivieren<a class="headerlink" href="#ip-forward-aktivieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Damit der Rechner überhaupt erst Pakete zwischen internem Netz und
+Internet weiterleitet, muss dies wie folgt aktiviert werden:</p>
+<p id="etcrc-conf-3"><strong>/etc/rc.conf</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gateway_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nat-aktivieren">
+<h2><span class="section-number">1.2.14. </span>NAT aktivieren<a class="headerlink" href="#nat-aktivieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Da die Rechner im internen Netzwerk in den meisten Fällen keine
+offizielle IP-Adresse besitzen können, besitzt nur die PPPoe-Seite
+dieses Rechneres eine offizielle IP-Adresse. In diesem Fall müssen alle
+internen Adressen durch den Rechner so umgesetzt werden, dass es
+aussieht, als kämen der gesamte Verkehr nur von diesem mit der
+offiziellen Adresse. Hierzu verwendet man sog. NAT (eigentlich NAPT).
+Diese hier gewählte Umsetzung hat zusätzlich den Vorteil, dass alle
+Rechner von innen beliebige Verbindungen ins Internet aufbauen können,
+jedoch kein Rechner eine Verbindung zu den internen Rechnern initiieren
+kann. Somit sind die Rechner von aussen geschützt.</p>
+<p>Unter FreeBSD gibt es viele Möglichkeiten NAT zu aktivieren (natd,
+ppp-NAT, pf-nat). Da hier PF sowieso als Firewall verwendet wird, bietet
+es sich hier an, PF auch für NAT zu verwenden:</p>
+<p id="etcpf-conf-1"><strong>/etc/pf.conf</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># um NAT erweiterte Version
+# ext_if=&quot;tun0&quot;
+ext_if=&quot;ng0&quot;
+dsl_if=&quot;fxp1&quot;
+int_if=&quot;fxp0&quot;
+internal_net=&quot;192.168.0.0/16&quot;
+# nat
+nat on $ext_if from $internal_net to any -&gt; ($ext_if)
+# zunaechst alles oeffnen
+pass out all keep state
+pass in all keep state
+# interne devices explizit durchgaengig machen
+pass quick on lo0 all
+pass quick on $int_if all
+pass quick on $dsl_if all
+# pppoe-Device dicht machen
+pass out on $ext_if all keep state
+block in on $ext_if all
+</pre></div>
+</div>
+<div class="section" id="maximale-segment-grosze">
+<h3><span class="section-number">1.2.14.1. </span>Maximale Segment Größe<a class="headerlink" href="#maximale-segment-grosze" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Falls Probleme beim Aufrufen bestimmter Seiten auftreten, kann das an
+der Paketgröße liegen (Stichwort MTU, Maximum Transmission Uni). Statt
+bei jedem Client (bzw. jedem Netzwerkinterface) jeweils die MTU auf den
+passenden Wert zu setzen, kann man PF mit Hilfe des Scrubbing beibringen
+die Pakete gleich so umzupacken, dass sie die MTU nicht überschreiben
+und so nicht verworfen werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>...
+scrub in on $int_if fragment reassemble max-mss 1452
+
+# nat
+nat on $ext_if from $internal_net to any -&gt; ($ext_if)
+...
+</pre></div>
+</div>
+<p>Scrubbing kann unter Umständen Probleme mit z.B. NFS bringen laut
+<a class="reference external" href="http://www.openbsd.org/faq/pf/de/scrub.html">OpenBSD PF FAQ</a>, bei
+mir hat die oben genannte Scrubregel allerdings keine Auswirkung auf
+NFS.</p>
+<p>Das Festsetzen einer Maximalen Segment Größe ist laut <a class="reference external" href="http://de.wikipedia.org/wiki/Maximum_Segment_Size">Wikipedia
+(MSS)</a> allerdings
+nicht sehr sauber. Nunja, NAT ist ja auch nicht das Gelbe vom Ei,
+demnach…</p>
+</div>
+</div>
+<div class="section" id="nameserver-und-dhcp-server-einrichten">
+<h2><span class="section-number">1.2.15. </span>Nameserver und DHCP-Server einrichten<a class="headerlink" href="#nameserver-und-dhcp-server-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Mit der bisherigen Konfiguration können alle internen Rechner bereits
+das Internet erreichen. Um Namen wie „www.google.de“ zu IP-Adressen
+aufzulösen, müssen sie jedoch einen Nameserver befragen. Sie könnten
+z.B. direkt einen Nameserver im Internet befragen, jedoch müsste der auf
+jedem Rechner gepflegt werden. Eine bessere Lösung ist es, wenn dieser
+Rechner die Namensanfragen engegennimmt, denn er kennt immer einen
+funktionierenden zuständigen Nameserver. Bei jedem
+PPPoe-Verbindungsaufbau werden aktuelle Nameserver vom Provider
+mitgeteilt. Um diese Funktionalität zu erreichen, muss ein Nameserver
+installiert werden, welcher die Anfragen der internen Rechner
+entgegennimmt, die Anfrage an die aktuellen Nameserver im Internet
+weiterleitet und dann auch intern beantwortet. Es gibt eine Menge von
+Nameservern, welche z.B. schon im Betriebssystem integriert sind (bind)
+oder für sehr komplexe und große Netzwerke geeignet sind. Für den hier
+dargestellten Einsatzzweck eigent sich <strong>dnsmasq</strong> da dieser einfach zu
+konfigurieren ist, wenig Speicher verbraucht, auf das
+wählverbindungsbedingte Wechseln der Internet-Nameserver vorbereitet ist
+und noch einen DHCP-Server mitbringt.</p>
+<div class="section" id="dnsmasq-installieren">
+<h3><span class="section-number">1.2.15.1. </span>dnsmasq installieren<a class="headerlink" href="#dnsmasq-installieren" title="Link zu dieser Überschrift">¶</a></h3>
+<p>dnsmasq kann z.B. wie folgt über die Ports installiert werden: &lt;xterm&gt; #
+cd /usr/ports/dns/dnsmasq # make install clean &lt;/file&gt;</p>
+</div>
+<div class="section" id="dnsmasq-konfigurieren">
+<h3><span class="section-number">1.2.15.2. </span>dnsmasq konfigurieren<a class="headerlink" href="#dnsmasq-konfigurieren" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Datei /usr/local/etc/dnsmasq.conf.sample| enthält eine
+Beispielkonfiguration, welche man als Schablone verwenden kann.</p>
+<p><strong>/usr/local/etc/dnsmasq.conf</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Never forward plain names (without a dot or domain part)</span>
+<span class="n">domain</span><span class="o">-</span><span class="n">needed</span>
+<span class="c1"># If you want dnsmasq to listen for DHCP and DNS requests only on</span>
+<span class="c1"># specified interfaces (and the loopback) give the name of the</span>
+<span class="c1"># interface (eg eth0) here.</span>
+<span class="c1"># Repeat the line for more than one interface.</span>
+<span class="n">interface</span><span class="o">=</span><span class="n">fxp0</span>
+<span class="c1"># Name der lokalen Domaene</span>
+<span class="n">domain</span><span class="o">=</span><span class="n">heimnetz</span>
+<span class="c1"># Add local-only domains here, queries in these domains are answered</span>
+<span class="c1"># from /etc/hosts or DHCP only.</span>
+<span class="n">local</span><span class="o">=/</span><span class="n">heimnetz</span><span class="o">/</span>
+<span class="c1"># Range der zu vergeben Adressen des DHCP-Server</span>
+<span class="c1">#(von 192.168.32.100 bis 192.168.32.200 mit einer Lease-Time von 24 Stunden)</span>
+<span class="n">dhcp</span><span class="o">-</span><span class="nb">range</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">32.100</span><span class="p">,</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">32.200</span><span class="p">,</span><span class="mi">24</span><span class="n">h</span>
+<span class="c1"># Speicherort, an dem sich der DHCP-Server seine vergebenen Adressen merkt</span>
+<span class="c1"># Default funktioniert unter FreeBSD nicht, daher auf folgendes Verzeichnis umstellen</span>
+<span class="n">dhcp</span><span class="o">-</span><span class="n">leasefile</span><span class="o">=/</span><span class="n">var</span><span class="o">/</span><span class="n">db</span><span class="o">/</span><span class="n">dnsmasq</span><span class="o">.</span><span class="n">leases</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dnsmasq-automatisch-mitstarten">
+<h3><span class="section-number">1.2.15.3. </span>dnsmasq automatisch mitstarten<a class="headerlink" href="#dnsmasq-automatisch-mitstarten" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Damit der dnsmasq-Dienst direkt bei jedem Rechnerstart automatisch
+mitgestartet wird, muss muss die /etc/rc.conf.local| um folgende Zeile
+erweitert werden:</p>
+<p><strong>/etc/rc.conf.local</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnsmasq_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dnsmasq-zusammenfassung">
+<h3><span class="section-number">1.2.15.4. </span>dnsmasq Zusammenfassung<a class="headerlink" href="#dnsmasq-zusammenfassung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>An diesen Rechner können jetzt immer Namensanfragen der internen Rechner
+gestellt werden, welche er stets mit Hilfe der aktuellen
+Internet-Nameserver beantworten kann. Bei den internen Rechnern mit
+fester IP-Adresse kann dieser Rechner als Nameserver und als
+Default-Gateway fest eingetragen werden. Da dnsmasq nicht nur die
+Funktionalität eines DNS-Servers sondern auch eines DHCP-Servers bietet,
+können die internen Rechner auch automatisch über DHCP konfiguriert
+werden. Dabei bekommen sie automatisch von diesem Rechner eine
+IP-Adresse, die Routing-Einstellungen und korrekte
+Namensauflösungsparameter mitgeteilt. Da die internen mit DHCP
+konfigurierten Rechner sich beim Bezug der DHCP-Daten auch ihren
+Hostname an den DHCP-Server weitergaben, meldet dnsmasq den Namen und
+die IP gleich auch an den internen DNS-Teil weiter, so dass andere
+interne Rechner diesen jetzt sogar unter seinem Namen erreichen können.
+Wenn man die verbleibenden lokale Rechner mit statischer IP in die
+/etc/hosts dieses Rechners einträgt, dann sind die für andere Rechner
+nun auch über dnsmasq auflösbar. Dies sind ein sehr praktische
+Nebeneffekte. FreeBSD|</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: date|</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="apache_mit_php5_installieren.txt.html" class="btn btn-neutral float-right" title="1.3. Apache mit php5 installieren" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="3d-grafik-beschleunigung.txt.html" class="btn btn-neutral float-left" title="1.1. 3D-Grafik-Beschleunigung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

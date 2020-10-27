@@ -1,0 +1,894 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.1. Computerspiele unter FreeBSD &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="4.2. Battle Realms" href="battle_realms.txt.html" />
+    <link rel="prev" title="4. Spiele" href="spiele_index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="spiele_index.html">4. Spiele</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1. Computerspiele unter FreeBSD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#spiele-aus-den-ports">4.1.1. Spiele aus den Ports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bekannte-spiele-die-fruher-proprietar-waren-aber-jetzt-open-source-sind">4.1.1.1. Bekannte Spiele, die früher proprietär waren, aber jetzt Open-Source sind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bekannte-spiele-die-proprietar-sind">4.1.1.2. Bekannte Spiele, die proprietär sind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#demos-zu-neueren-spielen">4.1.1.3. Demos zu neueren Spielen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#empfehlenswerte-opensource-spiele">4.1.1.4. Empfehlenswerte OpenSource-Spiele</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spiele-aus-den-ports-installieren">4.1.1.5. Spiele aus den Ports installieren</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spiele-ohne-ports-unter-linux-emulation">4.1.2. Spiele ohne Ports unter Linux-Emulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#spieleliste">4.1.2.1. Spieleliste</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spiele-mittels-wine">4.1.3. Spiele mittels Wine</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#statusubersicht-wine-application-database">4.1.3.1. Statusübersicht Wine Application Database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vorbereitung">4.1.3.2. Vorbereitung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spieleliste-1">4.1.3.3. Spieleliste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#links">4.1.3.4. Links</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#konsolen-und-dos-spiele">4.1.4. Konsolen- und DOS-Spiele</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="battle_realms.txt.html">4.2. Battle Realms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diablo_ii.txt.html">4.3. Diablo II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="starcraft.txt.html">4.4. Starcraft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal.txt.html">4.5. Unreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal_tournament_2004_-_to-crossfire.txt.html">4.6. Unreal Tournament 2004 - TO:Crossfire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal_tournament_2004.txt.html">4.7. Unreal Tournament 2004</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="spiele_index.html"><span class="section-number">4. </span>Spiele</a> &raquo;</li>
+        
+      <li><span class="section-number">4.1. </span>Computerspiele unter FreeBSD</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/spiele/computerspiele_unter_freebsd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="battle_realms.txt.html" class="btn btn-neutral float-right" title="4.2. Battle Realms" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="spiele_index.html" class="btn btn-neutral float-left" title="4. Spiele" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="computerspiele-unter-freebsd">
+<h1><span class="section-number">4.1. </span>Computerspiele unter FreeBSD<a class="headerlink" href="#computerspiele-unter-freebsd" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd4.png" src="../_images/logo-freebsd4.png" />
+</div>
+<p>Bevor man weiterliest sollte man sichergehen, dass die 3D-Beschleunigung
+funktioniert und installiert ist. Nutzer von NVIDIA-Chipsätzen
+installieren dazu den Port <strong>x11/nvidia-driver</strong> und konfigurieren ihre
+xorg.conf entsprechend, alle anderen folgen den Anweisungen aus dem
+Wiki-Beitrag
+<a class="reference external" href="/howto/3D-Grafik-Beschleunigung">3D-Grafik-Beschleunigung</a>. Ob alles
+richtig eingerichtet ist kann man mit dem Befehl „glxgears“ prüfen.</p>
+<p>Bevor wir uns daran machen sie zu installieren, ist es wichtig zu
+unterscheiden für welche Platform die Spiele gedacht sind.</p>
+<p>Es gibt vier Gruppen: Spiele, die…</p>
+<ol class="arabic simple">
+<li><p>nativ unter FreeBSD,</p></li>
+<li><p>unter Linux-Emulation,</p></li>
+<li><p>unter Windows-Emulation oder</p></li>
+<li><p>unter anderen Emulatoren laufen.</p></li>
+</ol>
+<p>Da uns speziell die Installationsweise der Spiele interessiert, fasse
+ich im folgenden unter Gruppe 1 alle Spiele zusammen die sich durch die
+FreeBSD-Ports installieren lassen, also auch solche die durch
+Linux-Emulation laufen (unter 2. sind dann solche Linux-Spiele, die man
+manuell installieren muss). Falls es möglich ist ein Spiel auf mehrere
+der folgenden Arten zu installieren sollte man immer oben anfangen ;-)</p>
+<div class="section" id="spiele-aus-den-ports">
+<h2><span class="section-number">4.1.1. </span>Spiele aus den Ports<a class="headerlink" href="#spiele-aus-den-ports" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In den FreeBSD Ports gibt es einen - inzwischen relativ großen - games
+Ordner, der alles mögliche enthält. Auf die tausend Kniffel-, Knobel-
+und ASCII-Spiele, sowie auf Minigames gehe ich nicht weiter ein, das
+würde den Rahmen sprengen. Ich werde hauptsächlich beschreiben was „man
+schon kennt“. Ich möchte außerdem darauf hinweisen, dass ich nicht alle
+hier aufgelisteten Spiele getestet habe, aber davon ausgehe, dass sie
+funktionieren.</p>
+<div class="section" id="bekannte-spiele-die-fruher-proprietar-waren-aber-jetzt-open-source-sind">
+<h3><span class="section-number">4.1.1.1. </span>Bekannte Spiele, die früher proprietär waren, aber jetzt Open-Source sind<a class="headerlink" href="#bekannte-spiele-die-fruher-proprietar-waren-aber-jetzt-open-source-sind" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p>DOOM 1 + 2 + Final Doom ( es existieren mehrere Ports, z.t. mit
+Weiterentwicklungen)</p></li>
+<li><p><a class="reference external" href="http://www.eduke32.com">Duke Nukem 3D</a>, (games/eduke32, wahlweise
+mit dem <a class="reference external" href="http://hrp.duke4.net/">High Resolution Pack</a>)</p></li>
+<li><p><a class="reference external" href="http://www.quakeforge.net">Quake I</a>, ( games/quake-* ,
+weiterentwickelt-&gt; games/tenebrae )</p></li>
+<li><p><a class="reference external" href="http://www.quakeforge.net">Quake II</a>, ( games/quake2* )</p></li>
+<li><p><a class="reference external" href="http://www.quake3arena.com">Quake III</a>¹, ( games/ioquake3,
+games/quake3 ; games/linux-quake3 gibts auch, ist aber überflüssig)</p></li>
+<li><p><a class="reference external" href="http://warzone2100.sf.net">Warzone 2100</a>, ( games/warzone2100,
+weiterentwickelt <a class="reference external" href="https://gna.org/projects/warzone">Warzone
+Resurrection</a> )</p></li>
+</ul>
+</div>
+<div class="section" id="bekannte-spiele-die-proprietar-sind">
+<h3><span class="section-number">4.1.1.2. </span>Bekannte Spiele, die proprietär sind<a class="headerlink" href="#bekannte-spiele-die-proprietar-sind" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p>America’s Army Online ( games/linux-americasarmy )</p></li>
+<li><p><a class="reference external" href="http://nwn.bioware.com">Neverwinter Nights</a>¹ (
+games/linux-nwnclient, games/linux-nwnserver, games/nwndata,
+games/nwnusers )</p></li>
+<li><p><a class="reference external" href="http://www.quake.com">Quake IV</a>¹ ( games/linux-quake4 )</p></li>
+<li><p><a class="reference external" href="http://www.s2games.com/savage/">Savage</a> ( games/linux-savage )</p></li>
+<li><p><a class="reference external" href="http://www.enemy-territory.com">Wolfenstein: Enemy Territory</a>
+(games/linux-enemyterritory* )</p></li>
+</ul>
+</div>
+<div class="section" id="demos-zu-neueren-spielen">
+<h3><span class="section-number">4.1.1.3. </span>Demos zu neueren Spielen<a class="headerlink" href="#demos-zu-neueren-spielen" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.doom3.com">Doom3</a> ( games/linux-doom3-demo )</p></li>
+<li><p><a class="reference external" href="http://www.quake3arena.com">Quake III</a> ( games/linux-quake3-demo
+)</p></li>
+<li><p><a class="reference external" href="http://www.unrealtournament.com/">Unreal Tournament 2003</a> (
+games/linux-ut2003-demo )</p></li>
+<li><p><a class="reference external" href="http://www.unrealtournament.com/">Unreal Tournament 2004</a> (
+games/linux-ut2004-demo )</p></li>
+</ul>
+</div>
+<div class="section" id="empfehlenswerte-opensource-spiele">
+<h3><span class="section-number">4.1.1.4. </span>Empfehlenswerte OpenSource-Spiele<a class="headerlink" href="#empfehlenswerte-opensource-spiele" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://home.gna.org/oomadness/en/balazar/index.html">Balazar</a> (
+<a class="reference external" href="https://www.google.com/search?q=games/balazar&amp;btnI=lucky">games/balazar</a>
+) : ein 3D Adventure (in Python)</p></li>
+<li><p><a class="reference external" href="http://www.cubeengine.com/">Cube</a> (
+<a class="reference external" href="https://www.google.com/search?q=games/cube&amp;btnI=lucky">games/cube</a>
+) : ein Ego-Shooter mit Live-Level-Editing</p></li>
+<li><p><a class="reference external" href="http://www.eternal-lands.com">Eternal Lands</a> (
+<a class="reference external" href="https://www.google.com/search?q=games/el&amp;btnI=lucky">games/el</a> )
+: ein 3D Multiplayer Online Rollenspiel (nur Engine is FOSS)</p></li>
+<li><p><a class="reference external" href="http://www.nexuiz.com">Nexuiz</a> (
+<a class="reference external" href="https://www.google.com/search?q=games/nexuiz&amp;btnI=lucky">games/nexuiz</a>
+) : ein hektischer Ego-Shooter</p></li>
+<li><p><a class="reference external" href="http://spring.clan-sy.com/">Spring</a> (
+<a class="reference external" href="https://www.google.com/search?q=games/spring&amp;btnI=lucky">games/spring</a>
+) : ein Total Annihilation - Clone</p></li>
+</ul>
+<p>&lt;note&gt; Mit ¹ markierte Ports benötigen entweder Dateien von den Original
+CDs/DVDs oder eine Seriennummer zum spielen. &lt;/note&gt;</p>
+</div>
+<div class="section" id="spiele-aus-den-ports-installieren">
+<h3><span class="section-number">4.1.1.5. </span>Spiele aus den Ports installieren<a class="headerlink" href="#spiele-aus-den-ports-installieren" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Spiele aus den FreeBSD-Ports lassen sich wie alle anderen Ports einfach
+durch ein <strong>make install clean</strong> in <strong>/usr/ports/games/spielename</strong>,
+durch <strong>portinstall spielename</strong> oder durch ein Frontend wie KPorts
+installieren. Mehr dazu in <a class="reference external" href="/howto/Paketsysteme">Paketsysteme</a>. Damit
+man nicht mit Unmengen an Spieledaten sein <strong>/usr/local</strong> vollmüllt
+empfehle ich jedoch einen Ordner extra für Spiele anzulegen. Dies wird
+spätestens nötig wenn man auch Spiele aus 2) oder 3) installieren
+möchte. Dazu müssen wir die <strong>/etc/make.conf</strong> anpassen:</p>
+<ul class="simple">
+<li><p>Nehmen wir an, man hat den Ordner <strong>/mnt/games</strong> für diesen Zweck
+ausgewählt (andernfalls den jeweiligen Pfad immer anpassen).</p></li>
+<li><p>Damit jedes aus <strong>/usr/ports/games</strong> installierte Spiel sein eigenes
+Verzeichnis in dem games Ordner bekommt (dazu rate ich, damit man
+nicht mit den anderen, manuell in das Verzeichnis installierten
+Spielen durcheinander kommt), öffnen wir die <strong>/etc/make.conf</strong> (als
+root); dort fügen wir einfach am Ende folgendes ein:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.if${.CURDIR:M/usr/ports/games/*}
+PREFIX=/mnt/games/${PORTNAME}
+DATADIR=${PREFIX}/share
+.endif
+</pre></div>
+</div>
+<p>Das wars! Ab jetzt werden alle eure Spiele nach
+<strong>/mnt/games/spielename</strong> installiert. &lt;note&gt; Dies gilt nur, wenn die
+Spiele aus den Ports installiert werden, nicht für Packages! Mehr Infos
+darüber gibts hier im Wiki, aber da die meisten Spiele eh kein Package
+haben dürfte das egal sein. &lt;/note&gt;</p>
+<p>&lt;note&gt; da die Ports nicht nach <strong>/usr/local</strong> installiert werden, sind
+ihre ausführbaren Dateien nicht im PATH. Man sollte also nach der
+Installation die ausführbaren Dateien eines Spieles (die im bin
+Unterordner) mit <strong>ln -s</strong> nach <strong>/usr/games</strong> linken, damit man sie
+auch ohne Pfadangabe aufrufen kann. &lt;/note&gt;</p>
+</div>
+</div>
+<div class="section" id="spiele-ohne-ports-unter-linux-emulation">
+<h2><span class="section-number">4.1.2. </span>Spiele ohne Ports unter Linux-Emulation<a class="headerlink" href="#spiele-ohne-ports-unter-linux-emulation" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zuerst sollte man sichergehen, dass die Linux-Emulation installiert ist.
+Dazu sollten folgende Ports installiert sein:</p>
+<ul class="simple">
+<li><p><strong>emulators/linux_base-fc6</strong></p></li>
+<li><p><strong>textproc/linux-f10-expat</strong></p></li>
+<li><p><strong>x11-fonts/linux-f10-fontconfig</strong></p></li>
+<li><p><strong>x11/linux-f10-xorg-libs</strong></p></li>
+<li><p><strong>devel/linux-f10-sdl12</strong></p></li>
+</ul>
+<p>außerdem sollte in <strong>/etc/rc.conf</strong> der Eintrag <strong>linux_enable=“YES“</strong>
+nicht fehlen.</p>
+<p>Wenn man ein Spiel aus den Ports installiert hat, welches den Prefix
+„linux-“ hat und es funktioniert, dann weiß man, dass man alles richtig
+gemacht hat. :)</p>
+<p>Jetzt kann man die Linux-Spiele auf „ihre natürliche Weise“
+installieren, d.h. ausführen des jeweiligen Scripts oder der jeweiligen
+Binary von der CD. Einige Programmierer haben den Bankrott von Loki
+überlebt und bieten kostenlos „Installationhelfer“ für Linux-Spiele an.
+Diese einfachen Install-Wizards findet man hier:
+<a class="reference external" href="http://www.liflg.org/?catid=6">http://www.liflg.org/?catid=6</a></p>
+<p>Theoretisch sollten alle Linux-Spiele unter FreeBSD laufen! Beachtet
+bitte, dass alle 3D Grafiktreiber mit Außnahme proprietären nVidia
+Treiber im Moment kein „Mixed Mode“ unterstützten. Das bedeutet, dass
+auf FreeBSD/amd64 ein Linux-Spiel keine 3D-Beschleunigung nutzen kann.</p>
+<div class="section" id="spieleliste">
+<h3><span class="section-number">4.1.2.1. </span>Spieleliste<a class="headerlink" href="#spieleliste" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.bit-blot.com/aquaria/">Aquaria</a> (Opensource, baut man
+den Code funktioniert das sich ergebende Binary unter FreeBSD jedoch
+fehlerhaft.)</p></li>
+<li><p><a class="reference external" href="http://www.ritualistic.com/games.php/fakk2/">Heavy Metal FAKK2</a>
+(Benötigt alte libz, stürzt sonst ab!)</p></li>
+<li><p><a class="reference external" href="http://www.hereticii.com/">Heretic II</a> (läuft in der von Loki
+Games entwickelten Linuxfassung)</p></li>
+<li><p><a class="reference external" href="http://www.linuxgamepublishing.com/info.php?id=17&amp;">Hyperspace Delivery
+Boy</a></p></li>
+<li><p><a class="reference external" href="http://icculus.org/prey/index-de.html">Prey</a> (Achtung, benötigt
+libSDL aus den Ports, nicht die beiliegende!)</p></li>
+<li><p><a class="reference external" href="http://www.idsoftware.com/games/wolfenstein/rtcw/">Return to Castle
+Wolfenstein</a>
+(Opensource, baut jedoch nur unter FreeBSD/i386 und man verliert
+Punkbuster)</p></li>
+<li><p><a class="reference external" href="http://www.lokigames.com/products/rune/">Rune</a>, (läuft in der von
+Loki Games entwickelten Linuxversion)</p></li>
+<li><p><a class="reference external" href="http://www.serioussam.com/">Serious Sam</a></p></li>
+<li><p><a class="reference external" href="http://www.serioussam.com/">Serious Sam - The Second Encounter</a></p></li>
+<li><p><a class="reference external" href="http://www.serioussam.com/">Serious Sam II</a></p></li>
+<li><p><a class="reference external" href="http://de.wikipedia.org/wiki/Soldier_of_Fortune">Soldier of
+Fortune</a>, (läuft
+in der von Loki Games entwickelten Linuxversion)</p></li>
+<li><p><a class="reference external" href="http://www.trine-thegame.com">Trine</a></p></li>
+<li><p><a class="reference external" href="UnrealTournament2004">Unreal Tournament 2004</a></p></li>
+<li><p><a class="reference external" href="/UnrealTournament2004,TO/Crossfire">Crossfire</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="spiele-mittels-wine">
+<h2><span class="section-number">4.1.3. </span>Spiele mittels Wine<a class="headerlink" href="#spiele-mittels-wine" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="statusubersicht-wine-application-database">
+<h3><span class="section-number">4.1.3.1. </span>Statusübersicht Wine Application Database<a class="headerlink" href="#statusubersicht-wine-application-database" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In der Wine Application DB wird der Status der Spiele laufend erfasst.
+Für die wichtigsten FreeBSD-Versionen findet man unter den folgenden
+Links Informationen, welche Spiele (und Anwendungen) laufen oder auch
+nicht:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://appdb.winehq.org/objectManager.php?bIsQueue=false&amp;bIsRejected=false&amp;sClass=distribution&amp;iId=55&amp;sAction=view&amp;sTitle=View+Distribution">FreeBSD
+5.4</a></p></li>
+<li><p><a class="reference external" href="http://appdb.winehq.org/objectManager.php?bIsQueue=false&amp;bIsRejected=false&amp;sClass=distribution&amp;iId=301&amp;sAction=view&amp;sTitle=View+Distribution">FreeBSD
+6.2</a></p></li>
+<li><p><a class="reference external" href="http://appdb.winehq.org/objectManager.php?bIsQueue=false&amp;bIsRejected=false&amp;sClass=distribution&amp;iId=506&amp;sAction=view&amp;sTitle=View+Distribution">FreeBSD 7.0
+BETA1</a></p></li>
+</ul>
+</div>
+<div class="section" id="vorbereitung">
+<h3><span class="section-number">4.1.3.2. </span>Vorbereitung<a class="headerlink" href="#vorbereitung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Zunächst sollte man eine aktuelle Version von Wine <strong>emulators/wine</strong>
+installieren und mit dem Befehl <strong>winecfg</strong> konfigurieren, man sollte
+nicht vergessen den Einhängepunkt des CD-Laufwerks als Laufwerk
+hinzuzufügen und manuell als CD-Laufwerk zu definieren. Spiele die
+keinen Kopierschutzmechanismus besitzen oder einen der von Wine
+unterstützt wird, können auch .iso-Images der CDs benutzen, siehe dazu
+<a class="reference external" href="/howto/Wine">Wine</a>. Man kann sehr einfach mittels <strong>cp /dev/acd0
+~/image.iso</strong> ein CD-Image erzeugen.</p>
+<p>Wine funktioniert unter FreeBSD leider etwas schlechter als unter
+GNU/Linux, aber ein paar Sachen gehen schon.</p>
+<p>Hier werden nur Spiele aufgelistet, die getestet wurden. Soweit nicht
+anders angegeben installiert man das Spiel mit <strong>wine setup.exe</strong> und
+startet das Spiel mit <strong>wine spiel.exe</strong> (man sollte schon den richtigen
+Pfad und Namen angeben).</p>
+<p>Bei OpenGl-Spielen sollte man noch ein „-opengl“ als Parameter
+dranhängen. Zur Zeit ist wine’s threading im Umbau. Die meisten Spiele
+brauchen im Moment noch die kthreads-binary, also einfach
+<strong>wine-kthread</strong> statt <strong>wine</strong> als Befehl nehmen.</p>
+<p>Ist bei <em>Installation</em> „nein“ angegeben, muss man das Spiel unter
+Windows installieren und den Installationsordner „rüberkopieren“. Wer
+ein GNU/Linux auf der Festplatte hat, kann auch versuchen es dort
+mittels Cedega zu installieren. Manchmal (z.B. bei Starcraft und
+Warcraft) ist die Installation auch nur unter Wine auf FreeBSD kaputt,
+dann kann man auch unter Wine auf GNU/Linux installieren.</p>
+</div>
+<div class="section" id="spieleliste-1">
+<span id="id1"></span><h3><span class="section-number">4.1.3.3. </span>Spieleliste<a class="headerlink" href="#spieleliste-1" title="Link zu dieser Überschrift">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Baldur’s Gate II &amp; Throne of Bhaal</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hersteller</p></td>
+<td><p>Bioware Corp</p></td>
+</tr>
+<tr class="row-odd"><td><p>Installation</p></td>
+<td><p>Mit manuellem „unshielden“ der .cabs oder unter GNU/Linux mit dem Loki-Installer.</p></td>
+</tr>
+<tr class="row-even"><td><p>Spielbar</p></td>
+<td><p>Nein, dies liegt an FreeBSD. Unter GNU/Linux mit gleichen Einstellungen läufts 100%.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Patches</p></td>
+<td><p>afaik nein</p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB</p></td>
+<td><p><a class="reference external" href="http://appdb.winehq.org/appview.php?iAppId=272">http://appdb.winehq.org/appview.php?iAppId=272</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WineDB-Rating</p></td>
+<td><p>Bronze</p></td>
+</tr>
+<tr class="row-even"><td><p>Webseite</p></td>
+<td><p><a class="reference external" href="http://www.bioware.com/games/shadows_amn/">http://www.bioware.com/games/shadows_amn/</a>, <a class="reference external" href="http://www.bioware.com/games/throne_bhaal/">http://www.bioware.com/games/throne_bhaal/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Sonstiges</p></td>
+<td><p>Auf <a class="reference external" href="http://gemrb.sf.net">http://gemrb.sf.net</a> gibt es einen freien Nachbau der Infinity-Engine, der Planescape:Torment, BGI, BGII+ToB, IWDI und IWDII unterstützen soll. Leider gibt es (noch) keinen Port, ich schaue mal was sich da machen lässt.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Battle Realms</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Hersteller</p></td>
+<td><p>UBI</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wiki</p></td>
+<td><p><a class="reference external" href="BattleRealms">Battle Realms</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Genre</p></td>
+<td><p>Echtzeit Strategie</p></td>
+</tr>
+<tr class="row-odd"><td><p>Patches</p></td>
+<td><p>NoCD</p></td>
+</tr>
+<tr class="row-even"><td><p>Webseite</p></td>
+<td><p><a class="reference external" href="http://battlerealms.ubi.com">http://battlerealms.ubi.com</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WineDB</p></td>
+<td><p><a class="reference external" href="http://appdb.winehq.org/appview.php?iAppId=3013">http://appdb.winehq.org/appview.php?iAppId=3013</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB-Rating</p></td>
+<td><p>Gold</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Counter Strike 1.6 <strong>ohne Steam</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Installation</p></td>
+<td><p>nicht getestet</p></td>
+</tr>
+<tr class="row-even"><td><p>Spielbar</p></td>
+<td><p>Nein, stürtzt beim Starten ab</p></td>
+</tr>
+<tr class="row-odd"><td><p>WineDB</p></td>
+<td><p><a class="reference external" href="http://appdb.winehq.org/appview.php?iAppId=8">http://appdb.winehq.org/appview.php?iAppId=8</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Rating</p></td>
+<td><p>Bronze</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sonstiges</p></td>
+<td><p>mit Steam und viel Gefrickel gehts angeblich</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Diablo II &amp; Lord of Destruction</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Installation</p></td>
+<td><p>nein</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spielbar</p></td>
+<td><p>Singleplayer und Multiplayer(LAN-UDP), Multiplayer(Battle.net)</p></td>
+</tr>
+<tr class="row-even"><td><p>Patches</p></td>
+<td><p>NoCD</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wiki</p></td>
+<td><p><a class="reference external" href="DiabloII">Diablo II</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB</p></td>
+<td><p><a class="reference external" href="http://appdb.winehq.org/appview.php?iAppId=74">http://appdb.winehq.org/appview.php?iAppId=74</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WineDB-Rating</p></td>
+<td><p>Gold</p></td>
+</tr>
+<tr class="row-even"><td><p>Webseite</p></td>
+<td><p><a class="reference external" href="http://www.blizard.com/diablo2">http://www.blizard.com/diablo2</a>, <a class="reference external" href="http://www.blizzard.com/diablo2exp">http://www.blizzard.com/diablo2exp</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Sonstiges</p></td>
+<td><p>wine-kthread benutzen</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Dungeon Keeper II</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Installation</p></td>
+<td><p>mit manuallem Entpacken und viel Gefrickel</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spielbar</p></td>
+<td><p>momentan nicht</p></td>
+</tr>
+<tr class="row-even"><td><p>Patches</p></td>
+<td><p>NoCD</p></td>
+</tr>
+<tr class="row-odd"><td><p>WineDB</p></td>
+<td><p><a class="reference external" href="http://appdb.winehq.org/appview.php?iAppId=631">http://appdb.winehq.org/appview.php?iAppId=631</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB-Rating</p></td>
+<td><p>Bronze</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Guild Wars</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Version</p></td>
+<td><p>24.155</p></td>
+</tr>
+<tr class="row-even"><td><p>Installation</p></td>
+<td><p>Ja</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spielbar</p></td>
+<td><p>Ja</p></td>
+</tr>
+<tr class="row-even"><td><p>Wine-Version</p></td>
+<td><p>0.9.48</p></td>
+</tr>
+<tr class="row-odd"><td><p>WineDB</p></td>
+<td><p><a class="reference external" href="http://appdb.winehq.org/appview.php?iAppId=2243">http://appdb.winehq.org/appview.php?iAppId=2243</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WindDB-Rating</p></td>
+<td><p>Gold</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sonstiges</p></td>
+<td><p>Der Guild Wars-Ordner kann von Windows komplett kopiert werden und ist unter wine lauffähig</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Perfect World</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Version</p></td>
+<td><p>1.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>Installation</p></td>
+<td><p>Ja</p></td>
+</tr>
+<tr class="row-even"><td><p>Spielbar</p></td>
+<td><p>wird zur Zeit getestet — <a class="reference external" href="mailto:elwood&#37;&#52;&#48;bsdforen&#46;de">Elwood</a><em>04.11.2007 - 22:41</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>Wine-Version</p></td>
+<td><p>0.9.48</p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>WindDB-Rating</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Webseite</p></td>
+<td><p><a class="reference external" href="http://www.perfectworld.com.my">http://www.perfectworld.com.my</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Sonstiges</p></td>
+<td><p>Kostenloses MMORPG in englisch oder chinesisch</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Shogo: Mobile Armor Devision</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Installation</p></td>
+<td><p>ja</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spielbar</p></td>
+<td><p>momentan nicht</p></td>
+</tr>
+<tr class="row-even"><td><p>Rating</p></td>
+<td><p>Bronze</p></td>
+</tr>
+<tr class="row-odd"><td><p>Webseite</p></td>
+<td><p><a class="reference external" href="http://www.shogo-mad.com">http://www.shogo-mad.com</a></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Soldier of Fortune 2</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Installation</p></td>
+<td><p>manuell, siehe <a class="reference external" href="http://www.bsdforen.de/showthread.php?p=124653">http://www.bsdforen.de/showthread.php?p=124653</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spielbar</p></td>
+<td><p>Singleplayer und Multiplayer.</p></td>
+</tr>
+<tr class="row-even"><td><p>Patches</p></td>
+<td><p>NoCD</p></td>
+</tr>
+<tr class="row-odd"><td><p>WineDB</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB-Rating</p></td>
+<td><p>Gold</p></td>
+</tr>
+<tr class="row-odd"><td><p>Webseite</p></td>
+<td><p><a class="reference external" href="http://www.ravensoft.com/soldier2.html">http://www.ravensoft.com/soldier2.html</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Sonstiges</p></td>
+<td><p>Texturen im Spiel nicht auf „very high“ setzen, Texturkompressionen aktivieren</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Starcraft &amp; Starcraft BroodWar</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Installation</p></td>
+<td><p>nein, aber unter Wine auf GNU/Linux.</p></td>
+</tr>
+<tr class="row-even"><td><p>Spielbar</p></td>
+<td><p>Singleplayer und Multiplayer(LAN-UDP) funktionieren, Multiplayer(Battle.net) sehr unkomfortabel</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wiki</p></td>
+<td><p><a class="reference external" href="Starcraft">Starcraft</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB</p></td>
+<td><p><a class="reference external" href="http://appdb.winehq.org/appview.php?iAppId=72">http://appdb.winehq.org/appview.php?iAppId=72</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WineDB-Rating</p></td>
+<td><p>Silber</p></td>
+</tr>
+<tr class="row-even"><td><p>Webseite</p></td>
+<td><p><a class="reference external" href="http://www.blizzard.com/starcraft">http://www.blizzard.com/starcraft</a>, <a class="reference external" href="http://www.blizzard.com/broodwar">http://www.blizzard.com/broodwar</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Sonstiges</p></td>
+<td><p>wine-kthread benutzen</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Warcraft III &amp; Frozen Throne</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Installation</p></td>
+<td><p>nein, aber unter Wine auf GNU/Linux, jedoch nur mit Wine-Versionen &gt;= 0.9.6 nach dem Rüberkopieren, per <code class="docutils literal notranslate"><span class="pre">'regedit</span></code>‘ unter HKEY_CURRENT_USER\Software\Blizzard Entertainment\Warcraft III folgende String-Einträge hinzufügen:</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>„InstallPath“=“Z:\mein\unix\pfad\nach\WarcraftIII“</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>„Program“=“Z:\mein\unix\pfad\nach\WarcraftIII\war3.exe“</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>„War3CD“=“E:\“</p></td>
+</tr>
+<tr class="row-even"><td><p>Spielbar</p></td>
+<td><p>Singleplayer und Multiplayer(LAN), Multiplayer(Battle.net)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Patches</p></td>
+<td><p>Es werden nur Patches unterstützt, die nicht „Wrapper“ sind (siehe AppDb)</p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB</p></td>
+<td><p><a class="reference external" href="http://appdb.winehq.org/appview.php?iAppId=897">http://appdb.winehq.org/appview.php?iAppId=897</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Wine Version</p></td>
+<td><p>0.9.14</p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB-Rating</p></td>
+<td><p>Silber</p></td>
+</tr>
+<tr class="row-odd"><td><p>Webseite</p></td>
+<td><p><a class="reference external" href="http://www.blizzard.com/war3">http://www.blizzard.com/war3</a>, <a class="reference external" href="http://www.blizzard.com/war3x">http://www.blizzard.com/war3x</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Sonstiges</p></td>
+<td><p>wine-kthread benutzen.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Warhammer 40k: Dawn of War &amp; Winter Assault</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Installation</p></td>
+<td><p>nein</p></td>
+</tr>
+<tr class="row-even"><td><p>Spielbar</p></td>
+<td><p>Nein, beide stürzen beim Starten ab.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Patches</p></td>
+<td><p>NoCD</p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB</p></td>
+<td><p><a class="reference external" href="http://appdb.winehq.org/appview.php?iAppId=1918">http://appdb.winehq.org/appview.php?iAppId=1918</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WineDB-Rating</p></td>
+<td><p>Müll</p></td>
+</tr>
+<tr class="row-even"><td><p>Sonstiges</p></td>
+<td><p>unter GNU/Linux geht es angeblich.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>World of Warcraft</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Wiki</p></td>
+<td><p>WoW</p></td>
+</tr>
+<tr class="row-even"><td><p>WineDB</p></td>
+<td><p><a class="reference external" href="http://appdb.winehq.org/appview.php?iAppId=1922">http://appdb.winehq.org/appview.php?iAppId=1922</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WineDB-Rating</p></td>
+<td><p>Gold</p></td>
+</tr>
+<tr class="row-even"><td><p>Webseite</p></td>
+<td><p><a class="reference external" href="http://www.worldofwarcraft.com">http://www.worldofwarcraft.com</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Außer Wine gibt es noch zwei gängige Windowsemulatoren: WineX/Cedega und
+Crossover Wine, beide sind proprietär und funktionieren nur bedingt
+unter FreeBSD. Spiele unter Cedega werden hier deshalb nicht besprochen,
+wer aber frickeln will findet hier einen Link.</p>
+</div>
+<div class="section" id="links">
+<h3><span class="section-number">4.1.3.4. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p>Cedega unter FreeBSD (mit Port): <a class="reference external" href="http://cedega.firepipe.net/">http://cedega.firepipe.net/</a></p></li>
+<li><p>Spiele unter Wine (nur auf GNU/Linux getestet):
+<a class="reference external" href="http://www.frankscorner.org">http://www.frankscorner.org</a></p></li>
+<li><p>Wine Hauptseite mit Tipps, AppDb und Bugcenter: <a class="reference external" href="http://www.winehq.org">http://www.winehq.org</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="konsolen-und-dos-spiele">
+<h2><span class="section-number">4.1.4. </span>Konsolen- und DOS-Spiele<a class="headerlink" href="#konsolen-und-dos-spiele" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Da es unzählige Spiele für unzählige Konsolen gibt, werden hier keine
+Spiele getestet, sondern nur die Emulatoren aufgelistet, nach Platform
+sortiert:</p>
+<ul class="simple">
+<li><p>Amiga : UAE (emulators/uae)</p></li>
+<li><p>Atari : Atari800 (emulators/atari800), Hatari (emulators/hatari)</p></li>
+<li><p>Commodere 64 : Frodo (emulators/frodo), YAPE (emulators/yape)</p></li>
+<li><p>Lucasarts Adventures : scummvm (games/scummvm)</p></li>
+<li><p>PC-engine : VPCE (emulators/vpce)</p></li>
+<li><p>NeoGeo : GnGeo (emulators/gngeo)</p></li>
+<li><p>Nintendo 64 : Mupen64 (emulators/mupen64*)</p></li>
+<li><p>Nintendo Gameboy : GBE (emulators/gbe), GNGB (emulators/gngb), VGB
+(emulators/vgb)</p></li>
+<li><p>Nintendo Gameboy Advance : VBA (emulators/vba*)</p></li>
+<li><p>Nintendo Gameboy Color : GnuBoy (emulators/gnuboy)</p></li>
+<li><p>Nintendo Gamecube : GCube (emulators/gcube)</p></li>
+<li><p>Nintendo NES : ines (emulators/ines), TuxNES (emulators/tuxnes)</p></li>
+<li><p>Nintendo SNES : Snes9x (emulators/snes9x), Zsnes (emulators/zsnes)</p></li>
+<li><p>Sega Genesis : DGen (emulators/dgen-sdl), Generator
+(emulators/generator*), GenS (emulators/gens)</p></li>
+<li><p>Sega Mastersystem/GameGear : MasterGear (emulators/mastergear)</p></li>
+<li><p>Sony Playstation : ePSXe (emulators/linux-ePSXe)</p></li>
+<li><p>MSDOS : DosBox (emulators/dosbox)</p></li>
+</ul>
+<p>und dann gibt es noch M.A.M.E, der fast alles emuliert, unter
+(emulators/xmame). Für xMAME existieren auch diverse grafische
+Front-Ends in den Ports. Einfach mal schauen!</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="battle_realms.txt.html" class="btn btn-neutral float-right" title="4.2. Battle Realms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="spiele_index.html" class="btn btn-neutral float-left" title="4. Spiele" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

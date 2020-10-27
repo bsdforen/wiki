@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.7. Unreal Tournament 2004 &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="5. FreeBSD" href="../freebsd/freebsd_index.html" />
+    <link rel="prev" title="4.6. Unreal Tournament 2004 - TO:Crossfire" href="unreal_tournament_2004_-_to-crossfire.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="spiele_index.html">4. Spiele</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="computerspiele_unter_freebsd.txt.html">4.1. Computerspiele unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="battle_realms.txt.html">4.2. Battle Realms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diablo_ii.txt.html">4.3. Diablo II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="starcraft.txt.html">4.4. Starcraft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal.txt.html">4.5. Unreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal_tournament_2004_-_to-crossfire.txt.html">4.6. Unreal Tournament 2004 - TO:Crossfire</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.7. Unreal Tournament 2004</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#benotigte-pakete">4.7.1. Benötigte Pakete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">4.7.2. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#das-spiel-patchen">4.7.3. Das Spiel Patchen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#benotigte-libs-kopieren">4.7.4. Benötigte Libs kopieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cd-key-hinzufugen">4.7.5. CD-Key hinzufügen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spiel-starten">4.7.6. Spiel starten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verwandte-artikel">4.7.7. verwandte Artikel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links">4.7.8. Links</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="spiele_index.html"><span class="section-number">4. </span>Spiele</a> &raquo;</li>
+        
+      <li><span class="section-number">4.7. </span>Unreal Tournament 2004</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/spiele/unreal_tournament_2004.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="../freebsd/freebsd_index.html" class="btn btn-neutral float-right" title="5. FreeBSD" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="unreal_tournament_2004_-_to-crossfire.txt.html" class="btn btn-neutral float-left" title="4.6. Unreal Tournament 2004 - TO:Crossfire" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="unreal-tournament-2004">
+<h1><span class="section-number">4.7. </span>Unreal Tournament 2004<a class="headerlink" href="#unreal-tournament-2004" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd4.png" src="../_images/logo-freebsd4.png" />
+</div>
+<p>Im Handel gibt es verschiedene Versionen von Unreal Tournament, mit und ohne
+Linux Installer. Im folgenden wird die manuelle Einrichtung des Spiels, ohne
+Linux Installer, beschrieben.</p>
+<div class="section" id="benotigte-pakete">
+<h2><span class="section-number">4.7.1. </span>Benötigte Pakete<a class="headerlink" href="#benotigte-pakete" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Folgende Pakete werden zur Installation benötigt:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=archivers/unshield&amp;btnI=lucky">archivers/unshield</a>
+um Dateien aus Microsoft Cabinet (.cab) Dateien zu extrahieren.</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=devel/linux-sdl12&amp;btnI=lucky">devel/linux-sdl12</a>
+eine Multimedia Bibliothek, welche unter anderem für die
+Grafikausgabe zuständig ist.</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=audio/linux-openal&amp;btnI=lucky">audio/linux-openal</a>
+kümmert sich um die Soundeffekte.</p></li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2><span class="section-number">4.7.2. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Von der UT2K4 DVD werden folgende Dateien benötigt: data1.cab,
+data1.hdr, data2.cab, data3.cab, data4.cab, data5.cab und data6.cab. Die
+cabs werden alle in ein beliebiges Verzeichnis kopiert und entpackt:</p>
+<p># unshield x /pfad/zur/data1.cab -d /mein_spiele_verzeichnis/ut2k4</p>
+</div>
+<div class="section" id="das-spiel-patchen">
+<h2><span class="section-number">4.7.3. </span>Das Spiel Patchen<a class="headerlink" href="#das-spiel-patchen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Damit das Spiel funktioniert wird der aktuellste
+<a class="reference external" href="http://download.beyondunreal.com/fileworks.php/official/ut2004/ut2004-lnxpatch3369-2.tar.bz2">Patch</a>
+von UT2K4 benötigt, dieser wird zugleich entpackt. Der entpackte Patch
+mit seinen sechs Verzeichnissen wird nun in den
+<strong>mein_spiele_verzeichnis/ut2k4</strong> Ordner verschoben. Wenn alles richtig
+gemacht wurde, befinden sich nun vier ausführbare Dateien im
+<strong>/mein_spiele_verzeichnis/ut2k4/System</strong> Verzeichnis.</p>
+</div>
+<div class="section" id="benotigte-libs-kopieren">
+<h2><span class="section-number">4.7.4. </span>Benötigte Libs kopieren<a class="headerlink" href="#benotigte-libs-kopieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zusätzlich werden zwei Libs ins <strong>ut2k4/System</strong> Verzeichnis kopiert,
+eine aus dem <strong>linux-sdl-</strong>, sowie eine aus dem <strong>linux-openal</strong>-Paket.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cp /usr/compat/linux/usr/lib/libSDL-1.2.so.0.7.3 /mein_spiele_verzeichnis/ut2k4/System/libSDL-1.2.so.0</span>
+<span class="c1"># cp /usr/compat/linux/usr/lib/libopenal.so.0.0.0 /mein_spiele_verzeichnis/ut2k4/System/openal.so</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cd-key-hinzufugen">
+<h2><span class="section-number">4.7.5. </span>CD-Key hinzufügen<a class="headerlink" href="#cd-key-hinzufugen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zum Online Spielen wird ein CD Key benötigt. Dafür wird die Textdatei
+<strong>ut2k4/System/cdkey</strong> erstellt, diese enthält die eigene Seriennummer
+in GROßBUCHSTABEN.</p>
+</div>
+<div class="section" id="spiel-starten">
+<h2><span class="section-number">4.7.6. </span>Spiel starten<a class="headerlink" href="#spiel-starten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Damit ist die UT2K4 Installation abgeschlossen. Das Spiel startet indem
+in das <strong>ut2k4/Sytem</strong> Verzeichnis gewechselt und folgendes eingegeben
+wird:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ./ut2004-bin</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="verwandte-artikel">
+<h2><span class="section-number">4.7.7. </span>verwandte Artikel<a class="headerlink" href="#verwandte-artikel" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Es empfiehlt sich zu diesem Thema auch folgenden Artikel gelesen zu
+haben.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="hauptseite">FreeBSD - Spiele</a></p></li>
+</ul>
+</div>
+<div class="section" id="links">
+<h2><span class="section-number">4.7.8. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.unrealtournament.com/">Offizielle Webpräsenz von Unreal
+Tournament</a></p></li>
+<li><p><a class="reference external" href="http://unreal.ingame.de/index.php">inUnreal.de</a> Die große
+deutsche Unreal Seite. Infos, Tips, Tricks …</p></li>
+<li><p><a class="reference external" href="http://www.planetunreal.com/">planetunreal.com</a> Große
+englischsprachige Seite zu Unreal.</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../freebsd/freebsd_index.html" class="btn btn-neutral float-right" title="5. FreeBSD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="unreal_tournament_2004_-_to-crossfire.txt.html" class="btn btn-neutral float-left" title="4.6. Unreal Tournament 2004 - TO:Crossfire" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

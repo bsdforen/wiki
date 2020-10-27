@@ -1,0 +1,909 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.143. VPN (OpenBSD) &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.144. Windowmanager" href="windowmanager.txt.html" />
+    <link rel="prev" title="1.142. VLAN-Konfiguration mit FreeBSD" href="vlans_mit_freebsd.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.143. VPN (OpenBSD)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dsl-einwahl">1.143.1. DSL-Einwahl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#etc-rc-local">1.143.1.1. /etc/rc.local</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#etc-ppp-ppp-conf">1.143.1.2. /etc/ppp/ppp.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#etc-ppp-ppp-linkup">1.143.1.3. /etc/ppp/ppp.linkup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#etc-ppp-ppp-linkdown">1.143.1.4. /etc/ppp/ppp.linkdown</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tagliche-neuanmeldung">1.143.1.5. Tägliche Neuanmeldung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#firewall">1.143.2. Firewall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#etc-pf-conf">1.143.2.1. /etc/pf.conf</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ddclient">1.143.3. ddclient</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#etc-ddclient-conf">1.143.3.1. /etc/ddclient.conf</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#isakmpd">1.143.4. ISAKMPD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#etc-isakmpd-isakmpd-policy">1.143.4.1. /etc/isakmpd/isakmpd.policy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vpn-gateway">1.143.4.2. VPN-Gateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vpn-router">1.143.4.3. VPN-Router</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#x509-zertifikate">1.143.5. x509-Zertifikate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.143. </span>VPN (OpenBSD)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/vpn_openbsd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="windowmanager.txt.html" class="btn btn-neutral float-right" title="1.144. Windowmanager" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vlans_mit_freebsd.txt.html" class="btn btn-neutral float-left" title="1.142. VLAN-Konfiguration mit FreeBSD" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vpn-openbsd">
+<h1><span class="section-number">1.143. </span>VPN (OpenBSD)<a class="headerlink" href="#vpn-openbsd" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-openbsd2.png" src="../_images/logo-openbsd2.png" />
+</div>
+<p>Das folgende HOWTO beschreibt einige wesentliche Elemente der
+Konfiguration eines VPN-Routers. Das Gerät ist lüfterlos und bootet von
+einer CF-Karte. Das System läuft im RAM-Drive. Die Anbindung an DAS
+INTERNET erfolgt unter Verwendung eines marktüblichen ADSL-Anschlusses
+(natürlich flat…). Die dynamisch zugeteilte Adresse wird per DYNDNS
+kanonisch auflösbar gemacht. Als VPN-Applikation wird ISAKMPD verwendet.</p>
+<p>Ziel war es, viele kleine Standorte kostengünstig mittels ADSL an ein
+zentrales LAN via VPN anzubinden. Die VPN-Gateways an den Standorten
+sollten wartungsarm sein, d.h. über keine bewegten Teile verfügen.
+Weiterhin mussten sie schnell updatebar sein. Aus diesem Grund wurde
+eine zentrale Masterstation (baugleich mit den Stationen an den
+Standorten) aufgesetzt, die die CF-Karten bespielt, mit denen die
+VPN-Gateways an den Standorten bestückt werden.</p>
+<div class="section" id="dsl-einwahl">
+<h2><span class="section-number">1.143.1. </span>DSL-Einwahl<a class="headerlink" href="#dsl-einwahl" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="etc-rc-local">
+<h3><span class="section-number">1.143.1.1. </span>/etc/rc.local<a class="headerlink" href="#etc-rc-local" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span><span class="n">other</span> <span class="n">stuff</span>
+<span class="c1"># PPPOE</span>
+<span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">ifconfig</span> <span class="n">re0</span> <span class="n">up</span> <span class="o">&amp;&amp;</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">ppp</span> <span class="o">-</span><span class="n">ddial</span> <span class="n">pppoe</span>
+<span class="o">...</span><span class="n">other</span> <span class="n">stuff</span>
+</pre></div>
+</div>
+<p><em>Kommentar:</em></p>
+<ul class="simple">
+<li><p>re0 ist in diesem Fall das zu benutzende Interface.</p></li>
+<li><p>Das Interface muss vor der Einwahl auf UP gesetzt werden.</p></li>
+</ul>
+</div>
+<div class="section" id="etc-ppp-ppp-conf">
+<h3><span class="section-number">1.143.1.2. </span>/etc/ppp/ppp.conf<a class="headerlink" href="#etc-ppp-ppp-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span><span class="p">:</span>
+ <span class="nb">set</span> <span class="n">log</span> <span class="n">Phase</span> <span class="n">Chat</span> <span class="n">LCP</span> <span class="n">IPCP</span> <span class="n">CCP</span> <span class="n">tun</span> <span class="n">command</span>
+ <span class="nb">set</span> <span class="n">redial</span> <span class="mi">10</span> <span class="mi">0</span>
+ <span class="nb">set</span> <span class="n">reconnect</span> <span class="mi">10</span> <span class="mi">10000</span>
+<span class="n">pppoe</span><span class="p">:</span>
+ <span class="nb">set</span> <span class="n">device</span> <span class="s2">&quot;!/usr/sbin/pppoe -i re0&quot;</span>
+ <span class="n">disable</span> <span class="n">acfcomp</span> <span class="n">protocomp</span>
+ <span class="n">deny</span> <span class="n">acfcomp</span>
+ <span class="nb">set</span> <span class="n">mtu</span> <span class="mi">1484</span>
+ <span class="nb">set</span> <span class="n">mru</span> <span class="mi">1484</span>
+ <span class="nb">set</span> <span class="n">mtu</span> <span class="n">maximum</span> <span class="mi">1492</span>
+ <span class="nb">set</span> <span class="n">mru</span> <span class="n">maximum</span> <span class="mi">1492</span>
+ <span class="nb">set</span> <span class="n">speed</span> <span class="n">sync</span>
+ <span class="n">disable</span> <span class="n">ipv6</span> <span class="n">ipv6cp</span>
+ <span class="nb">set</span> <span class="n">authname</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxx@t-online.de&quot;</span>
+ <span class="nb">set</span> <span class="n">authkey</span> <span class="s2">&quot;yyyyyyyy&quot;</span>
+ <span class="n">enable</span> <span class="n">mssfixup</span>
+ <span class="n">enable</span> <span class="n">lqr</span>
+ <span class="n">add</span> <span class="n">default</span> <span class="n">HISADDR</span>
+</pre></div>
+</div>
+<p><em>Kommentar:</em></p>
+<ul class="simple">
+<li><p>re0 ist in diesem Fall das zu benutzende Interface.</p></li>
+<li><p>authname und authkey muessen natürlich die entsprechenden Werte
+enthalten.</p></li>
+</ul>
+</div>
+<div class="section" id="etc-ppp-ppp-linkup">
+<h3><span class="section-number">1.143.1.3. </span>/etc/ppp/ppp.linkup<a class="headerlink" href="#etc-ppp-ppp-linkup" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>pppoe:
+ ! sh -c &quot;/sbin/pfctl -F all -f /etc/ppp/pf.conf -D EXT0IF=INTERFACE&quot;
+ !bg sh -c &quot;/usr/local/sbin/ddclient -daemon=0 -syslog -quiet retry -mail root&quot;
+ !bg /sbin/isakmpd
+</pre></div>
+</div>
+<p><em>Kommentar:</em></p>
+<ul class="simple">
+<li><p>Die Konfigurationen der Firewall,des dd-Klienten sowie des ISAKMPD
+werden später erklärt.</p></li>
+<li><p>pfctl flushed die aktuellen und lädt die neuen Firewallregeln. Es
+unterstützt die Übergabe von Variablenwerten in der Kommandozeile,
+d.h. EXT0IF taucht später in der pf.conf wieder auf. Es wird hier auf
+den Wert des von PPP verwendeten Interfaces, meist tun0, gesetzt.</p></li>
+<li><p>Der ddclient erledigt die Aktualisierung des bei <code class="docutils literal notranslate"><span class="pre">dyndns.org</span></code>
+registrierten kanonischen Names anhand der dynamisch vergebenen
+IP-Adresse.</p></li>
+<li><p>Der ISAKMPD stellt die VPN-Verbindung zum VPN-Gateway her.</p></li>
+</ul>
+</div>
+<div class="section" id="etc-ppp-ppp-linkdown">
+<h3><span class="section-number">1.143.1.4. </span>/etc/ppp/ppp.linkdown<a class="headerlink" href="#etc-ppp-ppp-linkdown" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>MYADDR:
+ !bg sh -c &quot;/bin/kill -KILL `/bin/cat /var/run/isakmpd.pid`&quot;
+ ! sh -c &quot;/sbin/pfctl -F all -f /etc/pf.conf&quot;
+</pre></div>
+</div>
+<p><em>Kommentar:</em></p>
+<ul class="simple">
+<li><p>Der ISAKMPD wird gestoppt.</p></li>
+<li><p>Die Standard-Firewallregeln werden geladen.</p></li>
+</ul>
+</div>
+<div class="section" id="tagliche-neuanmeldung">
+<h3><span class="section-number">1.143.1.5. </span>Tägliche Neuanmeldung<a class="headerlink" href="#tagliche-neuanmeldung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die DTAG erzwingt alle &gt;24h eine Abmeldung der bestehenden
+DSL-Verbindung. Um diesen Reset zu einem von uns bestimmten Zeitpunkt
+kontrolliert zu gestalten, melden wir uns einmal alle 24h ab und wieder
+an.</p>
+<div class="section" id="crontab">
+<h4><span class="section-number">1.143.1.5.1. </span>crontab<a class="headerlink" href="#crontab" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">restart</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="restart-sh">
+<h4><span class="section-number">1.143.1.5.2. </span>restart.sh<a class="headerlink" href="#restart-sh" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+PPPID=`ps wax | awk &#39;{if ($5 ~ &quot;ppp&quot; &amp;&amp; $6 == &quot;-ddial&quot;) {print $1}}&#39;`
+if [ $PPPID -gt 0 ]; then
+    kill -INT $PPPID
+else
+    echo &quot;$(basename $0): $PPPID is not a number&quot;
+    echo &quot;$(basename $0): can not terminate ppp&quot;
+    exit 1
+fi
+exit 0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="firewall">
+<h2><span class="section-number">1.143.2. </span>Firewall<a class="headerlink" href="#firewall" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Firewall sollte beim Systemstart aktiviert werden. Dazu muss in der
+<code class="docutils literal notranslate"><span class="pre">/etc/rc.conf</span></code> <code class="docutils literal notranslate"><span class="pre">PF=YES</span></code> gesetzt werden. Es existieren zwei
+<code class="docutils literal notranslate"><span class="pre">pf.conf</span></code>. Die eine, <code class="docutils literal notranslate"><span class="pre">/etc/pf.conf</span></code>, wird im Zustand ohne
+DSL-Anbindung, die andere <code class="docutils literal notranslate"><span class="pre">/etc/ppp/pf.conf</span></code> wird nach dem Aufbau der
+DSL-Verbindung geladen.</p>
+<div class="section" id="etc-pf-conf">
+<h3><span class="section-number">1.143.2.1. </span>/etc/pf.conf<a class="headerlink" href="#etc-pf-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>INT0IF=&quot;rl0&quot;
+set skip on lo0
+scrub in
+block in
+pass out keep state
+antispoof quick for { lo0 $INT0IF }
+</pre></div>
+</div>
+<div class="section" id="etc-ppp-pf-conf">
+<h4><span class="section-number">1.143.2.1.1. </span>/etc/ppp/pf.conf<a class="headerlink" href="#etc-ppp-pf-conf" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>INT0IF=&quot;rl0&quot;
+EXT0IF=&quot;tun0&quot;
+VPNGATE=&quot;aaa.bbb.ccc.ddd/xx&quot;
+ADMINNET=&quot;aaa.bbb.ccc.ddd/xx&quot;
+SERVERNET=&quot;aaa.bbb.ccc.ddd/xx&quot;
+HOMENET=&quot;aaa.bbb.ccc.ddd/xx&quot;
+DNSSERVER=&quot;aaa.bbb.ccc.ddd&quot;
+HTTPPROXYSERVER=&quot;aaa.bbb.ccc.ddd&quot;
+FTPPROXYSERVER=&quot;aaa.bbb.ccc.ddd&quot;
+IMAPSERVER=&quot;aaa.bbb.ccc.ddd&quot;
+SMTPSERVER=&quot;aaa.bbb.ccc.ddd&quot;
+OFFICESERVER=&quot;aaa.bbb.ccc.ddd&quot;
+MYSQLSERVER=&quot;aaa.bbb.ccc.ddd&quot;
+INFORMIXSERVER=&quot;aaa.bbb.ccc.ddd&quot;
+WSUSSERVER=&quot;aaa.bbb.ccc.ddd&quot;
+AVGSERVER=&quot;aaa.bbb.ccc.ddd&quot;
+NTPSERVER=&quot;aaa.bbb.ccc.ddd&quot;
+table &lt;VPN_T&gt; \
+    { $VPNGATE }
+set skip on { lo0 enc0 }
+scrub all
+block in log all
+pass out keep state
+block out log on $EXT0IF from $HOMENET to any
+# FROM HERE TO VPNGATE #################################################
+# ICMP
+pass in on $INT0IF inet proto icmp all icmp-type 8 code 0 keep state
+# DNS
+pass in on $INT0IF proto udp from $HOMENET to $DNSSERVER port 53 keep state
+# HTTP ########################################################################
+pass in on $INT0IF proto tcp from $HOMENET to $HTTPPROXYSERVER port 3128 keep state
+pass in on $INT0IF proto udp from $HOMENET to $HTTPPROXYSERVER port 3128 keep state
+# IMAP ########################################################################
+pass in on $INT0IF proto tcp from $HOMENET to $IMAPSERVER port { 993 } keep state
+pass in on $INT0IF proto udp from $HOMENET to $IMAPSERVER port { 993 } keep state
+# SMTP ########################################################################
+pass in on $INT0IF proto tcp from $HOMENET to $IMAPSERVER port 25 keep state
+# OFFICE SAMBA ########################################################################
+pass in on $INT0IF proto { tcp udp } from $HOMENET to $OFFICESERVER port { 137 138 139 445 } keep state
+# MYSQL ################################################################
+pass in on $INT0IF proto { tcp udp } from $HOMENET to $MYSQLSERVER port { 1433 } keep state
+# INFORMIX ################################################################
+pass in on $INT0IF proto { tcp udp } from $HOMENET to $INFORMIXSERVER port { 1526 } keep state
+# WSUS ################################################################
+pass in on $INT0IF proto { tcp udp } from $HOMENET to $WSUSSERVER port { 8530 } keep state
+# AVG ################################################################
+pass in on $INT0IF proto { tcp udp } from $HOMENET to $AVGSERVER port { 135 137 139 445 4156 } keep state
+# NTP ################################################################
+pass in on $INT0IF proto { tcp udp } from $HOMENET to $NTPSERVER port { 123 } keep state
+# VNC ################################################################
+pass in on $INT0IF proto { tcp udp } from $HOMENET to  { $ADMINNET $SERVERNET } port { 5800 5900 } keep state
+# PRINT ################################################################
+pass in on $INT0IF proto { tcp udp } from $HOMENET to  { $SERVERNET } port { 9100 } keep state
+# FROM VPNGATE TO HERE #################################################
+# ICMP ########################################################################
+pass in on enc0 from { $ADMINNET $SERVERNET } to $HOMENET keep state
+# SSH #########################################################################
+pass in on $EXT0IF proto tcp from { $VPNGATE } to ($EXT0IF) port 22 keep state
+# CRYPT #######################################################################
+pass out quick proto esp from any to &lt;VPN_T&gt;
+pass in quick proto esp from &lt;VPN_T&gt; to any
+pass out quick on enc0 from any to &lt;VPN_T&gt;
+pass in quick on enc0 from &lt;VPN_T&gt; to any
+pass out quick on $EXT0IF proto udp from any to &lt;VPN_T&gt; port = 500
+pass in quick on $EXT0IF proto udp from &lt;VPN_T&gt; to any port = 500
+###############################################################################
+</pre></div>
+</div>
+<p><em>Kommentar:</em> Der CRYPT-Abschnitt sollte analog in der pf.conf des
+VPN-Gateways auftauchen.</p>
+</div>
+</div>
+</div>
+<div class="section" id="ddclient">
+<h2><span class="section-number">1.143.3. </span>ddclient<a class="headerlink" href="#ddclient" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der <code class="docutils literal notranslate"><span class="pre">ddclient</span></code> aktualisiert einen zuvor unter
+<a class="reference external" href="www.dyndns.org">www.dyndns.org</a> angelegten Dynamischen DNS Host mit
+dem Namen <code class="docutils literal notranslate"><span class="pre">myvpnrouter.homeunix.net</span></code>.</p>
+<div class="section" id="etc-ddclient-conf">
+<h3><span class="section-number">1.143.3.1. </span>/etc/ddclient.conf<a class="headerlink" href="#etc-ddclient-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">daemon</span><span class="o">=</span><span class="mi">300</span>                              <span class="c1"># check every 300 seconds</span>
+<span class="n">syslog</span><span class="o">=</span><span class="n">yes</span>                              <span class="c1"># log update msgs to syslog</span>
+<span class="n">mail</span><span class="o">=</span><span class="n">root</span>                               <span class="c1"># mail all msgs to root</span>
+<span class="n">mail</span><span class="o">-</span><span class="n">failure</span><span class="o">=</span><span class="n">root</span>                       <span class="c1"># mail failed update msgs to root</span>
+<span class="n">pid</span><span class="o">=/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">ddclient</span><span class="o">.</span><span class="n">pid</span>               <span class="c1"># record PID in file.</span>
+<span class="n">use</span><span class="o">=</span><span class="n">web</span>                                 <span class="c1"># via web</span>
+<span class="n">protocol</span><span class="o">=</span><span class="n">dyndns2</span>                        <span class="c1"># default protocol</span>
+<span class="n">server</span><span class="o">=</span><span class="n">members</span><span class="o">.</span><span class="n">dyndns</span><span class="o">.</span><span class="n">org</span>               <span class="c1"># default server</span>
+<span class="n">login</span><span class="o">=</span><span class="n">xxxxxxxxx</span>                         <span class="c1"># default login</span>
+<span class="n">password</span><span class="o">=</span><span class="n">yyyyyyyyy</span>                      <span class="c1"># default password</span>
+<span class="n">wildcard</span><span class="o">=</span><span class="n">yes</span>                            <span class="c1"># add wildcard CNAME?</span>
+<span class="n">server</span><span class="o">=</span><span class="n">members</span><span class="o">.</span><span class="n">dyndns</span><span class="o">.</span><span class="n">org</span><span class="p">,</span>              \
+<span class="n">protocol</span><span class="o">=</span><span class="n">dyndns2</span>                        \
+<span class="n">myvpnrouter</span><span class="o">.</span><span class="n">homeunix</span><span class="o">.</span><span class="n">net</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="isakmpd">
+<h2><span class="section-number">1.143.4. </span>ISAKMPD<a class="headerlink" href="#isakmpd" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der ISAKMPD wird benutzt, um eine VPN-Verbindung zum Haupt-LAN
+herzustellen. Zur Authentifizierung werden x509-Zertifikate verwendet.
+Die Maschine die den Zugang zum Haupt-LAN verwaltet nennen wir
+<strong>myvpngate</strong>. Unseren VPN-Router nennen wir <strong>myvpnrouter00</strong>.</p>
+<div class="section" id="etc-isakmpd-isakmpd-policy">
+<h3><span class="section-number">1.143.4.1. </span>/etc/isakmpd/isakmpd.policy<a class="headerlink" href="#etc-isakmpd-isakmpd-policy" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Keynote</span><span class="o">-</span><span class="n">version</span><span class="p">:</span><span class="mi">2</span>
+<span class="n">Authorizer</span><span class="p">:</span> <span class="s2">&quot;POLICY&quot;</span>
+<span class="n">Conditions</span><span class="p">:</span> <span class="n">app_domain</span> <span class="o">==</span> <span class="s2">&quot;IPsec policy&quot;</span> <span class="o">&amp;&amp;</span>
+            <span class="n">esp_present</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span> <span class="o">&amp;&amp;</span>
+            <span class="n">esp_enc_alg</span> <span class="o">!=</span> <span class="s2">&quot;null&quot;</span> <span class="o">-&gt;</span> <span class="s2">&quot;true&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><em>Kommentar</em>:</p>
+<ul class="simple">
+<li><p>Diese Datei ist auf beiden Maschinen gleich.</p></li>
+</ul>
+</div>
+<div class="section" id="vpn-gateway">
+<h3><span class="section-number">1.143.4.2. </span>VPN-Gateway<a class="headerlink" href="#vpn-gateway" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Gegenstelle unseres VPN-Routers ist ein VPN-Gateway, der Zugang zum
+eigentlichen LAN. Dieses wird wie folgt konfiguriert um mit mehreren
+VPN-Routern mit dynamischen Adressen jeweils einen VPN-Tunnel aufbauen
+zu können:</p>
+<div class="section" id="etc-isakmpd-isakmpd-conf">
+<h4><span class="section-number">1.143.4.2.1. </span>/etc/isakmpd/isakmpd.conf<a class="headerlink" href="#etc-isakmpd-isakmpd-conf" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Phase</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">Default</span><span class="o">=</span>                <span class="n">myvpnrouters</span>
+<span class="p">[</span><span class="n">Phase</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">Passive</span><span class="o">-</span><span class="n">Connections</span><span class="o">=</span>    <span class="n">VPN</span><span class="o">-</span><span class="n">myvpngate</span><span class="o">-</span><span class="n">myvpnrouter00</span><span class="p">,</span><span class="n">VPN</span><span class="o">-</span><span class="n">myvpngate</span><span class="o">-</span><span class="n">myvpnrouter01</span>
+<span class="p">[</span><span class="n">myvpnrouters</span><span class="p">]</span>
+<span class="n">Phase</span><span class="o">=</span>                  <span class="mi">1</span>
+<span class="n">Transport</span><span class="o">=</span>              <span class="n">udp</span>
+<span class="n">Configuration</span><span class="o">=</span>          <span class="n">main</span><span class="o">-</span><span class="n">mode</span>
+<span class="n">ID</span><span class="o">=</span>                     <span class="n">my</span><span class="o">-</span><span class="n">ID</span>
+<span class="p">[</span><span class="n">my</span><span class="o">-</span><span class="n">ID</span><span class="p">]</span>
+<span class="n">ID</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span>                <span class="n">FQDN</span>
+<span class="n">Name</span><span class="o">=</span>                   <span class="n">myvpngate</span>
+<span class="p">[</span><span class="n">VPN</span><span class="o">-</span><span class="n">myvpngate</span><span class="o">-</span><span class="n">myvpnrouter00</span><span class="p">]</span>
+<span class="n">Phase</span><span class="o">=</span>                  <span class="mi">2</span>
+<span class="n">ISAKMP</span><span class="o">-</span><span class="n">peer</span><span class="o">=</span>            <span class="n">myvpnrouter00</span>
+<span class="n">Configuration</span><span class="o">=</span>          <span class="n">quick</span><span class="o">-</span><span class="n">mode</span>
+<span class="n">Local</span><span class="o">-</span><span class="n">ID</span><span class="o">=</span>               <span class="n">myvpngate</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span>
+<span class="n">Remote</span><span class="o">-</span><span class="n">ID</span><span class="o">=</span>              <span class="n">myvpnrouter00</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span>
+<span class="p">[</span><span class="n">VPN</span><span class="o">-</span><span class="n">myvpngate</span><span class="o">-</span><span class="n">myvpnrouter01</span><span class="p">]</span>
+<span class="n">Phase</span><span class="o">=</span>                  <span class="mi">2</span>
+<span class="n">ISAKMP</span><span class="o">-</span><span class="n">peer</span><span class="o">=</span>            <span class="n">myvpnrouter01</span>
+<span class="n">Configuration</span><span class="o">=</span>          <span class="n">quick</span><span class="o">-</span><span class="n">mode</span>
+<span class="n">Local</span><span class="o">-</span><span class="n">ID</span><span class="o">=</span>               <span class="n">myvpngate</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span>
+<span class="n">Remote</span><span class="o">-</span><span class="n">ID</span><span class="o">=</span>              <span class="n">myvpnrouter01</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span>
+<span class="p">[</span><span class="n">myvpngate</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span><span class="p">]</span>
+<span class="n">ID</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span>                <span class="n">IPV4_ADDR_SUBNET</span>
+<span class="n">Network</span><span class="o">=</span>                <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.0</span>
+<span class="n">Netmask</span><span class="o">=</span>                <span class="mf">255.255</span><span class="o">.</span><span class="mf">0.0</span>
+<span class="p">[</span><span class="n">myvpnrouter00</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span><span class="p">]</span>
+<span class="n">ID</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span>                <span class="n">IPV4_ADDR_SUBNET</span>
+<span class="n">Network</span><span class="o">=</span>                <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.0</span>
+<span class="n">Netmask</span><span class="o">=</span>                <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+<span class="p">[</span><span class="n">myvpnrouter01</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span><span class="p">]</span>
+<span class="n">ID</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span>                <span class="n">IPV4_ADDR_SUBNET</span>
+<span class="n">Network</span><span class="o">=</span>                <span class="mf">10.0</span><span class="o">.</span><span class="mf">1.0</span>
+<span class="n">Netmask</span><span class="o">=</span>                <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+<span class="p">[</span><span class="n">x509</span><span class="o">-</span><span class="n">certificates</span><span class="p">]</span>
+<span class="n">CA</span><span class="o">-</span><span class="n">directory</span><span class="o">=</span>   <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">isakmpd</span><span class="o">/</span><span class="n">ca</span><span class="o">/</span>
+<span class="n">Cert</span><span class="o">-</span><span class="n">directory</span><span class="o">=</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">isakmpd</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span>
+<span class="n">Private</span><span class="o">-</span><span class="n">key</span><span class="o">=</span>    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">isakmpd</span><span class="o">/</span><span class="n">private</span><span class="o">/</span><span class="n">myvpngate</span><span class="o">.</span><span class="n">key</span>
+<span class="p">[</span><span class="n">main</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span><span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span><span class="n">ID_PROT</span>
+<span class="n">Transforms</span><span class="o">=</span><span class="n">BLF</span><span class="o">-</span><span class="n">SHA</span><span class="o">-</span><span class="n">RSA_SIG</span>
+<span class="p">[</span><span class="n">quick</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span><span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span><span class="n">QUICK_MODE</span>
+<span class="n">Suites</span><span class="o">=</span><span class="n">QM</span><span class="o">-</span><span class="n">ESP</span><span class="o">-</span><span class="n">AES</span><span class="o">-</span><span class="n">SHA</span><span class="o">-</span><span class="n">SUITE</span>
+<span class="p">[</span><span class="n">Default</span><span class="o">-</span><span class="n">main</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span>                    <span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span>          <span class="n">ID_PROT</span>
+<span class="n">Transforms</span><span class="o">=</span>             <span class="mi">3</span><span class="n">DES</span><span class="o">-</span><span class="n">SHA</span><span class="p">,</span><span class="n">BLF</span><span class="o">-</span><span class="n">SHA</span>
+<span class="p">[</span><span class="n">Default</span><span class="o">-</span><span class="n">quick</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span>                    <span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span>          <span class="n">QUICK_MODE</span>
+<span class="n">Suites</span><span class="o">=</span>                 <span class="n">QM</span><span class="o">-</span><span class="n">ESP</span><span class="o">-</span><span class="mi">3</span><span class="n">DES</span><span class="o">-</span><span class="n">SHA</span><span class="o">-</span><span class="n">SUITE</span>
+<span class="p">[</span><span class="n">PGP</span><span class="o">-</span><span class="n">main</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span>                    <span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span>          <span class="n">ID_PROT</span>
+<span class="n">Transforms</span><span class="o">=</span>             <span class="n">CAST</span><span class="o">-</span><span class="n">SHA</span><span class="p">,</span><span class="mi">3</span><span class="n">DES</span><span class="o">-</span><span class="n">MD5</span>
+<span class="p">[</span><span class="n">PGP</span><span class="o">-</span><span class="n">quick</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span>                    <span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span>          <span class="n">QUICK_MODE</span>
+<span class="n">Suites</span><span class="o">=</span>                 <span class="n">QM</span><span class="o">-</span><span class="n">ESP</span><span class="o">-</span><span class="n">CAST</span><span class="o">-</span><span class="n">SHA</span><span class="o">-</span><span class="n">SUITE</span><span class="p">,</span><span class="n">QM</span><span class="o">-</span><span class="n">ESP</span><span class="o">-</span><span class="n">CAST</span><span class="o">-</span><span class="n">MD5</span><span class="o">-</span><span class="n">SUITE</span><span class="p">,</span><span class="n">QM</span><span class="o">-</span><span class="n">ESP</span><span class="o">-</span><span class="mi">3</span><span class="n">DES</span><span class="o">-</span><span class="n">MD5</span><span class="o">-</span><span class="n">SUITE</span>
+<span class="p">[</span><span class="mi">3</span><span class="n">DES</span><span class="o">-</span><span class="n">MD5</span><span class="p">]</span>
+<span class="n">ENCRYPTION_ALGORITHM</span><span class="o">=</span>   <span class="mi">3</span><span class="n">DES_CBC</span>
+<span class="n">HASH_ALGORITHM</span><span class="o">=</span>         <span class="n">MD5</span>
+<span class="n">AUTHENTICATION_METHOD</span><span class="o">=</span>  <span class="n">PRE_SHARED</span>
+<span class="n">GROUP_DESCRIPTION</span><span class="o">=</span>      <span class="n">MODP_1024</span>
+<span class="n">Life</span><span class="o">=</span>                   <span class="n">LIFE_1_DAY</span>
+<span class="p">[</span><span class="n">CAST</span><span class="o">-</span><span class="n">SHA</span><span class="p">]</span>
+<span class="n">ENCRYPTION_ALGORITHM</span><span class="o">=</span>   <span class="n">CAST_CBC</span>
+<span class="n">HASH_ALGORITHM</span><span class="o">=</span>         <span class="n">SHA</span>
+<span class="n">AUTHENTICATION_METHOD</span><span class="o">=</span>  <span class="n">PRE_SHARED</span>
+<span class="n">GROUP_DESCRIPTION</span><span class="o">=</span>      <span class="n">MODP_1536</span>
+<span class="n">Life</span><span class="o">=</span>                   <span class="n">LIFE_1_DAY</span>
+<span class="p">[</span><span class="n">LIFE_1_DAY</span><span class="p">]</span>
+<span class="n">LIFE_TYPE</span><span class="o">=</span>              <span class="n">SECONDS</span>
+<span class="n">LIFE_DURATION</span><span class="o">=</span>          <span class="mi">86400</span><span class="p">,</span><span class="mi">79200</span><span class="p">:</span><span class="mi">93600</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="vpn-router">
+<h3><span class="section-number">1.143.4.3. </span>VPN-Router<a class="headerlink" href="#vpn-router" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Diese Sektion beschreibt die Konfiguration unseres VPN-Routers.</p>
+<div class="section" id="etcisakmpdisakmpd-conf-1">
+<span id="id1"></span><h4><span class="section-number">1.143.4.3.1. </span>/etc/isakmpd/isakmpd.conf<a class="headerlink" href="#etcisakmpdisakmpd-conf-1" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Phase</span> <span class="mi">1</span><span class="p">]</span>
+<span class="c1"># Statische IP des VPN-Gateways</span>
+<span class="n">aaa</span><span class="o">.</span><span class="n">bbb</span><span class="o">.</span><span class="n">ccc</span><span class="o">.</span><span class="n">ddd</span><span class="o">=</span>          <span class="n">myvpngate</span>
+<span class="p">[</span><span class="n">Phase</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">Connections</span><span class="o">=</span>            <span class="n">VPN</span><span class="o">-</span><span class="n">myvpnrouter00</span><span class="o">-</span><span class="n">myvpngate</span>
+<span class="p">[</span><span class="n">myvpngate</span><span class="p">]</span>
+<span class="n">Phase</span><span class="o">=</span>                  <span class="mi">1</span>
+<span class="n">Transport</span><span class="o">=</span>              <span class="n">udp</span>
+<span class="n">Address</span><span class="o">=</span>                <span class="n">aaa</span><span class="o">.</span><span class="n">bbb</span><span class="o">.</span><span class="n">ccc</span><span class="o">.</span><span class="n">ddd</span>
+<span class="n">Configuration</span><span class="o">=</span>          <span class="n">main</span><span class="o">-</span><span class="n">mode</span>
+<span class="n">ID</span><span class="o">=</span>                     <span class="n">my</span><span class="o">-</span><span class="n">ID</span>
+<span class="p">[</span><span class="n">my</span><span class="o">-</span><span class="n">ID</span><span class="p">]</span>
+<span class="n">ID</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span>                <span class="n">FQDN</span>
+<span class="n">Name</span><span class="o">=</span>                   <span class="n">myvpnrouter00</span>
+<span class="p">[</span><span class="n">VPN</span><span class="o">-</span><span class="n">myvpnrouter00</span><span class="o">-</span><span class="n">myvpngate</span><span class="p">]</span>
+<span class="n">Phase</span><span class="o">=</span>                  <span class="mi">2</span>
+<span class="n">ISAKMP</span><span class="o">-</span><span class="n">peer</span><span class="o">=</span>            <span class="n">myvpngate</span>
+<span class="n">Configuration</span><span class="o">=</span>          <span class="n">quick</span><span class="o">-</span><span class="n">mode</span>
+<span class="n">Local</span><span class="o">-</span><span class="n">ID</span><span class="o">=</span>               <span class="n">myvpnrouter00</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span>
+<span class="n">Remote</span><span class="o">-</span><span class="n">ID</span><span class="o">=</span>              <span class="n">myvpngate</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span>
+<span class="p">[</span><span class="n">myvpnrouter00</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span><span class="p">]</span>
+<span class="n">ID</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span>                <span class="n">IPV4_ADDR_SUBNET</span>
+<span class="n">Network</span><span class="o">=</span>                <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.0</span>
+<span class="n">Netmask</span><span class="o">=</span>                <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+<span class="p">[</span><span class="n">myvpngate</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">network</span><span class="p">]</span>
+<span class="n">ID</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span>                <span class="n">IPV4_ADDR_SUBNET</span>
+<span class="n">Network</span><span class="o">=</span>                <span class="mf">192.168</span><span class="o">.</span><span class="mf">0.0</span>
+<span class="n">Netmask</span><span class="o">=</span>                <span class="mf">255.255</span><span class="o">.</span><span class="mf">0.0</span>
+<span class="p">[</span><span class="n">x509</span><span class="o">-</span><span class="n">certificates</span><span class="p">]</span>
+<span class="n">CA</span><span class="o">-</span><span class="n">directory</span><span class="o">=</span>   <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">isakmpd</span><span class="o">/</span><span class="n">ca</span><span class="o">/</span>
+<span class="n">Cert</span><span class="o">-</span><span class="n">directory</span><span class="o">=</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">isakmpd</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span>
+<span class="n">Private</span><span class="o">-</span><span class="n">key</span><span class="o">=</span>    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">isakmpd</span><span class="o">/</span><span class="n">private</span><span class="o">/</span><span class="n">myvpnrouter00</span><span class="o">.</span><span class="n">key</span>
+<span class="p">[</span><span class="n">main</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span><span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span><span class="n">ID_PROT</span>
+<span class="n">Transforms</span><span class="o">=</span><span class="n">BLF</span><span class="o">-</span><span class="n">SHA</span><span class="o">-</span><span class="n">RSA_SIG</span>
+<span class="p">[</span><span class="n">quick</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span><span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span><span class="n">QUICK_MODE</span>
+<span class="n">Suites</span><span class="o">=</span><span class="n">QM</span><span class="o">-</span><span class="n">ESP</span><span class="o">-</span><span class="n">AES</span><span class="o">-</span><span class="n">SHA</span><span class="o">-</span><span class="n">SUITE</span>
+<span class="p">[</span><span class="n">Default</span><span class="o">-</span><span class="n">main</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span>                    <span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span>          <span class="n">ID_PROT</span>
+<span class="n">Transforms</span><span class="o">=</span>             <span class="mi">3</span><span class="n">DES</span><span class="o">-</span><span class="n">SHA</span><span class="p">,</span><span class="n">BLF</span><span class="o">-</span><span class="n">SHA</span>
+<span class="p">[</span><span class="n">Default</span><span class="o">-</span><span class="n">quick</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span>                    <span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span>          <span class="n">QUICK_MODE</span>
+<span class="n">Suites</span><span class="o">=</span>                 <span class="n">QM</span><span class="o">-</span><span class="n">ESP</span><span class="o">-</span><span class="mi">3</span><span class="n">DES</span><span class="o">-</span><span class="n">SHA</span><span class="o">-</span><span class="n">SUITE</span>
+<span class="p">[</span><span class="n">PGP</span><span class="o">-</span><span class="n">main</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span>                    <span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span>          <span class="n">ID_PROT</span>
+<span class="n">Transforms</span><span class="o">=</span>             <span class="n">CAST</span><span class="o">-</span><span class="n">SHA</span><span class="p">,</span><span class="mi">3</span><span class="n">DES</span><span class="o">-</span><span class="n">MD5</span>
+<span class="p">[</span><span class="n">PGP</span><span class="o">-</span><span class="n">quick</span><span class="o">-</span><span class="n">mode</span><span class="p">]</span>
+<span class="n">DOI</span><span class="o">=</span>                    <span class="n">IPSEC</span>
+<span class="n">EXCHANGE_TYPE</span><span class="o">=</span>          <span class="n">QUICK_MODE</span>
+<span class="n">Suites</span><span class="o">=</span>                 <span class="n">QM</span><span class="o">-</span><span class="n">ESP</span><span class="o">-</span><span class="n">CAST</span><span class="o">-</span><span class="n">SHA</span><span class="o">-</span><span class="n">SUITE</span><span class="p">,</span><span class="n">QM</span><span class="o">-</span><span class="n">ESP</span><span class="o">-</span><span class="n">CAST</span><span class="o">-</span><span class="n">MD5</span><span class="o">-</span><span class="n">SUITE</span><span class="p">,</span><span class="n">QM</span><span class="o">-</span><span class="n">ESP</span><span class="o">-</span><span class="mi">3</span><span class="n">DES</span><span class="o">-</span><span class="n">MD5</span><span class="o">-</span><span class="n">SUITE</span>
+<span class="p">[</span><span class="mi">3</span><span class="n">DES</span><span class="o">-</span><span class="n">MD5</span><span class="p">]</span>
+<span class="n">ENCRYPTION_ALGORITHM</span><span class="o">=</span>   <span class="mi">3</span><span class="n">DES_CBC</span>
+<span class="n">HASH_ALGORITHM</span><span class="o">=</span>         <span class="n">MD5</span>
+<span class="n">AUTHENTICATION_METHOD</span><span class="o">=</span>  <span class="n">PRE_SHARED</span>
+<span class="n">GROUP_DESCRIPTION</span><span class="o">=</span>      <span class="n">MODP_1024</span>
+<span class="n">Life</span><span class="o">=</span>                   <span class="n">LIFE_1_DAY</span>
+<span class="p">[</span><span class="n">CAST</span><span class="o">-</span><span class="n">SHA</span><span class="p">]</span>
+<span class="n">ENCRYPTION_ALGORITHM</span><span class="o">=</span>   <span class="n">CAST_CBC</span>
+<span class="n">HASH_ALGORITHM</span><span class="o">=</span>         <span class="n">SHA</span>
+<span class="n">AUTHENTICATION_METHOD</span><span class="o">=</span>  <span class="n">PRE_SHARED</span>
+<span class="n">GROUP_DESCRIPTION</span><span class="o">=</span>      <span class="n">MODP_1536</span>
+<span class="n">Life</span><span class="o">=</span>                   <span class="n">LIFE_1_DAY</span>
+<span class="p">[</span><span class="n">LIFE_1_DAY</span><span class="p">]</span>
+<span class="n">LIFE_TYPE</span><span class="o">=</span>              <span class="n">SECONDS</span>
+<span class="n">LIFE_DURATION</span><span class="o">=</span>          <span class="mi">86400</span><span class="p">,</span><span class="mi">79200</span><span class="p">:</span><span class="mi">93600</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="x509-zertifikate">
+<h2><span class="section-number">1.143.5. </span>x509-Zertifikate<a class="headerlink" href="#x509-zertifikate" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Auf die Funktionsweise von Zertifikaten wird an dieser Stelle nicht
+weiter eingegangen. Um unsere Zertifikate erstellen zu können, müssen
+wir uns von einer autorisierten Stelle zertifizieren lassen: Das kostet
+Geld. Als echte BSDler verabscheuen wir den Kommerz und zertifizieren
+uns selbst: Erst erzeugen wir uns für unsere eigene CA einen privaten
+Schlüssel,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># openssl genrsa -des3 -out $CA_PRIVATEKEY $KEYLENGTH</span>
+</pre></div>
+</div>
+<p>generieren eine Zertifikatsanfrage</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># openssl req -new -key $CA_PRIVATEKEY -out $CA_CERT_REQ</span>
+</pre></div>
+</div>
+<p>und zertifizieren uns selbst:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># openssl x509 -req -days $(($VALIDYEARS * 365)) -in $CA_CERT_REQ -signkey $CA_PRIVATEKEY \
+   -extfile $SSLDIR/x509v3.cnf -extensions x509v3_CA -out $CA_CERT
+</pre></div>
+</div>
+<p>Eine Kopie von $CA_CERT wird auf der jeweiligen Gegenseite in dem
+Verzeichnis abgelegt, das in der gegnerischen <code class="docutils literal notranslate"><span class="pre">isakmpd.conf</span></code> als
+CA-directory eingetragen ist. In der Regel ist das <code class="docutils literal notranslate"><span class="pre">/etc/isakmpd/ca</span></code>.</p>
+<p>Jetzt können wir unseren privaten Schlüssel erzeugen,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># openssl genrsa -out $PRIVATEKEY $KEYLENGTH</span>
+</pre></div>
+</div>
+<p>eine Zertifikatsanforderung erstellen,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># openssl req -new -key $PRIVATEKEY -out $CERTREQ</span>
+</pre></div>
+</div>
+<p>ein Zertifikat erstellen,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># export CERTFQDN=$FQDN
+# openssl x509 -req -days $VALIDDAYS -in $CERTREQ -CA $CA_CERT -CAkey $CA_PRIVATEKEY \
+   -CAcreateserial -extfile $SSLDIR/x509v3.cnf -extensions x509v3_FQDN -out $CERT
+</pre></div>
+</div>
+<p>und zuletzt das Zertifikat verifizieren.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># openssl verify -CAfile $CA_CERT $CERT</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Der Name der Organisation sollte sich von dem der Zertifizierungsstelle
+unterscheiden!</p>
+</div>
+<p>Jetzt können wir das Zertifikat umbenennen</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mv $CERT $(dirname &quot;$CERT&quot;)/$FQDN.crt</span>
+</pre></div>
+</div>
+<p>und die Rechte auf den privaten Schlüssel einschränken:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># chmod 600 $CFGDIR/private/*</span>
+</pre></div>
+</div>
+<p>$FQDN sollte sich mit den Einträgen in der <code class="docutils literal notranslate"><span class="pre">isakmpd.conf</span></code> decken, also
+hier <strong>myvpngate</strong> bzw. <strong>myvpnrouter00</strong>. $FQDN.crt muss sowohl auf der
+eigenen, als auch auf der gegnerischen Maschine abgelegt werden und zwar
+jeweils dort, wo in der jeweiligen <code class="docutils literal notranslate"><span class="pre">isakmpd.conf</span></code> unter
+<strong>Cert-directory</strong> angegeben. $PRIVATEKEY bleibt logischerweise auf der
+eigenen Maschine und wird so platziert, wie in der lokalen
+<code class="docutils literal notranslate"><span class="pre">isakmpd.conf</span></code> unter <strong>Private-key</strong> eingetragen.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="windowmanager.txt.html" class="btn btn-neutral float-right" title="1.144. Windowmanager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vlans_mit_freebsd.txt.html" class="btn btn-neutral float-left" title="1.142. VLAN-Konfiguration mit FreeBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

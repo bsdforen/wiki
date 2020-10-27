@@ -1,0 +1,778 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.84. make world &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.85. Mehrmonitor-Betrieb" href="mehrmonitor-betrieb.txt.html" />
+    <link rel="prev" title="1.83. make.conf optimieren" href="make.conf_optimieren.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.84. make world</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vorbereitungen">1.84.1. Vorbereitungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hinweise-zur-betriebssystem-versionswahl">1.84.2. Hinweise zur Betriebssystem-Versionswahl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#entwicklungsversionen">1.84.2.1. Entwicklungsversionen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#versionsubersicht">1.84.2.2. Versionsübersicht</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#release-tags">1.84.2.3. Release-Tags</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#betriebssystem-aktualisieren">1.84.3. Betriebssystem aktualisieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#einleitung">1.84.4. Einleitung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#backup">1.84.4.1. Backup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usr-obj-entfernen">1.84.4.2. /usr/obj entfernen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-buildworld">1.84.4.3. make buildworld</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-kernel">1.84.4.4. make kernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#single-usermode-starten">1.84.4.5. Single-Usermode starten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#betriebssystem-installationsvorbereitungen">1.84.4.6. Betriebssystem-Installationsvorbereitungen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-installworld">1.84.4.7. make installworld</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mergemaster">1.84.5. mergemaster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#betriebssystem-aktualisierung-abschliessen">1.84.6. Betriebssystem-Aktualisierung abschliessen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#abschluss">1.84.6.1. Abschluss</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#betriebssystem-sicherheitslucken">1.84.7. Betriebssystem-Sicherheitslücken</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#freebsd-update">1.84.7.1. freebsd-update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation">1.84.7.2. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#anwendung">1.84.7.3. Anwendung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#problemfalle">1.84.7.4. Problemfälle</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#make-world-1">1.84.8. Make World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#siehe-auch">1.84.9. Siehe auch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.84. </span>make world</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/make_world.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="mehrmonitor-betrieb.txt.html" class="btn btn-neutral float-right" title="1.85. Mehrmonitor-Betrieb" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="make.conf_optimieren.txt.html" class="btn btn-neutral float-left" title="1.83. make.conf optimieren" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="make-world">
+<h1><span class="section-number">1.84. </span>make world<a class="headerlink" href="#make-world" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p>Diese Anleitung soll erläutern, wie man das Betriebssystem aktualisiert. Dies
+wird im <a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/cutting-edge.html">FreeBSD-Handbuch</a>
+und in der Datei <strong>/usr/src/UPDATING</strong> genau beschrieben.</p>
+<div class="admonition important">
+<p class="admonition-title">Wichtig</p>
+<p>Besonders wichtig sind die letzten Seiten der Datei <strong>/usr/src/UPDATING</strong>, da
+je nach altem und neuem Betriebssystem verschiedene Schritte notwendig sind!</p>
+<p>Die Angaben in der /usr/src/UPDATING sind den abweichenden Angaben in dieser
+Anleitung oder den abweichenden Angaben <a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/makeworld.html">im FreeBSD-Handbuch unbedingt
+vorzuziehen</a>!</p>
+<p>Für alle hier notwendigen Aktionen wird die root-Permission
+vorausgesetzt!</p>
+</div>
+<div class="section" id="vorbereitungen">
+<h2><span class="section-number">1.84.1. </span>Vorbereitungen<a class="headerlink" href="#vorbereitungen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Den Betriebssystem-Quellcode aktualisiert man mit <code class="docutils literal notranslate"><span class="pre">csup</span></code>, welches ab
+FreeBSD 6.2 im Basissystem integriert ist. Wird ein älteres
+Betriebssystem einsetzt, muß <code class="docutils literal notranslate"><span class="pre">csup</span></code> als Package installiert werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_add -r csup</span>
+</pre></div>
+</div>
+<p>Wenn csup nicht als Package verfügbar ist, müssen Sie auf CVSup
+ausweichen (pkg_add -r cvsup-without-gui).</p>
+<p>Da csup mit csvup kompatibel ist, erscheinen im Folgenden u.U.
+cvsup-Angaben.</p>
+<p>Der Betriebssystem-Quellcode befindet sich üblicherweise im Verzeichnis
+<strong>/usr/src</strong>. Bevor wir csup einsetzen können, muss noch die
+Konfigurationsdatei mit den Einstellungen für die Aktualisierung des
+Verzeichnis <strong>/usr/src</strong> erstellt werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cp /usr/share/examples/cvsup/standard-supfile /etc/source-supfile</span>
+</pre></div>
+</div>
+<p>in der Datei /etc/source-supfile die Zeile:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">default</span> <span class="n">host</span><span class="o">=</span><span class="n">CHANGE_THIS</span><span class="o">.</span><span class="n">FreeBSD</span><span class="o">.</span><span class="n">org</span>
+</pre></div>
+</div>
+<p>ändern auf (<code class="docutils literal notranslate"><span class="pre">'at</span></code>‘ für austria kann z.B. durch <code class="docutils literal notranslate"><span class="pre">'de</span></code>‘ für einen
+deutschen Server ersetzt werden, die 2 ist eine fortlaufende Nummer und
+kann variieren):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">default</span> <span class="n">host</span><span class="o">=</span><span class="n">cvsup2</span><span class="o">.</span><span class="n">at</span><span class="o">.</span><span class="n">FreeBSD</span><span class="o">.</span><span class="n">org</span>
+</pre></div>
+</div>
+<p>Mit der „tag“-Zeile wird die gewünschte Betriebssystemversion angegeben.</p>
+<p>Auf <a class="reference external" href="http://www.freebsd.org">http://www.freebsd.org</a> werden die [<a class="reference external" href="http://www.freebsd.org/releases/">http://www.freebsd.org/releases/</a>
+aktuelle(n) Betriebssystemversion(en)] aufgelistet. Am 13.5.2006 wurde
+FreeBSD 6.1:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">default</span> <span class="n">release</span><span class="o">=</span><span class="n">cvs</span> <span class="n">tag</span><span class="o">=</span><span class="n">RELENG_6_1</span>
+</pre></div>
+</div>
+<p>und FreeBSD 5.4 empfohlen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">default</span> <span class="n">release</span><span class="o">=</span><span class="n">cvs</span> <span class="n">tag</span><span class="o">=</span><span class="n">RELENG_5_4</span>
+</pre></div>
+</div>
+<p>Jetzt ist die cvsup-Konfiguration abgeschlossen. Das Verzeichnis
+/usr/src wird mit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># csup /etc/source-supfile</span>
+</pre></div>
+</div>
+<p>aktualisiert.</p>
+</div>
+<div class="section" id="hinweise-zur-betriebssystem-versionswahl">
+<h2><span class="section-number">1.84.2. </span>Hinweise zur Betriebssystem-Versionswahl<a class="headerlink" href="#hinweise-zur-betriebssystem-versionswahl" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Bei allgemeinen Verständnisfragen zu den verschiedenen FreeBSD-Versionen
+siehe bitte: <a class="reference external" href="FreeBSD-FAQ">FreeBSD - FAQ</a></p>
+<div class="section" id="entwicklungsversionen">
+<h3><span class="section-number">1.84.2.1. </span>Entwicklungsversionen<a class="headerlink" href="#entwicklungsversionen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Verwendung von Nicht-Release-Betriebssystemversionen (STABLE,
+CURRENT) wird nicht empfohlen! Für STABLE und CURRENT siehe bitte:
+<a class="reference external" href="http://www.freebsd.ch/doc/de_DE.ISO8859-1/books/handbook/current-stable.htmlFreeBSDHandbuch:CURRENT/STABLE">http://www.freebsd.ch/doc/de_DE.ISO8859-1/books/handbook/current-stable.html FreeBSD Handbuch: CURRENT / STABLE</a></p>
+</div>
+<div class="section" id="versionsubersicht">
+<h3><span class="section-number">1.84.2.2. </span>Versionsübersicht<a class="headerlink" href="#versionsubersicht" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Eine Übersicht über alle möglichen, verwendbaren Betriebssystemversionen
+findet man unter: <a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/cvs-tags.html">FreeBSD Handbuch: CVS
+Tags</a></p>
+</div>
+<div class="section" id="release-tags">
+<h3><span class="section-number">1.84.2.3. </span>Release-Tags<a class="headerlink" href="#release-tags" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Verwenden Sie keine Release-Tags. Der Tag „RELENG_6_0_RELEASE“ enthält
+im Gegensatz zu „RELENG_6_0“ keine
+Betriebssystemsicherheitslücken-„Flicken“ (engl. Patches).</p>
+</div>
+</div>
+<div class="section" id="betriebssystem-aktualisieren">
+<h2><span class="section-number">1.84.3. </span>Betriebssystem aktualisieren<a class="headerlink" href="#betriebssystem-aktualisieren" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="einleitung">
+<h2><span class="section-number">1.84.4. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Anleitung orientiert sich an den Angaben in der Datei
+&lt;tt&gt;/usr/src/UPDATING&lt;/tt&gt; für einen „kleinen“ Betriebssystemwechsel,
+zum Beispiel FreeBSD 6.0 -&gt; 6.1. Für grosse Betriebssystemwechsel, also
+FreeBSD 5.xy auf FreeBSD 6.xy, sind von dieser Anleitung abweichende
+Schritte notwendig. Unbedingt in &lt;tt&gt;/usr/src/UPDATING&lt;/tt&gt;
+nachschlagen!</p>
+<div class="section" id="backup">
+<h3><span class="section-number">1.84.4.1. </span>Backup<a class="headerlink" href="#backup" title="Link zu dieser Überschrift">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">'make</span> <span class="pre">sure</span> <span class="pre">you</span> <span class="pre">have</span> <span class="pre">good</span> <span class="pre">level</span> <span class="pre">0</span> <span class="pre">dumps</span></code>‘</p>
+<p>Als erstes ist erstmal ein Backup angesagt, denn bei der
+Betriebssystem-Aktualisierung kann man die FreeBSD-Installation wirklich
+zerstören! Eine gute Backup-Anleitung findet man unter:
+<a class="reference external" href="Backup">Backup</a></p>
+</div>
+<div class="section" id="usr-obj-entfernen">
+<h3><span class="section-number">1.84.4.2. </span>/usr/obj entfernen<a class="headerlink" href="#usr-obj-entfernen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das Entfernen von /usr/obj beschleunigt den <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">buildworld</span></code> Prozess
+und erspart einem Ärger mit Abhängigkeiten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/obj</span>
+<span class="c1"># chflags -R noschg \* # rm -rf \*</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="make-buildworld">
+<h3><span class="section-number">1.84.4.3. </span>make buildworld<a class="headerlink" href="#make-buildworld" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Man starte die Betriebssystem-Kompilierung mit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/src</span>
+<span class="c1"># make buildworld</span>
+</pre></div>
+</div>
+<p>Die Betriebssystem-Kompilierung dauert etwa zwischen 30 und 60 Minuten,
+je nach Leistingsfähigkeit des PCs!</p>
+</div>
+<div class="section" id="make-kernel">
+<h3><span class="section-number">1.84.4.4. </span>make kernel<a class="headerlink" href="#make-kernel" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Als nächstes muss der Kernel neugebaut werden. Dies dauert etwa 15
+Minuten. GENERIC-Kernelbenutzer geben folgendes ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/src</span>
+<span class="c1"># make buildkernel</span>
+<span class="c1"># make installkernel</span>
+</pre></div>
+</div>
+<p>Benutzer eines angepassten Kernels gehen bitte nach der Anleitung unter
+<a class="reference external" href="Kernelerstellen(FreeBSD)">Kernel erstellen (FreeBSD)</a> vor.</p>
+</div>
+<div class="section" id="single-usermode-starten">
+<h3><span class="section-number">1.84.4.5. </span>Single-Usermode starten<a class="headerlink" href="#single-usermode-starten" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Sollte man /usr per geli oder gbde verschlüsselt haben sollte man jetzt
+<strong>nicht</strong> neustarten. In diesem Fall können dann nämlich Userland und
+Kernelteile der Verschlüsselung „out-of-sync“ werden, welches ein
+entschlüsseln und einbinden von /usr verhindert, welches wiederum das <code class="docutils literal notranslate"><span class="pre">make</span>
+<span class="pre">installworld</span></code> verhindert.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">'reboot</span> <span class="pre">in</span> <span class="pre">single</span> <span class="pre">user</span></code>‘</p>
+<p>Starten Sie den Computer im Single-Usermode und hängen Sie die
+Partitionen mit Lese-/Schreibzugriff ein, wie im Kapitel 19.4.5 des
+FreeBSD-Handbuchs beschrieben wird:
+[<a class="reference external" href="http://www.freebsd.ch/doc/de_DE.ISO8859-1/books/handbook/makeworld.html">http://www.freebsd.ch/doc/de_DE.ISO8859-1/books/handbook/makeworld.html</a>
+FreeBSD Handbuch: Make world]</p>
+<p>Kurzgefasst:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># shutdown -r now</span>
+</pre></div>
+</div>
+<p>Nach dem Hochfahren den Single-Usermode wählen (# boot -s).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /sbin/fsck -p</span>
+<span class="c1"># /sbin/mount -u /</span>
+<span class="c1"># /sbin/mount -a -t ufs</span>
+<span class="c1"># /sbin/swapon -a</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p><strong>/tmp</strong> darf nicht mit der Option „noexec“ (in <strong>/etc/fstab</strong>) eingebunden
+werden!!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Zeigt <code class="docutils literal notranslate"><span class="pre">date</span></code>(1) die falsche Zeit und eine falsche Zeitzone an, kann das
+mit dem Kommando <code class="docutils literal notranslate"><span class="pre">tzsetup</span></code>(8) korrigiert werden. Viele Dienste
+funktionieren später nur dann korrekt, wenn die Zeit richtig eingestellt
+ist.</p>
+</div>
+<p>Jetzt ist man nur noch etwa 20 Minuten vom Starten des neuen
+Betriebssystems entfernt!</p>
+</div>
+<div class="section" id="betriebssystem-installationsvorbereitungen">
+<h3><span class="section-number">1.84.4.6. </span>Betriebssystem-Installationsvorbereitungen<a class="headerlink" href="#betriebssystem-installationsvorbereitungen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Vor der Betriebssysteminstallation müssen noch einige Vorbereitungen
+getroffen werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/sbin/mergemaster -p</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="make-installworld">
+<h3><span class="section-number">1.84.4.7. </span>make installworld<a class="headerlink" href="#make-installworld" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Jetzt kann es losgehen mit der Installation der neuen
+Betriebssystemdateien:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/src</span>
+<span class="c1"># make installworld</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="mergemaster">
+<h2><span class="section-number">1.84.5. </span>mergemaster<a class="headerlink" href="#mergemaster" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/sbin/mergemaster -i</span>
+</pre></div>
+</div>
+<p>Mit mergemaster werden die alten, bereits bestehenden Konfigurationsdateien mit
+den Vorgaben des neuinstallierten Betriebssystems abgeglichen.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Beim Einsatz von mergemaster ist Vorsicht geboten!</p>
+<p>Mergemaster vergleicht die alten Konfigurationsdateien mit den neuen
+Vorgaben. Und fragt bei Änderungen , ob es die alte Konfigurationsdatei
+durch die neue Vorgabe austauschen soll. Dadurch können bei falscher
+Wahl Einstellungen verloren gehen!</p>
+</div>
+</div>
+<div class="section" id="betriebssystem-aktualisierung-abschliessen">
+<h2><span class="section-number">1.84.6. </span>Betriebssystem-Aktualisierung abschliessen<a class="headerlink" href="#betriebssystem-aktualisierung-abschliessen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /sbin/reboot</span>
+</pre></div>
+</div>
+<p>Nach Abschluss der mergemaster-Arbeiten startet man den Computer neu.
+Aus eigener Erfahrung wird empfohlen, nochmals in den Single-Usermode zu
+starten und folgende Kontroll-/Aufräumarbeiten durchzuführen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /sbin/fsck</span>
+<span class="c1"># /sbin/mount -u /</span>
+<span class="c1"># /sbin/mount -a -t ufs</span>
+<span class="c1"># cd /usr/src</span>
+<span class="c1"># make clean</span>
+</pre></div>
+</div>
+<div class="section" id="abschluss">
+<h3><span class="section-number">1.84.6.1. </span>Abschluss<a class="headerlink" href="#abschluss" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nachdem man auch dies geschafft hat, kann man die neue
+Betriebssystemversion nach dem Drücken von: &lt;Ctrl-D&gt; geniessen!</p>
+</div>
+</div>
+<div class="section" id="betriebssystem-sicherheitslucken">
+<h2><span class="section-number">1.84.7. </span>Betriebssystem-Sicherheitslücken<a class="headerlink" href="#betriebssystem-sicherheitslucken" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Betriebssystem-Sicherheitslücken sollten Sie so rasch wie möglich
+schliessen. Den Stand der installierte Sicherheitslücken-„Flicker“
+(engl. Patches) erkennen Sie mit dem Befehl:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># uname -r 6.0-RELEASE-p5</span>
+</pre></div>
+</div>
+<p>Das Beispiel ist die Release-Version von FreeBSD 6.0 (6.0-RELEASE) mit
+dem Patch-Level 5 (-p5). Der Patch-Level sagt aus, wieviele Patches für
+die verwendete Release-Version eingespielt sind. Im Beispiel sind es
+fünf Patches.</p>
+<p>Eine Übersicht und mehr Informationen zu den bekannten
+Betriebssystem-Sicherheitslücken finden Sie unter:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.freebsd.org/">http://www.freebsd.org/</a> -&gt; rechts unten</p></li>
+<li><p><a class="reference external" href="http://www.freebsd.org/security/">http://www.freebsd.org/security/</a></p></li>
+<li><p><a class="reference external" href="http://www.de.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/security-advisories.html">http://www.de.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/security-advisories.html</a></p></li>
+</ul>
+<div class="section" id="freebsd-update">
+<h3><span class="section-number">1.84.7.1. </span>freebsd-update<a class="headerlink" href="#freebsd-update" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das im Port security/freebsd-update enthaltene Programm freebsd-update
+ermöglicht eine halbautomatische Einspielen von
+Betriebssystem-Sicherheitslücken-„Flicker“, vergleichbar mit dem Dienst
+„Windows Update“ der Microsoft-Betriebssysteme. Für Informationen zu
+freebsd-update sehen Sie bitte:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.daemonology.net/freebsd-update/">http://www.daemonology.net/freebsd-update/</a></p></li>
+<li><p><a class="reference external" href="http://www.taosecurity.com/keeping_freebsd_up-to-date.html">http://www.taosecurity.com/keeping_freebsd_up-to-date.html</a></p></li>
+<li><p><a class="reference external" href="http://www.daemonology.net/freebsd-update/binup.pdf">http://www.daemonology.net/freebsd-update/binup.pdf</a></p></li>
+<li><p><a class="reference external" href="http://www.daemonology.net/blog/">http://www.daemonology.net/blog/</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p><code class="docutils literal notranslate"><span class="pre">freebsd-update</span></code> kann nur mit dem originalen GENERIC- oder SMP-Kernel
+verwendet werden!</p>
+</div>
+</div>
+<div class="section" id="installation">
+<h3><span class="section-number">1.84.7.2. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h3>
+<p>FreeBSD-update wird mit: <strong>pkg_add -r freebsd-update</strong> installiert. Ab
+FreeBSD 6.2 ist freebsd-update Teil des Betriebssystems und muss nicht
+mehr zusätzlich installiert werden!</p>
+</div>
+<div class="section" id="anwendung">
+<h3><span class="section-number">1.84.7.3. </span>Anwendung<a class="headerlink" href="#anwendung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nun sollen die Betriebssystemlöcher gesucht und gestopft werden (falls
+möglich):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># freebsd-update fetch</span>
+<span class="c1"># freebsd-update install</span>
+</pre></div>
+</div>
+<p>Jetzt noch Neustarten und schon sollten alle bisher bekannten
+Betriebssystem-Sicherheitslücken geschlossen sein, falls eine
+Release-Betriebssystemversion verwendet wird, keine <a class="reference external" href="http://www.trl.ibm.com/projects/security/ssp/">Stack
+Protection</a> aktiviert
+ist und nur der GENERIC-Kernel verwendet wird!</p>
+<p>Kontrollieren Sie nach dem Neustart den Patchlevel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># uname -r 6.2-RELEASE-p2</span>
+</pre></div>
+</div>
+<p>Benutzer von Multiprozessoren-Systemen können auch von freebsd-update
+profitieren: <a class="reference external" href="http://lists.freebsd.org/pipermail/freebsd-security/2005-June/002975.html">FreeBSD-Security:
+2005-June/002975</a></p>
+</div>
+<div class="section" id="problemfalle">
+<h3><span class="section-number">1.84.7.4. </span>Problemfälle<a class="headerlink" href="#problemfalle" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Es kann vorkommen, dass sich freebsd-update weigert, ein
+Sicherheitsupdate einzuspielen. Es weichen einige lokale Dateien von den
+originalen Release-Dateien ab. Wenn Sie sich ganz sicher sind, dass Sie
+den GENERIC-Kernel verwenden und keine „make world“-Spezialoptionen in
+/etc/make.conf gesetzt haben, so können Sie freebsd-update zur
+Installation des Sicherheitsupdates zwingen. Dabei werden die vom
+Sicherheitsloch betroffenen Dateien ohne Vorbehalt überschrieben:</p>
+<p>freebsd-update –branch crypto fetch freebsd-update install</p>
+<p><code class="docutils literal notranslate"><span class="pre">Setzen</span> <span class="pre">Sie</span> <span class="pre">die</span> <span class="pre">Option</span> <span class="pre">&quot;--branch</span> <span class="pre">crypto&quot;</span> <span class="pre">nur</span> <span class="pre">im</span> <span class="pre">Problemfall</span> <span class="pre">ein!</span></code></p>
+<p>Für mehr Informationen zur Option „–branch crypto“ siehe bitte:
+<code class="docutils literal notranslate"><span class="pre">freebsd-update</span></code> und <a class="reference external" href="http://lists.freebsd.org/pipermail/freebsd-questions/2005-June/091380.html">FreeBSD-Questions:
+2005-June/091380</a></p>
+</div>
+</div>
+<div class="section" id="make-world-1">
+<span id="id1"></span><h2><span class="section-number">1.84.8. </span>Make World<a class="headerlink" href="#make-world-1" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Sie können freebsd-update aus einem der obengenannten Gründen nicht
+einsetzen, was nun? Ihnen bleibt nicht anderes übrig, als mit <code class="docutils literal notranslate"><span class="pre">csup</span></code>
+die mit dem entsprechenden Patch versehenen Betriebssystem-Quellcode
+herunterzuladen und das Betriebssystem zu aktualisieren:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># csup -g /etc/source-supfile</span>
+</pre></div>
+</div>
+<p>Kontrollieren Sie, ob der Betriebssystem-Quellcode unter <strong>/usr/src</strong>
+auch den Patch enthält <code class="docutils literal notranslate"><span class="pre">more</span> <span class="pre">/usr/src/UPDATING</span></code> sollte mit dem
+entsprechenden Patch-Eintrag versehen sein. Zum Beispiel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">20051215</span><span class="p">:</span>
+        <span class="n">The</span> <span class="n">setkey</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="n">utility</span> <span class="n">was</span> <span class="n">moved</span> <span class="kn">from</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">setkey</span> <span class="n">to</span> <span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">setkey</span><span class="o">.</span>
+        <span class="n">You</span> <span class="n">may</span> <span class="n">want</span> <span class="n">to</span> <span class="n">update</span> <span class="n">scripts</span> <span class="n">which</span> <span class="n">depend</span> <span class="n">on</span> <span class="n">its</span> <span class="n">location</span><span class="o">.</span>
+
+<span class="mi">20051108</span><span class="p">:</span>
+        <span class="n">rp</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="s1">&#39;s device files now contain the unit number.</span>
+        <span class="n">Uses</span> <span class="n">of</span> <span class="p">{</span><span class="n">cua</span><span class="p">,</span><span class="n">tty</span><span class="p">}</span><span class="n">R</span><span class="p">[</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="n">a</span><span class="o">-</span><span class="n">f</span><span class="p">]</span> <span class="n">should</span> <span class="n">be</span> <span class="n">replaced</span> <span class="n">by</span> <span class="p">{</span><span class="n">cua</span><span class="p">,</span><span class="n">tty</span><span class="p">}</span><span class="n">R0</span><span class="p">[</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="n">a</span><span class="o">-</span><span class="n">f</span><span class="p">]</span><span class="o">.</span>
+
+<span class="mi">20051101</span><span class="p">:</span>
+        <span class="n">FreeBSD</span> <span class="mf">6.0</span><span class="o">-</span><span class="n">RELEASE</span>
+</pre></div>
+</div>
+<p>Aktualisieren Sie das Betriebssystem wie im Kapitel: <a class="reference external" href="FreeBSD-MakeWorld#Betriebssystemaktualisieren">FreeBSD - Make
+World: Betriebssystem
+aktualisieren</a>
+beschrieben!</p>
+<p>Unter <a class="reference external" href="http://www.oreilly.de/catalog/bsdhks/chapter/hack67.pdf">BSD-Hacks-Kapitel
+67</a> wird
+eine Lösung vorgestellt, welche die obengenannten Schritte automatisch
+ausführt.</p>
+</div>
+<div class="section" id="siehe-auch">
+<h2><span class="section-number">1.84.9. </span>Siehe auch<a class="headerlink" href="#siehe-auch" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/cvsup.html">http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/cvsup.html</a></p></li>
+<li><p><a class="reference external" href="http://www.onlamp.com/lpt/a/6543">http://www.onlamp.com/lpt/a/6543</a> - Make world bei vielen Rechnern
+lässt sich stark beschleunigen durch ein „FreeBSD Build System“</p></li>
+<li><p><a class="reference external" href="http://www.daemonology.net/freebsd-upgrade-6.0-to-6.1/">http://www.daemonology.net/freebsd-upgrade-6.0-to-6.1/</a> - Binären
+Upgrade durchführen</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mehrmonitor-betrieb.txt.html" class="btn btn-neutral float-right" title="1.85. Mehrmonitor-Betrieb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="make.conf_optimieren.txt.html" class="btn btn-neutral float-left" title="1.83. make.conf optimieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

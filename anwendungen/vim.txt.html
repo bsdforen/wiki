@@ -1,0 +1,749 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.37. Vim &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="2.38. Xfce4" href="xfce4.txt.html" />
+    <link rel="prev" title="2.36. Torsmo" href="torsmo.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="anwendungen_index.html">2. Anwendungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="anwendungs-liste.txt.html">2.1. Anwendungs-Liste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bmp.txt.html">2.2. BMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bsdadminscripts.txt.html">2.3. BSDAdminScripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csup.txt.html">2.4. csup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distcc.txt.html">2.5. Distcc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.txt.html">2.6. Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enlightenment.txt.html">2.7. Enlightenment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firefox.txt.html">2.8. Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox.txt.html">2.9. Fluxbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gimp.txt.html">2.10. Gimp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gitit.txt.html">2.11. gitit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gkrellm.txt.html">2.12. GKrellM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idesk.txt.html">2.13. IDesk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inkscape.txt.html">2.14. Inkscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irssi.txt.html">2.15. Irssi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b.txt.html">2.16. K3b</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libreoffice.txt.html">2.17. LibreOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.txt.html">2.18. Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd.txt.html">2.19. Music Player Daemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpg123.txt.html">2.20. Mpg123</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mplayer.txt.html">2.21. mplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt.txt.html">2.22. Mutt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice.txt.html">2.23. OpenOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg_cutleaves.txt.html">2.24. pkg_cutleaves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone.txt.html">2.25. Plone 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portmaster.txt.html">2.26. Portmaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portsnap.txt.html">2.27. portsnap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portupgrade.txt.html">2.28. portupgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qemu.txt.html">2.29. Qemu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rxvt-unicode.txt.html">2.30. RXVT-Unicode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen.txt.html">2.31. Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tcsh.txt.html">2.32. TCSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive.txt.html">2.33. TeX Live</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunar.txt.html">2.34. Thunar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunderbird.txt.html">2.35. Thunderbird</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torsmo.txt.html">2.36. Torsmo</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.37. Vim</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#erste-schritte">2.37.1. Erste Schritte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weitere-funktionen">2.37.2. Weitere Funktionen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#suchfunktion">2.37.2.1. Suchfunktion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fensteraufteilung">2.37.2.2. Fensteraufteilung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visueller-modus">2.37.2.3. Visueller Modus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ausfuhren-von-programmen">2.37.2.4. Ausführen von Programmen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vim-remote">2.37.2.5. VIM Remote</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#addons">2.37.3. Addons</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vim-shell">2.37.3.1. Vim Shell</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#kurzreferenz">2.37.4. Kurzreferenz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beispielkonfiguration">2.37.5. Beispielkonfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links">2.37.6. Links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4.txt.html">2.38. Xfce4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xine.txt.html">2.39. Xine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xpdf.txt.html">2.40. Xpdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xspread.txt.html">2.41. Xspread</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zsh.txt.html">2.42. ZSH</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="anwendungen_index.html"><span class="section-number">2. </span>Anwendungen</a> &raquo;</li>
+        
+      <li><span class="section-number">2.37. </span>Vim</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/anwendungen/vim.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="xfce4.txt.html" class="btn btn-neutral float-right" title="2.38. Xfce4" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="torsmo.txt.html" class="btn btn-neutral float-left" title="2.36. Torsmo" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vim">
+<h1><span class="section-number">2.37. </span>Vim<a class="headerlink" href="#vim" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+<img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
+<img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
+<img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Vim</span></code> ist ein hervorragender Editor mit Syntaxhervorhebung und
+Vergleichsfunktionen, mehreren Darstellungsfenstern und vielen anderen
+nützlichen Funktionen. Leider ist der Einstieg damit nicht immer ganz
+leicht, da vim eine Weiterentwicklung des Editors vi ist, den es bereits
+in den 80er Jahren gab, wo Benutzerfreundlichkeit noch eine andere
+Bedeutung hatte als heute. Weiterhin erscheint vim im unkonfigurierten
+Zustand zunächst erstmal sehr langweilig und es ist mühselig eine
+passende Konfiguration zu erstellen. Darum möchte ich hiermit einen sehr
+kleinen Einstieg in die Welt von <code class="docutils literal notranslate"><span class="pre">vim</span></code> geben.</p>
+<div class="section" id="erste-schritte">
+<h2><span class="section-number">2.37.1. </span>Erste Schritte<a class="headerlink" href="#erste-schritte" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Es gibt mehrere Möglichkeiten eine Datei zu laden. Entweder gibt man den
+Dateinamen beim Start des Editors als Parameter mit an</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="n">meintext</span><span class="o">.</span><span class="n">c</span>
+</pre></div>
+</div>
+<p>oder man startet zunächst den Editor und lädt dann anschließend die
+Datei</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span>
+<span class="p">:</span><span class="n">edit</span> <span class="n">meintext</span><span class="o">.</span><span class="n">c</span>
+</pre></div>
+</div>
+<p>Man kann auch die grafische Version durch Verwendung des Befehls
+<code class="docutils literal notranslate"><span class="pre">gvim</span></code> benutzen. Ob dabei GTK+ 1 oder 2 verwendet wird, muss zum
+Zeitpunkt des Kompilierens festgelegt werden.</p>
+<p>Wenn die Datei <code class="docutils literal notranslate"><span class="pre">meintext.c</span></code> noch nicht existieren sollte, dann ist das
+kein Problem, denn man bekommt einen leeren Puffer angezeigt und beim
+Speichern wird sie dann unter dem angegebenen Namen gesichert. Wir
+verwendet die Endung .c damit vim automatisch erkennt, dass es sich um
+ein kleines C-Programm handelt und es entsprechend einfärben wird.</p>
+<p>Nun befinden wir uns zunächst im Befehlsmodus, wo die Tasten der
+Tastatur mit bestimmten Kommandos und Aktionen belegt sind und keine
+Texteingabe möglich ist. Man wechselt in den Einfügemodus durch
+Betätigen der Taste „i“. Daraufhin erscheint der Text „– INSERT –“ in
+der Statuszeile, der uns anzeigt, dass wir nun mit dem Schreiben
+loslegen können.</p>
+<p>Wir tippen mal folgendes C-Programm, um einen Eindruck von der
+Syntaxhervorhebung zu bekommen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;stdio.h&gt;</span>
+<span class="nb">int</span> <span class="n">main</span> <span class="p">(</span><span class="nb">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="n">char</span> <span class="n">blub</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">printf</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+    <span class="nb">int</span> <span class="n">i</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://alpha-tierchen.de/dateien/etc/meintext.c">meintext.c
+herunterladen</a>.</p>
+<p>Nun haben wir die Variable <code class="docutils literal notranslate"><span class="pre">blub</span></code> unnötigerweise deklariert, und die
+Deklaration von <code class="docutils literal notranslate"><span class="pre">i</span></code> an die falsche Stelle gesetzt. Um diese Fehler zu
+beseitigen beenden wir nun den Einfügemodus mit Escape und bewegen die
+Schreibmarke zur Zeile mit dem Blub. Dann drückt man zwei Mal „d“ um die
+Zeile zu löschen. Man kann einen Befehl auch mehrfach oder auf mehrere
+Zeilen anweden indem man erst die Anzahl und dann den Befehl
+hintereinander weg eingibt, also z.B. „8dd“ löscht 8 Zeilen.</p>
+<p>Ein bereits zum Teil eingegebener Befehl kann immer mit <code class="docutils literal notranslate"><span class="pre">Escape</span></code>
+abgebrochen werden.</p>
+<p>Nun korrigieren wir den <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">i</span></code>-Fehler. Dazu bewegen wir wieder erst
+die Schreibmarke zur Zeile <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">i;</span></code> und drücken dann erneut zwei Mal
+„d“ um die Zeile zu löschen. Die Zeile wurde aber nicht wirklich
+gelöscht, sondern in einen Zeilenpuffer temporär abgelegt. Bewegen wir
+uns nun zur <code class="docutils literal notranslate"><span class="pre">for</span></code>-Zeile und drücken einfach „P“ (Achtung, großes P)
+und schon wird die zuvor gelöschte Zeile an der richtigen Stelle wieder
+eingefügt.</p>
+<p>Zeilen kann man mit „Y“ (yank) in den Zeilenpuffer kopieren ohne sie
+löschen zu müssen. „7Y“ kopiert sieben Zeilen.</p>
+<p>Durch Eingabe von „:w“ (write) wird die Datei nun unter dem zuvor
+angegebenen Dateinamen abgespeichert und der Editor lässt sich durch
+„:q“ (quit) beenden. Mit : eingeleitete Befehle werden immer mit einem
+Druck auf die Enter-Taste beendet oder bestätigt. Man kann diese Befehle
+auch zum Beispiel zu „:wq“ kombinieren, aber zum Speichern und Beenden
+gibt es auch einen eigenen Befehl „:x“. Eine Befehlsausführung lässt
+sich versuchen zu erzwingen indem man noch ein Ausrufezeichen hinten
+dran stellt, was ganz nützlich ist, wenn man zwar Besitzer einer Datei
+ist, aber kein Schreibrecht darauf hat.</p>
+</div>
+<div class="section" id="weitere-funktionen">
+<h2><span class="section-number">2.37.2. </span>Weitere Funktionen<a class="headerlink" href="#weitere-funktionen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wir wollen noch ein paar weitere Funktionen kennenlernen und öffnen dazu
+unsere Datei wieder.</p>
+<p>Als erstes sollen die for-Zeile und die darauf folgende zusammen gelegt
+werden. Man bewegt die Schreibmarke in die printf-Zeile und drückt „J“
+(join) (Achtung, wieder Großbuchstabe) und … huch! Das ging daneben.
+Jetzt haben wir die Zeile printf („%dn“, i); return 0; und drücken
+schnell das „u“ (undo) um die Aktion rückgängig zu machen. Das
+Gegenstück dazu ist <code class="docutils literal notranslate"><span class="pre">Strg</span></code>+“r“ (redo) um eine fälschlich rückgängig
+gemachte Aktion wiederherzustellen. Das „J“ muss in der for-Zeile
+gedrückt werden damit die printf-Zeile um eins hoch wandert. Es gilt
+auch wieder, dass beispielsweise „5J“ fünf Zeilen zusammenfügt.</p>
+<div class="section" id="suchfunktion">
+<h3><span class="section-number">2.37.2.1. </span>Suchfunktion<a class="headerlink" href="#suchfunktion" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wir geben einfach mal folgendes ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">int</span>
+</pre></div>
+</div>
+<p>Während des Tippens sucht <code class="docutils literal notranslate"><span class="pre">vim</span></code> schon das erste Auftreten ab der
+Schreibmarke. Sobald man den Befehl mit <code class="docutils literal notranslate"><span class="pre">Enter</span></code> abschließt, werden
+alle vorkommen von <code class="docutils literal notranslate"><span class="pre">int</span></code> hervorgehoben. Mit „n“ (next) kann man mit
+der Schreibmarke von <code class="docutils literal notranslate"><span class="pre">int</span></code> zu <code class="docutils literal notranslate"><span class="pre">int</span></code> springen. Die Suchfunktion
+verwendet reguläre Ausdrücke, auf die ich aber hier nicht näher eingehen
+möchte, aber dennoch ein paar Beispiele zeigen möchte.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/^</span><span class="nb">int</span>
+</pre></div>
+</div>
+<p>Das ^ steht für einen Zeilenanfang und findet dementsprechend nur ein
+<code class="docutils literal notranslate"><span class="pre">int</span></code> in unserem Beispiel.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">int</span><span class="o">&lt;</span><span class="n">nowiki</span><span class="o">&gt;</span><span class="p">[[:</span><span class="n">space</span><span class="p">:]]</span><span class="o">&lt;/</span><span class="n">nowiki</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;nowiki&gt;[[:space:]]&lt;/nowiki&gt;</span></code> bezeichnet die Zeichenklasse der
+Freizeichen und enthält Leerzeichen sowie auch Tabulatorzeichen. So wird
+beispielsweise das <code class="docutils literal notranslate"><span class="pre">int</span></code> in <code class="docutils literal notranslate"><span class="pre">printf</span></code> nicht gefunden. In unserem
+Beispiel hätten wir <code class="docutils literal notranslate"><span class="pre">&lt;nowiki&gt;[[:space:]]&lt;/nowiki&gt;</span></code> nicht verwenden
+müssen; ein einfaches Leerzeichen zu tippen hätte ausgereicht.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/&lt;</span><span class="n">nowiki</span><span class="o">&gt;</span><span class="p">[[:</span><span class="n">digit</span><span class="p">:]]</span><span class="o">&lt;/</span><span class="n">nowiki</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Diese Zeichenklasse enthält die Zeichen 0 bis 9. Demnach werden alle
+Ziffern im Quelltext hervorgehoben. Man kann hier auch „[0-9]“
+verwenden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="p">(</span><span class="o">.*</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Dieser Ausdruck findet alles, was zwischen zwei runden Klammern steht.</p>
+</div>
+<div class="section" id="fensteraufteilung">
+<h3><span class="section-number">2.37.2.2. </span>Fensteraufteilung<a class="headerlink" href="#fensteraufteilung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Jetzt speichern wir den Text unter einem anderen Dateinamen ab</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">write</span> <span class="n">meintext2</span><span class="o">.</span><span class="n">c</span>
+</pre></div>
+</div>
+<p>und würden uns gern die erste Version nochmals gleichzeitig dazu
+anschauen. Der Befehl</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">split</span> <span class="n">meintext</span><span class="o">.</span><span class="n">c</span>
+</pre></div>
+</div>
+<p>spaltet den Bildschirm horizontal und zeigt oben <code class="docutils literal notranslate"><span class="pre">meintext.c</span></code> und
+unten unsere bereits geöffnete <code class="docutils literal notranslate"><span class="pre">meintext2.c</span></code> an. Zwischen den beiden
+Fensterhälften kann man mit <code class="docutils literal notranslate"><span class="pre">Strg</span></code>+“ww“ (zwei w) wechseln. Wir
+wechseln nun in die untere Hälfte und öffnen erneut <code class="docutils literal notranslate"><span class="pre">meintext.c</span></code>, aber
+diesmal mit einer vertikalen Trennung</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">vsplit</span> <span class="n">meintext</span><span class="o">.</span><span class="n">c</span>
+</pre></div>
+</div>
+<p>Nun werden es langsam zuviele Teilfenster. Wir gehen in das obere und
+schließen es:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">close</span>
+</pre></div>
+</div>
+<p>Wenn man nur die Datei im aktuellen Fenster haben möchte und alle
+anderen geschlossen, dann verwendet man</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">only</span>
+</pre></div>
+</div>
+<p>in dem gewünschten Teilfenster. Das tun wir jetzt, so dass wir
+schließlich nur noch <code class="docutils literal notranslate"><span class="pre">meintext2.c</span></code> offen haben.</p>
+<p><code class="docutils literal notranslate"><span class="pre">'Syntaxhervorhebung.</span> <span class="pre">Geteiltes</span> <span class="pre">Fenster.</span> <span class="pre">So</span> <span class="pre">kann</span> <span class="pre">es</span> <span class="pre">aussehen.</span></code>‘</p>
+<p><a class="reference external" href="http://alpha-tierchen.de/dateien/gvim63.png">http://alpha-tierchen.de/dateien/gvim63.png</a></p>
+</div>
+<div class="section" id="visueller-modus">
+<h3><span class="section-number">2.37.2.3. </span>Visueller Modus<a class="headerlink" href="#visueller-modus" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Im visuellen Modus kann man mit vim Text markieren. Hierbei gibt es drei
+verschiedene Möglichkeiten:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">v</span></code> markiert zeichenweise</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">V</span></code> markiert zeilenweise</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Strg+v</span></code> markiert spaltenweise</p></li>
+</ul>
+<p>Hat man erst einmal Text markiert, kann man darauf die bekanten
+Kommandos anwenden, <code class="docutils literal notranslate"><span class="pre">x</span></code> löscht den Text, <code class="docutils literal notranslate"><span class="pre">~</span></code> kehrt die gROSS- und
+kLEINschreibung um, etc.</p>
+<p>Besonders mächtig ist die spaltenweise Markierung. Hiermit kann man z.B.
+komfortabel und schnell Text in mehreren aufeinanderfolgenden Zeilen
+einfügen. Dazu drückt man <code class="docutils literal notranslate"><span class="pre">Strg+v</span></code>, markiert mit den Pfeiltasten oder
+<code class="docutils literal notranslate"><span class="pre">h,j,k,l</span></code> den gewünschten Bereich, wechselt mit einem großen <code class="docutils literal notranslate"><span class="pre">I</span></code> in
+den Einfügemodus und fügt Text hinzu. Abschließend noch ein Druck auf
+die ‚Esc‘-Taste und der Text erscheint auf allen markierten Zeilen.</p>
+</div>
+<div class="section" id="ausfuhren-von-programmen">
+<h3><span class="section-number">2.37.2.4. </span>Ausführen von Programmen<a class="headerlink" href="#ausfuhren-von-programmen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nun möchten wir auch gerne unseren Quelltext kompiliert und ausgeführt
+haben. Dazu muss der Editor aber nicht verlassen werden. Mit dem Befehl
+„:!“ können externe Programme aufgerufen werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:!cc meintext2.c -o meintext
+Hit ENTER or type command to continue
+:!./meintext
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Hit ENTER or type command to continue
+</pre></div>
+</div>
+<p>Mit dem Ausführungsbefehl „:!“ kann man also jedes beliebige Programm
+aus vim heraus starten; auch ein eine Shell wie <code class="docutils literal notranslate"><span class="pre">bash</span></code> beispielsweise.</p>
+<p>Hat man im aktuellen Verzeichnis ein Makefile, so kann man mit der
+Eingabe von :make den Makeprozess starten. Wird dann beim Kompilieren
+ein Fehler gefunden, zeigt VIM diesen in einem Fenster an und setzt den
+Cursor auf die entsprechende Codezeile.</p>
+</div>
+<div class="section" id="vim-remote">
+<h3><span class="section-number">2.37.2.5. </span>VIM Remote<a class="headerlink" href="#vim-remote" title="Link zu dieser Überschrift">¶</a></h3>
+<p>VIM kann auch als Server eingesetzt werden. Hierzu startet man eine neue
+gvim Instanz und kann dann von einer beliebigen Console aus mit</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gvim</span> <span class="o">--</span><span class="n">remote</span> <span class="o">&lt;</span><span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Dateien an die laufende gvim Instanz schicken. Um das ganze zu
+vereinfachen, legt man sich am besten ein Alias in der Shell an, z.B.
+(tcsh):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">gvr</span> <span class="s1">&#39;gvim --remote&#39;</span>
+</pre></div>
+</div>
+<p>Dann kann man mit <code class="docutils literal notranslate"><span class="pre">gvr</span> <span class="pre">&lt;file(s)&gt;</span></code> die Dateien editieren.</p>
+<p>Ab VIM Version 7 gibt es auch auch den Startparameter –remote-tab, die
+neue Dateien in einem eigenen Registerreiter in gvim öffnet.</p>
+<hr class="docutils" />
+<p>Das war’s. Nun kann man schon wirklich anfangen mit <code class="docutils literal notranslate"><span class="pre">vim</span></code> produktiv zu
+arbeiten. Viel Spaß dabei.</p>
+</div>
+</div>
+<div class="section" id="addons">
+<h2><span class="section-number">2.37.3. </span>Addons<a class="headerlink" href="#addons" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="vim-shell">
+<h3><span class="section-number">2.37.3.1. </span>Vim Shell<a class="headerlink" href="#vim-shell" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Vim shell ist ein nettes Addon von: <a class="reference external" href="http://www.wana.at/vimshell">http://www.wana.at/vimshell</a>.</p>
+<p>Mit ihr kann man zum Beispiel in einem ‚split screen‘ im oberen Teil
+coden und im unteren mit Mutt seine Mails lesen:</p>
+<p><code class="docutils literal notranslate"><span class="pre">'Die</span> <span class="pre">Installation</span> <span class="pre">funktioniert</span> <span class="pre">folgendermaßen</span></code>‘</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">distfiles</span> <span class="n">fetch</span> <span class="s1">&#39;http://www.wana.at/vimshell/vimshell_1.0_vim6.4.patch.bz2 &#39;</span>
+<span class="o">%</span> <span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">editors</span><span class="o">/</span><span class="n">vim</span><span class="o">-</span><span class="n">lite</span>
+<span class="o">%</span> <span class="n">make</span> <span class="n">extract</span>
+<span class="o">%</span> <span class="n">cd</span> <span class="n">work</span><span class="o">/</span><span class="n">vim64</span>
+<span class="o">%</span> <span class="n">bzcat</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">distfiles</span><span class="o">/</span><span class="n">vimshell</span><span class="o">/</span><span class="n">vimshell_1</span><span class="o">.</span><span class="mi">0</span><span class="n">_vim6</span><span class="o">.</span><span class="mf">4.</span><span class="n">patch</span><span class="o">.</span><span class="n">bz2</span> \<span class="o">|</span> <span class="n">patch</span> <span class="o">-</span><span class="n">p0</span>
+<span class="o">%</span> <span class="n">cd</span> <span class="o">../..</span>
+<span class="o">%</span> <span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="../_images/vimshell.png"><img alt="Vimshell2.JPG" src="../_images/vimshell.png" style="width: 256px;" /></a> k33n at kewler dot de Nun kann man mit ‚:vimshell csh‘
+ein shell in vim starten. In einem ‚split screen‘ sieht das ganze dann
+so aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">br</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;clear:both;&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="kurzreferenz">
+<h2><span class="section-number">2.37.4. </span>Kurzreferenz<a class="headerlink" href="#kurzreferenz" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Jetzt gibt’s nochmal eine Kurzreferenz der verwendeten Befehle zum
+schnellen Nachschlagen.</p>
+<p>Stellt man dem Befehl eine Zahl <code class="docutils literal notranslate"><span class="pre">n</span></code> voran, so bedeutet das, dass der
+Befehl <code class="docutils literal notranslate"><span class="pre">n</span></code>-mal ausgeführt wird oder sich auf <code class="docutils literal notranslate"><span class="pre">n</span></code> Zeilen bezieht.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>               i  Startet den Einfügemodus, der sich durch &#39;&#39;Escape&#39;&#39; wieder beenden lässt.
+              dd  Löscht eine Zeile.
+               P  Fügt den Inhalt aus dem Zeilenpuffer ab der aktuellen Zeile ein.
+               Y  Kopiert eine Zeile in den Zeilenpuffer.
+               u  Macht die letzte Änderung rückgängig. Man kann diesen Befehl mehrfach hintereinander verwenden.
+          Strg+r  Stellt die letzte rückgängig gemachte Änderung wieder her.
+               J  Fügt die aktuelle Zeile mit der darauffolgenden zusammen.
+   /&lt;suchmuster&gt;  Sucht das angegebene Muster im Text und markiert alle vorkommen.
+               n  Springt mit der Schreibmarke zum nächsten Treffer der Suche.
+
+  :edit [&lt;datei&gt;] Öffnet eine Datei zum Bearbeiten im aktuellen Editorfenster. Kurzform &quot;:e&quot;
+ :write [&lt;datei&gt;] Speichert die Datei, die sich im aktuellen Editorfenster befindet. Kurzform &quot;:w&quot;
+ :split [&lt;datei&gt;] Teilt das Fenster horizontal auf. Es kann optional eine Datei in das neue Teilfenster geladen werden.
+:vsplit [&lt;datei&gt;] Teilt das Fenster vertikal auf.
+          :close  Schließt das aktuelle Teilfenster.
+           :only  Schließt alle bis auf das aktuelle Teilfenster.
+           :quit  Beendet den Texteditor. Kurzform &quot;:q&quot;
+:!&lt;Befehlszeile&gt;  Führt den Befehl mit den angegebenen Parametern aus.
+</pre></div>
+</div>
+<p>Auch praktisch ist <a class="reference external" href="http://strcat.de/tmp/vimhints.txt">diese</a>
+vim-Kurzreferenz von strcat.</p>
+</div>
+<div class="section" id="beispielkonfiguration">
+<h2><span class="section-number">2.37.5. </span>Beispielkonfiguration<a class="headerlink" href="#beispielkonfiguration" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Hier ist schließlich noch die versprochene Konfiguration, die für die
+kleine Schritt-für-Schritt-Anleitung sehr zu empfehlen ist. Die mit
+Anführungszeichen beginnenden Zeilen sind Kommentare. Alle genannten
+Optionen kann man auch zur Editorlaufzeit festlegen indem man ihnen ein
+„:“ voranstellt, z.B.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">colors</span> <span class="n">koehler</span>
+</pre></div>
+</div>
+<p>um eine andere Farbgebung temporär zu setzen. So muss man nicht jedes
+mal .vimrc anpassen und den Editor neustarten, wenn man etwas
+ausprobieren möchte.</p>
+<p>Eine komplette Dokumentation findet man entweder lokal unter
+<code class="docutils literal notranslate"><span class="pre">/usr/local/share/vim/vim63</span></code> oder im Internet in HTML-Form unter
+<a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/help.html">vimdoc.sourceforge.net</a>.
+Zum ausprobieren kannst du die
+<a class="reference external" href="http://www.alpha-tierchen.de/dateien/etc/dot.vimrc-example">Beispielkonfiguration</a>
+auch herunterladen und unter <code class="docutils literal notranslate"><span class="pre">~/.vimrc</span></code> speichern damit sie wirksam
+wird.</p>
+<p>Spezielle Einstellungen für die grafische Komponente gvim werden in
+.gvimrc gespeichert.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;&quot; Syntaxhervorhebung
+syntax on
+ &quot;&quot; Farbschema
+&quot;&quot; weitere Schemata sind im Verzeichnis /usr/local/share/vim/vim63/colors/ aufgelistet
+colorscheme evening
+&quot;&quot; Optimiert die Syntaxvorhebung, je nachdem, ob man einen dunklen
+&quot;&quot; oder hellen Hintergrund hat
+set background=dark &quot; dark/light
+
+set encoding=iso-8859-15
+&quot;&quot; weite Möglichkeiten zur Einstellung des Zeichensatzes
+&quot; set termencoding=iso-8859-15
+&quot; set fileencodings=ucs-bom,utf-8,latin1
+
+&quot;&quot; immer die Statuszeile mit dem Dateinamen anzeigen
+set ls=2
+
+&quot;&quot; automatischer Zeilenumbruch, wenn die Zeile zu lang ist
+set wrap
+&quot; set nowrap
+
+&quot;&quot; Kompatibilitätsmodus zu vi abschalten
+set nocompatible
+
+&quot;&quot; Wieviele Leerzeichen lang ist ein Tabulator?
+set tabstop=4
+&quot;&quot; Ersetze Tabulatoren durch Leerzeichen
+set expandtab
+&quot;&quot; Einrückungstiefe
+set shiftwidth=4
+
+&quot;&quot; Einrückungen im C-Stil
+set cindent
+&quot;&quot; alternative Einrückungsstile
+&quot; set autoindent
+&quot; set smartindent
+
+&quot;&quot; Suchfunktion ignoriert Groß- und Kleinschreibung
+set ignorecase
+&quot;&quot; zeigt unten links diverse Positionsinformationen der Schreibmarke
+set ruler
+&quot;&quot; die Shell, die beim Starten von Programmen aus dem Editor heraus verwendet werden soll
+set shell=/bin/tcsh
+&quot;&quot; zeigt beim Schließen von Klammern kurz an, wo sie geöffnet wurde
+set showmatch
+&quot;&quot; zeigt in der Statuszeile an, ob man sich im Einfügemodus (INSERT) oder im Ersetzungsmodus (REPLACE) befindet
+set showmode
+&quot;&quot; Zeilennummern anzeigen
+set number
+&quot;&quot; Verhalten der Rückschritttaste
+set backspace=indent,eol,start
+
+&quot;&quot; einige Tastenbelegungen
+&quot; Einfg
+map ^[[2~ i
+&quot; Entf
+map ^? x
+&quot; Pos1
+map ^[[1~ ^
+&quot; Ende
+map ^[[4~ $
+&quot; Bild auf
+map ^[[5~ &lt;C-B&gt;
+&quot; Bild ab
+map ^[[6~ &lt;C-F&gt;
+&quot; Rückschritt
+map ^H X
+&quot; Pfeiltasten
+map ^[[B j
+map ^[[D h
+map ^[[C l
+map ^[[A k
+
+&quot;&quot; Beispiel einer F-Tastenbelegung
+&quot; F11 = zweimaliges Drücken von d
+&quot; aktuelle Zeile löschen und im Puffer speichern
+map &lt;F11&gt; dd
+&quot; F12 = betätigen von P (Achtung, ein kleines P hat eine leicht andere Bedeutung)
+&quot; im Puffer gespeicherte Zeile(n) an aktueller Position einfügen
+map &lt;F12&gt; P
+&quot;&quot; F9 schaltet Syntaxhervorhebung ein und aus
+map &lt;F9&gt; :if has(&quot;syntax_items&quot;)&lt;CR&gt;syntax off&lt;CR&gt;else&lt;CR&gt;syntax on&lt;CR&gt;endif&lt;CR&gt;&lt;CR&gt;
+&quot;&quot; F10 schaltet den Pastemodus ein und aus (einschalten, wenn die Formatierung bei
+&quot;&quot; eingefügtem Text verloren geht)
+set pastetoggle=&lt;F10&gt;
+
+&quot;&quot; nicht an den Zeilenanfang bei Benutzung von Bild auf und Bild ab gehen
+set nostartofline
+
+&quot;&quot; Suchergebnisse hervorheben und schon beim Suchen anzeigen
+set hlsearch
+set incsearch
+
+&quot;&quot; Wer die Maus für übliches Copy&amp;Paste verwenden will, der sollte diese Zeile hinzufügen:
+&quot; set mouse=
+
+&quot;&quot; Kommandoalias der :Wq erlaubt
+command! Wq wq
+
+&quot;&quot; Textersetzung
+iab LOL I will not use LOL in my text
+
+&quot;&quot; Codefaltungsfunktion für pl, pm, c, h, cpp und java Files
+au BufNewFile,BufRead   *           syn sync fromstart
+au BufNewFile,BufRead   *           set foldmethod=manual
+au BufNewFile,BufRead   *.c,*.h,*.cpp,*.cc,*.java   set foldmethod=syntax
+au BufNewFile,BufRead   *.pl,*.pm      set foldmethod=indent
+au BufNewFile,BufRead   *.c,*.h,*.cpp,*.cc,*.pl,*.pm,*.java  syn region myFold start=&quot;{&quot; end=&quot;}&quot; transparent fold
+au BufNewFile,BufRead   *           set foldlevel=99
+au BufNewFile,BufRead   *.html,*.htm   set sw=1
+au BufNewFile,BufRead   *.po           set tw=80
+au BufNewFile,BufRead   *.hg           set ft=cpp
+au BufNewFile,BufRead   *.ccg          set ft=cpp
+fun! ToggleFold()
+   if foldlevel(&#39;.&#39;) == 0
+      normal! l
+   else
+     if foldclosed(&#39;.&#39;) &lt; 0
+       . foldclose
+     else
+       . foldopen
+     endif
+   endif
+   &quot; Clear status line
+   echo
+endfun
+&quot;&quot; &lt;Space&gt; Klappt den Codebereich ein oder aus
+noremap &lt;space&gt; :call ToggleFold()&lt;CR&gt;1
+</pre></div>
+</div>
+</div>
+<div class="section" id="links">
+<h2><span class="section-number">2.37.6. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.vim.org/VimHomepage">http://www.vim.org/ Vim Homepage</a></p></li>
+<li><p><a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/help.html">Vim
+Dokumentation</a></p></li>
+<li><p><a class="reference external" href="http://strcat.de/tmp/vimhints.txt">strcat’s Vim Kurzreferenz</a></p></li>
+<li><p><a class="reference external" href="http://www.alpha-tierchen.de/dateien/etc/dot.vimrc-example">Beispielkonfiguration</a>
+aus diesem Artikel</p></li>
+</ul>
+<p><a class="reference external" href="/Benutzer/BjörnKönig">Björn König</a> 05:58, 26. Jan 2005 (CET)</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="xfce4.txt.html" class="btn btn-neutral float-right" title="2.38. Xfce4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="torsmo.txt.html" class="btn btn-neutral float-left" title="2.36. Torsmo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

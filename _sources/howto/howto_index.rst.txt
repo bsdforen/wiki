@@ -1,0 +1,168 @@
+=====
+Howto
+=====
+
+.. |date| date::
+
+Die hier aufgeführten Artikel sind in der Regel
+„Schritt-für-Schritt“-Anleitungen mit Beispielen.
+
+.. toctree::
+   :maxdepth: 1
+
+   3d-grafik-beschleunigung.txt.rst
+   anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.rst
+   apache_mit_php5_installieren.txt.rst
+   asterisk_voip_telefonanalge.txt.rst
+   audio-cd_rippen.txt.rst
+   aufloesung_der_konsole_aendern.txt.rst
+   authpf.txt.rst
+   autologin_auf_der_konsole.txt.rst
+   automatische_proxy-konfiguration.txt.rst
+   automatisches_beenden_von_diensten.txt.rst
+   automount.txt.rst
+   awk.txt.rst
+   backup_auf_cd-r.txt.rst
+   backup_mit_hammer.txt.rst
+   backup_ueber_das_netzwerk.txt.rst
+   batterieueberwachung.txt.rst
+   beseitigen_von_problemen_und_fehlern.txt.rst
+   bluetooth.txt.rst
+   bootvorgang_verschoenern.txt.rst
+   canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.rst
+   cd_iso_to_usb.txt.rst
+   chinesisch_schreiben.txt.rst
+   cpu_stepping.txt.rst
+   crossbuilding_freebsd.txt.rst
+   crunchbsd.txt.rst
+   cups_-_drucken_in_heterogener_umgebung.txt.rst
+   cups_-_installation_und_konfiguration.txt.rst
+   datenrettung.txt.rst
+   deutsche_sprachausgabe_mit_festival.txt.rst
+   devfs.txt.rst
+   dhcp-server_einrichten.txt.rst
+   dns-cache.txt.rst
+   drucken_mit_apsfilter.txt.rst
+   drucken_mit_windows.txt.rst
+   dsl-router.txt.rst
+   dsl_konfigurieren_netbsd.txt.rst
+   dvb-t_karte_hauppauge_wintv-hvr_1300.txt.rst
+   dvb_unter_freebsd.txt.rst
+   dvd-rip_mit_mencoder.txt.rst
+   dvds_brennen.txt.rst
+   ed2k-protokoll.txt.rst
+   eigenes_live-system_auf_usb-stick_installieren.txt.rst
+   externe_projekte.txt.rst
+   ezjail.txt.rst
+   festplatte_einrichten.txt.rst
+   festplatte_einrichten_gpt.txt.rst
+   festplattenverschluesselung_mit_geli_und_usb_boot.txt.rst
+   festplattenverschluesselung_mit_netbsd.txt.rst
+   festplattenverschluesselung_mit_pefs.txt.rst
+   film-dvd_erstellen.txt.rst
+   firewall-regeln.txt.rst
+   floppy.txt.rst
+   fluxbox_mit_gdm.txt.rst
+   freebsd_als_gast_unter_vmware.txt.rst
+   freebsd_boot_manager_und_vista.txt.rst
+   ftp-server_mit_pureftpd.txt.rst
+   gnupg.txt.rst
+   gpsdrive.txt.rst
+   grafikausgabe_im_netzwerk.txt.rst
+   grub2-anleitung.txt.rst
+   ibm_thinkpad_bios-update.txt.rst
+   intel2200bg.txt.rst
+   ipsec-vpn.txt.rst
+   ipv6_netzwerke.txt.rst
+   irc-protokoll.txt.rst
+   iso-erstellung_openbsd.txt.rst
+   iso-images_mounten.txt.rst
+   iso-images_von_optischen_medien_erzeugen.txt.rst
+   jails.txt.rst
+   java_installation.txt.rst
+   k3b_einrichten.txt.rst
+   kde4-tipps.txt.rst
+   kdm.txt.rst
+   kerio_mailserver.txt.rst
+   konsole_nach_systemstart_und_logout_loeschen.txt.rst
+   kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.rst
+   m0n0wall_sip.txt.rst
+   mailhamster.txt.rst
+   mailsystem.txt.rst
+   majordomo_postfix.txt.rst
+   make.conf_optimieren.txt.rst
+   make_world.txt.rst
+   mehrmonitor-betrieb.txt.rst
+   mkisofs_und_cdrecord.txt.rst
+   mounten_als_benutzer.txt.rst
+   moused_einrichten.txt.rst
+   mozilla_mit_java-_und_flashsupport.txt.rst
+   mpd_einrichten.txt.rst
+   mpi.txt.rst
+   multihead_mit_nv.txt.rst
+   nvidia_twinview.txt.rst
+   openbsd_raspberry4_installieren.txt.rst
+   openoffice_unter_freebsd.txt.rst
+   openvpn_als_tunnel_zum_eigenen_netzwerk.txt.rst
+   pakete_deinstallieren.txt.rst
+   paketsysteme.txt.rst
+   partitionierung.txt.rst
+   pkg.txt.rst
+   postfix_antivirus.txt.rst
+   postfix_courier_openldap.txt.rst
+   postfix_dspam.txt.rst
+   postgresql_update.txt.rst
+   poudriere.txt.rst
+   poudriere_guide.txt.rst
+   putty.txt.rst
+   remount_rw.txt.rst
+   revision_control_system.txt.rst
+   runit.txt.rst
+   samsung_smt_7020s.txt.rst
+   scharfe_windows_schriften.txt.rst
+   schoene_schriften_in_xorg.txt.rst
+   shell-scripting.txt.rst
+   soundkarte_einrichten.txt.rst
+   speaker_deaktivieren.txt.rst
+   ssh.txt.rst
+   strato_mr2_openbsd.txt.rst
+   suspend_resume_thinkpad.txt.rst
+   system_in_raid1_verwandeln.txt.rst
+   systemueberwachung.txt.rst
+   texlive_aus_den_quellen.txt.rst
+   tomcat_6_installation_und_stolpersteine.txt.rst
+   tor.txt.rst
+   tor_und_privoxy.txt.rst
+   tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.rst
+   tv-karte_benutzen.txt.rst
+   twinview_mit_nvidia.txt.rst
+   umts.txt.rst
+   umts_mit_huawei.txt.rst
+   umts_mit_sunrise_und_swisscom.txt.rst
+   unicode.txt.rst
+   unicode_auf_der_konsole.txt.rst
+   unix-freigabe.txt.rst
+   updaten_von_openbsd.txt.rst
+   usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.rst
+   usb-stick_bootfaehig_machen_openbsd.txt.rst
+   usb-stick_installation.txt.rst
+   usb-stick_unterstuetzung.txt.rst
+   usb_automount_ohne_hal.txt.rst
+   vdsl_mit_openbsd.txt.rst
+   vlans_mit_freebsd.txt.rst
+   vpn_openbsd.txt.rst
+   windowmanager.txt.rst
+   windows-freigabe.txt.rst
+   wine.txt.rst
+   xfce4_mit_gdm.txt.rst
+   xmodmap.txt.rst
+   xorg_config.txt.rst
+   zeit_synchronisieren_mit_ntp.txt.rst
+   zfs.txt.rst
+   zfs_geli_und_usb_boot.txt.rst
+
+.. Der Index ab hier bitte auf jeder Wikiseite einfügen!
+
+* :ref:`genindex`
+
+Zuletzt geändert: |date|

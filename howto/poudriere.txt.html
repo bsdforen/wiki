@@ -1,0 +1,632 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.105. Poudriere &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.106. Poudriere Guide" href="poudriere_guide.txt.html" />
+    <link rel="prev" title="1.104. PostgreSQL Update auf einen neueren Zweig" href="postgresql_update.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.105. Poudriere</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#systemvorraussetzungen">1.105.1. Systemvorraussetzungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">1.105.2. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration-und-anpassungen">1.105.3. Konfiguration und Anpassungen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#poudriere-einstellungen">1.105.3.1. Poudriere Einstellungen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#portstree">1.105.3.2. Portstree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jail-erstellen">1.105.3.3. Jail erstellen</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#anpassungen-make-conf">1.105.4. Anpassungen „make.conf“</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#liste-der-pakete">1.105.5. Liste der Pakete</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#optionen-pro-port-setzen">1.105.5.1. Optionen pro Port setzen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#optionen-loschen">1.105.5.2. Optionen löschen</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#kompilieren-der-ports">1.105.6. Kompilieren der Ports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-und-tagliche-aufrufe">1.105.7. Update und tägliche Aufrufe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#status-abfragen">1.105.8. Status abfragen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#webfrontend">1.105.8.1. Webfrontend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cli">1.105.8.2. CLI</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#die-fertigen-pakete">1.105.9. Die fertigen Pakete</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.105. </span>Poudriere</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/poudriere.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="poudriere_guide.txt.html" class="btn btn-neutral float-right" title="1.106. Poudriere Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="postgresql_update.txt.html" class="btn btn-neutral float-left" title="1.104. PostgreSQL Update auf einen neueren Zweig" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="poudriere">
+<h1><span class="section-number">1.105. </span>Poudriere<a class="headerlink" href="#poudriere" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p>Unter FreeBSD besteht die Möglichkeit, sich sein eigenen PKG Repository aus den
+Ports zu bauen. Der Vorteil besteht darin, dass man sich auf den produktiven
+Systemen nicht mit dem kompilieren der Software befassen muss, da dies
+vorgängig auf einem dritten System erledigt werden kann. Ein weiterer Vorteil
+besteht darin, dass das einspielen der fertigen PKG Pakete angenehmer ist. Der
+gesamte Updateprozess wird dadurch schneller und die Downtime der Systeme
+kürzer. Poudriere hat im Moment noch ein paar Schwierigkeiten, wenn es in einer
+Jail betrieben wird. Daher ist es ratsam, Poudriere auf einer physikalische
+Maschine zu installieren. Dies kann im Notfall auch eine VM in Virtualbox oder
+Co. sein. Ich habe keine Probleme diesbezüglich festgestellt.</p>
+<div class="section" id="systemvorraussetzungen">
+<h2><span class="section-number">1.105.1. </span>Systemvorraussetzungen<a class="headerlink" href="#systemvorraussetzungen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Poudriere benötigt ausser einer guten CPU mit genügend RAM folgende
+Punkte:</p>
+<ul class="simple">
+<li><p>FreeBSD &gt;= 8.3</p></li>
+<li><p>„root“ Zugriff</p></li>
+<li><p>ZFS (kein Muss!)</p></li>
+</ul>
+<p>In der Regel buildet Poudriere „PKG“ (pkgng) Pakete. Es ist aber auch
+möglich die alte Variante zu bauen. Dies sollte man aber vermeiden, da
+in Zukunft nur noch „PKG“ unterstützt wird (FreeBSD &gt;=10.0).</p>
+</div>
+<div class="section" id="installation">
+<h2><span class="section-number">1.105.2. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Folgende Schritte sind für die Installation erfolderlich:
+<a class="reference external" href="https://www.google.com/search?q=ports-mgmt/poudriere&amp;btnI=lucky">ports-mgmt/poudriere</a>
+(FreeBSD Ports):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">ports</span><span class="o">-</span><span class="n">mgmt</span><span class="o">/</span><span class="n">poudriere</span>
+<span class="o">%</span> <span class="n">make</span> <span class="n">install</span> <span class="n">clean</span>
+<span class="o">%</span> <span class="n">cp</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">sample</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>oder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">portmaster</span> <span class="n">ports</span><span class="o">-</span><span class="n">mgmt</span><span class="o">/</span><span class="n">poudriere</span>
+<span class="o">%</span> <span class="n">cp</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">sample</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="konfiguration-und-anpassungen">
+<h2><span class="section-number">1.105.3. </span>Konfiguration und Anpassungen<a class="headerlink" href="#konfiguration-und-anpassungen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="poudriere-einstellungen">
+<h3><span class="section-number">1.105.3.1. </span>Poudriere Einstellungen<a class="headerlink" href="#poudriere-einstellungen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In der Datei „poudriere.conf“ findet man sämtliche Einstellungen. Meist sind
+diese gut gewählt. Ein paar Einstellungen müssen aber manuell gesetzt werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ZPOOL=rpool
+ZROOTFS=/poudriere
+FREEBSD_HOST=http://ftp.ch.freebsd.org/
+RESOLV_CONF=/etc/resolv.conf
+BASEFS=/poudriere/base
+POUDRIERE_DATA=${BASEFS}/data
+USE_PORTLINT=no
+DISTFILES_CACHE=/poudriere/distfiles
+CHECK_CHANGED_OPTIONS=verbose
+CHECK_CHANGED_DEPS=yes
+WRKDIR_ARCHIVE_FORMAT=txz
+NOLINUX=yes
+</pre></div>
+</div>
+<p>„ccache“ und „tmpfs“ können zum schnelleren bauen der Pakete verwendet
+werden. Bei „ccache“ ist darauf zu achten, dass es schon auf dem System
+eingerichtet ist! Bei „tmpfs“ ist dies nicht nötig.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CCACHE_DIR</span><span class="o">=/</span><span class="n">ccache</span>
+<span class="n">USE_TMPFS</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+<p>Möchte man ZFS nicht verwenden, dann ist folgende Zeile wichtig:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NO_ZFS</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+<p>Existiert der ZFS Pfad noch nicht, muss dieser erstellt werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">zfs</span> <span class="n">create</span> <span class="o">-</span><span class="n">o</span> <span class="n">mountpoint</span><span class="o">=/</span><span class="n">poudriere</span> <span class="n">rpool</span><span class="o">/</span><span class="n">poudriere</span>
+</pre></div>
+</div>
+<p>Poudriere verwendet dieses Verzeichnis als „Working Folder“. Sämtliche Pakete,
+Jails und Logs werden hier erstellt und auch wieder gelöscht. Ein weiteres
+Verzeichnis welches verwendet wird ist: <strong>/usr/local/etc/poudriere.d</strong>. Hier
+sind die Einstellungen der Ports hinterlegt, genauer im Verzeichnis
+<strong>/usr/local/etc/poudriere.d/options/&lt;PORT&gt;</strong>.</p>
+</div>
+<div class="section" id="portstree">
+<h3><span class="section-number">1.105.3.2. </span>Portstree<a class="headerlink" href="#portstree" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Als
+erstes checken wir uns einen aktuellen Portstree aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poudriere</span> <span class="n">ports</span> <span class="o">-</span><span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="jail-erstellen">
+<h3><span class="section-number">1.105.3.3. </span>Jail erstellen<a class="headerlink" href="#jail-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Dann können wir verschiedene Versionen von FreeBSD in den Jails erstellen z.B.
+mit FreeBSD 10.0-RELEASE oder 9.2-RELEASE:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poudriere</span> <span class="n">jail</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">j</span> <span class="mi">100</span><span class="n">_x64</span> <span class="o">-</span><span class="n">v</span> <span class="mf">10.0</span><span class="o">-</span><span class="n">RELEASE</span> <span class="o">-</span><span class="n">a</span> <span class="n">amd64</span>
+<span class="n">poudriere</span> <span class="n">jail</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">j</span> <span class="mi">92</span><span class="n">_x64</span> <span class="o">-</span><span class="n">v</span> <span class="mf">9.2</span><span class="o">-</span><span class="n">RELEASE</span> <span class="o">-</span><span class="n">a</span> <span class="n">amd64</span>
+</pre></div>
+</div>
+<p>Der Name (100_x64) kann frei gewählt werden, sollte aber aussagekräftig sein.</p>
+</div>
+</div>
+<div class="section" id="anpassungen-make-conf">
+<h2><span class="section-number">1.105.4. </span>Anpassungen „make.conf“<a class="headerlink" href="#anpassungen-make-conf" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Für jede Jail kann entweder eine eigene „make.conf“ erstellt oder eine
+globale, welche für alle Jails gültig ist verwendet werden. Jeweils der
+Name ist dafür ausschlaggebend. Bei den oben erstellten Jails würde der
+Name „100_x64-make.conf“ lauten. Die Datei muss im Ordner
+„/usr/local/etc/poudriere.d“ gespeichert werden. Im folgendem Beispiel
+werden sämtliche Pakete ohne „X“ gebaut.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># PKG</span>
+<span class="n">WITH_PKGNG</span><span class="o">=</span><span class="n">yes</span>
+
+<span class="c1"># build ports allways without X</span>
+<span class="n">WITHOUT_X11</span><span class="o">=</span><span class="n">yes</span>
+
+<span class="c1"># default options</span>
+<span class="n">OPTIONS_UNSET</span><span class="o">=</span> <span class="n">BONJOUR</span> <span class="n">DEBUG</span> <span class="n">X11</span>
+</pre></div>
+</div>
+<p>Der Eintrag <strong>WITH_PKGNG=yes</strong> wird nur für FreeBSD 8.X und 9.X benötig.
+Ab FreeBSD 10.0 wird dieser automatisch gesetzt.</p>
+</div>
+<div class="section" id="liste-der-pakete">
+<h2><span class="section-number">1.105.5. </span>Liste der Pakete<a class="headerlink" href="#liste-der-pakete" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Damit Poudriere auch weiss welche Pakete es bauen soll, erstellt man
+eine Datei poudriere-list und speichert diese im Ordner
+„/usr/local/etc/“. Der Name der Datei ist nicht zwingend und kann
+beliebig gewählt werden. Der Inhalt der Datei sieht z.B. so aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shells</span><span class="o">/</span><span class="n">zsh</span>
+<span class="n">sysutils</span><span class="o">/</span><span class="n">beadm</span>
+<span class="n">sysutils</span><span class="o">/</span><span class="n">bsdinfo</span>
+<span class="n">sysutils</span><span class="o">/</span><span class="n">smartmontools</span>
+<span class="n">sysutils</span><span class="o">/</span><span class="n">tmux</span>
+<span class="n">sysutils</span><span class="o">/</span><span class="n">zfs</span><span class="o">-</span><span class="n">stats</span>
+</pre></div>
+</div>
+<div class="section" id="optionen-pro-port-setzen">
+<h3><span class="section-number">1.105.5.1. </span>Optionen pro Port setzen<a class="headerlink" href="#optionen-pro-port-setzen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Poudriere bietet auch die Möglichkeit, spezielle Anpassungen pro Port
+einzustellen. Damit können die Ports dann individuell konfiguriert werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">poudriere</span> <span class="n">options</span> <span class="o">-</span><span class="n">c</span> <span class="n">shells</span><span class="o">/</span><span class="n">zsh</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="optionen-loschen">
+<h3><span class="section-number">1.105.5.2. </span>Optionen löschen<a class="headerlink" href="#optionen-loschen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die gewählten Optionen kann man von einem Port auch wieder löschen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">poudriere</span> <span class="n">options</span> <span class="o">-</span><span class="n">r</span> <span class="n">shells</span><span class="o">/</span><span class="n">zsh</span>
+</pre></div>
+</div>
+<p>Dies sollte auch möglich sein, indem man den Ordner des Ports im Ordner
+„/usr/local/etc/poudriere.d/options“ löscht.</p>
+</div>
+</div>
+<div class="section" id="kompilieren-der-ports">
+<h2><span class="section-number">1.105.6. </span>Kompilieren der Ports<a class="headerlink" href="#kompilieren-der-ports" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Das kompilieren muss separat pro Jail gestartet werden. Poudriere kann Ports
+parallel bauen. Gibt man keine speziellen Optionen in der „poudriere.conf“ mit,
+so entspricht dies der Anzahl an Cores auf der Hostmaschine.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">poudriere</span> <span class="n">bulk</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">-</span><span class="nb">list</span> <span class="o">-</span><span class="n">j</span> <span class="mi">100</span><span class="n">_x64</span>
+<span class="o">%</span> <span class="n">poudriere</span> <span class="n">bulk</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">-</span><span class="nb">list</span> <span class="o">-</span><span class="n">j</span> <span class="mi">92</span><span class="n">_x64</span>
+</pre></div>
+</div>
+<p>Möchte man alle Ports (Achtung über 24’000!) bauen kann man dies natürlich auch
+machen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">poudriere</span> <span class="n">bulk</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">j</span> <span class="mi">100</span><span class="n">_x64</span> <span class="n">poudriere</span> <span class="n">bulk</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">j</span> <span class="mi">92</span><span class="n">_x64</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="update-und-tagliche-aufrufe">
+<h2><span class="section-number">1.105.7. </span>Update und tägliche Aufrufe<a class="headerlink" href="#update-und-tagliche-aufrufe" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der Portstree sollte immer aktuell gehalten werden, damit Poudriere die Pakete
+auch aktualisieren und bauen kann:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">poudriere</span> <span class="n">ports</span> <span class="o">-</span><span class="n">u</span>
+</pre></div>
+</div>
+<p>Weiter ist es sinnvoll, auch die Jail’s mit Updates (freebsd-update) zu
+versorgen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">poudriere</span> <span class="n">jail</span> <span class="o">-</span><span class="n">u</span> <span class="o">-</span><span class="n">j</span> <span class="mi">100</span><span class="n">_x64</span>
+<span class="o">%</span> <span class="n">poudriere</span> <span class="n">jail</span> <span class="o">-</span><span class="n">u</span> <span class="o">-</span><span class="n">j</span> <span class="mi">92</span><span class="n">_x64</span>
+</pre></div>
+</div>
+<p>Stehen Updates zur Verfügung, muss das kompilieren im Anschluss angestossen
+werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">poudriere</span> <span class="n">bulk</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">-</span><span class="nb">list</span> <span class="o">-</span><span class="n">j</span> <span class="mi">100</span><span class="n">_x64</span>
+<span class="o">%</span> <span class="n">poudriere</span> <span class="n">bulk</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">-</span><span class="nb">list</span> <span class="o">-</span><span class="n">j</span> <span class="mi">92</span><span class="n">_x64</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status-abfragen">
+<h2><span class="section-number">1.105.8. </span>Status abfragen<a class="headerlink" href="#status-abfragen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="webfrontend">
+<h3><span class="section-number">1.105.8.1. </span>Webfrontend<a class="headerlink" href="#webfrontend" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Im Verzeichnis <strong>/poudriere/base/data/logs/bulk/&lt;JAIL&gt;/latest</strong> befindet sich
+ein JSON basiertes Webfrontend, welches eine schnelle Übersicht über die
+aktuelle Lage liefert. Dieses Verzeichnis könnte man jetzt über einen Webserver
+wie z.B. „nginx“ verfügbar machen. Für eine „Quick-and-dirty“ Lösung ist aber
+auch „python“ nützlich. Dazu wechselt man in dieses Verzeichnis und startet
+„python“ mit dem Modul „SimpleHTTPServer“:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">cd</span> <span class="o">/</span><span class="n">poudriere</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">bulk</span><span class="o">/</span><span class="mi">100</span><span class="n">_x64</span><span class="o">-</span><span class="n">default</span>
+<span class="o">%</span> <span class="n">python2</span> <span class="o">-</span><span class="n">m</span> <span class="n">SimpleHTTPServer</span> <span class="mi">8080</span>
+
+<span class="o">%</span> <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span> <span class="mi">8080</span>
+</pre></div>
+</div>
+<p>Im Browser öffnet man jetzt die Adresse „&lt;HOSTNAME&gt;:8080“ und klickt auf den
+Namen „latest&#64;“. Hier sollte sich dann das WebGUI befinden.</p>
+</div>
+<div class="section" id="cli">
+<h3><span class="section-number">1.105.8.2. </span>CLI<a class="headerlink" href="#cli" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Auf der Konsole kann man jederzeit, solange der Buildprozess noch läuft „CTRL +
+t“ für einen Statusabfrage drücken.</p>
+</div>
+</div>
+<div class="section" id="die-fertigen-pakete">
+<h2><span class="section-number">1.105.9. </span>Die fertigen Pakete<a class="headerlink" href="#die-fertigen-pakete" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Sind alle Ports gebaut so liegen die fertigen Pakete im Verzeichnis
+<strong>/poudriere/base/data/packages/&lt;JAIL&gt;/ALL</strong>. Wie man diese in das „PKG“
+Repository des jeweiligen Server’s einbindet steht im Artikel</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="poudriere_guide.txt.html" class="btn btn-neutral float-right" title="1.106. Poudriere Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="postgresql_update.txt.html" class="btn btn-neutral float-left" title="1.104. PostgreSQL Update auf einen neueren Zweig" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

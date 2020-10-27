@@ -1,0 +1,697 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.25. CrunchBang Desktop &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.26. CUPS - Drucken in heterogener Umgebung" href="cups_-_drucken_in_heterogener_umgebung.txt.html" />
+    <link rel="prev" title="1.24. Crossbuilding FreeBSD" href="crossbuilding_freebsd.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.25. CrunchBang Desktop</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#verwandte-artikel">1.25.1. Verwandte Artikel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#voraussetzungen">1.25.2. Voraussetzungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-der-grundpakete">1.25.3. Installation der Grundpakete</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compilieren-des-qt-kerns">1.25.3.1. Compilieren des Qt Kerns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration">1.25.4. Konfiguration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#themes">1.25.4.1. Themes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#icon-theme">1.25.4.2. Icon Theme</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alternative-themes">1.25.4.3. Alternative Themes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#schriftarten">1.25.4.4. Schriftarten</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#grafisches-login">1.25.5. Grafisches Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optionale-pakete">1.25.6. Optionale Pakete</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kalender">1.25.6.1. Kalender</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#systemmonitor">1.25.6.2. Systemmonitor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#applet-zur-lautstarkeregelung">1.25.6.3. Applet zur Lautstärkeregelung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#launcher">1.25.6.4. Launcher</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.25. </span>CrunchBang Desktop</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/crunchbsd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="cups_-_drucken_in_heterogener_umgebung.txt.html" class="btn btn-neutral float-right" title="1.26. CUPS - Drucken in heterogener Umgebung" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="crossbuilding_freebsd.txt.html" class="btn btn-neutral float-left" title="1.24. Crossbuilding FreeBSD" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="crunchbang-desktop">
+<h1><span class="section-number">1.25. </span>CrunchBang Desktop<a class="headerlink" href="#crunchbang-desktop" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p>Der CrunchBang Linux Desktop besteht aus dem Fenstermanager Openbox, dem Panel
+Tint2, einem eigenen Theme und ein paar Scripten. Er erfordert nur wenig
+Abhängigkeiten und läuft auch auf älteren Rechnern sehr gut.</p>
+<div class="section" id="verwandte-artikel">
+<h2><span class="section-number">1.25.1. </span>Verwandte Artikel<a class="headerlink" href="#verwandte-artikel" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Es empfiehlt sich zu diesem Thema auch folgende Artikel gelesen zu
+haben.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="/howto/pkg">pkg</a></p></li>
+</ul>
+</div>
+<div class="section" id="voraussetzungen">
+<h2><span class="section-number">1.25.2. </span>Voraussetzungen<a class="headerlink" href="#voraussetzungen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Diese Anleitung setzt voraus dass X11 entsprechend dem FreeBSD Handbuch
+eingerichtet wurde, und nach Eingabe von „startx“ mindestens ein
+Terminal erscheint, von dem aus wir die Einrichtung starten können.</p>
+<p>Alle benötigten Scripte, Themen, Konfigurationsdateien usw. befinden
+sich in einem Archiv welches <a class="reference external" href="http://www.fahrner.name/public/CrunchBSD.txz">hier
+heruntergeladen</a> werden
+kann. Das Archiv enthält alle benötigten Dateien in einem
+Verzeichnisbaum der dem entsprechenden Zielort entspricht. Am besten
+entpackt man das Archiv in seinem Homeverzeichnis und kopiert die
+Dateien/Ordner an ihren Bestimmungsort. Achtung: das Archiv enthält auch
+versteckte Dateien/Ordner wie z.B. .config. Diese dürfen nicht übersehen
+werden.</p>
+<p>Dateien die in das Homeverzeichnis des Benutzers gehören befinden sich
+unter /usr/local/share/crunchbang/skel. Diese werden beim Start über
+Slim automatisch angelegt. Andernfalls kann man das Script
+„/usr/local/share/crunchbang/cb-user-setup benutzername“ manuell
+ausführen.</p>
+<p>Manche Verzeichnisse sind als .tgz Archive gepackt, da sie symbolische
+Links enthalten können. Diese müssen am Zielort noch mit tar ausgepackt
+werden.</p>
+<p>Desweiteren enthält das Archiv ein Verzeichnis /PATCHES. Hierin befinden
+sich Patches und gepatchte Scripte für fehlerhafte Originalpakete die
+wir ersetzen müssen. Z.B. müssen wir eine Komponente des Openbox
+Menüeditors wegen eines Fehlers ersetzen. Jeder Patch hat ein Readme das
+beschreibt wo die gepatchte Datei hin kopiert werden muss. Updates
+könnten diese Dateien später wieder überschreiben, aber ich hoffe mal
+dass Updates auch die Fehler beheben.</p>
+</div>
+<div class="section" id="installation-der-grundpakete">
+<h2><span class="section-number">1.25.3. </span>Installation der Grundpakete<a class="headerlink" href="#installation-der-grundpakete" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Als erstes installieren wir die zwingend benötigten Grundpakete, wie
+z.B. den Fenstermanager oder das Panel. Wenn nicht anders angegeben
+können die Pakete mittels pkg binär installiert werden, oder mittels
+portmaster aus den Ports.</p>
+<p>Diese Pakete benötigen wir für den ersten Start:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-wm/openbox&amp;btnI=lucky">x11-wm/openbox</a>
+Der Openbox Fenstermanager</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-wm/obmenu&amp;btnI=lucky">x11-wm/obmenu</a>
+Openbox Menüeditor (hat einen Bug, siehe Hinweis unten)</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-wm/obconf&amp;btnI=lucky">x11-wm/obconf</a>
+Openbox Konfigurationstool</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11/tint-devel&amp;btnI=lucky">x11/tint-devel</a>
+Das Tint2 Panel (Entwicklerversion)</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-wm/compton&amp;btnI=lucky">x11-wm/compton</a>
+Compositing Manager für Transparenz und Schatten</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=security/sudo&amp;btnI=lucky">security/sudo</a>
+sudo. Nach der Installation mit „visudo“ der Gruppe wheel alle
+Kommandos erlauben, und euren User zur Gruppe wheel hinzufügen.</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-themes/gtk-murrine-engine&amp;btnI=lucky">x11-themes/gtk-murrine-engine</a>
+Die Theme-Engine</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-themes/lxappearance&amp;btnI=lucky">x11-themes/lxappearance</a>
+Konfigurationstool für Themes</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/lxterminal&amp;btnI=lucky">sysutils/lxterminal</a>
+Das Terminal</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-fm/pcmanfm&amp;btnI=lucky">x11-fm/pcmanfm</a>
+Der Dateimanager</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=shells/bash&amp;btnI=lucky">shells/bash</a>
+Bourne Again Shell (wird von vielen Scripten gebraucht)</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=graphics/hsetroot&amp;btnI=lucky">graphics/hsetroot</a>
+Hintergrund setzen</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=graphics/feh&amp;btnI=lucky">graphics/feh</a>
+Grafikbetrachter zum setzen des Bildschirmhintergrunds</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=graphics/viewnior&amp;btnI=lucky">graphics/viewnior</a>
+Weiterer Grafikbetrachter</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=graphics/scrot&amp;btnI=lucky">graphics/scrot</a>
+Screenshot-Programm</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=graphics/evince&amp;btnI=lucky">graphics/evince</a>
+PDF-Viewer</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=misc/rpl&amp;btnI=lucky">misc/rpl</a>
+Strings in Dateien ersetzen</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/automount&amp;btnI=lucky">sysutils/automount</a>
+Wechselmedien automatisch einhängen</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11/gmrun&amp;btnI=lucky">x11/gmrun</a>
+Programme ausführen</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=devel/geany&amp;btnI=lucky">devel/geany</a>
+Texteditor</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=graphics/mesa-demos&amp;btnI=lucky">graphics/mesa-demos</a>
+Enthält das benötigte glxinfo</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=math/galculator&amp;btnI=lucky">math/galculator</a>
+Taschenrechner</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11/lxmenu-data&amp;btnI=lucky">x11/lxmenu-data</a>
+XDG Menü</p></li>
+</ul>
+<p>Optional:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=security/py-paramiko&amp;btnI=lucky">security/py-paramiko</a>
+Für das Openbox Network/SSH Menü</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/fusefs-sshfs&amp;btnI=lucky">sysutils/fusefs-sshfs</a>
+Mounten via SSHFS für Network/SSH Menü</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11/xscreensaver&amp;btnI=lucky">x11/xscreensaver</a>
+Bildschirmschoner/-locker</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=net-mgmt/wifimgr&amp;btnI=lucky">net-mgmt/wifimgr</a>
+WLAN-Manager</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=audio/mixmos&amp;btnI=lucky">audio/mixmos</a>
+Audio Mixer</p></li>
+</ul>
+<p>Wer optionale Software nicht installiert, kann sie mit dem Menü-Editor
+aus seinem Openbox Menü entfernen.</p>
+<div class="section" id="compilieren-des-qt-kerns">
+<h3><span class="section-number">1.25.3.1. </span>Compilieren des Qt Kerns<a class="headerlink" href="#compilieren-des-qt-kerns" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Damit Programme, welche die Qt Grafikbibliotheken verwenden, sich
+optisch besser in die GTK-Umgebung einfügen, sollten wir gleich zu
+Beginn 2 Pakete aus den Ports compilieren. Wir fügen in die Datei
+/etc/make.conf folgende Zeile ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">QT4_OPTIONS</span><span class="o">=</span><span class="n">QGTKSTYLE</span>
+</pre></div>
+</div>
+<p>Anschliessend installieren wir diese 2 Pakete mittels portmaster aus den
+Ports:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=devel/qt4-corelib&amp;btnI=lucky">devel/qt4-corelib</a>
+Qt 4 Kernbibliothek</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-toolkits/qt4-gui&amp;btnI=lucky">x11-toolkits/qt4-gui</a>
+Qt 4 GUI</p></li>
+</ul>
+<p>Jetzt noch das Paket
+<a class="reference external" href="https://www.google.com/search?q=misc/qt4-qtconfig&amp;btnI=lucky">misc/qt4-qtconfig</a>
+installieren, und mittels Kommando qtconfig-qt4 den GTK+ Stil auswählen.
+Um zu verhindern dass die aus den Ports compilierten Pakete durch „pkg
+upgrade“ überschrieben werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">lock</span> <span class="n">devel</span><span class="o">/</span><span class="n">qt4</span><span class="o">-</span><span class="n">corelib</span>
+<span class="n">pkg</span> <span class="n">lock</span> <span class="n">x11</span><span class="o">-</span><span class="n">toolkits</span><span class="o">/</span><span class="n">qt4</span><span class="o">-</span><span class="n">gui</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="konfiguration">
+<h2><span class="section-number">1.25.4. </span>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Openbox Session wird durch .xinitrc gestartet (Slim) oder durch
+.xsession (xdm). Am einfachsten legt man eine .xinitrc an und macht
+einen symlink auf .xsession. Beispiel für .xinitrc:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LANG</span><span class="o">=</span><span class="n">de_DE</span><span class="o">.</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="p">;</span> <span class="n">export</span> <span class="n">LANG</span>
+<span class="n">CHARSET</span><span class="o">=</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="p">;</span> <span class="n">export</span> <span class="n">CHARSET</span>
+<span class="n">BROWSER</span><span class="o">=</span><span class="n">firefox</span><span class="p">;</span> <span class="n">export</span> <span class="n">BROWSER</span>
+<span class="n">XDG_CONFIG_DIRS</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">xdg</span><span class="p">;</span> <span class="n">export</span> <span class="n">XDG_CONFIG_DIRS</span>
+<span class="n">XDG_MENU_PREFIX</span><span class="o">=</span><span class="s1">&#39;lxde-&#39;</span><span class="p">;</span> <span class="n">export</span> <span class="n">XDG_MENU_PREFIX</span>
+<span class="n">exec</span> <span class="n">openbox</span><span class="o">-</span><span class="n">session</span>
+</pre></div>
+</div>
+<p>Beim ersten Start über Slim wird das Konfigurationsscript
+/usr/local/share/crunchbang/cb-user-setup ausgeführt, welches alle
+benötigten Verzeichnisse und Konfigurationsdateien anlegt. Beim Start
+über xdm muss dieses Script einmalig manuell ausgeführt werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">crunchbang</span><span class="o">/</span><span class="n">cb</span><span class="o">-</span><span class="n">user</span><span class="o">-</span><span class="n">setup</span> <span class="s2">&quot;benutzername&quot;</span>
+</pre></div>
+</div>
+<p>Das Exit-Applet muss die Befehle acpiconf und shutdown als root
+ausführen können. Damit das jeder Benutzer ohne Passwort machen kann,
+fügen wir mittels „visudo“ am Ende folgende Zeile an:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Allow any user to run acpiconf and shutdown as root without password</span>
+<span class="n">ALL</span> <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">root</span><span class="p">)</span> <span class="n">NOPASSWD</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">acpiconf</span><span class="p">,</span> <span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">shutdown</span>
+</pre></div>
+</div>
+<div class="section" id="themes">
+<h3><span class="section-number">1.25.4.1. </span>Themes<a class="headerlink" href="#themes" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wurde das Setup-Script korrekt ausgeführt, sollten alle Einstellungen
+passen. Zur Kontrolle:</p>
+<ul class="simple">
+<li><p>lxappearance starten. Als Fenster-Thema „waldorf“ auswählen, als
+Symbol-Thema CrunchBang-Dark.</p></li>
+<li><p>obconf starten. Als Thema „waldorf“ auswählen.</p></li>
+</ul>
+</div>
+<div class="section" id="icon-theme">
+<h3><span class="section-number">1.25.4.2. </span>Icon Theme<a class="headerlink" href="#icon-theme" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das CrunchBang Icon Theme baut auf dem Gnome Icon Theme auf
+(<a class="reference external" href="https://www.google.com/search?q=misc/gnome-icon-theme&amp;btnI=lucky">misc/gnome-icon-theme</a>),
+und zwar auf einem älteren, in dem viele Icons eine gräuliche Färbung
+besitzen. Im aktuellen Gnome Icon Theme sind diese bräunlich eingefärbt,
+was nicht so gut zum restlichen Theme passt. Das ältere (gräuliche) ist
+im Archiv mit enthalten. Wer lieber das neuere (bräunliche) mag, der
+kann das aus dem Archiv weglassen und stattdessen das Paket
+<a class="reference external" href="https://www.google.com/search?q=misc/gnome-icon-theme&amp;btnI=lucky">misc/gnome-icon-theme</a>
+installieren.</p>
+</div>
+<div class="section" id="alternative-themes">
+<h3><span class="section-number">1.25.4.3. </span>Alternative Themes<a class="headerlink" href="#alternative-themes" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Was auch sehr gut aussieht ist Theme <a class="reference external" href="http://gnome-look.org/content/show.php?content=140449">„Equinox
+Evolution“</a>
+mit zugehörigem Openbox Theme „Equinox Evolution“ (befindet sich im
+Archiv unter EXTRAS). Dazu muss das Paket
+<a class="reference external" href="https://www.google.com/search?q=x11-themes/gtk-equinox-engine&amp;btnI=lucky">x11-themes/gtk-equinox-engine</a>
+installiert werden. Dazu passt auch das bräunliche Gnome Icon Theme ganz
+gut.</p>
+</div>
+<div class="section" id="schriftarten">
+<h3><span class="section-number">1.25.4.4. </span>Schriftarten<a class="headerlink" href="#schriftarten" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Mit dem X11 Paket werden gleichzeitig auch die Xorg Bitmap Fonts
+installiert, welche manchmal als Fallback für nicht vorhandene Schriften
+dienen und dazu führen das Text ziemlich pixelig dargestellt wird. Die
+Bitmap Fonts deaktivieren wir wie folgt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/local/etc/fonts/conf.d</span>
+<span class="c1"># ln -s ../conf.avail/70-no-bitmaps.conf .</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="grafisches-login">
+<h2><span class="section-number">1.25.5. </span>Grafisches Login<a class="headerlink" href="#grafisches-login" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Für ein grafisches Login installieren wir noch
+<a class="reference external" href="https://www.google.com/search?q=x11/xdm&amp;btnI=lucky">x11/xdm</a> und
+aktivieren es in der Datei /etc/ttys durch ändern des Eintrags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ttyv8</span> <span class="s2">&quot;/usr/local/bin/xdm -nodaemon -config /usr/local/lib/X11/xdm/xdm-config-cb&quot;</span> <span class="n">xterm</span>   <span class="n">on</span>  <span class="n">secure</span>
+</pre></div>
+</div>
+<p>oder alternativ
+<a class="reference external" href="https://www.google.com/search?q=x11/slim&amp;btnI=lucky">x11/slim</a> und
+aktivieren es in der Datei /etc/ttys durch ändern des Eintrags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ttyv8</span> <span class="s2">&quot;/usr/local/bin/slim&quot;</span>       <span class="n">xterm</span>   <span class="n">on</span>  <span class="n">secure</span>
+</pre></div>
+</div>
+<p><strong>Achtung:</strong> bei Verwendung von Slim muss die letzte Zeile im .xinitrc
+folgendermassen lauten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>exec openbox-session &lt;/dev/null &gt;$HOME/.xsession-out 2&gt;&amp;1
+</pre></div>
+</div>
+<p>Grund ist, dass Slim beim Start über /dev/ttys die Dateidescriptoren für
+stdin/stdout/stderr nicht erzeugt. Und auch beim Start als Service
+zeigen diese Descriptoren nur auf /dev/null, d.h. alle Fehlermeldungen
+gehen verloren. Außerdem wertet Slim die /etc/login.conf nicht aus.
+Unter *BSD empfehle ich die Verwendung von xdm, da Slim für Linux
+gebaut wurde, zusätzlich die Linux-Daemons Polkit und Consolekit
+startet, und zudem schlecht auf *BSD portiert ist.</p>
+</div>
+<div class="section" id="optionale-pakete">
+<h2><span class="section-number">1.25.6. </span>Optionale Pakete<a class="headerlink" href="#optionale-pakete" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="kalender">
+<h3><span class="section-number">1.25.6.1. </span>Kalender<a class="headerlink" href="#kalender" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Für die Uhr im Panel gibt es auch einen Kalender:
+<a class="reference external" href="http://dmedvinsky.github.io/gsimplecal/">gsimplecal</a>. Dafür werden
+die Pakete
+<a class="reference external" href="https://www.google.com/search?q=devel/autoconf&amp;btnI=lucky">devel/autoconf</a>
+und
+<a class="reference external" href="https://www.google.com/search?q=devel/automake&amp;btnI=lucky">devel/automake</a>
+benötigt. Anschliessend kann wie folgt installiert werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dmedvinsky</span><span class="o">/</span><span class="n">gsimplecal</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">gsimplecal</span>
+<span class="n">git</span> <span class="n">pull</span>
+<span class="o">./</span><span class="n">autogen</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">gtk2</span>
+<span class="n">make</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="systemmonitor">
+<h3><span class="section-number">1.25.6.2. </span>Systemmonitor<a class="headerlink" href="#systemmonitor" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Systemmonitor für den Desktop-Hintergrund:
+<a class="reference external" href="https://www.google.com/search?q=sysutils/conky&amp;btnI=lucky">sysutils/conky</a></p>
+</div>
+<div class="section" id="applet-zur-lautstarkeregelung">
+<h3><span class="section-number">1.25.6.3. </span>Applet zur Lautstärkeregelung<a class="headerlink" href="#applet-zur-lautstarkeregelung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Als Lautstärkeregler im Panel eignet sich
+<a class="reference external" href="http://oliwer.net/b/volwheel.html">VolWheel</a> sehr gut. Für die
+Installation muss vorher das Perl Shell Modul und Gtk2 installiert
+werden mit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">cpan</span> <span class="n">Shell</span>
+<span class="n">sudo</span> <span class="n">cpan</span> <span class="n">Gtk2</span>
+</pre></div>
+</div>
+<p>(Hier gibts noch ein Problem: beim Start findet er kein Modul Alsa.pm.
+Auf meinem Test-PC klappte das, muss ich suchen wie ich das damals
+hinbekommen habe)</p>
+</div>
+<div class="section" id="launcher">
+<h3><span class="section-number">1.25.6.4. </span>Launcher<a class="headerlink" href="#launcher" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Launcher für das Panel:
+<a class="reference external" href="https://www.google.com/search?q=deskutils/launchy&amp;btnI=lucky">deskutils/launchy</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cups_-_drucken_in_heterogener_umgebung.txt.html" class="btn btn-neutral float-right" title="1.26. CUPS - Drucken in heterogener Umgebung" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="crossbuilding_freebsd.txt.html" class="btn btn-neutral float-left" title="1.24. Crossbuilding FreeBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1065 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.4. Asterisk &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.5. Audio-CD rippen" href="audio-cd_rippen.txt.html" />
+    <link rel="prev" title="1.3. Apache mit php5 installieren" href="apache_mit_php5_installieren.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.4. Asterisk</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#was-kann-asterisk">1.4.1. Was kann Asterisk?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#was-kann-asterisk-nicht">1.4.2. Was kann Asterisk nicht?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-von-asterisk">1.4.3. Installation von Asterisk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration">1.4.4. Konfiguration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jail">1.4.4.1. Jail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#asterisk-1">1.4.4.2. Asterisk</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#starten-der-jail-fur-asterisk">1.4.5. Starten der Jail für Asterisk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#konfiguration-der-jail-fur-asterisk">1.4.5.1. Konfiguration der Jail für Asterisk</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nutzliche-infos">1.4.6. nützliche Infos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blacklist">1.4.6.1. Blacklist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#externe-einwahl">1.4.6.2. Externe Einwahl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#offnungszeiten-im-dialplan">1.4.6.3. Öffnungszeiten im Dialplan</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sicherheit">1.4.7. Sicherheit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debugging">1.4.8. Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.4. </span>Asterisk</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/asterisk_voip_telefonanalge.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="audio-cd_rippen.txt.html" class="btn btn-neutral float-right" title="1.5. Audio-CD rippen" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="apache_mit_php5_installieren.txt.html" class="btn btn-neutral float-left" title="1.3. Apache mit php5 installieren" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="asterisk">
+<h1><span class="section-number">1.4. </span>Asterisk<a class="headerlink" href="#asterisk" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p>In diesem HowTo wird erklärt, wie man Asterisk auf BSD installiert und
+eine einfache Telefonanlage mit SIP und IAX Konten erstellt, externe
+VoIP Provider einbindet und zwei Asterisk mittels IAX verbindet.</p>
+<div class="section" id="was-kann-asterisk">
+<h2><span class="section-number">1.4.1. </span>Was kann Asterisk?<a class="headerlink" href="#was-kann-asterisk" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Asterisk kann so gut wie alles, was von einer modernen Telefonanlage im
+Business Bereich erwartet wird. Aber auch für kleine private Anlagen ist
+Asterisk eine gute Wahl!</p>
+<ul class="simple">
+<li><p>Music on Hold</p></li>
+<li><p>Konferenzräume</p></li>
+<li><p>Voice Mail</p></li>
+<li><p>Anrufweiterleitung mit/ohne Rücksprache</p></li>
+<li><p>Warteschleifen</p></li>
+<li><p>Agentenlogin (für. z.B HomeOffice Mitarbeiter)</p></li>
+<li><p>Blacklists für unerwünschte Anrufer</p></li>
+<li><p>Manager Interface für Call-Center</p></li>
+</ul>
+</div>
+<div class="section" id="was-kann-asterisk-nicht">
+<h2><span class="section-number">1.4.2. </span>Was kann Asterisk nicht?<a class="headerlink" href="#was-kann-asterisk-nicht" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Asterisk unterstützt SRTP und IAX2 (AES128) jedoch kein ZRTP (Zimmermann
+RTP). Wer ZRTP nutzen möchte, sollte einen zusätzlichen Kamailio Server
+einrichten.</p>
+<p>Die Einrichtung eines Kamailio Server ist einfach, wird in diesem HowTo
+jedoch nicht behandelt.</p>
+</div>
+<div class="section" id="installation-von-asterisk">
+<h2><span class="section-number">1.4.3. </span>Installation von Asterisk<a class="headerlink" href="#installation-von-asterisk" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Vorzugsweise installieren wir Asterisk in einer Jail. Wie man Jails
+erstellt, wird hier erklärt <a class="reference external" href="/howto/jails">jails</a>.</p>
+<p>Wir installieren Asterisk aus den Binärpaketen.</p>
+<p>&lt;note important&gt; seit Version 13.19.2_1 ist SRTP Support aktiviert. Wer
+auf eine frühere Version von Asterisk13 zurück greifen muss und SRTP
+nutzen will, muss Asterisk aus den Ports bauen. Siehe Notes:
+<a class="reference external" href="https://www.freshports.org/net/asterisk13/">https://www.freshports.org/net/asterisk13/</a> &lt;/note&gt;</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>export <span class="nv">jail</span><span class="o">=</span>&lt;Pfad zur Jail&gt;
+</pre></div>
+</div>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>pkg -c <span class="nv">$jail</span> install -y asterisk13
+</pre></div>
+</div>
+</div>
+<div class="section" id="konfiguration">
+<h2><span class="section-number">1.4.4. </span>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="jail">
+<h3><span class="section-number">1.4.4.1. </span>Jail<a class="headerlink" href="#jail" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Konfiguration unserer Jail sieht wie folgt aus</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="nv">$EDITOR</span> /etc/jail.conf
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>exec.clean;
+exec.system_user = &quot;root&quot;;
+exec.jail_user = &quot;root&quot;;
+exec.start += &quot;/bin/sh /etc/rc&quot;;
+exec.stop = &quot;/bin/sh /etc/rc.shutdown&quot;;
+exec.consolelog = &quot;/var/log/jail_${name}_console.log&quot;;
+mount.devfs;
+allow.set_hostname = 0;
+allow.sysvipc = 0;
+path = &quot;/${name}&quot;;
+
+&lt;gib mir einen Namen!&gt; {
+         host.hostname = &quot;asterisk.lokal&quot;;
+         ip4.addr = &quot;re0|192.168.xxx.xxx/32&quot;;
+         ip4.addr += &quot;re1|192.168.xxx.xxx/32&quot;;
+         }``
+</pre></div>
+</div>
+<p>Hier zu sehen sind zwei Netzwerkschnittstellen, in meinem Fall wären das
+Realtek-Karten <code class="docutils literal notranslate"><span class="pre">re0</span></code> und <code class="docutils literal notranslate"><span class="pre">re1</span></code>. Diese müssen auf die jeweilige
+Hardware und Konfigurationswünsche angepasst werden. Intel wäre <code class="docutils literal notranslate"><span class="pre">em0</span></code>
+und respektive <code class="docutils literal notranslate"><span class="pre">em1</span></code>.</p>
+</div>
+<div class="section" id="asterisk-1">
+<span id="id1"></span><h3><span class="section-number">1.4.4.2. </span>Asterisk<a class="headerlink" href="#asterisk-1" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Es gibt eine Menge Files im Ordner <code class="docutils literal notranslate"><span class="pre">/usr/local/etc/asterisk/</span></code> und beim
+ersten Blick ist man etwas erschrocken. Aber keine Angst, wir werden
+hier nur jene Files bearbeiten oder neu erstellen, welche für den
+Betrieb von Asterisk relevant sind.</p>
+<p>Das sind folgende</p>
+<ul class="simple">
+<li><p>asterisk.conf</p></li>
+<li><p>modules.conf</p></li>
+<li><p>features.conf</p></li>
+<li><p>musiconhold.conf</p></li>
+<li><p>rtp.conf</p></li>
+<li><p>sip.conf</p></li>
+<li><p>iax.conf</p></li>
+<li><p>extensions.conf</p></li>
+</ul>
+<p>Die fett markierten Dateien werden wir neu erstellen/ändern, alle
+anderen nicht markierten bleiben in der ursprünglichen Version im
+Ordner. Den Rest dürft ihr löschen.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Im File modules.conf ist aufgelistet welche Module Asterisk beim
+Start lädt. Da standardmässig alle Module geladen werden und wir aber bis auf
+unsere oben angeführten Konfig-Files alle anderen gelöscht haben, erscheinen in
+der Asterisk CLI beim Start einige Fehlermeldungen, dass keine Konfig gefunden
+wurde. Das ist nicht weiter schlimm, wenn Asterisk nach seinen Wünschen
+konfiguriert ist, kann mann die nicht benötigten Module auf <strong>noload</strong> setzen</p>
+</div>
+<div class="section" id="asterisk-conf">
+<h4><span class="section-number">1.4.4.2.1. </span>asterisk.conf<a class="headerlink" href="#asterisk-conf" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Kontrolliert, ob diese beiden Zeilen nicht auskommentiert sind. Wir
+wollen Asterisk als User Asterisk laufen lassen.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="nv">runuser</span> <span class="o">=</span> asterisk              <span class="p">;</span> The user to run as.
+<span class="nv">rungroup</span> <span class="o">=</span> asterisk             <span class="p">;</span> The group to run as.
+</pre></div>
+</div>
+</div>
+<div class="section" id="rtp-conf">
+<h4><span class="section-number">1.4.4.2.2. </span>rtp.conf<a class="headerlink" href="#rtp-conf" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Hier definieren wir nur die RTP-Ports. Bei den meisten SIP-Telefonen
+sind diese zwischen 5004-5020 als Standard vordefiniert (im Zweifel also
+erstmal ins Menü des Telefons schauen), also sieht unser File so aus.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>general<span class="o">]</span>
+<span class="nv">rtpstart</span><span class="o">=</span>5004
+<span class="nv">rtpend</span><span class="o">=</span>5020
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Die Port Range begrenzt <strong>auch</strong> die Anzahl der maximalen parallelen
+Gespräche! Bei Bedarf muss diese beim Asterisk sowie bei den Clients
+angepasst werden. Bsp.: Konferenz, Music-on-hold, Weiterleitung usw.</p>
+</div>
+</div>
+<div class="section" id="sip-conf">
+<h4><span class="section-number">1.4.4.2.3. </span>sip.conf<a class="headerlink" href="#sip-conf" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Hier sind unsere Zugangsdaten für alle SIP Verbindungen hinterlegt. Egal
+ob interne Telefone oder externer Provider.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>general<span class="o">]</span>
+
+<span class="nv">alwaysauthreject</span> <span class="o">=</span> yes <span class="p">;</span>Überaus wichtig!!!! Die wichtigste Einstellung überhaupt!
+<span class="nv">allowguest</span> <span class="o">=</span> no  <span class="p">;</span> Wir verbieten <span class="s2">&quot;Guest&quot;</span> Registrationen
+
+<span class="nv">bindport</span> <span class="o">=</span> 5060 <span class="p">;</span> SIP Standard Port
+<span class="nv">bindaddr</span> <span class="o">=</span> 0.0.0.0 <span class="p">;</span> wir lauschen auf allen Adressen
+
+<span class="nv">language</span><span class="o">=</span>de <span class="p">;</span> deutsche Ansagen <span class="o">(</span>z.B. Konferenzraum<span class="o">)</span>
+
+<span class="nv">nat</span> <span class="o">=</span> force_rport,comedia  <span class="p">;</span> für SIP Telefone aus dem WAN
+
+<span class="nv">localnet</span> <span class="o">=</span> 192.168.1.0/255.255.255.0 <span class="p">;</span> Unser lokales Netz, wo sich die Telefone befinden.
+<span class="nv">localnet</span> <span class="o">=</span> 192.168.2.0/255.255.255.0 <span class="p">;</span> Es können natürlich auch mehrere definiert werden
+
+<span class="nv">register</span> <span class="o">=</span>&gt; &lt;benutzer&gt;:&lt;passwort&gt;@&lt;server/ip&gt;nummer <span class="p">;</span> -&gt; selbe Zugangsdaten wie ext-sip
+
+<span class="o">[</span>100<span class="o">]</span><span class="p">;</span> BSD User 100
+<span class="nv">disallow</span> <span class="o">=</span> all
+<span class="nv">allow</span> <span class="o">=</span> ulaw <span class="p">;</span> hier wird der **für die Telefone zum Asterisk hin** verwendete Sprachcodec definiert. Kommagetrennt können hier mehrere und/oder andere verwendet werden.
+<span class="nv">context</span> <span class="o">=</span> bsdforen <span class="p">;</span> -&gt; wird in der extensions.conf erläutert!
+<span class="nv">secret</span> <span class="o">=</span> &lt;streng geheimes Passwort&gt;
+<span class="nv">callerid</span> <span class="o">=</span> <span class="s2">&quot;BSD User XYZ&quot;</span> &lt;100&gt;
+<span class="nv">type</span> <span class="o">=</span> peer
+<span class="nv">host</span> <span class="o">=</span> dynamic
+<span class="nv">qualify</span> <span class="o">=</span> yes
+
+<span class="o">[</span>ext-sip<span class="o">]</span>
+<span class="nv">type</span> <span class="o">=</span> peer
+<span class="nv">context</span> <span class="o">=</span> von-ext
+<span class="nv">username</span> <span class="o">=</span> xxxxx
+<span class="nv">fromuser</span> <span class="o">=</span> xxxxx
+<span class="nv">secret</span> <span class="o">=</span> xxxxx
+<span class="nv">host</span> <span class="o">=</span> xxx.xxx.xxx.xxx
+<span class="nv">insecure</span> <span class="o">=</span> port,invite
+<span class="nv">nat</span> <span class="o">=</span> force_rport,comedia
+<span class="nv">qualify</span> <span class="o">=</span> yes
+<span class="nv">canreinvite</span> <span class="o">=</span> no
+<span class="nv">dtmfmode</span> <span class="o">=</span> rfc2833
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p><code class="docutils literal notranslate"><span class="pre">alwaysauthreject</span> <span class="pre">=</span> <span class="pre">yes</span></code> und <code class="docutils literal notranslate"><span class="pre">allowguest</span> <span class="pre">=</span> <span class="pre">no</span></code> sollten immer gesetzt
+sein! Es gibt eine Menge VoIP Brute Force Tools, welche sonst eruieren
+könnten, welche Nummer auf der Asterisk konfiguriert sind. Mit diesen beiden
+Zeilen denkt der Angreifer, dass er einen Treffer erzielt hat, obwohl diese
+Nebenstelle nicht existiert. Ein Brute Force Angriff auf ein Benutzer Konto
+das nicht existiert, wird keinen Erfolg liefern.</p>
+</div>
+</div>
+<div class="section" id="iax-conf">
+<h4><span class="section-number">1.4.4.2.4. </span>iax.conf<a class="headerlink" href="#iax-conf" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Wie der Name schon sagt, geht es um IAX Konten. IAX ist ein spezielles
+Protokoll, welches von Digium, dem Asterisk Erfinder entworfen wurde und
+die bekannten Probleme von SIP und NAT nicht aufweist.</p>
+<p>IAX2 verwendet im Standard den Port 4569 und wickelt allen Verkehr über
+diesen ab, es wird kein zusätzlicher SIP/RTP Port benötigt.</p>
+<p>Über das IAX2 Protokoll lassen sich sehr einfach und komfortabel mehrere
+Asterisk mit einander verbinden. So ist es möglich ein weit verteiltes
+„privates“ Telefonnetz aufzubauen und das dazu noch mit AES128
+verschlüsselt! Natürlich kann man das ganze noch zusätzlich durch ein
+VPN schicken.</p>
+<p>Gleich ob 2,3 oder 4 parallele Gespräche, alle werden über den selben
+IAX Kanal abgewickelt,es ist also sehr ressourcenschonend.</p>
+<p>Wir nehmen an, wir haben zwei Asterisk Server, Server-A und Server-B.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>general<span class="o">]</span>
+<span class="nv">bindport</span><span class="o">=</span>4569
+<span class="nv">bindaddr</span><span class="o">=</span>192.168.xxx.xxx
+<span class="nv">externhost</span><span class="o">=</span>xxx.xxx.xxx.xxx
+<span class="nv">bandwidth</span><span class="o">=</span>high
+<span class="nv">allow</span><span class="o">=</span>all
+<span class="nv">language</span><span class="o">=</span>de
+
+<span class="o">[</span>Asterisk-Server-A<span class="o">]</span>
+<span class="nv">type</span><span class="o">=</span>peer
+<span class="nv">username</span><span class="o">=</span>Asterisk-Server-B
+<span class="nv">secret</span><span class="o">=</span>&lt;gemeinsames Passwort&gt;
+<span class="nv">host</span><span class="o">=</span>&lt;IP Server B&gt;
+<span class="nv">auth</span><span class="o">=</span>md5,rsa
+<span class="nv">trunk</span><span class="o">=</span>yes
+<span class="nv">qualify</span><span class="o">=</span>yes
+<span class="nv">encryption</span><span class="o">=</span>yes
+<span class="nv">forceencryption</span><span class="o">=</span>yes
+<span class="nv">context</span><span class="o">=</span>bsdforen <span class="p">;</span>-&gt; wird in der extensions.conf erläutert!
+</pre></div>
+</div>
+<p>Und hier die Konfig von Server-B</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>general<span class="o">]</span>
+<span class="nv">bindport</span><span class="o">=</span>4569
+<span class="nv">bindaddr</span><span class="o">=</span>192.168.xxx.xxx
+<span class="nv">externhost</span><span class="o">=</span>xxx.xxx.xxx.xxx
+<span class="nv">bandwidth</span><span class="o">=</span>high
+<span class="nv">allow</span><span class="o">=</span>all
+<span class="nv">language</span><span class="o">=</span>de
+
+<span class="o">[</span>Asterisk-Server-B<span class="o">]</span>
+<span class="nv">type</span><span class="o">=</span>peer
+<span class="nv">username</span><span class="o">=</span>Asterisk-Server-A
+<span class="nv">secret</span><span class="o">=</span>&lt;gemeinsames Passwort&gt;
+<span class="nv">host</span><span class="o">=</span>&lt;IP Server A&gt;
+<span class="nv">auth</span><span class="o">=</span>md5,rsa
+<span class="nv">trunk</span><span class="o">=</span>yes
+<span class="nv">qualify</span><span class="o">=</span>yes
+<span class="nv">encryption</span><span class="o">=</span>yes
+<span class="nv">forceencryption</span><span class="o">=</span>yes
+<span class="nv">context</span><span class="o">=</span>bsdforen <span class="p">;</span>-&gt; wird in der extensions.conf erläutert!
+</pre></div>
+</div>
+<p>Wie man erkennen kann, sind die Passwörter bei beiden gleich und die
+Benutzernamen ausgekreuzt. So kann man mit einem Block den eingehenden
+sowie ausgehenden Verkehr abwickeln. Wer aus Sicherheitsgründen dies
+nicht möchte, kann auch für Ein/Ausgehend jeweils eine eigene Konfig
+erstellen und die Anmeldedaten anpassen.</p>
+<p>Hat jemand ein IAX Softphone wie Zoiper im Einsatz, dann benötigt man
+einen Eintrag in der iax.conf der wie folgt aussieht. Bis heute ist mir
+leider kein IAX Client bekannt, der verschlüsselte Anrufe unterstützt.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>200<span class="o">]</span>
+<span class="nv">username</span> <span class="o">=</span>&lt;benutzer&gt;
+<span class="nv">secret</span> <span class="o">=</span> &lt;passwort&gt;
+<span class="nv">disallow</span> <span class="o">=</span> all
+<span class="nv">allow</span> <span class="o">=</span> ulaw
+<span class="nv">allow</span> <span class="o">=</span> alaw
+<span class="nv">context</span> <span class="o">=</span> bsdforen <span class="p">;</span>-&gt; wird in der extesions.conf erläutert!
+<span class="nv">type</span> <span class="o">=</span> peer
+<span class="nv">host</span> <span class="o">=</span> dynamic
+<span class="nv">callerid</span> <span class="o">=</span> <span class="s2">&quot;BSD Foren-Mama&quot;</span> &lt;200&gt;
+<span class="nv">qualify</span> <span class="o">=</span> yes
+</pre></div>
+</div>
+</div>
+<div class="section" id="extensions-conf">
+<h4><span class="section-number">1.4.4.2.5. </span>extensions.conf<a class="headerlink" href="#extensions-conf" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Jetzt geht es los, wir wollen telefonieren und dazu muss Asterisk
+wissen, wohin</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>general<span class="o">]</span>
+<span class="nv">static</span> <span class="o">=</span> yes
+<span class="nv">writeprotect</span> <span class="o">=</span> no
+<span class="nv">clearglobalvars</span> <span class="o">=</span> yes
+<span class="nv">language</span><span class="o">=</span>de <span class="p">;</span> Deutsche Sprachprompts
+
+<span class="o">[</span>bsdforen<span class="o">]</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; _10X,1,Dial<span class="o">(</span>SIP/<span class="k">${</span><span class="nv">EXTEN</span><span class="k">}</span>,600,r<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; _10X,n,Hangup<span class="o">()</span>
+
+<span class="nv">exten</span> <span class="o">=</span>&gt; _20X,1,Dial<span class="o">(</span>IAX2/<span class="k">${</span><span class="nv">EXTEN</span><span class="k">}</span>,600,r<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; _20X,n,Hangup<span class="o">()</span>
+
+<span class="nv">exten</span> <span class="o">=</span>&gt; _30X,1,Dial<span class="o">(</span>IAX2/<span class="k">${</span><span class="nv">EXTEN</span><span class="k">}</span>,60,r<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; _30X,n,Dial<span class="o">(</span>SIP/100,60,r<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; _30X,n,Hangup<span class="o">()</span>
+
+<span class="nv">exten</span> <span class="o">=</span>&gt; _7XX,1,Dial<span class="o">(</span>IAX2/Asterisk-Server-B/<span class="k">${</span><span class="nv">EXTEN</span><span class="k">}</span>,120,r<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; _7XX,n,Hangup
+
+<span class="nv">exten</span> <span class="o">=</span>&gt; _00<span class="o">[</span>1-9<span class="o">]</span>.,1,Dial<span class="o">(</span>SIP/<span class="k">${</span><span class="nv">EXTEN</span><span class="p">:</span><span class="nv">1</span><span class="k">}</span>@ext-sip,120,r<span class="o">)</span> <span class="p">;</span> **Behandelt KEINE Notrufnummer!!!!!!!!**
+<span class="nv">exten</span> <span class="o">=</span>&gt; _00<span class="o">[</span>1-9<span class="o">]</span>.,n,Hangup<span class="o">()</span>
+
+
+<span class="o">[</span>von-ext<span class="o">]</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; 0041123456,1,Dial<span class="o">(</span>SIP/100,120,rR<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; 0041123456,n,Hangup<span class="o">()</span>
+</pre></div>
+</div>
+<p>Hier sollte unser Konstrukt an Konfigurationen in der iax.conf /
+sip.conf schlüssig werden. Wie zu sehen ist, haben wir die Sektion
+[bsdforen] welche bei jedem Account in der IAX/SIP Konfig als context
+gesetzt wurde. Asterisk sucht also hier nach einer Wahlregel.</p>
+<p>Alle SIP Konten sind im Bereich 100-109 und alle IAX Konten im Bereich
+200-209 zu finden. Natürlich kann auch ein IAX User auf einen SIP
+Anschluss anrufen und umgekehrt.</p>
+<p>Die Zahl 600 ist ein TIMEOUT, nach dieser Zeit wird der Anruf zu Schritt
+2 geleitet, also dem Hangup(). Das <strong>r</strong> bedeutet RING, setzt man ein
+<strong>m</strong> so wird MOH &lt;Music on Hold&gt; gestartet. Das MOH Modul muss
+natürlich konfiguriert und dementsprechende Sound Files auf der Anlage
+abgelegt sein. Bitte denkt daran, dass ihr GEMA-freie Musik dort
+verwendet. MOH wird nämlich rechtlich als music-on-demand verstanden.</p>
+<p>Im dritten Beispiel ruft ein User eine Nummer im 300er Kreis,
+beantwortet nach 60s niemand diesen Anruf, so wird der Anrufer auf die
+Nummer 100 geleitet, ist auch dort nach 60s keiner erreichbar, wird er
+beendet.</p>
+<p>Im vierten Block definieren wir, dass alle Nummern im Bereich von
+700-799 per IAX an den Asterisk-Server-B geleitet werden. Asterisk-B
+braucht also eine Wahlregel für diese Nummern!</p>
+<p>Im fünften Block behandeln wir unsere ausgehenden Gespräche. Zu sehen
+ist 00 am Anfang, was bedeutet wir müssen für externe Anliegen eine NULL
+vorwählen. Mit <strong>EXTEN:1</strong> teilen wir Asterisk mit, dass er diese Null
+abschneiden soll, beim Provider kommt also die richtige Nummer an.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Bitte vergesst nicht für die Notrufnummer einen Block zu definieren! Beim
+jeweiligen Anbieter muss dieser dann auf den richtigen Standort des
+Anschlusses geroutet werden. Leider gibt es derzeit noch keine Testnummer um
+zu prüfen, ob das Routing korrekt funktioniert.</p>
+</div>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="nv">exten</span> <span class="o">=</span>&gt; 133,1,Dial<span class="o">(</span>SIP/<span class="k">${</span><span class="nv">EXTEN</span><span class="k">}</span>@ext-sip,600,r<span class="o">)</span>
+</pre></div>
+</div>
+<p>In diesem Beispiel würde man die 133 (Polizei Österreich) über den
+externen SIP Anbieter routen. Natürlich ist es auch möglich den Block
+für ausgehende Gespräche zu modifizieren, sodass er Notrufe absetzen
+kann. Da in vielen Firmen jedoch die Null für extern Standard ist, und
+nicht immer gewährleistet werden kann, dass nicht ein „fremder“ einen
+Notruf absetzten muss, würde ich <strong>immer</strong> die Wahlregel einbauen!</p>
+<p>Im Block [von-ext] behandeln wir unsere externe Rufnummer, hier die
+0041123456. Ruft jemand diese Nummer an, wird er an die 100
+weitergeleitet, ist auch dort nach 60s keiner erreichbar, wird er
+beendet.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>von-ext<span class="o">]</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; 0041123456,1,Dial<span class="o">(</span>SIP/100,60,r<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; 0041123456,n,Hangup<span class="o">()</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Ist der SIP User <strong>offline</strong> so wird das TIMEOUT NICHT berücksichtigt und
+sofort zum nächsten Schritt weitergeleitet!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="starten-der-jail-fur-asterisk">
+<h2><span class="section-number">1.4.5. </span>Starten der Jail für Asterisk<a class="headerlink" href="#starten-der-jail-fur-asterisk" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Jail starten</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>jexec -c asterisk
+</pre></div>
+</div>
+<p>Im Übrigen könnte die Jail wieder beenden (entfernt) werden.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>jexec -r asterisk
+</pre></div>
+</div>
+<div class="section" id="konfiguration-der-jail-fur-asterisk">
+<h3><span class="section-number">1.4.5.1. </span>Konfiguration der Jail für Asterisk<a class="headerlink" href="#konfiguration-der-jail-fur-asterisk" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wir setzen folgenden Eintrag in der JAIL /etc/rc.conf!</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="nv">asterisk_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+</pre></div>
+</div>
+<p>oder manuell mit</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>jexec &lt;JID&gt; asterisk
+</pre></div>
+</div>
+<div class="section" id="asterisk-cli">
+<h4><span class="section-number">1.4.5.1.1. </span>Asterisk CLI<a class="headerlink" href="#asterisk-cli" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Wir verbinden uns mit der Asterisk Command Line.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>jexec &lt;JID&gt; asterisk -r
+</pre></div>
+</div>
+<p>Ist beim Starten von Asterisk kein Fehler aufgetreten sollte die Ausgabe
+in etwa so aussehen.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Asterisk</span> <span class="pre">13.19.0,</span> <span class="pre">Copyright</span> <span class="pre">(C)</span> <span class="pre">1999</span> <span class="pre">-</span> <span class="pre">2014,</span> <span class="pre">Digium,</span> <span class="pre">Inc.</span> <span class="pre">and</span> <span class="pre">others.</span>
+<span class="pre">Created</span> <span class="pre">by</span> <span class="pre">Mark</span> <span class="pre">Spencer</span> <span class="pre">&lt;markster&#64;digium.com&gt;</span>
+<span class="pre">Asterisk</span> <span class="pre">comes</span> <span class="pre">with</span> <span class="pre">ABSOLUTELY</span> <span class="pre">NO</span> <span class="pre">WARRANTY;</span> <span class="pre">type</span> <span class="pre">'core</span> <span class="pre">show</span> <span class="pre">warranty'</span> <span class="pre">for</span> <span class="pre">details.</span>
+<span class="pre">This</span> <span class="pre">is</span> <span class="pre">free</span> <span class="pre">software,</span> <span class="pre">with</span> <span class="pre">components</span> <span class="pre">licensed</span> <span class="pre">under</span> <span class="pre">the</span> <span class="pre">GNU</span> <span class="pre">General</span> <span class="pre">Public</span>
+<span class="pre">License</span> <span class="pre">version</span> <span class="pre">2</span> <span class="pre">and</span> <span class="pre">other</span> <span class="pre">licenses;</span> <span class="pre">you</span> <span class="pre">are</span> <span class="pre">welcome</span> <span class="pre">to</span> <span class="pre">redistribute</span> <span class="pre">it</span> <span class="pre">under</span>
+<span class="pre">certain</span> <span class="pre">conditions.</span> <span class="pre">Type</span> <span class="pre">'core</span> <span class="pre">show</span> <span class="pre">license'</span> <span class="pre">for</span> <span class="pre">details.</span>
+<span class="pre">=========================================================================</span>
+<span class="pre">Running</span> <span class="pre">as</span> <span class="pre">user</span> <span class="pre">'asterisk'</span>
+<span class="pre">Running</span> <span class="pre">under</span> <span class="pre">group</span> <span class="pre">'asterisk'</span>
+<span class="pre">Connected</span> <span class="pre">to</span> <span class="pre">Asterisk</span> <span class="pre">13.19.0</span> <span class="pre">currently</span> <span class="pre">running</span> <span class="pre">on</span> <span class="pre">asterisk</span> <span class="pre">(pid</span> <span class="pre">=</span> <span class="pre">1299)</span>
+<span class="pre">asterisk*CLI&gt;</span></code></p>
+</div></blockquote>
+<p>Das Kommando <code class="docutils literal notranslate"><span class="pre">sip</span> <span class="pre">show</span> <span class="pre">peers</span></code> zeigt uns nun die registrierten Sip User
+an.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>asterisk*CLI&gt; sip show peers
+Name/username             Host                          Dyn Forcerport Comedia    ACL Port     Status      Description
+100/xxx                   192.168.xxx.xxx               D  Yes        Yes         A  5060     OK <span class="o">(</span>35 ms<span class="o">)</span>
+101/xxx                   xxx.xxx.xxx.xxx               D  Yes        Yes            63464    OK <span class="o">(</span>94 ms<span class="o">)</span>
+102/xx                   xxx.xxx.xxx.xxx                D  Yes        Yes            18556    OK <span class="o">(</span>41 ms<span class="o">)</span>
+
+3 sip peers <span class="o">[</span>Monitored: 3 online, 0 offline Unmonitored: 0 online, 0 offline<span class="o">]</span>
+</pre></div>
+</div>
+<p>Das selbe Kommando gibt es auch für IAX2, <code class="docutils literal notranslate"><span class="pre">iax2</span> <span class="pre">show</span> <span class="pre">peers</span></code></p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>asterisk*CLI&gt; iax2 show peers
+Name/Username    Host                         Mask                         Port           Status      Description
+&lt;Name&gt;  xxx.xxx.xxx.xxx                       <span class="o">(</span>S<span class="o">)</span>  255.255.255.255         4569  <span class="o">(</span>T<span class="o">)</span> <span class="o">(</span>E<span class="o">)</span>  OK <span class="o">(</span>48 ms<span class="o">)</span>
+&lt;Name&gt;  xxx.xxx.xxx.xxx                       <span class="o">(</span>S<span class="o">)</span>  255.255.255.255         4569  <span class="o">(</span>T<span class="o">)</span> <span class="o">(</span>E<span class="o">)</span>  OK <span class="o">(</span>36 ms<span class="o">)</span>
+ iax2 peers <span class="o">[</span>3 online, 3 offline, 0 unmonitored<span class="o">]</span>
+</pre></div>
+</div>
+<p>Das <code class="docutils literal notranslate"><span class="pre">(E)</span></code> bei Status bedeutet, encrypted.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>asterisk*CLI&gt; sip show registry
+Host                                    dnsmgr Username       Refresh State                Reg.Time
+xxx.xxx.xxx.xxx:5060                    N      xxxxxxxxxx         105 Registered           Sun, 08 Apr 2018 14:07:51
+1 SIP registrations.
+</pre></div>
+</div>
+<p>Das Kommando <code class="docutils literal notranslate"><span class="pre">core</span> <span class="pre">show</span> <span class="pre">channels</span></code> zeigt alle aufgebauten
+Gesprächsverbindungen an.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>asterisk*CLI&gt; core show channels
+Channel                           Location       State   Application<span class="o">(</span>Data<span class="o">)</span>
+IAX2/Asterisk-Server-B-30687      <span class="o">(</span>None<span class="o">)</span>         Up      AppDial<span class="o">((</span>Outgoing Line<span class="o">))</span>
+SIP/XXX-00000007                  700@privat:1   Up      Dial<span class="o">(</span>IAX2/SEC1/650,80,m<span class="o">(</span>spezial<span class="o">)</span>
+2 active channels
+1 active call
+8 calls processed
+</pre></div>
+</div>
+<p>Hier zu sehen ist ein bestehender IAX2 Kanal welcher über Extension SEC1
+aufgebaut wurde. Wohin der Anruf auf der zweiten Asterisk geleitet wird,
+ist nicht ersichtlich.</p>
+<p>Der Anrufer, hier XXX versucht die Nummer 700 zu erreichen, wir haben in
+der extensions.conf definiert, dass alle 7XX Nummer über den IAX2 Peer
+(Asterisk-Server-B) geroutet werden. Dieser Versucht nun das Gespräch zu
+vemitteln, folglich muss auf dem zweiten Asterisk eine Wahlregel für den
+Bereich 700 erstellt sein.</p>
+</div>
+</div>
+</div>
+<div class="section" id="nutzliche-infos">
+<h2><span class="section-number">1.4.6. </span>nützliche Infos<a class="headerlink" href="#nutzliche-infos" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Mit dem Kommando <code class="docutils literal notranslate"><span class="pre">core</span> <span class="pre">show</span> <span class="pre">help</span></code> kann sich Hilfe für die
+verschiedenen Asterisk Module ausgegeben werden. Hier ein Auszug.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>sip show channel               -- Show detailed SIP channel info
+sip show domains               -- List our local SIP domains
+sip show <span class="nb">history</span>               -- Show SIP dialog <span class="nb">history</span>
+sip show inuse <span class="o">[</span>all<span class="o">]</span>           -- List all inuse/limits
+</pre></div>
+</div>
+<p>Nun kann man mit dem Kommando <code class="docutils literal notranslate"><span class="pre">core</span> <span class="pre">show</span> <span class="pre">help</span> <span class="pre">sip</span> <span class="pre">show</span> <span class="pre">channel</span></code> alle
+Information zur Benutzung dieses Kommandos ausgegeben lassen.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>asterisk*CLI&gt; core show help sip show channel
+Usage: sip show channel &lt;call-id&gt;
+       Provides detailed status on a given SIP dialog <span class="o">(</span>identified by SIP call-id<span class="o">)</span>.
+</pre></div>
+</div>
+<p>Ändert man während dem Betrieb Konfigurationsfiles, so können diese mit</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>sip reload     <span class="c"># sip.conf neu laden</span>
+iax2 reload    <span class="c"># iax.conf neu laden</span>
+core reload    <span class="c"># gesamte Konfiguration neu laden</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Manche Konfigurationsänderungen erfordern einen kompletten NEUSTART von
+Asterisk. Ist man nicht sicher, einfach ein „core stop now“ absetzen und
+anschliessend mit „jexec &lt;JID&gt; asterisk“ neustarten. Laufende Gespräche
+werden beim Neuladen von Konfigurationen nicht unterbrochen.</p>
+</div>
+<p>Möchte man Asterisk beenden, so wird der Befehl</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>core <span class="nb">stop </span>now
+</pre></div>
+</div>
+<p>abgesetzt.</p>
+<p>VoIP Anbieter unterscheiden sich oft im Ablauf der SIP Registrierung.
+Die meisten stellen Konfigurationsbeispiele für die gebräuchlichsten
+Telefonanlagen zur Verfügung, also im Fehlerfall mal die Webseite des
+Anbieters besuchen und nach Beispielen suchen.</p>
+<p>Auch bei der Signalisation von eingehenden Gesprächen gibt es
+Unterschiede. Hier ein Beispiel wie der Schweizer Anbieter e-fon.ch
+Gespräche vermittelt. Wir haben eine Registrierung am e-fon Server
+jedoch beliebig viele Durchwahlnummern.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>EXTERN<span class="o">]</span> <span class="p">;</span> Hier kommen die Anrufe rein
+
+<span class="nv">exten</span> <span class="o">=</span>&gt; s,1,Set<span class="o">(</span><span class="nv">Durchwahlnummer</span><span class="o">=</span><span class="k">${</span><span class="nv">SIP_HEADER</span><span class="p">(X-Number)</span><span class="k">}</span><span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; s,n,Goto<span class="o">(</span>TELEFON,<span class="k">${</span><span class="nv">Durchwahlnummer</span><span class="k">}</span>,1<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; s,n,Hangup<span class="o">()</span>
+
+<span class="o">[</span>TELEFON<span class="o">]</span>
+
+<span class="nv">exten</span> <span class="o">=</span>&gt; XXXXXXX100,1,Dial<span class="o">(</span>SIP/100,20,r<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; XXXXXXX100,n,Answer<span class="o">()</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; XXXXXXX100,n,Verbose<span class="o">(</span>1,Mon-Sam Ansage<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; XXXXXXX100,n,Playback<span class="o">(</span>/usr/local/share/asterisk/ansage/Ansage<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; XXXXXXX100,n,Hangup
+
+<span class="nv">exten</span> <span class="o">=</span>&gt; XXXXXXX200,1,Dial<span class="o">(</span>SIP/200,20,r<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; XXXXXXX200,n,Answer<span class="o">()</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; XXXXXXX200,n,Verbose<span class="o">(</span>1,Mon-Sam Ansage<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; XXXXXXX200,n,Playback<span class="o">(</span>/usr/local/share/asterisk/ansage/Ansage<span class="o">)</span>
+<span class="nv">exten</span> <span class="o">=</span>&gt; XXXXXXX200,n,Hangup
+</pre></div>
+</div>
+<p>Der Ablauf ist relativ einfach,</p>
+<ul class="simple">
+<li><p>wir setzen eine Variable &lt;Durchwahlnummer&gt;</p></li>
+<li><p>springen in den Context [TELEFON] mit der entsprechenden
+Durchwahlnummer</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Es gibt keine Regel die eine nicht existierende Durchwahl behandeln würde.
+Der Anruf wird in so einem Fall abgebrochen.</p>
+</div>
+<div class="section" id="blacklist">
+<h3><span class="section-number">1.4.6.1. </span>Blacklist<a class="headerlink" href="#blacklist" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In der heutigen Zeit wird man immer öfter dazu gezwungen eine Rufnummer
+als „böse“ zu markieren und natürlich ist auch das kein Problem für
+Asterisk. Mit ein paar einfachen Ergänzungen im Wählplan
+„extensions.conf“ kann man jede Nummer blacklisten.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[blacklist]
+exten =&gt; _*4X[0-9].,1,Answer()
+exten =&gt; _*4X[0-9].,n,Set(DB(blacklist/${EXTEN:2})=1)
+exten =&gt; _*4X[0-9].,n,SayPhonetic(OK)
+exten =&gt; _*4X[0-9].,n,Hangup()
+
+exten =&gt; _*5X[0-9].,1,Answer()
+exten =&gt; _*5X[0-9].,n,DBdeltree(blacklist/${EXTEN:2})
+exten =&gt; _*5X[0-9].,n,SayPhonetic(OK)
+exten =&gt; _*5X[0-9].,n,Hangup()
+</pre></div>
+</div>
+<p>Dieser Block setzt oder löscht eine Nummer aus der Blacklist. Im
+nächsten Schritt wird bei eingehenden Anrufen kontrolliert ob sie auf
+der Blacklist vermerkt sind.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[incoming]
+exten =&gt; &lt;externe Nummer&gt;,1,GotoIf(${DB_EXISTS(blacklist/${CALLERID(num)})}?blacklisted,s,1)
+exten =&gt; &lt;externe Nummer&gt;,n,Dial(SIP/XXX,120,rR)
+</pre></div>
+</div>
+<p>fällt diese Kontrolle positiv aus, so greift die Zeile „GotoIf“ und wir
+springen in den Block „blacklisted“.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">blacklisted</span><span class="p">]</span>
+<span class="n">exten</span> <span class="o">=&gt;</span> <span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">NoOp</span><span class="p">(</span><span class="s2">&quot;This number is Blacklisted +++++++++++++++++++++++++++++&quot;</span><span class="p">)</span>
+<span class="n">exten</span> <span class="o">=&gt;</span> <span class="n">s</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">Hangup</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="externe-einwahl">
+<h3><span class="section-number">1.4.6.2. </span>Externe Einwahl<a class="headerlink" href="#externe-einwahl" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Möchte man eine <strong>interne</strong> Leitung von aussen, dann kann man folgendes
+in der extensions.conf eintragen. Der Anrufer muss eine
+Zahlenkombination eingeben, danach erhält er den internen Wählton und
+kann je nach Konfiguration jede interne sowie externe Rufnummer wählen.</p>
+<p>Wir überprüfen ob es sich beim eingehenden Anruf um unsere Nummer
+handelt. Ist dies der Fall verschieben wir ihn in den „AUTH“ Block.
+Danach fragt Asterisk nach einem Passwort und gibt uns anschliessend
+eine interne Leitung.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[incoming]
+exten =&gt; &lt;externe Rufnummer&gt;,1,GotoIf($[&quot;${CALLERID(number)}&quot; = &quot;&lt;meine Nummer&gt;&quot;]?AUTH,s,1)]
+exten =&gt; &lt;externe Rufnummer&gt;,n,Dial(SIP/XXX,60,r)
+
+[AUTH]
+exten =&gt; s,1,Authenticate(&lt;passwort&gt;)
+exten =&gt; s,n,DISA(no-password,privat)
+exten =&gt; s,n,Hangup
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Auch wenn solche externen Zugänge mit Passwörter abgesichert werden, gibt es
+gewisse Risiken, deshalb empfiehlt es sich immer die eingehenden Rufnummer zu
+überprüfen!</p>
+</div>
+</div>
+<div class="section" id="offnungszeiten-im-dialplan">
+<h3><span class="section-number">1.4.6.3. </span>Öffnungszeiten im Dialplan<a class="headerlink" href="#offnungszeiten-im-dialplan" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Möchte man die Geschäftszeiten definieren könnte der Wählplan so
+aussehen.</p>
+<ul class="simple">
+<li><p>MO-FR 08:00 - 12:30 &amp; 13:30 - 17:00 geöffnet</p></li>
+<li><p>SA 08:00-15:00 geöffnet</p></li>
+</ul>
+<p>Trifft ein Anruf ausserhalb dieser Zeiten ein, wird ein Audiofile
+<strong>wir_sind_nicht_da</strong> abgespielt</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[von-voip-provider]
+exten =&gt; _AAAAAAXXX,1,GotoIfTime(08:00-12:30|mon-thu|*|*?open,${EXTEN},1)
+exten =&gt; _AAAAAAXXX,n,GotoIfTime(13:30-16:59|mon-thu|*|*?open,${EXTEN},1)
+exten =&gt; _AAAAAAXXX,n,GotoIfTime(08:00-14:59|fri|*|*?open,${EXTEN},1)
+exten =&gt; _AAAAAAXXX,n,Answer()
+exten =&gt; _AAAAAAXXX,n,Playback(/usr/local/share/asterisk/**wir_sind_nicht_da**)
+exten =&gt; _AAAAAAXXX,n,Hangup()
+
+
+[open]
+exten =&gt; ,1,Dial(SIP/${EXTEN:-3},25,rtT);
+exten =&gt; ,n,Hangup();
+</pre></div>
+</div>
+<p>Während den Öffnungszeiten leiten wir Anrufe an [open] und der
+entsprechenden Extension [{EXTEN:-3}] weiter. Die -3 bedeutet, wir
+verwenden nur die letzten 3 Stellen.</p>
+</div>
+</div>
+<div class="section" id="sicherheit">
+<h2><span class="section-number">1.4.7. </span>Sicherheit<a class="headerlink" href="#sicherheit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Angriffe auf VoIP Anlagen sind sehr populär, es gibt daher einige
+Vorsichtsmaßnahmen welche zu beachten sind. Wird die Anlage privat
+betrieben, stellt sich die Frage ob es ausreicht, einen prepaid
+Anschluss zu verwenden. Ist dies der Fall, hat man bereits eine weitere
+Sicherheitsbarriere geschaffen.</p>
+<p>Der wichtigste Punkt ist natürlich die Wahl der Passwörter. Die meisten
+Angriffe die ich beobachten konnte, basieren auf primitive Brute-Force
+Attacken, welche durch starke Passwörter abgewehrt werden können.</p>
+<p>Astersik bietet auch die Möglichkeit, durch eine ACL (Access Control
+List) IP White- und Blacklists zu definieren.</p>
+<p>Dazu wird die Datei acl.conf wie folgt erstellt</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">extern</span><span class="p">]</span>
+<span class="n">permit</span><span class="o">=</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.0</span><span class="o">/</span><span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+</pre></div>
+</div>
+<p>In der sip.conf / iax.conf wird die ACL wie folgt einem SIP Konto
+zugewiesen</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">peer1</span><span class="p">]</span>
+<span class="o">......</span>
+<span class="o">......</span>
+<span class="o">......</span>
+<span class="n">acl</span><span class="o">=</span><span class="n">extern</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p><strong>peer1</strong> kann sich nur registrieren, wenn er sich im richtigen Subnetz
+8.8.8.0/24 befindet. Dies bedingt natürlich, dass er eine statische IP
+Adresse besitzt.</p>
+</div>
+</div>
+<div class="section" id="debugging">
+<h2><span class="section-number">1.4.8. </span>Debugging<a class="headerlink" href="#debugging" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Gibt es Probleme mit SIP oder IAX Konten so kann man das Debugging in
+der Asterisk CLI aktivieren.</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>sip <span class="nb">set </span>debug peer 500
+</pre></div>
+</div>
+<p>oder für den gesamten SIP Traffic</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>sip <span class="nb">set </span>debug on
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="audio-cd_rippen.txt.html" class="btn btn-neutral float-right" title="1.5. Audio-CD rippen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="apache_mit_php5_installieren.txt.html" class="btn btn-neutral float-left" title="1.3. Apache mit php5 installieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

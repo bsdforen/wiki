@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.4. Hardware-Guide &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="3.5. WLAN-Hardware und -Treiber" href="wlan-hardware_und_-treiber.txt.html" />
+    <link rel="prev" title="3.3. FreeBSD auf Singleboard-Computern" href="freebsd_auf_singleboard-computern.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="hardware_index.html">3. Hardware</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="acer_aspire_one.txt.html">3.1. Acer Aspire One</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dell_inspiron_640m.txt.html">3.2. Dell Inspiron 640m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_auf_singleboard-computern.txt.html">3.3. FreeBSD auf Singleboard-Computern</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.4. Hardware-Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#allgemeines">3.4.1. Allgemeines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#keine-dokumentation-keine-treiber">3.4.1.1. keine Dokumentation, keine Treiber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keine-dokumentation-blob-treiber">3.4.1.2. keine Dokumentation, BLOB-Treiber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dokumentation-oder-freie-treiber">3.4.1.3. Dokumentation oder freie Treiber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freie-treiber-durch-reverse-engineering">3.4.1.4. freie Treiber durch Reverse-Engineering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#firmware">3.4.1.5. Firmware</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hardware">3.4.2. Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#grafikkarten-2d-support">3.4.2.1. Grafikkarten (2D-Support)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grafikkarten-3d-support">3.4.2.2. Grafikkarten (3D-Support)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lan">3.4.2.3. LAN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mainboard-chipsatze">3.4.2.4. Mainboard / Chipsätze</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soundkarten">3.4.2.5. Soundkarten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wlan">3.4.2.6. WLAN</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wlan-hardware_und_-treiber.txt.html">3.5. WLAN-Hardware und -Treiber</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="hardware_index.html"><span class="section-number">3. </span>Hardware</a> &raquo;</li>
+        
+      <li><span class="section-number">3.4. </span>Hardware-Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/hardware/hardware-guide.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="wlan-hardware_und_-treiber.txt.html" class="btn btn-neutral float-right" title="3.5. WLAN-Hardware und -Treiber" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="freebsd_auf_singleboard-computern.txt.html" class="btn btn-neutral float-left" title="3.3. FreeBSD auf Singleboard-Computern" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hardware-guide">
+<h1><span class="section-number">3.4. </span>Hardware-Guide<a class="headerlink" href="#hardware-guide" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd2.png" src="../_images/logo-freebsd2.png" />
+</div>
+<p>Dieser Artikel ist noch nicht fertig. Genauergesagt fehlt noch das worum es
+eigentlich geht undzwar die meisten Tabellen mit der Treibersituation für
+Hardware bestimmter Hersteller sortiert nach Hardware-Rubrik! Hilf mit oder
+warte ab :-D</p>
+<div class="section" id="allgemeines">
+<h2><span class="section-number">3.4.1. </span>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line">Dieser Guide soll einen Überblick über „Hardware und die BSDs“ geben.
+Dabei geht es nicht um die Frage „Läuft Grafikkarte X Modell Y
+Revision Z mit #BSD Version Q?“ (dazu siehe <a class="reference external" href="/Hardware/Unterstützte_Hardware">Unterstütze
+Hardware</a>), sondern allgemeiner
+darum welche Hardware-Hersteller in welchem Umfang BSD unterstützen
+und darum was man sich kaufen soll wenn man gerade dabei ist ;-)</div>
+<div class="line">Dabei geht es sowohl um pragmatische Aspekte, aber auch um Themen wie
+Codefreiheit, Hardware-Dokumentation und BLObs.</div>
+<div class="line">Ich habe die Hersteller in drei Gruppen unterteilt an denen wir messen
+können wie gut/schlecht sie die BSDs und andere Freie Betriebsysteme
+unterstützen.</div>
+</div>
+<div class="section" id="keine-dokumentation-keine-treiber">
+<h3><span class="section-number">3.4.1.1. </span>keine Dokumentation, keine Treiber<a class="headerlink" href="#keine-dokumentation-keine-treiber" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Diese Hardware läuft offensichtlich überhaupt nicht. Wenn man etwas
+aus dieser Kategorie hat ist man aufgeschmissen. Hersteller solcher
+Hardware sollte man aus Prinzip meiden.</div>
+<div class="line">Hersteller dieser Gruppe sind in den Tabellen schwarz markiert.</div>
+</div>
+</div>
+<div class="section" id="keine-dokumentation-blob-treiber">
+<h3><span class="section-number">3.4.1.2. </span>keine Dokumentation, BLOB-Treiber<a class="headerlink" href="#keine-dokumentation-blob-treiber" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">BLOb steht für <strong>B</strong>inary<strong>L</strong>anguage<strong>Ob</strong>ject, Treiber die
+vorkompiliert kommen und keine freie Software sind. Was ist daran
+schlimm?, mag sich einer fragen…</div>
+<div class="line">So einiges! Ersteinmal wird die Freiheit des Benutzers erheblich
+eingeschränkt, es ist nicht länger möglich das <em>komplette</em>
+Betriebsystem zu verändern, ein Teil entzieht sich deiner Kontrolle,
+du bist somit dem Hersteller auf Gedeih und Verderb ausgeliefert.</div>
+<div class="line">„Ist mir egal, hauptsache es geht!“ mag mancheiner erwiedern, aber
+auch Pragmatiker sollten vor BLObs gewarnt sein:</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">BLObs</span> <span class="n">kommen</span> <span class="n">oft</span> <span class="n">mit</span> <span class="n">EULAS</span><span class="p">,</span> <span class="n">die</span> <span class="n">selbst</span> <span class="n">das</span> <span class="s2">&quot;einfache&quot;</span> <span class="n">Weiterverbreiten</span> <span class="n">verbieten</span> <span class="n">und</span> <span class="ow">in</span> <span class="n">vielen</span> <span class="n">Fällen</span> <span class="n">rechtliche</span> <span class="n">Probleme</span> <span class="n">verursachen</span> <span class="n">können</span><span class="o">.</span>
+<span class="o">*</span><span class="n">BLObs</span> <span class="n">sind</span> <span class="n">nicht</span> <span class="n">vertrauenwürdig</span><span class="o">.</span> <span class="n">Es</span> <span class="n">läuft</span> <span class="n">schließlich</span> <span class="n">Code</span> <span class="ow">in</span> <span class="n">deiner</span> <span class="n">Kernel</span><span class="p">,</span> <span class="n">den</span> <span class="n">du</span> <span class="n">nicht</span> <span class="n">kennst</span><span class="p">,</span> <span class="n">es</span> <span class="n">könnte</span> <span class="n">ein</span> <span class="n">Staats</span><span class="o">-</span> <span class="n">oder</span> <span class="n">Industrie</span><span class="o">-</span><span class="n">Trojaner</span> <span class="n">sein</span> <span class="n">oder</span> <span class="n">Code</span> <span class="n">nachladen</span><span class="p">,</span> <span class="n">der</span> <span class="n">sowas</span> <span class="n">macht</span><span class="o">.</span>
+<span class="o">*</span><span class="n">BLObs</span> <span class="n">sind</span> <span class="n">oft</span> <span class="n">einfach</span> <span class="n">schlechte</span> <span class="n">Software</span><span class="o">.</span> <span class="n">Im</span> <span class="n">Gegensatz</span> <span class="n">zu</span> <span class="n">freien</span> <span class="n">Treibern</span> <span class="n">wird</span> <span class="n">der</span> <span class="n">Code</span> <span class="n">von</span> <span class="n">sehr</span> <span class="n">wenigen</span> <span class="n">Leuten</span> <span class="n">gelesen</span> <span class="n">und</span> <span class="n">programmiert</span><span class="o">.</span> <span class="n">Diese</span> <span class="n">habe</span> <span class="n">oft</span> <span class="n">außerdem</span> <span class="n">einfach</span> <span class="n">nicht</span> <span class="n">sehr</span> <span class="n">viel</span> <span class="n">Ahnung</span> <span class="n">von</span> <span class="n">freien</span> <span class="n">Betriebsystemen</span> <span class="n">da</span> <span class="n">sie</span> <span class="n">nicht</span> <span class="n">zu</span> <span class="n">der</span> <span class="n">Community</span> <span class="n">der</span> <span class="n">Kernel</span><span class="o">-</span> <span class="n">und</span> <span class="n">Treiberprogrammierer</span> <span class="n">gehören</span><span class="o">.</span> <span class="n">Bugs</span> <span class="n">im</span> <span class="n">Treiber</span> <span class="n">können</span> <span class="n">die</span> <span class="n">Sicherheit</span> <span class="n">des</span> <span class="n">Systems</span> <span class="n">gefährden</span> <span class="n">und</span> <span class="n">es</span> <span class="n">unstabil</span> <span class="n">machen</span><span class="p">,</span> <span class="n">wenn</span> <span class="n">dies</span> <span class="n">passiert</span> <span class="n">dauert</span> <span class="n">es</span> <span class="n">oft</span> <span class="n">lange</span> <span class="n">bis</span> <span class="n">der</span> <span class="n">Hersteller</span> <span class="n">das</span> <span class="n">Problem</span> <span class="n">behebt</span><span class="o">.</span>
+<span class="o">*</span><span class="n">BLOb</span><span class="o">-</span><span class="n">Treiber</span> <span class="n">gibt</span> <span class="n">es</span> <span class="n">nur</span> <span class="n">für</span> <span class="n">bestimmte</span> <span class="p">(</span><span class="n">freie</span><span class="p">)</span> <span class="n">Betriebsysteme</span><span class="p">,</span> <span class="n">nie</span> <span class="n">für</span> <span class="n">alle</span><span class="o">.</span> <span class="n">Außerdem</span> <span class="n">gibt</span> <span class="n">es</span> <span class="n">sie</span> <span class="n">nur</span> <span class="n">für</span> <span class="n">bestimmte</span> <span class="n">Rechnerarchitekturen</span><span class="p">,</span> <span class="n">so</span> <span class="n">dass</span> <span class="n">sowohl</span> <span class="n">Hardware</span><span class="o">-</span> <span class="n">als</span> <span class="n">auch</span> <span class="n">Software</span><span class="o">-</span><span class="n">Wechsel</span> <span class="n">erschwert</span> <span class="n">oder</span> <span class="n">unmöglich</span> <span class="n">gemacht</span> <span class="n">werden</span><span class="o">.</span>
+<span class="o">*</span><span class="n">BLOb</span><span class="o">-</span><span class="n">Treiber</span> <span class="n">sind</span> <span class="n">oft</span> <span class="n">unpraktisch</span> <span class="n">da</span> <span class="n">sie</span> <span class="n">nicht</span> <span class="n">ins</span> <span class="n">Betriebsystem</span> <span class="n">integriert</span> <span class="n">werden</span><span class="o">.</span> <span class="n">So</span> <span class="n">müssen</span> <span class="n">BLOb</span><span class="o">-</span><span class="n">Treiber</span> <span class="n">getrennt</span> <span class="n">aktualisiert</span> <span class="n">und</span> <span class="n">gewartet</span> <span class="n">werden</span><span class="p">,</span> <span class="n">es</span> <span class="n">kann</span> <span class="n">Versionskonflikte</span> <span class="n">geben</span><span class="o">.</span>
+<span class="o">*</span><span class="n">Manche</span> <span class="n">Programmierer</span> <span class="n">behaupten</span><span class="p">,</span> <span class="n">es</span> <span class="n">sei</span> <span class="n">besser</span> <span class="n">wenn</span> <span class="n">ein</span> <span class="n">Hersteller</span> <span class="n">garkeine</span> <span class="n">Treiber</span> <span class="n">anbietet</span> <span class="n">als</span> <span class="n">wenn</span> <span class="n">er</span> <span class="n">BLObs</span> <span class="n">veröffentlicht</span><span class="p">,</span> <span class="n">so</span> <span class="n">hätten</span> <span class="n">freie</span> <span class="n">Alternativen</span> <span class="p">(</span><span class="n">siehe</span> <span class="n">unten</span><span class="p">)</span> <span class="n">bessere</span> <span class="n">Chancen</span> <span class="n">unterstützt</span> <span class="n">zu</span> <span class="n">werden</span> <span class="p">(</span><span class="n">größere</span> <span class="n">Nachfrage</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Wenn irgendmöglich sollte man auch diese Hersteller kategorisch
+ablehnen. Das soll nicht heißen, dass jemand der seine Hardware
+versucht zum laufen zu kriegen deswegen ein schlechter Mensch oder
+ähnliches ist, aber wer sein freies und stabiles Betriebsystem mag der
+achtet beim Kauf neuer Hardware darauf, dass sie keine BLObs benötigt.</div>
+<div class="line">Hersteller dieser Gruppe sind in den Tabellen rot markiert.</div>
+</div>
+</div>
+<div class="section" id="dokumentation-oder-freie-treiber">
+<h3><span class="section-number">3.4.1.3. </span>Dokumentation oder freie Treiber<a class="headerlink" href="#dokumentation-oder-freie-treiber" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Diese Hersteller sind die „Guten“ ;-) Entweder wird Dokumentation
+veröffentlicht oder der Hersteller entwickelt - manchmal sogar in
+Zusammenarbeit mit Programmierern aus den Projekten - freie Treiber.
+Diese Treiber werden dann fest in die freien Betriebsysteme
+integriert, die Hardware wird somit oft automatisch erkannt und gut
+unterstützt.</div>
+<div class="line">Hersteller dieser Gruppe sind in den Tabellen grün markiert.</div>
+</div>
+</div>
+<div class="section" id="freie-treiber-durch-reverse-engineering">
+<h3><span class="section-number">3.4.1.4. </span>freie Treiber durch Reverse-Engineering<a class="headerlink" href="#freie-treiber-durch-reverse-engineering" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Wenn ein Hersteller zur I. oder II. Kategorie gehört wird oft versucht
+durch Reverse-Engineering freie Treiber zu entwickeln. Dies ist sehr
+viel Arbeit und z.T. auch mit rechtlichen Risiken für Programmierer
+verbunden. Auch wenn die Hersteller dadurch nicht besser sind und auch
+die Qualität dieser Treiber oft nicht mit auf Dokumentation
+basierenden Treiber mithalten kann (und aus beiden Gründen nach
+Möglichkeit Hersteller der Gruppe III bevorzugt werden sollten), so
+kann es schon ein wichtig Kriterium sein, besonders wegen den
+praktischen Vorteilen gegenüber BLOb und dem Mangel an Alternativen.</div>
+<div class="line">Hardware dieser Hersteller ist gelb markiert.</div>
+</div>
+</div>
+<div class="section" id="firmware">
+<h3><span class="section-number">3.4.1.5. </span>Firmware<a class="headerlink" href="#firmware" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Neben Treibern, die <em>Software</em> sind, gibt es noch <em>Firmware</em>. Der Name
+(<em>firm</em> von engl. fest) impliziert es handele sich um etwas zwischen
+Hardware und Software. Das stimmt so nicht ganz. Technisch gesehen ist
+Firmware auch Software, mit dem einzigen Unterschied, dass sie auf dem
+Prozessor eine Chipsatzes der Hardware läuft und nicht auf dem
+Hauptprozessor (CPU).</div>
+<div class="line">Firmware läuft also weder im Kernel-, noch im Userspace, womit
+eigentlich fast alle praktischen Nachteile von Unfreiheit
+verschwinden. Deswegen und weil es in vielen Bereichen noch garkeine
+freie Firmware gibt wird auf Firmware nicht gesondert eingeganen
+(außer in Einzelfällen).</div>
+<div class="line">Trotzdem sollte man sich darüber im Klaren sein, dass EULAS die
+Distribution von Firmware beeinträchtigen können und das „moralische“
+Problem weiterbesteht etwas vorgesetzt zu bekommen, das man nicht
+verändern <em>darf</em> (und praktisch nicht kann) obwohl man es <em>könnte</em>
+ohne, dass jemand zu Schaden kommt (falls man auf sowas wie Freiheit
+wert legt ;-) ).</div>
+</div>
+</div>
+</div>
+<div class="section" id="hardware">
+<h2><span class="section-number">3.4.2. </span>Hardware<a class="headerlink" href="#hardware" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="grafikkarten-2d-support">
+<h3><span class="section-number">3.4.2.1. </span>Grafikkarten (2D-Support)<a class="headerlink" href="#grafikkarten-2d-support" title="Link zu dieser Überschrift">¶</a></h3>
+</div>
+<div class="section" id="grafikkarten-3d-support">
+<h3><span class="section-number">3.4.2.2. </span>Grafikkarten (3D-Support)<a class="headerlink" href="#grafikkarten-3d-support" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Für mehr Informationen zum Thema 3D-Beschleunigung mit freien Treibern:</p>
+<p><a class="reference external" href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">https://wiki.archlinux.org/index.php/Hardware_video_acceleration</a></p>
+</div>
+<div class="section" id="lan">
+<h3><span class="section-number">3.4.2.3. </span>LAN<a class="headerlink" href="#lan" title="Link zu dieser Überschrift">¶</a></h3>
+<p>TODO</p>
+</div>
+<div class="section" id="mainboard-chipsatze">
+<h3><span class="section-number">3.4.2.4. </span>Mainboard / Chipsätze<a class="headerlink" href="#mainboard-chipsatze" title="Link zu dieser Überschrift">¶</a></h3>
+<p>TODO</p>
+</div>
+<div class="section" id="soundkarten">
+<h3><span class="section-number">3.4.2.5. </span>Soundkarten<a class="headerlink" href="#soundkarten" title="Link zu dieser Überschrift">¶</a></h3>
+<p>TODO</p>
+</div>
+<div class="section" id="wlan">
+<h3><span class="section-number">3.4.2.6. </span>WLAN<a class="headerlink" href="#wlan" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Siehe dazu den
+<a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_Open_Source_Wireless_Drivers">Treibervergleich</a>
+der englischen Wikipedia.</div>
+<div class="line">TODO: vielleicht aus der Wikipedia-Tabelle eine mehr
+Hersteller-basierte und übersichtlichere Tabelle machen.</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="wlan-hardware_und_-treiber.txt.html" class="btn btn-neutral float-right" title="3.5. WLAN-Hardware und -Treiber" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="freebsd_auf_singleboard-computern.txt.html" class="btn btn-neutral float-left" title="3.3. FreeBSD auf Singleboard-Computern" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

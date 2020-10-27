@@ -1,0 +1,766 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.80. Mailhamster (Mailsammler) &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.81. Das eigene Mailsystem" href="mailsystem.txt.html" />
+    <link rel="prev" title="1.79. M0n0wall &amp; SIP" href="m0n0wall_sip.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.80. Mailhamster (Mailsammler)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#grundlagen-voraussetzungen">1.80.1. Grundlagen / Voraussetzungen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#grundlagen">1.80.1.1. Grundlagen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#folgende-voraussetzungen-habe-ich-fur-mein-setup-vorgefunden">1.80.1.2. Folgende Voraussetzungen habe ich für mein Setup vorgefunden:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#erganzende-angaben-zum-system">1.80.1.3. Ergänzende Angaben zum System:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#welche-programm-aus-den-ports-werden-benotigt">1.80.2. Welche Programm aus den Ports werden benötigt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktionsweise-des-setups">1.80.3. Funktionsweise des Setups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration-von-getmail">1.80.4. Konfiguration von getmail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration-von-dovecot">1.80.5. Konfiguration von dovecot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration-von-procmail">1.80.6. Konfiguration von procmail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#der-erste-test">1.80.7. Der erste Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#abschliessende-arbeiten">1.80.8. Abschliessende Arbeiten</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.80. </span>Mailhamster (Mailsammler)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/mailhamster.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="mailsystem.txt.html" class="btn btn-neutral float-right" title="1.81. Das eigene Mailsystem" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="m0n0wall_sip.txt.html" class="btn btn-neutral float-left" title="1.79. M0n0wall &amp; SIP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mailhamster-mailsammler">
+<h1><span class="section-number">1.80. </span>Mailhamster (Mailsammler)<a class="headerlink" href="#mailhamster-mailsammler" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p>Seit geraumer Zeit plagt mich das Problem, dass meine Mail von
+verschiedenen Mailkonten auf verschiedenen Rechnern verteilt liegen, da
+man ja nicht immer am selben Rechner sitzt (oder ihn angemacht hat), so
+dass es manchmal schwierig ist eine bestimmte Mail zu finden. Auch die
+Datensicherung der so verteilten Mails ist aufgrund der dezentralen
+Anordnung nicht so trivial. Aus diesem Grunde wollte ich mir eine
+zentralisierte Mailablage mit automatischem Abruf der einzelnen
+Mailkonten aufbauen. Dieser Artikel beschreibt das Vorgehen zur
+Einrichtung der einzelnen Komponenten bis hin zur Gesamtlösung.</p>
+<div class="section" id="grundlagen-voraussetzungen">
+<h2><span class="section-number">1.80.1. </span>Grundlagen / Voraussetzungen<a class="headerlink" href="#grundlagen-voraussetzungen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="grundlagen">
+<h3><span class="section-number">1.80.1.1. </span>Grundlagen<a class="headerlink" href="#grundlagen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Anleihen für mein Setup habe ich den diversen Forenbeiträgen, den
+Gesprächen mit rabbit und dem hervoragenden Wiki-Eintrag aus dem Wiki
+der bsd-crew.de entnommen und mit meinen persönlichen Erfahrungen
+ergänzt.</p>
+</div>
+<div class="section" id="folgende-voraussetzungen-habe-ich-fur-mein-setup-vorgefunden">
+<h3><span class="section-number">1.80.1.2. </span>Folgende Voraussetzungen habe ich für mein Setup vorgefunden:<a class="headerlink" href="#folgende-voraussetzungen-habe-ich-fur-mein-setup-vorgefunden" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p>Ein komplett aufgesetztes FreeBSD-System, Version 6.0-Stable</p></li>
+<li><p>Einen aktuellen Portstree</p></li>
+</ul>
+<p>Weiter sollte dem geneigten Benutzer die Grundkenntnisse im Umgang mit
+den Ports und/oder Paketen bekannt sein um die benötigten Programme
+installieren zu können. Desweiteren ist der sichere Umgang mit Editor
+und Kommandozeile von Vorteil.</p>
+</div>
+<div class="section" id="erganzende-angaben-zum-system">
+<h3><span class="section-number">1.80.1.3. </span>Ergänzende Angaben zum System:<a class="headerlink" href="#erganzende-angaben-zum-system" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Für das Verständnis der Konfigurationsdateien sind folgende
+Zusatzangaben gegeben:</p>
+<ul class="simple">
+<li><p>IP-Adresse des Systems: 192.168.1.12</p></li>
+<li><p>Mailkonto 1: foo</p></li>
+<li><p>Mailkonto 2: bar</p></li>
+<li><p>Benutzer für den die Mails bestimmt sind: hamster</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="welche-programm-aus-den-ports-werden-benotigt">
+<h2><span class="section-number">1.80.2. </span>Welche Programm aus den Ports werden benötigt<a class="headerlink" href="#welche-programm-aus-den-ports-werden-benotigt" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p>getmail
+(<a class="reference external" href="https://www.google.com/search?q=mail/getmail&amp;btnI=lucky">mail/getmail</a>)
+» unser Mailsammler für die diversen Postkonten</p></li>
+<li><p>procmail
+(<a class="reference external" href="https://www.google.com/search?q=mail/procmail&amp;btnI=lucky">mail/procmail</a>)
+» unser Mailsortierer</p></li>
+<li><p>dovecot
+(<a class="reference external" href="https://www.google.com/search?q=mail/dovecot&amp;btnI=lucky">mail/dovecot</a>)
+» unser IMAP-Server für die lokale Administration</p></li>
+</ul>
+</div>
+<div class="section" id="funktionsweise-des-setups">
+<h2><span class="section-number">1.80.3. </span>Funktionsweise des Setups<a class="headerlink" href="#funktionsweise-des-setups" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Funktionsweise des Setups für den Mailhamster ist wie folgt:
+<strong>getmail</strong> klappert alle ihn vorgegebenen Mailkonten ab und empfängt
+die Mails. Er übergibt die Mails an <strong>procmail</strong> welches sich um das
+Einsortieren der Mails in die Richtige Ordnerstruktur kümmert.
+<strong>dovecot</strong> schlussendlich stellt die Schnittstelle zwischen dieser
+Ordnerstruktur und dem Mailclient (z.B. Thunderbird, Outlook, Mail.app
+etc) dar.</p>
+</div>
+<div class="section" id="konfiguration-von-getmail">
+<h2><span class="section-number">1.80.4. </span>Konfiguration von getmail<a class="headerlink" href="#konfiguration-von-getmail" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Aus Gründen der Einfachheit habe ich mir einen eigenen Benutzer
+<code class="docutils literal notranslate"><span class="pre">getmail</span></code> angelegt. Nicht nur der Übersichtlichkeit halber, sondern
+auch um die Konfigurationsdateien zentral abgelegt zu wissen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># adduser getmail</span>
+</pre></div>
+</div>
+<p>Im Homeverzeichnis des soeben erstellten Users habe ich einen
+versteckten Ordner namens <code class="docutils literal notranslate"><span class="pre">getmail</span></code> angelegt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">getmail</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/&gt;</span> <span class="n">mkdir</span> <span class="o">.</span><span class="n">getmail</span>
+</pre></div>
+</div>
+<p>Das Programm <strong>getmail</strong> werden wir nun in einem weiteren Schritt
+konfigurieren. Wir wechseln hierzu in das neu erstellte Verzeichnis und
+erstellen dort das Konfigurationsfile für das erste Mailkonto.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">getmail</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/.</span><span class="n">getmail</span><span class="o">&gt;</span> <span class="n">touch</span> <span class="n">foo</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>Wir werden diese neu erstellte Datei nun mit der eigentlichen
+Konfiguration „beglücken“. Wir öffnen die Datei mit einem Editor und
+schreiben folgende Einträge rein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">verbose</span> <span class="o">=</span> <span class="mi">0</span>                        <span class="c1"># damit wir nicht von Meldungen belästigt werden</span>
+<span class="n">delete</span> <span class="o">=</span> <span class="n">true</span>                      <span class="c1"># lösche die Mails die erfolgreich vom Mailkonto abgeholt wurden</span>
+<span class="n">read_all</span> <span class="o">=</span> <span class="n">false</span>                   <span class="c1"># damit nur die neuen Mails abgeholt werden</span>
+<span class="n">message_log</span> <span class="o">=</span> <span class="o">~/.</span><span class="n">getmail</span><span class="o">/</span><span class="n">foo</span><span class="o">.</span><span class="n">log</span>   <span class="c1"># sollte was sein, wird es ins Log geschrieben</span>
+
+<span class="p">[</span><span class="n">retriever</span><span class="p">]</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="n">SimplePOP3Retriever</span>         <span class="c1"># diese Mailkonto ist nur ein einfaches POP3-Konto</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">mail</span><span class="o">.</span><span class="n">foo</span><span class="o">.</span><span class="n">org</span>              <span class="c1"># Adresse des Mailservers</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">foo</span>                     <span class="c1"># Benutzername</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">werweiss</span>                <span class="c1"># Passwort im Klartext</span>
+
+<span class="p">[</span><span class="n">destination</span><span class="p">]</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="n">MDA_external</span>                <span class="c1"># Gibt an in welches Maildir-Format gespeichert werden soll</span>
+<span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">procmail</span>     <span class="c1"># Gibt an an welches Programm die Mails weitergegeben werden</span>
+<span class="n">arguments</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;-dhamster&quot;</span><span class="p">,</span> <span class="p">)</span>        <span class="c1"># Gibt die Argumente für das Programm an, hier der Benutzername hamster</span>
+</pre></div>
+</div>
+<p>So das wäre mal geschafft. Jetzt noch schnell das zweite Mailkonto
+konfigurieren:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">getmail</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/.</span><span class="n">getmail</span><span class="o">&gt;</span> <span class="n">cp</span> <span class="n">foo</span><span class="o">.</span><span class="n">conf</span> <span class="n">bar</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>Und dann die Datei ebenfalls im Editor bearbeiten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">verbose</span> <span class="o">=</span> <span class="mi">0</span>                        <span class="c1"># damit wir nicht von Meldungen belästigt werden</span>
+<span class="n">delete</span> <span class="o">=</span> <span class="n">true</span>                      <span class="c1"># lösche die Mails die erfolgreich vom Mailkonto abgeholt wurden</span>
+<span class="n">read_all</span> <span class="o">=</span> <span class="n">false</span>                   <span class="c1"># damit nur die neuen Mails abgeholt werden</span>
+<span class="n">message_log</span> <span class="o">=</span> <span class="o">~/.</span><span class="n">getmail</span><span class="o">/</span><span class="n">bar</span><span class="o">.</span><span class="n">log</span>   <span class="c1"># sollte was sein, wird es ins Log geschrieben</span>
+
+<span class="p">[</span><span class="n">retriever</span><span class="p">]</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="n">SimplePOP3Retriever</span>         <span class="c1"># diese Mailkonto ist nur ein einfaches POP3-Konto</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">mail</span><span class="o">.</span><span class="n">bar</span><span class="o">.</span><span class="n">org</span>              <span class="c1"># Adresse des Mailservers</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">bar</span>                     <span class="c1"># Benutzername</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">werahnt</span>                 <span class="c1"># Passwort im Klartext</span>
+
+<span class="p">[</span><span class="n">destination</span><span class="p">]</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="n">MDA_external</span>                <span class="c1"># Gibt an in welches Maildir-Format gespeichert werden soll</span>
+<span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">procmail</span>     <span class="c1"># Gibt an an welches Programm die Mails weitergegeben werden</span>
+<span class="n">arguments</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;-dhamster&quot;</span><span class="p">,</span> <span class="p">)</span>        <span class="c1"># Gibt die Argumente für das Programm an, hier der Benutzername hamster</span>
+</pre></div>
+</div>
+<p>Da die Dateien jedoch das Passwort im Klartext enthalten, habe ich die
+Rechte noch wie folgt gesetzt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">getmail</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/.</span><span class="n">getmail</span><span class="o">&gt;</span> <span class="n">chmod</span> <span class="mi">640</span> <span class="n">foo</span><span class="o">.</span><span class="n">conf</span>
+<span class="p">[</span><span class="n">getmail</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/.</span><span class="n">getmail</span><span class="o">&gt;</span> <span class="n">chmod</span> <span class="mi">640</span> <span class="n">bar</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>Jetzt ist die Konfiguration von <strong>getmail</strong> eigentlich soweit
+abgeschlossen. Wenden wir uns der Konfiguration von <strong>dovecot</strong> zu.</p>
+</div>
+<div class="section" id="konfiguration-von-dovecot">
+<h2><span class="section-number">1.80.5. </span>Konfiguration von dovecot<a class="headerlink" href="#konfiguration-von-dovecot" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Beispielkonfiguration von <strong>dovecot</strong> finden wir nach erfolgreicher
+Installation im Verzeichnis <code class="docutils literal notranslate"><span class="pre">/usr/local/etc</span></code>. Wir wechseln ins
+Verzeichnis und kopieren die Beispielkonfiguration.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cp dovecot.conf.sample dovecot.conf</span>
+</pre></div>
+</div>
+<p>Wir öffnen nun die Datei in einem Editor und verändern was wir brauchen.
+Diese Konfigurationsdatei wie unten gezeigt wird mit der von mir
+verwendeten Version mitgeliefert. Spätere Versionen können in der Syntax
+unterschiedlich sein. Um die Übersichtlichkeit zu wahren, habe ich nur
+die relvanten Änderungen untenstehend aufgelistet.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## Dovecot 1.0 configuration file</span>
+
+<span class="c1"># Protocols we want to be serving:</span>
+<span class="c1">#  imap imaps pop3 pop3s</span>
+<span class="n">protocols</span> <span class="o">=</span> <span class="n">imap</span>
+
+<span class="c1"># IP or host address where to listen in for connections. It&#39;s not currently</span>
+<span class="c1"># possible to specify multiple addresses. &quot;*&quot; listens in all IPv4 interfaces.</span>
+<span class="c1"># &quot;[::]&quot; listens in all IPv6 interfaces, but may also listen in all IPv4</span>
+<span class="c1"># interfaces depending on the operating system.  If you want to specify ports</span>
+<span class="c1"># for each service, you will need to configure these settings inside the</span>
+<span class="c1"># protocol imap/pop3 { ... } section, so you can specify different ports</span>
+<span class="c1"># for IMAP/POP3.</span>
+<span class="c1">#listen = *</span>
+<span class="n">listen</span> <span class="o">=</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.12</span>
+
+<span class="c1"># Disable LOGIN command and all other plaintext authentications unless</span>
+<span class="c1"># SSL/TLS is used (LOGINDISABLED capability). Note that 127.*.*.* and</span>
+<span class="c1"># IPv6 ::1 addresses are considered secure, this setting has no effect if</span>
+<span class="c1"># you connect from those addresses.</span>
+<span class="c1">#disable_plaintext_auth = yes</span>
+<span class="n">disable_plaintext_auth</span> <span class="o">=</span> <span class="n">no</span>
+
+<span class="c1"># chroot login process to the login_dir. Only reason not to do this is if you</span>
+<span class="c1"># wish to run the whole Dovecot without roots.</span>
+<span class="c1"># http://wiki.dovecot.org/Rootless</span>
+<span class="n">login_chroot</span> <span class="o">=</span> <span class="n">yes</span>
+
+<span class="c1"># User to use for the login process. Create a completely new user for this,</span>
+<span class="c1"># and don&#39;t use it anywhere else. The user must also belong to a group where</span>
+<span class="c1"># only it has access, it&#39;s used to control access for authentication process.</span>
+<span class="c1"># Note that this user is NOT used to access mails.</span>
+<span class="c1"># http://wiki.dovecot.org/UserIds</span>
+<span class="n">login_user</span> <span class="o">=</span> <span class="n">dovecot</span>
+
+<span class="c1"># Should each login be processed in it&#39;s own process (yes), or should one</span>
+<span class="c1"># login process be allowed to process multiple connections (no)? Yes is more</span>
+<span class="c1"># secure, espcially with SSL/TLS enabled. No is faster since there&#39;s no need</span>
+<span class="c1"># to create processes all the time.</span>
+<span class="n">login_process_per_connection</span> <span class="o">=</span> <span class="n">yes</span>
+
+<span class="c1"># Show more verbose process titles (in ps). Currently shows user name and</span>
+<span class="c1"># IP address. Useful for seeing who are actually using the IMAP processes</span>
+<span class="c1"># (eg. shared mailboxes or if same uid is used for multiple accounts).</span>
+<span class="n">verbose_proctitle</span> <span class="o">=</span> <span class="n">yes</span>
+
+<span class="c1"># Valid GID range for users, defaults to non-root/wheel. Users having</span>
+<span class="c1"># non-valid GID as primary group ID aren&#39;t allowed to log in. If user</span>
+<span class="c1"># belongs to supplementary groups with non-valid GIDs, those groups are</span>
+<span class="c1"># not set.</span>
+<span class="n">first_valid_gid</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1">#last_valid_gid = 0</span>
+
+<span class="c1"># &#39;:&#39; separated list of directories under which chrooting is allowed for mail</span>
+<span class="c1"># processes (ie. /var/mail will allow chrooting to /var/mail/foo/bar too).</span>
+<span class="c1"># This setting doesn&#39;t affect login_chroot or auth_chroot variables.</span>
+<span class="c1"># WARNING: Never add directories here which local users can modify, that</span>
+<span class="c1"># may lead to root exploit. Usually this should be done only if you don&#39;t</span>
+<span class="c1"># allow shell access for users. See doc/configuration.txt for more information.</span>
+<span class="c1">#valid_chroot_dirs =</span>
+<span class="n">valid_chroot_dirs</span> <span class="o">=</span> <span class="o">~/</span><span class="n">mail</span><span class="o">/</span>
+
+<span class="c1">#   default_mail_env = maildir:/var/mail/%1u/%u/Maildir</span>
+<span class="c1">#   default_mail_env = mbox:~/mail/:INBOX=/var/mail/%u</span>
+<span class="c1">#   default_mail_env = mbox:/var/mail/%d/%n/:INDEX=/var/indexes/%d/%n</span>
+<span class="c1">#</span>
+<span class="c1">#default_mail_env = mbox:/var/mail/%u</span>
+<span class="c1">#default_mail_env = maildir:~/mail/ #alt wird durch mail_location ersestzt</span>
+<span class="n">mail_location</span> <span class="o">=</span> <span class="n">maildir</span><span class="p">:</span> <span class="o">~/</span><span class="n">mail</span><span class="o">/</span><span class="p">:</span><span class="n">INBOX</span><span class="o">=%</span><span class="n">h</span><span class="o">/</span><span class="n">mail</span><span class="o">/.</span><span class="n">INBOX</span>
+
+<span class="c1"># Copy mail to another folders using hard links. This is much faster than</span>
+<span class="c1"># actually copying the file. This is problematic only if something modifies</span>
+<span class="c1"># the mail in one folder but doesn&#39;t want it modified in the others. I don&#39;t</span>
+<span class="c1"># know any MUA which would modify mail files directly. IMAP protocol also</span>
+<span class="c1"># requires that the mails don&#39;t change, so it would be problematic in any case.</span>
+<span class="c1"># If you care about performance, enable it.</span>
+<span class="c1">#maildir_copy_with_hardlinks = no</span>
+<span class="n">maildir_copy_with_hardlinks</span> <span class="o">=</span> <span class="n">yes</span>
+
+<span class="n">auth</span> <span class="n">default</span> <span class="p">{</span>
+  <span class="c1"># Space separated list of wanted authentication mechanisms:</span>
+  <span class="c1">#   plain digest-md5 cram-md5 apop anonymous</span>
+  <span class="n">mechanisms</span> <span class="o">=</span> <span class="n">plain</span>
+</pre></div>
+</div>
+<p>Nachdem die Konfiguration abgeschlossen wurde, können wir <strong>dovecot</strong>
+mit einem beherzten</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dovecot</span>
+</pre></div>
+</div>
+<p>starten. Um die Konnektivität zu prüfen können wir uns via <strong>telnet</strong>
+mal probeweise verbinden.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Achtung: Eine kleine Stolperfalle bietet sich hier: Alle Befehle an
+<strong>dovecot</strong> müssen mit einem x beginnen, so z.B. x login USER
+PASSWORT!</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">hamster</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/&gt;</span> <span class="n">telnet</span> <span class="n">localhost</span> <span class="mi">143</span> <span class="n">Trying</span> <span class="p">::</span><span class="mf">1.</span><span class="o">..</span> <span class="n">Trying</span>
+<span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">...</span> <span class="n">Connected</span> <span class="n">to</span> <span class="n">localhost</span><span class="o">.</span> <span class="n">Escape</span> <span class="n">character</span> <span class="ow">is</span> <span class="s1">&#39;^]&#39;</span><span class="o">.</span> \<span class="o">*</span> <span class="n">OK</span>
+<span class="n">Dovecot</span> <span class="n">ready</span><span class="o">.</span> <span class="n">x</span> <span class="n">login</span> <span class="n">USER</span> <span class="n">PASSWORT</span> <span class="n">x</span> <span class="n">OK</span> <span class="n">Logged</span> <span class="ow">in</span><span class="o">.</span> <span class="n">x</span> <span class="n">logout</span> \<span class="o">*</span> <span class="n">BYE</span>
+<span class="n">Logging</span> <span class="n">out</span> <span class="n">x</span> <span class="n">OK</span> <span class="n">Logout</span> <span class="n">completed</span><span class="o">.</span> <span class="n">Connection</span> <span class="n">closed</span> <span class="n">by</span> <span class="n">foreign</span> <span class="n">host</span><span class="o">.</span>
+<span class="p">[</span><span class="n">hamster</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/&gt;</span>
+</pre></div>
+</div>
+<p>Wenn das soweit geklappt hat, dann können wir den letzten Schritt wagen.</p>
+</div>
+<div class="section" id="konfiguration-von-procmail">
+<h2><span class="section-number">1.80.6. </span>Konfiguration von procmail<a class="headerlink" href="#konfiguration-von-procmail" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Jetzt geht es noch darum die ankommende Mail, welche <strong>getmail</strong> abholt
+in die verschiedenen Postfächer einzusortieren, damit <strong>dovecot</strong> etwas
+zu arbeiten hat. Dafür müssen wir noch <strong>procmail</strong> konfigurieren. Die
+geschieht mittels einer Konfigurationsdatei im HOME-Verzeichnis des
+Users.</p>
+<p>Wir legen nun eine solche Datei an.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">hamster</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/&gt;</span> <span class="n">touch</span> <span class="o">.</span><span class="n">procmailrc</span>
+</pre></div>
+</div>
+<p>Wir werden diese neu erstellte Datei nun mit der eigentlichen
+Konfiguration „beglücken“. Wir öffnen die Datei mit einem Editor und
+schreiben folgende Einträge rein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>MAILDIR=$HOME/mail               # das Mailverzeichnis
+LOGFILE=$HOME/log/procmail.log   # dahin sollen die Meldungen
+VERBOSE=on                       # Sag uns was abgeht
+
+:0                               # Beginn einer Regel
+* ^TO_.*foo\.org                 # alle Mails an foo.org werden in
+.INBOX.foo/                      # die INBOX.foo einsortiert
+
+:0                               # Beginn der Regel
+* ^TO_.*bar\.org                 # alle Mails an bar.org werden in
+.INBOX.bar/                      # die INBOX.bar einsortiert
+
+:0                               # Beginn der Regel
+.INBOX.spam/                     # Alle Mails die nicht einsortiert werden konnten, werden hierhin verschoben
+</pre></div>
+</div>
+<p>So, das war es auch schon fast. Ja fast, denn die Datei bekommt auch
+noch ein</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">hamster</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/&gt;</span> <span class="n">chmod</span> <span class="mi">640</span> <span class="o">.</span><span class="n">procmailrc</span>
+</pre></div>
+</div>
+<p>Jetzt ist die Konfiguration von <strong>procmail</strong> eigentlich soweit
+abgeschlossen. Wenden wir uns mal dem ersten Testlauf zu.</p>
+</div>
+<div class="section" id="der-erste-test">
+<h2><span class="section-number">1.80.7. </span>Der erste Test<a class="headerlink" href="#der-erste-test" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Jetzt gilt es ernst, der erste Testlauf steht an und dann stellt sich
+heraus ob alle Komponenten soweit funktionieren so wie wir uns das
+vorgestellt haben. Wir loggen uns als User <code class="docutils literal notranslate"><span class="pre">getmail</span></code> ein und starten
+getmail mal zu einem Lauf.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">getmail</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/&gt;</span> <span class="n">getmail</span> <span class="o">-</span><span class="n">v</span> <span class="o">--</span><span class="n">rcfile</span> <span class="o">~/.</span><span class="n">getmail</span><span class="o">/</span><span class="n">foo</span><span class="o">.</span><span class="n">conf</span> <span class="o">--</span><span class="n">rcfile</span> <span class="o">~/.</span><span class="n">getmail</span><span class="o">/</span><span class="n">bar</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>Es werden einige Meldungen über den Bildschirm flitzen und am Ende wird,
+wenn alles gut gegangen ist, der Prompt auf uns warten. Wir können uns
+jetzt mal als User <code class="docutils literal notranslate"><span class="pre">hamster</span></code> anmelden und schauen ob was in die
+INBOXEN eingegangen ist.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">hamster</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/</span><span class="n">mail</span><span class="o">/&gt;</span> <span class="n">ls</span> <span class="o">-</span><span class="n">la</span>
+<span class="n">drwx</span><span class="o">------</span>  <span class="mi">11</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">512</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">14</span><span class="p">:</span><span class="mi">14</span> <span class="o">./</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>   <span class="mi">8</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">512</span> <span class="n">Dec</span>  <span class="mi">6</span> <span class="mi">21</span><span class="p">:</span><span class="mi">43</span> <span class="o">../</span>
+<span class="n">drwx</span><span class="o">------</span>   <span class="mi">5</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">512</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">14</span><span class="p">:</span><span class="mi">33</span> <span class="o">.</span><span class="n">Deleted</span> <span class="n">Messages</span><span class="o">/</span>
+<span class="n">drwx</span><span class="o">------</span>   <span class="mi">5</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">512</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">15</span><span class="p">:</span><span class="mi">49</span> <span class="o">.</span><span class="n">INBOX</span><span class="o">.</span><span class="n">bar</span><span class="o">/</span>
+<span class="n">drwx</span><span class="o">------</span>   <span class="mi">5</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">512</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">15</span><span class="p">:</span><span class="mi">48</span> <span class="o">.</span><span class="n">INBOX</span><span class="o">.</span><span class="n">foo</span><span class="o">/</span>
+<span class="n">drwx</span><span class="o">------</span>   <span class="mi">5</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">512</span> <span class="n">Dec</span>  <span class="mi">6</span> <span class="mi">20</span><span class="p">:</span><span class="mi">55</span> <span class="o">.</span><span class="n">INBOX</span><span class="o">.</span><span class="n">spam</span><span class="o">/</span>
+<span class="n">drwx</span><span class="o">------</span>   <span class="mi">5</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">512</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">14</span><span class="p">:</span><span class="mi">14</span> <span class="o">.</span><span class="n">Trash</span><span class="o">/</span>
+<span class="n">drwx</span><span class="o">------</span>   <span class="mi">2</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">512</span> <span class="n">Dec</span>  <span class="mi">6</span> <span class="mi">20</span><span class="p">:</span><span class="mi">49</span> <span class="n">cur</span><span class="o">/</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-------</span>   <span class="mi">1</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">144</span> <span class="n">Dec</span>  <span class="mi">6</span> <span class="mi">20</span><span class="p">:</span><span class="mi">50</span> <span class="n">dovecot</span><span class="o">.</span><span class="n">index</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-------</span>   <span class="mi">1</span> <span class="n">hamster</span>  <span class="n">wheel</span>  <span class="mi">10272</span> <span class="n">Dec</span>  <span class="mi">4</span> <span class="mi">16</span><span class="p">:</span><span class="mi">17</span> <span class="n">dovecot</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">cache</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-------</span>   <span class="mi">1</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">148</span> <span class="n">Dec</span>  <span class="mi">6</span> <span class="mi">20</span><span class="p">:</span><span class="mi">50</span> <span class="n">dovecot</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">log</span>
+<span class="n">drwx</span><span class="o">------</span>   <span class="mi">2</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">512</span> <span class="n">Dec</span>  <span class="mi">6</span> <span class="mi">20</span><span class="p">:</span><span class="mi">49</span> <span class="n">new</span><span class="o">/</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-------</span>   <span class="mi">1</span> <span class="n">hamster</span>  <span class="n">wheel</span>     <span class="mi">43</span> <span class="n">Dec</span>  <span class="mi">8</span> <span class="mi">14</span><span class="p">:</span><span class="mi">14</span> <span class="n">subscriptions</span>
+<span class="n">drwx</span><span class="o">------</span>   <span class="mi">2</span> <span class="n">hamster</span>  <span class="n">wheel</span>    <span class="mi">512</span> <span class="n">Dec</span>  <span class="mi">6</span> <span class="mi">20</span><span class="p">:</span><span class="mi">49</span> <span class="n">tmp</span><span class="o">/</span>
+<span class="p">[</span><span class="n">hamster</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/</span><span class="n">mail</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>Das sieht doch schon gut aus. Doch, woher weiss denn Procmail dass der
+User <code class="docutils literal notranslate"><span class="pre">hamster</span></code> die Mails von foo und bar bekommt? Wir erinnern uns,
+dass wir in den jeweiligen <strong>getmail</strong> Konfigurationsdateien am Ende den
+User vorgegeben haben.</p>
+</div>
+<div class="section" id="abschliessende-arbeiten">
+<h2><span class="section-number">1.80.8. </span>Abschliessende Arbeiten<a class="headerlink" href="#abschliessende-arbeiten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Jetzt fehlt uns eigentlich nur noch dass wir</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="n">die</span> <span class="n">Mails</span> <span class="ow">in</span> <span class="n">regelmässigen</span> <span class="n">Abständen</span> <span class="n">von</span> <span class="n">unseren</span> <span class="n">Mailkonten</span> <span class="n">abrufen</span> <span class="n">lassen</span> <span class="n">und</span>
+<span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="n">etwas</span> <span class="n">zum</span> <span class="n">Anzeigen</span> <span class="n">der</span> <span class="n">Mails</span>
+</pre></div>
+</div>
+<p>Punkt b) ist relativ einfach, da praktisch jedes Mailprogramm
+sogenannten Serverbasierte Mailkonten unterstützt. Leider haben auch
+hier gewisse Programme Stärken und Schwächen. Die von mir getesteten
+Mailprogramme wie Thunderbird, Outlook und Mail.app vom Aplle kamen sehr
+gut damit zurecht. Um die Mails lokal am Server zu lesen, kann <strong>mutt</strong>
+verwendet werden.</p>
+<p>Punkt a) ist ebenfalls relativ einfach zu lösen. Wir loggen uns als User
+<code class="docutils literal notranslate"><span class="pre">getmail</span></code> ein und editieren seine <code class="docutils literal notranslate"><span class="pre">crontab</span></code>, die Datei für
+regelmässige Tätigkeiten.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">getmail</span><span class="nd">@server</span><span class="p">]</span> <span class="o">~/&gt;</span> <span class="n">crontab</span> <span class="o">-</span><span class="n">e</span>
+</pre></div>
+</div>
+<p>Im nun erscheinenden Editor tragen wir folgende Befehlskette ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*/</span><span class="mi">5</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">getmail</span> <span class="o">--</span><span class="n">rcfile</span> <span class="o">~/.</span><span class="n">getmail</span><span class="o">/</span><span class="n">foo</span><span class="o">.</span><span class="n">conf</span> <span class="o">--</span><span class="n">rcfile</span> <span class="o">~/.</span><span class="n">getmail</span><span class="o">/</span><span class="n">bar</span><span class="o">.</span><span class="n">conf</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>So, das wars. Nun werden die Mailkonten alle fünf Minuten abgegrast und
+die neuen Nachrichten in die INBOXEN weitergeleitet.</p>
+<p>Ich hoffe, dieser Artikel konnte ein wenig Licht in die Sache mit der
+zentralen Ablage von Mails bringen. Sicherlich noch ausbaufähig, aber
+für mich funktioniert es so wie es soll.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mailsystem.txt.html" class="btn btn-neutral float-right" title="1.81. Das eigene Mailsystem" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="m0n0wall_sip.txt.html" class="btn btn-neutral float-left" title="1.79. M0n0wall &amp; SIP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

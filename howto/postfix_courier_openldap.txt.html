@@ -1,0 +1,1106 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.102. Postfix Courier OpenLDAP &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.103. Postfix DSPAM" href="postfix_dspam.txt.html" />
+    <link rel="prev" title="1.101. Postfix Antivirus" href="postfix_antivirus.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.102. Postfix Courier OpenLDAP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-der-software">1.102.1. Installation der Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etc-rc-local-konfigurieren">1.102.2. /etc/rc.local konfigurieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#openldap-konfigurieren">1.102.3. OpenLDAP konfigurieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#slapd-conf">1.102.3.1. slapd.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qmail-schema">1.102.3.2. qmail.schema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ldap-struktur">1.102.3.3. LDAP-Struktur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#courier-imap-konfigurieren">1.102.4. Courier-IMAP konfigurieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clamav-konfigurieren">1.102.5. ClamAV konfigurieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#postfix-konfigurieren">1.102.6. Postfix konfigurieren</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.102. </span>Postfix Courier OpenLDAP</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/postfix_courier_openldap.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="postfix_dspam.txt.html" class="btn btn-neutral float-right" title="1.103. Postfix DSPAM" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="postfix_antivirus.txt.html" class="btn btn-neutral float-left" title="1.101. Postfix Antivirus" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="postfix-courier-openldap">
+<h1><span class="section-number">1.102. </span>Postfix Courier OpenLDAP<a class="headerlink" href="#postfix-courier-openldap" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<p>Diese HowTo beschriebt die Installation und Einrichtung eines Mailservers unter
+OpenBSD. Die einzelen Komponenten setzen sich wie folgt zusammen</p>
+<ul class="simple">
+<li><p>Postfix, smtp</p></li>
+<li><p>Courier, imap</p></li>
+<li><p>SASL, zur Authentifizierung</p></li>
+<li><p>OpenLDAP, als Userdatenbank</p></li>
+<li><p>Postgrey, für das [<a class="reference external" href="http://de.wikipedia.org/wiki/Greylisting">http://de.wikipedia.org/wiki/Greylisting</a>
+Greylisting]</p></li>
+<li><p>amavisd-new, zum Weiterleiten der Mails an den Virenscanner</p></li>
+<li><p>ClamAV, als Virenscanner</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Die Grundlagen der einzelnen Komponenten sollten klar sein, insbesondere die
+Funktionsweise von Postfix und OpenLDAP.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Dieses Anleitung sollte man nicht, wie eigentlich alle Anleitungen, einfach
+abtippen. Sondern man ist angehalten, sich selber über die Gefahren eines
+Mailsystems auf dem eigenen System zu informieren. Es kann immer mal
+vorkommen, dass sich Fehler einschleichen können, dies ist auch hier nicht
+auszuschliessen. Diese Anleitung ist nicht getestet und mehr aus dem Kopf
+entstanden ;). Dieses System ist ähnlich auf mehreren Servern im produktiven
+Betrieb.</p>
+</div>
+<div class="section" id="installation-der-software">
+<h2><span class="section-number">1.102.1. </span>Installation der Software<a class="headerlink" href="#installation-der-software" title="Link zu dieser Überschrift">¶</a></h2>
+<p><strong>Courier</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/mail/courier-imap</span>
+<span class="c1"># env FLAVOR=&quot; no_mysql no_pgsql&quot; make install clean</span>
+<span class="c1"># cp -r /usr/local/share/examples/courier-imap/ /etc/</span>
+</pre></div>
+</div>
+<p><strong>Cyrus-SASL</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/security/cyrus-sasl2</span>
+<span class="c1"># make install clean</span>
+</pre></div>
+</div>
+<p><strong>OpenLDAP-Client</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/databases/openldap</span>
+<span class="c1"># env FLAVOR=&quot;sasl&quot; make install clean</span>
+</pre></div>
+</div>
+<p><strong>OpenLDAP-Server</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/databases/openldap</span>
+<span class="c1"># env FLAVOR=&quot;sasl&quot; SUBPACKAGE=&quot;-server&quot; make install clean</span>
+</pre></div>
+</div>
+<p><strong>Postfix</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/mail/postfix</span>
+<span class="c1"># env FLAVOR=&quot;sasl2 ldap&quot; make install clean</span>
+<span class="c1"># /usr/local/sbin/postfix-enable</span>
+</pre></div>
+</div>
+<p><strong>Postgrey</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/mail/postgrey</span>
+<span class="c1"># make install clean</span>
+</pre></div>
+</div>
+<p>Ports sind manchmal blöde. Daher muss bei Postgrey noch ein bisschen
+Hand angelegt werden. Dafür legen wir anfangs ein Gruppe und einen User
+für Postgrey an.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># groupadd -g 534 postgrey</span>
+<span class="c1"># useradd -s /sbin/nologin -d /var/empty -G 534 -u 534 _postgrey</span>
+</pre></div>
+</div>
+<p>Danach erstellen wir die Files und Verzeichniss für Postgrey</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># touch /etc/postfix/postgrey_whitelist_clients</span>
+<span class="c1"># touch /etc/postfix/postgrey_whitelist_recipients</span>
+<span class="c1"># mkdir /var/spool/postfix/postgrey</span>
+<span class="c1"># chown -R _postgrey:_postgrey /var/spool/postfix/postgrey</span>
+<span class="c1"># chown _postgrey:_postgrey /etc/postfix/postgrey_whitelist_clients /etc/postfix/postgrey_whitelist_recipients</span>
+</pre></div>
+</div>
+<p><strong>ClamAV</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/security/clamav</span>
+<span class="c1"># make install clean</span>
+</pre></div>
+</div>
+<p><strong>amavisd-new</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/mail/amavisd-new</span>
+<span class="c1"># make install clean</span>
+</pre></div>
+</div>
+<p><strong>Anmerkung</strong></p>
+<p>Natürlich kann man auch die entsprechenden Packages installieren.</p>
+<p><code class="docutils literal notranslate"><span class="pre">/etc/rc.conf.local</span></code> editieren und die flags von sendmail und syslogd
+hinzufügen</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># vi /etc/rc.conf.local</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sendmail_flags</span><span class="o">=</span><span class="s2">&quot;-bd -q30m&quot;</span>
+<span class="n">syslogd_flags</span><span class="o">=</span><span class="s2">&quot;-a /var/spool/postfix/dev/log&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="etc-rc-local-konfigurieren">
+<h2><span class="section-number">1.102.2. </span>/etc/rc.local konfigurieren<a class="headerlink" href="#etc-rc-local-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Jetzt noch <code class="docutils literal notranslate"><span class="pre">/etc/rc.local</span></code> editieren und die Dienste starten</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># vi /etc/rc.local</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># openldap</span>
+<span class="k">if</span> <span class="o">[</span> -x /usr/local/libexec/slapd <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+       <span class="nb">echo</span> -n <span class="s1">&#39; slapd&#39;</span><span class="p">;</span>
+       /usr/local/libexec/slapd
+<span class="k">fi</span>
+
+<span class="c1"># courier</span>
+mkdir -p /var/run/courier-imap
+/usr/local/libexec/authlib/authdaemond start
+/usr/local/libexec/imapd.rc start
+
+<span class="c1"># postgrey</span>
+<span class="k">if</span> <span class="o">[</span> -x /usr/local/libexec/postgrey <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+       <span class="nb">echo</span> -n <span class="s1">&#39;Postgrey&#39;</span><span class="p">;</span>
+       /usr/local/libexec/postgrey --inet<span class="o">=</span><span class="m">10023</span> -d --delay<span class="o">=</span><span class="m">50</span> --greylist-text<span class="o">=</span><span class="s2">&quot;Policy restrictions; try later&quot;</span> --user<span class="o">=</span>_postgrey --group<span class="o">=</span>_postgrey
+<span class="k">fi</span>
+
+<span class="c1"># clamav</span>
+<span class="k">if</span> <span class="o">[</span> -x /usr/local/sbin/clamd <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+       <span class="nb">echo</span> -n <span class="s1">&#39;clamd&#39;</span><span class="p">;</span>
+       /usr/local/sbin/clamd
+<span class="k">fi</span>
+
+<span class="c1"># amavisd-new</span>
+<span class="k">if</span> <span class="o">[</span> -x /usr/local/sbin/amavisd <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+       <span class="nb">echo</span> -n <span class="s1">&#39;amavisd&#39;</span><span class="p">;</span>
+       /usr/local/sbin/amavisd
+<span class="k">fi</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="openldap-konfigurieren">
+<h2><span class="section-number">1.102.3. </span>OpenLDAP konfigurieren<a class="headerlink" href="#openldap-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="slapd-conf">
+<h3><span class="section-number">1.102.3.1. </span>slapd.conf<a class="headerlink" href="#slapd-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Konfiguration vom OpenLDAP-Server, die folgenden Schemen werden
+mindestens benötigt. Das qmail.schema enthält die Attribute
+mailMessageStore und mailAlternateAdress, welche wir für die einzelnen
+Userkonten benötigen.</p>
+<p>Der Schemacheck ist aktiviert, so dass es nicht möglich ist Attribute
+anzulegen, welche nicht durch Schemen definiert sind. Als
+Datenbankbackend wird ldbm genutzt, es ist aber auch möglich die
+BerkelyDB zu nutzen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">include</span>         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openldap</span><span class="o">/</span><span class="n">schema</span><span class="o">/</span><span class="n">core</span><span class="o">.</span><span class="n">schema</span>
+<span class="n">include</span>         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openldap</span><span class="o">/</span><span class="n">schema</span><span class="o">/</span><span class="n">cosine</span><span class="o">.</span><span class="n">schema</span>
+<span class="n">include</span>         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openldap</span><span class="o">/</span><span class="n">schema</span><span class="o">/</span><span class="n">nis</span><span class="o">.</span><span class="n">schema</span>
+<span class="n">include</span>         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openldap</span><span class="o">/</span><span class="n">schema</span><span class="o">/</span><span class="n">inetorgperson</span><span class="o">.</span><span class="n">schema</span>
+<span class="n">include</span>         <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openldap</span><span class="o">/</span><span class="n">schema</span><span class="o">/</span><span class="n">qmail</span><span class="o">.</span><span class="n">schema</span>
+
+<span class="n">pidfile</span>         <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">slapd</span><span class="o">.</span><span class="n">pid</span>
+<span class="n">argsfile</span>        <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">slapd</span><span class="o">.</span><span class="n">args</span>
+<span class="n">loglevel</span>        <span class="mi">30</span>
+<span class="n">schemacheck</span>     <span class="n">on</span>
+
+<span class="c1"># this is for the postfix authentification</span>
+<span class="n">allow</span> <span class="n">bind_v2</span>
+
+<span class="c1">#######################################################################</span>
+<span class="c1"># BDB database definitions</span>
+<span class="c1">#######################################################################</span>
+
+<span class="n">database</span>        <span class="n">ldbm</span>
+<span class="n">suffix</span>          <span class="s2">&quot;dc=example,dc=de&quot;</span>
+<span class="n">rootdn</span>          <span class="s2">&quot;cn=Manager,dc=example,dc=de&quot;</span>
+<span class="c1"># Cleartext passwords, especially for the rootdn, should</span>
+<span class="c1"># be avoid.  See slappasswd(8) and slapd.conf(5) for details.</span>
+<span class="c1"># Use of strong authentication encouraged.</span>
+<span class="n">rootpw</span>          <span class="p">{</span><span class="n">MD5</span><span class="p">}</span><span class="n">asdfzasdfIMOZnasdof</span><span class="o">=</span>
+<span class="c1"># The database directory MUST exist prior to running slapd AND</span>
+<span class="c1"># should only be accessible by the slapd and slap tools.</span>
+<span class="n">Mode</span> <span class="mi">700</span> <span class="n">recommended</span><span class="o">.</span>
+<span class="n">directory</span>       <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">openldap</span><span class="o">-</span><span class="n">data</span>
+<span class="c1"># Indices to maintain</span>
+<span class="n">index</span>   <span class="n">objectClass</span><span class="p">,</span> <span class="n">eq</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="qmail-schema">
+<h3><span class="section-number">1.102.3.2. </span>qmail.schema<a class="headerlink" href="#qmail-schema" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das qmail.schema ist nicht unbedingt schnell zu finden und teilweise
+werden inkompatible Versionen angezeigt. Aus diesem Grunde wird dieses
+Schema hier noch einmal aufgeführt</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#
+# qmail-ldap (20030901) ldapv3 directory schema
+#
+# The offical qmail-ldap OID assigned by IANA is 7914
+#
+# Created by: David E. Storey &lt;dave@tamos.net&gt;
+# Modified and included into qmail-ldap by Andre Oppermann &lt;opi@nrg4u.com&gt;
+# Schema fixes by Mike Jackson &lt;mjj@pp.fi&gt;
+# Schema fixes by Christian Zoffoli (XMerlin) &lt;czoffoli@xmerlin.org&gt;
+#
+#
+# This schema depends on:
+# - core.schema
+# - cosine.schema
+# - nis.schema
+#
+
+# Attribute Type Definitions
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.1 NAME &#39;qmailUID&#39;
+ DESC &#39;UID of the user on the mailsystem&#39;
+ EQUALITY numericStringMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.36 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.2 NAME &#39;qmailGID&#39;
+ DESC &#39;GID of the user on the mailsystem&#39;
+ EQUALITY numericStringMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.36 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.3 NAME &#39;mailMessageStore&#39;
+ DESC &#39;Path to the maildir/mbox on the mail system&#39;
+ EQUALITY caseExactIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.4 NAME &#39;mailAlternateAddress&#39;
+ DESC &#39;Secondary (alias) mailaddresses for the same user&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+#
+# mailQuota format is no longer supported from qmail-ldap 20030901 on,
+# user mailQuotaSize and mailQuotaCount instead.
+#
+#attributetype ( 1.3.6.1.4.1.7914.1.2.1.5 NAME &#39;mailQuota&#39;
+# DESC &#39;The amount of space the user can use until all further messages get bounced.&#39;
+# SYNTAX 1.3.6.1.4.1.1466.115.121.1.44 SINGLE-VALUE )
+#
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.6 NAME &#39;mailHost&#39;
+ DESC &#39;On which qmail server the messagestore of this user is located.&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} SINGLE-VALUE)
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.7 NAME &#39;mailForwardingAddress&#39;
+ DESC &#39;Address(es) to forward all incoming messages to.&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.8 NAME &#39;deliveryProgramPath&#39;
+ DESC &#39;Program to execute for all incoming mails.&#39;
+ EQUALITY caseExactIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.9 NAME &#39;qmailDotMode&#39;
+ DESC &#39;Interpretation of .qmail files: both, dotonly, ldaponly, ldapwithprog&#39;
+ EQUALITY caseIgnoreIA5Match
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{32} SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.10 NAME &#39;deliveryMode&#39;
+ DESC &#39;multi field entries of: nolocal, noforward, noprogram, reply&#39;
+ EQUALITY caseIgnoreIA5Match
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{32} )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.11 NAME &#39;mailReplyText&#39;
+ DESC &#39;A reply text for every incoming message&#39;
+ EQUALITY caseIgnoreMatch
+ SUBSTR caseIgnoreSubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{4096} SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.12 NAME &#39;accountStatus&#39;
+ DESC &#39;The status of a user account: active, noaccess, disabled, deleted&#39;
+ EQUALITY caseIgnoreIA5Match
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.14 NAME &#39;qmailAccountPurge&#39;
+ DESC &#39;The earliest date when a mailMessageStore will be purged&#39;
+ EQUALITY numericStringMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.36 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.15 NAME &#39;mailQuotaSize&#39;
+ DESC &#39;The size of space the user can have until further messages get bounced.&#39;
+ EQUALITY integerMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.16 NAME &#39;mailQuotaCount&#39;
+ DESC &#39;The number of messages the user can have until further messages get bounced.&#39;
+ EQUALITY integerMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.17 NAME &#39;mailSizeMax&#39;
+ DESC &#39;The maximum size of a single messages the user accepts.&#39;
+ EQUALITY integerMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+
+#
+# qmailGroup attributes
+#
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.1 NAME &#39;dnmember&#39;
+ DESC &#39;Group member specified as distinguished name.&#39;
+ EQUALITY distinguishedNameMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12 )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.2 NAME &#39;rfc822member&#39;
+ DESC &#39;Group member specified as normal rf822 email address.&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.3 NAME &#39;filtermember&#39;
+ DESC &#39;Group member specified as ldap search filter.&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{512} )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.4 NAME &#39;senderconfirm&#39;
+ DESC &#39;Sender to Group has to answer confirmation email.&#39;
+ EQUALITY booleanMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.5 NAME &#39;membersonly&#39;
+ DESC &#39;Sender to Group must be group member itself.&#39;
+ EQUALITY booleanMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.6 NAME &#39;confirmtext&#39;
+ DESC &#39;Text that will be sent with sender confirmation email.&#39;
+ EQUALITY caseIgnoreMatch
+ SUBSTR caseIgnoreSubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{4096} SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.7 NAME &#39;dnmoderator&#39;
+ DESC &#39;Group moderator specified as Distinguished name.&#39;
+ EQUALITY distinguishedNameMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12 )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.8 NAME &#39;rfc822moderator&#39;
+ DESC &#39;Group moderator specified as normal rfc822 email address.&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.9 NAME &#39;moderatortext&#39;
+ DESC &#39;Text that will be sent with request for moderation email.&#39;
+ EQUALITY caseIgnoreMatch
+ SUBSTR caseIgnoreSubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{4096} SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.10 NAME &#39;dnsender&#39;
+ DESC &#39;Allowed sender specified as distinguished name.&#39;
+ EQUALITY distinguishedNameMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12 )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.11 NAME &#39;rfc822sender&#39;
+ DESC &#39;Allowed sender specified as normal rf822 email address.&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 1.3.6.1.4.1.7914.1.3.1.12 NAME &#39;filtersender&#39;
+ DESC &#39;Allowed sender specified as ldap search filter.&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{512} )
+
+
+#
+# qldapAdmin Attributes
+#
+
+attributetype ( 1.3.6.1.4.1.7914.1.4.1.1 NAME &#39;qladnmanager&#39;
+ DESC &#39;&#39;
+ EQUALITY distinguishedNameMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.12 )
+
+attributetype ( 1.3.6.1.4.1.7914.1.4.1.2 NAME &#39;qlaDomainList&#39;
+ DESC &#39;&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 1.3.6.1.4.1.7914.1.4.1.3 NAME &#39;qlaUidPrefix&#39;
+ DESC &#39;&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.4.1.4 NAME &#39;qlaQmailUid&#39;
+ DESC &#39;&#39;
+ EQUALITY integerMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.4.1.5 NAME &#39;qlaQmailGid&#39;
+ DESC &#39;&#39;
+ EQUALITY integerMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.4.1.6 NAME &#39;qlaMailMStorePrefix&#39;
+ DESC &#39;&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.4.1.7 NAME &#39;qlaMailQuotaSize&#39;
+ DESC &#39;&#39;
+ EQUALITY integerMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.4.1.8 NAME &#39;qlaMailQuotaCount&#39;
+ DESC &#39;&#39;
+ EQUALITY integerMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.4.1.9 NAME &#39;qlaMailSizeMax&#39;
+ DESC &#39;&#39;
+ EQUALITY integerMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.4.1.10 NAME &#39;qlaMailHostList&#39;
+ DESC &#39;&#39;
+ EQUALITY caseIgnoreIA5Match
+ SUBSTR caseIgnoreIA5SubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+
+# Object Class Definitions
+
+objectclass ( 1.3.6.1.4.1.7914.1.2.2.1 NAME &#39;qmailUser&#39;
+ DESC &#39;QMail-LDAP User&#39;
+ SUP top
+ AUXILIARY
+ MUST ( mail )
+ MAY ( uid $ mailMessageStore $ homeDirectory $ userPassword $
+       mailAlternateAddress $ qmailUID $ qmailGID $
+       mailHost $ mailForwardingAddress $ deliveryProgramPath $
+       qmailDotMode $ deliveryMode $ mailReplyText $
+       accountStatus $ qmailAccountPurge $
+       mailQuotaSize $ mailQuotaCount $ mailSizeMax ) )
+
+objectclass ( 1.3.6.1.4.1.7914.1.3.2.1 NAME &#39;qmailGroup&#39;
+ DESC &#39;QMail-LDAP Group&#39;
+ SUP top
+ AUXILIARY
+ MUST ( mail $ mailAlternateAddress $ mailMessageStore )
+ MAY ( dnmember $ rfc822member $ filtermember $ senderconfirm $
+       membersonly $ confirmtext $ dnmoderator $ rfc822moderator $
+       moderatortext $ dnsender $ rfc822sender $ filtersender) )
+
+objectclass ( 1.3.6.1.4.1.7914.1.4.2.1 NAME &#39;qldapAdmin&#39;
+ DESC &#39;QMail-LDAP Subtree Admin&#39;
+ SUP top
+ AUXILIARY
+ MUST ( qlaDnManager $ qlaDomainList $ qlaMailMStorePrefix $
+        qlaMailHostList )
+ MAY ( qlaUidPrefix $ qlaQmailUid $ qlaQmailGid $ qlaMailQuotaSize $
+       qlaMailQuotaCount $ qlaMailSizeMax ) )
+</pre></div>
+</div>
+</div>
+<div class="section" id="ldap-struktur">
+<h3><span class="section-number">1.102.3.3. </span>LDAP-Struktur<a class="headerlink" href="#ldap-struktur" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="n">base</span>
+         <span class="o">|</span>
+   <span class="o">-------------</span>
+   <span class="o">|</span>           <span class="o">|</span>
+ <span class="n">system</span>       <span class="n">user</span>
+   <span class="o">|</span>
+<span class="n">postfix</span>
+   <span class="o">|</span>
+ <span class="o">-----</span>
+ <span class="o">|</span>   <span class="o">|</span>
+<span class="n">eu</span>  <span class="n">de</span>
+</pre></div>
+</div>
+<p>Unter base liegen system und user. In system liegt postfix und darin die
+jeweiligen Domains geordnet nach TLDs (Top Level Domains). Denn ist
+auszugegehen, dass der Mailserver für einige Domains genutzt werden
+soll. In user liegen die ganzen Daten der einzelnen Userkonten.</p>
+<p>Diese Abbildung muss eventuell an die eigenen Bedürfnisse angepasst
+werden und sollte nicht einfach übernommen werden. Ein wichtiger Schritt
+bei der Benutzung von LDAP ist die passende Baumstruktur für seinen
+individuellen Anwendungsfall zu entwickeln.</p>
+<p><strong>Anlegen der LDAP Hierarchie</strong></p>
+<p><strong>Initialisieren</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dn</span><span class="p">:</span> <span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">top</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">organization</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">dcObject</span>
+<span class="n">dc</span><span class="p">:</span> <span class="n">example</span>
+<span class="n">o</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">de</span>
+</pre></div>
+</div>
+<p>Die oberste Struktur im Verzeichnisbaum wird angelegt</p>
+<p><strong>Systemabschnitt</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dn</span><span class="p">:</span> <span class="n">ou</span><span class="o">=</span><span class="n">system</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">ou</span><span class="p">:</span> <span class="n">system</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">organizationalUnit</span>
+</pre></div>
+</div>
+<p>Es wird eine Systemabschnitt angelegt, der bei Bedarf noch weitere
+Unterbäume enthalten kann. Dieser kann auch wegfallen.</p>
+<p><strong>Struktur für die Domains</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dn</span><span class="p">:</span> <span class="n">ou</span><span class="o">=</span><span class="n">postfix</span><span class="p">,</span> <span class="n">ou</span><span class="o">=</span><span class="n">system</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">ou</span><span class="p">:</span> <span class="n">postfix</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">organizationalUnit</span>
+</pre></div>
+</div>
+<p><strong>Ablage der Domains</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dn</span><span class="p">:</span> <span class="n">dc</span><span class="o">=</span><span class="n">eu</span><span class="p">,</span> <span class="n">ou</span><span class="o">=</span><span class="n">postfix</span><span class="p">,</span> <span class="n">ou</span><span class="o">=</span><span class="n">system</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">associatedDomain</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">eu</span>
+<span class="n">dc</span><span class="p">:</span> <span class="n">eu</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">dNSDomain</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">domainRelatedObject</span>
+
+<span class="n">dn</span><span class="p">:</span> <span class="n">dc</span><span class="o">=</span><span class="n">de</span><span class="p">,</span> <span class="n">ou</span><span class="o">=</span><span class="n">postfix</span><span class="p">,</span> <span class="n">ou</span><span class="o">=</span><span class="n">system</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">associatedDomain</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">de</span>
+<span class="n">associatedDomain</span><span class="p">:</span> <span class="n">example2</span><span class="o">.</span><span class="n">de</span>
+<span class="n">dc</span><span class="p">:</span> <span class="n">de</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">dNSDomain</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">domainRelatedObject</span>
+</pre></div>
+</div>
+<p>Wie man hier sieht, sind die einzelnen TLDs in getrennten Strukturen.
+Dies dient zur besseren Übersicht. Man kann natürlich alle Domains auch
+in einer Struktur verwalten.</p>
+<p><strong>Struktur für die Userverwaltung</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dn</span><span class="p">:</span> <span class="n">ou</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">bossk</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">ou</span><span class="p">:</span> <span class="n">user</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">organizationalUnit</span>
+</pre></div>
+</div>
+<p><strong>Anlegen der einzelnen User</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dn</span><span class="p">:</span> <span class="n">cn</span><span class="o">=</span><span class="n">foo</span><span class="p">,</span> <span class="n">ou</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="p">,</span> <span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">userPassword</span><span class="p">:{</span><span class="n">MD5</span><span class="p">}</span><span class="n">CY9rzasdfsaP56ZDJi04d</span><span class="o">==</span>
+<span class="n">givenName</span><span class="p">:</span> <span class="n">foo</span>
+<span class="n">sn</span><span class="p">:</span> <span class="n">bar</span>
+<span class="n">mailMessageStore</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">mail</span><span class="o">/</span><span class="n">foo</span><span class="o">/</span>
+<span class="n">mail</span><span class="p">:</span> <span class="n">admin</span><span class="nd">@example</span><span class="o">.</span><span class="n">de</span>
+<span class="n">mailAlternateAddress</span><span class="p">:</span> <span class="n">foo</span><span class="nd">@example2</span><span class="o">.</span><span class="n">de</span>
+<span class="n">mailAlternateAddress</span><span class="p">:</span> <span class="n">bar</span><span class="nd">@example</span><span class="o">.</span><span class="n">eu</span>
+<span class="n">uid</span><span class="p">:</span> <span class="n">foo</span><span class="nd">@example2</span><span class="o">.</span><span class="n">de</span>
+<span class="n">accountStatus</span><span class="p">:</span> <span class="n">active</span>
+<span class="n">cn</span><span class="p">:</span> <span class="n">foo</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">top</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">person</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">inetOrgPerson</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">qmailUser</span>
+<span class="n">objectClass</span><span class="p">:</span> <span class="n">organizationalPerson</span>
+</pre></div>
+</div>
+<p>Das userPassword wird mit dem Tool <code class="docutils literal notranslate"><span class="pre">/usr/local/sbin/slappasswd</span></code>
+erstellt. Es kann pro Account nur einmal mail existieren, weitere
+eMail-Adressen des Accounts können unter mailAlternateAddress
+eingestellt werden. Über den accountStatus können Accounts deaktiviert
+werden. Die uid wird für die Anmeldungen an Postfix und Courier genutzt.
+Der Rest dürfte eindeutig sein.</p>
+</div>
+</div>
+<div class="section" id="courier-imap-konfigurieren">
+<h2><span class="section-number">1.102.4. </span>Courier-IMAP konfigurieren<a class="headerlink" href="#courier-imap-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p><strong>/etc/courier-imap/imapd</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># vi /etc/courier-imap/imapd</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ADDRESS</span><span class="o">=&lt;</span><span class="n">IP</span> <span class="n">auf</span> <span class="n">der</span><span class="p">,</span> <span class="n">der</span> <span class="n">Server</span> <span class="n">laufen</span> <span class="n">soll</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Sollte man einstellen, wenn der Server mehrer IP’s hat</p>
+<p><strong>/etc/courier-imap/authdaemonrc</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># vi /etc/courier-imap/authdaemonrc</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">authmodulelist</span><span class="o">=</span><span class="s2">&quot;authldap&quot;</span>
+</pre></div>
+</div>
+<p>Diese Einstellung kann man machen. Die default Einstellung funktioniert
+auch.</p>
+<p><strong>/etc/courier-imap/authldaprc</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">courier</span><span class="o">-</span><span class="n">imap</span><span class="o">/</span><span class="n">authldaprc</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LDAP_SERVER</span>             <span class="n">localhost</span>
+<span class="n">LDAP_PORT</span>               <span class="mi">389</span>
+<span class="n">LDAP_PROTOCOL_VERSION</span>   <span class="mi">3</span>
+<span class="n">LDAP_BASEDN</span>             <span class="n">ou</span><span class="o">=</span><span class="n">user</span><span class="p">,</span><span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="p">,</span><span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">LDAP_TIMEOUT</span>            <span class="mi">15</span>
+<span class="n">LDAP_MAIL</span>               <span class="n">uid</span>
+<span class="n">LDAP_FILTER</span>             <span class="p">(</span><span class="n">accountStatus</span><span class="o">=</span><span class="n">active</span><span class="p">)</span>
+<span class="n">LDAP_GLOB_UID</span>           <span class="n">_postfix</span>
+<span class="n">LDAP_GLOB_GID</span>           <span class="n">_postfix</span>
+<span class="n">LDAP_HOMEDIR</span>            <span class="n">mailMessageStore</span>
+<span class="n">LDAP_MAILDIR</span>            <span class="n">mailMessageStore</span>
+<span class="n">LDAP_DEFAULTDELIVERY</span>    <span class="n">defaultDelivery</span>
+<span class="n">LDAP_FULLNAME</span>           <span class="n">cn</span>
+<span class="n">LDAP_CRYPTPW</span>            <span class="n">userPassword</span>
+<span class="n">LDAP_DEREF</span>              <span class="n">never</span>
+</pre></div>
+</div>
+<p><strong>Anmerkung</strong> Natürlich kann und sollte man sich auch den Rest der
+Einstellungen anschauen und ggf. seinen Anforderungen anpassen.</p>
+</div>
+<div class="section" id="clamav-konfigurieren">
+<h2><span class="section-number">1.102.5. </span>ClamAV konfigurieren<a class="headerlink" href="#clamav-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Dateien <code class="docutils literal notranslate"><span class="pre">/etc/freshclam.conf</span></code> und <code class="docutils literal notranslate"><span class="pre">/etc/clamd.conf</span></code> entsprechend
+seinen Präferenzen anpassen. In diesem Beispiel wird der Daemon von
+ClamAV gestartet und amavisd-new übergibt diesem die Mails zum scannen.
+Dafür müssen in der <code class="docutils literal notranslate"><span class="pre">/etc/clamd.conf</span></code> ein paar Änderungen durchgeführt
+werden.</p>
+<p>Die nachfolgenden Zeilen müssen angepasst bzw. auskommentiert werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="n">pid</span>
+<span class="n">LocalSocket</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span>
+</pre></div>
+</div>
+<p>Da das Verzeichnis <code class="docutils literal notranslate"><span class="pre">/var/run/clamav</span></code> noch nicht existiert wird es
+angelegt und die Berechtigungen werden gesetzt</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mkdir /var/run/clamav &amp;&amp; chown -R _clamav:_clamav /var/run/clamav</span>
+</pre></div>
+</div>
+<p>Damit die Virendatenbanken von ClamAV laufend aktualisiert werden
+empfiehlt es sich einen Cronjob für freshclam anzulegen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># crontab -l</span>
+<span class="c1"># clamav aktualisierung</span>
+<span class="mi">0</span>       <span class="o">*/</span><span class="mi">4</span>     <span class="o">*</span>       <span class="o">*</span>       <span class="o">*</span>       <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">freshclam</span> <span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="postfix-konfigurieren">
+<h2><span class="section-number">1.102.6. </span>Postfix konfigurieren<a class="headerlink" href="#postfix-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Es wird nur auf die Einstellung, die für die Verbindung zum LDAP-Server
+benötigt eingegangen. Postfix ist ein komplexes Programm, daher sollte man
+sich damit auseinander setzen. Mehr Informationen zur Konfiguration findet
+man auch in dem Artikel <a class="reference external" href="PostfixDspam">Postfix Dspam</a> oder im Netz und in
+der gängigen Fachliteratur.</p>
+</div>
+<p><strong>/etc/postfix/main.cf</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># vi /etc/postfix/main.cf</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mydestination</span> <span class="o">=</span> <span class="n">localhost</span><span class="p">,</span> <span class="n">ldap</span><span class="p">:</span><span class="n">acceptdomains</span>
+<span class="n">acceptdomains_server_host</span> <span class="o">=</span> <span class="n">localhost</span>
+<span class="n">acceptdomains_server_port</span> <span class="o">=</span> <span class="mi">389</span>
+<span class="n">acceptdomains_bind</span> <span class="o">=</span> <span class="n">no</span>
+<span class="n">acceptdomains_search_base</span> <span class="o">=</span> <span class="n">ou</span><span class="o">=</span><span class="n">postfix</span><span class="p">,</span><span class="n">ou</span><span class="o">=</span><span class="n">system</span><span class="p">,</span><span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="p">,</span><span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">acceptdomains_query_filter</span> <span class="o">=</span> <span class="p">(</span><span class="n">associatedDomain</span><span class="o">=%</span><span class="n">s</span><span class="p">)</span>
+<span class="n">acceptdomains_result_attribute</span> <span class="o">=</span> <span class="n">associatedDomain</span>
+</pre></div>
+</div>
+<p>Mit diesen Einträgen, werden die Domains gesucht.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">local_transport</span> <span class="o">=</span> <span class="n">virtual</span>
+<span class="n">virtual_mailbox_base</span> <span class="o">=</span> <span class="o">/</span>
+<span class="n">virtual_mailbox_maps</span> <span class="o">=</span> <span class="n">ldap</span><span class="p">:</span><span class="n">ldapvirtual</span>
+<span class="n">virtual_uid_maps</span> <span class="o">=</span> <span class="n">static</span><span class="p">:</span><span class="mi">507</span>
+<span class="n">virtual_gid_maps</span> <span class="o">=</span> <span class="n">static</span><span class="p">:</span><span class="mi">507</span>
+<span class="n">virtual_mailbox_limit</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">ldapvirtual_server_host</span> <span class="o">=</span> <span class="n">localhost</span>
+<span class="n">ldapvirtual_server_port</span> <span class="o">=</span> <span class="mi">389</span>
+<span class="n">ldapvirtual_bind</span> <span class="o">=</span> <span class="n">no</span>
+<span class="n">ldapvirtual_search_base</span> <span class="o">=</span> <span class="n">ou</span><span class="o">=</span><span class="n">user</span><span class="p">,</span><span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="p">,</span><span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">ldapvirtual_query_filter</span><span class="o">=</span> <span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="o">|</span><span class="p">(</span><span class="n">mail</span><span class="o">=%</span><span class="n">s</span><span class="p">)(</span><span class="n">mailAlternateAddress</span><span class="o">=%</span><span class="n">s</span><span class="p">))(</span><span class="o">|</span><span class="p">(</span><span class="n">accountStatus</span><span class="o">=</span><span class="n">active</span><span class="p">)(</span><span class="n">accountStatus</span><span class="o">=</span><span class="n">shared</span><span class="p">)))</span>
+<span class="n">ldapvirtual_result_attribute</span> <span class="o">=</span> <span class="n">mailMessageStore</span>
+</pre></div>
+</div>
+<p>Hier wird der Speicherplatz für den passenden Account gesucht.
+<code class="docutils literal notranslate"><span class="pre">Wichtig</span></code> ist, dass die virtual_uid_maps und virtual_gid_maps an den
+_postfix-Account des Systems angepasst wird. Standard unter OpenBSD ist
+507.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">virtual_alias_maps</span> <span class="o">=</span> <span class="n">ldap</span><span class="p">:</span><span class="n">ldapalias</span>
+<span class="n">ldapalias_server_host</span> <span class="o">=</span> <span class="n">localhost</span>
+<span class="n">ldapalias_server_port</span> <span class="o">=</span> <span class="mi">389</span>
+<span class="n">ldapalias_bind</span> <span class="o">=</span> <span class="n">no</span>
+<span class="n">ldapalias_search_base</span> <span class="o">=</span> <span class="n">ou</span><span class="o">=</span><span class="n">user</span><span class="p">,</span><span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="p">,</span><span class="n">dc</span><span class="o">=</span><span class="n">de</span>
+<span class="n">ldapalias_query_filter</span> <span class="o">=</span> <span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="o">|</span><span class="p">(</span><span class="n">mail</span><span class="o">=%</span><span class="n">s</span><span class="p">)(</span><span class="n">mailAlternateAddress</span><span class="o">=%</span><span class="n">s</span><span class="p">))(</span><span class="o">|</span><span class="p">(</span><span class="n">accountStatus</span><span class="o">=</span><span class="n">active</span><span class="p">)(</span><span class="n">accountStatus</span><span class="o">=</span><span class="n">shared</span><span class="p">)))</span>
+<span class="n">ldapalias_result_attribute</span> <span class="o">=</span> <span class="n">mail</span>
+</pre></div>
+</div>
+<p>Jetzt fügen wir die Restrictions hinzu</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">smtpd_recipient_restrictions</span> <span class="o">=</span> <span class="n">permit_mynetworks</span><span class="p">,</span>
+                              <span class="n">permit_sasl_authenticated</span><span class="p">,</span>
+                              <span class="n">reject_unauth_pipelining</span><span class="p">,</span>
+                              <span class="n">reject_unauth_destination</span><span class="p">,</span>
+                              <span class="n">reject_invalid_hostname</span><span class="p">,</span>
+                              <span class="n">reject_non_fqdn_hostname</span><span class="p">,</span>
+                              <span class="n">reject_non_fqdn_sender</span><span class="p">,</span>
+                              <span class="n">reject_non_fqdn_recipient</span><span class="p">,</span>
+                              <span class="n">reject_rbl_client</span> <span class="n">relays</span><span class="o">.</span><span class="n">ordb</span><span class="o">.</span><span class="n">org</span><span class="p">,</span>
+                              <span class="n">reject_rbl_client</span> <span class="nb">list</span><span class="o">.</span><span class="n">dsbl</span><span class="o">.</span><span class="n">org</span><span class="p">,</span>
+                              <span class="n">reject_rbl_client</span> <span class="n">opm</span><span class="o">.</span><span class="n">blitzed</span><span class="o">.</span><span class="n">org</span><span class="p">,</span>
+                              <span class="n">reject_rbl_client</span> <span class="n">sbl</span><span class="o">-</span><span class="n">xbl</span><span class="o">.</span><span class="n">spamhaus</span><span class="o">.</span><span class="n">org</span><span class="p">,</span>
+                              <span class="n">reject_rhsbl_sender</span> <span class="n">dsn</span><span class="o">.</span><span class="n">rfc</span><span class="o">-</span><span class="n">ignorant</span><span class="o">.</span><span class="n">org</span><span class="p">,</span>
+                              <span class="n">check_policy_service</span> <span class="n">inet</span><span class="p">:</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">10023</span>
+                              <span class="n">permit</span>
+</pre></div>
+</div>
+<p>Es sinnig (fast) alle restrictions in die smtpd_recipient_restrictions
+zu setzen, da die Restrictions bei der Standardkonfiguration nach dem
+RCPT TO: ausgeführt werden und nicht wie allgemein angenommen bei dem
+entsprechenden Vorgang. Im Klartext: Die smtpd_helo_restrictions werden
+nicht beim HELO geprüpft sondern auch erst nach dem RCPT TO:</p>
+<p>to be continued…</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="postfix_dspam.txt.html" class="btn btn-neutral float-right" title="1.103. Postfix DSPAM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="postfix_antivirus.txt.html" class="btn btn-neutral float-left" title="1.101. Postfix Antivirus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

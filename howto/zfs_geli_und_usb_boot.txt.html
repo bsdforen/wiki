@@ -1,0 +1,857 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.152. ZFS (raidz), Geli und USB Boot &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="2. Anwendungen" href="../anwendungen/anwendungen_index.html" />
+    <link rel="prev" title="1.151. ZFS auf FreeBSD" href="zfs.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.152. ZFS (raidz), Geli und USB Boot</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einleitung">1.152.1. Einleitung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#info">1.152.1.1. Info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vorraussetzungen">1.152.1.2. Vorraussetzungen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#zielsetzung">1.152.1.3. Zielsetzung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">1.152.2. Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fixit-shell-starten">1.152.2.1. Fixit Shell starten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setup-permissions">1.152.2.2. Setup Permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sonstige-vorbereitungen">1.152.2.3. Sonstige Vorbereitungen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-gpart-containter">1.152.2.4. Create gpart containter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-gpart-containter-1">1.152.2.5. Create gpart containter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geli">1.152.2.6. Geli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#zfs">1.152.2.7. ZFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installieren">1.152.2.8. Installieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb-stick-setup">1.152.2.9. USB Stick Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#post-installation">1.152.3. Post-Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#post-steps">1.152.3.1. Post Steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#zusatzliche-packages-installieren">1.152.3.2. Zusätzliche Packages installieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ports-collection-installieren">1.152.3.3. Ports Collection installieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rc-conf">1.152.3.4. rc.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#directory-permissions-setzen">1.152.3.5. Directory Permissions setzen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.152. </span>ZFS (raidz), Geli und USB Boot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/zfs_geli_und_usb_boot.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="../anwendungen/anwendungen_index.html" class="btn btn-neutral float-right" title="2. Anwendungen" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="zfs.txt.html" class="btn btn-neutral float-left" title="1.151. ZFS auf FreeBSD" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="zfs-raidz-geli-und-usb-boot">
+<h1><span class="section-number">1.152. </span>ZFS (raidz), Geli und USB Boot<a class="headerlink" href="#zfs-raidz-geli-und-usb-boot" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<div class="section" id="einleitung">
+<h2><span class="section-number">1.152.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="info">
+<h3><span class="section-number">1.152.1.1. </span>Info<a class="headerlink" href="#info" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Ich habe hier exakt meine Anleitung aufgeschrieben, wie ich mein System
+installiert habe. Es gibt allerdings noch ein paar Unklarheiten, die ich
+nicht klären konnte.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<ul class="simple">
+<li><p>Beim Booten muss immer noch ein Password angegeben werden, da ich geli mit
+-b (siehe unten) initialisieren musste. Ich hatte es versucht ohne diese
+Option, dann hat ZFS allerdings keine <code class="docutils literal notranslate"><span class="pre">*.eli</span></code> Devices mehr gefunden, weil
+die Platten nicht während der boot-time entschlüsselt worden sind. Evtl.
+hat noch jemand eine Idee wie man es bewerkstelligen kann, dass man kein
+Passwort während der boot-time braucht.</p></li>
+<li><p>Mir ist noch nicht ganz klar inwiefern der Sicherheitsunterschied und auch
+die Performance zwischen 128bit und 256bit AES Verschlüsselung ist. Bitte
+ggf. erweitern.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="vorraussetzungen">
+<h3><span class="section-number">1.152.1.2. </span>Vorraussetzungen<a class="headerlink" href="#vorraussetzungen" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p>USB Bootfähiges Mainboard</p></li>
+<li><p>FreeBSD DVD (wegen Install Daten und Fixit Shell) ab 8-RC1</p></li>
+<li><p>USB Stick</p></li>
+<li><p>3x HDD Terminologi: ad10, ad12, ad14</p></li>
+<li><p>USB Stick Terminologi: da0</p></li>
+</ul>
+</div>
+<div class="section" id="zielsetzung">
+<h3><span class="section-number">1.152.1.3. </span>Zielsetzung<a class="headerlink" href="#zielsetzung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Es soll ein komplett verschlüsseltes FreeBSD System mit ZFS (raidz1)
+aufgesetzt werden, was von einem USB Stick startet.</p>
+</div>
+</div>
+<div class="section" id="installation">
+<h2><span class="section-number">1.152.2. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="fixit-shell-starten">
+<h3><span class="section-number">1.152.2.1. </span>Fixit Shell starten<a class="headerlink" href="#fixit-shell-starten" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p>FreeBSD mit der Install DVD Booten.</p></li>
+<li><p>Fixit Shell starten ( sysinstall-&gt;fixit-&gt;2 CDROM/DVD )</p></li>
+</ul>
+</div>
+<div class="section" id="setup-permissions">
+<h3><span class="section-number">1.152.2.2. </span>Setup Permissions<a class="headerlink" href="#setup-permissions" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die fixit shell gibt am Anfang den Hinweis /etc/pwd und /etc/group zu
+symlinken, da ansonsten die Rechte beim entpacken von tar archiven
+verloren gehen könnten. Da diese Dateien allerdings schon existieren,
+lösche ich diese erst und linke sie neu.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">rm</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pwd</span><span class="o">.</span><span class="n">db</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">rm</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">spwd</span><span class="o">.</span><span class="n">db</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">rm</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">group</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">mnt2</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pwd</span><span class="o">.</span><span class="n">db</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pwd</span><span class="o">.</span><span class="n">db</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">mnt2</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">spwd</span><span class="o">.</span><span class="n">db</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">spwd</span><span class="o">.</span><span class="n">db</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">mnt2</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">group</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">group</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sonstige-vorbereitungen">
+<h3><span class="section-number">1.152.2.3. </span>Sonstige Vorbereitungen<a class="headerlink" href="#sonstige-vorbereitungen" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### needed for kernel modules</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">kernel</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">kernel</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="n">lib</span> <span class="o">/</span><span class="n">lib</span>
+
+<span class="c1">### load kernel modules</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">kldload</span> <span class="n">geom_eli</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">kldload</span> <span class="n">zfs</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-gpart-containter">
+<h3><span class="section-number">1.152.2.4. </span>Create gpart containter<a class="headerlink" href="#create-gpart-containter" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">create</span> <span class="o">-</span><span class="n">s</span> <span class="n">GPT</span> <span class="n">ad10</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">create</span> <span class="o">-</span><span class="n">s</span> <span class="n">GPT</span> <span class="n">ad12</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">create</span> <span class="o">-</span><span class="n">s</span> <span class="n">GPT</span> <span class="n">ad14</span>
+</pre></div>
+</div>
+<p>Das Ganze sieht dann bei mir mit 3 1TB HDDs so aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">show</span>
+
+<span class="o">=&gt;</span>            <span class="mi">34</span> <span class="mi">1953522988</span>     <span class="n">ad10</span>    <span class="n">GPT</span>  <span class="p">(</span><span class="mi">932</span><span class="n">G</span><span class="p">)</span>
+              <span class="mi">34</span> <span class="mi">1953522988</span>             <span class="o">-</span> <span class="n">free</span> <span class="o">-</span>  <span class="p">(</span><span class="mi">932</span><span class="n">G</span><span class="p">)</span>
+
+<span class="o">=&gt;</span>            <span class="mi">34</span> <span class="mi">1953522988</span>     <span class="n">ad12</span>    <span class="n">GPT</span>  <span class="p">(</span><span class="mi">932</span><span class="n">G</span><span class="p">)</span>
+              <span class="mi">34</span> <span class="mi">1953522988</span>             <span class="o">-</span> <span class="n">free</span> <span class="o">-</span>  <span class="p">(</span><span class="mi">932</span><span class="n">G</span><span class="p">)</span>
+
+<span class="o">=&gt;</span>            <span class="mi">34</span> <span class="mi">1953525101</span>     <span class="n">ad14</span>    <span class="n">GPT</span>  <span class="p">(</span><span class="mi">932</span><span class="n">G</span><span class="p">)</span>
+              <span class="mi">34</span> <span class="mi">1953525101</span>             <span class="o">-</span> <span class="n">free</span> <span class="o">-</span>  <span class="p">(</span><span class="mi">932</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-gpart-containter-1">
+<span id="id1"></span><h3><span class="section-number">1.152.2.5. </span>Create gpart containter<a class="headerlink" href="#create-gpart-containter-1" title="Link zu dieser Überschrift">¶</a></h3>
+<p>So wie ich es gelesen habe, sollte man die swap Partition nicht mit in
+den ZFS Container packen, darum wird dieser extra gebaut und wir zweigen
+uns von jeder Platte jeweils 1GB ab.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### create swap 2048000 = 1GB | 2048000+34 = 2048034</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">add</span> <span class="o">-</span><span class="n">b</span> <span class="mi">34</span> <span class="o">-</span><span class="n">s</span> <span class="mi">2048034</span> <span class="o">-</span><span class="n">t</span> <span class="n">freebsd</span><span class="o">-</span><span class="n">swap</span> <span class="n">ad10</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">add</span> <span class="o">-</span><span class="n">b</span> <span class="mi">34</span> <span class="o">-</span><span class="n">s</span> <span class="mi">2048034</span> <span class="o">-</span><span class="n">t</span> <span class="n">freebsd</span><span class="o">-</span><span class="n">swap</span> <span class="n">ad12</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">add</span> <span class="o">-</span><span class="n">b</span> <span class="mi">34</span> <span class="o">-</span><span class="n">s</span> <span class="mi">2048034</span> <span class="o">-</span><span class="n">t</span> <span class="n">freebsd</span><span class="o">-</span><span class="n">swap</span> <span class="n">ad14</span>
+</pre></div>
+</div>
+<p>Mit dem Rest bauen wir die zfs Partitionen</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### create rest for zfs</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">add</span> <span class="o">-</span><span class="n">b</span> <span class="mi">2048068</span> <span class="o">-</span><span class="n">s</span> <span class="mi">1953522988</span> <span class="o">-</span><span class="n">t</span> <span class="n">freebsd</span><span class="o">-</span><span class="n">zfs</span> <span class="n">ad10</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">add</span> <span class="o">-</span><span class="n">b</span> <span class="mi">2048068</span> <span class="o">-</span><span class="n">s</span> <span class="mi">1953522988</span> <span class="o">-</span><span class="n">t</span> <span class="n">freebsd</span><span class="o">-</span><span class="n">zfs</span> <span class="n">ad12</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">add</span> <span class="o">-</span><span class="n">b</span> <span class="mi">2048068</span> <span class="o">-</span><span class="n">s</span> <span class="mi">1953525101</span> <span class="o">-</span><span class="n">t</span> <span class="n">freebsd</span><span class="o">-</span><span class="n">zfs</span> <span class="n">ad14</span>
+</pre></div>
+</div>
+<p>Bei mir sieht es dann wie folgt aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">show</span>
+
+<span class="o">=&gt;</span>            <span class="mi">34</span> <span class="mi">1953522988</span>     <span class="n">ad10</span>    <span class="n">GPT</span>  <span class="p">(</span><span class="mi">932</span><span class="n">G</span><span class="p">)</span>
+              <span class="mi">34</span>    <span class="mi">2048034</span>        <span class="mi">1</span>    <span class="n">freebsd</span><span class="o">-</span><span class="n">swap</span> <span class="p">(</span><span class="mi">1</span><span class="n">G</span><span class="p">)</span>
+         <span class="mi">2048068</span> <span class="mi">1951474954</span>        <span class="mi">2</span>    <span class="n">freebsd</span><span class="o">-</span><span class="n">zfs</span> <span class="p">(</span><span class="mi">931</span><span class="n">G</span><span class="p">)</span>
+
+<span class="o">=&gt;</span>            <span class="mi">34</span> <span class="mi">1953522988</span>     <span class="n">ad12</span>    <span class="n">GPT</span>  <span class="p">(</span><span class="mi">932</span><span class="n">G</span><span class="p">)</span>
+              <span class="mi">34</span>    <span class="mi">2048034</span>        <span class="mi">1</span>    <span class="n">freebsd</span><span class="o">-</span><span class="n">swap</span> <span class="p">(</span><span class="mi">1</span><span class="n">G</span><span class="p">)</span>
+         <span class="mi">2048068</span> <span class="mi">1951474954</span>        <span class="mi">2</span>    <span class="n">freebsd</span><span class="o">-</span><span class="n">zfs</span> <span class="p">(</span><span class="mi">931</span><span class="n">G</span><span class="p">)</span>
+
+<span class="o">=&gt;</span>            <span class="mi">34</span> <span class="mi">1953522988</span>     <span class="n">ad14</span>    <span class="n">GPT</span>  <span class="p">(</span><span class="mi">932</span><span class="n">G</span><span class="p">)</span>
+              <span class="mi">34</span>    <span class="mi">2048034</span>        <span class="mi">1</span>    <span class="n">freebsd</span><span class="o">-</span><span class="n">swap</span> <span class="p">(</span><span class="mi">1</span><span class="n">G</span><span class="p">)</span>
+         <span class="mi">2048068</span> <span class="mi">1951477067</span>        <span class="mi">2</span>    <span class="n">freebsd</span><span class="o">-</span><span class="n">zfs</span> <span class="p">(</span><span class="mi">931</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="geli">
+<h3><span class="section-number">1.152.2.6. </span>Geli<a class="headerlink" href="#geli" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="create-keys">
+<h4><span class="section-number">1.152.2.6.1. </span>create Keys<a class="headerlink" href="#create-keys" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad10</span><span class="o">.</span><span class="n">key</span> <span class="n">bs</span><span class="o">=</span><span class="mi">128</span><span class="n">k</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad12</span><span class="o">.</span><span class="n">key</span> <span class="n">bs</span><span class="o">=</span><span class="mi">128</span><span class="n">k</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad14</span><span class="o">.</span><span class="n">key</span> <span class="n">bs</span><span class="o">=</span><span class="mi">128</span><span class="n">k</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="encrypt">
+<h4><span class="section-number">1.152.2.6.2. </span>Encrypt<a class="headerlink" href="#encrypt" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="section" id="todo1">
+<h5><span class="section-number">1.152.2.6.2.1. </span>TODO1:<a class="headerlink" href="#todo1" title="Link zu dieser Überschrift">¶</a></h5>
+<p>Hier muss noch abgewogen werden, ob eine 128bit oder 256bit
+Verschlüsselung zum Einsatz kommen soll. Ist 128bit ausreichend?</p>
+</div>
+<div class="section" id="todo2">
+<h5><span class="section-number">1.152.2.6.2.2. </span>TODO2:<a class="headerlink" href="#todo2" title="Link zu dieser Überschrift">¶</a></h5>
+<p>Ich habe es irgendwie nur so hinbekommen, dass ich die „-b“ Option
+(Passwort während dem Bootvorgang eingeben) angeben MUSS, da er sonst
+beim booten die Platten nicht entschlüsselt. Es muss noch geklärt
+werden, ob es ohne die „-b“ Option, also ohne Passwort, sondern nur mit
+keys funktioniert.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">geli</span> <span class="n">init</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">K</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad10</span><span class="o">.</span><span class="n">key</span> <span class="o">-</span><span class="n">s</span> <span class="mi">4096</span> <span class="o">-</span><span class="n">l</span> <span class="mi">256</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad10p2</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">geli</span> <span class="n">init</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">K</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad12</span><span class="o">.</span><span class="n">key</span> <span class="o">-</span><span class="n">s</span> <span class="mi">4096</span> <span class="o">-</span><span class="n">l</span> <span class="mi">256</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad12p2</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">geli</span> <span class="n">init</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">K</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad14</span><span class="o">.</span><span class="n">key</span> <span class="o">-</span><span class="n">s</span> <span class="mi">4096</span> <span class="o">-</span><span class="n">l</span> <span class="mi">256</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad14p2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="note">
+<h5><span class="section-number">1.152.2.6.2.3. </span>Note:<a class="headerlink" href="#note" title="Link zu dieser Überschrift">¶</a></h5>
+<p>Wenn der Fehler „geli: Cannot open /var/backups/ad10.eli: No such file
+or directory.“ kommt, dann einfach /var/backups anlegen</p>
+</div>
+</div>
+<div class="section" id="attach">
+<h4><span class="section-number">1.152.2.6.3. </span>Attach<a class="headerlink" href="#attach" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">geli</span> <span class="n">attach</span> <span class="o">-</span><span class="n">k</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad10</span><span class="o">.</span><span class="n">key</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad10p1</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">geli</span> <span class="n">attach</span> <span class="o">-</span><span class="n">k</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad12</span><span class="o">.</span><span class="n">key</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad12p1</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">geli</span> <span class="n">attach</span> <span class="o">-</span><span class="n">k</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad14</span><span class="o">.</span><span class="n">key</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad14p1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="override-optional">
+<h4><span class="section-number">1.152.2.6.4. </span>Override (Optional)<a class="headerlink" href="#override-optional" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Falls es sich um eine schon benutzte Festplatte handelt, kann diese hier
+mit /dev/random komplett überschrieben werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad10p1</span><span class="o">.</span><span class="n">eli</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">m</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad12p1</span><span class="o">.</span><span class="n">eli</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">m</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad14p1</span><span class="o">.</span><span class="n">eli</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">m</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="zfs">
+<h3><span class="section-number">1.152.2.7. </span>ZFS<a class="headerlink" href="#zfs" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="raidz-pool-anlegen">
+<h4><span class="section-number">1.152.2.7.1. </span>Raidz Pool anlegen<a class="headerlink" href="#raidz-pool-anlegen" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zpool</span> <span class="n">create</span> <span class="o">-</span><span class="n">m</span> <span class="o">/</span><span class="n">tank</span> <span class="n">tank</span> <span class="n">raidz1</span> <span class="n">ad10p2</span><span class="o">.</span><span class="n">eli</span> <span class="n">ad12p2</span><span class="o">.</span><span class="n">eli</span> <span class="n">ad14p2</span><span class="o">.</span><span class="n">eli</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mountpoints-erzeugen">
+<h4><span class="section-number">1.152.2.7.2. </span>Mountpoints erzeugen<a class="headerlink" href="#mountpoints-erzeugen" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zfs</span> <span class="n">create</span> <span class="n">tank</span><span class="o">/</span><span class="n">usr</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zfs</span> <span class="n">create</span> <span class="n">tank</span><span class="o">/</span><span class="n">var</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zfs</span> <span class="n">create</span> <span class="n">tank</span><span class="o">/</span><span class="n">tmp</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zfs</span> <span class="n">create</span> <span class="n">tank</span><span class="o">/</span><span class="n">root</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zfs</span> <span class="n">create</span> <span class="n">tank</span><span class="o">/</span><span class="n">home</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="access-time-ausschalten">
+<h4><span class="section-number">1.152.2.7.3. </span>Access Time ausschalten<a class="headerlink" href="#access-time-ausschalten" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span><span class="n">zfs</span> <span class="nb">set</span> <span class="n">atime</span><span class="o">=</span><span class="n">off</span> <span class="n">tank</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="zpool-exportieren">
+<h4><span class="section-number">1.152.2.7.4. </span>Zpool Exportieren<a class="headerlink" href="#zpool-exportieren" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Dies ist erforderlich, da beim export und danach Import die zpool.cache
+Datei erzeugt wird. Diese muss auf dem USB Stick sein, da ZFS sonst
+nicht weitermacht.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">zfs</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zpool</span> <span class="n">export</span> <span class="n">tank</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zpool</span> <span class="kn">import</span> <span class="nn">tank</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="installieren">
+<h3><span class="section-number">1.152.2.8. </span>Installieren<a class="headerlink" href="#installieren" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Installations Pfad angeben und Base und Kernel installieren</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">export</span> <span class="n">DESTDIR</span><span class="o">=/</span><span class="n">fixed</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cd</span> <span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="mf">7.2</span><span class="o">-</span><span class="n">RELEASE</span><span class="o">/</span><span class="n">base</span> <span class="o">&amp;&amp;</span> <span class="o">./</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cd</span> <span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="mf">7.2</span><span class="o">-</span><span class="n">RELEASE</span><span class="o">/</span><span class="n">kernels</span> <span class="o">&amp;&amp;</span> <span class="o">./</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="n">generic</span>
+</pre></div>
+</div>
+<p>### Anmerkung: Bei der Base installation kamen folgende Fehlermeldungen:</p>
+<ul class="simple">
+<li><p>/root/.profile: Cant create ‚root/.profile‘ : Cross-Devide link</p></li>
+<li><p>./root/.cshrc: Cant create ‚root/.cshrc‘ : Cross-Devide link</p></li>
+<li><p>tar: Error exit delayed from previous errors</p></li>
+</ul>
+<p>Diese konnte ich aber misachten, da alles trotzdem funktioniert Sollte
+jemand wissen was hier los ist, bitte ändern</p>
+</div>
+<div class="section" id="usb-stick-setup">
+<h3><span class="section-number">1.152.2.9. </span>USB Stick Setup<a class="headerlink" href="#usb-stick-setup" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="formatieren-und-partitionieren">
+<h4><span class="section-number">1.152.2.9.1. </span>formatieren und partitionieren<a class="headerlink" href="#formatieren-und-partitionieren" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">create</span> <span class="o">-</span><span class="n">s</span> <span class="n">GPT</span> <span class="n">da0</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">add</span> <span class="o">-</span><span class="n">b</span> <span class="mi">34</span> <span class="o">-</span><span class="n">s</span> <span class="mi">16</span> <span class="o">-</span><span class="n">t</span> <span class="n">freebsd</span><span class="o">-</span><span class="n">boot</span> <span class="n">da0</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">add</span> <span class="o">-</span><span class="n">b</span> <span class="mi">50</span> <span class="o">-</span><span class="n">s</span> <span class="mi">31301548</span> <span class="o">-</span><span class="n">t</span> <span class="n">freebsd</span><span class="o">-</span><span class="n">ufs</span> <span class="n">da0</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">bootcode</span> <span class="o">-</span><span class="n">b</span> <span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">pmbr</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">gptboot</span> <span class="o">-</span><span class="n">i</span> <span class="mi">1</span> <span class="n">da0</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">newfs</span> <span class="o">-</span><span class="n">O2</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">da0p2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usb-directory-erzeugen-und-einhangen">
+<h4><span class="section-number">1.152.2.9.2. </span>USB Directory erzeugen und einhängen<a class="headerlink" href="#usb-directory-erzeugen-und-einhangen" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">usb</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mount</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">da0p2</span> <span class="o">/</span><span class="n">usb</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="boot-ordner">
+<h4><span class="section-number">1.152.2.9.3. </span>Boot Ordner<a class="headerlink" href="#boot-ordner" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Den Boot Ordner vom Installierten System auf den USB Stick copieren</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cp</span> <span class="o">-</span><span class="n">Rpv</span> <span class="o">/</span><span class="n">tank</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="kernel">
+<h4><span class="section-number">1.152.2.9.4. </span>Kernel<a class="headerlink" href="#kernel" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Damit man booten kann muss die kernel unter /boot/kernel/kernel zu
+finden sein. Also GENERIC nach kernel verschieben.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">rmdir</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">kernel</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mv</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">GENERIC</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">kernel</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cd</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">kernel</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="faster-boot">
+<h4><span class="section-number">1.152.2.9.5. </span>Faster Boot<a class="headerlink" href="#faster-boot" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Damit der Systemstart schneller geht, kann man noch die kernel und die
+Kernelmodule gzippen</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gzip</span> <span class="o">*</span>   <span class="c1"># compress to have faster loading</span>
+</pre></div>
+</div>
+<p>Um Platz zu sparen kann man auch in /usb/boot/kernel die nichtbenötigten
+Module löschen. Definitiv benötigte Module sind:</p>
+<ul class="simple">
+<li><p>zlib.ko</p></li>
+<li><p>crypto.ko</p></li>
+<li><p>acpi.ko</p></li>
+<li><p>geom_eli.ko</p></li>
+<li><p>kernel</p></li>
+<li><p>zfs.ko</p></li>
+<li><p>opensolaris.ko</p></li>
+</ul>
+</div>
+<div class="section" id="copy-encryption-keys">
+<h4><span class="section-number">1.152.2.9.6. </span>Copy Encryption Keys<a class="headerlink" href="#copy-encryption-keys" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Den Geli Encryption Keys auf den USB Stick kopieren.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-zpool-cache">
+<h4><span class="section-number">1.152.2.9.7. </span>Copy Zpool Cache<a class="headerlink" href="#copy-zpool-cache" title="Link zu dieser Überschrift">¶</a></h4>
+<p>copy zpool.cache file to usb stick</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">zfs</span>
+<span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cp</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">zfs</span><span class="o">/</span><span class="n">zpool</span><span class="o">.</span><span class="n">cache</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boo</span><span class="o">/</span><span class="n">zfs</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="geli-aktivieren">
+<h4><span class="section-number">1.152.2.9.8. </span>Geli Aktivieren<a class="headerlink" href="#geli-aktivieren" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Damit man die Festplatte entschlüsseln kann muss das Geli Modul geladen
+werden und der Pfad für das Keyfile angegeben werden. Hierzu wird
+folgender Eintrag in der loader.conf auf dem USB Stick angelegt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">vi</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">loader</span><span class="o">.</span><span class="n">conf</span>
+    <span class="n">geom_eli_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+
+    <span class="n">geli_ad10p2_keyfile0_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+    <span class="n">geli_ad10p2_keyfile0_type</span><span class="o">=</span><span class="s2">&quot;ad10p2:geli_keyfile0&quot;</span>
+    <span class="n">geli_ad10p2_keyfile0_name</span><span class="o">=</span><span class="s2">&quot;/keys/ad10.key&quot;</span>
+
+    <span class="n">geli_ad12p2_keyfile1_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+    <span class="n">geli_ad12p2_keyfile1_type</span><span class="o">=</span><span class="s2">&quot;ad12p2:geli_keyfile1&quot;</span>
+    <span class="n">geli_ad12p2_keyfile1_name</span><span class="o">=</span><span class="s2">&quot;/keys/ad12.key&quot;</span>
+
+    <span class="n">geli_ad14p2_keyfile2_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+    <span class="n">geli_ad14p2_keyfile2_type</span><span class="o">=</span><span class="s2">&quot;ad14p2:geli_keyfile2&quot;</span>
+    <span class="n">geli_ad14p2_keyfile2_name</span><span class="o">=</span><span class="s2">&quot;/keys/ad14.key&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="zfs-aktivieren">
+<h4><span class="section-number">1.152.2.9.9. </span>ZFS Aktivieren<a class="headerlink" href="#zfs-aktivieren" title="Link zu dieser Überschrift">¶</a></h4>
+<p>ZFS Support to the loader</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">vi</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">loader</span><span class="o">.</span><span class="n">conf</span>
+    <span class="n">zfs_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+    <span class="n">vfs</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">mountfrom</span><span class="o">=</span><span class="s2">&quot;zfs:tank</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="boot-time-verkurzen">
+<h4><span class="section-number">1.152.2.9.10. </span>Boot Time verkürzen<a class="headerlink" href="#boot-time-verkurzen" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">vi</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">loader</span><span class="o">.</span><span class="n">conf</span>
+    <span class="n">autoboot_delay</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="local-fstab">
+<h4><span class="section-number">1.152.2.9.11. </span>local fstab<a class="headerlink" href="#local-fstab" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Nach dem Mount der root Partition ist der USB Stick aus dem namespace
+raus, darum muss noch eine fstab in der root Partition der Festplatte
+angelegt werden, wo dann der Rest geladen werden muss.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">vi</span> <span class="o">/</span><span class="n">fixed</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">fstab</span>
+    <span class="c1"># Device    Mountpoint  FStype  Options Dump    Pass#</span>
+    <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad10p1</span><span class="o">.</span><span class="n">eli</span> <span class="n">none</span>        <span class="n">swap</span>    <span class="n">sw</span>  <span class="mi">0</span>   <span class="mi">0</span>
+    <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad12p1</span><span class="o">.</span><span class="n">eli</span> <span class="n">none</span>        <span class="n">swap</span>    <span class="n">sw</span>  <span class="mi">0</span>   <span class="mi">0</span>
+    <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad14p1</span><span class="o">.</span><span class="n">eli</span> <span class="n">none</span>        <span class="n">swap</span>    <span class="n">sw</span>  <span class="mi">0</span>   <span class="mi">0</span>
+
+    <span class="n">tank</span>        <span class="o">/</span>       <span class="n">zfs</span> <span class="n">rw</span><span class="p">,</span><span class="n">noatime</span>  <span class="mi">0</span>   <span class="mi">0</span>
+    <span class="n">tank</span><span class="o">/</span><span class="n">usr</span>    <span class="o">/</span><span class="n">usr</span>        <span class="n">zfs</span> <span class="n">rw</span><span class="p">,</span><span class="n">noatime</span>  <span class="mi">0</span>   <span class="mi">0</span>
+    <span class="n">tank</span><span class="o">/</span><span class="n">var</span>    <span class="o">/</span><span class="n">var</span>        <span class="n">zfs</span> <span class="n">rw</span><span class="p">,</span><span class="n">noatime</span>  <span class="mi">0</span>   <span class="mi">0</span>
+    <span class="n">tank</span><span class="o">/</span><span class="n">tmp</span>    <span class="o">/</span><span class="n">tmp</span>        <span class="n">zfs</span> <span class="n">rw</span><span class="p">,</span><span class="n">noatime</span>  <span class="mi">0</span>   <span class="mi">0</span>
+    <span class="n">tank</span><span class="o">/</span><span class="n">root</span>   <span class="o">/</span><span class="n">root</span>       <span class="n">zfs</span> <span class="n">rw</span><span class="p">,</span><span class="n">noatime</span>  <span class="mi">0</span>   <span class="mi">0</span>
+    <span class="n">tank</span><span class="o">/</span><span class="n">home</span>   <span class="o">/</span><span class="n">home</span>       <span class="n">zfs</span> <span class="n">rw</span><span class="p">,</span><span class="n">noatime</span>  <span class="mi">0</span>   <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Jetzt ist man fertig und kann das System rebooten. Beim reboot muss man
+dann das Passwort für die ad10s1 Partition eingeben.</p>
+</div>
+</div>
+</div>
+<div class="section" id="post-installation">
+<h2><span class="section-number">1.152.3. </span>Post-Installation<a class="headerlink" href="#post-installation" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="post-steps">
+<h3><span class="section-number">1.152.3.1. </span>Post Steps<a class="headerlink" href="#post-steps" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Super User Passwort setzen</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># passwd</span>
+</pre></div>
+</div>
+<p>Add user with wheel group</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># adduser</span>
+</pre></div>
+</div>
+<p>Set Timezone</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># tzsetup</span>
+</pre></div>
+</div>
+<p>set up network card</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ifconfig re0 add 192.168.0.133 netmask 255.255.255.0</span>
+</pre></div>
+</div>
+<p>/etc/resolv.conf anpassen</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">domain</span>      <span class="n">domain</span><span class="o">.</span><span class="n">de</span>
+<span class="n">nameserver</span>      <span class="mf">217.237</span><span class="o">.</span><span class="mf">151.51</span>
+<span class="n">nameserver</span>      <span class="mf">217.237</span><span class="o">.</span><span class="mf">149.205</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="zusatzliche-packages-installieren">
+<h3><span class="section-number">1.152.3.2. </span>Zusätzliche Packages installieren<a class="headerlink" href="#zusatzliche-packages-installieren" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mount_cd9660 /dev/acd0 /mnt</span>
+<span class="c1"># cd /mnt/8.0-RC1/manpages &amp;&amp; ./install.sh</span>
+<span class="c1"># cd /mnt/8.0-RC1/src &amp;&amp; ./install.sh all</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ports-collection-installieren">
+<h3><span class="section-number">1.152.3.3. </span>Ports Collection installieren<a class="headerlink" href="#ports-collection-installieren" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Hierzu bnötigt man eine funktionierende Internetkonfiguration.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mkdir /usr/ports</span>
+<span class="c1"># cd /usr/ports</span>
+<span class="c1"># portsnap fetch extract</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rc-conf">
+<h3><span class="section-number">1.152.3.4. </span>rc.conf<a class="headerlink" href="#rc-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ifconfig_re0</span><span class="o">=</span><span class="s2">&quot;inet 192.168.0.133  netmask 255.255.255.0&quot;</span>    <span class="c1"># hier natürlich das entsprechende Interface und IP wählen.</span>
+<span class="n">defaultrouter</span><span class="o">=</span><span class="s2">&quot;192.168.0.1&quot;</span>                 <span class="c1"># Auch hier wirder dementsprechend anpassen</span>
+<span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;hostname.domain.de&quot;</span>
+
+<span class="n">sshd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>                       <span class="c1"># ssh aktiveren</span>
+<span class="n">syslogd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="n">syslogd_flags</span><span class="o">=</span><span class="s2">&quot;-ss&quot;</span>     <span class="c1"># disable logging from remote host</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="directory-permissions-setzen">
+<h3><span class="section-number">1.152.3.5. </span>Directory Permissions setzen<a class="headerlink" href="#directory-permissions-setzen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Man kann jetzt noch die Directory Permissions von root und den
+systemusern verbessern.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># chmod 700 /root</span>
+<span class="c1"># chmod 700 /home/&lt;USER&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../anwendungen/anwendungen_index.html" class="btn btn-neutral float-right" title="2. Anwendungen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="zfs.txt.html" class="btn btn-neutral float-left" title="1.151. ZFS auf FreeBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

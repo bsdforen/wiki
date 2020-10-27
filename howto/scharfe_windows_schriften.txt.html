@@ -1,0 +1,1910 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.112. scharfe Windows Schriften &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.113. Schöne Schriften in Xorg" href="schoene_schriften_in_xorg.txt.html" />
+    <link rel="prev" title="1.111. Samsung SMT-7020S" href="samsung_smt_7020s.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.112. scharfe Windows Schriften</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funktionalitaet">1.112.1. Funktionalitaet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hauptkonfiguration-konfiguration">1.112.2. Hauptkonfiguration Konfiguration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installierte-schriftarten">1.112.2.1. Installierte Schriftarten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#xorg-conf">1.112.2.2. Xorg.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fonts-conf">1.112.2.3. ~/.fonts.conf</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#window-manager-spezifisches">1.112.3. Window Manager spezifisches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gnome">1.112.3.1. Gnome</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#probleme">1.112.4. Probleme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#screenshots">1.112.5. Screenshots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#notepad">1.112.5.1. Notepad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chrome">1.112.5.2. Chrome</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#firefox">1.112.5.3. Firefox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#desktop">1.112.5.4. Desktop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#terminal-mit-terminus">1.112.5.5. Terminal mit Terminus</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#todo">1.112.6. Todo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dokumentation-der-aenderungen">1.112.7. Dokumentation der Aenderungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links">1.112.8. Links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.112. </span>scharfe Windows Schriften</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/scharfe_windows_schriften.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="schoene_schriften_in_xorg.txt.html" class="btn btn-neutral float-right" title="1.113. Schöne Schriften in Xorg" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="samsung_smt_7020s.txt.html" class="btn btn-neutral float-left" title="1.111. Samsung SMT-7020S" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scharfe-windows-schriften">
+<h1><span class="section-number">1.112. </span>scharfe Windows Schriften<a class="headerlink" href="#scharfe-windows-schriften" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+<img alt="../_images/logo-openbsd2.png" src="../_images/logo-openbsd2.png" />
+<img alt="../_images/logo-netbsd2.png" src="../_images/logo-netbsd2.png" />
+<img alt="../_images/logo-dragonflybsd3.png" src="../_images/logo-dragonflybsd3.png" />
+</div>
+<p>Ziel dieses Artikels soll es sein unter Xorg genauso scharfe klare Schriften zu
+erzeugen, wie unter Windows XP. Das meisste hier gelistete Material basiert auf
+diesem Artikel: <a class="reference external" href="http://www.howtoforge.com/sharp_fonts_gnome">http://www.howtoforge.com/sharp_fonts_gnome</a></p>
+<div class="section" id="funktionalitaet">
+<h2><span class="section-number">1.112.1. </span>Funktionalitaet<a class="headerlink" href="#funktionalitaet" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p>scharfe Standardschriften wie unter Windows XP</p></li>
+<li><p>klare chinesische Schriften, auch bei einer Groesse von 8</p></li>
+<li><p>schicke Terminal-Emulator Schriften</p></li>
+</ul>
+</div>
+<div class="section" id="hauptkonfiguration-konfiguration">
+<h2><span class="section-number">1.112.2. </span>Hauptkonfiguration Konfiguration<a class="headerlink" href="#hauptkonfiguration-konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="installierte-schriftarten">
+<h3><span class="section-number">1.112.2.1. </span>Installierte Schriftarten<a class="headerlink" href="#installierte-schriftarten" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="basic-fonts">
+<h4><span class="section-number">1.112.2.1.1. </span>Basic Fonts<a class="headerlink" href="#basic-fonts" title="Link zu dieser Überschrift">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-fonts/dejavu&amp;btnI=lucky">x11-fonts/dejavu</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-fonts/bitstream-vera&amp;btnI=lucky">x11-fonts/bitstream-vera</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-fonts/droid-fonts-ttf&amp;btnI=lucky">x11-fonts/droid-fonts-ttf</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-fonts/urwfonts&amp;btnI=lucky">x11-fonts/urwfonts</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-fonts/webfonts&amp;btnI=lucky">x11-fonts/webfonts</a></p></li>
+</ul>
+</div>
+<div class="section" id="windos-fonts">
+<h4><span class="section-number">1.112.2.1.2. </span>Windos Fonts<a class="headerlink" href="#windos-fonts" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Wer moechte kann zusaetzlich noch von einem Windows Rechner seine
+Windows Schriftarten rueberkopieren. Dazu sei hierhin verwiesen:
+<a class="reference external" href="http://www.freebsd.org/doc/handbook/x-fonts.html">http://www.freebsd.org/doc/handbook/x-fonts.html</a></p>
+</div>
+<div class="section" id="terminal-emulator-fonts">
+<h4><span class="section-number">1.112.2.1.3. </span>Terminal Emulator Fonts<a class="headerlink" href="#terminal-emulator-fonts" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Falls jemand die Terminus Schriftart nicht kennt, dass ist ein echtes
+Schmuckstueck und ihr solltet mal probieren diese zu installieren und
+dann im Terminal einzustellen (sehr huebsch!)</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-fonts/terminus-font&amp;btnI=lucky">x11-fonts/terminus-font</a></p></li>
+</ul>
+</div>
+<div class="section" id="fuer-chinesische-zeichendarstellung">
+<h4><span class="section-number">1.112.2.1.4. </span>Fuer chinesische Zeichendarstellung<a class="headerlink" href="#fuer-chinesische-zeichendarstellung" title="Link zu dieser Überschrift">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?q=x11-fonts/wqy&amp;btnI=lucky">x11-fonts/wqy</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=chinese/ttfm&amp;btnI=lucky">chinese/ttfm</a></p></li>
+</ul>
+<p>Fuer den letzteren Port „ttfm“ muessen folgende Schriftarten zur
+Verfuegung stehen: SimSun, SimHei, Tahoma.</p>
+<div class="highlight-BASH notranslate"><div class="highlight"><pre><span></span>root&gt; mkdir /usr/ports/distfiles/msttf
+root&gt; cp tahoma.ttf simhei.ttf simsun.ttf /usr/ports/distfiles/msttf
+root&gt; <span class="nb">cd</span> /usr/local/chinese/ttfm/ <span class="o">&amp;&amp;</span> make install clean
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="xorg-conf">
+<h3><span class="section-number">1.112.2.2. </span>Xorg.conf<a class="headerlink" href="#xorg-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In der Sektion „Monitor“ unter der xorg.conf muss eine Aufloesung von
+96dpi sein</p>
+<div class="highlight-xorg.conf notranslate"><div class="highlight"><pre><span></span>    <span class="nb">DisplaySize</span>    <span class="no">270    203    </span><span class="c"># 1024x768  96dpi</span>
+    <span class="nb">DisplaySize</span>    <span class="no">338    211    </span><span class="c"># 1280x800  96dpi</span>
+    <span class="nb">DisplaySize</span>    <span class="no">338    254    </span><span class="c"># 1280x960  96dpi</span>
+    <span class="nb">DisplaySize</span>    <span class="no">338    270    </span><span class="c"># 1280x1024 96dpi</span>
+    <span class="nb">DisplaySize</span>    <span class="no">370    277    </span><span class="c"># 1400x1050 96dpi</span>
+    <span class="nb">DisplaySize</span>    <span class="no">423    370    </span><span class="c"># 1600x1400 96dpi</span>
+<span class="se">EndSection</span>
+</pre></div>
+</div>
+<p>Das ganze laesst sich wie folgt berechnen</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">(</span><span class="n">pixelsize</span> <span class="o">/</span> <span class="mi">96</span><span class="p">)</span> <span class="o">*</span> <span class="mf">25.4</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">(</span><span class="n">pixelsize</span> <span class="o">/</span> <span class="mi">96</span><span class="p">)</span> <span class="o">*</span> <span class="mf">25.4</span>
+</pre></div>
+</div>
+<p>Beispiel fuer 1280x800</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">(</span> <span class="mi">1280</span> <span class="o">/</span> <span class="mi">96</span> <span class="p">)</span> <span class="o">*</span> <span class="mf">25.4</span> <span class="o">=</span> <span class="mf">338.66</span> <span class="o">~</span> <span class="mi">338</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">(</span>  <span class="mi">800</span> <span class="o">/</span> <span class="mi">96</span> <span class="p">)</span> <span class="o">*</span> <span class="mf">25.4</span> <span class="o">=</span> <span class="mf">211.66</span> <span class="o">~</span> <span class="mi">211</span>
+</pre></div>
+</div>
+<p>Meine Monitor Sektion sieht wie folgt aus:</p>
+<div class="highlight-xorg.conf notranslate"><div class="highlight"><pre><span></span><span class="se">Section</span> <span class="se">&quot;Monitor&quot;</span>
+    <span class="nb">Identifier</span>   <span class="no">&quot;Monitor0&quot;</span>
+    <span class="nb">VendorName</span>   <span class="no">&quot;Monitor Vendor&quot;</span>
+    <span class="nb">ModelName</span>    <span class="no">&quot;Monitor Model&quot;</span>
+    <span class="nb">Option</span>       <span class="no">&quot;DPMS&quot;</span>
+    <span class="nb">DisplaySize</span>   <span class="no">338 211  </span><span class="c"># 1280x800 96 dpi</span>
+    <span class="nb">VertRefresh</span>  <span class="no">60</span>
+<span class="se">EndSection</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fonts-conf">
+<h3><span class="section-number">1.112.2.3. </span>~/.fonts.conf<a class="headerlink" href="#fonts-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Datei wurde fast komplett von
+<a class="reference external" href="http://www.howtoforge.com/sharp_fonts_gnome">http://www.howtoforge.com/sharp_fonts_gnome</a> uebernommen, mit Anpassung
+fuer Chinesische Font Substitution und einer Fehlerkorrektur.</p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE fontconfig SYSTEM &quot;fonts.dtd&quot;&gt;</span>
+<span class="nt">&lt;fontconfig&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     .fonts.conf</span>
+<span class="c">     release 6.3.23</span>
+<span class="c">     ================================</span>
+<span class="c">     LCD optimized 96 dpi</span>
+<span class="c">     &quot;Sharp&#39;N&#39;Clear&quot; font settings</span>
+<span class="c">     with emphasis on &#39;msttcorefonts&#39;</span>
+
+<span class="c">     tested on Ubuntu GNU/Linux 5.10</span>
+<span class="c">     ================================</span>
+<span class="c">     by Obi Bok</span>
+<span class="c">     Gmail: obibok</span>
+<span class="c">     http://linuxtuneup.blogspot.com</span>
+<span class="c">     ================================</span>
+<span class="c">     Why was this conceived?</span>
+
+<span class="c">     - some font families look better hinted by Byte Code Interpreter (BCI)</span>
+<span class="c">       while other fonts look better hinted by Auto-Hinter</span>
+<span class="c">     - hinting type affects italic and bold fonts differently</span>
+<span class="c">     - antialiasing needs to be adjusted according to font families and sizes</span>
+
+<span class="c">     Essentially, there is no one single rule that works for all fonts.</span>
+
+<span class="c">     NOTE:</span>
+<span class="c">     - Verdana @ 8pt doesn&#39;t render &#39;2&#39; and &#39;6&#39; right</span>
+<span class="c">     - Arial shows &#39;Z&#39; distorted in Firefox 1.5</span>
+<span class="c">--&gt;</span>
+
+
+
+
+
+
+<span class="c">&lt;!--</span>
+<span class="c">#####################################################################################################</span>
+
+<span class="c">     Section 1</span>
+
+<span class="c">#####################################################################################################</span>
+<span class="c">--&gt;</span>
+
+
+<span class="c">&lt;!--</span>
+<span class="c">     Make font sizes match the dpi set in Xorg.</span>
+
+<span class="c">     Increase or decrease this value if fonts are too small or too large</span>
+<span class="c">     for your screen resolution.</span>
+
+<span class="c">     FIXME: this only affects QT-based apps?</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;dpi&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>96<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     Enable anti-aliasing.</span>
+
+<span class="c">     This only works for outline and scalable fonts.</span>
+<span class="c">     Bitmap and PostScript fonts do not get anti-aliased.</span>
+
+<span class="c">     FIXME: is this correct? (it was wrong! you have to set it to &quot;false&quot;)</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     Set sub-pixel order if not detected.</span>
+
+<span class="c">     &quot;X knows the sub pixel order already, and if this is enabled as well,</span>
+<span class="c">     Freetype produces some very strange results. However, if you do still</span>
+<span class="c">     have problems, consider (...) &#39;rgb&#39; (the standard for LCD monitors),</span>
+<span class="c">     &#39;bgr&#39; (unusual), &#39;vrgb&#39; (vertical rgb, if you have a monitor that</span>
+<span class="c">     has been rotated by 90 degrees[1]), &#39;vgbr&#39; (as vrgb, but very rare).&quot;</span>
+<span class="c">     &lt;http://www.linuxquestions.org/linux/answers/Hardware/\</span>
+<span class="c">     LCD_TFT_Monitor_Configuration_in_X_Org&gt;</span>
+
+<span class="c">     Find out your LCD&#39;s sub-pixel order:</span>
+<span class="c">     &lt;http://grc.com/image/cleartype2c.gif&gt;</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;all&quot;</span> <span class="na">name=</span><span class="s">&quot;rgba&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>unknown<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;rgba&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>rgb<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+
+
+<span class="c">&lt;!--</span>
+<span class="c">#####################################################################################################</span>
+
+<span class="c">     Section 2 - Anti-Aliasing Fine Tuning</span>
+
+<span class="c">#####################################################################################################</span>
+<span class="c">--&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     Sub-pixel hinting via BCI enabled by default if compiled in.</span>
+
+<span class="c">     &quot;Whole-pixel anti-aliasing does not represent a useful solution for</span>
+<span class="c">     improving small point-size type. (...) By &#39;borrowing&#39; sub-pixels from</span>
+<span class="c">     adjacent whole pixels, we can fine-tune the placement and width of typeface</span>
+<span class="c">     features with three times more horizontal accuracy then ever before!&quot;</span>
+<span class="c">     &lt;http://grc.com/ctwhat.htm&gt;</span>
+<span class="c">--&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     Disable anti-aliasing for select fonts based on size and style.</span>
+
+<span class="c">     | font                  | WinXP | Linux |</span>
+<span class="c">     =========================================</span>
+<span class="c">     Andale Mono IPA            14      13</span>
+<span class="c">     Arial                      12      13</span>
+<span class="c">     Arial Black                12      -</span>
+<span class="c">     Arial Narrow               14      13</span>
+<span class="c">     Berling Antiqua            12      13</span>
+<span class="c">     Book Antiqua               12      13</span>
+<span class="c">     Bookdings                  0       ?</span>
+<span class="c">     Bookman Old Style          22      13</span>
+<span class="c">     Century Gothic             16      16</span>
+<span class="c">     Comic Sans MS              11      9/11</span>
+<span class="c">     Courier New                26      22</span>
+<span class="c">     Franklin Gothic Medium     12      10/12</span>
+<span class="c">     Frutiger Linotype          12      10/12</span>
+<span class="c">     Garamond                   18      13/19</span>
+<span class="c">     Georgia                    12      12/13</span>
+<span class="c">     Impact                     16      0</span>
+<span class="c">     Kartika                    12      16</span>
+<span class="c">     Lucida Console             12      13</span>
+<span class="c">     Lucida Sans Typewriter     12      12</span>
+<span class="c">     Lucida Sans Unicode        12      10/13</span>
+<span class="c">     Marlett                    ?       ?</span>
+<span class="c">     Microsoft Sans Serif       12      12/13</span>
+<span class="c">     Palatino Linotype          12      13</span>
+<span class="c">     SylfaenARM                 -       13</span>
+<span class="c">     Symbol                     12      ?</span>
+<span class="c">     Tahoma                     12      12/13</span>
+<span class="c">     Times New Roman            12      13</span>
+<span class="c">     Trebuchet MS               12      12</span>
+<span class="c">     Verdana                    12      12</span>
+<span class="c">     Vrinda                     12      17</span>
+<span class="c">     Webdings                   20      ?</span>
+<span class="c">     Wingdings                  20      ?</span>
+<span class="c">     =========================================</span>
+
+<span class="c">     &quot;The relationship of pixels to points depends on the number of pixels</span>
+<span class="c">     per inch, which is typically some &#39;standard&#39; value corresponding to</span>
+<span class="c">     default screen fonts. For example, MS Windows has two standard sets of</span>
+<span class="c">     screen fonts initially designed for IBM display systems: &#39;small&#39; (VGA)</span>
+<span class="c">     and &#39;large&#39; (8514/A). &#39;Small&#39; fonts are 96 pixels per inch, &#39;large&#39; are</span>
+<span class="c">     120. Macintosh systems render type at a nominal 72 pixels per inch, i.e.</span>
+<span class="c">     one pixel = one point. Some display systems using scalable screen fonts</span>
+<span class="c">     allow fine tuning of pixels per inch to suit user preferences.&quot;</span>
+<span class="c">     &lt;http://www.hpaa.com/css1/pxnpts.asp&gt;</span>
+
+<span class="c">     X pt * 96 dpi / 72 dpi = Y px</span>
+<span class="c">--&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #1: normal roman anti-aliased above 10pt/13.4px</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Franklin Gothic Medium<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Frutiger Linotype<span class="nt">&lt;/string&gt;</span>
+  <span class="c">&lt;!-- Lucida Sans Unicode has no italic and uses artificial oblique --&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Lucida Sans Unicode<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>13.4<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #2: normal roman anti-aliased above 11pt/14.7px</span>
+
+<span class="c">     Must use 15px instead of 14.7px for this to work in QT-based apps</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Comic Sans MS has no italic and uses artificial oblique --&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Comic Sans MS<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>15<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #3: normal roman anti-aliased above 12pt/16px</span>
+
+<span class="c">     Must use at least 16.1px instead of 16px for this to work in Firefox</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Lucida Sans<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Lucida Sans Typewriter<span class="nt">&lt;/string&gt;</span>
+  <span class="c">&lt;!-- Microsoft Sans Serif has no italic and uses artificial oblique --&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Microsoft Sans Serif<span class="nt">&lt;/string&gt;</span>
+  <span class="c">&lt;!-- Tahoma has no italic and uses artificial oblique --&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Tahoma<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Trebuchet MS<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Verdana<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>16.1<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #4: normal roman anti-aliased above 13pt/17.4px</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial Narrow<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Berling Antiqua<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Book Antiqua<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Bookman Old Style<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Garamond<span class="nt">&lt;/string&gt;</span>
+  <span class="c">&lt;!-- Lucida Console has no italic and uses artificial oblique --&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Lucida Console<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Palatino Linotype<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>SylfaenARM<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Times New Roman<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>17.4<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #5: normal roman anti-aliased above 16pt/21.4px</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Century Gothic<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Kartika<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>21.4<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #6: normal roman anti-aliased above 17pt/23px</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Vrinda<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>23<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #7: normal roman anti-aliased above 22pt/29.4px</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>29.4<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #8: bold roman anti-aliased above 9pt/12px</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>12<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;more&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #9: bold roman anti-aliased above 10pt/13.4px</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Tahoma<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Verdana<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>13.4<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;more&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #10: bold roman anti-aliased above 12pt/16px</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>16<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;more&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Franklin Gothic Medium<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;size&quot;</span> <span class="na">compare=</span><span class="s">&quot;less&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>9<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>false<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+
+
+<span class="c">&lt;!--</span>
+<span class="c">#####################################################################################################</span>
+
+<span class="c">     Section 3 - Hinting Fine Tuning</span>
+
+<span class="c">#####################################################################################################</span>
+<span class="c">--&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     Enable FreeType Auto-Hinter for select fonts.</span>
+
+<span class="c">     Auto-Hinter is disabled by default if Bytecode Interpreter was compiled in.</span>
+<span class="c">     Some Linux &quot;native&quot; fonts look better hinted by Auto-Hinter,</span>
+<span class="c">     usually in sizes 11pt-13pt; others look better hinted by BCI.</span>
+<span class="c">--&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     Set Auto-Hinter to full hinting style.</span>
+
+<span class="c">     &#39;slight&#39; and &#39;medium&#39; hinting often produce pixel discoloration.</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;hintstyle&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>hintfull<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #11: hinted via Auto-Hinter</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Bitstream Charter<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier 10 Pitch<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>DejaVu Sans Condensed<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>DejaVu Serif Condensed<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>FreeMono<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>FreeSans<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>FreeSerif<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Luxi Mono<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Luxi Sans<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Luxi Serif<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>MgOpen Canonica<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>MgOpen Cosmetica<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>MgOpen Modata<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>MgOpen Moderna<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>URW Bookman L<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>URW Chancery L<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>URW Gothic L<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>URW Palladio L<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;autohint&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #12: normal italic hinted via Auto-Hinter at 9-10pt</span>
+
+<span class="c">     Arial hinted via BCI at 9pt has distorted &#39;y&#39;, at 10pt - &#39;2&#39;</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;more_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>12<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>13.4<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;not_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;autohint&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #13: normal italic hinted via Auto-Hinter at 12pt</span>
+
+<span class="c">     This fixes distorted &#39;K&#39;</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Book Antiqua<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>16<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;not_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;autohint&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #14: normal italic hinted via Auto-Hinter at all sizes</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- 10, 11, 12 --&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Frutiger Linotype<span class="nt">&lt;/string&gt;</span>
+  <span class="c">&lt;!--  8-9: &#39;z&#39;, &#39;2&#39;; 10-15, 17, 19: &#39;z&#39; --&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Times New Roman<span class="nt">&lt;/string&gt;</span>
+  <span class="c">&lt;!-- 9-10: &#39;N&#39; &#39;Q&#39;; 12: &#39;w&#39;, &#39;C&#39;, &#39;D&#39;, &#39;O&#39;, &#39;Q&#39;, &#39;R&#39;, &#39;2&#39;, &#39;9&#39;, &#39;0&#39; --&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Verdana<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;slant&quot;</span> <span class="na">compare=</span><span class="s">&quot;not_eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>roman<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;autohint&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+
+
+
+
+
+
+<span class="c">&lt;!--</span>
+<span class="c">#####################################################################################################</span>
+
+<span class="c">     Section 4 - Minimum Sizes</span>
+
+<span class="c">#####################################################################################################</span>
+<span class="c">--&gt;</span>
+
+
+<span class="c">&lt;!--</span>
+<span class="c">     As Tahoma 8 will be the standard font, the substituted font (SimSun)</span>
+<span class="c">     will be unreadable in this size, so therefore set sizes always to be bigger</span>
+<span class="c">--&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     original text:</span>
+<span class="c">     设定中文最小字号,使得小字的中文美观</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;string&gt;</span>SimSun<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>NSimSun<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>SimHei<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>AR PL ShanHeiSun Uni<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>AR PL SenKai Uni<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>AR PL New Sung<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>FZSongTi<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>FZMingTiB<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>FangSong_GB2312<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string&gt;</span>KaiTi_GB2312<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;/test&gt;</span>
+  <span class="nt">&lt;test</span> <span class="na">compare=</span><span class="s">&quot;more_eq&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;int&gt;</span>8<span class="nt">&lt;/int&gt;</span>
+  <span class="nt">&lt;/test&gt;</span>
+  <span class="nt">&lt;test</span> <span class="na">compare=</span><span class="s">&quot;less_eq&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;int&gt;</span>12<span class="nt">&lt;/int&gt;</span>
+  <span class="nt">&lt;/test&gt;</span>
+  <span class="nt">&lt;edit</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;int&gt;</span>12<span class="nt">&lt;/int&gt;</span>
+  <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+
+<span class="c">&lt;!--</span>
+<span class="c">     Set minimum allowed size to avoid illegible fonts.</span>
+<span class="c">--&gt;</span>
+<span class="c">&lt;!-- 7pt in QT-based apps --&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;size&quot;</span> <span class="na">compare=</span><span class="s">&quot;less&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>7<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;size&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>7<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!-- 9.4px (7pt) in GTK-based apps --&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>9.4<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>9.4<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     TODO: Create rules limiting minimum sizes for these *bold* fonts:</span>
+
+<span class="c">     Andale Mono | Andale Mono IPA</span>
+<span class="c">     Arial</span>
+<span class="c">     Arial Narrow</span>
+<span class="c">     Berling Antiqua</span>
+<span class="c">     Book Antiqua</span>
+<span class="c">     Bookman Old Style</span>
+<span class="c">     Century Gothic</span>
+<span class="c">     Comic Sans MS</span>
+<span class="c">     Courier New</span>
+<span class="c">     Franklin Gothic Medium</span>
+<span class="c">     Frutiger Linotype</span>
+<span class="c">     Garamond</span>
+<span class="c">     Georgia</span>
+<span class="c">     Kartika</span>
+<span class="c">     Lucida Console</span>
+<span class="c">     Lucida Sans Typewriter</span>
+<span class="c">     Lucida Sans Unicode</span>
+<span class="c">     Microsoft Sans Serif</span>
+<span class="c">     Palatino | Palatino Linotype</span>
+<span class="c">     SylfaenARM</span>
+<span class="c">     Tahoma</span>
+<span class="c">     Times New Roman</span>
+<span class="c">     Trebuchet MS</span>
+<span class="c">     Verdana</span>
+<span class="c">     Vrinda</span>
+<span class="c">--&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     font group #15: bold fonts no smaller than 10.7px (8pt)</span>
+
+<span class="c">     FIXME: for Firefox and other GTK-based apps?</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">compare=</span><span class="s">&quot;less&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>10.7<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;weight&quot;</span> <span class="na">compare=</span><span class="s">&quot;more&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;const&gt;</span>medium<span class="nt">&lt;/const&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;pixelsize&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;double&gt;</span>10.7<span class="nt">&lt;/double&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     Anti-alias fonts with &quot;fake&quot; styles.</span>
+
+<span class="c">     FIXME: QT only? GTK? Firefox?</span>
+<span class="c">--&gt;</span>
+<span class="c">&lt;!-- FIXME: dirty_hack(tm) - fontconfig reports syntax errors --&gt;</span>
+<span class="c">&lt;!-- &lt;match target=&quot;font&quot;&gt;</span>
+<span class="c"> &lt;test qual=&quot;any&quot; name=&quot;matrix&quot; compare=&quot;not_eq&quot;&gt;</span>
+<span class="c">  &lt;double&gt;0&lt;/double&gt;</span>
+<span class="c"> &lt;/test&gt;</span>
+<span class="c">--&gt;</span>
+<span class="c">&lt;!-- another approach - no errors but freezes Firefox 1.5 --&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;matrix&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;name&gt;</span>matrix<span class="nt">&lt;/name&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;antialias&quot;</span> <span class="na">mode=</span><span class="s">&quot;assign&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+
+
+<span class="c">&lt;!--</span>
+<span class="c">#####################################################################################################</span>
+
+<span class="c">     Section 5 - Font Substitution</span>
+
+<span class="c">#####################################################################################################</span>
+<span class="c">--&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     Substitute unavailable and/or unwanted fonts.</span>
+
+<span class="c">     Aliases will not work if the actual fonts are installed.</span>
+<span class="c">     Replacing font family works in Firefox (FIXME: and other GTK-based apps?)</span>
+<span class="c">     QT-based apps also need font foundry replaced.</span>
+<span class="c">     Grouping fonts for substitution doesn&#39;t work in Firefox, so we need each</span>
+<span class="c">     font family replaced individually.</span>
+<span class="c">--&gt;</span>
+
+
+<span class="c">&lt;!--</span>
+<span class="c">     sans-serif</span>
+
+<span class="c">     &quot;If the font still has no generic name, add sans-serif&quot;</span>
+<span class="c">     /etc/fonts.conf</span>
+
+<span class="c">     Therefore, we only substitute what we need.</span>
+<span class="c">--&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Bitstream Charter<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Bitstream Vera Sans<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!-- This causes the chrome error of having squares in the sourcecode</span>
+<span class="c">     JS Errors still not fixed</span>
+
+<span class="c">&lt;match target=&quot;pattern&quot;&gt;</span>
+<span class="c"> &lt;test qual=&quot;any&quot; name=&quot;family&quot; compare=&quot;eq&quot;&gt;</span>
+<span class="c">  &lt;string&gt;DejaVu Sans&lt;/string&gt;</span>
+<span class="c"> &lt;/test&gt;</span>
+<span class="c"> &lt;edit name=&quot;family&quot; mode=&quot;prepend&quot; binding=&quot;same&quot;&gt;</span>
+<span class="c">  &lt;string&gt;Arial&lt;/string&gt;</span>
+<span class="c"> &lt;/edit&gt;</span>
+<span class="c">&lt;/match&gt;</span>
+<span class="c">--&gt;</span>
+
+
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>DejaVu Sans Condensed<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>FreeSans<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Helvetica<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Lucida<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- FIXME: may need to use &quot;Lucida Bright&quot; instead --&gt;</span>
+  <span class="nt">&lt;string&gt;</span>LucidaBright<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Lucida Bright<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Luxi Sans<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>MgOpen Cosmetica<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>MgOpen Modata<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>MgOpen Moderna<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>System<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>URW Gothic L<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     FIXME: Verdana renders characters &#39;2&#39; and &#39;6&#39; slightly distorted</span>
+<span class="c">            so it will be substituted with Arial.</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Verdana<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Arial<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+
+
+
+<span class="c">&lt;!--</span>
+<span class="c">     serif</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Bitstream Vera Serif<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>DejaVu Serif<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>DejaVu Serif Condensed<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>FreeSerif<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Luxi Serif<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>MgOpen Canonica<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>New Century Schoolbook<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>New York<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Palatino<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Times<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>URW Bookman L<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>URW Palladio L<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Georgia<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     monospace</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Andale Mono<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Bitstream Vera Sans Mono<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>DejaVu Sans Mono<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Fixedsys<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>FreeMono<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- FIXME: Ubuntu Wiki uses &quot;Lucida Typewriter&quot; instead --&gt;</span>
+  <span class="nt">&lt;string&gt;</span>LucidaTypewriter<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Lucida Typewriter<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Luxi Mono<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Monaco<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Terminal<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Courier New<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     cursive</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Apple Chancery<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Comic Sans MS<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Lucida Handwriting<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Comic Sans MS<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>URW Chancery L<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Comic Sans MS<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Zapf Chancery<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Comic Sans MS<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     fantasy</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Copperplate<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Impact<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Desdemona<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Impact<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Kino<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Impact<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+<span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&quot;pattern&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&quot;any&quot;</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">compare=</span><span class="s">&quot;eq&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Techno<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/test&gt;</span>
+ <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&quot;family&quot;</span> <span class="na">mode=</span><span class="s">&quot;prepend&quot;</span> <span class="na">binding=</span><span class="s">&quot;same&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;string&gt;</span>Impact<span class="nt">&lt;/string&gt;</span>
+ <span class="nt">&lt;/edit&gt;</span>
+<span class="nt">&lt;/match&gt;</span>
+
+
+
+<span class="c">&lt;!--</span>
+<span class="c">#####################################################################################################</span>
+
+<span class="c">     Section 6 - Aliases for Font Names</span>
+
+<span class="c">#####################################################################################################</span>
+<span class="c">--&gt;</span>
+
+<span class="c">&lt;!--</span>
+<span class="c">     Provide required aliases for standard names.</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;alias&gt;</span>
+ <span class="nt">&lt;family&gt;</span>sans-serif<span class="nt">&lt;/family&gt;</span>
+  <span class="nt">&lt;prefer&gt;</span>
+   <span class="nt">&lt;family&gt;</span>Arial<span class="nt">&lt;/family&gt;</span>
+  <span class="nt">&lt;/prefer&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="nt">&lt;alias&gt;</span>
+ <span class="nt">&lt;family&gt;</span>serif<span class="nt">&lt;/family&gt;</span>
+  <span class="nt">&lt;prefer&gt;</span>
+   <span class="nt">&lt;family&gt;</span>Georgia<span class="nt">&lt;/family&gt;</span>
+  <span class="nt">&lt;/prefer&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="nt">&lt;alias&gt;</span>
+ <span class="nt">&lt;family&gt;</span>monospace<span class="nt">&lt;/family&gt;</span>
+  <span class="nt">&lt;prefer&gt;</span>
+   <span class="nt">&lt;family&gt;</span>Courier New<span class="nt">&lt;/family&gt;</span>
+  <span class="nt">&lt;/prefer&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="nt">&lt;alias&gt;</span>
+ <span class="nt">&lt;family&gt;</span>cursive<span class="nt">&lt;/family&gt;</span>
+  <span class="nt">&lt;prefer&gt;</span>
+   <span class="nt">&lt;family&gt;</span>Comic Sans MS<span class="nt">&lt;/family&gt;</span>
+  <span class="nt">&lt;/prefer&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="nt">&lt;alias&gt;</span>
+ <span class="nt">&lt;family&gt;</span>fantasy<span class="nt">&lt;/family&gt;</span>
+  <span class="nt">&lt;prefer&gt;</span>
+   <span class="nt">&lt;family&gt;</span>Impact<span class="nt">&lt;/family&gt;</span>
+  <span class="nt">&lt;/prefer&gt;</span>
+<span class="nt">&lt;/alias&gt;</span>
+
+<span class="nt">&lt;/fontconfig&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="window-manager-spezifisches">
+<h2><span class="section-number">1.112.3. </span>Window Manager spezifisches<a class="headerlink" href="#window-manager-spezifisches" title="Link zu dieser Überschrift">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 13%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Window Manager</p></th>
+<th class="head"><p>getested</p></th>
+<th class="head"><p>zusaetzliche Einstellungen erforderlich</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Gnome</p></td>
+<td><p>Ja</p></td>
+<td><p>Ja</p></td>
+</tr>
+<tr class="row-odd"><td><p>KDE</p></td>
+<td><p>Nein</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>XFCE</p></td>
+<td><p>Nein</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Fluxbox</p></td>
+<td><p>Nein</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="gnome">
+<h3><span class="section-number">1.112.3.1. </span>Gnome<a class="headerlink" href="#gnome" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Im Menu</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">System</span> <span class="o">-&gt;</span> <span class="n">Preferences</span> <span class="o">-&gt;</span> <span class="n">Appearance</span>
+</pre></div>
+</div>
+<p>Dan zu Fonts wechseln</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">Fonts</span><span class="o">**</span>
+<span class="n">Application</span> <span class="n">Font</span>
+<span class="n">Document</span> <span class="n">Font</span>
+<span class="n">Desktop</span> <span class="n">Font</span>
+<span class="n">Windows</span> <span class="n">Title</span> <span class="n">Font</span>
+<span class="n">Fixed</span> <span class="n">width</span> <span class="n">Font</span>
+
+<span class="o">**</span><span class="n">Rendering</span><span class="o">**</span>
+<span class="p">[</span> <span class="p">]</span> <span class="n">Monochrome</span>        <span class="p">[</span> <span class="p">]</span> <span class="n">Best</span> <span class="n">Shaped</span>
+<span class="p">[</span> <span class="p">]</span> <span class="n">Best</span> <span class="n">Contrast</span>     <span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="n">Subpixel</span> <span class="n">Smoothing</span> <span class="p">(</span><span class="n">LCD</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Danach zu <strong>Details</strong> wechseln</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">Font</span> <span class="n">Rendering</span> <span class="n">Details</span><span class="o">**</span>
+
+<span class="n">Resolution</span><span class="p">:</span> <span class="p">[</span><span class="mi">96</span><span class="p">]</span> <span class="n">dots</span> <span class="n">per</span> <span class="n">inch</span>
+
+<span class="o">**</span><span class="n">Smoothing</span><span class="o">**</span>
+<span class="p">[</span> <span class="p">]</span> <span class="kc">None</span>              <span class="p">[</span> <span class="p">]</span> <span class="n">Grayscale</span>
+<span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="n">Subpixel</span> <span class="p">(</span><span class="n">LCD</span><span class="p">)</span>
+
+<span class="o">**</span><span class="n">Hinting</span><span class="o">**</span>
+<span class="p">[</span> <span class="p">]</span> <span class="kc">None</span>              <span class="p">[</span> <span class="p">]</span> <span class="n">Slight</span>
+<span class="p">[</span> <span class="p">]</span> <span class="n">Medium</span>            <span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="n">Full</span>
+
+<span class="o">**</span><span class="n">Subpixel</span> <span class="n">Order</span><span class="o">**</span>
+<span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">RGB</span>               <span class="p">(</span> <span class="p">)</span> <span class="n">BGR</span>
+<span class="p">(</span> <span class="p">)</span> <span class="n">VRGB</span>              <span class="p">(</span> <span class="p">)</span> <span class="n">VBGR</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="probleme">
+<h2><span class="section-number">1.112.4. </span>Probleme<a class="headerlink" href="#probleme" title="Link zu dieser Überschrift">¶</a></h2>
+<p>&lt;note&gt;Derzeit gibt es ein paar Probleme mit Webseiten&lt;/note&gt;</p>
+<p>FIXME</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 29%" />
+<col style="width: 16%" />
+<col style="width: 39%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Browser</p></th>
+<th class="head"><p>Page</p></th>
+<th class="head"><p>Beschreibung</p></th>
+<th class="head"><p>Ursache</p></th>
+<th class="head"><p>Datum</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Chrome / Firefox</p></td>
+<td><p>www.golem.de</p></td>
+<td><p>Schriften sehr unleserlich</p></td>
+<td><p>font: normal normal 400 14px/20px ‚Droid Serif‘,georgia,serif;</p></td>
+<td><p>02.06.2011</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chromr / Firefox</p></td>
+<td><p><a class="reference external" href="http://www.hsk.org.cn/news/news20101108_c.html">http://www.hsk.org.cn/news/news20101108_c.html</a></p></td>
+<td><p>Schriften sehr unleserlich</p></td>
+<td><p>font-family: „宋体“, „Arial Unicode MS“;</p></td>
+<td><p>2.06.2011</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="screenshots">
+<h2><span class="section-number">1.112.5. </span>Screenshots<a class="headerlink" href="#screenshots" title="Link zu dieser Überschrift">¶</a></h2>
+<p>… Todo</p>
+<div class="section" id="notepad">
+<h3><span class="section-number">1.112.5.1. </span>Notepad<a class="headerlink" href="#notepad" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>FreeBSD Gnome</strong> <a class="reference internal" href="../_images/bsd_notepad.png"><img alt="Screenshot1" src="../_images/bsd_notepad.png" style="width: 180px;" /></a></p>
+<p><strong>Windows</strong> FIXME</p>
+</div>
+<div class="section" id="chrome">
+<h3><span class="section-number">1.112.5.2. </span>Chrome<a class="headerlink" href="#chrome" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>FreeBSD Gnome</strong> <a class="reference internal" href="../_images/bsd_chrome.png"><img alt="Screenshot2" src="../_images/bsd_chrome.png" style="width: 180px;" /></a></p>
+<p><strong>Windows</strong> FIXME</p>
+</div>
+<div class="section" id="firefox">
+<h3><span class="section-number">1.112.5.3. </span>Firefox<a class="headerlink" href="#firefox" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>FreeBSD Gnome</strong> <a class="reference internal" href="../_images/bsd_firefox.png"><img alt="Screenshot3" src="../_images/bsd_firefox.png" style="width: 180px;" /></a></p>
+<p><strong>Windows</strong> FIXME</p>
+</div>
+<div class="section" id="desktop">
+<h3><span class="section-number">1.112.5.4. </span>Desktop<a class="headerlink" href="#desktop" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>FreeBSD Gnome</strong> <a class="reference internal" href="../_images/bsd_desktop.png"><img alt="Screenshot4" src="../_images/bsd_desktop.png" style="width: 180px;" /></a></p>
+<p><strong>Windows</strong> FIXME</p>
+</div>
+<div class="section" id="terminal-mit-terminus">
+<h3><span class="section-number">1.112.5.5. </span>Terminal mit Terminus<a class="headerlink" href="#terminal-mit-terminus" title="Link zu dieser Überschrift">¶</a></h3>
+<p><a class="reference internal" href="../_images/bsd_terminal.png"><img alt="Screenshot5" src="../_images/bsd_terminal.png" style="width: 180px;" /></a></p>
+</div>
+</div>
+<div class="section" id="todo">
+<h2><span class="section-number">1.112.6. </span>Todo<a class="headerlink" href="#todo" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p>Screenshots von Windows und Xorg mit (ein paar Standardapplikationen,
+Firefox, Chrome, etc) um den Vergleich zu sehen und auch evtl.
+Unterschiede</p></li>
+<li><p>Problem-Section</p></li>
+<li><p>Testen auf KDE, XFCE, Fluxbox, evtl weitere</p></li>
+</ul>
+</div>
+<div class="section" id="dokumentation-der-aenderungen">
+<h2><span class="section-number">1.112.7. </span>Dokumentation der Aenderungen<a class="headerlink" href="#dokumentation-der-aenderungen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Damit man auf einen Blick schnell sieht, ob irgendetwas an den
+Konfigurationsdateien geaendert wurde, gibt es diese Sektion hier</p>
+</div>
+<div class="section" id="links">
+<h2><span class="section-number">1.112.8. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.howtoforge.com/sharp_fonts_gnome">Gnome Howto Sharp
+Fonts</a></p></li>
+<li><p><a class="reference external" href="http://hi.baidu.com/linuxcfan/blog/item/f561b48c613f461bb31bbad2.html">http://hi.baidu.com/linuxcfan/blog/item/f561b48c613f461bb31bbad2.html</a></p></li>
+<li><p><a class="reference external" href="http://www.freebsd.org/doc/handbook/x-fonts.html">http://www.freebsd.org/doc/handbook/x-fonts.html</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="schoene_schriften_in_xorg.txt.html" class="btn btn-neutral float-right" title="1.113. Schöne Schriften in Xorg" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="samsung_smt_7020s.txt.html" class="btn btn-neutral float-left" title="1.111. Samsung SMT-7020S" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

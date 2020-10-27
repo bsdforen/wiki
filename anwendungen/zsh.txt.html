@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.42. ZSH &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="3. Hardware" href="../hardware/hardware_index.html" />
+    <link rel="prev" title="2.41. Xspread" href="xspread.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="anwendungen_index.html">2. Anwendungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="anwendungs-liste.txt.html">2.1. Anwendungs-Liste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bmp.txt.html">2.2. BMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bsdadminscripts.txt.html">2.3. BSDAdminScripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csup.txt.html">2.4. csup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distcc.txt.html">2.5. Distcc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.txt.html">2.6. Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enlightenment.txt.html">2.7. Enlightenment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firefox.txt.html">2.8. Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox.txt.html">2.9. Fluxbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gimp.txt.html">2.10. Gimp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gitit.txt.html">2.11. gitit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gkrellm.txt.html">2.12. GKrellM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idesk.txt.html">2.13. IDesk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inkscape.txt.html">2.14. Inkscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irssi.txt.html">2.15. Irssi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b.txt.html">2.16. K3b</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libreoffice.txt.html">2.17. LibreOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.txt.html">2.18. Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd.txt.html">2.19. Music Player Daemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpg123.txt.html">2.20. Mpg123</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mplayer.txt.html">2.21. mplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt.txt.html">2.22. Mutt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice.txt.html">2.23. OpenOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg_cutleaves.txt.html">2.24. pkg_cutleaves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone.txt.html">2.25. Plone 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portmaster.txt.html">2.26. Portmaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portsnap.txt.html">2.27. portsnap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portupgrade.txt.html">2.28. portupgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qemu.txt.html">2.29. Qemu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rxvt-unicode.txt.html">2.30. RXVT-Unicode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen.txt.html">2.31. Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tcsh.txt.html">2.32. TCSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive.txt.html">2.33. TeX Live</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunar.txt.html">2.34. Thunar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunderbird.txt.html">2.35. Thunderbird</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torsmo.txt.html">2.36. Torsmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vim.txt.html">2.37. Vim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4.txt.html">2.38. Xfce4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xine.txt.html">2.39. Xine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xpdf.txt.html">2.40. Xpdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xspread.txt.html">2.41. Xspread</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.42. ZSH</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#minimal-konfiguration">2.42.1. Minimal Konfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#besonderheiten">2.42.2. Besonderheiten</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#prompt">2.42.2.1. Prompt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vervollstandigung">2.42.2.2. Vervollständigung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#globbing">2.42.2.3. Globbing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#links">2.42.3. Links</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="anwendungen_index.html"><span class="section-number">2. </span>Anwendungen</a> &raquo;</li>
+        
+      <li><span class="section-number">2.42. </span>ZSH</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/anwendungen/zsh.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="../hardware/hardware_index.html" class="btn btn-neutral float-right" title="3. Hardware" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="xspread.txt.html" class="btn btn-neutral float-left" title="2.41. Xspread" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="zsh">
+<h1><span class="section-number">2.42. </span>ZSH<a class="headerlink" href="#zsh" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+<img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
+<img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
+<img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
+</div>
+<p>Die Z-Shell ist eine der mächtigsten UNIX Shells überhaupt. Es mag deshalb auf
+den ersten Blick schwierig erscheinen, sie zu verstehen bzw. ihr Potential
+auszuschöpfen, da sie einen mit Features regelrecht erschlägt.</p>
+<div class="section" id="minimal-konfiguration">
+<h2><span class="section-number">2.42.1. </span>Minimal Konfiguration<a class="headerlink" href="#minimal-konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Nachdem die Zsh installiert wurde, kann man in die <strong>~/.zshrc</strong> seine
+Konfiguration eintragen. Ein einfaches und minimalistisches Beispiel
+sieht zum Beispiel so aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11R6/bin&quot;</span>
+<span class="n">export</span> <span class="n">EDITOR</span><span class="o">=</span><span class="n">vim</span>
+<span class="n">export</span> <span class="n">PAGER</span><span class="o">=</span><span class="n">less</span>
+<span class="n">export</span> <span class="n">LC_CTYPE</span><span class="o">=</span><span class="s2">&quot;de_DE.ISO8859-1&quot;</span>
+
+<span class="n">alias</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>
+</pre></div>
+</div>
+<p>Bis jetzt ist noch kein großen Unterschied zu anderen Shells erkennbar,
+deshalb kommen wir nun zu den Dingen, welche die Zsh so besonders
+machen!</p>
+</div>
+<div class="section" id="besonderheiten">
+<h2><span class="section-number">2.42.2. </span>Besonderheiten<a class="headerlink" href="#besonderheiten" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="prompt">
+<h3><span class="section-number">2.42.2.1. </span>Prompt<a class="headerlink" href="#prompt" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Ein Standardprompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PROMPT</span><span class="o">=</span><span class="s2">&quot;%n@%m:[%~]%# &quot;</span>
+<span class="n">foo</span><span class="nd">@bar</span><span class="p">:[</span><span class="o">/</span><span class="n">etc</span><span class="p">]</span><span class="o">%</span>
+</pre></div>
+</div>
+<p>Wenn das Arbeitsverzeichnis länger wird, empfiehlt sich solch ein
+Prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PROMPT</span><span class="o">=</span><span class="s2">&quot;%n@%m:[%(4c.</span><span class="si">%1c</span><span class="s2">.%~)]%# &quot;</span>
+</pre></div>
+</div>
+<p>Dadurch weiß die Zsh, dass, wenn das aktuelle Verzeichnes mehr als 3
+Elemente hat, nur noch der „Basisname“ des Verzeichnisses im Prompt
+angezeigt werden soll.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="nd">@bar</span><span class="p">:[</span><span class="o">~</span><span class="p">]</span><span class="o">%</span> <span class="n">cd</span> <span class="o">/</span><span class="n">etc</span>
+<span class="n">foo</span><span class="nd">@bar</span><span class="p">:[</span><span class="o">/</span><span class="n">etc</span><span class="p">]</span><span class="o">%</span> <span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span>
+<span class="n">foo</span><span class="nd">@bar</span><span class="p">:[</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="p">]</span> <span class="n">cd</span> <span class="n">doc</span>
+<span class="n">foo</span><span class="nd">@bar</span><span class="p">:[</span><span class="n">doc</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Eine Ergänzung zu $PROMPT ist $RPROMPT. $RPROMPT wird ganz rechts am
+Rand des Bildschirms angezeigt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export $RPROMPT=&quot;&quot;%T&quot;
+foo@bar:[~] echo foo                                         13:37
+foo
+foo@bar:[~]                                                  13:38
+</pre></div>
+</div>
+<p>Folgender $RPROMPT zeigt einen traurigen Smiley, falls der letzte Befehl
+fehlschlug:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">RPROMPT</span><span class="o">=</span><span class="s2">&quot;%(0?..:()&quot;</span>
+<span class="n">foo</span><span class="nd">@bar</span><span class="p">:[</span><span class="o">~</span><span class="p">]</span> <span class="n">ls</span> <span class="o">/</span><span class="n">root</span>
+<span class="n">ls</span><span class="p">:</span> <span class="n">root</span><span class="p">:</span> <span class="n">Permission</span> <span class="n">denied</span>
+<span class="n">foo</span><span class="nd">@bar</span><span class="p">:[</span><span class="o">~</span><span class="p">]</span>                                                  <span class="p">:(</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="vervollstandigung">
+<h3><span class="section-number">2.42.2.2. </span>Vervollständigung<a class="headerlink" href="#vervollstandigung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Um bei einem Aufruf von xpdf nur .pdf Dateien angezeit zu bekommen, wird
+<strong>compctl</strong> verwendet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xpdf &lt;TAB&gt;
+foo.txt bar.gif bla.pdf
+$ compctl -g &#39;*.pdf&#39; xpdf
+$ xpdf &lt;TAB&gt;
+$ xpdf bla.pdf
+</pre></div>
+</div>
+<p>Ungemein praktisch ist <em>zstyle</em>, damit wird z.B. bei einem &lt;TAB&gt; nach
+dem Befehl <em>kill</em> die zu eine Liste der Prozesse angezeigt. Dazu muss
+nur folgendes in die .zshrc eingetragen werden (oder auf der
+Befehlszeile eingegeben werden):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">autoload</span> <span class="n">compinit</span>
+<span class="n">compinit</span>
+</pre></div>
+</div>
+<p>Und so sieht das dann aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ zstyle &#39;:completion:*:*:kill:*:jobs&#39; verbose yes
+$ kill&lt;TAB&gt;
+[...]
+18555 p1  Is+     0:01.18 /usr/local/bin/zsh
+21590 C0  I+      0:00.02 xinit /home/foobar/.xinitrc --
+24025 p3  I+      0:00.01 /usr/local/bin/zsh
+32055 p3  Is+     0:00.92 /usr/local/bin/zsh
+[...]
+</pre></div>
+</div>
+</div>
+<div class="section" id="globbing">
+<h3><span class="section-number">2.42.2.3. </span>Globbing<a class="headerlink" href="#globbing" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Globbing generiert Dateinamen (filename generation) aus bestimmten
+Operatoren.</p>
+<p>Das bekannteste Beispiel für Globbing ist wohl der *-Operator:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat *&lt;TAB&gt;
+$ cat foo.txt bar.txt bla.pdf bar.jpeg
+</pre></div>
+</div>
+<p>bzw.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vi *.txt&lt;TAB&gt;
+$ vi foo.txt bar.txt
+</pre></div>
+</div>
+<p>Mit der Zsh ist aber noch viel umfangreicheres und genauers Globbing mit
+Hilfe von sogenannten „Glob Qualifiers“ möglich. Für Globbing muss in
+der .zshrc die Option <em>glob</em> und evtl. auch <em>extendedglob</em> mittels
+<em>setopt</em> aktiviert werden.</p>
+<p>Hier zwei Beispiele:</p>
+<p>* Liste nur Verzeichnisse auf (wobei / für den Verzeichnis Glob
+Qualifier steht):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls *(-/)
+</pre></div>
+</div>
+<p>* Liste alle Dateien, die keine spezielle Dateiendung haben, auf
+(benötigt <em>extendedglob</em>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ printf &#39;%s\n&#39; ^?*.*
+</pre></div>
+</div>
+<p>strcat hat in der Zsh Kategorie seines Blogs noch viel mehr solcher
+Beispiele.</p>
+</div>
+</div>
+<div class="section" id="links">
+<h2><span class="section-number">2.42.3. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.zsh.org/">Zsh Homepage</a></p></li>
+<li><p><a class="reference external" href="http://zshwiki.org/">Zsh-Wiki</a> (Howtos, FAQs und .zshrc’s)</p></li>
+<li><p><a class="reference external" href="http://cssun.rrze.uni-erlangen.de/~sipakale/zshreferat.html">Die Zsh als interaktive
+Shell</a>
+[de]</p></li>
+<li><p><a class="reference external" href="http://www.michael-prokop.at/computer/tools_zsh_liebhaber.html">Die
+Zsh-Liebhaber-Seite</a></p></li>
+<li><p><a class="reference external" href="http://strcat.de/blog/index.php?/categories/9-Zsh">strcat’s Zsh
+Blog</a> (<a class="reference external" href="http://strcat.de/blog/index.php?/feeds/categories/9-Zsh.rss">RSS
+Feed</a>)
+und <a class="reference external" href="http://strcat.de/dotfiles/#zsh">strcat’s Zsh Konfiguration</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../hardware/hardware_index.html" class="btn btn-neutral float-right" title="3. Hardware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="xspread.txt.html" class="btn btn-neutral float-left" title="2.41. Xspread" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

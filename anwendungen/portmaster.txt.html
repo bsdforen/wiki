@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.26. Portmaster &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="2.27. portsnap" href="portsnap.txt.html" />
+    <link rel="prev" title="2.25. Plone 5" href="plone.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="anwendungen_index.html">2. Anwendungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="anwendungs-liste.txt.html">2.1. Anwendungs-Liste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bmp.txt.html">2.2. BMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bsdadminscripts.txt.html">2.3. BSDAdminScripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csup.txt.html">2.4. csup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distcc.txt.html">2.5. Distcc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.txt.html">2.6. Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enlightenment.txt.html">2.7. Enlightenment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firefox.txt.html">2.8. Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox.txt.html">2.9. Fluxbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gimp.txt.html">2.10. Gimp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gitit.txt.html">2.11. gitit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gkrellm.txt.html">2.12. GKrellM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="idesk.txt.html">2.13. IDesk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inkscape.txt.html">2.14. Inkscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irssi.txt.html">2.15. Irssi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b.txt.html">2.16. K3b</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libreoffice.txt.html">2.17. LibreOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.txt.html">2.18. Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd.txt.html">2.19. Music Player Daemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpg123.txt.html">2.20. Mpg123</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mplayer.txt.html">2.21. mplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt.txt.html">2.22. Mutt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice.txt.html">2.23. OpenOffice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg_cutleaves.txt.html">2.24. pkg_cutleaves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone.txt.html">2.25. Plone 5</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.26. Portmaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schnellkurs">2.26.1. Schnellkurs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#alle-installierten-ports-auf-upgrades-prufen-und-ggf-upgrade-durchfuhren">2.26.1.1. Alle installierten Ports auf Upgrades prüfen und ggf. Upgrade durchführen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#einen-bestimmten-port-upgraden-installieren-bzw-erneut-installieren">2.26.1.2. Einen bestimmten Port Upgraden, Installieren bzw. erneut Installieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bei-einem-bestimmten-port-soll-nicht-automatisch-ein-upgrade-durchgefuhrt-werden">2.26.1.3. Bei einem bestimmten Port soll nicht automatisch ein Upgrade durchgeführt werden</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nutzliche-optionen">2.26.2. Nützliche Optionen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#es-sollen-keine-backup-packages-angelegt-werden">2.26.2.1. Es sollen keine Backup-Packages angelegt werden</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#es-sollen-grundsatzlich-packages-angelegt-werden">2.26.2.2. Es sollen grundsätzlich Packages angelegt werden</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problembeseitigung">2.26.3. Problembeseitigung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ubersicht-uber-die-optionen-unvollstandig">2.26.4. Übersicht über die Optionen (unvollständig!)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#siehe-auch">2.26.5. Siehe auch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="portsnap.txt.html">2.27. portsnap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="portupgrade.txt.html">2.28. portupgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qemu.txt.html">2.29. Qemu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rxvt-unicode.txt.html">2.30. RXVT-Unicode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen.txt.html">2.31. Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tcsh.txt.html">2.32. TCSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive.txt.html">2.33. TeX Live</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunar.txt.html">2.34. Thunar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thunderbird.txt.html">2.35. Thunderbird</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torsmo.txt.html">2.36. Torsmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vim.txt.html">2.37. Vim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4.txt.html">2.38. Xfce4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xine.txt.html">2.39. Xine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xpdf.txt.html">2.40. Xpdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xspread.txt.html">2.41. Xspread</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zsh.txt.html">2.42. ZSH</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="anwendungen_index.html"><span class="section-number">2. </span>Anwendungen</a> &raquo;</li>
+        
+      <li><span class="section-number">2.26. </span>Portmaster</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/anwendungen/portmaster.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="portsnap.txt.html" class="btn btn-neutral float-right" title="2.27. portsnap" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="plone.txt.html" class="btn btn-neutral float-left" title="2.25. Plone 5" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="portmaster">
+<h1><span class="section-number">2.26. </span>Portmaster<a class="headerlink" href="#portmaster" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+</div>
+<p>Neben dem bereits etablierten <a class="reference external" href="/anwendungen/portupgrade">portupgrade</a> gibt
+es auch Alternativen zum (halb-)automatischen Update der über den Portstree
+installierten Anwendungen und Bibliotheken.</p>
+<p>Bei
+<a class="reference external" href="https://www.google.com/search?q=ports-mgmt/portmaster&amp;btnI=lucky">Portmaster</a>
+handelt es sich um ein Leichtgewicht in jeder Hinsicht:</p>
+<ul class="simple">
+<li><p>es benötigt keine zusätzliche Programmiersprache, da es ein
+Shell-Script ist.</p></li>
+<li><p>es benötigt keine zusätzliche Datenbank, da es die vorhandenen
+Ports-Tree Strukturen nutzt.</p></li>
+</ul>
+<p>Portmaster bietet gegenüber portupgrade noch gravierende Vorteile:</p>
+<ul class="simple">
+<li><p>Zeitersparnis, da die Datenbank-Maintenance entfällt. Dies macht sich
+vorallem auf Systemen mit einer Vielzahl von installierten Ports
+bemerkbar.</p></li>
+<li><p>Vorgänge, die Benutzerinteraktionen mit sich bringen (z.B. make
+config), werden im Vorfeld abgearbeitet, sodaß der eigentliche
+Update/Upgrade-Prozess ohne weiteren Benutzereingriff erfolgt. Auch
+dies macht sich vorallem bei vielen Ports bemerkbar. Der Benutzer
+braucht nicht während des Prozesses vor dem Bildschirm sitzen, um auf
+weitere Interaktionen zu warten.</p></li>
+<li><p>Informationstexte (pkg-messages) werden nach Abschluß aller Upgrades
+angezeigt.</p></li>
+<li><p>Ebenfalls zum Schluß wird ab Version 2.0 eine Liste der erfolgreich
+bearbeiteten Ports aufgelistet.</p></li>
+</ul>
+<p>Nachteile sind:</p>
+<ul class="simple">
+<li><p>Portmaster ist nicht fehlertolerant. Der Upgrade/Update-Vorgang wird
+bei einem Fehler während des „Port-Baus“ unterbrochen und muß nach
+der Fehlerbeseitigung erneut gestartet werden.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>portmaster und portupgrade sollten nicht parallel installiert und benutzt
+werden. Es kann zu Inkonsistenzen in der portupgrade-Datenbank führen.</p>
+</div>
+<div class="section" id="schnellkurs">
+<h2><span class="section-number">2.26.1. </span>Schnellkurs<a class="headerlink" href="#schnellkurs" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="alle-installierten-ports-auf-upgrades-prufen-und-ggf-upgrade-durchfuhren">
+<h3><span class="section-number">2.26.1.1. </span>Alle installierten Ports auf Upgrades prüfen und ggf. Upgrade durchführen<a class="headerlink" href="#alle-installierten-ports-auf-upgrades-prufen-und-ggf-upgrade-durchfuhren" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># portmaster -a</span>
+</pre></div>
+</div>
+<p>Mit der Option <strong>-u</strong> (unattended mode) kann dieser Vorgang noch weiter
+automatisiert werden. Es findet keine Interaktion mehr mit dem Benutzer
+statt, da Default-Werte bei ggf. auftretenden Rückfragen vom System
+angenommen werden. Diese Option kann unter Umständen zu
+unvorhergesehenen Ergebnissen führen. Sollte dies der Fall sein, sollte
+Portmaster erneut ohne diese Option ausgeführt werden. Ein Mittelweg
+wäre die Option <strong>-d</strong> (always clean distfiles) um wenigstens nicht nach
+der Deinstallation von alten Paketen gefragt zu werden und Portmaster
+diese einfach zu deinstallieren.</p>
+</div>
+<div class="section" id="einen-bestimmten-port-upgraden-installieren-bzw-erneut-installieren">
+<h3><span class="section-number">2.26.1.2. </span>Einen bestimmten Port Upgraden, Installieren bzw. erneut Installieren<a class="headerlink" href="#einen-bestimmten-port-upgraden-installieren-bzw-erneut-installieren" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># portmaster &lt;Kategorie/Name des Ports&gt;</span>
+</pre></div>
+</div>
+<p>Beispiel: # portmaster sysutils/py-iocage</p>
+</div>
+<div class="section" id="bei-einem-bestimmten-port-soll-nicht-automatisch-ein-upgrade-durchgefuhrt-werden">
+<h3><span class="section-number">2.26.1.3. </span>Bei einem bestimmten Port soll nicht automatisch ein Upgrade durchgeführt werden<a class="headerlink" href="#bei-einem-bestimmten-port-soll-nicht-automatisch-ein-upgrade-durchgefuhrt-werden" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Hierzu wird im Pfad <strong>/var/db/pkg/&lt;Name des Ports&gt;/</strong> wird die Datei
++IGNOREME angelegt. Dies kann eine „leere“ Datei sein.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># echo &gt; /var/db/pkg/de-openoffice.org-2.2.0/+IGNOREME</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="nutzliche-optionen">
+<h2><span class="section-number">2.26.2. </span>Nützliche Optionen<a class="headerlink" href="#nutzliche-optionen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="es-sollen-keine-backup-packages-angelegt-werden">
+<h3><span class="section-number">2.26.2.1. </span>Es sollen keine Backup-Packages angelegt werden<a class="headerlink" href="#es-sollen-keine-backup-packages-angelegt-werden" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Portmaster erstellt in der Grundeinstellung automatisch Packages vom
+bereits installierten Port. Dies hat den Vorteil, daß die aktuelle
+Version des Ports wieder durch die Vorgängerversion ersetzt werden kann,
+sofern es mit der neuen/aktuellen Version Probleme gibt. Mit der Option
+<strong>-B</strong> kann die Erstellung solch eines Backup-Packages unterbunden
+werden.</p>
+</div>
+<div class="section" id="es-sollen-grundsatzlich-packages-angelegt-werden">
+<h3><span class="section-number">2.26.2.2. </span>Es sollen grundsätzlich Packages angelegt werden<a class="headerlink" href="#es-sollen-grundsatzlich-packages-angelegt-werden" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Portmaster kann mit der Option <strong>-g</strong> angewiesen werden, beim
+planmäßigen Update der Ports auch zusätzlich ein Package anzulegen. Dies
+ist besonders in einem lokalen Netz sinnvoll, bei dem auf mehreren (und
+i.d.R. langsameren) Maschinen FreeBSD-Ports installiert werden. Leider
+fehlt Portmaster zur Zeit noch die Option, um bspw. auf diesen Maschinen
+vorrangig Packages zu installieren (Stand 04/2008).</p>
+</div>
+</div>
+<div class="section" id="problembeseitigung">
+<h2><span class="section-number">2.26.3. </span>Problembeseitigung<a class="headerlink" href="#problembeseitigung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Es kann vorkommen, das die im /var/db/pkg-Tree eingetragenen
+Abhängigkeiten nicht mehr stimmen. Hierzu kann man &lt;xterm&gt; # portmaster
+–check-depends &lt;/xterm&gt; starten. Fehlende oder fehlerhafte
+Abhängigkeiten werden angezeigt und können jeweils durch Bestätigung
+entfernt werden. Diese Option sollte auch bei einem Wechsel von
+portupgrade zu portmaster einmal durchgeführt werden.</p>
+</div>
+<div class="section" id="ubersicht-uber-die-optionen-unvollstandig">
+<h2><span class="section-number">2.26.4. </span>Übersicht über die Optionen (unvollständig!)<a class="headerlink" href="#ubersicht-uber-die-optionen-unvollstandig" title="Link zu dieser Überschrift">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 98%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>-a</p></td>
+<td><p>Es werden alle installierten Ports überprüft und wenn notwendig, auf den neusten Stand gebracht</p></td>
+</tr>
+<tr class="row-even"><td><p>-B</p></td>
+<td><p>Es werden keine Backup-Packages erstellt</p></td>
+</tr>
+<tr class="row-odd"><td><p>-d</p></td>
+<td><p>Always clean distfiles - Nicht mehr benötigte (meist veraltete) Distfiles werden automatisch gelöscht</p></td>
+</tr>
+<tr class="row-even"><td><p>-g</p></td>
+<td><p>Es werden zusätzlich aktuelle Packages gebaut</p></td>
+</tr>
+<tr class="row-odd"><td><p>-i</p></td>
+<td><p>Interaktiver Programmablauf - Vor Aktionen kann der Benutzer entscheiden</p></td>
+</tr>
+<tr class="row-even"><td><p>-u</p></td>
+<td><p>Unattended Mode - Bei Benutzerinteraktionen werden automatisch Default-Werte angenommen</p></td>
+</tr>
+<tr class="row-odd"><td><p>-v</p></td>
+<td><p>weitere Ausgaben beim Programmablauf</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="siehe-auch">
+<h2><span class="section-number">2.26.5. </span>Siehe auch<a class="headerlink" href="#siehe-auch" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://dougbarton.us/portmaster.html">Portmaster Homepage</a></p></li>
+<li><p><a class="reference external" href="/howto/paketsysteme">Paketsysteme</a></p></li>
+<li><p><a class="reference external" href="/ports/entwicklung_und_wartung">Ports - Entwicklung und Wartung</a></p></li>
+<li><p><a class="reference external" href="/howto/paketedeinstallieren">Pakete deinstallieren</a></p></li>
+<li><p><a class="reference external" href="/anwendungen/portsnap">Portstree aktualisieren</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="portsnap.txt.html" class="btn btn-neutral float-right" title="2.27. portsnap" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="plone.txt.html" class="btn btn-neutral float-left" title="2.25. Plone 5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

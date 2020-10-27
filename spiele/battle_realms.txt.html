@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.2. Battle Realms &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="4.3. Diablo II" href="diablo_ii.txt.html" />
+    <link rel="prev" title="4.1. Computerspiele unter FreeBSD" href="computerspiele_unter_freebsd.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto_index.html">1. Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="spiele_index.html">4. Spiele</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="computerspiele_unter_freebsd.txt.html">4.1. Computerspiele unter FreeBSD</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. Battle Realms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">4.2.1. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration">4.2.2. Konfiguration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#graphics">4.2.2.1. Graphics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#audio">4.2.2.2. Audio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#probleme">4.2.2.3. Probleme</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wrapper">4.2.3. Wrapper</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="diablo_ii.txt.html">4.3. Diablo II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="starcraft.txt.html">4.4. Starcraft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal.txt.html">4.5. Unreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal_tournament_2004_-_to-crossfire.txt.html">4.6. Unreal Tournament 2004 - TO:Crossfire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unreal_tournament_2004.txt.html">4.7. Unreal Tournament 2004</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="spiele_index.html"><span class="section-number">4. </span>Spiele</a> &raquo;</li>
+        
+      <li><span class="section-number">4.2. </span>Battle Realms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/spiele/battle_realms.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="diablo_ii.txt.html" class="btn btn-neutral float-right" title="4.3. Diablo II" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="computerspiele_unter_freebsd.txt.html" class="btn btn-neutral float-left" title="4.1. Computerspiele unter FreeBSD" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="battle-realms">
+<h1><span class="section-number">4.2. </span>Battle Realms<a class="headerlink" href="#battle-realms" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd4.png" src="../_images/logo-freebsd4.png" />
+</div>
+<p>Hier wird eine Empfehlung dafür gegeben wie man Battle Realms mit Hilfe von
+wine betreibt.</p>
+<div class="section" id="installation">
+<h2><span class="section-number">4.2.1. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Installation muss leider unter Windows erfolgen, da sie mit wine
+nicht durchführbar ist. Meine Spiele liegen auf einer Fat32 Partition
+die in <strong>/mnt/shared</strong> gemountet ist. Der Einfachheit halber werde ich
+bei Beispielen meine Verzeichnisstruktur nutzen.</p>
+<p>Alles was man jetzt noch tun muss ist die gewünschte Auflösung
+einzustellen. Das kann man in der Datei <strong>/mnt/shared/games/rts/Battle
+Realms/Battle_Realms.ini</strong> tun.</p>
+</div>
+<div class="section" id="konfiguration">
+<h2><span class="section-number">4.2.2. </span>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ab hier geht man wie in dem Artikel <a class="reference external" href="/howto/Wine">Wine</a> beschrieben
+vor. Ich liste hier lediglich die Einstellungen die für mich persönlich
+am besten funktionieren.</p>
+<div class="section" id="graphics">
+<h3><span class="section-number">4.2.2.1. </span>Graphics<a class="headerlink" href="#graphics" title="Link zu dieser Überschrift">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 3%" />
+<col style="width: 97%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>X</p></th>
+<th class="head"><p>Allow DirectX apps to stop the mouse leaving their window</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>X</p></td>
+<td><p>Enable desktop double buffering</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>_</p></td>
+<td><p>Allow the window manager to control the windows</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>_</p></td>
+<td><p>Emulate a virtual desktop</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="audio">
+<h3><span class="section-number">4.2.2.2. </span>Audio<a class="headerlink" href="#audio" title="Link zu dieser Überschrift">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Hardware Acceleration</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Full</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>_</p></td>
+<td><p>Driver Emulation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="probleme">
+<h3><span class="section-number">4.2.2.3. </span>Probleme<a class="headerlink" href="#probleme" title="Link zu dieser Überschrift">¶</a></h3>
+<ul class="simple">
+<li><p>Das Spiel erkennt seine CDs nicht, egal ob es eine CD im Laufwerk
+oder ein ISO image ist. Man muss sich also einen NOCD-Crack besorgen.</p></li>
+<li><p>Das Spiel erkennt kein Netz.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="wrapper">
+<h2><span class="section-number">4.2.3. </span>Wrapper<a class="headerlink" href="#wrapper" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um das Spiel komfortabler zu starten habe ich mir in <strong>~/bin</strong> ein
+Skript angelegt. Das Skript setzt das Skript im <a class="reference external" href="/howto/Wine">Wine</a>
+Artikel voraus.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
+
+<span class="n">wine_log</span><span class="o">=</span><span class="s2">&quot;/dev/null&quot;</span>
+<span class="n">mount_images</span><span class="o">=</span><span class="s2">&quot;/mnt/msdos/vault/images/battle realms.iso</span>
+<span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">msdos</span><span class="o">/</span><span class="n">vault</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">winter</span> <span class="n">of</span> <span class="n">the</span> <span class="n">wolf</span><span class="o">.</span><span class="n">iso</span><span class="s2">&quot;</span>
+<span class="n">run_binary</span><span class="o">=</span><span class="s2">&quot;Battle_Realms_F.exe&quot;</span>
+<span class="n">run_folder</span><span class="o">=</span><span class="s2">&quot;/mnt/msdos/software/games/rts/Battle Realms&quot;</span>
+
+<span class="o">.</span> <span class="n">winexec</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="diablo_ii.txt.html" class="btn btn-neutral float-right" title="4.3. Diablo II" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="computerspiele_unter_freebsd.txt.html" class="btn btn-neutral float-left" title="4.1. Computerspiele unter FreeBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

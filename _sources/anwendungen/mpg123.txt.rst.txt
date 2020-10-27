@@ -1,0 +1,55 @@
+Mpg123
+======
+
+.. |date| date::
+
+.. sidebar:: Info
+
+  .. image:: ../images/logo-freebsd.png
+  .. image:: ../images/logo-openbsd.png
+  .. image:: ../images/logo-netbsd.png
+  .. image:: ../images/logo-dragonflybsd.png
+
+
+mpg123 ist ein MPEG-1/2/3 Abspielprogramm für die Konsole |mpg123 beim
+Abspielen mehrerer mp3-Dateien| 
+
+Features
+--------
+
+-  Abspielen mehrerer Dateien hintereinander
+-  Abspielen von URLs
+-  Abspielen von der Standardeingabe
+-  Aufnahme von Wave-Dateien
+
+Konfiguration
+-------------
+
+Startparameter:
+
+*-c* - Aktiviert die Steuerung über die Tastatur während der Wiedergabe
+
+*-w <Dateiname>* - Wandelt den Eingabetrom in eine Wave-Datei um
+
+*-Z* - Zufällige Wiedergabe
+
+Weblinks
+--------
+
+-  `Offizielle Homepage <http://www.mpg123.de>`__
+-  `Sourceforge-Seite <http://sourceforge.net/projects/mpg123>`__
+-  `audio/mpg123 <https://www.google.com/search?q=audio/mpg123&btnI=lucky>`__
+   in den FreeBSD-Ports
+-  `audio/mpg123 <https://www.google.com/search?q=audio/mpg123&btnI=lucky>`__
+   in den OpenBSD-Ports
+-  `audio/mpg123 <https://www.google.com/search?q=audio/mpg123&btnI=lucky>`__
+   in den pkgsrc
+
+.. |mpg123 beim Abspielen mehrerer mp3-Dateien| image:: images/mpg123.jpg
+   :class: align-right
+   :width: 180px
+
+* :ref:`genindex`
+
+Zuletzt geändert: |date|
+

@@ -1,0 +1,916 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.111. Samsung SMT-7020S &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.112. scharfe Windows Schriften" href="scharfe_windows_schriften.txt.html" />
+    <link rel="prev" title="1.110. runit auf FreeBSD" href="runit.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.111. Samsung SMT-7020S</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#voraussetzungen">1.111.1. Voraussetzungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#erste-schritte">1.111.2. Erste Schritte</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#festplatte">1.111.2.1. Festplatte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation">1.111.2.2. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#probleme-beim-booten">1.111.2.3. Probleme beim Booten</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#netzwerk">1.111.3. Netzwerk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sshd-8">1.111.3.1. sshd(8)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#infrarot">1.111.4. Infrarot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mythtv">1.111.5. MythTV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mysql">1.111.6. mySQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sound">1.111.7. Sound</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windowmanager">1.111.8. Windowmanager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xorg">1.111.9. Xorg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weblinks">1.111.10. Weblinks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.111. </span>Samsung SMT-7020S</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/samsung_smt_7020s.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="scharfe_windows_schriften.txt.html" class="btn btn-neutral float-right" title="1.112. scharfe Windows Schriften" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="runit.txt.html" class="btn btn-neutral float-left" title="1.110. runit auf FreeBSD" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="samsung-smt-7020s">
+<h1><span class="section-number">1.111. </span>Samsung SMT-7020S<a class="headerlink" href="#samsung-smt-7020s" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
+</div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>In diesem Artikel möchte ich im Laufe der Zeit Informationen
+zusammenschreiben, die den Aufbau eines FreeBSD-Systems auf einem Samsung SMT
+7020s Satelittenreceiver beinhaltet. Erstmal werde ich diesen Artikel nicht
+im Wiki verlinken, vorerst schreibe ich nur zusammen, um am Ende ein
+vollständiges Howto zu haben, welches man auch anderen Nutzern zur Verfügung
+stellen kann.</p>
+</div>
+<div class="section" id="voraussetzungen">
+<h2><span class="section-number">1.111.1. </span>Voraussetzungen<a class="headerlink" href="#voraussetzungen" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p>Ein Fernseher sollte vorhanden sein, denn der einfachste Anschluss an
+einen Bildschirm ist wohl der über das mitgelieferte SCART-Kabel an
+ein TV.</p></li>
+<li><p>Um die Box steuern zu können, ist eine USB-Tastatur notwendig. Das
+BIOS erreicht man bei geschwindem drücken auf &lt;F2&gt; während des
+Willkommens-Bildschirms (nur für den Fall der Fälle, aber reinschauen
+will da wohl jeder mal).</p></li>
+<li><p>Eine Festplatte, möglichst 2,5“</p></li>
+<li><p>Ein <a class="reference external" href="https://de.wikipedia.org/wiki/Bild:IDE_cable_40_pin_%26_80_pin.jpg">IDE-Kabel
+40-Pin</a></p></li>
+<li><p>Ein <a class="reference external" href="https://de.wikipedia.org/wiki/Bild:Adapter_IDE_to_Notebook-HDD.jpg">IDE-Adapter 3,5“ auf 2,5“ mit
+Stromanschluß</a></p></li>
+<li><p>Ein Lötkolben</p></li>
+<li><p>Ein <a class="reference external" href="https://de.wikipedia.org/wiki/Molex">Molex-Stecker</a> mit etwas
+Kabel (z.B. aus einem ausgeschlachtetem Netzteil)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<ul class="simple">
+<li><p>Durch die Öffnung und Veränderung des Gerätes verfällt der
+Gewährleistungsanspruch!</p></li>
+<li><p>Es ist zu beachten, daß im Gehäuse offen 230V Wechselspannung
+anliegen und somit die Gefahr eines Stromschlages - auch bei
+vermeintlich abgeschaltetem Gerät - besteht!</p></li>
+<li><p>Der ATX-Stromanschluß auf dem Mainboard entspricht nicht der Norm!
+(er ist gespiegelt angebracht). Daher NIEMALS ein Standard
+ATX-Netzteil am Mainboard anschließen!</p></li>
+<li><p>Alle Angaben erfolgen ohne Gewähr!</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="erste-schritte">
+<h2><span class="section-number">1.111.2. </span>Erste Schritte<a class="headerlink" href="#erste-schritte" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="festplatte">
+<h3><span class="section-number">1.111.2.1. </span>Festplatte<a class="headerlink" href="#festplatte" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Aufgund der Platzverhältnisse bietet sich der Einbau von
+2,5“-PATA-Festplatten an. 3,5“-Festplatten bekommt man nur mit einigen
+Schwierigkeiten ins Gehäuse.</p>
+<p>In diesem Fall wird eine 2,5“-Festplatte verbaut. Die Verkabelung mit
+dem Mainboard wird mit einem 40-adrigen DMA-Kabel realisiert. Dabei wird
+die 2,5“-Platte mittels eines Adapter von ATA40 (3,5“) auf ATA44 (2,5“)
+am Kabel angeschlossen. Dieser Adapter dient neben dem Anschluß der
+Datenleitungen auch zur Stromversorgung der Platte. Ein
+Standard-Festplattenanschluß (Molex) kann am Netzteil, am besten an der
+Unterseite, angelötet werden und mit dem Anschluß des Adapters verbunden
+werden.</p>
+</div>
+<div class="section" id="installation">
+<h3><span class="section-number">1.111.2.2. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Bei der Installation sollte darauf geachtet werden, dass ein User
+angelegt wird, der auch noch Mitglied der Gruppe „wheel“ sein sollte,
+damit späteres einloggen per ssh sofort problemfrei funktioniert.</p>
+<p>FIXME vielleicht auch ändern in gescheite ssh-config von Anfang an. ach
+ich weiß auch nicht, sicherheitsgedanken nicht vergessen, du heini! ma
+kuckn…</p>
+<p>TODO</p>
+</div>
+<div class="section" id="probleme-beim-booten">
+<h3><span class="section-number">1.111.2.3. </span>Probleme beim Booten<a class="headerlink" href="#probleme-beim-booten" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Beim Booten gab das schlechte Ergebnisse, die in einem Bootabbruch
+gipfelten. Zunächste wurde der MBR verdammt langsam gelesen, dann brach
+der Bootvorgang am Ende des Kernelladens ab. Die Meldung beinhaltete
+Information der folgenden Art:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">read_dma</span> <span class="n">status</span><span class="o">=</span><span class="mi">51</span> <span class="n">error</span><span class="o">=</span><span class="mi">84</span>
+</pre></div>
+</div>
+<p>Erst ein Umstellen der Festplatteneinstellungen im BIOS der Box auf
+„User“ mit den Werten „Transfer Mode“ „Standard“ und „UDMA-Mode“
+„Disabled“ überredeten die Box zum booten.</p>
+<p>Wenn danach noch Probleme mit dem Zugriff auf die Festplatte bestehen
+(beispielsweise durch eine Systeminstallation per USB), dann steht man
+an einer Meldung mit dem Inhalt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mountroot</span>
+</pre></div>
+</div>
+<p>Hier soll man einen anderen Eintrag, als den bei USB-Installation
+gesetzten <code class="docutils literal notranslate"><span class="pre">ufs:da0s1a</span></code> angeben. Das ist auch klar, denn da die
+Festplatte nun in der Box verbaut ist und direkt am IDE-Port hängt, ist
+der Zugriff nicht mehr über USB zu bewältigen. Der Zugriff ändert sich
+also zu</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mountroot</span><span class="o">&gt;</span> <span class="n">ufs</span><span class="p">:</span><span class="n">ad0s1a</span>
+</pre></div>
+</div>
+<p>Endlich am login-Prompt angelangt, loggen wir uns ein und ändern eben
+diese Informationen hinsichtlich der Festplatte in der <code class="docutils literal notranslate"><span class="pre">/etc/fstab</span></code>
+ab. Diese Datei sollte dann etwa wie folgt aussehen (natürlich
+variierend je nach der beim Installationsvorgang gewählten
+Partitionstabelle):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Device                Mountpoint      FStype  Options         Dump    Pass</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad0s2b</span>             <span class="n">none</span>            <span class="n">swap</span>    <span class="n">sw</span>              <span class="mi">0</span>       <span class="mi">0</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad0s1a</span>             <span class="o">/</span>               <span class="n">ufs</span>     <span class="n">rw</span>              <span class="mi">1</span>       <span class="mi">1</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">acd0</span>               <span class="o">/</span><span class="n">cdrom</span>          <span class="n">cd9660</span>  <span class="n">ro</span><span class="p">,</span><span class="n">noauto</span>       <span class="mi">0</span>       <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="netzwerk">
+<h2><span class="section-number">1.111.3. </span>Netzwerk<a class="headerlink" href="#netzwerk" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Da beim Anschluss an einen Fernseher über das Scart-Kabel an der
+Rückseite der Box das Bild leicht nach links verschoben ist, sieht man
+die ersten 5 Zeichen nicht. So kann es Probleme geben, das
+Netzwerkinterface zu konfigurieren, da man dessen Namen ja nicht kennt.
+So sei hier gesagt, dass sich ein Intel DA82562ET-Netzwerkcontroller auf
+dem Board befindet, der auf das Kürzel <strong>fxp0</strong> reagiert. Ist ein
+DHCP-Server angeschlossen, so bekommt man mit</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dhclient fxp0</span>
+</pre></div>
+</div>
+<p>einen Netzwerklink. Um das ganze Spiel schon beim Booten automatisiert
+zur Verfügung zu haben, sollte man sich die Datei <code class="docutils literal notranslate"><span class="pre">/etc/rc.conf</span></code> zur
+Brust nehmen. Hier gehört der Eintrag</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ifconfig_fxp0</span><span class="o">=</span><span class="s2">&quot;DHCP&quot;</span>
+</pre></div>
+</div>
+<p>rein. Wer lieber eine statische Konfiguration der Box wünscht, der trägt
+anstelle dessen etwas dieser Art ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ifconfig_fxp0</span><span class="o">=</span><span class="s2">&quot;inet 192.168.1.2 netmask 255.255.255.0&quot;</span>
+<span class="n">defaultrouter</span><span class="o">=</span><span class="s2">&quot;192.168.1.1&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="sshd-8">
+<h3><span class="section-number">1.111.3.1. </span>sshd(8)<a class="headerlink" href="#sshd-8" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Von nun an kann man sich NICHT per <strong>ssh(2)</strong> verbinden. Dafür muss erst
+der defaultmäßig deaktivierte <strong>sshd(8)</strong> gestartet werden.</p>
+<p>Das geschieht fürs nächste Booten mit folgendem Eintrag in der
+<code class="docutils literal notranslate"><span class="pre">/etc/rc.conf</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+</pre></div>
+</div>
+<p>Für das aktuell gestartete System eignet sich der Befehl</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /etc/rc.d/sshd start</span>
+</pre></div>
+</div>
+<p>Jetzt ist kein root-login möglich, das ist per default verboten. Wer
+aber clever war, hat beim Installieren des Systems direkt einen User
+angelegt, mit dem man sich nun einloggen kann. Wurde dieser auch noch
+als Member der Gruppe „wheel“ vermerkt, kann man nach einem Login als
+dieser User mit einem</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># su</span>
+</pre></div>
+</div>
+<p>root-Rechte verleihen, die in diesem Anfangsstadium der Konfiguration
+sicher wichtig sind…</p>
+</div>
+</div>
+<div class="section" id="infrarot">
+<h2><span class="section-number">1.111.4. </span>Infrarot<a class="headerlink" href="#infrarot" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der nächste Schritt muss MythTV und vor allem Infrarot heißen. Zunächst
+wird mal der <code class="docutils literal notranslate"><span class="pre">lirc</span></code> installiert, weil es außer diesem nur noch einen
+<code class="docutils literal notranslate"><span class="pre">uird</span></code> gibt, der aber wohl nur mit einem ganz bestimmten
+Infrarot-Gerät zusammenarbeitet. Also los:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_add -r lirc</span>
+</pre></div>
+</div>
+<p>Eine wichtige Info zu diesem Zeitpunkt ist wohl diese hier:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>**********************************************************************
+This port does not contain any FreeBSD device drivers for infrared
+devices. This port installs the LIRC daemons and tools for interacting
+with drivers that support the LIRC device interface.
+
+You will need to obtain third party device drivers or port the Linux
+drivers in ${WRKSRC}/drivers to use the LIRC port.
+**********************************************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="mythtv">
+<h2><span class="section-number">1.111.5. </span>MythTV<a class="headerlink" href="#mythtv" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ein <code class="docutils literal notranslate"><span class="pre">pkg_add</span></code> geht bei <strong>MythTV</strong> zum Zeitpunkt der Erstellung dieses
+Artikel nicht, weil der Port als „broken“ markiert ist und deshalb nicht
+als Package zu Verfügung gestellt wird. Dummerweise funktionierte der
+Port zum genannten Zeitpunkt nicht (nicht nur, weil er „broken“ war,
+sondern auch weil die Quellen nicht verfügbar waren), weshalb nun alles
+aus den Quellen kompiliert wird.</p>
+<p>Damit aber nicht alle Abhängigkeiten auch noch als Port installiert
+werden, nehmen wir diese Dinge selbst in die Hand und installieren
+möglichst viel per <code class="docutils literal notranslate"><span class="pre">pkg_add</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_add -r qt</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">(NICHT</span> <span class="pre">qt4!!</span> <span class="pre">laut</span> <span class="pre">mythtv.org</span> <span class="pre">läuft</span> <span class="pre">mythtv</span> <span class="pre">nur</span> <span class="pre">mit</span> <span class="pre">qt3)</span></code></p>
+<p>Leider gibt es Lizenzprobleme hinsichtlich <code class="docutils literal notranslate"><span class="pre">'lame</span></code>‘, weshalb kein
+Package zur Verfügung gestellt wird. Das ist uns natürlich egal, wir
+installieren einfach den Port… Dafür wird zuerstmal der Portstree mit
+Hilfe von <code class="docutils literal notranslate"><span class="pre">portsnap</span></code> geholt. Wer FreeBSD vor Version 6.0-RELEASE
+benutzt, ist selbst schuld. Der muss <code class="docutils literal notranslate"><span class="pre">portsnap</span></code> nämlich erstmal
+installieren. Das würde dann so gehen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_add -r portsnap</span>
+</pre></div>
+</div>
+<p>Das eigentliche Installieren des Portstrees geschieht dann mit folgendem
+Befehl:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># portsnap fetch extract</span>
+</pre></div>
+</div>
+<p>Wer wirklich ausführliche Informationen zu diesem Thema sucht, der ist
+wohl bei den <a class="reference external" href="paketsysteme">paketsysteme</a>n und artverwandten
+Artikeln richtig aufgehoben!</p>
+<p>Jetzt ist endlich <code class="docutils literal notranslate"><span class="pre">'lame</span></code>‘ dran.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/audio/lame</span>
+<span class="c1"># make install clean</span>
+</pre></div>
+</div>
+<p>Und die übrigen Abhängigkeiten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_add -r wget</span>
+<span class="c1"># pkg_add -r qt-mysql-plugin</span>
+<span class="c1"># pkg_add -r p5-xmltv</span>
+<span class="c1"># pkg_add -r freetype2</span>
+<span class="c1"># pkg_add -r mysql50-client</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mysql">
+<h2><span class="section-number">1.111.6. </span>mySQL<a class="headerlink" href="#mysql" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wir benötigen auf diesem Gerät auch noch einen mySQL-Server, so denn
+kein andere im Netzwerk verfügbar ist. Der einfachheit halber gehe ich
+aber davon, dass sowas nicht da ist und wir betreiben sowohl den Server,
+als auch den Client direkt auf der Samsung-Box:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_add -r mysql50-server</span>
+</pre></div>
+</div>
+<p>mySQL muss noch kurz konfiguriert werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># echo &#39;mysql_enable=&quot;YES&quot;&#39; &gt;&gt; /etc/rc.conf</span>
+</pre></div>
+</div>
+<p>Zum einmaligen Starten von mySQL ist das hier notwendig:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/local/etc/rc.d/mysql-server start</span>
+</pre></div>
+</div>
+<p>Dann muss noch das initiale Passwort für den Nutzer „root“ gesetzt
+werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mysql --user=root</span>
+
+<span class="n">Welcome</span> <span class="n">to</span> <span class="n">the</span> <span class="n">MySQL</span> <span class="n">monitor</span><span class="o">.</span> <span class="n">Commands</span> <span class="n">end</span> <span class="k">with</span> <span class="p">;</span> <span class="ow">or</span> \\<span class="n">g</span><span class="o">.</span> <span class="n">Your</span> <span class="n">MySQL</span>
+<span class="n">connection</span> <span class="nb">id</span> <span class="ow">is</span> <span class="mi">12</span> <span class="n">to</span> <span class="n">server</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0</span><span class="o">.</span><span class="mi">27</span>
+
+<span class="n">Type</span> <span class="s1">&#39;help;&#39;</span> <span class="ow">or</span> <span class="s1">&#39;\h&#39;</span> <span class="k">for</span> <span class="n">help</span><span class="o">.</span> <span class="n">Type</span> <span class="s1">&#39;\c&#39;</span> <span class="n">to</span> <span class="n">clear</span> <span class="n">the</span> <span class="n">buffer</span><span class="o">.</span>
+
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="n">update</span> <span class="n">mysql</span><span class="o">.</span><span class="n">user</span> <span class="nb">set</span>
+<span class="n">Password</span><span class="o">=</span><span class="n">PASSWORD</span><span class="p">(</span><span class="s1">&#39;**hier_das_neue_passwort**&#39;</span><span class="p">)</span> <span class="n">where</span> <span class="n">User</span><span class="o">=</span><span class="s1">&#39;root&#39;</span><span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="n">flush</span> <span class="n">privileges</span><span class="p">;</span> <span class="n">mysql</span><span class="o">&gt;</span> <span class="n">quit</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Jetzt ist das Passwort für <code class="docutils literal notranslate"><span class="pre">root</span></code> gesetzt und man kann die
+MythTV-Datenbank einpflegen. Hierbei ist darauf aufzupassen, dass der
+benutzte Pfad auch dem Pfad zur Datei <code class="docutils literal notranslate"><span class="pre">mc.sql</span></code> entspricht. Auf meinem
+System hab ich die Datei nur ein einziges Mal gefunden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mysql -uroot -p &lt; /root/mythtv-0.20.2/database/mc.sql</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sound">
+<h2><span class="section-number">1.111.7. </span>Sound<a class="headerlink" href="#sound" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wer Interesse hat, kann zunächst mal testen, welche Karte überhaupt in
+der Box steckt, das geht am einfachsten mit dem bei FreeBSD
+mitgelieferten Meta-Treiber <code class="docutils literal notranslate"><span class="pre">snd_driver</span></code>. Danach guckt man sich den
+Inhalt von <code class="docutils literal notranslate"><span class="pre">/dev/sndstat</span></code> an und weiß, welche Karte eingebaut ist:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">videoonkel</span><span class="c1"># kldload snd_driver</span>
+<span class="n">videoonkel</span><span class="c1"># cat /dev/sndstat</span>
+<span class="n">FreeBSD</span> <span class="n">Audio</span> <span class="n">Driver</span> <span class="p">(</span><span class="n">newpcm</span><span class="p">)</span>
+<span class="n">Installed</span> <span class="n">devices</span><span class="p">:</span>
+<span class="n">pcm0</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Intel</span> <span class="n">ICH2</span> <span class="p">(</span><span class="mi">82801</span><span class="n">BA</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">at</span> <span class="n">io</span> <span class="mh">0x1c00</span><span class="p">,</span> <span class="mh">0x1880</span> <span class="n">irq</span> <span class="mi">5</span> <span class="n">bufsz</span> <span class="mi">16384</span> <span class="n">kld</span> <span class="n">snd_ich</span> <span class="p">(</span><span class="mi">1</span><span class="n">p</span><span class="o">/</span><span class="mi">1</span><span class="n">r</span><span class="o">/</span><span class="mi">0</span><span class="n">v</span> <span class="n">channels</span> <span class="n">duplex</span> <span class="n">default</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Wir haben also eine Intel ICH2 an Board. Damit die immer beim Booten
+verfügbar ist, fügen wir den Aufruf des Treibers in das System ein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># echo snd_ich_load=&quot;NO&quot; # Intel ICH &gt;&gt; /boot/loader.conf</span>
+</pre></div>
+</div>
+<p>Um sofort die Soundkarte zu testen, machen wir einfach das hier:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># kldload snd_ich</span>
+<span class="c1"># cd</span>
+<span class="c1"># cat mythtv-0.20.2.tar.bz2 &gt; /dev/dsp</span>
+</pre></div>
+</div>
+<p>Jetzt sollte ein eifriges Rauschen aus dem Fernseher zu hören sein. Die
+Soundkarte funktioniert.</p>
+</div>
+<div class="section" id="windowmanager">
+<h2><span class="section-number">1.111.8. </span>Windowmanager<a class="headerlink" href="#windowmanager" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Da stolper ich doch gerade noch darüber, dass man einen Windowmanager
+braucht. Es wird wohl ein „Leichtgewicht“ genügen, also machen wir mal
+schnell das hier:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_add -r ratpoison</span>
+</pre></div>
+</div>
+<p>Jetzt kommt also MythTV an die Reihe:</p>
+<p>Um also nun MythTV SELBST ZU KOMPILIEREN (ARGH!, es ist ne 700MHz CPU,
+dankeschön, FreeBSD!), benötigen wir erstmal das Quellpaket von MythTV.
+Dasfür benötigen wir wget.</p>
+<p>Das wird sich fein von der
+<a class="reference external" href="http://www.mythtv.org/modules.php?name=Downloads&amp;d_op=viewdownload&amp;cid=1">MythTV-Seite</a>
+runtergeladen und dann per scp auf die Box kopiert.</p>
+<p>Ich muss es selbst bauen, aber es fehlen ja noch Dependencies fürs
+Bauen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_add -r qmake</span>
+<span class="c1"># pkg_add -r p5-XML-SAX-Expat</span>
+</pre></div>
+</div>
+<p>Entpacken des Pakets:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># tar -xvjf mythtv-0.20.tar.bz2</span>
+</pre></div>
+</div>
+<p>So, jetzt kann also endlich das Kompilieren von MythTV beginnen. Also
+hinein in das Verzeichnis, in das das mythtv-Paket entpackt wurde und ab
+geht die Luzie, allerdings ist zuvor noch eine kleine Variable zu
+setzen, und zwar die, in der die spezifikationen für qmake drin stehen.
+Soweit ich das mit meinem kleinen Hirn nachvollziehen kann, stehen in
+dieser Datei viele Informationen drin, wo qmake plattformabhängig
+verschiedene Dine findet, Da wir hier ein FreeBSD vor der Nase haben,
+müssen wir in dem „mkspecs“-Verzeichnis ein FreeBSD-Unterverzeichnis
+auswählen. Es gibt derer drei, eines ist freebsd-g++, welchen ein
+kompilieren mit dem GNU-C Compiler durchführt, dann gibt es noch
+freebsd-g++34 für version 3.4 selbigen Compilers und es gibt noch
+freebsd-icc für den Intel Compiler. Wir wollen ersteren. Also los:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># setenv QMAKESPEC /usr/local/share/qt/mkspecs/freebsd-g++</span>
+<span class="c1"># setenv QTDIR /usr/X11R6/</span>
+</pre></div>
+</div>
+<p>Komischerweise wird trotz der abgeschlossenen qt-Installation die
+entsprechende Bibliothek nicht verlinkt. Wieso das so ist, kann ich
+nicht sagen. Es kotzt mich mal wieder nur an. Eine Stunde mit Suchen
+verbracht. Naja, dafür ist die Musik aus den Boxen gut. Also weiter,
+legen wir den link von Hand an (und neben diesem noch eine Reihe
+andere…):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /sbin/ldconfig</span>
+<span class="c1"># ln -s /usr/X11R6/lib/libqt-mt.so /usr/lib/libqt-mt.so</span>
+<span class="c1"># ln -s /usr/X11R6/lib/libXext.so /usr/lib/libXext.so</span>
+<span class="c1"># ln -s /usr/X11R6/lib/libX11.so /usr/lib/libX11.so</span>
+</pre></div>
+</div>
+<p>Dann muss malloc.c in der Datei
+/root/mythtv-0.20.2/libs/libmythtv/videoout_xv.cpp geändert werden in
+&lt;stdlib.h&gt;</p>
+<p>Beim Kompilieren will Onkel Dittmeier dann auch noch nach <code class="docutils literal notranslate"><span class="pre">/src/moc</span></code>
+suchen, dabei ist <code class="docutils literal notranslate"><span class="pre">moc</span></code> lange kompilierterweise installiert
+(<code class="docutils literal notranslate"><span class="pre">pkg_add</span> <span class="pre">-r</span> <span class="pre">qt</span></code> hatten wir ja durchgeführt). Also auskommentiert den
+Dreck:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># vi $mythtv-Entpackverzeichnis/libs/libmyth/Makefile</span>
+</pre></div>
+</div>
+<p>Die Zeile mit <code class="docutils literal notranslate"><span class="pre">/src/moc</span></code> und dem anschließenden <code class="docutils literal notranslate"><span class="pre">make</span></code> gehört
+auskommentiert (mit einer # am Zeilenanfang!). Möglicherweise muss auch
+noch ein symbolischer Link namens /bin/moc auf /usr/X11R6/bin/moc
+erstellt werden.</p>
+<p>Dann gibt es bestimmt noch Meckereien wegen LONG_LONG_MAX. In der
+entsprechenden Datei umändern in LLONG_MAX. Puh!</p>
+<p>Jetzt endlich können wir ein make im Entpackverzeichnis von mythtv
+anschieben. Meine Fräse, ey!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make</span>
+<span class="c1"># make install</span>
+<span class="c1"># make clean</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="xorg">
+<h2><span class="section-number">1.111.9. </span>Xorg<a class="headerlink" href="#xorg" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zunächst mal war man sicher clever genug, in der Startinstallation des
+Betreibssystems, Xorg in die Installation einzuschließen. Nun wollen wir
+diesen X-Server aber endlich auch mal starten, dafür brauchen wir aber
+eine default-Konfiguration, mit der wir dann mal starten können.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Xorg -configure</span>
+</pre></div>
+</div>
+<p>Das erstellt uns eine xorg.conf.new in /root, die flugs ausprobiert wird mit</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Xorg -config /root/xorg.conf.new</span>
+</pre></div>
+</div>
+<p>Weil das so gut funktioniert, nehmen wir die Datei gleich als default:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mv /root/xorg.conf.new /etc/X11/xorg.conf</span>
+</pre></div>
+</div>
+<p>Naja, jetzt wollen wir auch noch den Mode des X-Servers auf den Fernseher
+einstellen. Dafür muss die Sektion Monitor in der xorg.conf durch diese hier
+ersetzt werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Section</span> <span class="s2">&quot;Monitor&quot;</span>
+    <span class="n">Identifier</span>   <span class="s2">&quot;Glotze&quot;</span>
+    <span class="n">ModeLine</span> <span class="s2">&quot;768x576&quot;</span> <span class="mf">50.00</span> <span class="mi">768</span> <span class="mi">832</span> <span class="mi">846</span> <span class="mi">1000</span> <span class="mi">576</span> <span class="mi">590</span> <span class="mi">595</span> <span class="mi">630</span>
+<span class="n">EndSection</span>
+</pre></div>
+</div>
+<p>Die gesamte Datei sieht bei mir so aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Section</span> <span class="s2">&quot;ServerLayout&quot;</span>
+    <span class="n">Identifier</span>     <span class="s2">&quot;X.org Configured&quot;</span>
+    <span class="n">Screen</span>      <span class="mi">0</span>  <span class="s2">&quot;Screen0&quot;</span> <span class="mi">0</span> <span class="mi">0</span>
+    <span class="n">InputDevice</span>    <span class="s2">&quot;Mouse0&quot;</span> <span class="s2">&quot;CorePointer&quot;</span>
+    <span class="n">InputDevice</span>    <span class="s2">&quot;Keyboard0&quot;</span> <span class="s2">&quot;CoreKeyboard&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;Files&quot;</span>
+    <span class="n">RgbPath</span>      <span class="s2">&quot;/usr/X11R6/lib/X11/rgb&quot;</span>
+    <span class="n">ModulePath</span>   <span class="s2">&quot;/usr/X11R6/lib/modules&quot;</span>
+    <span class="n">FontPath</span>     <span class="s2">&quot;/usr/X11R6/lib/X11/fonts/misc/&quot;</span>
+    <span class="n">FontPath</span>     <span class="s2">&quot;/usr/X11R6/lib/X11/fonts/TTF/&quot;</span>
+    <span class="n">FontPath</span>     <span class="s2">&quot;/usr/X11R6/lib/X11/fonts/Type1/&quot;</span>
+    <span class="n">FontPath</span>     <span class="s2">&quot;/usr/X11R6/lib/X11/fonts/CID/&quot;</span>
+    <span class="n">FontPath</span>     <span class="s2">&quot;/usr/X11R6/lib/X11/fonts/75dpi/&quot;</span>
+    <span class="n">FontPath</span>     <span class="s2">&quot;/usr/X11R6/lib/X11/fonts/100dpi/&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;Module&quot;</span>
+    <span class="n">Load</span>  <span class="s2">&quot;dbe&quot;</span>
+    <span class="n">Load</span>  <span class="s2">&quot;dri&quot;</span>
+    <span class="n">Load</span>  <span class="s2">&quot;extmod&quot;</span>
+    <span class="n">Load</span>  <span class="s2">&quot;glx&quot;</span>
+    <span class="n">Load</span>  <span class="s2">&quot;record&quot;</span>
+    <span class="n">Load</span>  <span class="s2">&quot;xtrap&quot;</span>
+<span class="c1">#   Load  &quot;freetype&quot;</span>
+    <span class="n">Load</span>  <span class="s2">&quot;type1&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;InputDevice&quot;</span>
+    <span class="n">Identifier</span>  <span class="s2">&quot;Keyboard0&quot;</span>
+    <span class="n">Driver</span>      <span class="s2">&quot;kbd&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;InputDevice&quot;</span>
+    <span class="n">Identifier</span>  <span class="s2">&quot;Mouse0&quot;</span>
+    <span class="n">Driver</span>      <span class="s2">&quot;mouse&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;Protocol&quot;</span> <span class="s2">&quot;auto&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;Device&quot;</span> <span class="s2">&quot;/dev/sysmouse&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;ZAxisMapping&quot;</span> <span class="s2">&quot;4 5 6 7&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;Monitor&quot;</span>
+        <span class="n">Identifier</span>   <span class="s2">&quot;Glotze&quot;</span>
+    <span class="n">VertRefresh</span> <span class="mi">48</span><span class="o">-</span><span class="mi">61</span>
+    <span class="n">HorizSync</span>   <span class="mi">27</span><span class="o">-</span><span class="mi">96</span>
+  <span class="c1">#     ModeLine &quot;768x576&quot; 50.00 768 832 846 1000 576 590 595 630</span>
+    <span class="n">ModeLine</span> <span class="s2">&quot;720x576&quot;</span> <span class="mf">27.5</span> <span class="mi">720</span> <span class="mi">744</span> <span class="mi">800</span> <span class="mi">880</span>  <span class="mi">576</span> <span class="mi">581</span> <span class="mi">583</span> <span class="mi">625</span>
+    <span class="n">DisplaySize</span> <span class="mi">300</span> <span class="mi">225</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;Device&quot;</span>
+        <span class="c1">### Available Driver options are:-</span>
+        <span class="c1">### Values: &lt;i&gt;: integer, &lt;f&gt;: float, &lt;bool&gt;: &quot;True&quot;/&quot;False&quot;,</span>
+        <span class="c1">### &lt;string&gt;: &quot;String&quot;, &lt;freq&gt;: &quot;&lt;f&gt; Hz/kHz/MHz&quot;</span>
+        <span class="c1">### [arg]: arg optional</span>
+        <span class="c1">#Option     &quot;NoAccel&quot;               # [&lt;bool&gt;]</span>
+        <span class="c1">#Option     &quot;SWcursor&quot;              # [&lt;bool&gt;]</span>
+        <span class="c1">#Option     &quot;ColorKey&quot;              # &lt;i&gt;</span>
+        <span class="c1">#Option     &quot;CacheLines&quot;            # &lt;i&gt;</span>
+        <span class="c1">#Option     &quot;Dac6Bit&quot;               # [&lt;bool&gt;]</span>
+        <span class="c1">#Option     &quot;DRI&quot;                   # [&lt;bool&gt;]</span>
+        <span class="c1">#Option     &quot;NoDDC&quot;                 # [&lt;bool&gt;]</span>
+        <span class="c1">#Option     &quot;ShowCache&quot;             # [&lt;bool&gt;]</span>
+        <span class="c1">#Option     &quot;XvMCSurfaces&quot;          # &lt;i&gt;</span>
+        <span class="c1">#Option     &quot;PageFlip&quot;              # [&lt;bool&gt;]</span>
+    <span class="n">Identifier</span>  <span class="s2">&quot;Card0&quot;</span>
+    <span class="n">Driver</span>      <span class="s2">&quot;i810&quot;</span>
+    <span class="n">VendorName</span>  <span class="s2">&quot;Intel Corporation&quot;</span>
+    <span class="n">BoardName</span>   <span class="s2">&quot;82815 CGC [Chipset Graphics Controller]&quot;</span>
+<span class="c1">#   BusID       &quot;PCI:0:2:0&quot;</span>
+    <span class="n">BusID</span>       <span class="s2">&quot;0000:02:00&quot;</span>
+    <span class="n">Screen</span>      <span class="mi">0</span>
+    <span class="n">VideoRam</span>    <span class="mi">4096</span>
+    <span class="n">Option</span>      <span class="s2">&quot;DCC&quot;</span>   <span class="s2">&quot;off&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;ColorKey&quot;</span>  <span class="s2">&quot;0&quot;</span>
+    <span class="n">Option</span>      <span class="s2">&quot;BlankTime&quot;</span>     <span class="s2">&quot;0&quot;</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;Screen&quot;</span>
+        <span class="n">Identifier</span> <span class="s2">&quot;Screen0&quot;</span>
+        <span class="n">Device</span>     <span class="s2">&quot;Card0&quot;</span>
+        <span class="n">Monitor</span>    <span class="s2">&quot;Glotze&quot;</span>
+    <span class="n">DefaultDepth</span>    <span class="mi">24</span>
+    <span class="n">SubSection</span>  <span class="s2">&quot;Display&quot;</span>
+        <span class="n">Modes</span>   <span class="s2">&quot;640x480&quot;</span>
+        <span class="n">Viewport</span>    <span class="mi">0</span> <span class="mi">0</span>
+        <span class="n">Depth</span>   <span class="mi">24</span>
+    <span class="n">EndSubSection</span>
+<span class="c1">#        SubSection &quot;Display&quot;</span>
+<span class="c1">#                Depth 24</span>
+<span class="c1">#       Modes &quot;768x576&quot;</span>
+<span class="c1">#        EndSubSection</span>
+<span class="n">EndSection</span>
+
+<span class="n">Section</span> <span class="s2">&quot;DRI&quot;</span>
+    <span class="n">Mode</span> <span class="mi">0666</span>
+<span class="n">EndSection</span>
+</pre></div>
+</div>
+<p>Schwups - schon läuft der Onkel. Jetzt fehlt ja noch die Einbindung von
+unserem „ratpoison“:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># echo /usr/X11R6/bin/ratpoison &gt; ~/.xinitrc</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="weblinks">
+<h2><span class="section-number">1.111.10. </span>Weblinks<a class="headerlink" href="#weblinks" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.vdr-wiki.de/wiki/index.php/Samsung_SMT-7020S">http://www.vdr-wiki.de/wiki/index.php/Samsung_SMT-7020S</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2020-10-27</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="scharfe_windows_schriften.txt.html" class="btn btn-neutral float-right" title="1.112. scharfe Windows Schriften" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="runit.txt.html" class="btn btn-neutral float-left" title="1.110. runit auf FreeBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, BSDForen.de
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
