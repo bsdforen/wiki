@@ -1,5 +1,8 @@
 # Sphinx Dokumentation für BSDForen.de
 
+![build](https://github.com/bsdforen/wiki/workflows/build/badge.svg)
+![deploy](https://github.com/bsdforen/wiki/workflows/deploy/badge.svg)
+
 ## Virtuelle Python Umgebung erstellen
 
 ~~~bash
