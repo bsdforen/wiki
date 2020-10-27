@@ -1,14 +1,12 @@
 ---
-name: sphinx
+name: build
 on:
   push:
     branches:
       - master
-      - prod
   pull_request:
     branches:
       - master
-      - prod
 
 jobs:
   build:
@@ -30,6 +28,6 @@ jobs:
           pip install -r requirements.txt
       - name: Test sphinx-build
         run: |
-          sphinx-build -d build/doctrees -b html source build/html -nW
-          touch build/html/.nojekyll
-          echo "wiki.bsdforen.de" > build/html/CNAME
+          sphinx-build -d build/doctrees -b html source build -nW
+          touch build/.nojekyll
+          echo "wiki.bsdforen.de" > build/CNAME
