@@ -9,6 +9,8 @@ Unreal
 
 Dieses HowTo beschreibt die Installation und Einrichtung von Unreal. Hier geht
 es nicht um "Unreal Gold" oder die Erweiterung "Return to Na Pali".
+Die Installation geschieht aktuell auf einem FreeBSD 12.2-RELEASE. Ältere Releases
+haben Probleme bei der Audio Wiedergabe.
 
 Vorraussetzungen
 ----------------
@@ -24,7 +26,7 @@ Benötigte Pakete
 
 Folgende Pakete werden zur Installation bzw. zum Spielen benötigt:
 
--  `emulators/linux_base-c6 <https://www.google.com/search?q=emulators/linux_base-c6&btnI=lucky>`__
+-  `emulators/linux_base-c7 <https://www.freshports.org/emulators/linux_base-c7/>`__
 
 ::
 
