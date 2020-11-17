@@ -198,7 +198,9 @@
 <img alt="../_images/logo-freebsd4.png" src="../_images/logo-freebsd4.png" />
 </div>
 <p>Dieses HowTo beschreibt die Installation und Einrichtung von Unreal. Hier geht
-es nicht um „Unreal Gold“ oder die Erweiterung „Return to Na Pali“.</p>
+es nicht um „Unreal Gold“ oder die Erweiterung „Return to Na Pali“.
+Die Installation geschieht aktuell auf einem FreeBSD 12.2-RELEASE. Ältere Releases
+haben Probleme bei der Audio Wiedergabe.</p>
 <div class="section" id="vorraussetzungen">
 <h2><span class="section-number">4.5.1. </span>Vorraussetzungen<a class="headerlink" href="#vorraussetzungen" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
@@ -212,49 +214,69 @@ es nicht um „Unreal Gold“ oder die Erweiterung „Return to Na Pali“.</p>
 <div class="section" id="benotigte-pakete">
 <h2><span class="section-number">4.5.2. </span>Benötigte Pakete<a class="headerlink" href="#benotigte-pakete" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Folgende Pakete werden zur Installation bzw. zum Spielen benötigt:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.google.com/search?q=emulators/linux_base-c6&amp;btnI=lucky">emulators/linux_base-c6</a></p></li>
+<ul>
+<li><p><a class="reference external" href="https://www.freshports.org/emulators/linux_base-c7/">emulators/linux_base-c7</a></p></li>
+<li><p><a class="reference external" href="https://www.freshports.org/x11/linux-c7-xorg-libs/">x11/linux-c7-xorg-libs</a></p></li>
+<li><p><a class="reference external" href="https://www.freshports.org/graphics/linux-c7-dri/">graphics/linux-c7-dri</a></p></li>
+<li><p><a class="reference external" href="https://www.freshports.org/audio/linux-c7-alsa-lib/">audio/linux-c7-alsa-lib</a></p></li>
+<li><p><a class="reference external" href="https://www.freshports.org/audio/linux-c7-alsa-plugins-oss/">audio/alsa-plugins-oss</a></p>
+<p>Benutzer von NVIDIA Hardware benötigen auch noch:</p>
+</li>
+<li><p><a class="reference external" href="https://www.freshports.org/x11/linux-nvidia-libs/">x11/linux-nvidia-libs</a></p>
+<p>auf amd64 Systemen:</p>
+</li>
+<li><p><a class="reference external" href="https://www.freshports.org/emulators/i386-wine/">emulators/i386-wine</a> Nur zur installation des Spiels und der Patches.</p>
+<p>auf i386 Systemen:</p>
+</li>
+<li><p><a class="reference external" href="https://www.freshports.org/emulators/wine/">emulators/wine</a> Nur zur Installation des Spiels und der Patches.</p>
+<p>Ein Programm zum dearchivieren der Patches:</p>
+</li>
+<li><p><a class="reference external" href="https://www.freshports.org/archivers/p7zip/">archivers/p7zip</a> oder</p></li>
+<li><p><a class="reference external" href="https://www.freshports.org/archivers/unzip/">archivers/unzip</a> oder</p></li>
+<li><p><a class="reference external" href="https://www.freshports.org/archivers/unrar">archivers/unrar</a></p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auf</span> <span class="n">amd64</span> <span class="n">Systemen</span><span class="p">:</span>
-<span class="o">*</span> <span class="p">[[</span><span class="n">freshports</span><span class="o">&gt;</span><span class="n">emulators</span><span class="o">/</span><span class="n">i386</span><span class="o">-</span><span class="n">wine</span><span class="p">]]</span> <span class="n">Nur</span> <span class="n">zur</span> <span class="n">installation</span> <span class="n">des</span> <span class="n">Spiels</span> <span class="n">und</span> <span class="n">der</span> <span class="n">Patches</span><span class="o">.</span>
-<span class="n">auf</span> <span class="n">i386</span> <span class="n">Systemen</span><span class="p">:</span>
-<span class="o">*</span> <span class="p">[[</span><span class="n">freshports</span><span class="o">&gt;</span><span class="n">emulators</span><span class="o">/</span><span class="n">wine</span><span class="p">]]</span> <span class="n">Nur</span> <span class="n">zur</span> <span class="n">Installation</span> <span class="n">des</span> <span class="n">Spiels</span> <span class="n">und</span> <span class="n">der</span> <span class="n">Patches</span><span class="o">.</span>
-<span class="n">Ein</span> <span class="n">Programm</span> <span class="n">zum</span> <span class="n">dearchivieren</span> <span class="n">der</span> <span class="n">Patches</span><span class="p">:</span>
-<span class="o">*</span> <span class="p">[[</span><span class="n">freshports</span><span class="o">&gt;</span><span class="n">archivers</span><span class="o">/</span><span class="n">p7zip</span><span class="p">]]</span> <span class="n">oder</span>
-<span class="o">*</span> <span class="p">[[</span><span class="n">freshports</span><span class="o">&gt;</span><span class="n">archivers</span><span class="o">/</span><span class="n">unzip</span><span class="p">]]</span> <span class="n">oder</span>
-<span class="o">*</span> <span class="p">[[</span><span class="n">freshports</span><span class="o">&gt;</span><span class="n">archivers</span><span class="o">/</span><span class="n">unrar</span><span class="p">]]</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="die-linux-hosts-datei-bearbeiten">
 <h2><span class="section-number">4.5.3. </span>Die Linux hosts Datei bearbeiten<a class="headerlink" href="#die-linux-hosts-datei-bearbeiten" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Damit im Spiel das Speichern/Laden funktioniert muss der Hostname des
-Rechners in der Datei /compat/linux/etc/hosts eingetragen werden.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="n">localhost</span> <span class="n">localhost</span><span class="o">.</span><span class="n">localdomain</span> <span class="n">localhost4</span> <span class="n">localhost4</span><span class="o">.</span><span class="n">localdomain4</span> <span class="n">hostname</span>
-                                                                             <span class="o">^^^^^^^^</span>
+<p>Damit im Spiel das Speichern/Laden funktioniert müssen die IP Adresse
+und der Hostname des Rechners in der Datei /compat/linux/etc/hosts
+eingetragen werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>       <span class="n">localhost</span> <span class="n">localhost</span><span class="o">.</span><span class="n">localdomain</span> <span class="n">localhost4</span> <span class="n">localhost4</span><span class="o">.</span><span class="n">localdomain4</span>
+<span class="p">::</span><span class="mi">1</span>             <span class="n">localhost</span> <span class="n">localhost</span><span class="o">.</span><span class="n">localdomain</span> <span class="n">localhost6</span> <span class="n">localhost6</span><span class="o">.</span><span class="n">localdomain6</span>
+<span class="mf">192.168</span><span class="o">.</span><span class="n">X</span><span class="o">.</span><span class="n">X</span>     <span class="n">hostname</span>  <span class="c1"># &lt;- IP Adresse und Hostname eintregen</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="installation">
 <h2><span class="section-number">4.5.4. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Mit winecfg ein CD Laufwerk anlegen, das auf den Mountpunkt der Unreal
-CD zeigt, da es für die Installation der Patches benötigt wird. <a class="align-center reference internal" href="../_images/unreal-winecfg.png"><img alt="image1" class="align-center" src="../_images/unreal-winecfg.png" style="width: 200px;" /></a></p>
-<p>Unreal mit wine installieren.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># wine /PATH/TO/CD/SETUP.EXE</span>
+<p>Es empfiehlt sich ein separates WINEPREFIX anzulegen welches am Ende wieder
+einfach entfernt werden kann.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">WINEPREFIX</span>
 </pre></div>
 </div>
-<p>Im Installer dann den Zielpfad eingeben und im Fenster „Select
-Components“ DirectX 5 und den UnrealEd abwählen. <a class="align-center reference internal" href="../_images/unreal-select_components.png"><img alt="image2" class="align-center" src="../_images/unreal-select_components.png" style="width: 200px;" /></a></p>
+<p>Mit winecfg ein CD Laufwerk anlegen, das auf den Mountpunkt der Unreal
+CD zeigt, da es für die Installation der Patches benötigt wird.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">env</span> <span class="n">WINEPREFIX</span><span class="o">=/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">WINEPREFIX</span> <span class="n">winecfg</span>
+</pre></div>
+</div>
+<p><a class="align-center reference internal" href="../_images/unreal-winecfg.png"><img alt="image1" class="align-center" src="../_images/unreal-winecfg.png" style="width: 200px;" /></a></p>
+<p>Unreal mit wine installieren.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">env</span> <span class="n">WINEPREFIX</span><span class="o">=/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">WINEPREFIX</span> <span class="n">wine</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">CD</span><span class="o">/</span><span class="n">SETUP</span><span class="o">.</span><span class="n">EXE</span>
+</pre></div>
+</div>
+<p>Im Installer dann den Zielpfad eingeben. Wenn man das WINEPREFIX wieder löschen möchte muss
+darauf geachtet werden, das das Installationsverzeichnis außerhalb liegt (z.B. Z:\home\user\Unreal).
+Dann im Fenster „Select Components“ DirectX 5 und den UnrealEd abwählen. <a class="align-center reference internal" href="../_images/unreal-select_components.png"><img alt="image2" class="align-center" src="../_images/unreal-select_components.png" style="width: 200px;" /></a></p>
 </div>
 <div class="section" id="das-spiel-patchen">
 <h2><span class="section-number">4.5.5. </span>Das Spiel Patchen<a class="headerlink" href="#das-spiel-patchen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Zuerst den offiziellen Patch 226Final installieren da der Patch 227i
 mindestens den Patch 224 vorraussetzt.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># wine /PATH/TO/PATCHES/UnrealPatch226Final.exe</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">env</span> <span class="n">WINEPREFIX</span><span class="o">=/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">WINEPREFIX</span> <span class="n">wine</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">PATCHES</span><span class="o">/</span><span class="n">UnrealPatch226Final</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
 <p>Dann den Patch 227i</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># wine /PATH/TO/PATCHES/UnrealClassicPatch227i.exe</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">env</span> <span class="n">WINEPREFIX</span><span class="o">=/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">WINEPREFIX</span> <span class="n">wine</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">PATCHES</span><span class="o">/</span><span class="n">UnrealClassicPatch227i</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
 <p>Und nicht vergessen den Haken bei „Linux native Dateien“ zu setzen.
@@ -265,10 +287,22 @@ mindestens den Patch 224 vorraussetzt.</p>
 <p>Im Installationsverzeichnis gibt es im Ordner „Help“ die Datei
 lin_convenience_libs.tar.bz2. Diese muss entpackt und die Dateien in das
 Verzeichnis „System“ verschoben werden.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /PATH/TO/UNREAL/Help</span>
-<span class="c1"># tar -xjf lin_convenience_libs.tar.bz2</span>
-<span class="c1"># cd lin_convenience_libs</span>
-<span class="c1"># mv * ../../System</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">cd</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">Help</span>
+<span class="o">%</span> <span class="n">tar</span> <span class="o">-</span><span class="n">xjf</span> <span class="n">lin_convenience_libs</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">bz2</span>
+<span class="o">%</span> <span class="n">cd</span> <span class="n">lin_convenience_libs</span>
+<span class="o">%</span> <span class="n">mv</span> <span class="o">*</span> <span class="o">../../</span><span class="n">System</span>
+</pre></div>
+</div>
+<p>Damit das Spiel mit linux_base-c7 funktioniert müssen einige der Dateien wieder
+entfernt werden.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libgcc_s</span><span class="o">.</span><span class="n">so</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libgcc_s</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mi">1</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span><span class="o">.</span><span class="mi">6</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span><span class="o">.</span><span class="mf">6.0</span><span class="o">.</span><span class="mi">8</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libXxf86dga</span><span class="o">.</span><span class="n">so</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libXxf86dga</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mi">1</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libXxf86dga</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">0</span>
 </pre></div>
 </div>
 </div>
@@ -277,8 +311,7 @@ Verzeichnis „System“ verschoben werden.</p>
 <p>Die Datei UnrealLinux.bin hat bei mir zu Problemen mit der Maus geführt
 weshalb ich das Spiel über UnrealXLinux.bin starte. Dazu muss diese noch
 ausführbar gemacht werden.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /PATH/TO/UNREAL/System</span>
-<span class="c1"># chmod u+x UnrealXLinux.bin</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">chmod</span> <span class="n">u</span><span class="o">+</span><span class="n">x</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">UnrealXLinux</span><span class="o">.</span><span class="n">bin</span>
 </pre></div>
 </div>
 </div>
@@ -306,7 +339,7 @@ haben.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2020-10-27</p>
+<p>Zuletzt geändert: 2020-11-17</p>
 </div>
 </div>
 
