@@ -36,11 +36,11 @@ jobs:
           echo "wiki.bsdforen.de" > build/CNAME
 
       - name: Push message to IRC
-        uses: Gottox/irc-message-action@v1.1
+        uses: rectalogic/notify-irc@v1
         if: github.event_name == 'push'
         with:
           channel: "##team.bsdforen.de"
           channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
-          nickname: "analtux-bot"
-          message: |-
+          nickname: "bsdforen-git"
+          message: |
             ${{ github.repository }}: new ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }}
