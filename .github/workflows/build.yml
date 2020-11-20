@@ -42,5 +42,5 @@ jobs:
           channel: "##team.bsdforen.de"
           channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
           nickname: "bsdforen-git"
-          message: |
+          message: |-
             ${{ github.repository }}: new ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }}
