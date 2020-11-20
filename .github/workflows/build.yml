@@ -41,7 +41,6 @@ jobs:
         with:
           channel: "##team.bsdforen.de"
           channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
-          nickname: "analtux"
-          sasl_password: ${{ secrets.IRC_PASSWORD_ANALTUX}}
+          nickname: "analtux-bot"
           message: |-
             ${{ github.repository }}: new ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }}
