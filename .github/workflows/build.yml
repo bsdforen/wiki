@@ -35,22 +35,22 @@ jobs:
           touch build/.nojekyll
           echo "wiki.bsdforen.de" > build/CNAME
 
-      - name: Push message to IRC
-        uses: rectalogic/notify-irc@v1
-        if: github.event_name == 'push'
-        with:
-          channel: "##team.bsdforen.de"
-          channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
-          nickname: "bsdforen-git"
-          message: |-
-            ${{ github.repository }}: new ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }}
+      # - name: Push message to IRC
+        # uses: rectalogic/notify-irc@v1
+        # if: github.event_name == 'push'
+        # with:
+          # channel: "##team.bsdforen.de"
+          # channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
+          # nickname: "bsdforen-git"
+          # message: |-
+            # ${{ github.repository }}: new ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }}
 
-      - name: PR message to IRC
-        uses: rectalogic/notify-irc@v1
-        if: github.event_name == 'pull_request'
-        with:
-          channel: "##team.bsdforen.de"
-          channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
-          nickname: "bsdforen-git"
-          message: |-
-            ${{ github.repository }}: new ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }}
+      # - name: PR message to IRC
+        # uses: rectalogic/notify-irc@v1
+        # if: github.event_name == 'pull_request'
+        # with:
+          # channel: "##team.bsdforen.de"
+          # channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
+          # nickname: "bsdforen-git"
+          # message: |-
+            # ${{ github.repository }}: new ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }}

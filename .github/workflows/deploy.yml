@@ -44,12 +44,12 @@ jobs:
           publish_dir: ./build
           keep_files: false
 
-      - name: Send message to IRC
-        uses: rectalogic/notify-irc@v1
-        if: github.event_name == 'push'
-        with:
-          channel: "##team.bsdforen.de"
-          channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
-          nickname: "bsdforen-git"
-          message: |-
-            ${{ github.repository }}: ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }} -> please check: https://wiki.bsdforen.de
+      # - name: Send message to IRC
+        # uses: rectalogic/notify-irc@v1
+        # if: github.event_name == 'push'
+        # with:
+          # channel: "##team.bsdforen.de"
+          # channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
+          # nickname: "bsdforen-git"
+          # message: |-
+            # ${{ github.repository }}: ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }} -> please check: https://wiki.bsdforen.de
