@@ -248,7 +248,6 @@ Mehr zum Thema USB-Sticks und BSD
 ---------------------------------
 
 -  `USB-Stick als System-Laufwerk nutzen mit "NetBSD LiveKey" <USB-Stick als System-Laufwerk nutzen mit "NetBSD LiveKey">`__
--  `USB-Stick bootfähig machen (OpenBSD) <USB-Stick bootfähig machen (OpenBSD)>`__
 -  `USB-Stick Unterstützung <USB-Stick Unterstützung>`__
 
 * :ref:`genindex`
