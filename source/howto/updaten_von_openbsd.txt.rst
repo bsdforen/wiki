@@ -14,28 +14,24 @@ Seit OpenBSD 6.1 ist der gesamte Updateprozess sehr einfach gestaltet.
 
 .. note::
 
-  Eine genaue, aktuelle Anleitung findet sich auch in der OpenBSD FAQ https://www.openbsd.org/faq/index.html - da diese ständig aktualisiert wird, macht es sicher sinn dort reinzuschauen.
+  Eine genaue, aktuelle Anleitung findet sich auch in der OpenBSD FAQ
+  https://www.openbsd.org/faq/index.html - da diese ständig aktualisiert wird,
+  macht es sicher sinn dort reinzuschauen.
 
-Einfach mit
+Einfach mit `syspatch <https://man.openbsd.org/syspatch>`_ das Basissystem
+aktualisieren und dann mit `pkg_add -u <https://man.openbsd.org/pkg_add>`_ noch
+alle Binärpakete aktualisieren - Fertig.
 
-`syspatch <https://man.openbsd.org/syspatch>`_
-
-das Basissystem aktualisieren und dann mit
-
-'pkg_add -u <https://man.openbsd.org/pkg_add>`_
-
-noch alle Binärpakete aktualisieren - Fertig.
-
-Der folgende Abschnitt wird nicht empfohlen und es gibt nur in extrem seltenen Ausnahmesituationen einen Grund ihn zu verwenden.
-
+Der folgende Abschnitt wird nicht empfohlen und es gibt nur in extrem seltenen
+Ausnahmesituationen einen Grund ihn zu verwenden.
 
 Update nach der alten Methode - sollte heutzutage fast nie mehr verwendet werden
 --------------------------------------------------------------------------------
 
 .. note::
 
-  Die folgenden Inhalte sind sehr alt, vermutlich von ca. 2007 und wurden auf expliziten Wunsch im Wiki belassen.
-
+  Die folgenden Inhalte sind sehr alt, vermutlich von ca. 2007 und wurden auf
+  expliziten Wunsch im Wiki belassen.
 
 Dieser Artikel behandelt das Updaten eines `OpenBSD </OpenBSD>`__-Systems
 *innerhalb* einer Version. Das Upgraden von einer Version auf eine nachfolgende
