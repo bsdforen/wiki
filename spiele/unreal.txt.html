@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>4.5. Unreal &mdash; BSDForen.de 1.0 Dokumentation</title>
@@ -23,10 +24,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -36,6 +37,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
@@ -191,17 +194,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="unreal">
+  <section id="unreal">
 <h1><span class="section-number">4.5. </span>Unreal<a class="headerlink" href="#unreal" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
-<img alt="../_images/logo-freebsd4.png" src="../_images/logo-freebsd4.png" />
-</div>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+</aside>
 <p>Dieses HowTo beschreibt die Installation und Einrichtung von Unreal. Hier geht
 es nicht um „Unreal Gold“ oder die Erweiterung „Return to Na Pali“.
 Die Installation geschieht aktuell auf einem FreeBSD 12.2-RELEASE. Ältere Releases
 haben Probleme bei der Audio Wiedergabe.</p>
-<div class="section" id="vorraussetzungen">
+<section id="vorraussetzungen">
 <h2><span class="section-number">4.5.1. </span>Vorraussetzungen<a class="headerlink" href="#vorraussetzungen" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Eine Unreal Installations CD.</p></li>
@@ -210,8 +213,8 @@ haben Probleme bei der Audio Wiedergabe.</p>
 <li><p>Den UnrealPatch226Final von
 <a class="reference external" href="http://www.oldunreal.com/officialpatches.html">hier</a></p></li>
 </ul>
-</div>
-<div class="section" id="benotigte-pakete">
+</section>
+<section id="benotigte-pakete">
 <h2><span class="section-number">4.5.2. </span>Benötigte Pakete<a class="headerlink" href="#benotigte-pakete" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Folgende Pakete werden zur Installation bzw. zum Spielen benötigt:</p>
 <ul>
@@ -235,19 +238,19 @@ haben Probleme bei der Audio Wiedergabe.</p>
 <li><p><a class="reference external" href="https://www.freshports.org/archivers/unzip/">archivers/unzip</a> oder</p></li>
 <li><p><a class="reference external" href="https://www.freshports.org/archivers/unrar">archivers/unrar</a></p></li>
 </ul>
-</div>
-<div class="section" id="die-linux-hosts-datei-bearbeiten">
+</section>
+<section id="die-linux-hosts-datei-bearbeiten">
 <h2><span class="section-number">4.5.3. </span>Die Linux hosts Datei bearbeiten<a class="headerlink" href="#die-linux-hosts-datei-bearbeiten" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Damit im Spiel das Speichern/Laden funktioniert müssen die IP Adresse
 und der Hostname des Rechners in der Datei /compat/linux/etc/hosts
 eingetragen werden.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>       <span class="n">localhost</span> <span class="n">localhost</span><span class="o">.</span><span class="n">localdomain</span> <span class="n">localhost4</span> <span class="n">localhost4</span><span class="o">.</span><span class="n">localdomain4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">127.0.0.1</span>       <span class="n">localhost</span> <span class="n">localhost</span><span class="o">.</span><span class="n">localdomain</span> <span class="n">localhost4</span> <span class="n">localhost4</span><span class="o">.</span><span class="n">localdomain4</span>
 <span class="p">::</span><span class="mi">1</span>             <span class="n">localhost</span> <span class="n">localhost</span><span class="o">.</span><span class="n">localdomain</span> <span class="n">localhost6</span> <span class="n">localhost6</span><span class="o">.</span><span class="n">localdomain6</span>
 <span class="mf">192.168</span><span class="o">.</span><span class="n">X</span><span class="o">.</span><span class="n">X</span>     <span class="n">hostname</span>  <span class="c1"># &lt;- IP Adresse und Hostname eintregen</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="installation">
+</section>
+<section id="installation">
 <h2><span class="section-number">4.5.4. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Es empfiehlt sich ein separates WINEPREFIX anzulegen welches am Ende wieder
 einfach entfernt werden kann.</p>
@@ -267,8 +270,8 @@ CD zeigt, da es für die Installation der Patches benötigt wird.</p>
 <p>Im Installer dann den Zielpfad eingeben. Wenn man das WINEPREFIX wieder löschen möchte muss
 darauf geachtet werden, das das Installationsverzeichnis außerhalb liegt (z.B. Z:\home\user\Unreal).
 Dann im Fenster „Select Components“ DirectX 5 und den UnrealEd abwählen. <a class="align-center reference internal" href="../_images/unreal-select_components.png"><img alt="image2" class="align-center" src="../_images/unreal-select_components.png" style="width: 200px;" /></a></p>
-</div>
-<div class="section" id="das-spiel-patchen">
+</section>
+<section id="das-spiel-patchen">
 <h2><span class="section-number">4.5.5. </span>Das Spiel Patchen<a class="headerlink" href="#das-spiel-patchen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Zuerst den offiziellen Patch 226Final installieren da der Patch 227i
 mindestens den Patch 224 vorraussetzt.</p>
@@ -281,8 +284,8 @@ mindestens den Patch 224 vorraussetzt.</p>
 </div>
 <p>Und nicht vergessen den Haken bei „Linux native Dateien“ zu setzen.
 <a class="align-center reference internal" href="../_images/unreal-patch227i.png"><img alt="image3" class="align-center" src="../_images/unreal-patch227i.png" style="width: 200px;" /></a></p>
-</div>
-<div class="section" id="benotigte-libs-kopieren">
+</section>
+<section id="benotigte-libs-kopieren">
 <h2><span class="section-number">4.5.6. </span>Benötigte Libs kopieren<a class="headerlink" href="#benotigte-libs-kopieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Im Installationsverzeichnis gibt es im Ordner „Help“ die Datei
 lin_convenience_libs.tar.bz2. Diese muss entpackt und die Dateien in das
@@ -296,17 +299,17 @@ Verzeichnis „System“ verschoben werden.</p>
 <p>Damit das Spiel mit linux_base-c7 funktioniert müssen einige der Dateien wieder
 entfernt werden.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libgcc_s</span><span class="o">.</span><span class="n">so</span>
-<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libgcc_s</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mi">1</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libgcc_s</span><span class="o">.</span><span class="n">so</span><span class="mf">.1</span>
 <span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span>
-<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span><span class="o">.</span><span class="mi">6</span>
-<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span><span class="o">.</span><span class="mf">6.0</span><span class="o">.</span><span class="mi">8</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span><span class="mf">.6</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span><span class="mf">.6.0.8</span>
 <span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libXxf86dga</span><span class="o">.</span><span class="n">so</span>
-<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libXxf86dga</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mi">1</span>
-<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libXxf86dga</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">0</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libXxf86dga</span><span class="o">.</span><span class="n">so</span><span class="mf">.1</span>
+<span class="o">%</span> <span class="n">rm</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">libXxf86dga</span><span class="o">.</span><span class="n">so</span><span class="mf">.1.0.0</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="binary-ausfuhrbar-machen">
+</section>
+<section id="binary-ausfuhrbar-machen">
 <h2><span class="section-number">4.5.7. </span>Binary ausführbar machen<a class="headerlink" href="#binary-ausfuhrbar-machen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die Datei UnrealLinux.bin hat bei mir zu Problemen mit der Maus geführt
 weshalb ich das Spiel über UnrealXLinux.bin starte. Dazu muss diese noch
@@ -314,24 +317,24 @@ ausführbar gemacht werden.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">chmod</span> <span class="n">u</span><span class="o">+</span><span class="n">x</span> <span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">UNREAL</span><span class="o">/</span><span class="n">UnrealXLinux</span><span class="o">.</span><span class="n">bin</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="spiel-starten">
+</section>
+<section id="spiel-starten">
 <h2><span class="section-number">4.5.8. </span>Spiel starten<a class="headerlink" href="#spiel-starten" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Nun kann das Spiel endlich gestartet werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /PATH/TO/UNREAL/System</span>
 <span class="c1"># ./UnrealXLinux.bin</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="verwandte-artikel">
+</section>
+<section id="verwandte-artikel">
 <h2><span class="section-number">4.5.9. </span>verwandte Artikel<a class="headerlink" href="#verwandte-artikel" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Es empfiehlt sich zu diesem Thema auch folgenden Artikel gelesen zu
 haben.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="hauptseite">FreeBSD - Spiele</a></p></li>
 </ul>
-</div>
-<div class="section" id="links">
+</section>
+<section id="links">
 <h2><span class="section-number">4.5.10. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.oldunreal.com/index.html">Homepage von Old Unreal</a></p></li>
@@ -339,9 +342,9 @@ haben.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2020-11-23</p>
-</div>
-</div>
+<p>Zuletzt geändert: 2021-05-24</p>
+</section>
+</section>
 
 
            </div>

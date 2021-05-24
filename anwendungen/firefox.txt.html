@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.8. Firefox &mdash; BSDForen.de 1.0 Dokumentation</title>
@@ -23,10 +24,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -36,6 +37,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
@@ -221,12 +224,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="firefox">
+  <section id="firefox">
 <h1><span class="section-number">2.8. </span>Firefox<a class="headerlink" href="#firefox" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</div>
+</aside>
 <p><a class="reference external" href="http://www.mozilla-europe.org/de">Firefox</a> ist ein Standalone-Browser, der
 im Gegensatz zum Vorgänger Mozilla keinen Web-Editor und keinen Mail- und
 News-Reader integriert hat. Er läuft auf nahezu jeder bekannten
@@ -236,7 +239,7 @@ Verbreitungszahlen betrifft. Die ursprüngliche Idee war, ein Leichtgewicht aus
 der doch recht großen Mozilla-Suite zu machen. Fehlende Funktionen sollen über
 Plugins nachgerüstet werden. Wie die anderen Browser aus der Mozilla-Familie
 auch, bedient sich Firefox des Gecko-Renderers. <a class="align-right reference internal" href="../_images/firefox.png"><img alt="Firefox" class="align-right" src="../_images/firefox.png" style="width: 180px;" /></a></p>
-<div class="section" id="internationalisierung">
+<section id="internationalisierung">
 <h2><span class="section-number">2.8.1. </span>Internationalisierung<a class="headerlink" href="#internationalisierung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Unter FreeBSD gibt es nur eine englische Version. Will man also eine
 andere Sprachversion, muß man noch den Port
@@ -251,13 +254,13 @@ eine Liste der benötigten Sprachen in <strong>/etc/make.conf</strong> festlegen
 <a class="reference external" href="http://de.wikipedia.org/wiki/ISO-3166-1-Kodierliste">http://de.wikipedia.org/wiki/ISO-3166-1-Kodierliste</a>. Ein Blick in das
 Makefile des Ports verrät zusätzlich, welche Sprachversionen verfügbar
 sind.</p>
-</div>
-<div class="section" id="add-ons">
+</section>
+<section id="add-ons">
 <h2><span class="section-number">2.8.2. </span>Add-ons<a class="headerlink" href="#add-ons" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Unter <a class="reference external" href="https://addons.mozilla.org/de/firefox">https://addons.mozilla.org/de/firefox</a> findet man verfügbare
 Erweiterungen für den Firefox.</p>
-</div>
-<div class="section" id="e-mails">
+</section>
+<section id="e-mails">
 <h2><span class="section-number">2.8.3. </span>E-Mails<a class="headerlink" href="#e-mails" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Während man beim Mozilla oder Seamonkey E-Mail-Links anklickt und der
 Mail-Editor automatisch gestartet wird, benötigt der Firefox hier eine
@@ -273,8 +276,8 @@ eine Box geöffnet, die nach einem Eigenschaftsnamen fragt. Hier ist
 <strong>network.protocol-handler.app.mailto</strong> einzugeben. In einer weiteren
 Box erfolgt die Frage nach dem Wert für diese Eigenschaft. Das ist der
 Programmpfad z.B. <strong>/usr/local/bin/thunderbird</strong>.</p>
-</div>
-<div class="section" id="suchmaschinen">
+</section>
+<section id="suchmaschinen">
 <h2><span class="section-number">2.8.4. </span>Suchmaschinen<a class="headerlink" href="#suchmaschinen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In der Suchmaske oben Rechts kann die Suchmaschine intuitiv ausgewählt
 werden. Leider ist das bei der Suche über die URL-Eingabe nicht so. Aber
@@ -307,8 +310,8 @@ Suchmaschine <a class="reference external" href="http://clusty.com">Clusty</a>.<
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="siehe-auch">
+</section>
+<section id="siehe-auch">
 <h2><span class="section-number">2.8.5. </span>Siehe auch<a class="headerlink" href="#siehe-auch" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="/HowTo/ed2k-protokoll">ed2k-Links/aMule</a> - Eine Beschreibung für
@@ -322,9 +325,9 @@ Einbinden von Acrobat-Reader, Flash, Java.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2020-11-23</p>
-</div>
-</div>
+<p>Zuletzt geändert: 2021-05-24</p>
+</section>
+</section>
 
 
            </div>

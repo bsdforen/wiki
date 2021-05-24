@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>3.4. Hardware-Guide &mdash; BSDForen.de 1.0 Dokumentation</title>
@@ -23,10 +24,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -36,6 +37,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
@@ -196,17 +199,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="hardware-guide">
+  <section id="hardware-guide">
 <h1><span class="section-number">3.4. </span>Hardware-Guide<a class="headerlink" href="#hardware-guide" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
-<img alt="../_images/logo-freebsd2.png" src="../_images/logo-freebsd2.png" />
-</div>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+</aside>
 <p>Dieser Artikel ist noch nicht fertig. Genauergesagt fehlt noch das worum es
 eigentlich geht undzwar die meisten Tabellen mit der Treibersituation für
 Hardware bestimmter Hersteller sortiert nach Hardware-Rubrik! Hilf mit oder
 warte ab :-D</p>
-<div class="section" id="allgemeines">
+<section id="allgemeines">
 <h2><span class="section-number">3.4.1. </span>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line">Dieser Guide soll einen Überblick über „Hardware und die BSDs“ geben.
@@ -221,7 +224,7 @@ Codefreiheit, Hardware-Dokumentation und BLObs.</div>
 können wie gut/schlecht sie die BSDs und andere Freie Betriebsysteme
 unterstützen.</div>
 </div>
-<div class="section" id="keine-dokumentation-keine-treiber">
+<section id="keine-dokumentation-keine-treiber">
 <h3><span class="section-number">3.4.1.1. </span>keine Dokumentation, keine Treiber<a class="headerlink" href="#keine-dokumentation-keine-treiber" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="line-block">
 <div class="line">Diese Hardware läuft offensichtlich überhaupt nicht. Wenn man etwas
@@ -229,8 +232,8 @@ aus dieser Kategorie hat ist man aufgeschmissen. Hersteller solcher
 Hardware sollte man aus Prinzip meiden.</div>
 <div class="line">Hersteller dieser Gruppe sind in den Tabellen schwarz markiert.</div>
 </div>
-</div>
-<div class="section" id="keine-dokumentation-blob-treiber">
+</section>
+<section id="keine-dokumentation-blob-treiber">
 <h3><span class="section-number">3.4.1.2. </span>keine Dokumentation, BLOB-Treiber<a class="headerlink" href="#keine-dokumentation-blob-treiber" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="line-block">
 <div class="line">BLOb steht für <strong>B</strong>inary<strong>L</strong>anguage<strong>Ob</strong>ject, Treiber die
@@ -259,8 +262,8 @@ versucht zum laufen zu kriegen deswegen ein schlechter Mensch oder
 achtet beim Kauf neuer Hardware darauf, dass sie keine BLObs benötigt.</div>
 <div class="line">Hersteller dieser Gruppe sind in den Tabellen rot markiert.</div>
 </div>
-</div>
-<div class="section" id="dokumentation-oder-freie-treiber">
+</section>
+<section id="dokumentation-oder-freie-treiber">
 <h3><span class="section-number">3.4.1.3. </span>Dokumentation oder freie Treiber<a class="headerlink" href="#dokumentation-oder-freie-treiber" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="line-block">
 <div class="line">Diese Hersteller sind die „Guten“ ;-) Entweder wird Dokumentation
@@ -271,8 +274,8 @@ integriert, die Hardware wird somit oft automatisch erkannt und gut
 unterstützt.</div>
 <div class="line">Hersteller dieser Gruppe sind in den Tabellen grün markiert.</div>
 </div>
-</div>
-<div class="section" id="freie-treiber-durch-reverse-engineering">
+</section>
+<section id="freie-treiber-durch-reverse-engineering">
 <h3><span class="section-number">3.4.1.4. </span>freie Treiber durch Reverse-Engineering<a class="headerlink" href="#freie-treiber-durch-reverse-engineering" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="line-block">
 <div class="line">Wenn ein Hersteller zur I. oder II. Kategorie gehört wird oft versucht
@@ -286,8 +289,8 @@ kann es schon ein wichtig Kriterium sein, besonders wegen den
 praktischen Vorteilen gegenüber BLOb und dem Mangel an Alternativen.</div>
 <div class="line">Hardware dieser Hersteller ist gelb markiert.</div>
 </div>
-</div>
-<div class="section" id="firmware">
+</section>
+<section id="firmware">
 <h3><span class="section-number">3.4.1.5. </span>Firmware<a class="headerlink" href="#firmware" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="line-block">
 <div class="line">Neben Treibern, die <em>Software</em> sind, gibt es noch <em>Firmware</em>. Der Name
@@ -308,31 +311,31 @@ verändern <em>darf</em> (und praktisch nicht kann) obwohl man es <em>könnte</e
 ohne, dass jemand zu Schaden kommt (falls man auf sowas wie Freiheit
 wert legt ;-) ).</div>
 </div>
-</div>
-</div>
-<div class="section" id="hardware">
+</section>
+</section>
+<section id="hardware">
 <h2><span class="section-number">3.4.2. </span>Hardware<a class="headerlink" href="#hardware" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="grafikkarten-2d-support">
+<section id="grafikkarten-2d-support">
 <h3><span class="section-number">3.4.2.1. </span>Grafikkarten (2D-Support)<a class="headerlink" href="#grafikkarten-2d-support" title="Link zu dieser Überschrift">¶</a></h3>
-</div>
-<div class="section" id="grafikkarten-3d-support">
+</section>
+<section id="grafikkarten-3d-support">
 <h3><span class="section-number">3.4.2.2. </span>Grafikkarten (3D-Support)<a class="headerlink" href="#grafikkarten-3d-support" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Für mehr Informationen zum Thema 3D-Beschleunigung mit freien Treibern:</p>
 <p><a class="reference external" href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">https://wiki.archlinux.org/index.php/Hardware_video_acceleration</a></p>
-</div>
-<div class="section" id="lan">
+</section>
+<section id="lan">
 <h3><span class="section-number">3.4.2.3. </span>LAN<a class="headerlink" href="#lan" title="Link zu dieser Überschrift">¶</a></h3>
 <p>TODO</p>
-</div>
-<div class="section" id="mainboard-chipsatze">
+</section>
+<section id="mainboard-chipsatze">
 <h3><span class="section-number">3.4.2.4. </span>Mainboard / Chipsätze<a class="headerlink" href="#mainboard-chipsatze" title="Link zu dieser Überschrift">¶</a></h3>
 <p>TODO</p>
-</div>
-<div class="section" id="soundkarten">
+</section>
+<section id="soundkarten">
 <h3><span class="section-number">3.4.2.5. </span>Soundkarten<a class="headerlink" href="#soundkarten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>TODO</p>
-</div>
-<div class="section" id="wlan">
+</section>
+<section id="wlan">
 <h3><span class="section-number">3.4.2.6. </span>WLAN<a class="headerlink" href="#wlan" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="line-block">
 <div class="line">Siehe dazu den
@@ -344,10 +347,10 @@ Hersteller-basierte und übersichtlichere Tabelle machen.</div>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2020-11-23</p>
-</div>
-</div>
-</div>
+<p>Zuletzt geändert: 2021-05-24</p>
+</section>
+</section>
+</section>
 
 
            </div>

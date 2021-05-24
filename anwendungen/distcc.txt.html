@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.5. Distcc &mdash; BSDForen.de 1.0 Dokumentation</title>
@@ -23,10 +24,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -36,6 +37,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
@@ -226,18 +229,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="distcc">
+  <section id="distcc">
 <h1><span class="section-number">2.5. </span>Distcc<a class="headerlink" href="#distcc" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</div>
+</aside>
 <p>Das Programm distcc wird dazu verwendet, die Rechenlast beim Kompilieren
 von C und C++ Programmen auf mehrere Rechner in einem Netz zu verteilen.</p>
-<div class="section" id="einleitung">
+<section id="einleitung">
 <h2><span class="section-number">2.5.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
 <p><a class="align-right reference internal" href="../_images/distcc.png"><img alt="Distcc in einem 2 Rechner Netz beim Bauen eines FreeBSD Ports." class="align-right" src="../_images/distcc.png" style="width: 180px;" /></a> Die
 Software besteht aus einer
@@ -249,24 +252,24 @@ keinerlei Authentifizierung gibt, sollte der Dienst nur in
 vertrauenswürdigen Netzen oder über ein
 <a class="reference external" href="https://de.wikipedia.org/wiki/Virtual_Private_Network">VPN</a>
 erreichbar sein.</p>
-</div>
-<div class="section" id="einrichtung">
+</section>
+<section id="einrichtung">
 <h2><span class="section-number">2.5.2. </span>Einrichtung<a class="headerlink" href="#einrichtung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Zur Einrichtung ist außer der Installation auch das Anlegen einer Liste
 erreichbarer Server bzw. das Einrichten des Daemon erforderlich.</p>
-<div class="section" id="installation-freebsd">
+<section id="installation-freebsd">
 <h3><span class="section-number">2.5.2.1. </span>Installation (FreeBSD)<a class="headerlink" href="#installation-freebsd" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der distcc findet sich in den FreeBSD Ports unter
 <a class="reference external" href="https://www.google.com/search?q=devel/distcc&amp;btnI=lucky">devel/distcc</a>.</p>
-</div>
-<div class="section" id="installation-openbsd">
+</section>
+<section id="installation-openbsd">
 <h3><span class="section-number">2.5.2.2. </span>Installation (OpenBSD)<a class="headerlink" href="#installation-openbsd" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Da sich der distcc nicht im offiziellen Ports-Tree befindet, muss er
 hier entweder per Hand oder durch den <a class="reference external" href="http://www.ajd.net.au/ports/">inoffiziellen
 Port</a> installiert werden. Letzteres ist
 der bevorzugte Weg (sauberer).</p>
-</div>
-<div class="section" id="client-freebsd">
+</section>
+<section id="client-freebsd">
 <h3><span class="section-number">2.5.2.3. </span>Client (FreeBSD)<a class="headerlink" href="#client-freebsd" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Um FreeBSD als Client einzusetzen, muss das Verzeichnis
 /usr/local/etc/distcc angelegt werden. In das Verzeichnis gehört eine
@@ -298,8 +301,8 @@ unterstützt wird. Diese Einschränkung kann man weitestgehend mit
 Verwendung des distcc für einzelne Ports zu aktivieren oder zu
 unterbinden.</p>
 <p>Beim Bau von Welt oder Kernel entstehen keine Probleme.</p>
-</div>
-<div class="section" id="server-freebsd">
+</section>
+<section id="server-freebsd">
 <h3><span class="section-number">2.5.2.4. </span>Server (FreeBSD)<a class="headerlink" href="#server-freebsd" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Um den distcc Daemon zu verwenden, muss distccd_flags in der
 /etc/rc.conf gesetzt werden, da der Daemon sonst aus Sicherheitsgründen
@@ -324,9 +327,9 @@ Befehl</p>
 </pre></div>
 </div>
 <p>aktivieren.</p>
-</div>
-</div>
-<div class="section" id="zusammenarbeit-zwischen-i386-und-amd64">
+</section>
+</section>
+<section id="zusammenarbeit-zwischen-i386-und-amd64">
 <h2><span class="section-number">2.5.3. </span>Zusammenarbeit zwischen i386 und amd64<a class="headerlink" href="#zusammenarbeit-zwischen-i386-und-amd64" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um Rechenzeit in einen Verbund aus einer i386/amd64 Mischung zu
 verteilen müssen die Compiler erfahren für welche Architektur sie
@@ -342,8 +345,8 @@ CFLAGS+=  -m32
 <p>Für einen amd64-Client heißt der Parameter schlicht <strong>-m64</strong>. Eine
 Lösung zum Bauen von Welt und Kernel wurde vom Autor noch nicht
 getestet.</p>
-</div>
-<div class="section" id="verweise">
+</section>
+<section id="verweise">
 <h2><span class="section-number">2.5.4. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://distcc.samba.org">http://distcc.samba.org</a> die distcc Homepage.</p></li>
@@ -355,9 +358,9 @@ in Pkgsrc.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2020-11-23</p>
-</div>
-</div>
+<p>Zuletzt geändert: 2021-05-24</p>
+</section>
+</section>
 
 
            </div>

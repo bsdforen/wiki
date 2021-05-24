@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.34. Thunar &mdash; BSDForen.de 1.0 Dokumentation</title>
@@ -23,10 +24,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -36,6 +37,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
@@ -224,20 +227,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="thunar">
+  <section id="thunar">
 <h1><span class="section-number">2.34. </span>Thunar<a class="headerlink" href="#thunar" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</div>
+</aside>
 <p><a class="reference external" href="http://thunar.xfce.org">Thunar</a> ist ein grafischer Dateimanager für
 X-Window unter UNIX. Als Teil der Desktopumgebung
 <a class="reference external" href="http://www.xfce.org">Xfce</a> / <a class="reference external" href="xfce4">xfce4</a> kann Thunar mit
 Plug-Ins erweitert werden.</p>
-<div class="section" id="installation">
+<section id="installation">
 <h2><span class="section-number">2.34.1. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
 <p><a class="align-right reference internal" href="http://thunar.xfce.org/images/filewindow-1.png"><img alt="Screenshot" class="align-right" src="http://thunar.xfce.org/images/filewindow-1.png" style="width: 180px;" /></a> Thunar wird seit xfce4 V 4.4.x automatisch mit dem
 meta-port
@@ -249,10 +252,10 @@ werden:</p>
 </div>
 <p>Als Optionen zum Kompilieren sollten mindestens <strong>DBUS</strong>, <strong>HAL</strong>,
 <strong>JPEG</strong> und <strong>STARTUP</strong> gewählt werden.</p>
-</div>
-<div class="section" id="post-installation">
+</section>
+<section id="post-installation">
 <h2><span class="section-number">2.34.2. </span>Post-Installation<a class="headerlink" href="#post-installation" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="theme">
+<section id="theme">
 <h3><span class="section-number">2.34.2.1. </span>Theme<a class="headerlink" href="#theme" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wird nicht die Desktopumgebung Xfce verwendet, nutzt Thunar keine Themes
 und kommt darum in einem tristen Erscheinungsbild daher. Folgender
@@ -268,8 +271,8 @@ den Ports installieren:</p>
 </div>
 <p>Selbstverständlich können auch andere <a class="reference external" href="http://art.gnome.org/themes">GTK
 Themes</a> verwendet werden.</p>
-</div>
-<div class="section" id="d-bus-hal">
+</section>
+<section id="d-bus-hal">
 <h3><span class="section-number">2.34.2.2. </span>D-BUS &amp; HAL<a class="headerlink" href="#d-bus-hal" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wurde Thunar mit der Option
 <a class="reference external" href="http://www.freedesktop.org/wiki/Software/dbus">D-BUS</a> und
@@ -285,26 +288,26 @@ werden. D-Bus und HAL können ohne Neustart wie folgt gestartet werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/local/etc/rc.d/dbus start # /usr/local/etc/rc.d/hald start</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="plugins">
+</section>
+<section id="plugins">
 <h3><span class="section-number">2.34.2.3. </span>Plugins<a class="headerlink" href="#plugins" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Folgende Plugins können optional installiert werden:</p>
-<div class="section" id="archiv-plugin">
+<section id="archiv-plugin">
 <h4><span class="section-number">2.34.2.3.1. </span>Archiv-Plugin<a class="headerlink" href="#archiv-plugin" title="Link zu dieser Überschrift">¶</a></h4>
 <p><a class="reference external" href="https://www.google.com/search?q=archivers/thunar-archive-plugin&amp;btnI=lucky">archivers/thunar-archive-plugin</a>
 - Packen und Entpacken von Dateien via Kontext-Menü</p>
-</div>
-<div class="section" id="mediatag-plugin">
+</section>
+<section id="mediatag-plugin">
 <h4><span class="section-number">2.34.2.3.2. </span>Mediatag-Plugin<a class="headerlink" href="#mediatag-plugin" title="Link zu dieser Überschrift">¶</a></h4>
 <p><a class="reference external" href="https://www.google.com/search?q=audio/thunar-media-tags-plugin&amp;btnI=lucky">audio/thunar-media-tags-plugin</a>
 - Mediatag-Plugin</p>
-</div>
-<div class="section" id="svn-plugin">
+</section>
+<section id="svn-plugin">
 <h4><span class="section-number">2.34.2.3.3. </span>SVN-Plugin<a class="headerlink" href="#svn-plugin" title="Link zu dieser Überschrift">¶</a></h4>
 <p><a class="reference external" href="https://www.google.com/search?q=devel/thunar-svn-plugin&amp;btnI=lucky">devel/thunar-svn-plugin</a>
 - SVN-Befehle via Kontext-Menü</p>
-</div>
-<div class="section" id="geratemanager-plugin">
+</section>
+<section id="geratemanager-plugin">
 <h4><span class="section-number">2.34.2.3.4. </span>Gerätemanager-Plugin<a class="headerlink" href="#geratemanager-plugin" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Erst mit dem <a class="reference external" href="https://www.google.com/search?q=sysutils/thunar-volman-plugin&amp;btnI=lucky">Thunar Volume
 Manager</a>
@@ -317,9 +320,9 @@ werden. Unter dem Link <strong>Configure</strong> im gleichen Reiter können
 anschliessend die Optionen für den Datenträger- und Media-Verwaltung
 gesetzt werden.</p>
 <p>Voraussetzung ist, dass DBUS und HAL installiert und aktiviert sind.</p>
-</div>
-</div>
-<div class="section" id="siehe-auch">
+</section>
+</section>
+<section id="siehe-auch">
 <h3><span class="section-number">2.34.2.4. </span>Siehe auch<a class="headerlink" href="#siehe-auch" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="xfce4">xfce4</a></p></li>
@@ -328,10 +331,10 @@ gesetzt werden.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2020-11-23</p>
-</div>
-</div>
-</div>
+<p>Zuletzt geändert: 2021-05-24</p>
+</section>
+</section>
+</section>
 
 
            </div>

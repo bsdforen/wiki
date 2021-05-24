@@ -44,7 +44,6 @@ Die hier aufgeführten Artikel sind in der Regel
    dns-cache.txt.rst
    drucken_mit_apsfilter.txt.rst
    drucken_mit_windows.txt.rst
-   dsl-router.txt.rst
    dsl_konfigurieren_netbsd.txt.rst
    dvb-t_karte_hauppauge_wintv-hvr_1300.txt.rst
    dvb_unter_freebsd.txt.rst
@@ -75,7 +74,6 @@ Die hier aufgeführten Artikel sind in der Regel
    ipsec-vpn.txt.rst
    ipv6_netzwerke.txt.rst
    irc-protokoll.txt.rst
-   iso-erstellung_openbsd.txt.rst
    iso-images_mounten.txt.rst
    iso-images_von_optischen_medien_erzeugen.txt.rst
    jails.txt.rst
@@ -125,7 +123,6 @@ Die hier aufgeführten Artikel sind in der Regel
    soundkarte_einrichten.txt.rst
    speaker_deaktivieren.txt.rst
    ssh.txt.rst
-   strato_mr2_openbsd.txt.rst
    suspend_resume_thinkpad.txt.rst
    system_in_raid1_verwandeln.txt.rst
    systemueberwachung.txt.rst
@@ -144,7 +141,6 @@ Die hier aufgeführten Artikel sind in der Regel
    unix-freigabe.txt.rst
    updaten_von_openbsd.txt.rst
    usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.rst
-   usb-stick_bootfaehig_machen_openbsd.txt.rst
    usb-stick_installation.txt.rst
    usb-stick_unterstuetzung.txt.rst
    usb_automount_ohne_hal.txt.rst

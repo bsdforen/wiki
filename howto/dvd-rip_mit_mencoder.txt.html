@@ -5,10 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.41. DVD-Rip mit mencoder &mdash; BSDForen.de 1.0 Dokumentation</title>
+  <title>1.40. DVD-Rip mit mencoder &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
@@ -23,10 +24,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -36,11 +37,13 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="1.42. DVDs brennen" href="dvds_brennen.txt.html" />
-    <link rel="prev" title="1.40. DVB unter FreeBSD" href="dvb_unter_freebsd.txt.html" /> 
+    <link rel="next" title="1.41. DVDs brennen" href="dvds_brennen.txt.html" />
+    <link rel="prev" title="1.39. DVB unter FreeBSD" href="dvb_unter_freebsd.txt.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -123,143 +126,139 @@
 <li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1.41. DVD-Rip mit mencoder</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#programme">1.41.1. Programme</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installation-des-skripts">1.41.2. Installation des Skripts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#vorbereitung">1.41.3. Vorbereitung</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#der-richtige-film">1.41.3.1. Der Richtige Film</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#die-richtige-tonspur">1.41.3.2. Die Richtige Tonspur</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#untertitel">1.41.3.3. Untertitel</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bitrate">1.41.3.4. Bitrate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bildbreite">1.41.3.5. Bildbreite</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dateiname">1.41.3.6. Dateiname</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lautstarke">1.41.3.7. Lautstärke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.37. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.38. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.39. DVB unter FreeBSD</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.40. DVD-Rip mit mencoder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#programme">1.40.1. Programme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-des-skripts">1.40.2. Installation des Skripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vorbereitung">1.40.3. Vorbereitung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#der-richtige-film">1.40.3.1. Der Richtige Film</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#die-richtige-tonspur">1.40.3.2. Die Richtige Tonspur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#untertitel">1.40.3.3. Untertitel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitrate">1.40.3.4. Bitrate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bildbreite">1.40.3.5. Bildbreite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dateiname">1.40.3.6. Dateiname</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lautstarke">1.40.3.7. Lautstärke</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#rippen">1.41.4. Rippen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#single-cd-rip">1.41.4.1. Single CD Rip</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#filme-auf-eine-dvd">1.41.4.2. 3 Filme auf eine DVD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rippen">1.40.4. Rippen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#single-cd-rip">1.40.4.1. Single CD Rip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filme-auf-eine-dvd">1.40.4.2. 3 Filme auf eine DVD</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#skript">1.41.5. Skript</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#verweise">1.41.6. Verweise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skript">1.40.5. Skript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verweise">1.40.6. Verweise</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
-<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
-<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
-<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
-<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
-<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
-<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
-<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
-<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.151. ZFS auf FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.41. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.42. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.43. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.44. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.45. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.46. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.47. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.48. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.49. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.50. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.51. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.52. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.53. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.54. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.55. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.56. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.57. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.58. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.59. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.60. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.61. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.62. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.63. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.64. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.65. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.66. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.67. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.68. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.69. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.70. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.71. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.72. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.73. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.74. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.75. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.76. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.77. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.78. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.79. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.80. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.81. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.82. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.83. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.84. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.85. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.86. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.87. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.88. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.89. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.90. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.91. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.92. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.93. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.94. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.95. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.96. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.97. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.98. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.99. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.100. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.101. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.102. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.103. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.104. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.105. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.106. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.107. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.108. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.109. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.110. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.111. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.112. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.113. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.114. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.115. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.116. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.117. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.118. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.119. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.120. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.121. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.122. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.123. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.124. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.125. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.126. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.127. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.128. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.129. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.130. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.131. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.132. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.133. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.134. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.135. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.136. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.137. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.138. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.139. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.140. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.141. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.142. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.143. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.144. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.145. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.146. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.147. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.148. ZFS (raidz), Geli und USB Boot</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
@@ -317,7 +316,7 @@
         
           <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
         
-      <li><span class="section-number">1.41. </span>DVD-Rip mit mencoder</li>
+      <li><span class="section-number">1.40. </span>DVD-Rip mit mencoder</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -333,10 +332,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="dvds_brennen.txt.html" class="btn btn-neutral float-right" title="1.42. DVDs brennen" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dvds_brennen.txt.html" class="btn btn-neutral float-right" title="1.41. DVDs brennen" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="dvb_unter_freebsd.txt.html" class="btn btn-neutral float-left" title="1.40. DVB unter FreeBSD" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="dvb_unter_freebsd.txt.html" class="btn btn-neutral float-left" title="1.39. DVB unter FreeBSD" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -345,19 +344,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="dvd-rip-mit-mencoder">
-<h1><span class="section-number">1.41. </span>DVD-Rip mit mencoder<a class="headerlink" href="#dvd-rip-mit-mencoder" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+  <section id="dvd-rip-mit-mencoder">
+<h1><span class="section-number">1.40. </span>DVD-Rip mit mencoder<a class="headerlink" href="#dvd-rip-mit-mencoder" title="Link zu dieser Überschrift">¶</a></h1>
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
-<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
-<img alt="../_images/logo-openbsd2.png" src="../_images/logo-openbsd2.png" />
-<img alt="../_images/logo-netbsd2.png" src="../_images/logo-netbsd2.png" />
-<img alt="../_images/logo-dragonflybsd3.png" src="../_images/logo-dragonflybsd3.png" />
-</div>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+<img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
+<img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
+<img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
+</aside>
 <p>Dieser Artikel erklärt wie mit mencoder und einem Skript komfortabel DVDs in
 XviD kodierte avi Filme umgewandelt werden.</p>
-<div class="section" id="programme">
-<h2><span class="section-number">1.41.1. </span>Programme<a class="headerlink" href="#programme" title="Link zu dieser Überschrift">¶</a></h2>
+<section id="programme">
+<h2><span class="section-number">1.40.1. </span>Programme<a class="headerlink" href="#programme" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Benötigt werden <a class="reference external" href="/anwendungen/mplayer">mplayer</a> und mencoder. Unter
 FreeBSD werden die Ports
 <a class="reference external" href="https://www.google.com/search?q=multimedia/mplayer&amp;btnI=lucky">multimedia/mplayer</a>
@@ -371,9 +370,9 @@ Die Arbeit im Vorfeld des Rip geht mit einer graphischen Oberfläche
 (GUI) leichter von Hand. In Beispielen wird fortan die GTK oberfläche
 vorausgesetzt die mit dem Befehl gmplayer aufgerufen wird. Alternative
 Oberflächen sollten äquivalent funktionieren.</p>
-</div>
-<div class="section" id="installation-des-skripts">
-<h2><span class="section-number">1.41.2. </span>Installation des Skripts<a class="headerlink" href="#installation-des-skripts" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="installation-des-skripts">
+<h2><span class="section-number">1.40.2. </span>Installation des Skripts<a class="headerlink" href="#installation-des-skripts" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der empfohlene Installationsort des Skripts ist in <strong>$HOME/bin</strong>, dort
 ist es nur im <strong>PATH</strong> des entsprechenden Nutzers vorhanden. Das Skript
 kann direkt aus dem Wiki exportiert werden.</p>
@@ -384,17 +383,17 @@ kann direkt aus dem Wiki exportiert werden.</p>
 </div>
 <p>Nach der Installation muss je nach Shell möglicherweise das Kommando
 <code class="docutils literal notranslate"><span class="pre">rehash</span></code> ausgeführt werden.</p>
-</div>
-<div class="section" id="vorbereitung">
-<h2><span class="section-number">1.41.3. </span>Vorbereitung<a class="headerlink" href="#vorbereitung" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="vorbereitung">
+<h2><span class="section-number">1.40.3. </span>Vorbereitung<a class="headerlink" href="#vorbereitung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mencoder kann beliebige Quellen statt sie am Bildschirm auszugeben in
 Dateien umleiten oder umwandeln, dieser Artikel behandelt jedoch
 ausschließlich DVD Rips. Bevor der Rip einer DVD gestartet wird, sollte
 mplayer mit entsprechenden Parametern aufgerufen werden. Es fängt damit
 an die gewünschte DVD einzulegen (unter FreeBSD ist /dev/acd0 das
 Standardlaufwerk).</p>
-<div class="section" id="der-richtige-film">
-<h3><span class="section-number">1.41.3.1. </span>Der Richtige Film<a class="headerlink" href="#der-richtige-film" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="der-richtige-film">
+<h3><span class="section-number">1.40.3.1. </span>Der Richtige Film<a class="headerlink" href="#der-richtige-film" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der erste Aufruf ist</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># gmplayer dvd://</span>
 </pre></div>
@@ -409,9 +408,9 @@ werden. In diesem Beispiel mit dem 5. Titel.</p>
 <p>Sollte der mit dem ersten Aufruf gespielte Titel korrekt sein, ist es
 nicht notwendig eine Quelle bei Aufruf des Skript anzugeben, da das
 Skript <strong>dvd://</strong> als Standardquelle behandelt.</p>
-</div>
-<div class="section" id="die-richtige-tonspur">
-<h3><span class="section-number">1.41.3.2. </span>Die Richtige Tonspur<a class="headerlink" href="#die-richtige-tonspur" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="die-richtige-tonspur">
+<h3><span class="section-number">1.40.3.2. </span>Die Richtige Tonspur<a class="headerlink" href="#die-richtige-tonspur" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn die Standardtonspur nicht die gewünschte ist schafft der Parameter
 <strong>-alang</strong> abhilfe. Der Aufruf</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mplayer dvd://5 -alang de</span>
@@ -427,9 +426,9 @@ bei der Wiedergabe aus. Zum Beispiel:</p>
 <span class="n">audio</span> <span class="n">stream</span><span class="p">:</span> <span class="mi">2</span> <span class="nb">format</span><span class="p">:</span> <span class="n">ac3</span> <span class="p">(</span><span class="mf">5.1</span><span class="p">)</span> <span class="n">language</span><span class="p">:</span> <span class="n">ja</span> <span class="n">aid</span><span class="p">:</span> <span class="mf">130.</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="untertitel">
-<h3><span class="section-number">1.41.3.3. </span>Untertitel<a class="headerlink" href="#untertitel" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="untertitel">
+<h3><span class="section-number">1.40.3.3. </span>Untertitel<a class="headerlink" href="#untertitel" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Unter Umständen sind auch Untertitel erwünscht. Analog zu den Tonspuren
 gibt es die Paramenter <strong>-slang</strong> und <strong>-sid</strong>. Der Aufruf</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mplayer dvd:// -alang ja -slang de</span>
@@ -448,9 +447,9 @@ komplett untergebracht werden können. Das Skript bietet den Parameter
 <strong>-dvd-sub-bottom</strong> um die Untertitel von DVDs so weit unten wie möglich
 am Rand des Films zu platzieren. Die Option entspricht den mplayer
 Parametern <strong>-spuaa 16 -spualign 2</strong>.</p>
-</div>
-<div class="section" id="bitrate">
-<h3><span class="section-number">1.41.3.4. </span>Bitrate<a class="headerlink" href="#bitrate" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="bitrate">
+<h3><span class="section-number">1.40.3.4. </span>Bitrate<a class="headerlink" href="#bitrate" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Bitrate bestimmt den Platz den das fertige Video auf der Festplatte
 belegen wird. Die Standardbitrate des Skripts für das XviD Bild ist 500
 kbit/s und für die MP3 Tonspur 96 kbit/s. Diese Werte sind recht
@@ -466,9 +465,9 @@ Durchlauf die Bitrate für das Bild errechnet. Das Endergebnis kann
 durchaus auch mal 2% größer als gedacht werden, deshalb sollte die Größe
 sicherheitshalber 3-4% kleiner angeben werden.</p>
 <p>Der Parameter <strong>-xvidrate</strong> gibt einfach die gewünschte Bitrate an.</p>
-</div>
-<div class="section" id="bildbreite">
-<h3><span class="section-number">1.41.3.5. </span>Bildbreite<a class="headerlink" href="#bildbreite" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="bildbreite">
+<h3><span class="section-number">1.40.3.5. </span>Bildbreite<a class="headerlink" href="#bildbreite" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Um das Bild in eine andere Auflösung zu skalieren kann der Parameter
 <strong>-width</strong> verwendet werde, der einfach die Bildbreite in Pixeln
 erwartet. Ursprünglich hat der Autor den Parameter eingeführt um 480
@@ -480,24 +479,24 @@ zusammenfassen will wählt also eine Breite von 576 Pixeln. Eine
 niedrigere Auflösung sieht bei niedrigen Bitraten oft besser aus, weil
 dann weniger Artefakte erscheinen und das Bild stattdessen stärker
 weichgezeichnet wird.</p>
-</div>
-<div class="section" id="dateiname">
-<h3><span class="section-number">1.41.3.6. </span>Dateiname<a class="headerlink" href="#dateiname" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="dateiname">
+<h3><span class="section-number">1.40.3.6. </span>Dateiname<a class="headerlink" href="#dateiname" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Standardmäßig landet das Ergebnis eines Rip in der Datei movie.avi, der
 Parameter <strong>-o</strong> erlaubt die angaben eines anderen Dateinamens.</p>
-</div>
-<div class="section" id="lautstarke">
-<h3><span class="section-number">1.41.3.7. </span>Lautstärke<a class="headerlink" href="#lautstarke" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="lautstarke">
+<h3><span class="section-number">1.40.3.7. </span>Lautstärke<a class="headerlink" href="#lautstarke" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Normalerweise ist der Ton auf DVD Filmen in einem Sourround Format mit
 mindestens 6 Spuren vorhanden. Beim Abmischen auf 2 Kanäle (Stereo) geht
 einiges an Lautstärke verloren. Deshalb hebt das Skript die Lautstärke
 normalerweise gehörig an. Dieses Verhalten kann mit dem Parameter
 <strong>-mp3vol</strong> der Werte von 0 bis 10 erwartet verändert werden. Der
 Standardwert ist 4.</p>
-</div>
-</div>
-<div class="section" id="rippen">
-<h2><span class="section-number">1.41.4. </span>Rippen<a class="headerlink" href="#rippen" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="rippen">
+<h2><span class="section-number">1.40.4. </span>Rippen<a class="headerlink" href="#rippen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn die Vorbereitungen abgeschlossen sind, kann der eigentliche Rip
 beginnen. Abgesehen von den in der Vorbereitung beschriebenen Parametern
 bietet das Skript noch weitere Parameter, die normalerweise nicht
@@ -521,8 +520,8 @@ auszulasten.</p>
 <code class="docutils literal notranslate"><span class="pre">-dump</span></code> aufgerufen werden. Dann wird die DVD nur für den ersten
 Durchgang benötigt. Sobald der abgeschlossen ist, kann die DVD
 herausgenommen werden und ein anderer Rip kann begonnen werden.</p>
-<div class="section" id="single-cd-rip">
-<h3><span class="section-number">1.41.4.1. </span>Single CD Rip<a class="headerlink" href="#single-cd-rip" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="single-cd-rip">
+<h3><span class="section-number">1.40.4.1. </span>Single CD Rip<a class="headerlink" href="#single-cd-rip" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ein Single CD Rip ist ein Rip bei dem eine Dateigröße gewählt wird die
 auf eine einzige CD passt. Hier empfiehlt es sich das Bild ein wenig zu
 verkleinern. Das folgende Beispiel ript eine DVD für einen 700 MB
@@ -530,9 +529,9 @@ Rohling mit englischer Tonspur.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ripXviD -size 675 -width 576 -alang en -o singlCD.avi</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="filme-auf-eine-dvd">
-<h3><span class="section-number">1.41.4.2. </span>3 Filme auf eine DVD<a class="headerlink" href="#filme-auf-eine-dvd" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="filme-auf-eine-dvd">
+<h3><span class="section-number">1.40.4.2. </span>3 Filme auf eine DVD<a class="headerlink" href="#filme-auf-eine-dvd" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wer Filme mitnehmen will ohne seine wertvollen Original DVDs mit sich
 herumzutragen kann bei (subjektiv) sehr guter Qualität 3 Filme auf einen
 Single Layer DVD Rohling unterbringen. Dazu werden Pro Film 1500 MB
@@ -541,10 +540,10 @@ oder sogar 192 kbit/s.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ripXviD -size 1450 -mp3rate 192</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="skript">
-<h2><span class="section-number">1.41.5. </span>Skript<a class="headerlink" href="#skript" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="skript">
+<h2><span class="section-number">1.40.5. </span>Skript<a class="headerlink" href="#skript" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 <span class="nv">command</span><span class="o">=</span>mencoder
 <span class="nv">source</span><span class="o">=</span>dvd://
@@ -568,7 +567,7 @@ oder sogar 192 kbit/s.</p>
 <span class="nv">crop</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
 <span class="nv">width</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
 <span class="k">for</span> parameter<span class="p">;</span> <span class="o">{</span>
-    <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$parameter</span><span class="s2">&quot;</span> in
+    <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$parameter</span><span class="s2">&quot;</span> <span class="k">in</span>
         -dump<span class="o">)</span> <span class="o">{</span>
             <span class="c1"># Dump the first pass output into a file.</span>
             <span class="c1"># This file will be used for the second pass,</span>
@@ -607,7 +606,7 @@ oder sogar 192 kbit/s.</p>
         <span class="o">}</span><span class="p">;;</span>
         *<span class="o">)</span> <span class="o">{</span>
             <span class="c1"># Proceed parameters.</span>
-            <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$type</span><span class="s2">&quot;</span> in
+            <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$type</span><span class="s2">&quot;</span> <span class="k">in</span>
                 size<span class="o">)</span> <span class="o">{</span>
                     <span class="c1"># Set wanted filesize in mb.</span>
                     <span class="c1"># This will override &#39;-xvidrate&#39;.</span>
@@ -758,9 +757,9 @@ rm <span class="s2">&quot;</span><span class="nv">$wrkdir</span><span class="s2"
 <span class="k">fi</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="verweise">
-<h2><span class="section-number">1.41.6. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="verweise">
+<h2><span class="section-number">1.40.6. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Die mplayer <a class="reference external" href="http://www.mplayerhq.hu">Homepage</a>.</p></li>
 <li><p>Die
@@ -787,9 +786,9 @@ in den OpenBSD Ports.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2020-11-23</p>
-</div>
-</div>
+<p>Zuletzt geändert: 2021-05-24</p>
+</section>
+</section>
 
 
            </div>
@@ -799,10 +798,10 @@ in den OpenBSD Ports.</p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dvds_brennen.txt.html" class="btn btn-neutral float-right" title="1.42. DVDs brennen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dvds_brennen.txt.html" class="btn btn-neutral float-right" title="1.41. DVDs brennen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="dvb_unter_freebsd.txt.html" class="btn btn-neutral float-left" title="1.40. DVB unter FreeBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="dvb_unter_freebsd.txt.html" class="btn btn-neutral float-left" title="1.39. DVB unter FreeBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

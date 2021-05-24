@@ -52,13 +52,10 @@ Weitere angepasste (deutsche) Versionen werden von BSDForen-Mitgliedern
 `zur Verfügung
 gestellt </anwendungen/openoffice_aus_inoffiziellen_paketen>`__.
 
-OpenBSD-Port
-------------
+OpenBSD-Package
+---------------
 
-Der
-`OpenBSD-port <http://undeadly.org/cgi?action=article&sid=20070221203023>`__
-benötigt noch weitere Tests, bevor er in OpenBSD 4.1 eingeht. Bitte
-beteiligt euch daran.
+Aus den bekannten verschiedenen Gründen wird unter OpenBSD nur noch das LibreOffice Paket angeboten. Es kann einfach aus den Packages installiert werden.
 
 Weblinks
 --------

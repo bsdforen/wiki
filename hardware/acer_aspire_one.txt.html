@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>3.1. Acer Aspire One &mdash; BSDForen.de 1.0 Dokumentation</title>
@@ -23,10 +24,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -36,6 +37,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
@@ -188,7 +191,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="acer-aspire-one">
+  <section id="acer-aspire-one">
 <h1><span class="section-number">3.1. </span>Acer Aspire One<a class="headerlink" href="#acer-aspire-one" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warnung</p>
@@ -196,16 +199,16 @@
 Die Inhalte gründen nicht auf dem Stand von <cite>FreeBSD 11/12</cite>
 Dennoch können Inhalte richtig sein.</p>
 </div>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
-<img alt="../_images/logo-freebsd2.png" src="../_images/logo-freebsd2.png" />
-</div>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+</aside>
 <p>Hier folgen einige Informationen zur Installation von FreeBSD 8.x STABLE auf
 einem Acer Aspire One (A150X). Einige Einstellungen sollten auch mit anderen
 BSDs funktionieren.</p>
-<div class="section" id="status">
+<section id="status">
 <h2><span class="section-number">3.1.1. </span>Status<a class="headerlink" href="#status" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="folgende-komponenten-werden-unterstutzt">
+<section id="folgende-komponenten-werden-unterstutzt">
 <h3><span class="section-number">3.1.1.1. </span>Folgende Komponenten werden unterstützt<a class="headerlink" href="#folgende-komponenten-werden-unterstutzt" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
 <li><p>LAN re0</p></li>
@@ -213,16 +216,16 @@ BSDs funktionieren.</p>
 <li><p>Sound</p></li>
 <li><p>WLAN ath0 über Madwifi (siehe unten)</p></li>
 </ul>
-</div>
-<div class="section" id="noch-nicht-getestet">
+</section>
+<section id="noch-nicht-getestet">
 <h3><span class="section-number">3.1.1.2. </span>Noch nicht getestet<a class="headerlink" href="#noch-nicht-getestet" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
 <li><p>Webcam</p></li>
 <li><p>Cardreader</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="loader-conf">
+</section>
+</section>
+<section id="loader-conf">
 <h2><span class="section-number">3.1.2. </span>loader.conf<a class="headerlink" href="#loader-conf" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um Sound und das Touchpad nutzen zu können, müssen folgende Einträge in
 <strong>/boot/loader.conf</strong> eingefügt werden:</p>
@@ -230,8 +233,8 @@ BSDs funktionieren.</p>
 <span class="n">hw</span><span class="o">.</span><span class="n">psm</span><span class="o">.</span><span class="n">synaptics_support</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="rc-conf">
+</section>
+<section id="rc-conf">
 <h2><span class="section-number">3.1.3. </span>rc.conf<a class="headerlink" href="#rc-conf" title="Link zu dieser Überschrift">¶</a></h2>
 <p>So könnte die <strong>/etc/rc.conf</strong> aussehen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;&lt;Rechnername&gt;&quot;</span>
@@ -248,8 +251,8 @@ BSDs funktionieren.</p>
 <span class="p">[</span><span class="o">...</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="xorg-konfiguration">
+</section>
+<section id="xorg-konfiguration">
 <h2><span class="section-number">3.1.4. </span>Xorg-Konfiguration<a class="headerlink" href="#xorg-konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Dies ist die an FreeBSD angepasste <strong>/etc/X11/xorg.conf</strong>-Datei der
 original Linux-Installation:</p>
@@ -358,8 +361,8 @@ original Linux-Installation:</p>
 <span class="n">EndSection</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="wlan-ath0">
+</section>
+<section id="wlan-ath0">
 <h2><span class="section-number">3.1.5. </span>WLAN ath0<a class="headerlink" href="#wlan-ath0" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der Atheros Chipssatz des One kann mittels madwifi genutzt werden. Dazu
 wird ein Snapshot des <a class="reference external" href="http://madwifi-project.org/">madwifi-Projekts</a>
@@ -376,7 +379,7 @@ tar xvfz madwifi-hal-0.10.5.6-r3879-20081204.tar.gz
 </div>
 <p>Jetzt die notwendigen Dateien aus dem Madwifi-Ordner in den <code class="docutils literal notranslate"><span class="pre">/usr/src/</span></code>-Ordner
 kopieren:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">madwifi</span><span class="o">-</span><span class="n">hal</span><span class="o">-</span><span class="mf">0.10</span><span class="o">.</span><span class="mf">5.6</span><span class="o">-</span><span class="n">r3879</span><span class="o">-</span><span class="mi">20081204</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">madwifi</span><span class="o">-</span><span class="n">hal</span><span class="o">-</span><span class="mf">0.10.5.6</span><span class="o">-</span><span class="n">r3879</span><span class="o">-</span><span class="mi">20081204</span>
 <span class="n">cp</span> <span class="o">-</span><span class="n">R</span> <span class="o">*</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ath</span><span class="o">/</span>
 </pre></div>
 </div>
@@ -386,9 +389,9 @@ eingebaute WLAN-Chip sollte nun erkannt und benutzbar sein.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2020-11-23</p>
-</div>
-</div>
+<p>Zuletzt geändert: 2021-05-24</p>
+</section>
+</section>
 
 
            </div>

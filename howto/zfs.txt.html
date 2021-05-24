@@ -5,10 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.151. ZFS auf FreeBSD &mdash; BSDForen.de 1.0 Dokumentation</title>
+  <title>1.147. ZFS auf FreeBSD &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
@@ -23,10 +24,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -36,11 +37,13 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="1.152. ZFS (raidz), Geli und USB Boot" href="zfs_geli_und_usb_boot.txt.html" />
-    <link rel="prev" title="1.150. Zeit synchronisieren mit ntp" href="zeit_synchronisieren_mit_ntp.txt.html" /> 
+    <link rel="next" title="1.148. ZFS (raidz), Geli und USB Boot" href="zfs_geli_und_usb_boot.txt.html" />
+    <link rel="prev" title="1.146. Zeit synchronisieren mit ntp" href="zeit_synchronisieren_mit_ntp.txt.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -123,160 +126,156 @@
 <li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dsl-router.txt.html">1.37. DSL-Router</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.38. DSL konfigurieren (NetBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.39. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.40. DVB unter FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.41. DVD-Rip mit mencoder</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.42. DVDs brennen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.43. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.44. Eigenes Live-System auf USB-Stick installieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.45. Mail</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.46. Ezjail</a></li>
-<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.47. Festplatte einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.48. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.49. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.50. Festplattenverschlüsselung mit NetBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.51. Festplattenverschlüsselung mit pefs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.52. Film-DVD erstellen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.53. Firewall-Regeln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.54. Floppy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.55. Fluxbox mit gdm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.56. FreeBSD als Gast unter VMware</a></li>
-<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.57. FreeBSD Boot Manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.58. FTP-Server mit PureFTPd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.59. GnuPG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.60. GPSDrive</a></li>
-<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.61. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.62. GRUB2-Anleitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.63. IBM Thinkpad BIOS-Update</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.64. Intel 2200BG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.65. IPSEC-VPN</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.66. IPv6-Netzwerke mit FreeBSD als Router</a></li>
-<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.67. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iso-erstellung_openbsd.txt.html">1.68. ISO-Erstellung (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.69. ISO-Images mounten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.70. ISO-Images von optischen Medien erzeugen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.71. Jails</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.72. Java Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.73. K3B einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.74. KDE4 Tipps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.75. KDM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.76. Kerio Mailserver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.77. Konsole nach Systemstart und Logout löschen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.78. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.79. M0n0wall &amp; SIP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.80. Mailhamster (Mailsammler)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.81. Das eigene Mailsystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.82. Majordomo Postfix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.83. make.conf optimieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.84. make world</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.85. Mehrmonitor-Betrieb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.86. mkisofs und cdrecord</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.87. Mounten als Benutzer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.88. moused einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.89. Mozilla mit Java- und Flashsupport</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.90. MPD einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.91. MPI auf FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.92. Multihead mit nv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.93. nVidia Twinview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.94. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
-<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
-<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
-<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
-<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="strato_mr2_openbsd.txt.html">1.118. Strato MR2 (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.119. Suspend und Resume bei Thinkpads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.120. System in RAID1 verwandeln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.121. Systemüberwachung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.122. TeXlive aus dem Quellcode installieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.123. Tomcat 6 Installation und Stolpersteine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.124. Tor (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.125. Tor und Privoxy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.126. Tortoise like SVN Menu in Nautilus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.127. TV-Karte benutzen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.128. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.129. UMTS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.130. UMTS mit HUAWEI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.131. UMTS mit Sunrise und Swisscom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.132. UNICODE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.133. Unicode auf der Konsole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.134. Unix-Freigabe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.135. Updaten von OpenBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.136. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_bootfaehig_machen_openbsd.txt.html">1.137. USB-Stick bootfähig machen (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.138. USB-Stick Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.139. USB-Stick Unterstützung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.140. USB Automount ohne HAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.141. VDSL and OpenBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.142. VLAN-Konfiguration mit FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.143. VPN (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.144. Windowmanager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.145. Windows-Freigabe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.146. Wine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.147. Xfce4 mit gdm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.148. Xmodmap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.149. Xorg Konfigurieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.150. Zeit synchronisieren mit ntp</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1.151. ZFS auf FreeBSD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#was-ist-zfs">1.151.1. Was ist ZFS?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#anforderungen">1.151.2. Anforderungen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#implementationsstatus">1.151.3. Implementationsstatus</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#zpool-und-zfs">1.151.4. Zpool und ZFS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#administration-eines-zpool">1.151.5. Administration eines ZPool</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#anlegen-eines-zpool">1.151.5.1. Anlegen eines Zpool</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#loschen-eines-zpool">1.151.5.2. Löschen eines Zpool</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#entfernen-eines-gerates-aus-einem-zpool">1.151.5.3. Entfernen eines Gerätes aus einem ZPool</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#hinzufugen-eines-gerates-zu-einem-zpool">1.151.5.4. Hinzufügen eines Gerätes zu einem ZPool</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ein-gerat-ersetzen">1.151.5.5. Ein Gerät ersetzen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sonstiges">1.151.5.6. Sonstiges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.37. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.38. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.39. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.40. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.41. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.42. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.43. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.44. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.45. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.46. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.47. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.48. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.49. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.50. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.51. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.52. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.53. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.54. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.55. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.56. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.57. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.58. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.59. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.60. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.61. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.62. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.63. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.64. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.65. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.66. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.67. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.68. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.69. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.70. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.71. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.72. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.73. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.74. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.75. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.76. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.77. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.78. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.79. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.80. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.81. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.82. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.83. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.84. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.85. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.86. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.87. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.88. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.89. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.90. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.91. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.92. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.93. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.94. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.95. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.96. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.97. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.98. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.99. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.100. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.101. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.102. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.103. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.104. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.105. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.106. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.107. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.108. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.109. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.110. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.111. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.112. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.113. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.114. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.115. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.116. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.117. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.118. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.119. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.120. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.121. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.122. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.123. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.124. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.125. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.126. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.127. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.128. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.129. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.130. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.131. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.132. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.133. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.134. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.135. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.136. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.137. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.138. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.139. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.140. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.141. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.142. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.143. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.144. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.145. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.146. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.147. ZFS auf FreeBSD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#was-ist-zfs">1.147.1. Was ist ZFS?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anforderungen">1.147.2. Anforderungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implementationsstatus">1.147.3. Implementationsstatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zpool-und-zfs">1.147.4. Zpool und ZFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#administration-eines-zpool">1.147.5. Administration eines ZPool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#anlegen-eines-zpool">1.147.5.1. Anlegen eines Zpool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loschen-eines-zpool">1.147.5.2. Löschen eines Zpool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#entfernen-eines-gerates-aus-einem-zpool">1.147.5.3. Entfernen eines Gerätes aus einem ZPool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hinzufugen-eines-gerates-zu-einem-zpool">1.147.5.4. Hinzufügen eines Gerätes zu einem ZPool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ein-gerat-ersetzen">1.147.5.5. Ein Gerät ersetzen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sonstiges">1.147.5.6. Sonstiges</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#zfs">1.151.6. ZFS</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#das-konzept">1.151.6.1. Das Konzept</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#anlegen-eines-datensatzes">1.151.6.2. Anlegen eines Datensatzes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#loschen-eines-datensatzes">1.151.6.3. Löschen eines Datensatzes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#verschieben-und-umbennen">1.151.6.4. Verschieben und umbennen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#andern-von-optionen">1.151.6.5. Ändern von Optionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zfs">1.147.6. ZFS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#das-konzept">1.147.6.1. Das Konzept</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#anlegen-eines-datensatzes">1.147.6.2. Anlegen eines Datensatzes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loschen-eines-datensatzes">1.147.6.3. Löschen eines Datensatzes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#verschieben-und-umbennen">1.147.6.4. Verschieben und umbennen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#andern-von-optionen">1.147.6.5. Ändern von Optionen</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#snapshots-und-klone">1.151.7. Snapshots und Klone</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#erstellen-eines-snapshots">1.151.7.1. Erstellen eines Snapshots</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#loschen-eines-snapshots">1.151.7.2. Löschen eines Snapshots</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#zuruckrollen-eines-snapshots">1.151.7.3. Zurückrollen eines Snapshots</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#zugriff-auf-snapshots">1.151.7.4. Zugriff auf Snapshots</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#klone-erstellen">1.151.7.5. Klone erstellen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#klone-in-datensatze-umwandeln">1.151.7.6. Klone in Datensätze umwandeln</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#snapshots-und-klone">1.147.7. Snapshots und Klone</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#erstellen-eines-snapshots">1.147.7.1. Erstellen eines Snapshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loschen-eines-snapshots">1.147.7.2. Löschen eines Snapshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#zuruckrollen-eines-snapshots">1.147.7.3. Zurückrollen eines Snapshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#zugriff-auf-snapshots">1.147.7.4. Zugriff auf Snapshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#klone-erstellen">1.147.7.5. Klone erstellen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#klone-in-datensatze-umwandeln">1.147.7.6. Klone in Datensätze umwandeln</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#andere-dateisysteme-auf-zpool">1.151.8. Andere Dateisysteme auf Zpool</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#erstellen-eines-volumes">1.151.8.1. Erstellen eines Volumes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#warten-eines-volumes">1.151.8.2. Warten eines Volumes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#swap-auf-zpool">1.151.8.3. Swap auf Zpool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#andere-dateisysteme-auf-zpool">1.147.8. Andere Dateisysteme auf Zpool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#erstellen-eines-volumes">1.147.8.1. Erstellen eines Volumes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warten-eines-volumes">1.147.8.2. Warten eines Volumes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#swap-auf-zpool">1.147.8.3. Swap auf Zpool</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.152. ZFS (raidz), Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.148. ZFS (raidz), Geli und USB Boot</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
@@ -334,7 +333,7 @@
         
           <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
         
-      <li><span class="section-number">1.151. </span>ZFS auf FreeBSD</li>
+      <li><span class="section-number">1.147. </span>ZFS auf FreeBSD</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -350,10 +349,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="zfs_geli_und_usb_boot.txt.html" class="btn btn-neutral float-right" title="1.152. ZFS (raidz), Geli und USB Boot" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="zfs_geli_und_usb_boot.txt.html" class="btn btn-neutral float-right" title="1.148. ZFS (raidz), Geli und USB Boot" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="zeit_synchronisieren_mit_ntp.txt.html" class="btn btn-neutral float-left" title="1.150. Zeit synchronisieren mit ntp" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="zeit_synchronisieren_mit_ntp.txt.html" class="btn btn-neutral float-left" title="1.146. Zeit synchronisieren mit ntp" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -362,14 +361,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="zfs-auf-freebsd">
-<h1><span class="section-number">1.151. </span>ZFS auf FreeBSD<a class="headerlink" href="#zfs-auf-freebsd" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+  <section id="zfs-auf-freebsd">
+<h1><span class="section-number">1.147. </span>ZFS auf FreeBSD<a class="headerlink" href="#zfs-auf-freebsd" title="Link zu dieser Überschrift">¶</a></h1>
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
-<img alt="../_images/logo-freebsd3.png" src="../_images/logo-freebsd3.png" />
-</div>
-<div class="section" id="was-ist-zfs">
-<h2><span class="section-number">1.151.1. </span>Was ist ZFS?<a class="headerlink" href="#was-ist-zfs" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
+</aside>
+<section id="was-ist-zfs">
+<h2><span class="section-number">1.147.1. </span>Was ist ZFS?<a class="headerlink" href="#was-ist-zfs" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line">Seit ZFS im Jahr 2004 das erste Mal von Sun vorgestellt wurde, schlägt
 es Wellen und weckt Begehrlichkeiten. Grund ist vor allem, das ZFS ein
@@ -423,18 +422,18 @@ bösen Überraschungen auftreten. Zudem beschleunigt die „Copy on Write“
 Technik das Kopieren von Daten innerhalb eines Zpool erheblich,
 verglichen mit zum Beispiel UFS2.</div>
 </div>
-</div>
-<div class="section" id="anforderungen">
-<h2><span class="section-number">1.151.2. </span>Anforderungen<a class="headerlink" href="#anforderungen" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="anforderungen">
+<h2><span class="section-number">1.147.2. </span>Anforderungen<a class="headerlink" href="#anforderungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>ZFS hat leider relativ hohe Hardwareanforderungen. Um es wirklich sauber
 und schnell nutzen zu können, sollte das System unter FreeBSD/amd64
 laufen und über mindestens ein Gigabyte RAM verfügen. Der Betrieb unter
 FreeBSD/i386 und auch mit weniger als einem Gigabyte RAM ist nur unter
 Einschränkungen möglich. Siehe hierzu
 <a class="reference external" href="http://wiki.freebsd.org/ZFSTuningGuide">http://wiki.freebsd.org/ZFSTuningGuide</a>.</p>
-</div>
-<div class="section" id="implementationsstatus">
-<h2><span class="section-number">1.151.3. </span>Implementationsstatus<a class="headerlink" href="#implementationsstatus" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="implementationsstatus">
+<h2><span class="section-number">1.147.3. </span>Implementationsstatus<a class="headerlink" href="#implementationsstatus" title="Link zu dieser Überschrift">¶</a></h2>
 <p>ZFS ist mittlerweile stabiler Bestandteil von FreeBSD und kann
 bedenkenlos auch für Produktivsysteme eingesetzt werden. Mittlerweile
 ist auch das Booten von ZFS möglich. Das in FreeBSD eingesetzte ZFS
@@ -442,9 +441,9 @@ basiert auf der OpenZFS-Entwicklung und unterstützt Featureflags. Als
 integraler Bestandteil von FreeBSD ist es seit einiger Zeit auch möglich
 während der Installation über den Installer ein System komplett auf ZFS
 aufsetzen zu lassen.</p>
-</div>
-<div class="section" id="zpool-und-zfs">
-<h2><span class="section-number">1.151.4. </span>Zpool und ZFS<a class="headerlink" href="#zpool-und-zfs" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="zpool-und-zfs">
+<h2><span class="section-number">1.147.4. </span>Zpool und ZFS<a class="headerlink" href="#zpool-und-zfs" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line">Bevor wir zu ZFS kommen, werden wir uns mit der integrierten
 Volumenverwaltung Zpool beschäftigen. Grundsätzlich gilt: Ein ZFS kann
@@ -488,15 +487,15 @@ benötigt mindestens fünf Platten und es können bis zu drei ausfallen
 ohne Datenverlust. Die drei Ebenen haben gemeinsam, dass ein RaidZ
 nach der Erstellung nicht mehr vergrößert werden kann.</div>
 </div>
-</div>
-<div class="section" id="administration-eines-zpool">
-<h2><span class="section-number">1.151.5. </span>Administration eines ZPool<a class="headerlink" href="#administration-eines-zpool" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="administration-eines-zpool">
+<h2><span class="section-number">1.147.5. </span>Administration eines ZPool<a class="headerlink" href="#administration-eines-zpool" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die Administration eines ZPool ist nicht sonderlich kompliziert, jeder
 der schon mit ähnlichen Systemen wie gmirror oder auch Raid-Controllern
 gearbeitet hat, dürfte schnell Ergebnisse erzielen. Aber auch für
 Anfänger sollte es sich schnell erschließen.</p>
-<div class="section" id="anlegen-eines-zpool">
-<h3><span class="section-number">1.151.5.1. </span>Anlegen eines Zpool<a class="headerlink" href="#anlegen-eines-zpool" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="anlegen-eines-zpool">
+<h3><span class="section-number">1.147.5.1. </span>Anlegen eines Zpool<a class="headerlink" href="#anlegen-eines-zpool" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Angelegt wird ein ZPool mit dem Kommando</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="n">create</span> <span class="o">-</span><span class="n">m</span> <span class="n">mountpunkt</span> <span class="n">name</span> <span class="n">art</span> <span class="n">gerät1</span> <span class="n">gerät2</span> <span class="n">spare</span> <span class="n">gerät3</span> <span class="n">gerät4</span>
 </pre></div>
@@ -524,9 +523,9 @@ sind also rohe Festplatten, was empfohlen ist, aber auch Slices,
 GEOM-Geräte und ähnliches. Es sind sogar Dateien als Geräte möglich,
 doch dies ist nur zu Testzwecken zu empfehlen.</div>
 </div>
-</div>
-<div class="section" id="loschen-eines-zpool">
-<h3><span class="section-number">1.151.5.2. </span>Löschen eines Zpool<a class="headerlink" href="#loschen-eines-zpool" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="loschen-eines-zpool">
+<h3><span class="section-number">1.147.5.2. </span>Löschen eines Zpool<a class="headerlink" href="#loschen-eines-zpool" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Gelöscht wird ein Zpool mit dem Kommando</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="n">destroy</span> <span class="n">name</span>
 </pre></div>
@@ -534,9 +533,9 @@ doch dies ist nur zu Testzwecken zu empfehlen.</div>
 <p>Dies Kommando hängt alle Datensätze aus, exportiert den Zpool und
 zerstört ihn. Dies geschieht ohne eine Sicherheitsnachfrage und alle
 Daten gehen dabei verloren!</p>
-</div>
-<div class="section" id="entfernen-eines-gerates-aus-einem-zpool">
-<h3><span class="section-number">1.151.5.3. </span>Entfernen eines Gerätes aus einem ZPool<a class="headerlink" href="#entfernen-eines-gerates-aus-einem-zpool" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="entfernen-eines-gerates-aus-einem-zpool">
+<h3><span class="section-number">1.147.5.3. </span>Entfernen eines Gerätes aus einem ZPool<a class="headerlink" href="#entfernen-eines-gerates-aus-einem-zpool" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ein Gerät wird aus einem ZPool entfernt mit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="n">remove</span> <span class="n">gerät</span>
 </pre></div>
@@ -545,9 +544,9 @@ Daten gehen dabei verloren!</p>
 werden müssen. Außerdem muss der Pool alle seine Daten auch ohne das zu
 entfernende Gerät aufnehmen können. Aus einem RaidZ kann kein Gerät
 entfernt werden.</p>
-</div>
-<div class="section" id="hinzufugen-eines-gerates-zu-einem-zpool">
-<h3><span class="section-number">1.151.5.4. </span>Hinzufügen eines Gerätes zu einem ZPool<a class="headerlink" href="#hinzufugen-eines-gerates-zu-einem-zpool" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="hinzufugen-eines-gerates-zu-einem-zpool">
+<h3><span class="section-number">1.147.5.4. </span>Hinzufügen eines Gerätes zu einem ZPool<a class="headerlink" href="#hinzufugen-eines-gerates-zu-einem-zpool" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ein Gerät wird so in einen Zpool eingefügt</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="n">attach</span> <span class="n">name</span> <span class="n">gerät</span>
 </pre></div>
@@ -555,9 +554,9 @@ entfernt werden.</p>
 <p>Das Gerät steht sofort zur Verfügung, ein Neuaufbauen ist nicht
 notwenig. Zu beachten ist, dass man zu einem RaidZ kein gerät hinzufügen
 kann und ein Spiegel zwei neue Geräte benötigt.</p>
-</div>
-<div class="section" id="ein-gerat-ersetzen">
-<h3><span class="section-number">1.151.5.5. </span>Ein Gerät ersetzen<a class="headerlink" href="#ein-gerat-ersetzen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="ein-gerat-ersetzen">
+<h3><span class="section-number">1.147.5.5. </span>Ein Gerät ersetzen<a class="headerlink" href="#ein-gerat-ersetzen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wer ein defektes oder zu kleines Gerät ersetzen möchte, kann dies mit
 diesem Kommando machen</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="n">replace</span> <span class="n">name</span> <span class="n">altes_gerät</span> <span class="n">neues_gerät</span>
@@ -569,9 +568,9 @@ das alte sein muss. Im RaidZ und im Mirror kann zusätzlicher
 Speicherplatz nicht verwendet werden bis alle Festplatten durch größere
 ausgetauscht wurden und der Zpool dazu angestoßen wird den größeren
 Platz zu nutzen.</p>
-</div>
-<div class="section" id="sonstiges">
-<h3><span class="section-number">1.151.5.6. </span>Sonstiges<a class="headerlink" href="#sonstiges" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="sonstiges">
+<h3><span class="section-number">1.147.5.6. </span>Sonstiges<a class="headerlink" href="#sonstiges" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Dies waren die wichtigsten Kommandos. Desweiteren ist es möglich mittels</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="nb">list</span> <span class="n">name</span>
 </pre></div>
@@ -604,12 +603,12 @@ mit dem Kommando</p>
 <p>Für weitere Möglichkeiten, wie dem Abschalten von Geräten innerhalb
 eines Pools oder dem Aktualisieren auf eine neuere ZFS Version sei
 wieder auf die Handbuchseite zpool(1) verwiesen.</p>
-</div>
-</div>
-<div class="section" id="zfs">
-<h2><span class="section-number">1.151.6. </span>ZFS<a class="headerlink" href="#zfs" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="das-konzept">
-<h3><span class="section-number">1.151.6.1. </span>Das Konzept<a class="headerlink" href="#das-konzept" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+</section>
+<section id="zfs">
+<h2><span class="section-number">1.147.6. </span>ZFS<a class="headerlink" href="#zfs" title="Link zu dieser Überschrift">¶</a></h2>
+<section id="das-konzept">
+<h3><span class="section-number">1.147.6.1. </span>Das Konzept<a class="headerlink" href="#das-konzept" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="line-block">
 <div class="line">Ein oder mehrere ZFS schwimmen wie oben erwähnt auf einem Zpool. Wir
 werden und hier an die Notation von Sun halten und sie als Datensätze
@@ -626,9 +625,9 @@ System einzuhängen, wodurch sich jedoch nur ihre logische
 Repräsentation ändert, in Wirklichkeit befinden sie sich immer noch
 relativ zur Wurzel des Zpool.</div>
 </div>
-</div>
-<div class="section" id="anlegen-eines-datensatzes">
-<h3><span class="section-number">1.151.6.2. </span>Anlegen eines Datensatzes<a class="headerlink" href="#anlegen-eines-datensatzes" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="anlegen-eines-datensatzes">
+<h3><span class="section-number">1.147.6.2. </span>Anlegen eines Datensatzes<a class="headerlink" href="#anlegen-eines-datensatzes" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Mit dem Kommando</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">create</span> <span class="n">pool</span><span class="o">/</span><span class="n">pfad</span><span class="o">/</span><span class="n">zu</span><span class="o">/</span><span class="n">datensatz</span>
 </pre></div>
@@ -636,9 +635,9 @@ relativ zur Wurzel des Zpool.</div>
 <p>wird ein neuer Datensatz erstellt und an der angebenen Position relativ
 zur Wurzel des Zpool eingehängt. Eventuell fehlende Verzeichnisse werden
 dabei automatisch erstellt.</p>
-</div>
-<div class="section" id="loschen-eines-datensatzes">
-<h3><span class="section-number">1.151.6.3. </span>Löschen eines Datensatzes<a class="headerlink" href="#loschen-eines-datensatzes" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="loschen-eines-datensatzes">
+<h3><span class="section-number">1.147.6.3. </span>Löschen eines Datensatzes<a class="headerlink" href="#loschen-eines-datensatzes" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Mit dem Kommando</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">destroy</span> <span class="n">pool</span><span class="o">/</span><span class="n">pfad</span><span class="o">/</span><span class="n">zu</span><span class="o">/</span><span class="n">datensatz</span>
 </pre></div>
@@ -653,17 +652,17 @@ mehr löschen lassen, mit dem Hinweis: No space left on device.</p>
 </div>
 <p>eine Datei löschen um anschließend wieder regulär dateien mir rm löschen
 zu können. &lt;/note&gt;</p>
-</div>
-<div class="section" id="verschieben-und-umbennen">
-<h3><span class="section-number">1.151.6.4. </span>Verschieben und umbennen<a class="headerlink" href="#verschieben-und-umbennen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="verschieben-und-umbennen">
+<h3><span class="section-number">1.147.6.4. </span>Verschieben und umbennen<a class="headerlink" href="#verschieben-und-umbennen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Natürlich kann man einen Datensatz verschieben und umbenennen. Gibt man</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">rename</span> <span class="n">pool</span><span class="o">/</span><span class="n">pfad</span><span class="o">/</span><span class="n">zu</span><span class="o">/</span><span class="n">datensatz</span> <span class="n">pool</span><span class="o">/</span><span class="n">neuer</span><span class="o">/</span><span class="n">pfad</span><span class="o">/</span><span class="n">zu</span><span class="o">/</span><span class="n">datensatz</span>
 </pre></div>
 </div>
 <p>ein verschiebt man den Datensatz innerhalb der ZFS-Hirachie.</p>
-</div>
-<div class="section" id="andern-von-optionen">
-<h3><span class="section-number">1.151.6.5. </span>Ändern von Optionen<a class="headerlink" href="#andern-von-optionen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="andern-von-optionen">
+<h3><span class="section-number">1.147.6.5. </span>Ändern von Optionen<a class="headerlink" href="#andern-von-optionen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Jeder Datensatz hat eine Unmenge von Einstellungsmöglichkeiten. Hier
 werden nur die wichtigsten durchgesprochen werden, für weitere sei auf
 die Manpage zfs(1) verwiesen. Gesetzt werden Einstellungen mit</p>
@@ -698,17 +697,17 @@ schneller, kann aber auch viele Programme verwirren.</p></li>
 </ul>
 <p>Die geänderten Optionen sind sofort wirksam, weitere Dinge neben dem
 Setzen sind nicht notwendig.</p>
-</div>
-</div>
-<div class="section" id="snapshots-und-klone">
-<h2><span class="section-number">1.151.7. </span>Snapshots und Klone<a class="headerlink" href="#snapshots-und-klone" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="snapshots-und-klone">
+<h2><span class="section-number">1.147.7. </span>Snapshots und Klone<a class="headerlink" href="#snapshots-und-klone" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Einen wesentlichen Vorteil bietet ZFS durch seine - wie oben besprochen
 günstigen - Snapshots und die eng mit diesen verbundenen Klone, welche
 es erlauben komplette Datensätze in wenigen Sekunden zu kopieren. ZFS
 Snapshots sind deutlich günstiger als ihre Kollegen vom UFS2, weshalb
 man ohne bedenken auch sehr viele von ihnen parallel nutzen kann.</p>
-<div class="section" id="erstellen-eines-snapshots">
-<h3><span class="section-number">1.151.7.1. </span>Erstellen eines Snapshots<a class="headerlink" href="#erstellen-eines-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="erstellen-eines-snapshots">
+<h3><span class="section-number">1.147.7.1. </span>Erstellen eines Snapshots<a class="headerlink" href="#erstellen-eines-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ein Snapshot wird mit dem Kommando</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">snapshot</span> <span class="n">datensatz</span><span class="nd">@name</span>
 </pre></div>
@@ -718,18 +717,18 @@ erstellt werden soll und Name ist entsprechend der Name des Snapshots.
 Dies Benennungsschema ist vorgegeben, ein Snapshot heißt immer
 <a class="reference external" href="mailto:ursprung&#37;&#52;&#48;eigener">ursprung<span>&#64;</span>eigener</a> name. Der Snapshot „gutes_beispiel“ von /banane/test1
 wäre also <a class="reference external" href="mailto:/banane/test1&#37;&#52;&#48;gutes_beispiel">/banane/test1<span>&#64;</span>gutes_beispiel</a>.</p>
-</div>
-<div class="section" id="loschen-eines-snapshots">
-<h3><span class="section-number">1.151.7.2. </span>Löschen eines Snapshots<a class="headerlink" href="#loschen-eines-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="loschen-eines-snapshots">
+<h3><span class="section-number">1.147.7.2. </span>Löschen eines Snapshots<a class="headerlink" href="#loschen-eines-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Snapshots werden exat wie Datensätze gelöscht.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">destroy</span> <span class="n">datensatz</span><span class="nd">@name</span>
 </pre></div>
 </div>
 <p>Dies ist nicht möglich, wenn von dem Snapshot noch Dinge wie Klone
 abhängig sind.</p>
-</div>
-<div class="section" id="zuruckrollen-eines-snapshots">
-<h3><span class="section-number">1.151.7.3. </span>Zurückrollen eines Snapshots<a class="headerlink" href="#zuruckrollen-eines-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="zuruckrollen-eines-snapshots">
+<h3><span class="section-number">1.147.7.3. </span>Zurückrollen eines Snapshots<a class="headerlink" href="#zuruckrollen-eines-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Mittels</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">rollback</span> <span class="n">datensatz</span><span class="nd">@name</span>
 </pre></div>
@@ -737,9 +736,9 @@ abhängig sind.</p>
 <p>wird der per Snapshot gesicherte Datensatz innerhalb von Sekunden auf
 den Zustand des Snapshots zurückgesetzt. Alle Änderungen an ihm sind
 unwiderbringlich verloren. Der Snapshot wird dabei nicht gelöscht.</p>
-</div>
-<div class="section" id="zugriff-auf-snapshots">
-<h3><span class="section-number">1.151.7.4. </span>Zugriff auf Snapshots<a class="headerlink" href="#zugriff-auf-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="zugriff-auf-snapshots">
+<h3><span class="section-number">1.147.7.4. </span>Zugriff auf Snapshots<a class="headerlink" href="#zugriff-auf-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Snapshots können mit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="nb">list</span>
 </pre></div>
@@ -750,9 +749,9 @@ unser oben angelegter Snapshot in
 /banane/test1/.zfs/snapshot/gutes_beispiel/. Das das Verzeichnis
 unsichtbar ist bedeutet, dass Programme wie ls(1) oder die
 Autovervollständigung der Shell es nicht sehen können!</p>
-</div>
-<div class="section" id="klone-erstellen">
-<h3><span class="section-number">1.151.7.5. </span>Klone erstellen<a class="headerlink" href="#klone-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="klone-erstellen">
+<h3><span class="section-number">1.147.7.5. </span>Klone erstellen<a class="headerlink" href="#klone-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Klone sind nichts anderes als beschreibbare Snapshots. Zum derzeitigen
 Zeitpunkt können sie lediglich von Snapshots erstellt werden, nicht
 jedoch von Datensätzen. Daher muss man von einem Datensatz erst einen
@@ -767,9 +766,9 @@ existieren.</p>
 des Zpool ein. Dort kann er wie ein normaler Datensatz behandelt werden.
 Leider können Klone zur Zeit nicht auf den Datensatz, von dem der ihm
 zugrundeliegende Snapshot stammt, zurückgerollt werden.</p>
-</div>
-<div class="section" id="klone-in-datensatze-umwandeln">
-<h3><span class="section-number">1.151.7.6. </span>Klone in Datensätze umwandeln<a class="headerlink" href="#klone-in-datensatze-umwandeln" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="klone-in-datensatze-umwandeln">
+<h3><span class="section-number">1.147.7.6. </span>Klone in Datensätze umwandeln<a class="headerlink" href="#klone-in-datensatze-umwandeln" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ein Klon kann jederzeit zu einem vollständigen Datensatz umgewandelt
 werden.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">promote</span> <span class="n">pool</span><span class="o">/</span><span class="n">pfad</span><span class="o">/</span><span class="n">zu</span><span class="o">/</span><span class="n">klone</span>
@@ -779,18 +778,18 @@ werden.</p>
 verwendet werden. Man kann den Datensatz allerdings nicht wieder in
 einen Klon zurückwandeln. Die Abhängigkeit zum Snapshot, welche der Klon
 hatte, verschwindet bei dieser Operation.</p>
-</div>
-</div>
-<div class="section" id="andere-dateisysteme-auf-zpool">
-<h2><span class="section-number">1.151.8. </span>Andere Dateisysteme auf Zpool<a class="headerlink" href="#andere-dateisysteme-auf-zpool" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="andere-dateisysteme-auf-zpool">
+<h2><span class="section-number">1.147.8. </span>Andere Dateisysteme auf Zpool<a class="headerlink" href="#andere-dateisysteme-auf-zpool" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Neben Datensätzen, Snapshots und Klonen kann auf einem Zpool wie oben
 bereits besprochen auch ein Volume erstellt werden. Dieser taucht in
 /dev/zvol als ein normales Gerät auf und kann mit jedem anderen
 Dateisystem formatiert werden. So kann jede Dateisystem auf die Vorteile
 des Zpool zurückgreifen. Mounten muss man allerdings herkömmlich, auch
 dateisystemspezifische Dinge wie fsck kann der Zpool nicht ersetzen.</p>
-<div class="section" id="erstellen-eines-volumes">
-<h3><span class="section-number">1.151.8.1. </span>Erstellen eines Volumes<a class="headerlink" href="#erstellen-eines-volumes" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="erstellen-eines-volumes">
+<h3><span class="section-number">1.147.8.1. </span>Erstellen eines Volumes<a class="headerlink" href="#erstellen-eines-volumes" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ein Volume wird wie ein Datensatz mit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">create</span> <span class="o">-</span><span class="n">V</span> <span class="n">größe</span> <span class="n">pool</span><span class="o">/</span><span class="n">name</span>
 </pre></div>
@@ -798,17 +797,17 @@ dateisystemspezifische Dinge wie fsck kann der Zpool nicht ersetzen.</p>
 <p>erstellt. Wobei Name der Name des Volumens ist und auch sein Gerät in
 /dev/zvol so heißt. Ein Volume muss immer im Wurzelverzeichnis des Zpool
 angelegt werden.</p>
-</div>
-<div class="section" id="warten-eines-volumes">
-<h3><span class="section-number">1.151.8.2. </span>Warten eines Volumes<a class="headerlink" href="#warten-eines-volumes" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="warten-eines-volumes">
+<h3><span class="section-number">1.147.8.2. </span>Warten eines Volumes<a class="headerlink" href="#warten-eines-volumes" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ein Volume kann wie ein normaler Datensatz behandelt werden. Es können
 Snapshots erstellt und zurückgerollt werden, ebenso kann man wie bereits
 erklärt Klone nutzen. Sogar diverse Optionen können wie oben beschrieben
 eingestellt werden. Auch das Löschen läuft wie bei normalen Datensätzen
 ab.</p>
-</div>
-<div class="section" id="swap-auf-zpool">
-<h3><span class="section-number">1.151.8.3. </span>Swap auf Zpool<a class="headerlink" href="#swap-auf-zpool" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="swap-auf-zpool">
+<h3><span class="section-number">1.147.8.3. </span>Swap auf Zpool<a class="headerlink" href="#swap-auf-zpool" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Theoretisch ist es natürlich auch möglich ein Volume mittels swapon(8)
 als Swap zu nutzen. Dies ist derzeit allerdings sowohl unter FreeBSD als
 auch unter Solaris sehr problematisch. Das Problem ist, dass das System
@@ -820,10 +819,10 @@ Daher ist von Swap auf Zpool dringenst abzuraten!</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2020-11-23</p>
-</div>
-</div>
-</div>
+<p>Zuletzt geändert: 2021-05-24</p>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -833,10 +832,10 @@ Daher ist von Swap auf Zpool dringenst abzuraten!</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="zfs_geli_und_usb_boot.txt.html" class="btn btn-neutral float-right" title="1.152. ZFS (raidz), Geli und USB Boot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="zfs_geli_und_usb_boot.txt.html" class="btn btn-neutral float-right" title="1.148. ZFS (raidz), Geli und USB Boot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="zeit_synchronisieren_mit_ntp.txt.html" class="btn btn-neutral float-left" title="1.150. Zeit synchronisieren mit ntp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="zeit_synchronisieren_mit_ntp.txt.html" class="btn btn-neutral float-left" title="1.146. Zeit synchronisieren mit ntp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
