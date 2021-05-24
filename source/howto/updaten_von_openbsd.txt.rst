@@ -30,8 +30,8 @@ Update nach der alten Methode - sollte heutzutage fast nie mehr verwendet werden
 
 .. note::
 
-  Die folgenden Inhalte sind sehr alt, vermutlich von ca. 2007 und wurden auf expliziten Wunsch im Wiki belassen.
-
+  Die folgenden Inhalte sind sehr alt, vermutlich von ca. 2007 und wurden auf
+  expliziten Wunsch im Wiki belassen.
 
 Dieser Artikel behandelt das Updaten eines `OpenBSD </OpenBSD>`__-Systems
 *innerhalb* einer Version. Das Upgraden von einer Version auf eine nachfolgende
