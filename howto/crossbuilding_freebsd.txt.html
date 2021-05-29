@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.24. Crossbuilding FreeBSD &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.25. CrunchBang Desktop" href="crunchbsd.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -301,6 +304,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -314,8 +319,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/crossbuilding_freebsd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/crossbuilding_freebsd.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -323,31 +328,22 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="crunchbsd.txt.html" class="btn btn-neutral float-right" title="1.25. CrunchBang Desktop" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="cpu_stepping.txt.html" class="btn btn-neutral float-left" title="1.23. CPU Stepping (cpufreq, powerd)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="crossbuilding-freebsd">
+  <div class="section" id="crossbuilding-freebsd">
 <h1><span class="section-number">1.24. </span>Crossbuilding FreeBSD<a class="headerlink" href="#crossbuilding-freebsd" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Dieser Artikel zeigt auf wie sowohl Kernel und Welt für verschiedene Rechner
 und Architekturen von einem Rechner aus gebaut werden können. Wer den Artikel
 lesen will sollte mit <a class="reference external" href="http://www.freebsd.org/doc/de/books/handbook/kernelconfig.html">Kapitel 8 des FreeBSD Handbuchs</a> vertraut
 sein.</p>
-<section id="verschiedene-kernel-mit-ihren-welten-verwalten">
+<div class="section" id="verschiedene-kernel-mit-ihren-welten-verwalten">
 <h2><span class="section-number">1.24.1. </span>Verschiedene Kernel mit ihren Welten verwalten<a class="headerlink" href="#verschiedene-kernel-mit-ihren-welten-verwalten" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Dem Vorschlag des FreeBSD Handbuchs folgend sollten Kernel
 Konfigurationen im Verzeichnis <code class="docutils literal notranslate"><span class="pre">/root/kernels</span></code> gesammelt werden. Dort
@@ -362,7 +358,7 @@ Manpage <strong>make.conf(5)</strong>. Die Beschreibung für <strong>TARGET</str
 in der Datei <code class="docutils literal notranslate"><span class="pre">/usr/src/Makefile</span></code>.</p>
 <p>In einem Netz mit mehreren Rechnern kann sich der Einsatz von
 <a class="reference external" href="/anwendungen/Distcc">Distcc</a> lohnen.</p>
-<section id="make-konfiguration-einbinden">
+<div class="section" id="make-konfiguration-einbinden">
 <h3><span class="section-number">1.24.1.1. </span>make Konfiguration einbinden<a class="headerlink" href="#make-konfiguration-einbinden" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Damit die passende make Konfiguration automatisch geladen wird, müssen
 folgende Zeilen der <code class="docutils literal notranslate"><span class="pre">make.conf</span></code> hinzugefügt werden:</p>
@@ -391,8 +387,8 @@ werden. Hier ist allerdings vorsicht angesagt. Wenn einer der
 angegebenen Ports scheitert, bricht die Installation ab und das
 Kernelverzeichnis <strong>/boot/kernels</strong> ist unvollständig. Deshalb vorher
 immer ein Backup machen.</p>
-</section>
-<section id="objdir-nach-kernel-trennen">
+</div>
+<div class="section" id="objdir-nach-kernel-trennen">
 <h3><span class="section-number">1.24.1.2. </span>OBJDIR nach Kernel trennen<a class="headerlink" href="#objdir-nach-kernel-trennen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Beim Kompilieren von verschiedenen Kerneln und Welten entsteht das
 Problem, dass alle in <strong>/usr/obj</strong> landen, was es verhindert
@@ -419,9 +415,9 @@ MAKEOBJDIRPREFIX?=  /usr/obj/${KERNCONF}/${MACHINE}
 </pre></div>
 </div>
 <p>aus.</p>
-</section>
-</section>
-<section id="gebaute-systeme-verteilen">
+</div>
+</div>
+<div class="section" id="gebaute-systeme-verteilen">
 <h2><span class="section-number">1.24.2. </span>Gebaute Systeme verteilen<a class="headerlink" href="#gebaute-systeme-verteilen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die einfachste Möglichkeit solche fertigen Systeme zu verteilen ist über
 NFS.</p>
@@ -432,7 +428,7 @@ NFS.</p>
 FreeBSD 7 <strong>entfällt</strong> diese genau so wie das Kommando <code class="docutils literal notranslate"><span class="pre">/etc/rc.d/nfslocking</span>
 <span class="pre">start</span></code>.</p>
 </div>
-<section id="nfs-server-einrichten">
+<div class="section" id="nfs-server-einrichten">
 <h3><span class="section-number">1.24.2.1. </span>NFS Server einrichten<a class="headerlink" href="#nfs-server-einrichten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Rechner auf dem die Systeme gebaut werden muss die Verzeichnisse
 <strong>/usr/src</strong> und <strong>/usr/obj</strong> freigeben. Dazu wird der Datei
@@ -465,8 +461,8 @@ Befehl</p>
 </pre></div>
 </div>
 <p>aufgerufen werden.</p>
-</section>
-<section id="nfs-client-einrichten">
+</div>
+<div class="section" id="nfs-client-einrichten">
 <h3><span class="section-number">1.24.2.2. </span>NFS Client einrichten<a class="headerlink" href="#nfs-client-einrichten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Beim Client Rechner müssen in der <strong>/etc/rc.conf</strong> folgende Einträge
 gemacht werden:</p>
@@ -492,8 +488,8 @@ die Dateien für das zu installierende System enthalten.</p>
 <p>ausprobiert werden ob die NFS Freigabe des Servers funktioniert hat.
 SERVER ist dabei natürlich mit dem Hostnamen oder der IP des Servers zu
 ersetzen.</p>
-</section>
-<section id="installation-durchfuhren">
+</div>
+<div class="section" id="installation-durchfuhren">
 <h3><span class="section-number">1.24.2.3. </span>Installation durchführen<a class="headerlink" href="#installation-durchfuhren" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Zur Installation bleibt nur noch die Freigaben zu mounten. Der
 Einfachheit halber sollten sie in die <strong>/etc/fstab</strong> eingetragen werden:</p>
@@ -537,9 +533,9 @@ tatsächlich gemountet sind.</p>
 <span class="c1"># reboot</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="verweise">
+</div>
+</div>
+<div class="section" id="verweise">
 <h2><span class="section-number">1.24.3. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Ein eigener Kernel im <a class="reference external" href="http://www.freebsd.org/doc/de/books/handbook/kernelconfig.html">FreeBSD
@@ -555,41 +551,38 @@ Handbuch</a>.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="crunchbsd.txt.html" class="btn btn-neutral float-right" title="1.25. CrunchBang Desktop" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="cpu_stepping.txt.html" class="btn btn-neutral float-left" title="1.23. CPU Stepping (cpufreq, powerd)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="crunchbsd.txt.html" class="btn btn-neutral float-right" title="1.25. CrunchBang Desktop" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cpu_stepping.txt.html" class="btn btn-neutral float-left" title="1.23. CPU Stepping (cpufreq, powerd)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

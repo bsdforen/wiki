@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.107. Revision Control System &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.108. runit auf FreeBSD" href="runit.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -296,6 +299,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -309,8 +314,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/revision_control_system.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/revision_control_system.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -318,30 +323,21 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="runit.txt.html" class="btn btn-neutral float-right" title="1.108. runit auf FreeBSD" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="remount_rw.txt.html" class="btn btn-neutral float-left" title="1.106. Remount RW Read/Write" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="revision-control-system">
+  <div class="section" id="revision-control-system">
 <h1><span class="section-number">1.107. </span>Revision Control System<a class="headerlink" href="#revision-control-system" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</aside>
-<section id="autodokumentation-mit-rcs">
+</div>
+<div class="section" id="autodokumentation-mit-rcs">
 <h2><span class="section-number">1.107.1. </span>Autodokumentation mit RCS<a class="headerlink" href="#autodokumentation-mit-rcs" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das Revision Control System (RCS) dient zur Revisionskontrolle von
 Files. RCS automatisiert das Speichern, Holen, Dokumentieren,
@@ -359,7 +355,7 @@ werden, muss sie ausgecheckt werden (<code class="docutils literal notranslate">
 </div>
 <p>Alle Änderungen, die an der Datei vorgenommen wurden, werden in der Datei
 filename,v gespeichert.</p>
-<section id="die-wichtigsten-befehle">
+<div class="section" id="die-wichtigsten-befehle">
 <h3><span class="section-number">1.107.1.1. </span>Die wichtigsten Befehle<a class="headerlink" href="#die-wichtigsten-befehle" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Handbuch zu RCS <code class="docutils literal notranslate"><span class="pre">rcs</span></code> Einführung zu RCS <code class="docutils literal notranslate"><span class="pre">rcsintro</span></code> check in:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ci</span>
@@ -377,9 +373,9 @@ filename,v gespeichert.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># rcsdiff</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="anwendung">
+</div>
+</div>
+<div class="section" id="anwendung">
 <h2><span class="section-number">1.107.2. </span>Anwendung<a class="headerlink" href="#anwendung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Am Beispiel der Startdatei von X <code class="docutils literal notranslate"><span class="pre">~/.xinitrc</span></code> werde ich versuchen das
 Prinzip zu erklären.</p>
@@ -411,8 +407,8 @@ zw. 1.1 und 1.2).</p>
 <p>Um eine frühere Revision wiederherzustellen, <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">co</span> <span class="pre">-rx.x</span>
 <span class="pre">~/.xinitrc</span></code> wobei x durch die jeweilige Revisionsnummer zu
 ersetzen ist.</p>
-</section>
-<section id="rcs-variablen">
+</div>
+<div class="section" id="rcs-variablen">
 <h2><span class="section-number">1.107.3. </span>RCS-Variablen<a class="headerlink" href="#rcs-variablen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Beispiele:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$Id$ Dateiname, Revisionsnummer, Datum, Zeit, Autor, Status
@@ -430,8 +426,8 @@ schreiben. Das sieht für $Id$ folgendermaßen aus:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$Id: index.html,v 1.10 2005/10/12 13:22:58 simon Exp $
 </pre></div>
 </div>
-</section>
-<section id="rcsedit">
+</div>
+<div class="section" id="rcsedit">
 <h2><span class="section-number">1.107.4. </span>rcsedit<a class="headerlink" href="#rcsedit" title="Link zu dieser Überschrift">¶</a></h2>
 <p><a class="reference external" href="https://www.google.com/search?q=sysutils/rcsedit&amp;btnI=lucky">sysutils/rcsedit</a>
 erleichtert die Arbeit mit RCS. Einfach <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">rcsedit</span> <span class="pre">&lt;Datei&gt;</span></code>
@@ -440,41 +436,38 @@ dem Schließen des Editors kann man seine Änderungen eingeben.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="runit.txt.html" class="btn btn-neutral float-right" title="1.108. runit auf FreeBSD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="remount_rw.txt.html" class="btn btn-neutral float-left" title="1.106. Remount RW Read/Write" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="runit.txt.html" class="btn btn-neutral float-right" title="1.108. runit auf FreeBSD" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="remount_rw.txt.html" class="btn btn-neutral float-left" title="1.106. Remount RW Read/Write" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

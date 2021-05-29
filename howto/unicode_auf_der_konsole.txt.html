@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.130. Unicode auf der Konsole &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.131. Unix-Freigabe" href="unix-freigabe.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -299,6 +302,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -312,8 +317,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/unicode_auf_der_konsole.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/unicode_auf_der_konsole.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -321,30 +326,21 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="unix-freigabe.txt.html" class="btn btn-neutral float-right" title="1.131. Unix-Freigabe" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="unicode.txt.html" class="btn btn-neutral float-left" title="1.129. UNICODE" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="unicode-auf-der-konsole">
+  <div class="section" id="unicode-auf-der-konsole">
 <h1><span class="section-number">1.130. </span>Unicode auf der Konsole<a class="headerlink" href="#unicode-auf-der-konsole" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Dieser Artikel beschreibt wie <a class="reference external" href="/kompendium/Unicode">Unicode</a>-Unterstützung
 mittels VESA-Treiber und jfbterm unter <a class="reference external" href="/FreeBSD">FreeBSD</a> umgesetzt werden
 kann.</p>
-<section id="verwandte-artikel">
+<div class="section" id="verwandte-artikel">
 <h2><span class="section-number">1.130.1. </span>Verwandte Artikel<a class="headerlink" href="#verwandte-artikel" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der folgende Artikel wird vorausgesetzt.</p>
 <ul class="simple">
@@ -352,15 +348,15 @@ kann.</p>
 <li><p><a class="reference external" href="UNICODE">UNICODE</a></p></li>
 </ul>
 <p>Insbesondere ist ist auf eine korrekt gesetzte <code class="docutils literal notranslate"><span class="pre">locale</span></code> zu achten!</p>
-</section>
-<section id="benotigte-programme">
+</div>
+<div class="section" id="benotigte-programme">
 <h2><span class="section-number">1.130.2. </span>Benötigte Programme<a class="headerlink" href="#benotigte-programme" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Aus den FreeBSD Ports ist lediglich
 <a class="reference external" href="https://www.google.com/search?q=sysutils/jfbterm&amp;btnI=lucky">sysutils/jfbterm</a>
 zu installieren. Jfbterm nutzt den VESA-Modus um verschiedene
 internationale Kodierungen darzustellen. Insbesondere <strong>UTF-8</strong>.</p>
-</section>
-<section id="jfbterm-einrichten">
+</div>
+<div class="section" id="jfbterm-einrichten">
 <h2><span class="section-number">1.130.3. </span>Jfbterm Einrichten<a class="headerlink" href="#jfbterm-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Benutzer, die <code class="docutils literal notranslate"><span class="pre">jfbterm</span></code> verwenden wollen, sollten ihre <code class="docutils literal notranslate"><span class="pre">~/.termcap</span></code>
 Datei erweitern:</p>
@@ -385,8 +381,8 @@ diese mit <code class="docutils literal notranslate"><span class="pre">cat</span
 </div>
 <p>Nach dem Vornehmen dieser Änderung, kann der entsprechende Abschnitt in
 der Datei <code class="docutils literal notranslate"><span class="pre">~/.termcap</span></code> entfernt werden.</p>
-</section>
-<section id="probleme">
+</div>
+<div class="section" id="probleme">
 <h2><span class="section-number">1.130.4. </span>Probleme<a class="headerlink" href="#probleme" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Leider erkennen viele Programme die neuen Möglichkeiten nicht und
@@ -400,8 +396,8 @@ Programmen</p></li>
 <li><p>Copy’n’Paste (mit der Maus) funktioniert nur innerhalb einer
 <code class="docutils literal notranslate"><span class="pre">jfbterm</span></code> Instanz</p></li>
 </ul>
-</section>
-<section id="jfbterm-und-tcsh">
+</div>
+<div class="section" id="jfbterm-und-tcsh">
 <h2><span class="section-number">1.130.5. </span>Jfbterm und TCSH<a class="headerlink" href="#jfbterm-und-tcsh" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wer das will, kann jfbterm mit seinem Terminal automatisch starten
 lassen. Wer zum Beispiel die <code class="docutils literal notranslate"><span class="pre">csh</span></code> oder <code class="docutils literal notranslate"><span class="pre">tcsh</span></code> verwendet, kann
@@ -417,12 +413,12 @@ endsw
 <p>&lt;note warning&gt;Dergleichen sollte nicht mit dem <code class="docutils literal notranslate"><span class="pre">root</span></code>-Konto
 eingerichtet werden, da es dann bei Konfigurations- oder VESA-Problemen
 nicht mehr möglich ist, sich auf der Konsole einzuloggen.&lt;/note&gt;</p>
-</section>
-<section id="hinweise-zu-bestimmten-programmen">
+</div>
+<div class="section" id="hinweise-zu-bestimmten-programmen">
 <h2><span class="section-number">1.130.6. </span>Hinweise zu bestimmten Programmen<a class="headerlink" href="#hinweise-zu-bestimmten-programmen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In diesem Abschnitt werden Hinweise zu bestimmten Konsolen-Programmen
 aufgezeigt um die Unicode-Darstellung zu optimieren.</p>
-<section id="links">
+<div class="section" id="links">
 <h3><span class="section-number">1.130.6.1. </span>links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Textbrowser links <em>glaubt</em> leider nicht an Unicode auf der Konsole,
 zumindest lokalisierte Zeichensätze sind aber möglich. Dazu müssen
@@ -437,9 +433,9 @@ Darstellung westeuropäischer Zeichen.</p>
 <li><p>Setup -&gt; Terminal options -&gt; UTF-8 I/O</p></li>
 <li><p>Setup -&gt; Save options</p></li>
 </ol>
-</section>
-</section>
-<section id="verweise">
+</div>
+</div>
+<div class="section" id="verweise">
 <h2><span class="section-number">1.130.7. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.google.com/search?q=sysutils/jfbterm&amp;btnI=lucky">sysutils/jfbterm</a>
@@ -450,41 +446,38 @@ in den FreeBSD Ports</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="unix-freigabe.txt.html" class="btn btn-neutral float-right" title="1.131. Unix-Freigabe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="unicode.txt.html" class="btn btn-neutral float-left" title="1.129. UNICODE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="unix-freigabe.txt.html" class="btn btn-neutral float-right" title="1.131. Unix-Freigabe" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="unicode.txt.html" class="btn btn-neutral float-left" title="1.129. UNICODE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

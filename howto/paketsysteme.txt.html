@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.96. Paketsysteme &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.97. Festplattenpartitionierung unter FreeBSD" href="partitionierung.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -298,6 +301,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -311,8 +316,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/paketsysteme.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/paketsysteme.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -320,30 +325,21 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="partitionierung.txt.html" class="btn btn-neutral float-right" title="1.97. Festplattenpartitionierung unter FreeBSD" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="pakete_deinstallieren.txt.html" class="btn btn-neutral float-left" title="1.95. Pakete deinstallieren" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="paketsysteme">
+  <div class="section" id="paketsysteme">
 <h1><span class="section-number">1.96. </span>Paketsysteme<a class="headerlink" href="#paketsysteme" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</aside>
-<section id="grundsatzliches">
+</div>
+<div class="section" id="grundsatzliches">
 <h2><span class="section-number">1.96.1. </span>Grundsätzliches<a class="headerlink" href="#grundsatzliches" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Auf den meisten unixoiden Betriebsystemen gibt es Paketsysteme. Sie
 regeln Installation, Upgrades etc. und lösen Abhängigkeiten auf. Bei den
@@ -375,8 +371,8 @@ Mechanismen auf dem neusten Stand gehalten. Unter FreeBSD siehe dazu
 <p>Noch was: wenn im folgenden von dem Befehl <strong>make</strong> gesprochen wird, so
 müssen DragonFlyBSD-Nutzer und andere Nicht-NetBSD-Nutzer von PkgSrc
 stattdessen <strong>bmake</strong> nehmen!</p>
-</section>
-<section id="terminologie">
+</div>
+<div class="section" id="terminologie">
 <h2><span class="section-number">1.96.2. </span>Terminologie<a class="headerlink" href="#terminologie" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die Terminologie ist nicht sehr eindeutig oder konsistent, aber
 grundsätzlich kann man folgende Dinge festhalten:</p>
@@ -416,8 +412,8 @@ vorkommen -in unterschiedlichen Kategorien- oder vom Namen des später
 installierten Pakets abweichen!!!). Dieser Pfad wird als ORIGIN
 bezeichnet, die ORIGIN von Links wäre also <strong>www/links</strong>.</div>
 </div>
-</section>
-<section id="installieren-eines-programms-uber-die-ports-pkgsrc">
+</div>
+<div class="section" id="installieren-eines-programms-uber-die-ports-pkgsrc">
 <h2><span class="section-number">1.96.3. </span>Installieren eines Programms über die Ports/PkgSrc<a class="headerlink" href="#installieren-eines-programms-uber-die-ports-pkgsrc" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Möchte man ein noch nicht installiertes Programm aus den Quellen
 installieren, so geht man nach $BAUM/$ORIGIN und gibt <strong>make install
@@ -438,8 +434,8 @@ man in das entsprechende Verzeichnis. Danach werden dann die Quellen für
 das Programm und alle seine Abhängigkeiten heruntergeladen, wenn nötig
 gepatcht, kompiliert und installiert. Zum Schluß werden die nicht mehr
 benötigten Sourcen und Objektdateien wieder gelöscht.</p>
-</section>
-<section id="installieren-eines-programms-uber-die-pakete">
+</div>
+<div class="section" id="installieren-eines-programms-uber-die-pakete">
 <h2><span class="section-number">1.96.4. </span>Installieren eines Programms über die Pakete<a class="headerlink" href="#installieren-eines-programms-uber-die-pakete" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die BSDs bieten für viele (nicht alle) der <em>Ports</em> vorkompilierte Pakete
 an. Diese sind nicht immer aktuell oder vollständig (auch abhängig von
@@ -454,8 +450,8 @@ verwandte Betriebsystemsversion passenden Pakete verwendet werden.
 Besonders bei FreeBSD kann es aber schlauer sein auch auf einem Release
 die Pakete von -STABLE zu verwenden, siehe dazu
 <a class="reference external" href="FreeBSD-Zweige">FreeBSD-Zweige</a>.</p>
-</section>
-<section id="loschen-eines-installierten-pakets">
+</div>
+<div class="section" id="loschen-eines-installierten-pakets">
 <h2><span class="section-number">1.96.5. </span>Löschen eines installierten Pakets<a class="headerlink" href="#loschen-eines-installierten-pakets" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line">Mit <strong>pkg_info</strong> erhält man eine Liste der installierten Pakete.
@@ -479,8 +475,8 @@ beim Upgrade, siehe unten)!</p></li>
 <div class="line">Bei PkgSrc gibt es noch die Option <strong>-R</strong> (großes R), die nach einem
 Löschvorgang überflüssig gewordene Abhängigkeiten mitlöscht.</div>
 </div>
-</section>
-<section id="upgrade-eines-installierten-pakets">
+</div>
+<div class="section" id="upgrade-eines-installierten-pakets">
 <h2><span class="section-number">1.96.6. </span>Upgrade eines installierten Pakets<a class="headerlink" href="#upgrade-eines-installierten-pakets" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line">Grundsätzlich kann man so vorgehen, dass man ein Paket erst löscht
@@ -500,8 +496,8 @@ auf den neusten Stand zu bringen. Mit
 <a class="reference external" href="/anwendungen/bsdadminscripts#pkg_upgrade">bsdadminscripts#pkg_upgrade</a> <a class="footnote-reference brackets" href="#id9" id="id3">3</a>
 ist es jedoch auch Möglich mit Paketen zu aktualisieren.</div>
 </div>
-</section>
-<section id="aktualisieren-der-ports-pkgsrc">
+</div>
+<div class="section" id="aktualisieren-der-ports-pkgsrc">
 <h2><span class="section-number">1.96.7. </span>Aktualisieren der Ports / PkgSrc<a class="headerlink" href="#aktualisieren-der-ports-pkgsrc" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line"><em>Pakete</em> werden auf den Mirrors automatisch aktualisiert, bei seinen
@@ -519,8 +515,8 @@ OpenBSD4.1). Bei PkgSrc sollte <strong>make update</strong> automatisch auf den
 richtigen Zweig aktualisieren; FreeBSD hat nur einen Zweig (siehe auch
 FreeBSD-Zweige).</div>
 </div>
-</section>
-<section id="grafische-oberflachen-zur-paketverwaltung">
+</div>
+<div class="section" id="grafische-oberflachen-zur-paketverwaltung">
 <h2><span class="section-number">1.96.8. </span>Grafische Oberflächen zur Paketverwaltung<a class="headerlink" href="#grafische-oberflachen-zur-paketverwaltung" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="/anwendungen/bpm">bpm</a> <a class="footnote-reference brackets" href="#id10" id="id4">4</a> - Ein GTK+ basiertes Ports-Frontend
@@ -534,8 +530,8 @@ PkgSrc und OpenBSD-Ports)</p></li>
 <li><p><a class="reference external" href="/anwendungen/portbrowser">portbrowser</a> <a class="footnote-reference brackets" href="#id12" id="id6">6</a> - Ein auf
 Gtk2-basiertes Frontend. (Nur FreeBSD-Ports)</p></li>
 </ul>
-</section>
-<section id="verweise">
+</div>
+<div class="section" id="verweise">
 <h2><span class="section-number">1.96.9. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>FreeBSD Man-Seiten:
@@ -582,41 +578,38 @@ Gtk2-basiertes Frontend. (Nur FreeBSD-Ports)</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="partitionierung.txt.html" class="btn btn-neutral float-right" title="1.97. Festplattenpartitionierung unter FreeBSD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="pakete_deinstallieren.txt.html" class="btn btn-neutral float-left" title="1.95. Pakete deinstallieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="partitionierung.txt.html" class="btn btn-neutral float-right" title="1.97. Festplattenpartitionierung unter FreeBSD" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pakete_deinstallieren.txt.html" class="btn btn-neutral float-left" title="1.95. Pakete deinstallieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

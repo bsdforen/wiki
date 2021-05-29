@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.105. PuTTY &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.106. Remount RW Read/Write" href="remount_rw.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -301,6 +304,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -314,8 +319,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/putty.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/putty.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -323,36 +328,27 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="remount_rw.txt.html" class="btn btn-neutral float-right" title="1.106. Remount RW Read/Write" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="poudriere_guide.txt.html" class="btn btn-neutral float-left" title="1.104. Poudriere Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="putty">
+  <div class="section" id="putty">
 <h1><span class="section-number">1.105. </span>PuTTY<a class="headerlink" href="#putty" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</aside>
+</div>
 <p>Viele Unix-Administratoren arbeiten nicht vom Unix-Desktop, sondern
 nutzen gewöhnliche Windows-Rechner als Konsole. Ein gängiger SSH-Client
 für Windows (Win95 bis Vista) ist PuTTY, ein freier SSH-Client von Simon
 Tatham. Dieser Artikel zeigt, wie man mit PuTTY verwendet, Verbindungen
 mittels Zertifikaten authentifiziert, Tunnel aufbaut und Verbindungen
 verwaltet.</p>
-<section id="putty-downloaden-und-installieren">
+<div class="section" id="putty-downloaden-und-installieren">
 <h2><span class="section-number">1.105.1. </span>PuTTY downloaden und installieren<a class="headerlink" href="#putty-downloaden-und-installieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p><a class="align-right reference internal" href="../_images/directory.png"><img alt="PuTTY-Verzeichnis" class="align-right" src="../_images/directory.png" style="width: 180px;" /></a> Die Software findet man auf der <a class="reference external" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">Homepage des Autors
 Simon Tatham</a> in
@@ -402,8 +398,8 @@ ganze Reihe von Programmen:</p>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="putty-einrichten">
+</div>
+<div class="section" id="putty-einrichten">
 <h2><span class="section-number">1.105.2. </span>PuTTY einrichten<a class="headerlink" href="#putty-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
 <p><a class="align-left reference internal" href="../_images/new_connection.png"><img alt="New Connection" class="align-left" src="../_images/new_connection.png" style="width: 180px;" /></a> Beim ersten Start von PuTTY erscheint eine Dialogbox,
 mit der man sich zu SSH-Servern verbinden kann. Am linken Rand des
@@ -411,7 +407,7 @@ Fensters findet man die Navigation durch die Einstllungs-Kategorien,
 oben die Eingabefelder für Hostname und -Port, darunter gespeicherte
 Verbindungen. Die erste dieser Verbindungen zeigt auf keinen bestimmten
 Host, sondern speichert die Default-Einstellungen.</p>
-<section id="terminal-einrichten">
+<div class="section" id="terminal-einrichten">
 <h3><span class="section-number">1.105.2.1. </span>Terminal einrichten<a class="headerlink" href="#terminal-einrichten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Bevor man die erste Session öffnet, richtet man das Terminal ein. In der
 Kategorie <em>Window</em> vergrößert man Bildschirmfläche z.B. auf 123 Zeichen
@@ -427,8 +423,8 @@ Einstellungen angepasst hat, wechselt man in den ersten Abschnitt
 Sessions und drückt auf <em>Save</em>, um die geänderten Default-Einstellungen
 zu speichern – andernfalls würden diese nur bis zum Programmende
 gelten.</p>
-</section>
-<section id="verbindung-aufbauen">
+</div>
+<div class="section" id="verbindung-aufbauen">
 <h3><span class="section-number">1.105.2.2. </span>Verbindung aufbauen<a class="headerlink" href="#verbindung-aufbauen" title="Link zu dieser Überschrift">¶</a></h3>
 <p><a class="align-left reference internal" href="../_images/connection.png"><img alt="Connection" class="align-left" src="../_images/connection.png" style="width: 180px;" /></a> <a class="align-right reference internal" href="../_images/loggedin.png"><img alt="Angemeldet" class="align-right" src="../_images/loggedin.png" style="width: 180px;" /></a> Im der Kategorie <em>Session</em> ergänzt man
 Hostname oder IP-Adresse, Protokoll und Port (die Standard-Ports werden
@@ -443,8 +439,8 @@ anpassen. Sobald man mit den aktuellen Einstellungen zufrieden ist,
 <p>Hier gibt man in der oberen Zeile einen sinnvollen Namen ein, z.B.
 <em>mein.rechner.org</em>. Mit <em>Save</em> werden die aktuellen Einstellungen
 dauerhaft gespeichert.</p>
-</section>
-<section id="schlusselpaare-erstellen">
+</div>
+<div class="section" id="schlusselpaare-erstellen">
 <h3><span class="section-number">1.105.2.3. </span>Schlüsselpaare erstellen<a class="headerlink" href="#schlusselpaare-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
 <p><a class="align-left reference internal" href="../_images/gen.png"><img alt="gen.png" class="align-left" src="../_images/gen.png" style="width: 180px;" /></a> Zum Erstellen von Schlüsselpaaren verwendet man das Programm
 <em>PuTTYgen</em>. PuTTYgen kann aber auch Schlüssel im OpenSSH-Format im- und
@@ -468,8 +464,8 @@ Den Öffentlichen Schlüssel speichert man sinnvollerweise mit der Endung
 <p class="admonition-title">Bemerkung</p>
 <p>Geben Sie den privaten Schlüssel niemals an Dritte weiter.</p>
 </div>
-</section>
-<section id="session-mit-schlusselpaaren-schutzen">
+</div>
+<div class="section" id="session-mit-schlusselpaaren-schutzen">
 <h3><span class="section-number">1.105.2.4. </span>Session mit Schlüsselpaaren schützen<a class="headerlink" href="#session-mit-schlusselpaaren-schutzen" title="Link zu dieser Überschrift">¶</a></h3>
 <p><a class="align-right reference internal" href="../_images/auth.png"><img alt="auth.png" class="align-right" src="../_images/auth.png" style="width: 180px;" /></a> Im PuTTY-Konfigurationsdialog lädt man eine Session (das kann
 auch <em>default Settings</em> sein) und wechselt dann zur Kategorie
@@ -497,9 +493,9 @@ ssh-rsa AAAAB3NzaC1y ... hjkIJDbnfksIJF== rsa-key-20070626
 </div>
 <p>Beim nächsten Anmelden sollte nun keine Passworteingabe mehr
 erforderlich sein.</p>
-</section>
-</section>
-<section id="pageant-einrichten">
+</div>
+</div>
+<div class="section" id="pageant-einrichten">
 <h2><span class="section-number">1.105.3. </span>Pageant einrichten<a class="headerlink" href="#pageant-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
 <p><a class="align-right reference internal" href="../_images/winscp.png"><img alt="WinSCP im Explorer-Modus" class="align-right" src="../_images/winscp.png" style="width: 180px;" /></a> Mit der bisher beschriebenen Methode muss man
 jedesmal, wenn man eine Session öffnet, das Passwort des Schlüssels
@@ -513,7 +509,7 @@ Programme an diesen Service von Pageant anbinden können, z. B.
 <a class="reference external" href="http://winscp.net/eng/docs/lang:de">WinSCP</a>, ein Dateimanager für
 Windows, mit dem man Dateien per Drag&amp;Drop vom Windows Explorer auf
 Remote Server per scp, sftp oder ftp übertragen kann.</p>
-<section id="pageant-im-autostart-menu-eintragen">
+<div class="section" id="pageant-im-autostart-menu-eintragen">
 <h3><span class="section-number">1.105.3.1. </span>Pageant im Autostart-Menü eintragen<a class="headerlink" href="#pageant-im-autostart-menu-eintragen" title="Link zu dieser Überschrift">¶</a></h3>
 <p><a class="align-right reference internal" href="../_images/pageant_autostart.png"><img alt="Verknüpfung zu Pageant im Autostart-Menü" class="align-right" src="../_images/pageant_autostart.png" style="width: 180px;" /></a> Im Autostart-Menü legt man
 eine neue Verknüpfung zu Pageant an. Im Feld <em>Ziel:</em> ergänzt man den
@@ -529,42 +525,39 @@ im Submenü <em>Saved Sessions</em> direkt aufrufbar.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="remount_rw.txt.html" class="btn btn-neutral float-right" title="1.106. Remount RW Read/Write" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="poudriere_guide.txt.html" class="btn btn-neutral float-left" title="1.104. Poudriere Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="remount_rw.txt.html" class="btn btn-neutral float-right" title="1.106. Remount RW Read/Write" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="poudriere_guide.txt.html" class="btn btn-neutral float-left" title="1.104. Poudriere Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

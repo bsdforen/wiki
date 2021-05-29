@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.9. Automatische Proxy-Konfiguration &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.10. Automatisches Beenden von Diensten" href="automatisches_beenden_von_diensten.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -298,6 +301,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -311,8 +316,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/automatische_proxy-konfiguration.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/automatische_proxy-konfiguration.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -320,33 +325,24 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="automatisches_beenden_von_diensten.txt.html" class="btn btn-neutral float-right" title="1.10. Automatisches Beenden von Diensten" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="autologin_auf_der_konsole.txt.html" class="btn btn-neutral float-left" title="1.8. Autologin auf der Konsole" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="automatische-proxy-konfiguration">
+  <div class="section" id="automatische-proxy-konfiguration">
 <h1><span class="section-number">1.9. </span>Automatische Proxy-Konfiguration<a class="headerlink" href="#automatische-proxy-konfiguration" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</aside>
+</div>
 <p>Dies ist eine Beschreibung, wie man verschiedenen Browsern ermöglicht,
 verschiedene Proxies zu verwenden, ohne daß diese explizit konfiguriert werden
 müssen.</p>
-<section id="einleitung">
+<div class="section" id="einleitung">
 <h2><span class="section-number">1.9.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Bisher habe ich das unter Debian GNU/Linux und FreeBSD 6.0 getestet. Da
 der Apache, der Nameserver und der DHCP Server auch unter den anderen
@@ -370,8 +366,8 @@ Vorteil besteht darin, daß die User nur noch einstellen müssen, dass
 eine automatische Config verwendet wird. Die URL dieser Config ermittelt
 der Browser aber selbständig. Natürlich kann auch die URL des Proxy
 Config Scripts angegeben werden.</p>
-</section>
-<section id="webserver-konfiguration">
+</div>
+<div class="section" id="webserver-konfiguration">
 <h2><span class="section-number">1.9.2. </span>Webserver Konfiguration<a class="headerlink" href="#webserver-konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Dem Webserver muß der MIME Typ für die Datei <strong>wpad.dat</strong> bekannt
 gemacht werden. Beim Apache 2 kann man mittels <em>AddType</em> neue Typen
@@ -381,8 +377,8 @@ nachzulesen). In diesem Fall sollte folgende Zeile eingetragen werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AddType</span> <span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">ns</span><span class="o">-</span><span class="n">proxy</span><span class="o">-</span><span class="n">autoconfig</span> <span class="n">wpad</span><span class="o">.</span><span class="n">dat</span>
 </pre></div>
 </div>
-</section>
-<section id="dhcp-server">
+</div>
+<div class="section" id="dhcp-server">
 <h2><span class="section-number">1.9.3. </span>DHCP Server<a class="headerlink" href="#dhcp-server" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Beim ISC DHCP Server muß als erstes eine neue Option eingetragen werden.
 Dies geschieht durch folgenden Eintrag in der <strong>/etc/dhcp3/dhcpd.conf</strong>.</p>
@@ -395,8 +391,8 @@ Eintrag dafür lautet:</p>
 </pre></div>
 </div>
 <p>Wobei 10.0.0.1 die IP Adresse des Webservers ist.</p>
-</section>
-<section id="dns-server">
+</div>
+<div class="section" id="dns-server">
 <h2><span class="section-number">1.9.4. </span>DNS Server<a class="headerlink" href="#dns-server" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Bei ISC Nameserver Bind sind nun noch zwei Anpassungen notwendig, um die
 unterschiedlichen Methoden der Browser zu unterstützen.</p>
@@ -418,8 +414,8 @@ Webservernamen auflöst.</p></li>
 einlesen. Ab jetzt können die Browser auf automatische
 Proxykonfiguration umgestellt werden. Bei Firefox gibt es beispielsweise
 eine Auswahl <em>Auto-detect proxy settings</em>, die gewählt werden sollte.</p>
-</section>
-<section id="wpad-dat-erstellen">
+</div>
+<div class="section" id="wpad-dat-erstellen">
 <h2><span class="section-number">1.9.5. </span>wpad.dat erstellen<a class="headerlink" href="#wpad-dat-erstellen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die <strong>wpad.dat</strong> enthält lediglich die Java Script Funktion
 <em>FindProxyForURL(url, host)</em>. <em>url</em> enthält den komplette URL, die
@@ -442,29 +438,29 @@ beachten ist, kann unter <a class="reference external" href="http://wp.netscape.
 Config</a>
 nachgelesen werden.</p>
 <p>Wer möchte kann die Konfiguration natürlich auch dynamisch erzeugen.</p>
-</section>
-<section id="browser">
+</div>
+<div class="section" id="browser">
 <h2><span class="section-number">1.9.6. </span>Browser<a class="headerlink" href="#browser" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Ein paar Anmerkungen zu Problemen/Besonderheiten, die bei verschiedenen
 Browsern zu beachten sind.</p>
-</section>
-<section id="mozilla">
+</div>
+<div class="section" id="mozilla">
 <h2><span class="section-number">1.9.7. </span>Mozilla<a class="headerlink" href="#mozilla" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Bei Mozilla ist nichts zu beachten, allerdings eignet er sich sehr gut
 zum Debuggen des Scripts. Um Probleme zu finden, kann man bei Mozilla
 die Java Script Console zu öffnen. Parallel kann man die <strong>wpad.dat</strong>
 unter <em>Edit/Preferences/Advanced/Proxies</em> neu laden. Falls Fehler in der
 <strong>wpad.dat</strong> auftauchen, lassen diese sich dort finden.</p>
-</section>
-<section id="opera-konqueror">
+</div>
+<div class="section" id="opera-konqueror">
 <h2><span class="section-number">1.9.8. </span>Opera &amp; Konqueror<a class="headerlink" href="#opera-konqueror" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Damit das Ganze mit Opera funktioniert, muß dort ein Link <strong>wpad.pac</strong>
 (oder ähnlich, wichtig ist die Endung <em>.pac</em>) angelegt werden, da der
 MIME-Typ, den Opera verwendet, eine <strong>wpat.dat</strong> nicht richtig zuordnet
 und entsprechend nicht auswerten kann. Für den Konqueror gilt das
 gleiche.</p>
-</section>
-<section id="internet-explorer">
+</div>
+<div class="section" id="internet-explorer">
 <h2><span class="section-number">1.9.9. </span>Internet Explorer<a class="headerlink" href="#internet-explorer" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Bisher keine Probleme, in der Default Einstellung wird die Config
 gefunden und eingebunden.</p>
@@ -472,41 +468,38 @@ gefunden und eingebunden.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="automatisches_beenden_von_diensten.txt.html" class="btn btn-neutral float-right" title="1.10. Automatisches Beenden von Diensten" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="autologin_auf_der_konsole.txt.html" class="btn btn-neutral float-left" title="1.8. Autologin auf der Konsole" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="automatisches_beenden_von_diensten.txt.html" class="btn btn-neutral float-right" title="1.10. Automatisches Beenden von Diensten" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="autologin_auf_der_konsole.txt.html" class="btn btn-neutral float-left" title="1.8. Autologin auf der Konsole" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.77. M0n0wall &amp; SIP &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.78. Mailhamster (Mailsammler)" href="mailhamster.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -301,6 +304,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -314,8 +319,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/m0n0wall_sip.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/m0n0wall_sip.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -323,26 +328,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="mailhamster.txt.html" class="btn btn-neutral float-right" title="1.78. Mailhamster (Mailsammler)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html" class="btn btn-neutral float-left" title="1.76. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="m0n0wall-sip">
+  <div class="section" id="m0n0wall-sip">
 <h1><span class="section-number">1.77. </span>M0n0wall &amp; SIP<a class="headerlink" href="#m0n0wall-sip" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p><a class="reference external" href="http://m0n0.ch/wall">M0n0wall</a> ist eine umfangreiche und einfach zu
 konfigurierende Firewall-Distribution von FreeBSD.</p>
 <p>Das Protokoll VoIP verträgt sich sehr schlecht mit NAT-Firewalls, welche
@@ -350,12 +346,12 @@ jedoch stark verbreitet sind und z.B. auch eine der Hauptfunktionen von
 M0n0wall darstellt.</p>
 <p>In den folgenden Varianten wird gezeigt, wie man ein VoIP-Device hinter
 einer NAT-Firewall wie M0n0wall zum Laufen bekommen kann.</p>
-<section id="variante-port-forward">
+<div class="section" id="variante-port-forward">
 <h2><span class="section-number">1.77.1. </span>Variante: Port-Forward<a class="headerlink" href="#variante-port-forward" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mit folgenden statischen Portforwards auf direkt auf die Fritzbox ist
 VoIP zum Laufen zu bekommen. Die Konfiguration ist getestet mit GMX
 (bzw. United-Internet) und iptel.org .</p>
-<section id="nat-regeln">
+<div class="section" id="nat-regeln">
 <h3><span class="section-number">1.77.1.1. </span>NAT-Regeln<a class="headerlink" href="#nat-regeln" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Entsprechend den folgenden NAT-Regeln muss auch zusätzlich eine
 Firewall-Regel angelegt werden, was bei m0n0wall aber automatisch
@@ -422,8 +418,8 @@ gemacht werden kann.</p>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="nachteile">
+</div>
+<div class="section" id="nachteile">
 <h3><span class="section-number">1.77.1.2. </span>Nachteile<a class="headerlink" href="#nachteile" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der deutliche Nachteil hierbei ist, dass die Registrierung beim
 Provider-Registrar z.B. nach der 24-Stunden DSL-Trennung nicht
@@ -432,13 +428,13 @@ unüblich, dass man für Stunden nicht erreichbar ist. Außerdem ist diese
 Konfiguration aufwändig und eben sehr statisch, so dass dies nicht
 praktisch ist, wenn man mehrere VoIP-Telefone oder Softphonse wie
 Twinkle, KPhone oder Linphone im Einsatz hat.</p>
-</section>
-</section>
-<section id="variante-sip-proxy">
+</div>
+</div>
+<div class="section" id="variante-sip-proxy">
 <h2><span class="section-number">1.77.2. </span>Variante: SIP-Proxy<a class="headerlink" href="#variante-sip-proxy" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Seit der Version 1.3b7 enthält M0n0wall einen funktionierenden SIP-proxy
 (siproxd), welcher die Problematik deutlich vereinfachen kann.</p>
-<section id="aktivieren-des-sip-proxys">
+<div class="section" id="aktivieren-des-sip-proxys">
 <h3><span class="section-number">1.77.2.1. </span>aktivieren des SIP-Proxys<a class="headerlink" href="#aktivieren-des-sip-proxys" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In dem Webinterface wird dieser unter dem Menü <strong>Services</strong>–&gt;**SIP
 Proxy** aktiviert. Die folgenden Standardeinstellungen sollten für die
@@ -465,8 +461,8 @@ meisten Fälle korrekt sein:</p>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="firewall-regeln-anlegen">
+</div>
+<div class="section" id="firewall-regeln-anlegen">
 <h3><span class="section-number">1.77.2.2. </span>Firewall-Regeln anlegen<a class="headerlink" href="#firewall-regeln-anlegen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Damit der SIP-Proxy von außen erreichbar ist, müssen für das
 <strong>WAN-Interface</strong> zwei Regeln angelegt werden. Dies geschieht anders als
@@ -508,8 +504,8 @@ in dem Hilfetext beschrieben nicht automatisch:</p>
 </table>
 <p>NAT-Regeln sind nicht weiter notwendig, da der siproxd dies auf
 Applikationsebene als Gateway regelt.</p>
-</section>
-<section id="telefon-konfigurieren">
+</div>
+<div class="section" id="telefon-konfigurieren">
 <h3><span class="section-number">1.77.2.3. </span>Telefon konfigurieren<a class="headerlink" href="#telefon-konfigurieren" title="Link zu dieser Überschrift">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -537,8 +533,8 @@ Applikationsebene als Gateway regelt.</p>
 </tbody>
 </table>
 <p><strong>NAT-Durchtunnelung</strong> oder STUN bzw. STUN-Server <strong>abschalten</strong>.</p>
-</section>
-<section id="einschrankungen">
+</div>
+<div class="section" id="einschrankungen">
 <h3><span class="section-number">1.77.2.4. </span>Einschränkungen<a class="headerlink" href="#einschrankungen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Diese Konfiguration funktioniert mit Softphones wie Twinkle - jedoch
 bisher nicht mit einer Fritzbox, da man dort die Domain und den
@@ -546,42 +542,39 @@ Registrar nicht getrennt angeben kann. FIXME</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="mailhamster.txt.html" class="btn btn-neutral float-right" title="1.78. Mailhamster (Mailsammler)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html" class="btn btn-neutral float-left" title="1.76. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="mailhamster.txt.html" class="btn btn-neutral float-right" title="1.78. Mailhamster (Mailsammler)" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html" class="btn btn-neutral float-left" title="1.76. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

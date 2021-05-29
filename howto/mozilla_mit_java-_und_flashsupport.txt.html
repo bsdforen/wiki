@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.87. Mozilla mit Java- und Flashsupport &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.88. MPD einrichten" href="mpd_einrichten.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -305,6 +308,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -318,8 +323,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/mozilla_mit_java-_und_flashsupport.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/mozilla_mit_java-_und_flashsupport.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -327,31 +332,22 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="mpd_einrichten.txt.html" class="btn btn-neutral float-right" title="1.88. MPD einrichten" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="moused_einrichten.txt.html" class="btn btn-neutral float-left" title="1.86. moused einrichten" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="mozilla-mit-java-und-flashsupport">
+  <div class="section" id="mozilla-mit-java-und-flashsupport">
 <h1><span class="section-number">1.87. </span>Mozilla mit Java- und Flashsupport<a class="headerlink" href="#mozilla-mit-java-und-flashsupport" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Dieser Artikel führt Schritt-für-Schritt durch die Installation der Flash-,
 Java-, Mplayer-, Adobe Reader- und RealPlayer-Plugins für den nativen
 Firefox/Seamonkey. Zudem wird aufgezeigt, wie die Flash-Unterstützung im
 Konqueror aktiviert werden kann.</p>
-<section id="nspluginwrapper">
+<div class="section" id="nspluginwrapper">
 <h2><span class="section-number">1.87.1. </span>nspluginwrapper<a class="headerlink" href="#nspluginwrapper" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Praktisch alle Mozilla-Plugins benötigen den
 <a class="reference external" href="https://www.google.com/search?q=www/nspluginwrapper&amp;btnI=lucky">www/nspluginwrapper</a>,
@@ -361,8 +357,8 @@ nspluginwrapper wird mit:</p>
 </pre></div>
 </div>
 <p>installiert.</p>
-</section>
-<section id="flash-plugin">
+</div>
+<div class="section" id="flash-plugin">
 <h2><span class="section-number">1.87.2. </span>Flash-Plugin<a class="headerlink" href="#flash-plugin" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der Linux-Flashplugin wird wie folgt installiert:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># portinstall www/linux-flashplugin9</span>
@@ -389,8 +385,8 @@ Flash-Plugin</a> kontrollieren.
 Mit der Erweiterung
 <a class="reference external" href="https://www.google.com/search?q=www/xpi-flashblock&amp;btnI=lucky">www/xpi-flashblock</a>
 kann man die Anzeige von Flash auf Webseiten kontrollieren.</p>
-</section>
-<section id="problembeseitigung">
+</div>
+<div class="section" id="problembeseitigung">
 <h2><span class="section-number">1.87.3. </span>Problembeseitigung<a class="headerlink" href="#problembeseitigung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Leider hängt sich flash9 gerne mal auf. Dieser Zustand kann durch
 folgende Eingabe leicht beseitigt werden:</p>
@@ -402,8 +398,8 @@ x11-fonts/webfonts installiert werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># portinstall x11-fonts/webfonts</span>
 </pre></div>
 </div>
-</section>
-<section id="java">
+</div>
+<div class="section" id="java">
 <h2><span class="section-number">1.87.4. </span>Java<a class="headerlink" href="#java" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das Java-Plugin ist im Java-Paket enthalten.</p>
 <p>Es gibt zwei verschiedene Arten von Java in den Ports:</p>
@@ -441,8 +437,8 @@ JRE oder JDK.) Verschieben Sie die heruntergeladene Datei nach
 </div>
 <p>Schließlich können Sie die <a class="reference external" href="http://www.bodo.com/javame.htm">Funktionstüchtigkeit vom
 Java-Plugin</a> kontrollieren.</p>
-</section>
-<section id="mplayer-plugin">
+</div>
+<div class="section" id="mplayer-plugin">
 <h2><span class="section-number">1.87.5. </span>Mplayer-Plugin<a class="headerlink" href="#mplayer-plugin" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Fügen Sie in der Datei /etc/make.conf die Zeile</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WITH_GECKO</span><span class="o">=</span> <span class="n">firefox</span> <span class="n">mozilla</span> <span class="n">seamonkey</span>
@@ -458,8 +454,8 @@ z.B. nur</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># portinstall www/mplayer-plugin</span>
 </pre></div>
 </div>
-</section>
-<section id="adobe-reader">
+</div>
+<div class="section" id="adobe-reader">
 <h2><span class="section-number">1.87.6. </span>Adobe Reader<a class="headerlink" href="#adobe-reader" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das Adobe Reader-Plugin benötigt den Linuxpluginwrapper.</p>
 <p>Adobe Reader installieren:</p>
@@ -470,21 +466,21 @@ z.B. nur</p>
 kontrollieren</a>.
 Mit der Erweiterung <code class="docutils literal notranslate"><span class="pre">www/xpi-pdf_download</span></code> kann man die Anzeige von PDF
 Dokumenten kontrollieren.</p>
-</section>
-<section id="realplayer-plugin">
+</div>
+<div class="section" id="realplayer-plugin">
 <h2><span class="section-number">1.87.7. </span>RealPlayer-Plugin<a class="headerlink" href="#realplayer-plugin" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das RealPlayer-Plugin benötigt den Linuxpluginwrapper.</p>
 <p>RealPlayer installieren:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># portinstall linux-realplayer</span>
 </pre></div>
 </div>
-</section>
-<section id="mozilla-plugins-mit-konqueror-benutzen">
+</div>
+<div class="section" id="mozilla-plugins-mit-konqueror-benutzen">
 <h2><span class="section-number">1.87.8. </span>Mozilla-Plugins mit Konqueror benutzen<a class="headerlink" href="#mozilla-plugins-mit-konqueror-benutzen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Eine ausführliche Anleitung bietet das <a class="reference external" href="http://freebsd.kde.org/howtos/konqueror-flash.php">FreeBSD KDE
 Team</a>.</p>
-</section>
-<section id="testen">
+</div>
+<div class="section" id="testen">
 <h2><span class="section-number">1.87.9. </span>Testen<a class="headerlink" href="#testen" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Welche Plugins funktionieren, kann man anhand <a class="reference external" href="http://www.linspire.com/file_types/filetypes.php">einiger
@@ -497,11 +493,11 @@ Fehlermeldungen im Terminalfenster.</p></li>
 <li><p>Kontrollieren Sie im Firefox unter der Adresse <code class="docutils literal notranslate"><span class="pre">about:plugins</span></code> ob
 die Plugins erkannt wurden.</p></li>
 </ul>
-</section>
-<section id="fehlerbehebung">
+</div>
+<div class="section" id="fehlerbehebung">
 <h2><span class="section-number">1.87.10. </span>Fehlerbehebung<a class="headerlink" href="#fehlerbehebung" title="Link zu dieser Überschrift">¶</a></h2>
-</section>
-<section id="symbolische-links">
+</div>
+<div class="section" id="symbolische-links">
 <h2><span class="section-number">1.87.11. </span>Symbolische Links<a class="headerlink" href="#symbolische-links" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Bei Problemen sehen Sie am besten in der /etc/libmap.conf nach, wo sich
 ein Mozilla-Plugins genau befinden muss. Erstellen Sie einen
@@ -536,8 +532,8 @@ symbolischen Link des fehlenden Mozilla-Plugins ins Verzeichnis
 </div>
 </li>
 </ul>
-</section>
-<section id="rechner-neustarten">
+</div>
+<div class="section" id="rechner-neustarten">
 <h2><span class="section-number">1.87.12. </span>Rechner neustarten<a class="headerlink" href="#rechner-neustarten" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In der Vergangenheit zeigte sich, dass in einigen Fällen ein
 Rechner-Neustart notwendig ist, damit alles funktioniert.</p>
@@ -546,11 +542,11 @@ Rechner-Neustart notwendig ist, damit alles funktioniert.</p>
 </pre></div>
 </div>
 <p>nicht ausreicht.</p>
-</section>
-<section id="alternativen">
+</div>
+<div class="section" id="alternativen">
 <h2><span class="section-number">1.87.13. </span>Alternativen<a class="headerlink" href="#alternativen" title="Link zu dieser Überschrift">¶</a></h2>
-</section>
-<section id="zu-flash">
+</div>
+<div class="section" id="zu-flash">
 <h2><span class="section-number">1.87.14. </span>zu Flash<a class="headerlink" href="#zu-flash" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
@@ -573,13 +569,13 @@ angezeigt.</p></li>
 Firefox durch das Flash-Plugin zu instabil wird, der kann diesen Port
 <a class="reference external" href="http://www.bsdforen.de/showthread.php?t=4746">ausprobieren</a>.</p></li>
 </ul>
-</section>
-<section id="firefox-und-externe-anwendungen">
+</div>
+<div class="section" id="firefox-und-externe-anwendungen">
 <h2><span class="section-number">1.87.15. </span>Firefox und externe Anwendungen<a class="headerlink" href="#firefox-und-externe-anwendungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Für die Darstellung spezieller Inhalte können <a class="reference external" href="http://www.bsdforen.de/showthread.php?t=12215">externe Anwendungen
 benutzt werden</a>.</p>
-</section>
-<section id="links">
+</div>
+<div class="section" id="links">
 <h2><span class="section-number">1.87.16. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="/anwendungen/Firefox">Firefox</a> enthält noch weitere Infos.</p></li>
@@ -589,41 +585,38 @@ optimieren.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="mpd_einrichten.txt.html" class="btn btn-neutral float-right" title="1.88. MPD einrichten" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="moused_einrichten.txt.html" class="btn btn-neutral float-left" title="1.86. moused einrichten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="mpd_einrichten.txt.html" class="btn btn-neutral float-right" title="1.88. MPD einrichten" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="moused_einrichten.txt.html" class="btn btn-neutral float-left" title="1.86. moused einrichten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

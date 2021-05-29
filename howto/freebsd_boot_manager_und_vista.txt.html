@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.56. FreeBSD Boot Manager &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.57. FTP-Server mit PureFTPd" href="ftp-server_mit_pureftpd.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -296,6 +299,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -309,8 +314,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/freebsd_boot_manager_und_vista.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/freebsd_boot_manager_und_vista.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -318,26 +323,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="ftp-server_mit_pureftpd.txt.html" class="btn btn-neutral float-right" title="1.57. FTP-Server mit PureFTPd" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="freebsd_als_gast_unter_vmware.txt.html" class="btn btn-neutral float-left" title="1.55. FreeBSD als Gast unter VMware" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="freebsd-boot-manager">
+  <div class="section" id="freebsd-boot-manager">
 <h1><span class="section-number">1.56. </span>FreeBSD Boot Manager<a class="headerlink" href="#freebsd-boot-manager" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warnung</p>
 <p>Achtung! Die hier beschriebenen Anleitungen betreffen einen sehr wichtigen
@@ -345,7 +341,7 @@ Teil des Bootvorgangs. Wenn Ihr nicht im entferntesten wisst wovon hier die
 Rede ist, dann probiert es auf jeden Fall nicht blind aus. Im schlimmsten
 Fall droht Datenverlust! Es besteht keine Haftung für Schäden!</p>
 </div>
-<section id="basisinformationen">
+<div class="section" id="basisinformationen">
 <h2><span class="section-number">1.56.1. </span>Basisinformationen<a class="headerlink" href="#basisinformationen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der von FreeBSD mitgelieferte Bootmanager hat einen Vorteil, aber auch
 einen Nachteil.</p>
@@ -367,8 +363,8 @@ FreeBSD-Bootmanagern 5 als Standardeinstellung und am Ende der Kette
 dann die Slice, die gebootet werden soll.</p>
 <p>Optional ist es möglich, im Rechner-BIOS die entsprechende Festplatte
 bei jedem Start als Bootplatte anzugeben.</p>
-</section>
-<section id="erneute-installation-des-boot-managers-im-mbr">
+</div>
+<div class="section" id="erneute-installation-des-boot-managers-im-mbr">
 <h2><span class="section-number">1.56.2. </span>Erneute Installation des Boot Managers im MBR<a class="headerlink" href="#erneute-installation-des-boot-managers-im-mbr" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Manchmal ist es sinnvoll den FreeBSD Boot Manager noch einmal neu zu
 installieren. Ich mag zum Beispiel nicht, dass dieser sich merkt, was
@@ -387,12 +383,12 @@ Sekunde bedeuten.</p></li>
 <li><p>Als &lt;bootdev&gt; müsst Ihr natürlich die Platte wählen, die gebootet
 wird und wo der FreeBSD Boot Manager drauf soll.</p></li>
 </ul>
-</section>
-<section id="kooperation-mit-ms-windows-vista">
+</div>
+<div class="section" id="kooperation-mit-ms-windows-vista">
 <h2><span class="section-number">1.56.3. </span>Kooperation mit MS Windows Vista<a class="headerlink" href="#kooperation-mit-ms-windows-vista" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Hier ein kurzes HowTo, mit welchem man Microsoft Windows Vista mit dem
 FreeBSD Boot Manager zum Laufen kriegen kann.</p>
-<section id="ausgangssituation">
+<div class="section" id="ausgangssituation">
 <h3><span class="section-number">1.56.3.1. </span>Ausgangssituation<a class="headerlink" href="#ausgangssituation" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn man FreeBSD installiert, dann installiert man oft blauäugig den
 FreeBSD Boot Manager mit, weil man das System ja nutzen will und es ja
@@ -403,8 +399,8 @@ erörtern ob das gut oder schlecht ist.</p>
 Manager kurz danach einen blauen Bildschirm erhält, wo man sehen kann
 dass WINLOAD.EXE nicht gefunden worden ist („WINLOAD.EXE is missing“).</p>
 <p>Keine Panik! Das sieht schlimmer aus als es ist.</p>
-</section>
-<section id="losung">
+</div>
+<div class="section" id="losung">
 <h3><span class="section-number">1.56.3.2. </span>Lösung<a class="headerlink" href="#losung" title="Link zu dieser Überschrift">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Von Microsoft-Windows-Vista-DVD starten (also von der DVD booten).</p></li>
@@ -422,42 +418,39 @@ Windows Vista.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ftp-server_mit_pureftpd.txt.html" class="btn btn-neutral float-right" title="1.57. FTP-Server mit PureFTPd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="freebsd_als_gast_unter_vmware.txt.html" class="btn btn-neutral float-left" title="1.55. FreeBSD als Gast unter VMware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="ftp-server_mit_pureftpd.txt.html" class="btn btn-neutral float-right" title="1.57. FTP-Server mit PureFTPd" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="freebsd_als_gast_unter_vmware.txt.html" class="btn btn-neutral float-left" title="1.55. FreeBSD als Gast unter VMware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

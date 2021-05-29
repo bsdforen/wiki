@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.104. Poudriere Guide &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.105. PuTTY" href="putty.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -304,6 +307,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -317,8 +322,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/poudriere_guide.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/poudriere_guide.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -326,27 +331,18 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="putty.txt.html" class="btn btn-neutral float-right" title="1.105. PuTTY" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="poudriere.txt.html" class="btn btn-neutral float-left" title="1.103. Poudriere" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="poudriere-guide">
+  <div class="section" id="poudriere-guide">
 <h1><span class="section-number">1.104. </span>Poudriere Guide<a class="headerlink" href="#poudriere-guide" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
-<section id="einfuhrung">
+</div>
+<div class="section" id="einfuhrung">
 <h2><span class="section-number">1.104.1. </span>Einführung<a class="headerlink" href="#einfuhrung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das Ports-System ist eines der größten Vorteile von FreeBSD für
 Benutzer, die Flexibilität und Kontrolle über ihre Software wünschen. Es
@@ -368,8 +364,8 @@ Während es technisch so angelegt ist, dass es Pakete für eine Vielzahl
 von Architekturen erstellt, wird Poudrière oft als eine
 Paketerstellungsumgebung verwendet, um Pakete für eine gesamte
 Infrastruktur von FreeBSD-Servern zu erstellen und zu hosten.</p>
-</section>
-<section id="installieren-sie-die-erforderlichen-ports">
+</div>
+<div class="section" id="installieren-sie-die-erforderlichen-ports">
 <h2><span class="section-number">1.104.2. </span>Installieren Sie die erforderlichen Ports<a class="headerlink" href="#installieren-sie-die-erforderlichen-ports" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Zu Beginn werden wir alle benötigten Ports installieren.</p>
 <p>Zuerst müssen wir Poudriere selbst installieren.</p>
@@ -385,8 +381,8 @@ Fall verwenden wir den NGINX Webserver:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg install nginx
 </pre></div>
 </div>
-</section>
-<section id="erstellen-sie-ein-ssl-zertifikat-und-einen-schlussel">
+</div>
+<div class="section" id="erstellen-sie-ein-ssl-zertifikat-und-einen-schlussel">
 <h2><span class="section-number">1.104.3. </span>Erstellen Sie ein SSL-Zertifikat und einen Schlüssel<a class="headerlink" href="#erstellen-sie-ein-ssl-zertifikat-und-einen-schlussel" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn wir Pakete mit Poudrière erstellen, wollen wir sie mit einem
 privaten Schlüssel signieren können. Dies stellt sicher, dass all unsere
@@ -421,8 +417,8 @@ Zertifikat daraus erstellen, indem Sie Folgendes eingeben:</p>
 signieren und die Signaturen zu verifizieren. Später werden wir unsere
 Clients so konfigurieren, dass sie das generierte Zertifikat für die
 Paketverifizierung verwenden.</p>
-</section>
-<section id="konfigurieren-von-poudriere">
+</div>
+<div class="section" id="konfigurieren-von-poudriere">
 <h2><span class="section-number">1.104.4. </span>Konfigurieren von Poudrière<a class="headerlink" href="#konfigurieren-von-poudriere" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Jetzt wo wir unser SSL Zertifikat und Schlüssel haben, können wir mit
 der Konfiguration von Poudriere beginnen.</p>
@@ -500,8 +496,8 @@ Wert mit einem Schrägstrich beenden:</p>
 </div>
 <p>Wenn Sie mit den Änderungen fertig sind, speichern und schließen Sie die
 Datei.</p>
-</section>
-<section id="erstellen-der-build-umgebung">
+</div>
+<div class="section" id="erstellen-der-build-umgebung">
 <h2><span class="section-number">1.104.5. </span>Erstellen der Build-Umgebung<a class="headerlink" href="#erstellen-der-build-umgebung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Als nächstes müssen wir unsere Build-Umgebung konstruieren. Wie bereits
 erwähnt, wird Poudriere Ports in einer isolierten Umgebung mit Jails
@@ -541,8 +537,8 @@ um unsere Ports zu kompilieren und Pakete zu erstellen. Als nächstes
 können wir damit beginnen, unsere Liste von Ports zusammenzustellen, um
 die Optionen zu erstellen und zu konfigurieren, die wir für jede
 Software benötigen.</p>
-</section>
-<section id="erstellen-einer-port-building-liste-und-festlegen-von-port-optionen">
+</div>
+<div class="section" id="erstellen-einer-port-building-liste-und-festlegen-von-port-optionen">
 <h2><span class="section-number">1.104.6. </span>Erstellen einer Port-Building-Liste und Festlegen von Port-Optionen<a class="headerlink" href="#erstellen-einer-port-building-liste-und-festlegen-von-port-optionen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wir werden eine Liste von Ports erstellen, die wir direkt Poudriere
 übergeben können.</p>
@@ -626,8 +622,8 @@ getroffen haben:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poudriere options -c -j <span class="m">11</span>-2x64 -p HEAD -f /usr/local/etc/poudriere.d/port-list
 </pre></div>
 </div>
-</section>
-<section id="die-ports-bauen">
+</div>
+<div class="section" id="die-ports-bauen">
 <h2><span class="section-number">1.104.7. </span>Die Ports bauen<a class="headerlink" href="#die-ports-bauen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Jetzt sind wir endlich bereit, mit dem Aufbau von Ports zu beginnen.</p>
 <p>Geben Sie Folgendes ein, um Ihre Jail zu aktualisieren:</p>
@@ -663,8 +659,8 @@ mit dem Aufbau der Ports.</p>
 den Fortschritt erhalten, indem Sie die STRG-Taste gedrückt halten und t
 drücken.</p>
 <p>Bestimmte Teile des Prozesses produzieren mehr Output als andere.</p>
-</section>
-<section id="einrichten-von-nginx-fur-das-bereitstellen-des-front-ends-und-des-repositorys">
+</div>
+<div class="section" id="einrichten-von-nginx-fur-das-bereitstellen-des-front-ends-und-des-repositorys">
 <h2><span class="section-number">1.104.8. </span>Einrichten von Nginx für das Bereitstellen des Front-Ends und des Repositorys<a class="headerlink" href="#einrichten-von-nginx-fur-das-bereitstellen-des-front-ends-und-des-repositorys" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Für diesen Schritt muss der <a class="reference external" href="NGINX">NGINX</a> mit Virtualhosts
 eingerichtet sein.</p>
@@ -714,14 +710,14 @@ text/vnd.sun.j2me.app-descriptor    jad<span class="p">;</span>
 <p>Jetzt können Sie das Poudriere-Webinterface anzeigen, indem Sie in Ihrem
 Webbrowser zum Domain-Namen oder zur IP-Adresse Ihres Servers gehen
 bsd.&lt;&lt;domain&gt;&gt;</p>
-</section>
-<section id="paket-clients-konfigurieren">
+</div>
+<div class="section" id="paket-clients-konfigurieren">
 <h2><span class="section-number">1.104.9. </span>Paket-Clients konfigurieren<a class="headerlink" href="#paket-clients-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Nachdem Sie nun Pakete erstellt und ein Repository für die
 Bereitstellung Ihrer Pakete konfiguriert haben, können Sie Ihre Clients
 so konfigurieren, dass sie Ihren Server als Quelle für ihre Pakete
 verwenden.</p>
-<section id="konfigurieren-des-build-servers-fur-die-verwendung-des-eigenen-paket-repos">
+<div class="section" id="konfigurieren-des-build-servers-fur-die-verwendung-des-eigenen-paket-repos">
 <h3><span class="section-number">1.104.9.1. </span>Konfigurieren des Build-Servers für die Verwendung des eigenen Paket-Repos<a class="headerlink" href="#konfigurieren-des-build-servers-fur-die-verwendung-des-eigenen-paket-repos" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wir können damit beginnen, den Build-Server so zu konfigurieren, dass er
 die Pakete verwendet, die er erstellt hat.</p>
@@ -765,8 +761,8 @@ indem Sie Folgendes eingeben:</p>
 </div>
 <p>Jetzt kann Ihr Server den Befehl pkg verwenden, um Pakete von Ihrem
 lokalen Repository zu installieren.</p>
-</section>
-<section id="konfigurieren-von-remote-clients-fur-die-verwendung-des-repository-ihres-build-rechners">
+</div>
+<div class="section" id="konfigurieren-von-remote-clients-fur-die-verwendung-des-repository-ihres-build-rechners">
 <h3><span class="section-number">1.104.9.2. </span>Konfigurieren von Remote-Clients für die Verwendung des Repository Ihres Build-Rechners<a class="headerlink" href="#konfigurieren-von-remote-clients-fur-die-verwendung-des-repository-ihres-build-rechners" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Einer der überzeugendsten Gründe, Poudriere auf einer Build-Maschine
 einzurichten, besteht darin, diesen Host als Repository für viele andere
@@ -858,9 +854,9 @@ beginnen:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg update
 </pre></div>
 </div>
-</section>
-</section>
-<section id="cronjob">
+</div>
+</div>
+<div class="section" id="cronjob">
 <h2><span class="section-number">1.104.10. </span>Cronjob<a class="headerlink" href="#cronjob" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Damit Poudriere automatisch die Jails aktualisiert und die Pakete baut
 werden Sie einen Cronjob einrichten.</p>
@@ -925,8 +921,8 @@ korrekt läuft.</p>
 <p>Der Build-Prozess wird dann jede Nacht ausgeführt. Wenn Sie Pakete
 haben, wie zum Beispiel Chromium, wo der Build länger braucht als 24
 Stunden, kann es hier angepasst werden.</p>
-</section>
-<section id="befehlsliste">
+</div>
+<div class="section" id="befehlsliste">
 <h2><span class="section-number">1.104.11. </span>Befehlsliste<a class="headerlink" href="#befehlsliste" title="Link zu dieser Überschrift">¶</a></h2>
 <p><strong>Poudriere make.conf</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano /usr/local/etc/poudriere.d/make.conf
@@ -979,41 +975,38 @@ Stunden, kann es hier angepasst werden.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="putty.txt.html" class="btn btn-neutral float-right" title="1.105. PuTTY" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="poudriere.txt.html" class="btn btn-neutral float-left" title="1.103. Poudriere" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="putty.txt.html" class="btn btn-neutral float-right" title="1.105. PuTTY" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="poudriere.txt.html" class="btn btn-neutral float-left" title="1.103. Poudriere" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

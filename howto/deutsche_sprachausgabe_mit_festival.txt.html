@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.30. Deutsche Sprachausgabe mit Festival &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.32. devfs" href="devfs.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -300,6 +303,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -313,8 +318,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/deutsche_sprachausgabe_mit_festival.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/deutsche_sprachausgabe_mit_festival.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -322,34 +327,25 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="devfs.txt.html" class="btn btn-neutral float-right" title="1.32. devfs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="datenrettung.txt.html" class="btn btn-neutral float-left" title="1.29. Datenrettung" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="deutsche-sprachausgabe-mit-festival">
+  <div class="section" id="deutsche-sprachausgabe-mit-festival">
 <h1><span class="section-number">1.30. </span>Deutsche Sprachausgabe mit Festival<a class="headerlink" href="#deutsche-sprachausgabe-mit-festival" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</aside>
+</div>
 <p>Dieses Tutorial beschreibt, wie man ein deutschsprachiges Festival als
 Sprachausgabe unter FreeBSD einrichtet. Zusätzlich wird gezeigt, wie man dies
 mit einem GUI - inklusive Wortvorschlagsliste - verbindet, sodass es als Ersatz
 für einen Talker (Sprachcomputer) genutzt werden kann.</p>
-<section id="festival">
+<div class="section" id="festival">
 <h2><span class="section-number">1.30.1. </span>Festival<a class="headerlink" href="#festival" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Festival ist ein Open Source Text to Speech System (TTS), welches an der
 Universität von Edinburgh entwickelt wird. Es ermöglicht einen
@@ -363,8 +359,8 @@ Open Source Lizenz; sie können allerdings frei genutzt werden.</p>
 <p>Der Vollständigkeit halber soll hier noch erwähnt werden, dass es
 Festival nicht einmal im Ansatz mit einer guten Hardwarelösung aufnehmen
 kann.</p>
-</section>
-<section id="anforderungen">
+</div>
+<div class="section" id="anforderungen">
 <h2><span class="section-number">1.30.2. </span>Anforderungen<a class="headerlink" href="#anforderungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Festival errechnet die Sprache erst und gibt sie dann aus. Daher kann es
 auch auf alter Hardware ohne Probleme genutzt werden. Nur dauert es dann
@@ -372,8 +368,8 @@ eben sehr lange bis die Verarbeitung beendet ist. Ich empfehle daher
 einen PII 400MHz mit 128MB RAM als absolutes Minimum. Alles darunter
 verzögert zu sehr. Annähernd verzögerungsfrei wird es aber erst ab ca. 1
 GHz.</p>
-</section>
-<section id="die-software">
+</div>
+<div class="section" id="die-software">
 <h2><span class="section-number">1.30.3. </span>Die Software<a class="headerlink" href="#die-software" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Leider kann Festival nicht über die Ports installiert werden, da
 tiefgreifende Änderungen am Code nötig sind. Hält man sich an dieses
@@ -390,8 +386,8 @@ vollständig entfernt werden.</p>
 <li><p><a class="reference external" href="https://www.google.com/search?q=devel/gmake&amp;btnI=lucky">devel/gmake</a></p></li>
 <li><p><a class="reference external" href="https://www.google.com/search?q=/audio/sox&amp;btnI=lucky">/audio/sox</a></p></li>
 </ul>
-</section>
-<section id="die-dateien">
+</div>
+<div class="section" id="die-dateien">
 <h2><span class="section-number">1.30.4. </span>Die Dateien<a class="headerlink" href="#die-dateien" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Folgende Dateien müssen herunter geladen werden:</p>
 <ul class="simple">
@@ -418,8 +414,8 @@ und sich Festival unter FreeBSD kompilieren lässt:</p>
 <li><p><a class="reference external" href="http://www.freebsd.org/cgi/cvsweb.cgi/ports/audio/festival/files/patch-speech_tools_install.mak">http://www.freebsd.org/cgi/cvsweb.cgi/ports/audio/festival/files/patch-speech_tools_install.mak</a></p></li>
 <li><p><a class="reference external" href="http://www.freebsd.org/cgi/cvsweb.cgi/ports/audio/festival/files/patch-speech_tools_voxware.cc">http://www.freebsd.org/cgi/cvsweb.cgi/ports/audio/festival/files/patch-speech_tools_voxware.cc</a></p></li>
 </ul>
-</section>
-<section id="die-installation">
+</div>
+<div class="section" id="die-installation">
 <h2><span class="section-number">1.30.5. </span>Die Installation<a class="headerlink" href="#die-installation" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Festival muss in dem Verzeichnis kompiliert werden, in dem es später
 ausgeführt werden soll. Dabei stellt sich das Problem, dass jeder Nutzer
@@ -524,8 +520,8 @@ und hinter</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># gmake</span>
 </pre></div>
 </div>
-</section>
-<section id="test">
+</div>
+<div class="section" id="test">
 <h2><span class="section-number">1.30.6. </span>Test<a class="headerlink" href="#test" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Nachdem der Bau beendet ist, kann Festival getestet werden. Dazu
 wechselt man in das Verzeichnis bin und startet Festival.</p>
@@ -549,15 +545,15 @@ gesprochen werden. Nun kann man Festival mittels</p>
 Script z.B. mit irssi oder Gaim verbunden werden. Hierzu finden sich
 diverse Anleitungen im Netz. Ich werde im zweiten Teil beschreiben wie
 man es mit Kmouth verbindet und so einen richtigen Sprachcomputer baut.</p>
-</section>
-</section>
-<section id="kmouth-mit-festival">
+</div>
+</div>
+<div class="section" id="kmouth-mit-festival">
 <h1><span class="section-number">1.31. </span>KMouth mit Festival<a class="headerlink" href="#kmouth-mit-festival" title="Link zu dieser Überschrift">¶</a></h1>
 <p>KMouth ist ein Frontend für diverse Sprachausgabesysteme und in
 bedingtem Maße auch echten Talkern (Sprachcomputern). Es erlaubt das
 Anlegen von Lexika zum schnellen Aufruf von Phrasen. Es enthält eine
 Wortvorschlagsliste und ein minimales Journal.</p>
-<section id="installation">
+<div class="section" id="installation">
 <h2><span class="section-number">1.31.1. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
 <p>KMouth kann einfach über die Ports installiert werden. Der Fairness
 halber sei hier gesagt, dass es sich um ein KDE-Programm handelt und
@@ -567,8 +563,8 @@ das Nutzen von Paketen nachdenken sollte. Der benötigte Port ist
 <em>/accessibility/kdeaccessibility</em>. Dieser installiert den Daemon kttsd,
 KMouth und Ksayit. Letzteres wird hier allerdings nicht weiter
 behandelt.</p>
-</section>
-<section id="konfiguration">
+</div>
+<div class="section" id="konfiguration">
 <h2><span class="section-number">1.31.2. </span>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Alle Programme sollten bis zum Ende dieses Abschnittest aus einem
 Terminal heraus gestartet werden, damit man eventuelle Fehlermeldungen
@@ -619,8 +615,8 @@ Sprache, aber deutsch ausgesprochen, sein!</p>
 </pre></div>
 </div>
 <p>KMouth ist nun eingerichtet und kann verwendet werden.</p>
-</section>
-<section id="wortvervollstandigung">
+</div>
+<div class="section" id="wortvervollstandigung">
 <h2><span class="section-number">1.31.3. </span>Wortvervollständigung<a class="headerlink" href="#wortvervollstandigung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Hier wird zum Abschluss noch gezeigt wie man die Wortvorschlagsliste von
 KMouth einrichtet. Dies sollte nur bei Bedarf geschehen, da dieses
@@ -665,41 +661,38 @@ Sprachsysthese erklärt hat</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="devfs.txt.html" class="btn btn-neutral float-right" title="1.32. devfs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="datenrettung.txt.html" class="btn btn-neutral float-left" title="1.29. Datenrettung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="devfs.txt.html" class="btn btn-neutral float-right" title="1.32. devfs" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="datenrettung.txt.html" class="btn btn-neutral float-left" title="1.29. Datenrettung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.88. MPD einrichten &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.89. MPI auf FreeBSD" href="mpi.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -297,6 +300,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -310,8 +315,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/mpd_einrichten.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/mpd_einrichten.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -319,31 +324,22 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="mpi.txt.html" class="btn btn-neutral float-right" title="1.89. MPI auf FreeBSD" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="mozilla_mit_java-_und_flashsupport.txt.html" class="btn btn-neutral float-left" title="1.87. Mozilla mit Java- und Flashsupport" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="mpd-einrichten">
+  <div class="section" id="mpd-einrichten">
 <h1><span class="section-number">1.88. </span>MPD einrichten<a class="headerlink" href="#mpd-einrichten" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p><strong>MPD</strong>, der <strong>Music Player Daemon</strong>, ist ein Musik Player, der über eine
 TCP/IP-Verbindung ferngesteuert werden kann. Dazu werden seperate
 Client-Programme verwendet. Dieser Artikel erklärt wie der Music Player Daemon
 sinnvoll eingerichtet werden kann.</p>
-<section id="installation">
+<div class="section" id="installation">
 <h2><span class="section-number">1.88.1. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.google.com/search?q=audio/musicpd&amp;btnI=lucky">audio/musicpd</a>
@@ -353,12 +349,12 @@ in Pkgsrc.</p></li>
 <li><p><a class="reference external" href="https://www.google.com/search?q=audio/mpd&amp;btnI=lucky">audio/mpd</a>
 in den OpenBSD Ports.</p></li>
 </ul>
-</section>
-<section id="freebsd">
+</div>
+<div class="section" id="freebsd">
 <h2><span class="section-number">1.88.2. </span>FreeBSD<a class="headerlink" href="#freebsd" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der FreeBSD Port bringt ein <strong>rc(8)</strong> Skript mit um den Daemon beim
 Booten zu starten. Vorher muss dieser natürlich konfiguriert werden.</p>
-<section id="benutzer-anlegen">
+<div class="section" id="benutzer-anlegen">
 <h3><span class="section-number">1.88.2.1. </span>Benutzer anlegen<a class="headerlink" href="#benutzer-anlegen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Das Skript startet den MPD als Benutzer <strong>root</strong>. Das ist natürlich kein
 besonders begrüßenswertes Verhalten. Zum Glück kann der MPD sich jedoch
@@ -395,8 +391,8 @@ benötigt in dem später die abgespeicherten Playlists abgelegt werden;</p>
 <span class="c1"># chown musicpd:musicpd /home/musicpd/playlists</span>
 </pre></div>
 </div>
-</section>
-<section id="daemon-konfigurieren">
+</div>
+<div class="section" id="daemon-konfigurieren">
 <h3><span class="section-number">1.88.2.2. </span>Daemon konfigurieren<a class="headerlink" href="#daemon-konfigurieren" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Als nächstes muss die Datei <code class="docutils literal notranslate"><span class="pre">/usr/local/etc/musicpd.conf</span></code> angelegt
 werden.</p>
@@ -419,8 +415,8 @@ werden.</p>
 </div>
 <p>Bis auf <strong>music_directory</strong> und <strong>bind_to_address</strong> können diese
 Einstellungen unverändert übernommen werden.</p>
-</section>
-<section id="aktivieren">
+</div>
+<div class="section" id="aktivieren">
 <h3><span class="section-number">1.88.2.3. </span>aktivieren<a class="headerlink" href="#aktivieren" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Zu guter Letzt muss der MPD noch gestartet werden. Dazu wird erst einmal
 in die <code class="docutils literal notranslate"><span class="pre">/etc/rc.conf</span></code> folgendes eingetragen:</p>
@@ -431,9 +427,9 @@ in die <code class="docutils literal notranslate"><span class="pre">/etc/rc.conf
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/local/etc/rc.d/musicpd start</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="verweise">
+</div>
+</div>
+<div class="section" id="verweise">
 <h2><span class="section-number">1.88.3. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="/anwendungen/mpd">Music Player Daemon</a></p></li>
@@ -451,41 +447,38 @@ in den OpenBSD Ports.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="mpi.txt.html" class="btn btn-neutral float-right" title="1.89. MPI auf FreeBSD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="mozilla_mit_java-_und_flashsupport.txt.html" class="btn btn-neutral float-left" title="1.87. Mozilla mit Java- und Flashsupport" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="mpi.txt.html" class="btn btn-neutral float-right" title="1.89. MPI auf FreeBSD" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mozilla_mit_java-_und_flashsupport.txt.html" class="btn btn-neutral float-left" title="1.87. Mozilla mit Java- und Flashsupport" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

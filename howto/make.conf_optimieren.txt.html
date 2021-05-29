@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.81. make.conf optimieren &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.82. make world" href="make_world.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -322,6 +325,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -335,8 +340,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/make.conf_optimieren.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/make.conf_optimieren.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -344,26 +349,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="make_world.txt.html" class="btn btn-neutral float-right" title="1.82. make world" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="majordomo_postfix.txt.html" class="btn btn-neutral float-left" title="1.80. Majordomo Postfix" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="make-conf-optimieren">
+  <div class="section" id="make-conf-optimieren">
 <h1><span class="section-number">1.81. </span>make.conf optimieren<a class="headerlink" href="#make-conf-optimieren" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Dieser Artikel ist für experimentelle Naturen gedacht, die gerne versuchen Code
 mit verschiedenen Compilern und Flags zu kompilieren. Dazu wird erklärt, was
 mit der Datei <strong>/etc/make.conf</strong> alles beeinflusst werden kann und wie
@@ -378,7 +374,7 @@ FreeBSD gibt es feste Vorgaben zur Gestaltung von Makefiles für Ports,
 so dass das Verhalten recht einheitlich ist. Manchmal kommt es jedoch zu
 Ausnahmen. Auch dazu gibt es Beispiele, die klären sollen wie Probleme
 erkannt und gelöst werden.</p>
-<section id="verwandte-artikel">
+<div class="section" id="verwandte-artikel">
 <h2><span class="section-number">1.81.1. </span>Verwandte Artikel<a class="headerlink" href="#verwandte-artikel" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Es gibt einige verwandte Artikel die sich auch teilweise mit der
 <strong>/etc/make.conf</strong> beschäftigen und für Leser dieses Artikels
@@ -388,14 +384,14 @@ wahrscheinlich ebenfalls interessant sind.</p>
 <li><p><a class="reference external" href="/anwendungen/bsdadminscripts">bsdadminscripts</a></p></li>
 <li><p><a class="reference external" href="/freebsd/kernelerstellen">kernel erstellen</a></p></li>
 </ul>
-</section>
-<section id="make-syntax">
+</div>
+<div class="section" id="make-syntax">
 <h2><span class="section-number">1.81.2. </span>make Syntax<a class="headerlink" href="#make-syntax" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Üblicherweise werden in der Datei <strong>/etc/make.conf</strong> nur Variablen
 gesetzt, jedoch wird sie wie jedes andere Makefile interpretiert. Das
 hat zur Folge, dass Schleifen und if-Abfragen verwendet oder Nachrichten
 auf die Konsole ausgeben werden können.</p>
-<section id="kommentare">
+<div class="section" id="kommentare">
 <h3><span class="section-number">1.81.2.1. </span>Kommentare<a class="headerlink" href="#kommentare" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Kommentare sind ein sinnvolles Mittel, um große Dateien lesbarer zu
 gestalten und zu strukturieren.</p>
@@ -404,8 +400,8 @@ wird:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Diese Zeile wird von make ignoriert. ;-)</span>
 </pre></div>
 </div>
-</section>
-<section id="variablen">
+</div>
+<div class="section" id="variablen">
 <h3><span class="section-number">1.81.2.2. </span>Variablen<a class="headerlink" href="#variablen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Zum Bearbeiten der Datei <strong>/etc/make.conf</strong> ist es wichtig zu wissen,
 wie Variablen gesetzt oder verändert werden.</p>
@@ -416,7 +412,7 @@ wie Variablen gesetzt oder verändert werden.</p>
 <p>gesetzt. Der Name der Variablen muss dabei mit dem ersten Zeichen der
 Zeile beginnen. Leerzeichen und Tabulatoren vor und hinter dem Wert
 (value) werden von make entfernt. Wenn Leerzeichen im Wert einer
-Variable erwünscht sind, muss der Wert in Anführungszeichen (“) gesetzt
+Variable erwünscht sind, muss der Wert in Anführungszeichen („) gesetzt
 werden.</p>
 <p>Variablen können auch Listen von Werten enthalten, die beispielsweise in
 einer for-Schleife ausgewertet werden kann. Zulässige Trennzeichen sind
@@ -467,8 +463,8 @@ verwendet um das physische Verzeichnis <strong>/usr/src</strong> zu finden.</p>
 ‚cd‘-Befehls unterdrückt und ‚pwd‘ nur aufgerufen, falls ‚cd‘
 erfolgreich war. ‚exit 0‘ stellt sicher das ‚make‘ nicht abbricht, wenn
 hier ein Fehler auftritt.</p>
-</section>
-<section id="ausgabe">
+</div>
+<div class="section" id="ausgabe">
 <h3><span class="section-number">1.81.2.3. </span>Ausgabe<a class="headerlink" href="#ausgabe" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In der Datei <strong>/etc/make.conf</strong> machen Ausgaben normalerweise nicht viel
 Sinn, jedoch gibt es Fälle in denen sie helfen herauszufinden warum die
@@ -486,8 +482,8 @@ ist der Befehl:</p>
 <p>der ohne Nebeneffekt eine Nachicht ausgibt. Die Nützlichkeit zur
 Diagnose liegt darin, dass mit dem Befehl natürlich auch Variablen
 ausgeben werden können.</p>
-</section>
-<section id="for-schleifen-und-if-konstrukte">
+</div>
+<div class="section" id="for-schleifen-und-if-konstrukte">
 <h3><span class="section-number">1.81.2.4. </span>for-Schleifen und if-Konstrukte<a class="headerlink" href="#for-schleifen-und-if-konstrukte" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Hier ist ein Schema für eine for-Schleife:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.for ITERATOR in ${LIST}
@@ -533,9 +529,9 @@ FIREFOX_I18N=   en-GB
 .endif
 </pre></div>
 </div>
-</section>
-</section>
-<section id="compiler-flags">
+</div>
+</div>
+<div class="section" id="compiler-flags">
 <h2><span class="section-number">1.81.3. </span>Compiler Flags<a class="headerlink" href="#compiler-flags" title="Link zu dieser Überschrift">¶</a></h2>
 <p>‚make‘ wird für gewöhnlich zum Kompilieren von Programmen verwendet. Der
 Standardcompiler unter FreeBSD ist GCC. Es ist jedoch üblich, den Aufruf
@@ -544,7 +540,7 @@ werden können zu entnehmen, so dass zentral festgelegt werden kann womit
 und wie kompiliert wird.</p>
 <p>Detailierte Informationen zu den behandelten und weiteren Variablen
 finden sich in der Manpage <strong>make.conf(5)</strong>.</p>
-<section id="cc-cxx-und-cpp">
+<div class="section" id="cc-cxx-und-cpp">
 <h3><span class="section-number">1.81.3.1. </span>CC, CXX und CPP<a class="headerlink" href="#cc-cxx-und-cpp" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Standardeinstellungen lauten:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CC</span><span class="o">=</span>    <span class="n">cc</span>
@@ -564,8 +560,8 @@ kann das so tun:</p>
 Compiler vor. Dafür gibt es meist einen guten Grund. Deshalb ist es
 meist eine schlechte Idee, sich an den jeweiligen Makefiles zu schaffen
 machen, um dies zu <em>korrigieren</em>.</p>
-</section>
-<section id="cputype">
+</div>
+<div class="section" id="cputype">
 <h3><span class="section-number">1.81.3.2. </span>CPUTYPE<a class="headerlink" href="#cputype" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die nächste wichtige Variable ist CPUTYPE. Sie wird üblicherweise mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CPUTYPE?=   cpu type
@@ -574,8 +570,8 @@ machen, um dies zu <em>korrigieren</em>.</p>
 <p>gesetzt. <strong>CPUTYPE</strong> spielt beim Bauen des Basissystems und des Kernels
 eine Rolle und hängt Compiler-Parameter an die Variablen <strong>CFLAGS</strong> und
 <strong>COPTFLAGS</strong> an.</p>
-</section>
-<section id="cflags-und-coptflags">
+</div>
+<div class="section" id="cflags-und-coptflags">
 <h3><span class="section-number">1.81.3.3. </span>CFLAGS und COPTFLAGS<a class="headerlink" href="#cflags-und-coptflags" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Variable <strong>CFLAGS</strong> enthält Parameter für den Compiler, der in
 <strong>CC</strong> spezifiziert ist. <strong>COPTFLAGS</strong> enthält die Parameter für
@@ -638,9 +634,9 @@ wird, verschiedene Befehlssatzerweiterungen zu verwenden.</p>
 Optimierungen bereits vom <strong>-march</strong> Parameter impliziert der wiederum
 wird automatisch von <strong>CPUTYPE</strong> ermittelt. Es ist also in der Regel
 nicht nötig diese Parameter einzusetzen.</p>
-</section>
-</section>
-<section id="optimierungen-fur-kernel-und-welt">
+</div>
+</div>
+<div class="section" id="optimierungen-fur-kernel-und-welt">
 <h2><span class="section-number">1.81.4. </span>Optimierungen für Kernel und Welt<a class="headerlink" href="#optimierungen-fur-kernel-und-welt" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die meisten Einstellungen werden beim Kernel ja bekanntlich in einer
 entsprechenden Datei vorgenommen (siehe
@@ -653,7 +649,7 @@ wenn stärkere Optimierungen als <strong>-O2 -fno-strict-aliasing -pipe</strong>
 versucht wurden. Deswegen ist es sinnvoll, CFLAGS für buildkernel und
 buildworld seperat zu setzen, wenn bei den Ports mehr erwünscht ist. Wie
 das geht wird mit dem Lesen des nächsten Kapitels klar.</p>
-<section id="kernel">
+<div class="section" id="kernel">
 <h3><span class="section-number">1.81.4.1. </span>Kernel<a class="headerlink" href="#kernel" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die sinnvollste Variable für den Kernelbau ist sicherlich <strong>KERNCONF</strong>.
 In <strong>KERNCONF</strong> wird der Dateiname (ohne Pfad) der gewünschten
@@ -661,8 +657,8 @@ Kernelkonfiguration angegeben. Wird mehr als eine Kernelkonfiguration
 angegeben, wird nur die erstgenannte installiert. Der Standardwert ist
 <strong>GENERIC</strong>. Es gibt auch Variablen, um den Bau bestimmter Module zu
 verhindern oder das Verhalten des Bootloaders zu verändern.</p>
-</section>
-<section id="welt">
+</div>
+<div class="section" id="welt">
 <h3><span class="section-number">1.81.4.2. </span>Welt<a class="headerlink" href="#welt" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Für die Welt können Variablen gesetzt werden, um bestimmte Bestandteile
 nicht zu bauen. Für Einige ist vielleicht auch die Möglichkeit, die Welt
@@ -672,9 +668,9 @@ interessant. Dazu dienen:</p>
 <span class="n">COMPAT_FREEBSD5</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="optimierungen-fur-ports">
+</div>
+</div>
+<div class="section" id="optimierungen-fur-ports">
 <h2><span class="section-number">1.81.5. </span>Optimierungen für Ports<a class="headerlink" href="#optimierungen-fur-ports" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Viele Einstellungen für die Ports können mit <strong>make config</strong> vorgenommen
 werden. Jedoch gibt es immer wieder einige Dinge, die man nur als
@@ -683,7 +679,7 @@ können. Einige Variablen haben überall den gleichen oder gar keinen
 Effekt. Einige sollten nur für einen bestimmten Port gesetzt werden und
 natürlich gibt es solche, die je nach Port andere Werte haben müssen.
 Wie das am besten realisiert wird, wird in diesem Abschnitt behandelt.</p>
-<section id="vorbereitungen">
+<div class="section" id="vorbereitungen">
 <h3><span class="section-number">1.81.5.1. </span>Vorbereitungen<a class="headerlink" href="#vorbereitungen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Am besten wird damit begonnen, sich einen Bereich in der
 <strong>/etc/make.conf</strong> anzulegen, der ausschließlich für Einstellungen die
@@ -746,8 +742,8 @@ WITH_IMLIB2=        yes
 .endif
 </pre></div>
 </div>
-</section>
-<section id="einen-port-optimieren">
+</div>
+<div class="section" id="einen-port-optimieren">
 <h3><span class="section-number">1.81.5.2. </span>Einen Port optimieren<a class="headerlink" href="#einen-port-optimieren" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Um die Anpassungsmöglichkeiten eines Ports zu erfahren wird in das
 Ports-Verzeichnis gewechselt.</p>
@@ -763,8 +759,8 @@ mit:</p>
 </div>
 <p>Die gewünschten Parameter können nun wie für Fluxbox beschrieben in der
 <strong>/etc/make.conf</strong> gesetzt werden.</p>
-</section>
-<section id="einsatz-von-listen-und-schleifen">
+</div>
+<div class="section" id="einsatz-von-listen-und-schleifen">
 <h3><span class="section-number">1.81.5.3. </span>Einsatz von Listen und Schleifen<a class="headerlink" href="#einsatz-von-listen-und-schleifen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Im Laufe der Zeit wächst die <strong>/etc/make.conf</strong> oft aufgrund immer
 weiterer Einstellung für immer mehr Ports. Die Datei <strong>/etc/make.conf</strong>
@@ -801,9 +797,9 @@ CPP=            cpp
 .endfor
 </pre></div>
 </div>
-</section>
-</section>
-<section id="beispiele-anwendungsfalle-und-problemlosungen">
+</div>
+</div>
+<div class="section" id="beispiele-anwendungsfalle-und-problemlosungen">
 <h2><span class="section-number">1.81.6. </span>Beispiele, Anwendungsfälle und Problemlösungen<a class="headerlink" href="#beispiele-anwendungsfalle-und-problemlosungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Als letzten Punkt dieses Absatzes gibt es ein Beispiel für eine
 <strong>/etc/make.conf</strong>, die wahrscheinlich vor allem Anfängern einen guten
@@ -813,7 +809,7 @@ Diese Probleme tauchen wahrscheinlich nicht auf jedem System so auf und
 sollen eher als Beispiele dafür verstanden werden, wie mit Problemen
 beim Kompilieren von Ports jenseits der Standardvorgaben umgegangen
 wird.</p>
-<section id="archivers-unzip">
+<div class="section" id="archivers-unzip">
 <h3><span class="section-number">1.81.6.1. </span>archivers/unzip<a class="headerlink" href="#archivers-unzip" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Bei einem <strong>ports-mgmt/portupgrade</strong> wurde plötzlich der Port
 <strong>java/jdk15</strong> nicht mehr gebaut. Die Prüfsumme der Dateien die aus dem
@@ -838,8 +834,8 @@ Probleme können sehr unangenehm werden, da sie lange Zeit unentdeckt ein
 ansonsten reibungslos funktionierendes System stören können. Der
 Schlüssel zur Lösung war in diesem Fall der manuelle Test von unzip.
 Leider wird das bei komplexeren Programmen ungleich schwieriger.</p>
-</section>
-<section id="devel-sdl12-und-x11-xorg-libraries">
+</div>
+<div class="section" id="devel-sdl12-und-x11-xorg-libraries">
 <h3><span class="section-number">1.81.6.2. </span>devel/sdl12 und x11/xorg-libraries<a class="headerlink" href="#devel-sdl12-und-x11-xorg-libraries" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nach einem portupgrade -a konnten plötzlich ports die von
 <strong>devel/sdl12</strong> abhängig waren nicht mehr gebaut werden. Die Ports
@@ -864,8 +860,8 @@ Libraries so wie sie sollten.</p>
 Fehlermeldungen zum Glauben verleitet war, der Fehler läge beim Port
 devel/sdl12. Ich hätte mir viele Nerven und einige Zeit sparen können,
 wenn ich die Logfiles von Anfang an gründlicher gelesen hätte.</p>
-</section>
-<section id="boot-loader">
+</div>
+<div class="section" id="boot-loader">
 <h3><span class="section-number">1.81.6.3. </span>/boot/loader<a class="headerlink" href="#boot-loader" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn ich buildworld und installworld mit <strong>CPUTYPE?=pentium-m</strong>
 ausführe, friert bei mir das System beim nächsten boot ein bevor der
@@ -884,8 +880,8 @@ brauchte ich nur noch:</p>
 </div>
 <p>für das Verzeichnis einzutragen und ich kann mir die Backup-schieberei
 sparen.</p>
-</section>
-<section id="etc-make-conf">
+</div>
+<div class="section" id="etc-make-conf">
 <h3><span class="section-number">1.81.6.4. </span>/etc/make.conf<a class="headerlink" href="#etc-make-conf" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Diese <strong>/etc/make.conf</strong> war auf gigantische Ausmaße angewachsen, weil
 es für alle Ports, die jetzt unter <strong>BASE_BUILD</strong> zusammengefasst sind,
@@ -1065,9 +1061,9 @@ PERL_VER=5.8.7
 PERL_VERSION=5.8.7
 </pre></div>
 </div>
-</section>
-</section>
-<section id="quellen">
+</div>
+</div>
+<div class="section" id="quellen">
 <h2><span class="section-number">1.81.7. </span>Quellen<a class="headerlink" href="#quellen" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Der Artikel <a class="reference external" href="http://wiki.bsd-crew.de/index.php/Make.conf_Optimal_nutzen">Make.conf Optimal
@@ -1080,41 +1076,38 @@ die Versuche des Autors gegeben.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="make_world.txt.html" class="btn btn-neutral float-right" title="1.82. make world" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="majordomo_postfix.txt.html" class="btn btn-neutral float-left" title="1.80. Majordomo Postfix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="make_world.txt.html" class="btn btn-neutral float-right" title="1.82. make world" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="majordomo_postfix.txt.html" class="btn btn-neutral float-left" title="1.80. Majordomo Postfix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>2.11. gitit &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="2.12. GKrellM" href="gkrellm.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -188,6 +191,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -201,8 +206,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/anwendungen/gitit.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/anwendungen/gitit.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -210,26 +215,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="gkrellm.txt.html" class="btn btn-neutral float-right" title="2.12. GKrellM" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="gimp.txt.html" class="btn btn-neutral float-left" title="2.10. Gimp" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="gitit">
+  <div class="section" id="gitit">
 <h1><span class="section-number">2.11. </span>gitit<a class="headerlink" href="#gitit" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>gitit ist ein schön einfaches <a class="reference external" href="Wiki">Wiki</a>. Es basiert auf die
 Anwendung von <a class="reference external" href="haskell">haskell</a>.</p>
 <p>Klassischer Weise wird <a class="reference external" href="git">git</a> und markdown angewendet.</p>
@@ -237,7 +233,7 @@ Anwendung von <a class="reference external" href="haskell">haskell</a>.</p>
 Versionsverwaltung und einfache standardmäßige Auszeichnungssprache zur
 Grundlage zu machen. Somit ist es vergleichbar mit <a class="reference external" href="ikiwiki">ikiwiki</a>
 (<a class="reference external" href="perl">perl</a>) und <a class="reference external" href="gollum">gollum</a> (<a class="reference external" href="ruby">ruby</a>).</p>
-<section id="installation">
+<div class="section" id="installation">
 <h2><span class="section-number">2.11.1. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Nachfolgende Installation wurde in einer „geklickten“ <a class="reference external" href="Jail">Jail</a>
 (<a class="reference external" href="FreeBSD">FreeBSD</a>) bei einem aktuellen (2017-09-11)
@@ -317,37 +313,37 @@ port: <span class="m">80</span>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /usr/local/www/gitit/ <span class="o">&amp;&amp;</span> gitit -f /usr/local/etc/gitit.conf
 </pre></div>
 </div>
-</section>
-<section id="rc-d">
+</div>
+<div class="section" id="rc-d">
 <h2><span class="section-number">2.11.2. </span>rc.d<a class="headerlink" href="#rc-d" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Es gibt bisher (2017-09-12) kein Skript für rc.d (im „ordnungsgemäßen“
 Verzeichnis <code class="docutils literal notranslate"><span class="pre">/usr/local/etc/rc.d/</span></code>) nach der Installation.</p>
-<section id="einzeilig">
+<div class="section" id="einzeilig">
 <h3><span class="section-number">2.11.2.1. </span>einzeilig<a class="headerlink" href="#einzeilig" title="Link zu dieser Überschrift">¶</a></h3>
 <p>hässlich, aber erst einmal was auf die Schnelle Vielleicht mag das wer richtig
 richtig machen, also vielleicht gar gleich direkt für <em>rc.d</em>.</p>
-<section id="erzeugen">
+<div class="section" id="erzeugen">
 <h4><span class="section-number">2.11.2.1.1. </span>Erzeugen<a class="headerlink" href="#erzeugen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>aka <code class="docutils literal notranslate"><span class="pre">init</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /usr/local/www/gitit <span class="o">&amp;&amp;</span> gitit --print-default-config &gt; /usr/local/etc/gitit.conf <span class="o">&amp;&amp;</span> <span class="nb">cd</span> /usr/local/www/gitit/ <span class="o">&amp;&amp;</span> gitit -f /usr/local/etc/gitit.conf <span class="o">&amp;&amp;</span> killall gitit
 </pre></div>
 </div>
-</section>
-<section id="starten">
+</div>
+<div class="section" id="starten">
 <h4><span class="section-number">2.11.2.1.2. </span>Starten<a class="headerlink" href="#starten" title="Link zu dieser Überschrift">¶</a></h4>
 <p>aka <code class="docutils literal notranslate"><span class="pre">start</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /usr/local/www/gitit/ <span class="o">&amp;&amp;</span> gitit -f /usr/local/etc/gitit.conf <span class="p">&amp;</span>
 </pre></div>
 </div>
-</section>
-<section id="stoppen">
+</div>
+<div class="section" id="stoppen">
 <h4><span class="section-number">2.11.2.1.3. </span>Stoppen<a class="headerlink" href="#stoppen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>aka <code class="docutils literal notranslate"><span class="pre">stop</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>killall gitit
 </pre></div>
 </div>
-</section>
-<section id="status">
+</div>
+<div class="section" id="status">
 <h4><span class="section-number">2.11.2.1.4. </span>Status<a class="headerlink" href="#status" title="Link zu dieser Überschrift">¶</a></h4>
 <p>aka <code class="docutils literal notranslate"><span class="pre">status</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps aux <span class="p">|</span> grep gitit <span class="p">|</span> grep -v grep
@@ -356,43 +352,40 @@ richtig machen, also vielleicht gar gleich direkt für <em>rc.d</em>.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="gkrellm.txt.html" class="btn btn-neutral float-right" title="2.12. GKrellM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="gimp.txt.html" class="btn btn-neutral float-left" title="2.10. Gimp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="gkrellm.txt.html" class="btn btn-neutral float-right" title="2.12. GKrellM" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="gimp.txt.html" class="btn btn-neutral float-left" title="2.10. Gimp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

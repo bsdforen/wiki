@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.111. Schöne Schriften in Xorg &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.112. Shell-Scripting" href="shell-scripting.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -293,6 +296,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -306,8 +311,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/schoene_schriften_in_xorg.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/schoene_schriften_in_xorg.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -315,29 +320,20 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="shell-scripting.txt.html" class="btn btn-neutral float-right" title="1.112. Shell-Scripting" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="scharfe_windows_schriften.txt.html" class="btn btn-neutral float-left" title="1.110. scharfe Windows Schriften" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="schone-schriften-in-xorg">
+  <div class="section" id="schone-schriften-in-xorg">
 <h1><span class="section-number">1.111. </span>Schöne Schriften in Xorg<a class="headerlink" href="#schone-schriften-in-xorg" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</aside>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Dieser Artikel ist veraltet und bedarf dringender Überarbeitung!</p>
@@ -346,7 +342,7 @@
 die Anweisungen im FreeBSD Handbuch veraltet. Die Anweisungen hier sind für
 alle Systeme mit Xorg gültig. Lediglich Pfadangaben sind noch FreeBSD
 spezifisch.</p>
-<section id="schriftarten-installieren">
+<div class="section" id="schriftarten-installieren">
 <h2><span class="section-number">1.111.1. </span>Schriftarten installieren<a class="headerlink" href="#schriftarten-installieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Unter FreeBSD sollten die folgenden Ports installiert werden:</p>
 <ul class="simple">
@@ -358,8 +354,8 @@ spezifisch.</p>
 vorausgesetzt werden. Es geht natürlich auch ohne, aber vor allem beim
 Austausch von Dokumenten mit Windows-Nutzern ist es nützlich die
 Schriften auf dem Rechner zu haben.</p>
-</section>
-<section id="schriftarten-aktivieren">
+</div>
+<div class="section" id="schriftarten-aktivieren">
 <h2><span class="section-number">1.111.2. </span>Schriftarten aktivieren<a class="headerlink" href="#schriftarten-aktivieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Zuerst müssen die Schriften Xorg bekannt gemacht werden. Dazu müssen die
 Verzeichnisse mit den Schriften in der <code class="docutils literal notranslate"><span class="pre">xorg.conf</span></code> eingetragen werden.
@@ -387,8 +383,8 @@ werden:</p>
 $ xset fp rehash
 </pre></div>
 </div>
-</section>
-<section id="darstellung-konfigurieren">
+</div>
+<div class="section" id="darstellung-konfigurieren">
 <h2><span class="section-number">1.111.3. </span>Darstellung konfigurieren<a class="headerlink" href="#darstellung-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Einstellungen zur Darstellungen werden im Ordner <code class="docutils literal notranslate"><span class="pre">fonts</span></code> im
 Verzeichnis mit den Konfigurationsdateien vorgenommen. Unter FreeBSD
@@ -411,8 +407,8 @@ Name einer Konfigurationsdatei für Kantenglättung beginnt immer mit 10.
 Für die meisten Anwender ist <code class="docutils literal notranslate"><span class="pre">10-sub-pixel-rgb.conf</span></code> die richtige
 Wahl.</p>
 <p>Die Änderungen werden nach einem Neustart von Xorg gültig.</p>
-</section>
-<section id="verweise">
+</div>
+<div class="section" id="verweise">
 <h2><span class="section-number">1.111.4. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.google.com/search?q=x11-fonts&amp;btnI=lucky">x11-fonts</a>
@@ -421,41 +417,38 @@ Wahl.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="shell-scripting.txt.html" class="btn btn-neutral float-right" title="1.112. Shell-Scripting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="scharfe_windows_schriften.txt.html" class="btn btn-neutral float-left" title="1.110. scharfe Windows Schriften" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="shell-scripting.txt.html" class="btn btn-neutral float-right" title="1.112. Shell-Scripting" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="scharfe_windows_schriften.txt.html" class="btn btn-neutral float-left" title="1.110. scharfe Windows Schriften" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

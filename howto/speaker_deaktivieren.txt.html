@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.114. PC-Speaker deaktivieren &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.115. ssh" href="ssh.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -296,6 +299,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -309,8 +314,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/speaker_deaktivieren.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/speaker_deaktivieren.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -318,33 +323,24 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="ssh.txt.html" class="btn btn-neutral float-right" title="1.115. ssh" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="soundkarte_einrichten.txt.html" class="btn btn-neutral float-left" title="1.113. Soundkarte einrichten" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="pc-speaker-deaktivieren">
+  <div class="section" id="pc-speaker-deaktivieren">
 <h1><span class="section-number">1.114. </span>PC-Speaker deaktivieren<a class="headerlink" href="#pc-speaker-deaktivieren" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Kommt ein schriller Warnton aus den Lautsprechern, ist vermutlich der
 PC-Speaker aktiviert. Oft kann man aber auf diese Art der Mitteilung
 verzichten. Der folgende Artikel beschreibt die Möglichkeiten, wie man
 diesen verstummen lässt.</p>
-<section id="in-der-konsole">
+<div class="section" id="in-der-konsole">
 <h2><span class="section-number">1.114.1. </span>In der Konsole<a class="headerlink" href="#in-der-konsole" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="temporar-ausschalten">
+<div class="section" id="temporar-ausschalten">
 <h3><span class="section-number">1.114.1.1. </span>Temporär ausschalten<a class="headerlink" href="#temporar-ausschalten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In NetBSD kann über wsconsctl der Speaker leiser beziehungsweise
 ausgeschaltet werden. Folgende Befehle deaktivieren diesen in der
@@ -357,8 +353,8 @@ Konsole:</p>
 </pre></div>
 </div>
 <p>Die Einstellungen gehen nach dem nächsten Bootvorgang verloren.</p>
-</section>
-<section id="persistent">
+</div>
+<div class="section" id="persistent">
 <h3><span class="section-number">1.114.1.2. </span>Persistent<a class="headerlink" href="#persistent" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nun können die beiden Befehle auch <strong>rc.local</strong> hinzugefügt werden,
 welches den Vorteil bietet robust auf Aktualisierungen zu reagieren. Die
@@ -369,9 +365,9 @@ am Beispiel bell.pitch:</p>
 </pre></div>
 </div>
 <p>Ein OS-Upgrade übersteht diese Änderung nicht.</p>
-</section>
-</section>
-<section id="in-xwindow">
+</div>
+</div>
+<div class="section" id="in-xwindow">
 <h2><span class="section-number">1.114.2. </span>In XWindow<a class="headerlink" href="#in-xwindow" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In X können Einstellungen über <strong>xset</strong> manipuliert werden. Der folgende
 Befehl, welcher im lokalen Startskript <strong>.xinitrc</strong> geschrieben werden
@@ -379,8 +375,8 @@ kann, schaltet auch dort den Speaker aus:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#  xset b off</span>
 </pre></div>
 </div>
-</section>
-<section id="im-kernel">
+</div>
+<div class="section" id="im-kernel">
 <h2><span class="section-number">1.114.3. </span>Im Kernel<a class="headerlink" href="#im-kernel" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Zu guter Letzt besteht auch die Möglichkeit im Kernel das entsprechende
 Device auszuschalten. Hierzu kommentiert man das Gerät <strong>pcppi</strong> und
@@ -392,41 +388,38 @@ vorgenommen werden.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ssh.txt.html" class="btn btn-neutral float-right" title="1.115. ssh" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="soundkarte_einrichten.txt.html" class="btn btn-neutral float-left" title="1.113. Soundkarte einrichten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="ssh.txt.html" class="btn btn-neutral float-right" title="1.115. ssh" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="soundkarte_einrichten.txt.html" class="btn btn-neutral float-left" title="1.113. Soundkarte einrichten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

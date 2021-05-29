@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.47. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT) &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.48. Festplattenverschlüsselung mit Geli und USB Boot" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -299,6 +302,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -312,8 +317,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/festplatte_einrichten_gpt.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/festplatte_einrichten_gpt.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -321,26 +326,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html" class="btn btn-neutral float-right" title="1.48. Festplattenverschlüsselung mit Geli und USB Boot" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="festplatte_einrichten.txt.html" class="btn btn-neutral float-left" title="1.46. Festplatte einrichten" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="manuelle-verwaltung-von-festplatten-nach-neuem-guid-partition-table-gpt">
+  <div class="section" id="manuelle-verwaltung-von-festplatten-nach-neuem-guid-partition-table-gpt">
 <h1><span class="section-number">1.47. </span>Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)<a class="headerlink" href="#manuelle-verwaltung-von-festplatten-nach-neuem-guid-partition-table-gpt" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Im Gegensatz zu dem Artikel <a class="reference external" href="festplatte_einrichten">festplatte_einrichten</a>
 werden hier keine klassischen MBR-Partitionen aka (klassisches BIOS) bzw.
 BSD-Slices sondern moderne GPT-Partitionen manuell angelegt, wie sie z.B. das
@@ -349,17 +345,17 @@ moderne EFI verwenden kann.</p>
 EFI eine solche Partition angelegt werden, damit z.B.
 Größenbeschränkungen der alten MBR-Partitionen umgangen werden können.</p>
 <p>FreeBSD unterstützt ab 7.0 dieses Partitionsschema.</p>
-<section id="gpt-partitionstabelle-anlegen">
+<div class="section" id="gpt-partitionstabelle-anlegen">
 <h2><span class="section-number">1.47.1. </span>GPT-Partitionstabelle anlegen<a class="headerlink" href="#gpt-partitionstabelle-anlegen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In dem Beispiel wird auf der Festplatte <code class="docutils literal notranslate"><span class="pre">/dev/da1</span></code> eine
 GPT-Partitionstabelle wie folgt erstellt.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gpart create -s gpt da1
 </pre></div>
 </div>
-</section>
-<section id="partition-darin-anlegen">
+</div>
+<div class="section" id="partition-darin-anlegen">
 <h2><span class="section-number">1.47.2. </span>Partition darin anlegen<a class="headerlink" href="#partition-darin-anlegen" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="eine-partition-mit-der-grosze-der-gesamten-platte-anlegen">
+<div class="section" id="eine-partition-mit-der-grosze-der-gesamten-platte-anlegen">
 <h3><span class="section-number">1.47.2.1. </span>Eine Partition mit der Größe der gesamten Platte anlegen<a class="headerlink" href="#eine-partition-mit-der-grosze-der-gesamten-platte-anlegen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Auf der Festplatte wird nun eine Partition mit der vollen Größe der
 Festplatte angelegt:</p>
@@ -367,8 +363,8 @@ Festplatte angelegt:</p>
 </pre></div>
 </div>
 <p>Die neue Partition wird als Device <strong>``/dev/da1p1``</strong> sichtbar.</p>
-</section>
-<section id="mehrere-partitionen-mit-vorgegebenen-grosze-anlegen">
+</div>
+<div class="section" id="mehrere-partitionen-mit-vorgegebenen-grosze-anlegen">
 <h3><span class="section-number">1.47.2.2. </span>Mehrere Partitionen mit vorgegebenen Größe anlegen<a class="headerlink" href="#mehrere-partitionen-mit-vorgegebenen-grosze-anlegen" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gpart add -t efi -s 300G da1
 </pre></div>
@@ -379,16 +375,16 @@ Festplatte angelegt:</p>
 </div>
 <p>Erzeugt eine zweite 500 Gigabyte Partition als <code class="docutils literal notranslate"><span class="pre">/dev/da1**p2**</span></code> im zweiten
 Schritt.</p>
-</section>
-</section>
-<section id="dateisystem-erstellen-usw">
+</div>
+</div>
+<div class="section" id="dateisystem-erstellen-usw">
 <h2><span class="section-number">1.47.3. </span>Dateisystem erstellen usw.<a class="headerlink" href="#dateisystem-erstellen-usw" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das erstellen von Dateisystemen in dieser Partition ist alten
 klassischem Artikel
 <a class="reference external" href="festplatte_einrichten#dateisystem_erstellen">festplatte_einrichten#dateisystem_erstellen</a>
 beschrieben.</p>
-</section>
-<section id="anzeigen-der-paritionstabelle">
+</div>
+<div class="section" id="anzeigen-der-paritionstabelle">
 <h2><span class="section-number">1.47.4. </span>Anzeigen der Paritionstabelle<a class="headerlink" href="#anzeigen-der-paritionstabelle" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gpart show da1
 </pre></div>
@@ -397,8 +393,8 @@ beschrieben.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gpart list da1
 </pre></div>
 </div>
-</section>
-<section id="partition-loschen">
+</div>
+<div class="section" id="partition-loschen">
 <h2><span class="section-number">1.47.5. </span>Partition löschen<a class="headerlink" href="#partition-loschen" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gpart delete -i <span class="m">1</span> da1
 </pre></div>
@@ -406,8 +402,8 @@ beschrieben.</p>
 <p>Hierbei ist die <strong>1</strong> der Index in der Ausgabe <em>Providers</em> in der Liste
 aus <code class="docutils literal notranslate"><span class="pre">gpart</span> <span class="pre">list</span> <span class="pre">...</span></code>.</p>
 <p>Bei <strong>1</strong> wird dann <code class="docutils literal notranslate"><span class="pre">/dev/da1**p1**</span></code> gelöscht.</p>
-</section>
-<section id="andern-der-partitionsgrosze">
+</div>
+<div class="section" id="andern-der-partitionsgrosze">
 <h2><span class="section-number">1.47.6. </span>Ändern der Partitionsgröße<a class="headerlink" href="#andern-der-partitionsgrosze" title="Link zu dieser Überschrift">¶</a></h2>
 <p>FIXME</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gpart modify -i ...
@@ -417,41 +413,38 @@ aus <code class="docutils literal notranslate"><span class="pre">gpart</span> <s
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html" class="btn btn-neutral float-right" title="1.48. Festplattenverschlüsselung mit Geli und USB Boot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="festplatte_einrichten.txt.html" class="btn btn-neutral float-left" title="1.46. Festplatte einrichten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html" class="btn btn-neutral float-right" title="1.48. Festplattenverschlüsselung mit Geli und USB Boot" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="festplatte_einrichten.txt.html" class="btn btn-neutral float-left" title="1.46. Festplatte einrichten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

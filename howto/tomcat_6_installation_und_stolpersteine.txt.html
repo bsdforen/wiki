@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.120. Tomcat 6 Installation und Stolpersteine &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.121. Tor (OpenBSD)" href="tor.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -301,6 +304,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -314,8 +319,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/tomcat_6_installation_und_stolpersteine.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/tomcat_6_installation_und_stolpersteine.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -323,26 +328,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="tor.txt.html" class="btn btn-neutral float-right" title="1.121. Tor (OpenBSD)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="texlive_aus_den_quellen.txt.html" class="btn btn-neutral float-left" title="1.119. TeXlive aus dem Quellcode installieren" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="tomcat-6-installation-und-stolpersteine">
+  <div class="section" id="tomcat-6-installation-und-stolpersteine">
 <h1><span class="section-number">1.120. </span>Tomcat 6 Installation und Stolpersteine<a class="headerlink" href="#tomcat-6-installation-und-stolpersteine" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Angeblich passt JavaEE und damit Tomcat nicht wirklich zu FreeBSD. Ich
 seh keinen Grund was dagegen spricht. Die Installation ist relativ
 einfach, wenn man ein paar Stolpersteine gleich zu umschiffen weiß. Gut,
@@ -361,7 +357,7 @@ Tomact/JavaEE Slang), und außerdem wie man noch
 Tomcat garnichts geht, sollte bei Problemen zuerst Java korrekt
 installiert werden (siehe:
 <a class="reference external" href="/HowTo/JavaInstallation">Java Installation</a>).</p>
-<section id="installation">
+<div class="section" id="installation">
 <h2><span class="section-number">1.120.1. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der Port
 <a class="reference external" href="https://www.google.com/search?q=www/tomcat6&amp;btnI=lucky">www/tomcat6</a>
@@ -401,8 +397,8 @@ selbigens holen (ich mag keinen), denn es dauert wie gesagt.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@kyle</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">tomcat6</span><span class="p">]</span><span class="c1"># make &amp;&amp; make install</span>
 </pre></div>
 </div>
-</section>
-<section id="start-und-test">
+</div>
+<div class="section" id="start-und-test">
 <h2><span class="section-number">1.120.2. </span>Start und Test<a class="headerlink" href="#start-und-test" title="Link zu dieser Überschrift">¶</a></h2>
 <p><a class="align-right reference internal" href="../_images/tomcat_standard.jpg"><img alt="Standardseite einer frischen Tomcat 6 Installation" class="align-right" src="../_images/tomcat_standard.jpg" style="width: 200px;" /></a></p>
 <p>Ist Tomcat 6 nun inklusive Abhängigkeiten installiert, kann er per</p>
@@ -421,8 +417,8 @@ oder alternativ sollte folgender Test auch genügen.</p>
 localhost:8180 100% of 7347  B 1349 kBps
 </pre></div>
 </div>
-</section>
-<section id="eine-webanwendung-per-web-archive-war-deployen">
+</div>
+<div class="section" id="eine-webanwendung-per-web-archive-war-deployen">
 <h2><span class="section-number">1.120.3. </span>Eine Webanwendung per Web Archive <code class="docutils literal notranslate"><span class="pre">(*.war)</span></code> deployen<a class="headerlink" href="#eine-webanwendung-per-web-archive-war-deployen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Normalerweise liegt eine Webanwendung als war-Datei vor. In Eclipse z.B.
 kann man mit einem einfachen Befehl im Kontextmenü des Projektes (Export
@@ -459,8 +455,8 @@ setzt man am Besten www als Besitzer des Ordners webapps.</p>
 <a class="reference external" href="http://ip.des.ser.vers:8180/anwendung">http://ip.des.ser.vers:8180/anwendung</a> erreichbar. Bei mir wäre das also
 <a class="reference external" href="http://kyle:8180/wgkasse/">http://kyle:8180/wgkasse/</a></p>
 <p>Fertig deployet (schönes denglisch ;-))</p>
-</section>
-<section id="tomcat-auf-port-80-lauschen-lassen">
+</div>
+<div class="section" id="tomcat-auf-port-80-lauschen-lassen">
 <h2><span class="section-number">1.120.4. </span>Tomcat auf Port 80 lauschen lassen<a class="headerlink" href="#tomcat-auf-port-80-lauschen-lassen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wer neben dem Tomcat keinen zusätzlichen Webserver betreibt, möchte
 vielleicht, dass der Tomcat auf den HTTP Standardport 80 lauscht. Der
@@ -487,8 +483,8 @@ rdr pass on fxp0 proto tcp to $tomcat_if port 80 -&gt; $tomcat_if port 8180
 <p>Für die weitere Konfiguration von pf sei hier auf das FreeBSD Handbuch,
 bzw die OpenBSD FAQ verwiesen. Natürlich lässt sich dieser Portredirect
 auch mit IPFW oder sonstigem einstellen.</p>
-</section>
-<section id="java-6-fur-tomcat">
+</div>
+<div class="section" id="java-6-fur-tomcat">
 <h2><span class="section-number">1.120.5. </span>Java 6 für Tomcat<a class="headerlink" href="#java-6-fur-tomcat" title="Link zu dieser Überschrift">¶</a></h2>
 <p><a class="reference external" href="https://www.google.com/search?q=www/tomcat6&amp;btnI=lucky">www/tomcat6</a>
 hängt ab von
@@ -508,8 +504,8 @@ natürlich tomcat neustarten und dann verwendet er Java 6.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@eric</span> <span class="o">~</span><span class="p">]</span><span class="c1"># echo &#39;tomcat60_java_home=&quot;/usr/local/jdk1.6.0/&quot;&#39; &gt;&gt; /etc/rc.conf</span>
 </pre></div>
 </div>
-</section>
-<section id="troubleshooting">
+</div>
+<div class="section" id="troubleshooting">
 <h2><span class="section-number">1.120.6. </span>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In diesem Abschnitt möchte ich nocheinmal kurz alle „Stolpersteine“
 auflisten, ich hab es anscheinend geschafft alle möglichen Fehler zu
@@ -519,7 +515,7 @@ Fehlermeldung hier landet.</p>
 /usr/local/apache-tomcat6.0/logs/stderr.log und stdout.log. stdout.log
 enthält dabei auch alle System.out.prinln() Ausgaben aus
 Webapplikationen.</p>
-<section id="tomcat-startet-nicht-compat6x-libz-so-3">
+<div class="section" id="tomcat-startet-nicht-compat6x-libz-so-3">
 <h3><span class="section-number">1.120.6.1. </span>Tomcat startet nicht - compat6x (libz.so.3)<a class="headerlink" href="#tomcat-startet-nicht-compat6x-libz-so-3" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># stderr.log /libexec/ld-elf.so.1: Shared object &quot;libz.so.3&quot; not found, required by &quot;java&quot;</span>
 </pre></div>
@@ -530,8 +526,8 @@ gleichen Fehler. Es fehlen Kompatibilitätslibraries für FreeBSD 6, diese
 finden sich in
 <a class="reference external" href="https://www.google.com/search?q=misc/compat6x&amp;btnI=lucky">misc/compat6x</a>,
 diesen Port einfach installieren.</p>
-</section>
-<section id="ipv6-in-java">
+</div>
+<div class="section" id="ipv6-in-java">
 <h3><span class="section-number">1.120.6.2. </span>IPv6 in Java<a class="headerlink" href="#ipv6-in-java" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># stdout.log SEVERE: StandardServer.await: create[8005]: java.net.BindException: Can&#39;t assign requested address</span>
 </pre></div>
@@ -540,8 +536,8 @@ diesen Port einfach installieren.</p>
 richtige IP Adresse finden auf der er einen Port öffnen und lauschen
 soll. Also Java nochmal installieren mit IPv6 deaktiviert (make
 deinstall, make clean, make config, make, make reinstall).</p>
-</section>
-<section id="fehler-503">
+</div>
+<div class="section" id="fehler-503">
 <h3><span class="section-number">1.120.6.3. </span>Fehler 503<a class="headerlink" href="#fehler-503" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Versucht man per Browser auf eine Webanwendung zuzugreifen, und erhält
 einen Fehler 503, kann das verschiedene Ursachen habe. Aufschluss gibt
@@ -552,7 +548,7 @@ Stacktrace geloggt werden.</p>
 <span class="n">currently</span> <span class="n">available</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">currently</span> <span class="n">available</span>
 </pre></div>
 </div>
-<section id="falsche-berechtigungen-fur-das-webapps-verzeichnis">
+<div class="section" id="falsche-berechtigungen-fur-das-webapps-verzeichnis">
 <h4><span class="section-number">1.120.6.3.1. </span>Falsche Berechtigungen für das webapps Verzeichnis<a class="headerlink" href="#falsche-berechtigungen-fur-das-webapps-verzeichnis" title="Link zu dieser Überschrift">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># stdout.log INFO: Deploying web application archive wgkasse.war</span>
 <span class="n">Jan</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2008</span> <span class="mi">6</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">41</span> <span class="n">PM</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">catalina</span><span class="o">.</span><span class="n">startup</span><span class="o">.</span><span class="n">ContextConfig</span> <span class="n">init</span>
@@ -571,8 +567,8 @@ nicht richtig gesetzt. Überprüfen:</p>
 <span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">8</span> <span class="n">www</span>   <span class="n">www</span>      <span class="mi">512</span> <span class="n">Jan</span>  <span class="mi">7</span> <span class="mi">15</span><span class="p">:</span><span class="mi">40</span> <span class="n">webapps</span><span class="o">/</span>
 </pre></div>
 </div>
-</section>
-<section id="falsche-java-version">
+</div>
+<div class="section" id="falsche-java-version">
 <h4><span class="section-number">1.120.6.3.2. </span>Falsche Java Version<a class="headerlink" href="#falsche-java-version" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Eine weitere Fehlerquelle, weshalb der Tomcat eine Webanwendung nicht
 auslierft kann eine falsche Javaversion sein.</p>
@@ -585,10 +581,10 @@ kompiliert als auf dem Server vorhanden ist. Man kann z.B. in Eclipse
 die Zielplattform von Tomcat 6 mit Java 6 auf Tomcat 6 mit Java 5
 umstellen. Alternativ wird auf dem Server die neure Javaversion
 installiert und JAVA_HOME für Tomcat 6 gesetzt (siehe oben).</p>
-</section>
-</section>
-</section>
-<section id="links">
+</div>
+</div>
+</div>
+<div class="section" id="links">
 <h2><span class="section-number">1.120.7. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
 <p><a class="reference external" href="http://tomcat.apache.org/tomcat-6.0-doc/index.html">Tomcat 6
 Dokumentation</a></p>
@@ -597,41 +593,38 @@ Api-Doc, Tutorials etc., sehr umfangreich</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="tor.txt.html" class="btn btn-neutral float-right" title="1.121. Tor (OpenBSD)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="texlive_aus_den_quellen.txt.html" class="btn btn-neutral float-left" title="1.119. TeXlive aus dem Quellcode installieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="tor.txt.html" class="btn btn-neutral float-right" title="1.121. Tor (OpenBSD)" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="texlive_aus_den_quellen.txt.html" class="btn btn-neutral float-left" title="1.119. TeXlive aus dem Quellcode installieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

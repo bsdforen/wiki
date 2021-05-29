@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.138. VLAN-Konfiguration mit FreeBSD &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.139. VPN (OpenBSD)" href="vpn_openbsd.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -293,6 +296,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -306,8 +311,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/vlans_mit_freebsd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/vlans_mit_freebsd.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -315,31 +320,22 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="vpn_openbsd.txt.html" class="btn btn-neutral float-right" title="1.139. VPN (OpenBSD)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="vdsl_mit_openbsd.txt.html" class="btn btn-neutral float-left" title="1.137. VDSL and OpenBSD" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="vlan-konfiguration-mit-freebsd">
+  <div class="section" id="vlan-konfiguration-mit-freebsd">
 <h1><span class="section-number">1.138. </span>VLAN-Konfiguration mit FreeBSD<a class="headerlink" href="#vlan-konfiguration-mit-freebsd" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Dieser Artikel soll eine kurze Einführung in die Einbindung eines
 FreeBSD-Rechners in ein Layer-2 VLAN nach IEEE 802.1q geben. Erklärt
 wird die Einrichtung von (mehreren) logischen Interfaces auf einer
 physikalischen Netzwerkkarte.</p>
-<section id="vorwissen">
+<div class="section" id="vorwissen">
 <h2><span class="section-number">1.138.1. </span>Vorwissen<a class="headerlink" href="#vorwissen" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>IEEE 802.1q VLANs hängen eine Markierung (Englisch „tag“) an ein
@@ -354,8 +350,8 @@ Rechners zu mehreren tagged VLANs. Die Aufteilung der Pakete auf die
 unterschiedlichen VLANs muss in diesem Fall auf dem Rechner erfolgen.
 Damit befasst sich dieser Artikel.</p></li>
 </ul>
-</section>
-<section id="notwendige-vorbedingung">
+</div>
+<div class="section" id="notwendige-vorbedingung">
 <h2><span class="section-number">1.138.2. </span>Notwendige Vorbedingung<a class="headerlink" href="#notwendige-vorbedingung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der VLAN-Treiber muss entweder in den Kernel kompiliert sein (ist im
 Standard GENERIC-Kernel der Fall). Wenn ein eigener Kernel verwendet
@@ -373,8 +369,8 @@ werden über den Eintrag von</p>
 zu verarbeiten. Im Zweifelsfall hilft die Manpage von
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=vlan&amp;sektion=4&amp;format=html">vlan(4)</a>
 weiter.</p>
-</section>
-<section id="einrichtung-in-freebsd">
+</div>
+<div class="section" id="einrichtung-in-freebsd">
 <h2><span class="section-number">1.138.3. </span>Einrichtung in FreeBSD<a class="headerlink" href="#einrichtung-in-freebsd" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Alle notwendige Konfiguration kann am einfachsten in der
 Start-Konfigurationsdatei</p>
@@ -432,8 +428,8 @@ ifconfig-Ausgabe dann so aus:</p>
 </div>
 <p>Leider war beim Schreiben dieses Artikels die Netzwerkkarte wie man an
 „media“ sehen kann nicht mit einem Switch verbunden. ;-)</p>
-</section>
-<section id="mehrere-logische-vlan-interfaces">
+</div>
+<div class="section" id="mehrere-logische-vlan-interfaces">
 <h2><span class="section-number">1.138.4. </span>Mehrere logische VLAN-Interfaces<a class="headerlink" href="#mehrere-logische-vlan-interfaces" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das Anlegen mehrerer VLAN-Interfaces erfolgt in der Datei /etc/rc.conf
 in der cloned_interface Zeile durch Leerschritte getrennt, zum Beispiel:</p>
@@ -450,41 +446,38 @@ für die IP-Konfiguration nötig, zum Beispiel:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="vpn_openbsd.txt.html" class="btn btn-neutral float-right" title="1.139. VPN (OpenBSD)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="vdsl_mit_openbsd.txt.html" class="btn btn-neutral float-left" title="1.137. VDSL and OpenBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="vpn_openbsd.txt.html" class="btn btn-neutral float-right" title="1.139. VPN (OpenBSD)" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="vdsl_mit_openbsd.txt.html" class="btn btn-neutral float-left" title="1.137. VDSL and OpenBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

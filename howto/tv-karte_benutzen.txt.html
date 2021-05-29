@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.124. TV-Karte benutzen &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.125. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris" href="twinview_mit_nvidia.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -296,6 +299,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -309,8 +314,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/tv-karte_benutzen.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/tv-karte_benutzen.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -318,32 +323,23 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="twinview_mit_nvidia.txt.html" class="btn btn-neutral float-right" title="1.125. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html" class="btn btn-neutral float-left" title="1.123. Tortoise like SVN Menu in Nautilus" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="tv-karte-benutzen">
+  <div class="section" id="tv-karte-benutzen">
 <h1><span class="section-number">1.124. </span>TV-Karte benutzen<a class="headerlink" href="#tv-karte-benutzen" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Dieses Howto beschreibt die Benutzung einer Brooktree kompatiblen TV-Karte
 unter FreeBSD.</p>
 <p>When you have a Philips SAA7134 chipset instead, you might want to take
 a look at <a class="reference external" href="http://download.purpe.com/">download.purpe.com</a>, a guy
 from asia has written a driver for FreeBSD 5.</p>
-<section id="anleitung">
+<div class="section" id="anleitung">
 <h2><span class="section-number">1.124.1. </span>Anleitung<a class="headerlink" href="#anleitung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Entweder man fügt folgende Zeilen der Kernelconfig hinzu (siehe
 bktr(4)):</p>
@@ -355,8 +351,8 @@ bktr(4)):</p>
 </div>
 <p>Oder man lädt das bktr-Modul mittels <code class="docutils literal notranslate"><span class="pre">kldload</span></code>. Zum automatischen
 Laden beim Startup siehe <code class="docutils literal notranslate"><span class="pre">loader.conf</span></code>.</p>
-</section>
-<section id="tv-programme">
+</div>
+<div class="section" id="tv-programme">
 <h2><span class="section-number">1.124.2. </span>TV-Programme<a class="headerlink" href="#tv-programme" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Viewer (zu finden unter
 <a class="reference external" href="https://www.google.com/search?q=multimedia&amp;btnI=lucky">multimedia</a>):</p>
@@ -377,8 +373,8 @@ Laden beim Startup siehe <code class="docutils literal notranslate"><span class=
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.google.com/search?q=misc/vbidecode&amp;btnI=lucky">misc/vbidecode</a></p></li>
 </ul>
-</section>
-<section id="zu-mplayer">
+</div>
+<div class="section" id="zu-mplayer">
 <h2><span class="section-number">1.124.3. </span>Zu mplayer<a class="headerlink" href="#zu-mplayer" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mit mplayer TV sehen ist zwar nicht ganz einfach, aber der Aufwand lohnt
 sich wenn man die Qualität sieht.</p>
@@ -451,15 +447,15 @@ einer bestimmten Zeit.</p>
 mixer) und die Lautstärke stimmt. Wenn du, um in mplayer etwas zu hören,
 audioid benötigst, füge dieses einfach in mencoder mit an.</p>
 <p>Ich hoffe ein paar Leuten damit geholfen zu haben (und danke an lamer!).</p>
-<section id="hauppauge-karte-mit-fernbedienung">
+<div class="section" id="hauppauge-karte-mit-fernbedienung">
 <h3><span class="section-number">1.124.3.1. </span>Hauppauge Karte mit Fernbedienung<a class="headerlink" href="#hauppauge-karte-mit-fernbedienung" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
 <li><p>„urmon“, siehe
 <a class="reference external" href="http://www.monkey.org/freebsd/archive/freebsd-multimedia/200305/msg00039.html">http://www.monkey.org/freebsd/archive/freebsd-multimedia/200305/msg00039.html</a></p></li>
 </ul>
-</section>
-</section>
-<section id="troubleshooting">
+</div>
+</div>
+<div class="section" id="troubleshooting">
 <h2><span class="section-number">1.124.4. </span>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Sollten bei der Konfiguration Probleme auftreten (z.b. kein Sound),
 solltest Du mit dmesg überprüfen, ob die TV-Karte überhaupt richtig
@@ -484,41 +480,38 @@ entsprechend. Details zu den einzelnen sysctls befinden sich in
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="twinview_mit_nvidia.txt.html" class="btn btn-neutral float-right" title="1.125. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html" class="btn btn-neutral float-left" title="1.123. Tortoise like SVN Menu in Nautilus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="twinview_mit_nvidia.txt.html" class="btn btn-neutral float-right" title="1.125. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html" class="btn btn-neutral float-left" title="1.123. Tortoise like SVN Menu in Nautilus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

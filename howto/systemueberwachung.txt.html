@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.118. Systemüberwachung &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.119. TeXlive aus dem Quellcode installieren" href="texlive_aus_den_quellen.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -305,6 +308,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -318,8 +323,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/systemueberwachung.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/systemueberwachung.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -327,26 +332,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="texlive_aus_den_quellen.txt.html" class="btn btn-neutral float-right" title="1.119. TeXlive aus dem Quellcode installieren" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="system_in_raid1_verwandeln.txt.html" class="btn btn-neutral float-left" title="1.117. System in RAID1 verwandeln" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="systemuberwachung">
+  <div class="section" id="systemuberwachung">
 <h1><span class="section-number">1.118. </span>Systemüberwachung<a class="headerlink" href="#systemuberwachung" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Das System läßt sich vielfältig überwachen. Eine praktische Variante
 ist, die gesammelten Informationen grafisch darzustellen. Dadurch läßt
 sich ein guter Überblick gewinnen und es sieht auch noch gut aus. Es
@@ -370,13 +366,13 @@ konsolidiert und in den nächsten Zeitschlitz geschrieben. Durch dieses
 Verfahren ist zum einem die Größe der Datenbank festgelegt und ändert
 sich auch nicht, zum anderen können so die Daten über einen großen
 Zeitraum gespeichert werden.</p>
-<section id="anlegen-der-rrdtool-datenbank">
+<div class="section" id="anlegen-der-rrdtool-datenbank">
 <h2><span class="section-number">1.118.1. </span>Anlegen der RRDTool Datenbank<a class="headerlink" href="#anlegen-der-rrdtool-datenbank" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Als erstes muß die Datenbank angelegt werden. Dazu muß angegeben werden,
 wie die Daten organisiert und welche Konsolidierungsfunktionen verwendet
 werden sollen.</p>
-</section>
-<section id="datenorganistion">
+</div>
+<div class="section" id="datenorganistion">
 <h2><span class="section-number">1.118.2. </span>Datenorganistion<a class="headerlink" href="#datenorganistion" title="Link zu dieser Überschrift">¶</a></h2>
 <p>RRDTool muß wissen, wieviele Zeitschlitze vorhanden sein und wann diese
 Daten konsolidiert werden sollen.</p>
@@ -394,7 +390,7 @@ betreten/verlassen</p></li>
 <p>Dann enthält jede Datenbank noch verschiedene Round Robin Archive (RRA),
 die festlegen, wieviele Daten für den jeweiligen Zeitschlitz
 konsolidiert werden sollen.</p>
-<section id="temperatur-datenbank-erstellen">
+<div class="section" id="temperatur-datenbank-erstellen">
 <h3><span class="section-number">1.118.2.1. </span>Temperatur Datenbank erstellen<a class="headerlink" href="#temperatur-datenbank-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Um die Temperatur zu messen, eignet sich eine Data Source vom Typ GAUGE
 sehr gut, da hier keine Durchschnittswerte für das jeweilige
@@ -518,8 +514,8 @@ Verfügung und muß nicht angegeben werden.</p>
 Konsolidierungsfunktionen zugegriffen werden, um die Werte zu
 visualisieren.</p>
 <p>Nun ist die Datenbank angelegt und kann gefüllt werden.</p>
-</section>
-<section id="temperatur-protokollierung">
+</div>
+<div class="section" id="temperatur-protokollierung">
 <h3><span class="section-number">1.118.2.2. </span>Temperatur Protokollierung<a class="headerlink" href="#temperatur-protokollierung" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Eine nützliche Information ist die Temperatur der CPU und der
 Festplatte. Die CPU Temperatur läßt sich unter FreeBSD praktisch mittels
@@ -561,8 +557,8 @@ Die Konsolidierung übernimmt RRDTool. Mit dem Parameter <strong>N</strong> übe
 RRDTool die aktuelle Zeit und schreibt die Daten in den aktuellen
 passenen Zeitschlitz. Alternativ könnte man auch anstelle von <strong>N</strong> die
 aktuelle Zeit in Seconds since Epoch angeben.</p>
-</section>
-<section id="netzwerk-datenbank-erstellen">
+</div>
+<div class="section" id="netzwerk-datenbank-erstellen">
 <h3><span class="section-number">1.118.2.3. </span>Netzwerk Datenbank erstellen<a class="headerlink" href="#netzwerk-datenbank-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Netzwerkdurchsatz soll von RRDTool analog behandelt werden, d.h. es
 werden zwar andere Typen für die Data Sources verwendet, die Auflösung
@@ -594,8 +590,8 @@ den letzten 5 Minuten gesendet/empfangen wurden. Ein Overflow der Bytes,
 die meistens ja in 32bit Integern gezählt werden, erkennt RRDTool
 automatisch. Sollten 64bit Integer benutzt werden, kommt RRDTool auch
 damit klar und erkennt den Overflow.</p>
-</section>
-<section id="netzwerk-durchsatz-protokollieren">
+</div>
+<div class="section" id="netzwerk-durchsatz-protokollieren">
 <h3><span class="section-number">1.118.2.4. </span>Netzwerk Durchsatz protokollieren<a class="headerlink" href="#netzwerk-durchsatz-protokollieren" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Mit dem Programm <code class="docutils literal notranslate"><span class="pre">statgrab</span></code> (in den Ports unter deve/libstatgrab zu
 finden) lassen sich sehr bequem die benötigten Werte ermitteln.</p>
@@ -626,7 +622,7 @@ done
 Werte aus, bildet den Namen der RRD Datei und schreibt die Werte.
 Vermutlich lässt sich das Ganze auch einfacher gestalten, aber so
 funktioniert es erstmal. ;-)</p>
-<section id="fur-faule">
+<div class="section" id="fur-faule">
 <h4><span class="section-number">1.118.2.4.1. </span>für Faule<a class="headerlink" href="#fur-faule" title="Link zu dieser Überschrift">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">statgrab</span></code> unterstützt auch MRTG. Mit <code class="docutils literal notranslate"><span class="pre">statgrab-make-mrtg-config</span></code>
 kann man sich eine entsprechende Konfiguration erzeugen und
@@ -634,10 +630,10 @@ kann man sich eine entsprechende Konfiguration erzeugen und
 Seite. Verwendet man diese Tools, hat man eine Übersicht der Last, der
 Netzwerkauslastung, der Dateisystembelegegung und noch einige weitere
 Details.</p>
-</section>
-</section>
-</section>
-<section id="crontab">
+</div>
+</div>
+</div>
+<div class="section" id="crontab">
 <h2><span class="section-number">1.118.3. </span>Crontab<a class="headerlink" href="#crontab" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um diese Skripte nun alle 5 Minuten auch auszuführen und die Datenbank
 zu aktualisieren, sind folgende 2 Zeilen in der <em>crontab</em> notwendig.</p>
@@ -645,8 +641,8 @@ zu aktualisieren, sind folgende 2 Zeilen in der <em>crontab</em> notwendig.</p>
 <span class="o">*/</span><span class="mi">5</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">network</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
-</section>
-<section id="grafische-auswertung">
+</div>
+<div class="section" id="grafische-auswertung">
 <h2><span class="section-number">1.118.4. </span>Grafische Auswertung<a class="headerlink" href="#grafische-auswertung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Es gibt verschiedene Möglichkeiten, die Daten grafisch darzustellen.</p>
 <ul class="simple">
@@ -655,7 +651,7 @@ Grafiken und stellen sie zur Verfügung (z.B. über einen Webserver).</p></li>
 <li><p>Auf einem Webserver liegt ein CGI Skript, daß die Graphen erzeugt.
 Dies geht z.B. sehr praktisch über Perl mit RRDs oder RRDTool::OO.</p></li>
 </ul>
-<section id="shellskript">
+<div class="section" id="shellskript">
 <h3><span class="section-number">1.118.4.1. </span>Shellskript<a class="headerlink" href="#shellskript" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Für das Shellskript muß <em>rrdtool graph</em> aufgerufen werden.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rrdtool</span> <span class="n">graph</span> <span class="n">temperature</span><span class="o">.</span><span class="n">png</span>                                \
@@ -671,8 +667,8 @@ Dies geht z.B. sehr praktisch über Perl mit RRDs oder RRDTool::OO.</p></li>
  <span class="s1">&#39;LINE:hdd_temp#0000ff:HDD Temperatur&#39;</span>
 </pre></div>
 </div>
-</section>
-<section id="perl">
+</div>
+<div class="section" id="perl">
 <h3><span class="section-number">1.118.4.2. </span>Perl<a class="headerlink" href="#perl" title="Link zu dieser Überschrift">¶</a></h3>
 <p>RRDTool::OO findet sich in der Ports unter <em>devel/p5-RRDTool-OO</em>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/usr/bin/perl -w
@@ -705,9 +701,9 @@ $rrd-&gt;graph(&quot;network.png&quot;,
            );
 </pre></div>
 </div>
-</section>
-</section>
-<section id="zusammenfassung">
+</div>
+</div>
+<div class="section" id="zusammenfassung">
 <h2><span class="section-number">1.118.5. </span>Zusammenfassung<a class="headerlink" href="#zusammenfassung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Diese Seite deckt sicherlich nur einen Teil der Möglichkeiten von
 RRDTool ab. Ein Link zur RRDTool Seite findet sich am Ende der Seite.
@@ -717,8 +713,8 @@ was andere Leute so überwachen.</p>
 von der Inode Nutzung bis zur Apache Auslastung. Dennoch gibt es
 Informationen, die diese nicht abdecken, oder man muß diesen Tools ein
 eigenes Skript unterschieben.</p>
-</section>
-<section id="verweise">
+</div>
+<div class="section" id="verweise">
 <h2><span class="section-number">1.118.6. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/">RRDTool</a></p></li>
@@ -727,41 +723,38 @@ eigenes Skript unterschieben.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="texlive_aus_den_quellen.txt.html" class="btn btn-neutral float-right" title="1.119. TeXlive aus dem Quellcode installieren" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="system_in_raid1_verwandeln.txt.html" class="btn btn-neutral float-left" title="1.117. System in RAID1 verwandeln" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="texlive_aus_den_quellen.txt.html" class="btn btn-neutral float-right" title="1.119. TeXlive aus dem Quellcode installieren" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="system_in_raid1_verwandeln.txt.html" class="btn btn-neutral float-left" title="1.117. System in RAID1 verwandeln" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

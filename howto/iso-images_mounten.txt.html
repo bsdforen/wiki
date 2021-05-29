@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.67. ISO-Images mounten &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.68. ISO-Images von optischen Medien erzeugen" href="iso-images_von_optischen_medien_erzeugen.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -303,6 +306,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -316,8 +321,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/iso-images_mounten.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/iso-images_mounten.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -325,32 +330,23 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="iso-images_von_optischen_medien_erzeugen.txt.html" class="btn btn-neutral float-right" title="1.68. ISO-Images von optischen Medien erzeugen" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="irc-protokoll.txt.html" class="btn btn-neutral float-left" title="1.66. irc-Protokoll im Mozilla, Seamonkey und Firefox" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="iso-images-mounten">
+  <div class="section" id="iso-images-mounten">
 <h1><span class="section-number">1.67. </span>ISO-Images mounten<a class="headerlink" href="#iso-images-mounten" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</aside>
+</div>
 <p>Dieser Artikel soll erklären wie man unter den verschiedenen BSDs ISO-Images
 mountet.</p>
-<section id="einleitung">
+<div class="section" id="einleitung">
 <h2><span class="section-number">1.67.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In diesem Beispiel wird ein ISO-Image z.B. <strong>/tmp/LiveCD.iso</strong> unter
 <strong>/mnt/iso</strong> eingebunden/gemountet werden. Im wesentlichen unterscheidet
@@ -359,22 +355,22 @@ man hierfür zwei Verfahren. Dies sind <strong>vnd/vnconfig</strong> und
 anderen BSD vorhanden vnd/vnconfig. FreeBSD-Versionen <strong>vor</strong> 5
 verwenden
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=vnconfig&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+4.11-RELEASE&amp;format=html">vn/vnconfig</a>.</p>
-</section>
-<section id="dragonfly-bsd">
+</div>
+<div class="section" id="dragonfly-bsd">
 <h2><span class="section-number">1.67.2. </span>DragonFly BSD<a class="headerlink" href="#dragonfly-bsd" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Da DragonFly BSD aus dem 4er-Zweig von FreeBSD entstanden ist verwendet
 es
 <a class="reference external" href="http://leaf.dragonflybsd.org/cgi/web-man?command=vn&amp;section=ANY">vn/vnconfig</a>.
 Zur Nutzung sei hier auf den unten stehenden NetBSD-Abschnitt verwiesen.</p>
-</section>
-<section id="freebsd">
+</div>
+<div class="section" id="freebsd">
 <h2><span class="section-number">1.67.3. </span>FreeBSD<a class="headerlink" href="#freebsd" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die einfachste Methode unter <strong>FreeBSD &gt; 5.x</strong> ein ISO-Image zu mounten
 ist, es als Memory Disk Device einzurichten. Dafür gibt es seit FreeBSD
 5.x das Programm
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=mdconfig">mdconfig</a>, das
 Devices mit dem Namen /dev/md[n] erzeugt.</p>
-<section id="mount">
+<div class="section" id="mount">
 <h3><span class="section-number">1.67.3.1. </span>mount<a class="headerlink" href="#mount" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Zuerst erzeugen wir also mit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mdconfig -a -t vnode -f /tmp/LiveCD.iso -u 0</span>
@@ -389,8 +385,8 @@ an.</p>
 </pre></div>
 </div>
 <p>mounten.</p>
-</section>
-<section id="umount">
+</div>
+<div class="section" id="umount">
 <h3><span class="section-number">1.67.3.2. </span>umount<a class="headerlink" href="#umount" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Um das Device wieder zu entfernen muss man zuerst das Image unmounten.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># umount /mnt/iso</span>
@@ -401,14 +397,14 @@ an.</p>
 </pre></div>
 </div>
 <p>das Device wieder entfernen.</p>
-</section>
-</section>
-<section id="netbsd">
+</div>
+</div>
+<div class="section" id="netbsd">
 <h2><span class="section-number">1.67.4. </span>NetBSD<a class="headerlink" href="#netbsd" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Angelehnt an FreeBSD bis 4.x funktioniert das mounten von ISO-Images
 unter NetBSD mit dem Befehl
 <a class="reference external" href="http://netbsd.gw.com/cgi-bin/man-cgi?vnconfig++NetBSD-current">vnconfig</a>.</p>
-<section id="mount-1">
+<div class="section" id="mount-1">
 <span id="id1"></span><h3><span class="section-number">1.67.4.1. </span>mount<a class="headerlink" href="#mount-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Das Device erzeugen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># vnconfig -c /dev/vnd0d /tmp/LiveCD.iso</span>
@@ -428,17 +424,17 @@ unter NetBSD mit dem Befehl
 <p>Das Disklabel <strong>d</strong> funktioniert beim Port i386. Bei anderen Ports kann es
 abweichend auch <strong>c</strong> oder ein anderer Buchstabe sein.</p>
 </div>
-</section>
-<section id="umount-1">
+</div>
+<div class="section" id="umount-1">
 <span id="id2"></span><h3><span class="section-number">1.67.4.2. </span>umount<a class="headerlink" href="#umount-1" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># umount /mnt/iso</span>
 <span class="c1"># vnconfig -u /dev/vnd0d</span>
 </pre></div>
 </div>
 <p>Mehr Infos mit „man vnconfig“ unter EXAMPLES…</p>
-</section>
-</section>
-<section id="openbsd">
+</div>
+</div>
+<div class="section" id="openbsd">
 <h2><span class="section-number">1.67.5. </span>OpenBSD<a class="headerlink" href="#openbsd" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Verwendet ebenfals vnd/vnconfig. Es bietet als einziges BSD aber die
 Erweiterung
@@ -446,8 +442,8 @@ Erweiterung
 <strong>svnd</strong> erlaubt es, im Gegensatz zu vnd, ISO-Images zu mounten die
 nicht lokal vorliegen. Die Nutzung von svnd ist entsprechend derer von
 vnd. Es sei somit auf den obenliegenden NetBSD-Abschnitt verwiesen.</p>
-</section>
-<section id="verweise">
+</div>
+<div class="section" id="verweise">
 <h2><span class="section-number">1.67.6. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="/howto/ISO-ImagesvonoptischenMedienerzeugen">ISO-Images von optischen Medien erzeugen</a></p></li>
@@ -456,41 +452,38 @@ vnd. Es sei somit auf den obenliegenden NetBSD-Abschnitt verwiesen.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="iso-images_von_optischen_medien_erzeugen.txt.html" class="btn btn-neutral float-right" title="1.68. ISO-Images von optischen Medien erzeugen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="irc-protokoll.txt.html" class="btn btn-neutral float-left" title="1.66. irc-Protokoll im Mozilla, Seamonkey und Firefox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="iso-images_von_optischen_medien_erzeugen.txt.html" class="btn btn-neutral float-right" title="1.68. ISO-Images von optischen Medien erzeugen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="irc-protokoll.txt.html" class="btn btn-neutral float-left" title="1.66. irc-Protokoll im Mozilla, Seamonkey und Firefox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

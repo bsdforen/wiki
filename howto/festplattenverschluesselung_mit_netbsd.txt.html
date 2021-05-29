@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.49. Festplattenverschlüsselung mit NetBSD &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.50. Festplattenverschlüsselung mit pefs" href="festplattenverschluesselung_mit_pefs.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -297,6 +300,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -310,8 +315,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/festplattenverschluesselung_mit_netbsd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/festplattenverschluesselung_mit_netbsd.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -319,27 +324,18 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="festplattenverschluesselung_mit_pefs.txt.html" class="btn btn-neutral float-right" title="1.50. Festplattenverschlüsselung mit pefs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html" class="btn btn-neutral float-left" title="1.48. Festplattenverschlüsselung mit Geli und USB Boot" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="festplattenverschlusselung-mit-netbsd">
+  <div class="section" id="festplattenverschlusselung-mit-netbsd">
 <h1><span class="section-number">1.49. </span>Festplattenverschlüsselung mit NetBSD<a class="headerlink" href="#festplattenverschlusselung-mit-netbsd" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
-</aside>
-<section id="uber">
+</div>
+<div class="section" id="uber">
 <h2><span class="section-number">1.49.1. </span>Über<a class="headerlink" href="#uber" title="Link zu dieser Überschrift">¶</a></h2>
 <p>NetBSD ist ein vielseitiges Betriebssystem. Es ist in weiten Teilen
 hervorragend dokumentiert, nur der Teil zur Festplattenverschlüsselung
@@ -351,10 +347,10 @@ Abhilfe schaffen.</p>
 <p>Dieser Artikel basiert auf einem Englischen HowTo von Johnny C. Lam
 (siehe Weblinks). Der Festplattenverschlüsselungsteil ist fast fertig.
 Wer will kann ihn Testen, verbessern und erweitern</p>
-</section>
-<section id="der-weg">
+</div>
+<div class="section" id="der-weg">
 <h2><span class="section-number">1.49.2. </span>Der Weg<a class="headerlink" href="#der-weg" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="anforderungen">
+<div class="section" id="anforderungen">
 <h3><span class="section-number">1.49.2.1. </span>Anforderungen<a class="headerlink" href="#anforderungen" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
 <li><p>Ein NetBSD Installationsmedium (CD, Diskette, …)</p></li>
@@ -366,20 +362,20 @@ kommt. Man sollte allerdings aufpassen, dass sich das System auch
 wirklich für verschlüsselte Partitionen eignet und nicht so schon zu
 langsam ist</p></li>
 </ul>
-</section>
-<section id="backup">
+</div>
+<div class="section" id="backup">
 <h3><span class="section-number">1.49.2.2. </span>Backup<a class="headerlink" href="#backup" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wie vor jeder Installation, sollte man darauf achten, dass es ein Backup
 aller wichtigen Daten existiert. Man sollte dieses Backup
 selbstverständlich nicht auf dem dem System haben, auf dem die
 Installation stattfinden soll.</p>
-</section>
-<section id="netbsd-installieren">
+</div>
+<div class="section" id="netbsd-installieren">
 <h3><span class="section-number">1.49.2.3. </span>NetBSD installieren<a class="headerlink" href="#netbsd-installieren" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Es ist von Vorteil, aber nicht zwingend notwendig, mit der Installation
 vertraut zu sein. Die Installation verläuft mit ein paar Ausnahmen, wie
 immer.</p>
-<section id="der-unveranderte-teil">
+<div class="section" id="der-unveranderte-teil">
 <h4><span class="section-number">1.49.2.3.1. </span>Der unveränderte Teil<a class="headerlink" href="#der-unveranderte-teil" title="Link zu dieser Überschrift">¶</a></h4>
 <p>NetBSD wird, wie gewohnt gebootet und fragt zuerst nach der gewünschten
 Sprache und dem Keyboardlayout. Da NetBSD installiert werden soll, wird
@@ -390,8 +386,8 @@ Festplatte gefragt auf welche NetBSD installiert werden soll. Nach der
 Auswahl schlägt der Installer einige Möglichkeiten der Installation vor.
 Für NetBSD-Neulinge empfiehlt sich hier die komplette Installation. Alle
 Anderen sollten selbst wissen, welchen Punkt sie wählen.</p>
-</section>
-<section id="was-beachtet-werden-muss">
+</div>
+<div class="section" id="was-beachtet-werden-muss">
 <h4><span class="section-number">1.49.2.3.2. </span>Was beachtet werden muss<a class="headerlink" href="#was-beachtet-werden-muss" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Der nächste Schritt betrifft die Partitionierung, diese soll verändert
 werden. Drei Partitionen werden angelegt.</p>
@@ -410,12 +406,12 @@ für die erstellen Partitionen gewählt. Die Einzige Partition, die eine
 Anpassung benötigt ist /crypt. Dazu wählen wir sie aus und ändern den
 Dateisystemtyp auf ccd, welcher unter „andere Dateisystemtypen“ zu
 finden ist.</p>
-</section>
-<section id="installation-fertig-stellen">
+</div>
+<div class="section" id="installation-fertig-stellen">
 <h4><span class="section-number">1.49.2.3.3. </span>Installation fertig stellen<a class="headerlink" href="#installation-fertig-stellen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Der Rest der Installation verläuft wie gewohnt.</p>
-</section>
-<section id="neustart-in-den-single-user-mode">
+</div>
+<div class="section" id="neustart-in-den-single-user-mode">
 <h4><span class="section-number">1.49.2.3.4. </span>Neustart in den Single User Mode<a class="headerlink" href="#neustart-in-den-single-user-mode" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Nach der Installation erfolgt der Neustart des Sytems. Da die
 Partitionen sind allerdings noch nicht verschlüsselt. Um das zu tun
@@ -906,10 +902,10 @@ exec /bin/sh $0
 <span class="c1"># reboot</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
-<section id="weblinks">
+</div>
+</div>
+</div>
+<div class="section" id="weblinks">
 <h2><span class="section-number">1.49.3. </span>Weblinks<a class="headerlink" href="#weblinks" title="Link zu dieser Überschrift">¶</a></h2>
 <p><a class="reference external" href="http://www.netbsd.org/~jlam/cgd_laptop.html">Guide, auf dem dieser Artikel basiert (leicht
 veraltet)</a></p>
@@ -925,41 +921,38 @@ veraltet)</a></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="festplattenverschluesselung_mit_pefs.txt.html" class="btn btn-neutral float-right" title="1.50. Festplattenverschlüsselung mit pefs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html" class="btn btn-neutral float-left" title="1.48. Festplattenverschlüsselung mit Geli und USB Boot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="festplattenverschluesselung_mit_pefs.txt.html" class="btn btn-neutral float-right" title="1.50. Festplattenverschlüsselung mit pefs" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html" class="btn btn-neutral float-left" title="1.48. Festplattenverschlüsselung mit Geli und USB Boot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

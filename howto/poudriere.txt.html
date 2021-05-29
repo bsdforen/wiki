@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.103. Poudriere &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.104. Poudriere Guide" href="poudriere_guide.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -311,6 +314,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -324,8 +329,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/poudriere.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/poudriere.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -333,26 +338,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="poudriere_guide.txt.html" class="btn btn-neutral float-right" title="1.104. Poudriere Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="postgresql_update.txt.html" class="btn btn-neutral float-left" title="1.102. PostgreSQL Update auf einen neueren Zweig" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="poudriere">
+  <div class="section" id="poudriere">
 <h1><span class="section-number">1.103. </span>Poudriere<a class="headerlink" href="#poudriere" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Unter FreeBSD besteht die Möglichkeit, sich sein eigenen PKG Repository aus den
 Ports zu bauen. Der Vorteil besteht darin, dass man sich auf den produktiven
 Systemen nicht mit dem kompilieren der Software befassen muss, da dies
@@ -363,7 +359,7 @@ kürzer. Poudriere hat im Moment noch ein paar Schwierigkeiten, wenn es in einer
 Jail betrieben wird. Daher ist es ratsam, Poudriere auf einer physikalische
 Maschine zu installieren. Dies kann im Notfall auch eine VM in Virtualbox oder
 Co. sein. Ich habe keine Probleme diesbezüglich festgestellt.</p>
-<section id="systemvorraussetzungen">
+<div class="section" id="systemvorraussetzungen">
 <h2><span class="section-number">1.103.1. </span>Systemvorraussetzungen<a class="headerlink" href="#systemvorraussetzungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Poudriere benötigt ausser einer guten CPU mit genügend RAM folgende
 Punkte:</p>
@@ -375,8 +371,8 @@ Punkte:</p>
 <p>In der Regel buildet Poudriere „PKG“ (pkgng) Pakete. Es ist aber auch
 möglich die alte Variante zu bauen. Dies sollte man aber vermeiden, da
 in Zukunft nur noch „PKG“ unterstützt wird (FreeBSD &gt;=10.0).</p>
-</section>
-<section id="installation">
+</div>
+<div class="section" id="installation">
 <h2><span class="section-number">1.103.2. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Folgende Schritte sind für die Installation erfolderlich:
 <a class="reference external" href="https://www.google.com/search?q=ports-mgmt/poudriere&amp;btnI=lucky">ports-mgmt/poudriere</a>
@@ -391,10 +387,10 @@ in Zukunft nur noch „PKG“ unterstützt wird (FreeBSD &gt;=10.0).</p>
 <span class="o">%</span> <span class="n">cp</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">sample</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-und-anpassungen">
+</div>
+<div class="section" id="konfiguration-und-anpassungen">
 <h2><span class="section-number">1.103.3. </span>Konfiguration und Anpassungen<a class="headerlink" href="#konfiguration-und-anpassungen" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="poudriere-einstellungen">
+<div class="section" id="poudriere-einstellungen">
 <h3><span class="section-number">1.103.3.1. </span>Poudriere Einstellungen<a class="headerlink" href="#poudriere-einstellungen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In der Datei „poudriere.conf“ findet man sämtliche Einstellungen. Meist sind
 diese gut gewählt. Ein paar Einstellungen müssen aber manuell gesetzt werden.</p>
@@ -432,16 +428,16 @@ Jails und Logs werden hier erstellt und auch wieder gelöscht. Ein weiteres
 Verzeichnis welches verwendet wird ist: <strong>/usr/local/etc/poudriere.d</strong>. Hier
 sind die Einstellungen der Ports hinterlegt, genauer im Verzeichnis
 <strong>/usr/local/etc/poudriere.d/options/&lt;PORT&gt;</strong>.</p>
-</section>
-<section id="portstree">
+</div>
+<div class="section" id="portstree">
 <h3><span class="section-number">1.103.3.2. </span>Portstree<a class="headerlink" href="#portstree" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Als
 erstes checken wir uns einen aktuellen Portstree aus:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poudriere</span> <span class="n">ports</span> <span class="o">-</span><span class="n">c</span>
 </pre></div>
 </div>
-</section>
-<section id="jail-erstellen">
+</div>
+<div class="section" id="jail-erstellen">
 <h3><span class="section-number">1.103.3.3. </span>Jail erstellen<a class="headerlink" href="#jail-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Dann können wir verschiedene Versionen von FreeBSD in den Jails erstellen z.B.
 mit FreeBSD 10.0-RELEASE oder 9.2-RELEASE:</p>
@@ -450,9 +446,9 @@ mit FreeBSD 10.0-RELEASE oder 9.2-RELEASE:</p>
 </pre></div>
 </div>
 <p>Der Name (100_x64) kann frei gewählt werden, sollte aber aussagekräftig sein.</p>
-</section>
-</section>
-<section id="anpassungen-make-conf">
+</div>
+</div>
+<div class="section" id="anpassungen-make-conf">
 <h2><span class="section-number">1.103.4. </span>Anpassungen „make.conf“<a class="headerlink" href="#anpassungen-make-conf" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Für jede Jail kann entweder eine eigene „make.conf“ erstellt oder eine
 globale, welche für alle Jails gültig ist verwendet werden. Jeweils der
@@ -472,8 +468,8 @@ werden sämtliche Pakete ohne „X“ gebaut.</p>
 </div>
 <p>Der Eintrag <strong>WITH_PKGNG=yes</strong> wird nur für FreeBSD 8.X und 9.X benötig.
 Ab FreeBSD 10.0 wird dieser automatisch gesetzt.</p>
-</section>
-<section id="liste-der-pakete">
+</div>
+<div class="section" id="liste-der-pakete">
 <h2><span class="section-number">1.103.5. </span>Liste der Pakete<a class="headerlink" href="#liste-der-pakete" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Damit Poudriere auch weiss welche Pakete es bauen soll, erstellt man
 eine Datei poudriere-list und speichert diese im Ordner
@@ -487,15 +483,15 @@ beliebig gewählt werden. Der Inhalt der Datei sieht z.B. so aus:</p>
 <span class="n">sysutils</span><span class="o">/</span><span class="n">zfs</span><span class="o">-</span><span class="n">stats</span>
 </pre></div>
 </div>
-<section id="optionen-pro-port-setzen">
+<div class="section" id="optionen-pro-port-setzen">
 <h3><span class="section-number">1.103.5.1. </span>Optionen pro Port setzen<a class="headerlink" href="#optionen-pro-port-setzen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Poudriere bietet auch die Möglichkeit, spezielle Anpassungen pro Port
 einzustellen. Damit können die Ports dann individuell konfiguriert werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">poudriere</span> <span class="n">options</span> <span class="o">-</span><span class="n">c</span> <span class="n">shells</span><span class="o">/</span><span class="n">zsh</span>
 </pre></div>
 </div>
-</section>
-<section id="optionen-loschen">
+</div>
+<div class="section" id="optionen-loschen">
 <h3><span class="section-number">1.103.5.2. </span>Optionen löschen<a class="headerlink" href="#optionen-loschen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die gewählten Optionen kann man von einem Port auch wieder löschen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">poudriere</span> <span class="n">options</span> <span class="o">-</span><span class="n">r</span> <span class="n">shells</span><span class="o">/</span><span class="n">zsh</span>
@@ -503,9 +499,9 @@ einzustellen. Damit können die Ports dann individuell konfiguriert werden:</p>
 </div>
 <p>Dies sollte auch möglich sein, indem man den Ordner des Ports im Ordner
 „/usr/local/etc/poudriere.d/options“ löscht.</p>
-</section>
-</section>
-<section id="kompilieren-der-ports">
+</div>
+</div>
+<div class="section" id="kompilieren-der-ports">
 <h2><span class="section-number">1.103.6. </span>Kompilieren der Ports<a class="headerlink" href="#kompilieren-der-ports" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das kompilieren muss separat pro Jail gestartet werden. Poudriere kann Ports
 parallel bauen. Gibt man keine speziellen Optionen in der „poudriere.conf“ mit,
@@ -519,8 +515,8 @@ machen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">poudriere</span> <span class="n">bulk</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">j</span> <span class="mi">100</span><span class="n">_x64</span> <span class="n">poudriere</span> <span class="n">bulk</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">j</span> <span class="mi">92</span><span class="n">_x64</span>
 </pre></div>
 </div>
-</section>
-<section id="update-und-tagliche-aufrufe">
+</div>
+<div class="section" id="update-und-tagliche-aufrufe">
 <h2><span class="section-number">1.103.7. </span>Update und tägliche Aufrufe<a class="headerlink" href="#update-und-tagliche-aufrufe" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der Portstree sollte immer aktuell gehalten werden, damit Poudriere die Pakete
 auch aktualisieren und bauen kann:</p>
@@ -539,10 +535,10 @@ werden:</p>
 <span class="o">%</span> <span class="n">poudriere</span> <span class="n">bulk</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">poudriere</span><span class="o">-</span><span class="nb">list</span> <span class="o">-</span><span class="n">j</span> <span class="mi">92</span><span class="n">_x64</span>
 </pre></div>
 </div>
-</section>
-<section id="status-abfragen">
+</div>
+<div class="section" id="status-abfragen">
 <h2><span class="section-number">1.103.8. </span>Status abfragen<a class="headerlink" href="#status-abfragen" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="webfrontend">
+<div class="section" id="webfrontend">
 <h3><span class="section-number">1.103.8.1. </span>Webfrontend<a class="headerlink" href="#webfrontend" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Im Verzeichnis <strong>/poudriere/base/data/logs/bulk/&lt;JAIL&gt;/latest</strong> befindet sich
 ein JSON basiertes Webfrontend, welches eine schnelle Übersicht über die
@@ -558,14 +554,14 @@ auch „python“ nützlich. Dazu wechselt man in dieses Verzeichnis und startet
 </div>
 <p>Im Browser öffnet man jetzt die Adresse „&lt;HOSTNAME&gt;:8080“ und klickt auf den
 Namen „latest&#64;“. Hier sollte sich dann das WebGUI befinden.</p>
-</section>
-<section id="cli">
+</div>
+<div class="section" id="cli">
 <h3><span class="section-number">1.103.8.2. </span>CLI<a class="headerlink" href="#cli" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Auf der Konsole kann man jederzeit, solange der Buildprozess noch läuft „CTRL +
 t“ für einen Statusabfrage drücken.</p>
-</section>
-</section>
-<section id="die-fertigen-pakete">
+</div>
+</div>
+<div class="section" id="die-fertigen-pakete">
 <h2><span class="section-number">1.103.9. </span>Die fertigen Pakete<a class="headerlink" href="#die-fertigen-pakete" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Sind alle Ports gebaut so liegen die fertigen Pakete im Verzeichnis
 <strong>/poudriere/base/data/packages/&lt;JAIL&gt;/ALL</strong>. Wie man diese in das „PKG“
@@ -573,41 +569,38 @@ Repository des jeweiligen Server’s einbindet steht im Artikel</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="poudriere_guide.txt.html" class="btn btn-neutral float-right" title="1.104. Poudriere Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="postgresql_update.txt.html" class="btn btn-neutral float-left" title="1.102. PostgreSQL Update auf einen neueren Zweig" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="poudriere_guide.txt.html" class="btn btn-neutral float-right" title="1.104. Poudriere Guide" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="postgresql_update.txt.html" class="btn btn-neutral float-left" title="1.102. PostgreSQL Update auf einen neueren Zweig" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

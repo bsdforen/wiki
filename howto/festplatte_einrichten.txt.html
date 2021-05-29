@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.46. Festplatte einrichten &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.47. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)" href="festplatte_einrichten_gpt.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -302,6 +305,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -315,8 +320,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/festplatte_einrichten.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/festplatte_einrichten.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -324,26 +329,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="festplatte_einrichten_gpt.txt.html" class="btn btn-neutral float-right" title="1.47. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ezjail.txt.html" class="btn btn-neutral float-left" title="1.45. Ezjail" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="festplatte-einrichten">
+  <div class="section" id="festplatte-einrichten">
 <h1><span class="section-number">1.46. </span>Festplatte einrichten<a class="headerlink" href="#festplatte-einrichten" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Wenn eine weitere (neue) Festplatte in das System integriert werden
 soll, gibt es zwei Möglichkeiten dies zu tun. Zunächst mit
 <code class="docutils literal notranslate"><span class="pre">sysinstall</span></code>, einem Programm welches zum Basissystem gehört oder
@@ -370,14 +366,14 @@ vom System geschützt ist. Um den Schutz aufzuheben, damit die Festplatte
 eingerichtet werden kann, muss eine sysctl-Einstellung gemacht werden:</p>
 <p>sysctl kern.geom.debugflags=16</p>
 </div>
-<section id="sysinstall">
+<div class="section" id="sysinstall">
 <h2><span class="section-number">1.46.1. </span>sysinstall<a class="headerlink" href="#sysinstall" title="Link zu dieser Überschrift">¶</a></h2>
 <p>FIXME</p>
 <p>Der Slice-Editor von sysinstall (also das FreeBSD fdisk tool) kann von
 den Ports nachinstalliert werden. Man findet diesen unter dem Namen
 <code class="docutils literal notranslate"><span class="pre">sysutils/sfdisk</span></code>.</p>
-</section>
-<section id="manuelle-einrichtung">
+</div>
+<div class="section" id="manuelle-einrichtung">
 <h2><span class="section-number">1.46.2. </span>Manuelle Einrichtung<a class="headerlink" href="#manuelle-einrichtung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die in diesem Beispiel genutzte Festplatte wird beim Hochfahren des
 System als <code class="docutils literal notranslate"><span class="pre">/dev/ad3</span></code> erkannt. Auch später lässt sich mit <code class="docutils literal notranslate"><span class="pre">dmesg</span></code>
@@ -385,7 +381,7 @@ das Log vom Start des System erneut anzeigen und die angeschlossenen
 Platten ermitteln. Da die Festplatte als zusätzliches Speichermedium im
 System eingesetzt werden soll, wird hier nur eine Partition mit der
 gesamten Festplatten-Kapazität angelegt.</p>
-<section id="loschen-der-platte">
+<div class="section" id="loschen-der-platte">
 <h3><span class="section-number">1.46.2.1. </span>Löschen der Platte<a class="headerlink" href="#loschen-der-platte" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Bei einer gebrauchten Platte ist es unter Umständen sinnvoll, die
 vorhandenen Daten zunächst zu Löschen. Hierbei werden ggf. auch
@@ -395,8 +391,8 @@ kann auch übersprungen werden.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># dd if=/dev/zero of=/dev/ad3 bs=1k count=1</span>
 </pre></div>
 </div>
-</section>
-<section id="slice-in-der-partitionstabelle-erstellen">
+</div>
+<div class="section" id="slice-in-der-partitionstabelle-erstellen">
 <h3><span class="section-number">1.46.2.2. </span>Slice in der Partitionstabelle erstellen<a class="headerlink" href="#slice-in-der-partitionstabelle-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Slice nimmt den gesamten Platz auf der Festplatte ein.</p>
 <table class="docutils align-default">
@@ -415,8 +411,8 @@ kann auch übersprungen werden.</p>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="bsd-partitionstabelle-erstellen">
+</div>
+<div class="section" id="bsd-partitionstabelle-erstellen">
 <h3><span class="section-number">1.46.2.3. </span>BSD-Partitionstabelle erstellen<a class="headerlink" href="#bsd-partitionstabelle-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -435,8 +431,8 @@ kann auch übersprungen werden.</p>
 </tbody>
 </table>
 <p>Die Partition <code class="docutils literal notranslate"><span class="pre">a</span></code> nimmt jetzt den gesamten Platz auf dem Slice ein.</p>
-</section>
-<section id="bsd-partitionstabelle-anpassen-optional">
+</div>
+<div class="section" id="bsd-partitionstabelle-anpassen-optional">
 <h3><span class="section-number">1.46.2.4. </span>BSD-Partitionstabelle anpassen (optional)<a class="headerlink" href="#bsd-partitionstabelle-anpassen-optional" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ggf. kann die Festplatte in mehrere BSD-Partitionen unterteilt werden.
 Eine Standardfall hierfür ist z.B. das Einrichten einer
@@ -472,30 +468,30 @@ folgt noch mal geprüft werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># bsdlabel ad3s1</span>
 </pre></div>
 </div>
-</section>
-<section id="dateisystem-erstellen">
+</div>
+<div class="section" id="dateisystem-erstellen">
 <h3><span class="section-number">1.46.2.5. </span>Dateisystem erstellen<a class="headerlink" href="#dateisystem-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># newfs /dev/ad3s1a</span>
 </pre></div>
 </div>
-</section>
-<section id="softupdates-ggf-einschalten">
+</div>
+<div class="section" id="softupdates-ggf-einschalten">
 <h3><span class="section-number">1.46.2.6. </span>Softupdates ggf. einschalten<a class="headerlink" href="#softupdates-ggf-einschalten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Mit den Softupdates kann die Performance beim Schreiben auf die
 Festplatte erhöht werden. Mehr Informationen findet man im Handbuch.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># tunefs -n enable /dev/ad3s1a</span>
 </pre></div>
 </div>
-</section>
-<section id="temporar-nach-mnt-mounten">
+</div>
+<div class="section" id="temporar-nach-mnt-mounten">
 <h3><span class="section-number">1.46.2.7. </span>temporär nach /mnt mounten<a class="headerlink" href="#temporar-nach-mnt-mounten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nachdem nun die Platte partitioniert und eingerichtet wurde, kann sie in
 das Dateisystem gemountet werden. In diesem Beispiel nach <strong>/mnt</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mount /dev/ad3s1a /mnt</span>
 </pre></div>
 </div>
-</section>
-<section id="etc-fstab">
+</div>
+<div class="section" id="etc-fstab">
 <h3><span class="section-number">1.46.2.8. </span>/etc/fstab<a class="headerlink" href="#etc-fstab" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Sollen die Partitionen der neuen Festplatte bei jedem Neustart
 automatisch gemountet werden, wird ein neuer Eintrag in der
@@ -503,9 +499,9 @@ automatisch gemountet werden, wird ein neuer Eintrag in der
 Partition in einem Slice über die gesamte Platte, die nicht bootbar ist.
 Wenn eine bootbare Partition benötigt wird, so findet sich im
 FreeBSD-Handbuch ein Beispiel dazu.</p>
-</section>
-</section>
-<section id="siehe-auch">
+</div>
+</div>
+<div class="section" id="siehe-auch">
 <h2><span class="section-number">1.46.3. </span>Siehe auch<a class="headerlink" href="#siehe-auch" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/install-steps.html">FreeBSD-Handbuch</a></p></li>
@@ -515,41 +511,38 @@ FreeBSD-Handbuch ein Beispiel dazu.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="festplatte_einrichten_gpt.txt.html" class="btn btn-neutral float-right" title="1.47. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ezjail.txt.html" class="btn btn-neutral float-left" title="1.45. Ezjail" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="festplatte_einrichten_gpt.txt.html" class="btn btn-neutral float-right" title="1.47. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ezjail.txt.html" class="btn btn-neutral float-left" title="1.45. Ezjail" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

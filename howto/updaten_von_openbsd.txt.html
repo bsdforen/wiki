@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.132. Updaten von OpenBSD &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.133. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -304,6 +307,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -317,8 +322,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/updaten_von_openbsd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/updaten_von_openbsd.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -326,27 +331,18 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html" class="btn btn-neutral float-right" title="1.133. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="unix-freigabe.txt.html" class="btn btn-neutral float-left" title="1.131. Unix-Freigabe" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="updaten-von-openbsd">
+  <div class="section" id="updaten-von-openbsd">
 <h1><span class="section-number">1.132. </span>Updaten von OpenBSD<a class="headerlink" href="#updaten-von-openbsd" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
-</aside>
-<section id="empfohlene-methode-syspatch-und-pkg-add">
+</div>
+<div class="section" id="empfohlene-methode-syspatch-und-pkg-add">
 <h2><span class="section-number">1.132.1. </span>Empfohlene Methode - syspatch und pkg_add<a class="headerlink" href="#empfohlene-methode-syspatch-und-pkg-add" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Seit OpenBSD 6.1 ist der gesamte Updateprozess sehr einfach gestaltet.</p>
 <div class="admonition note">
@@ -360,8 +356,8 @@ aktualisieren und dann mit <a class="reference external" href="https://man.openb
 alle Binärpakete aktualisieren - Fertig.</p>
 <p>Der folgende Abschnitt wird nicht empfohlen und es gibt nur in extrem seltenen
 Ausnahmesituationen einen Grund ihn zu verwenden.</p>
-</section>
-<section id="update-nach-der-alten-methode-sollte-heutzutage-fast-nie-mehr-verwendet-werden">
+</div>
+<div class="section" id="update-nach-der-alten-methode-sollte-heutzutage-fast-nie-mehr-verwendet-werden">
 <h2><span class="section-number">1.132.2. </span>Update nach der alten Methode - sollte heutzutage fast nie mehr verwendet werden<a class="headerlink" href="#update-nach-der-alten-methode-sollte-heutzutage-fast-nie-mehr-verwendet-werden" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
@@ -393,8 +389,8 @@ Software, wie oben beschrieben, gut ueberlegt sein, da die
 OpenBSD-Entwickler aufgrund des hohen Aufwandes nicht in der Lage sind,
 alle zusätzlich zum Standardsystem installierten Programme auf ihre
 Sicherheit hin zu prüfen.</p>
-</section>
-<section id="uberwachen-des-standardsystems">
+</div>
+<div class="section" id="uberwachen-des-standardsystems">
 <h2><span class="section-number">1.132.3. </span>Überwachen des Standardsystems<a class="headerlink" href="#uberwachen-des-standardsystems" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Es empfiehlt sich, die Mailingliste
 <a class="reference external" href="http://lists.openbsd.org/cgi-bin/mj_wwwusr?user=&amp;passw=&amp;func=lists-long-full&amp;extra=security-announce">security-announce</a>
@@ -403,8 +399,8 @@ verwendeten OpenBSD-Version</a>
 zu werfen.</p>
 <p>Man kann auch von <a class="reference external" href="http://www.undeadly.org">Undeadly</a> einen <a class="reference external" href="http://undeadly.org/cgi?action=errata">RSS
 Feed</a> abonnieren.</p>
-</section>
-<section id="uberwachen-der-packages-ports">
+</div>
+<div class="section" id="uberwachen-der-packages-ports">
 <h2><span class="section-number">1.132.4. </span>Überwachen der Packages/Ports<a class="headerlink" href="#uberwachen-der-packages-ports" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In der Mailingliste
 <a class="reference external" href="http://lists.openbsd.org/cgi-bin/mj_wwwusr?user=&amp;passw=&amp;func=lists-long-full&amp;extra=ports-security">ports-security</a>
@@ -417,8 +413,8 @@ Packages</a> ueberprüfen.</p>
 <p>Wenn man auf seinem System Ports verwendet, kann man auch ein Update des
 Ports-Tree durchführen und danach überprüfen, ob Ports aktualisiert
 wurden.</p>
-</section>
-<section id="updaten-des-standardsystems">
+</div>
+<div class="section" id="updaten-des-standardsystems">
 <h2><span class="section-number">1.132.5. </span>Updaten des Standardsystems<a class="headerlink" href="#updaten-des-standardsystems" title="Link zu dieser Überschrift">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Variante: Gehe auf die Seite mit den <a class="reference external" href="http://www.openbsd.org/de/errata.html">Patches der verwendeten
@@ -430,13 +426,13 @@ Vorher solltest du die Datei <code class="docutils literal notranslate"><span cl
 <li><p>Variante: Du aktualisierst den Source-Tree und übersetzt sowohl den
 Kernel als auch das System neu.</p></li>
 </ol>
-<section id="aktualisieren-des-source-tree">
+<div class="section" id="aktualisieren-des-source-tree">
 <h3><span class="section-number">1.132.5.1. </span>Aktualisieren des Source-Tree<a class="headerlink" href="#aktualisieren-des-source-tree" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die von mir bevorzugte Methode, die neuesten Systemquellen
 herunterzuladen, ist die Verwendung von cvsup. Diese Applikation ist auf
 OpenBSD in der Standardversion nicht vorhanden. Es muss installiert
 werden.</p>
-<section id="installieren-von-cvsup">
+<div class="section" id="installieren-von-cvsup">
 <h4><span class="section-number">1.132.5.1.1. </span>Installieren von cvsup<a class="headerlink" href="#installieren-von-cvsup" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Zuerst ermittele ich die aktuelle Version des Paketes, indem ich mich
 anonym auf <code class="docutils literal notranslate"><span class="pre">ftp.openbsd.org</span></code> anmelde und dort im Verzeichnis
@@ -446,8 +442,8 @@ meiner Maschine mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg_add -v ftp://ftp.openbsd.org/pub/OpenBSD/&lt;RELEASE NUMMER&gt;/packages/i386/cvsup-xxxx-no_x11.tgz</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-von-cvsup">
+</div>
+<div class="section" id="konfiguration-von-cvsup">
 <h4><span class="section-number">1.132.5.1.2. </span>Konfiguration von cvsup<a class="headerlink" href="#konfiguration-von-cvsup" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Nach der Installation von cvsup kann ich dessen Verwendung vorbereiten:
 Ich erzeuge mir eine cvsup-Steuerdatei.</p>
@@ -467,16 +463,16 @@ Ich erzeuge mir eine cvsup-Steuerdatei.</p>
 </div>
 <p>Das Tag <strong>OPENBSD_3_8</strong> legt fest, dass ich die Quellen <strong>inklusive</strong>
 der neuesten Patches, den sogenannten <em>patch branch</em>, laden will.</p>
-</section>
-<section id="starten-von-cvsup">
+</div>
+<div class="section" id="starten-von-cvsup">
 <h4><span class="section-number">1.132.5.1.3. </span>Starten von cvsup<a class="headerlink" href="#starten-von-cvsup" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Danach starte ich das Update:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cvsup -g -L 2 cvsup-src-file</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="neubau-des-kernels">
+</div>
+</div>
+<div class="section" id="neubau-des-kernels">
 <h3><span class="section-number">1.132.5.2. </span>Neubau des Kernels<a class="headerlink" href="#neubau-des-kernels" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Sichere den aktuellen Kernel:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cp /bsd /bsd.old</span>
@@ -505,8 +501,8 @@ gesicherte Kernelversion am Bootprompt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boot</span><span class="o">&gt;</span> <span class="n">bsd</span><span class="o">.</span><span class="n">old</span>
 </pre></div>
 </div>
-</section>
-<section id="neubau-des-systems">
+</div>
+<div class="section" id="neubau-des-systems">
 <h3><span class="section-number">1.132.5.3. </span>Neubau des Systems<a class="headerlink" href="#neubau-des-systems" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/src</span>
 <span class="c1"># find . -type l -name obj | xargs rm</span>
@@ -519,11 +515,11 @@ gesicherte Kernelversion am Bootprompt:</p>
 <span class="c1"># make build</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="updaten-der-packages-ports">
+</div>
+</div>
+<div class="section" id="updaten-der-packages-ports">
 <h2><span class="section-number">1.132.6. </span>Updaten der Packages/Ports<a class="headerlink" href="#updaten-der-packages-ports" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="packages">
+<div class="section" id="packages">
 <h3><span class="section-number">1.132.6.1. </span>Packages<a class="headerlink" href="#packages" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ein</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># export PKG_PATH=&quot;ftp://ftp.de.openbsd.org/pub/OpenBSD/$(uname -r)/packages/$(uname -m)&quot;</span>
@@ -531,18 +527,18 @@ gesicherte Kernelversion am Bootprompt:</p>
 </pre></div>
 </div>
 <p>sollte eigentlich alle Pakete auf den neuesten Stand bringen.</p>
-</section>
-<section id="aktualisieren-des-ports-tree">
+</div>
+<div class="section" id="aktualisieren-des-ports-tree">
 <h3><span class="section-number">1.132.6.2. </span>Aktualisieren des Ports-Tree<a class="headerlink" href="#aktualisieren-des-ports-tree" title="Link zu dieser Überschrift">¶</a></h3>
-<section id="per-cvs">
+<div class="section" id="per-cvs">
 <h4><span class="section-number">1.132.6.2.1. </span>per cvs<a class="headerlink" href="#per-cvs" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Nachdem man die CVSROOT auf den neuen Release umgestellt hat:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports</span>
 <span class="c1"># cvs -d$CVSROOT -q up -P</span>
 </pre></div>
 </div>
-</section>
-<section id="rm-tar">
+</div>
+<div class="section" id="rm-tar">
 <h4><span class="section-number">1.132.6.2.2. </span>rm &amp; tar<a class="headerlink" href="#rm-tar" title="Link zu dieser Überschrift">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># rm -rf /usr/ports</span>
 <span class="c1"># wget ftp://ftp.leo.org/pub/OpenBSD/&lt;RELEASE NUMMER&gt;/ports.tar.gz</span>
@@ -552,8 +548,8 @@ gesicherte Kernelversion am Bootprompt:</p>
 <span class="c1"># rm ports.tar.gz</span>
 </pre></div>
 </div>
-</section>
-<section id="prufen-auf-aktualisierte-ports">
+</div>
+<div class="section" id="prufen-auf-aktualisierte-ports">
 <h4><span class="section-number">1.132.6.2.3. </span>Prüfen auf aktualisierte Ports<a class="headerlink" href="#prufen-auf-aktualisierte-ports" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Ein</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/ports/infrastructure/build/out-of-date</span>
@@ -569,43 +565,40 @@ gesicherte Kernelversion am Bootprompt:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html" class="btn btn-neutral float-right" title="1.133. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="unix-freigabe.txt.html" class="btn btn-neutral float-left" title="1.131. Unix-Freigabe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html" class="btn btn-neutral float-right" title="1.133. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="unix-freigabe.txt.html" class="btn btn-neutral float-left" title="1.131. Unix-Freigabe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

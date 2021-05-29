@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.142. Wine &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.143. Xfce4 mit gdm" href="xfce4_mit_gdm.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -296,6 +299,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -309,8 +314,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/wine.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/wine.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -318,31 +323,22 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="xfce4_mit_gdm.txt.html" class="btn btn-neutral float-right" title="1.143. Xfce4 mit gdm" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="windows-freigabe.txt.html" class="btn btn-neutral float-left" title="1.141. Windows-Freigabe" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="wine">
+  <div class="section" id="wine">
 <h1><span class="section-number">1.142. </span>Wine<a class="headerlink" href="#wine" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Dieser Artikel soll einen Einblick geben, wie Programme die unter <a class="reference external" href="http://www.winehq.org">Wine</a> funktionieren, möglichst komfortabel eingerichtet
 werden. Die Installation von Wine wird nicht erklärt. Ein beliebiges
 Wine-Programm (z.B. <strong>winecfg</strong>) sollte bereits einmal gestartet worden sein,
 damit das Verzeichnis <strong>~/.wine</strong> angelegt ist.</p>
-<section id="laufwerke-anlegen">
+<div class="section" id="laufwerke-anlegen">
 <h2><span class="section-number">1.142.1. </span>Laufwerke anlegen<a class="headerlink" href="#laufwerke-anlegen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Vorkonfiguriert sind bei Wine die Laufwerke <strong>c:</strong> das auf
 <strong>~/.wine/drive_c</strong> und <strong>z:</strong> das auf <strong>/</strong> zeigt. Eigene Laufwerke
@@ -351,8 +347,8 @@ geht es aber von der Konsole aus.</p>
 <p>Um Wine zum Beispiel das CD-Rom Laufwerk zugängig zu machen, wird
 folgendermaßen vorgegangen: &lt;xterm&gt; # cd ~/.wine/dosdevices # ln -s
 /cdrom ‚d:‘ &lt;/xterm&gt;</p>
-</section>
-<section id="einzelne-programme-konfigurieren">
+</div>
+<div class="section" id="einzelne-programme-konfigurieren">
 <h2><span class="section-number">1.142.2. </span>Einzelne Programme konfigurieren<a class="headerlink" href="#einzelne-programme-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die meisten Programme benötigen eine individuelle Konfiguration, wenn
 sie ordentlich funktionieren sollen. Besonders bei den
@@ -370,8 +366,8 @@ jedoch <strong>Apply</strong> und <strong>OK</strong> anwählen. Bis die richtig
 gefunden sind, musste normalerweise einige Male &lt;xterm&gt; # killall wine
 &lt;/xterm&gt; eingetippt werden. Dann sollte möglichst nur das zu testende
 Programm laufen. &lt;xterm&gt; # wine program.exe &lt;/xterm&gt;</p>
-</section>
-<section id="wine-kthread">
+</div>
+<div class="section" id="wine-kthread">
 <h2><span class="section-number">1.142.3. </span>wine-kthread<a class="headerlink" href="#wine-kthread" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Viele Programme laufen nur mit dem alten <strong>kthread</strong>ing, dass
 inzwischen von <strong>pthread</strong>ing abgelöst wurde besser. Um das alte
@@ -383,8 +379,8 @@ einen Patch.</p>
 &lt;/xterm&gt;</p>
 <p>Nach einem Neubau und erneuter Installation von Wine steht die
 <code class="docutils literal notranslate"><span class="pre">wine-kthread</span></code> Binary zur Verfügung.</p>
-</section>
-<section id="tipps">
+</div>
+<div class="section" id="tipps">
 <h2><span class="section-number">1.142.4. </span>Tipps<a class="headerlink" href="#tipps" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>In <strong>~/bin</strong> können Skripte angelegt werden, die das Mounten von
@@ -397,8 +393,8 @@ desktop</strong> in ein Fenster gesperrt werden. Leider unterstützt wine
 seit einigen Versionen nicht mehr, diese Einstellung seperat ist für
 jedes Programm vorzunehmen.</p></li>
 </ul>
-</section>
-<section id="programme-die-images-benotigen">
+</div>
+<div class="section" id="programme-die-images-benotigen">
 <h2><span class="section-number">1.142.5. </span>Programme, die Images benötigen<a class="headerlink" href="#programme-die-images-benotigen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn mehrere Programme vorhanden sind, die zum Ausführen <a class="reference external" href="/howto/ISO-Imagesmounten">Images
 mounten</a> müssen, (z.B.
@@ -589,16 +585,16 @@ for action in $exec_default $exec_actions; {
 exit 1
 </pre></div>
 </div>
-</section>
-<section id="alternativen">
+</div>
+<div class="section" id="alternativen">
 <h2><span class="section-number">1.142.6. </span>Alternativen<a class="headerlink" href="#alternativen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Leider funktioniert bei weitem nicht alles mit Wine. Zumindest dort, wo
 Performance nicht ganz so wichtig ist, ist die Verwendung virtueller
 Maschinen eine Erwägung wert. Die populärsten Vertreter dieser Kategorie
 sind wohl <a class="reference external" href="/anwendungen/VMWare">VMWare</a> (Closed Source) und
 <a class="reference external" href="/anwendungen/qemu">qemu</a>.</p>
-</section>
-<section id="verweise">
+</div>
+<div class="section" id="verweise">
 <h2><span class="section-number">1.142.7. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://wiki.freebsd.org/Wine">http://wiki.freebsd.org/Wine</a> - Porting Wine to FreeBSD</p></li>
@@ -614,41 +610,38 @@ in Pkgsrc.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="xfce4_mit_gdm.txt.html" class="btn btn-neutral float-right" title="1.143. Xfce4 mit gdm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="windows-freigabe.txt.html" class="btn btn-neutral float-left" title="1.141. Windows-Freigabe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="xfce4_mit_gdm.txt.html" class="btn btn-neutral float-right" title="1.143. Xfce4 mit gdm" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="windows-freigabe.txt.html" class="btn btn-neutral float-left" title="1.141. Windows-Freigabe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

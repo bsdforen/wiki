@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.82. make world &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.83. Mehrmonitor-Betrieb" href="mehrmonitor-betrieb.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -321,6 +324,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -334,8 +339,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/make_world.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/make_world.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -343,26 +348,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="mehrmonitor-betrieb.txt.html" class="btn btn-neutral float-right" title="1.83. Mehrmonitor-Betrieb" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="make.conf_optimieren.txt.html" class="btn btn-neutral float-left" title="1.81. make.conf optimieren" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="make-world">
+  <div class="section" id="make-world">
 <h1><span class="section-number">1.82. </span>make world<a class="headerlink" href="#make-world" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Diese Anleitung soll erläutern, wie man das Betriebssystem aktualisiert. Dies
 wird im <a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/cutting-edge.html">FreeBSD-Handbuch</a>
 und in der Datei <strong>/usr/src/UPDATING</strong> genau beschrieben.</p>
@@ -376,7 +372,7 @@ vorzuziehen</a>!</p>
 <p>Für alle hier notwendigen Aktionen wird die root-Permission
 vorausgesetzt!</p>
 </div>
-<section id="vorbereitungen">
+<div class="section" id="vorbereitungen">
 <h2><span class="section-number">1.82.1. </span>Vorbereitungen<a class="headerlink" href="#vorbereitungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Den Betriebssystem-Quellcode aktualisiert man mit <code class="docutils literal notranslate"><span class="pre">csup</span></code>, welches ab
 FreeBSD 6.2 im Basissystem integriert ist. Wird ein älteres
@@ -422,34 +418,34 @@ FreeBSD 6.1:</p>
 </pre></div>
 </div>
 <p>aktualisiert.</p>
-</section>
-<section id="hinweise-zur-betriebssystem-versionswahl">
+</div>
+<div class="section" id="hinweise-zur-betriebssystem-versionswahl">
 <h2><span class="section-number">1.82.2. </span>Hinweise zur Betriebssystem-Versionswahl<a class="headerlink" href="#hinweise-zur-betriebssystem-versionswahl" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Bei allgemeinen Verständnisfragen zu den verschiedenen FreeBSD-Versionen
 siehe bitte: <a class="reference external" href="FreeBSD-FAQ">FreeBSD - FAQ</a></p>
-<section id="entwicklungsversionen">
+<div class="section" id="entwicklungsversionen">
 <h3><span class="section-number">1.82.2.1. </span>Entwicklungsversionen<a class="headerlink" href="#entwicklungsversionen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Verwendung von Nicht-Release-Betriebssystemversionen (STABLE,
 CURRENT) wird nicht empfohlen! Für STABLE und CURRENT siehe bitte:
 <a class="reference external" href="http://www.freebsd.ch/doc/de_DE.ISO8859-1/books/handbook/current-stable.htmlFreeBSDHandbuch:CURRENT/STABLE">http://www.freebsd.ch/doc/de_DE.ISO8859-1/books/handbook/current-stable.html FreeBSD Handbuch: CURRENT / STABLE</a></p>
-</section>
-<section id="versionsubersicht">
+</div>
+<div class="section" id="versionsubersicht">
 <h3><span class="section-number">1.82.2.2. </span>Versionsübersicht<a class="headerlink" href="#versionsubersicht" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Eine Übersicht über alle möglichen, verwendbaren Betriebssystemversionen
 findet man unter: <a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/cvs-tags.html">FreeBSD Handbuch: CVS
 Tags</a></p>
-</section>
-<section id="release-tags">
+</div>
+<div class="section" id="release-tags">
 <h3><span class="section-number">1.82.2.3. </span>Release-Tags<a class="headerlink" href="#release-tags" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Verwenden Sie keine Release-Tags. Der Tag „RELENG_6_0_RELEASE“ enthält
 im Gegensatz zu „RELENG_6_0“ keine
 Betriebssystemsicherheitslücken-„Flicken“ (engl. Patches).</p>
-</section>
-</section>
-<section id="betriebssystem-aktualisieren">
+</div>
+</div>
+<div class="section" id="betriebssystem-aktualisieren">
 <h2><span class="section-number">1.82.3. </span>Betriebssystem aktualisieren<a class="headerlink" href="#betriebssystem-aktualisieren" title="Link zu dieser Überschrift">¶</a></h2>
-</section>
-<section id="einleitung">
+</div>
+<div class="section" id="einleitung">
 <h2><span class="section-number">1.82.4. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die Anleitung orientiert sich an den Angaben in der Datei
 &lt;tt&gt;/usr/src/UPDATING&lt;/tt&gt; für einen „kleinen“ Betriebssystemwechsel,
@@ -457,15 +453,15 @@ zum Beispiel FreeBSD 6.0 -&gt; 6.1. Für grosse Betriebssystemwechsel, also
 FreeBSD 5.xy auf FreeBSD 6.xy, sind von dieser Anleitung abweichende
 Schritte notwendig. Unbedingt in &lt;tt&gt;/usr/src/UPDATING&lt;/tt&gt;
 nachschlagen!</p>
-<section id="backup">
+<div class="section" id="backup">
 <h3><span class="section-number">1.82.4.1. </span>Backup<a class="headerlink" href="#backup" title="Link zu dieser Überschrift">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">'make</span> <span class="pre">sure</span> <span class="pre">you</span> <span class="pre">have</span> <span class="pre">good</span> <span class="pre">level</span> <span class="pre">0</span> <span class="pre">dumps</span></code>‘</p>
 <p>Als erstes ist erstmal ein Backup angesagt, denn bei der
 Betriebssystem-Aktualisierung kann man die FreeBSD-Installation wirklich
 zerstören! Eine gute Backup-Anleitung findet man unter:
 <a class="reference external" href="Backup">Backup</a></p>
-</section>
-<section id="usr-obj-entfernen">
+</div>
+<div class="section" id="usr-obj-entfernen">
 <h3><span class="section-number">1.82.4.2. </span>/usr/obj entfernen<a class="headerlink" href="#usr-obj-entfernen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Das Entfernen von /usr/obj beschleunigt den <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">buildworld</span></code> Prozess
 und erspart einem Ärger mit Abhängigkeiten:</p>
@@ -473,8 +469,8 @@ und erspart einem Ärger mit Abhängigkeiten:</p>
 <span class="c1"># chflags -R noschg \* # rm -rf \*</span>
 </pre></div>
 </div>
-</section>
-<section id="make-buildworld">
+</div>
+<div class="section" id="make-buildworld">
 <h3><span class="section-number">1.82.4.3. </span>make buildworld<a class="headerlink" href="#make-buildworld" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Man starte die Betriebssystem-Kompilierung mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/src</span>
@@ -483,8 +479,8 @@ und erspart einem Ärger mit Abhängigkeiten:</p>
 </div>
 <p>Die Betriebssystem-Kompilierung dauert etwa zwischen 30 und 60 Minuten,
 je nach Leistingsfähigkeit des PCs!</p>
-</section>
-<section id="make-kernel">
+</div>
+<div class="section" id="make-kernel">
 <h3><span class="section-number">1.82.4.4. </span>make kernel<a class="headerlink" href="#make-kernel" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Als nächstes muss der Kernel neugebaut werden. Dies dauert etwa 15
 Minuten. GENERIC-Kernelbenutzer geben folgendes ein:</p>
@@ -495,8 +491,8 @@ Minuten. GENERIC-Kernelbenutzer geben folgendes ein:</p>
 </div>
 <p>Benutzer eines angepassten Kernels gehen bitte nach der Anleitung unter
 <a class="reference external" href="Kernelerstellen(FreeBSD)">Kernel erstellen (FreeBSD)</a> vor.</p>
-</section>
-<section id="single-usermode-starten">
+</div>
+<div class="section" id="single-usermode-starten">
 <h3><span class="section-number">1.82.4.5. </span>Single-Usermode starten<a class="headerlink" href="#single-usermode-starten" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
@@ -537,16 +533,16 @@ ist.</p>
 </div>
 <p>Jetzt ist man nur noch etwa 20 Minuten vom Starten des neuen
 Betriebssystems entfernt!</p>
-</section>
-<section id="betriebssystem-installationsvorbereitungen">
+</div>
+<div class="section" id="betriebssystem-installationsvorbereitungen">
 <h3><span class="section-number">1.82.4.6. </span>Betriebssystem-Installationsvorbereitungen<a class="headerlink" href="#betriebssystem-installationsvorbereitungen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Vor der Betriebssysteminstallation müssen noch einige Vorbereitungen
 getroffen werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/sbin/mergemaster -p</span>
 </pre></div>
 </div>
-</section>
-<section id="make-installworld">
+</div>
+<div class="section" id="make-installworld">
 <h3><span class="section-number">1.82.4.7. </span>make installworld<a class="headerlink" href="#make-installworld" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Jetzt kann es losgehen mit der Installation der neuen
 Betriebssystemdateien:</p>
@@ -554,9 +550,9 @@ Betriebssystemdateien:</p>
 <span class="c1"># make installworld</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="mergemaster">
+</div>
+</div>
+<div class="section" id="mergemaster">
 <h2><span class="section-number">1.82.5. </span>mergemaster<a class="headerlink" href="#mergemaster" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /usr/sbin/mergemaster -i</span>
 </pre></div>
@@ -571,8 +567,8 @@ Vorgaben. Und fragt bei Änderungen , ob es die alte Konfigurationsdatei
 durch die neue Vorgabe austauschen soll. Dadurch können bei falscher
 Wahl Einstellungen verloren gehen!</p>
 </div>
-</section>
-<section id="betriebssystem-aktualisierung-abschliessen">
+</div>
+<div class="section" id="betriebssystem-aktualisierung-abschliessen">
 <h2><span class="section-number">1.82.6. </span>Betriebssystem-Aktualisierung abschliessen<a class="headerlink" href="#betriebssystem-aktualisierung-abschliessen" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># /sbin/reboot</span>
 </pre></div>
@@ -587,13 +583,13 @@ starten und folgende Kontroll-/Aufräumarbeiten durchzuführen:</p>
 <span class="c1"># make clean</span>
 </pre></div>
 </div>
-<section id="abschluss">
+<div class="section" id="abschluss">
 <h3><span class="section-number">1.82.6.1. </span>Abschluss<a class="headerlink" href="#abschluss" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nachdem man auch dies geschafft hat, kann man die neue
 Betriebssystemversion nach dem Drücken von: &lt;Ctrl-D&gt; geniessen!</p>
-</section>
-</section>
-<section id="betriebssystem-sicherheitslucken">
+</div>
+</div>
+<div class="section" id="betriebssystem-sicherheitslucken">
 <h2><span class="section-number">1.82.7. </span>Betriebssystem-Sicherheitslücken<a class="headerlink" href="#betriebssystem-sicherheitslucken" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Betriebssystem-Sicherheitslücken sollten Sie so rasch wie möglich
 schliessen. Den Stand der installierte Sicherheitslücken-„Flicker“
@@ -612,7 +608,7 @@ Betriebssystem-Sicherheitslücken finden Sie unter:</p>
 <li><p><a class="reference external" href="http://www.freebsd.org/security/">http://www.freebsd.org/security/</a></p></li>
 <li><p><a class="reference external" href="http://www.de.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/security-advisories.html">http://www.de.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/security-advisories.html</a></p></li>
 </ul>
-<section id="freebsd-update">
+<div class="section" id="freebsd-update">
 <h3><span class="section-number">1.82.7.1. </span>freebsd-update<a class="headerlink" href="#freebsd-update" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Das im Port security/freebsd-update enthaltene Programm freebsd-update
 ermöglicht eine halbautomatische Einspielen von
@@ -630,14 +626,14 @@ freebsd-update sehen Sie bitte:</p>
 <p><code class="docutils literal notranslate"><span class="pre">freebsd-update</span></code> kann nur mit dem originalen GENERIC- oder SMP-Kernel
 verwendet werden!</p>
 </div>
-</section>
-<section id="installation">
+</div>
+<div class="section" id="installation">
 <h3><span class="section-number">1.82.7.2. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h3>
 <p>FreeBSD-update wird mit: <strong>pkg_add -r freebsd-update</strong> installiert. Ab
 FreeBSD 6.2 ist freebsd-update Teil des Betriebssystems und muss nicht
 mehr zusätzlich installiert werden!</p>
-</section>
-<section id="anwendung">
+</div>
+<div class="section" id="anwendung">
 <h3><span class="section-number">1.82.7.3. </span>Anwendung<a class="headerlink" href="#anwendung" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nun sollen die Betriebssystemlöcher gesucht und gestopft werden (falls
 möglich):</p>
@@ -657,8 +653,8 @@ ist und nur der GENERIC-Kernel verwendet wird!</p>
 <p>Benutzer von Multiprozessoren-Systemen können auch von freebsd-update
 profitieren: <a class="reference external" href="http://lists.freebsd.org/pipermail/freebsd-security/2005-June/002975.html">FreeBSD-Security:
 2005-June/002975</a></p>
-</section>
-<section id="problemfalle">
+</div>
+<div class="section" id="problemfalle">
 <h3><span class="section-number">1.82.7.4. </span>Problemfälle<a class="headerlink" href="#problemfalle" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Es kann vorkommen, dass sich freebsd-update weigert, ein
 Sicherheitsupdate einzuspielen. Es weichen einige lokale Dateien von den
@@ -672,9 +668,9 @@ Sicherheitsloch betroffenen Dateien ohne Vorbehalt überschrieben:</p>
 <p>Für mehr Informationen zur Option „–branch crypto“ siehe bitte:
 <code class="docutils literal notranslate"><span class="pre">freebsd-update</span></code> und <a class="reference external" href="http://lists.freebsd.org/pipermail/freebsd-questions/2005-June/091380.html">FreeBSD-Questions:
 2005-June/091380</a></p>
-</section>
-</section>
-<section id="make-world-1">
+</div>
+</div>
+<div class="section" id="make-world-1">
 <span id="id1"></span><h2><span class="section-number">1.82.8. </span>Make World<a class="headerlink" href="#make-world-1" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Sie können freebsd-update aus einem der obengenannten Gründen nicht
 einsetzen, was nun? Ihnen bleibt nicht anderes übrig, als mit <code class="docutils literal notranslate"><span class="pre">csup</span></code>
@@ -706,8 +702,8 @@ beschrieben!</p>
 67</a> wird
 eine Lösung vorgestellt, welche die obengenannten Schritte automatisch
 ausführt.</p>
-</section>
-<section id="siehe-auch">
+</div>
+<div class="section" id="siehe-auch">
 <h2><span class="section-number">1.82.9. </span>Siehe auch<a class="headerlink" href="#siehe-auch" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/cvsup.html">http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/cvsup.html</a></p></li>
@@ -719,41 +715,38 @@ Upgrade durchführen</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="mehrmonitor-betrieb.txt.html" class="btn btn-neutral float-right" title="1.83. Mehrmonitor-Betrieb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="make.conf_optimieren.txt.html" class="btn btn-neutral float-left" title="1.81. make.conf optimieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="mehrmonitor-betrieb.txt.html" class="btn btn-neutral float-right" title="1.83. Mehrmonitor-Betrieb" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="make.conf_optimieren.txt.html" class="btn btn-neutral float-left" title="1.81. make.conf optimieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

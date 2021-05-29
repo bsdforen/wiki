@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf) &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.3. Apache mit php5 installieren" href="apache_mit_php5_installieren.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -318,6 +321,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -331,8 +336,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -340,34 +345,25 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="apache_mit_php5_installieren.txt.html" class="btn btn-neutral float-right" title="1.3. Apache mit php5 installieren" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="3d-grafik-beschleunigung.txt.html" class="btn btn-neutral float-left" title="1.1. 3D-Grafik-Beschleunigung" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="anschluss-an-das-internet-mit-pppoe-mpd-und-firewall-pf">
+  <div class="section" id="anschluss-an-das-internet-mit-pppoe-mpd-und-firewall-pf">
 <h1><span class="section-number">1.2. </span>Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)<a class="headerlink" href="#anschluss-an-das-internet-mit-pppoe-mpd-und-firewall-pf" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Die meisten Rechner sind via PPPoe mit dem Internet verbunden. Diese Anleitung
 beschreibt das Herstellen einer Internetverbindung mit mpd4 und der Absicherung
 mit der Firewall pf.</p>
-<section id="ipfw-vs-pf">
+<div class="section" id="ipfw-vs-pf">
 <h2><span class="section-number">1.2.1. </span>ipfw vs. pf<a class="headerlink" href="#ipfw-vs-pf" title="Link zu dieser Überschrift">¶</a></h2>
 <p>&lt;&lt;Vorteile von PF&gt;&gt;</p>
-</section>
-<section id="user-ppp-vs-mpd">
+</div>
+<div class="section" id="user-ppp-vs-mpd">
 <h2><span class="section-number">1.2.2. </span>User-ppp vs. mpd<a class="headerlink" href="#user-ppp-vs-mpd" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Auch im FreeBSD-Handbuch wird auf die Konfiguration von User-PPP
 eingegangen, welche sich im wesentlichen in <code class="docutils literal notranslate"><span class="pre">/etc/ppp</span></code> abspielt. Der
@@ -383,16 +379,16 @@ schafft sich neu zu verbinden:</p>
 <p>Multilink PPP Daemon (mpd) funktioniert hingegen mit PF und hat
 ausserdem noch den Vorteil, dass es durch die Verwendung von netgraph
 deutlich weniger CPU-Last erzeugt, da weniger Kontext-Switche anfallen.</p>
-</section>
-<section id="mpd-einrichten">
+</div>
+<div class="section" id="mpd-einrichten">
 <h2><span class="section-number">1.2.3. </span>mpd einrichten<a class="headerlink" href="#mpd-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="installation-von-mpd">
+<div class="section" id="installation-von-mpd">
 <h3><span class="section-number">1.2.3.1. </span>Installation von mpd<a class="headerlink" href="#installation-von-mpd" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Da mpd nicht Teil des Betriebssystems ist, muss dieses über sysinstall
 von CD oder z.B. über die Ports wie folgt installiert werden: &lt;xterm&gt; #
 cd /usr/ports/net/mpd4 # make install clean &lt;/xterm&gt;</p>
-</section>
-<section id="aktivieren-von-netgraph">
+</div>
+<div class="section" id="aktivieren-von-netgraph">
 <h3><span class="section-number">1.2.3.2. </span>aktivieren von netgraph<a class="headerlink" href="#aktivieren-von-netgraph" title="Link zu dieser Überschrift">¶</a></h3>
 <p>mpd benötigt Netgraph, welches ein Kernel-Modul ist und durch die
 Ergänzung der folgenden Zeile in die Datei <code class="docutils literal notranslate"><span class="pre">/boot/loader.conf</span></code> geladen
@@ -401,8 +397,8 @@ wird.</p>
 <span class="n">ng_ether_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-von-mpd">
+</div>
+<div class="section" id="konfiguration-von-mpd">
 <h3><span class="section-number">1.2.3.3. </span>Konfiguration von mpd<a class="headerlink" href="#konfiguration-von-mpd" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die gesamte Konfirugation von mpd befindet sich in
 <code class="docutils literal notranslate"><span class="pre">/usr/local/etc/mpd4</span></code>. Es ist zu beachten, dass die Einrückungen mit
@@ -480,9 +476,9 @@ echo nameserver $7 &gt;  /etc/resolv.conf
 echo nameserver $9 &gt;&gt; /etc/resolv.conf
 </pre></div>
 </div>
-</section>
-</section>
-<section id="aktivieren-von-mpd4">
+</div>
+</div>
+<div class="section" id="aktivieren-von-mpd4">
 <h2><span class="section-number">1.2.4. </span>aktivieren von mpd4<a class="headerlink" href="#aktivieren-von-mpd4" title="Link zu dieser Überschrift">¶</a></h2>
 <p>mpd wird durch das Hinzufügen der folgenden Zeile aktiviert:</p>
 <p><strong>/etc/rc.conf</strong></p>
@@ -492,8 +488,8 @@ echo nameserver $9 &gt;&gt; /etc/resolv.conf
 <p>Hierdurch wird die Verbindung direkt nach dem Booten geöffnet und immer
 offen gehalten, daher ist diese Konfiguration nur sinnvoll, wenn man
 einen Pauschaltarif (neudeutsch Flat-Rate) hat.</p>
-</section>
-<section id="syslog-die-log-inforationen-ausgeben-lassen">
+</div>
+<div class="section" id="syslog-die-log-inforationen-ausgeben-lassen">
 <h2><span class="section-number">1.2.5. </span>syslog die Log-Inforationen ausgeben lassen<a class="headerlink" href="#syslog-die-log-inforationen-ausgeben-lassen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>mpd schreibt nach syslog, jedoch werden die Dateien bei der
 Standardkonfiguration nicht in eine Datei geschrieben.</p>
@@ -518,8 +514,8 @@ Standardkonfiguration nicht in eine Datei geschrieben.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/etc/rc.d/syslogd reload
 </pre></div>
 </div>
-</section>
-<section id="mpd4-webinterface">
+</div>
+<div class="section" id="mpd4-webinterface">
 <h2><span class="section-number">1.2.6. </span>mpd4 Webinterface<a class="headerlink" href="#mpd4-webinterface" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn man das Webinterface von mpd4 benutzen will, dann muss man
 folgendes in der mpd.conf| hinzufügen:</p>
@@ -530,8 +526,8 @@ folgendes in der mpd.conf| hinzufügen:</p>
        <span class="nb">set</span> <span class="n">web</span> <span class="nb">open</span>
 </pre></div>
 </div>
-</section>
-<section id="probleme-beim-setzen-der-default-route">
+</div>
+<div class="section" id="probleme-beim-setzen-der-default-route">
 <h2><span class="section-number">1.2.7. </span>Probleme beim Setzen der Default-Route<a class="headerlink" href="#probleme-beim-setzen-der-default-route" title="Link zu dieser Überschrift">¶</a></h2>
 <p>mpd schafft es nicht die Default-Route über die PPPoe-Verbindung zu
 setzen, wenn bereits eine Systemweite Default-Route definiert ist. Daher
@@ -539,11 +535,11 @@ sollte diese in der /etc/rc.conf| auskommentiert werden</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#defaultrouter=&quot;192.168.32.4&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="pf-einrichten">
+</div>
+<div class="section" id="pf-einrichten">
 <h2><span class="section-number">1.2.8. </span>pf einrichten<a class="headerlink" href="#pf-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
-</section>
-<section id="pf-einschalten">
+</div>
+<div class="section" id="pf-einschalten">
 <h2><span class="section-number">1.2.9. </span>pf einschalten<a class="headerlink" href="#pf-einschalten" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Seit FreeBSD 5.3 kann pf als Modul geladen werden, wozu ein Eintrag in
 der /etc/rc.conf| genügt.</p>
@@ -551,8 +547,8 @@ der /etc/rc.conf| genügt.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pf_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="regeln-konfigurieren">
+</div>
+<div class="section" id="regeln-konfigurieren">
 <h2><span class="section-number">1.2.10. </span>Regeln konfigurieren<a class="headerlink" href="#regeln-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die hier vorgestellten Beispiel-Regeln blockieren alle Verbindungen vom
 Internet auf den lokalen Rechner, lassen aber alle Verbindungen von dem
@@ -577,14 +573,14 @@ werden:</p>
 pass in on $ext_if proto tcp from any to any port **https** keep state
 </pre></div>
 </div>
-</section>
-<section id="weitere-rechner-hinter-diesem-ins-internet-bringen">
+</div>
+<div class="section" id="weitere-rechner-hinter-diesem-ins-internet-bringen">
 <h2><span class="section-number">1.2.11. </span>Weitere Rechner hinter diesem ins Internet bringen<a class="headerlink" href="#weitere-rechner-hinter-diesem-ins-internet-bringen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Bisher wurde dieser eine Rechner mit dem Internet verbunden und durch
 eine Firewall geschützt. In den meisten Fällen existieren jedoch noch
 viel mehr Rechner, die die Internetverbindung mitverwenden sollen.</p>
-</section>
-<section id="interne-netzwerkkarte-einrichten">
+</div>
+<div class="section" id="interne-netzwerkkarte-einrichten">
 <h2><span class="section-number">1.2.12. </span>Interne Netzwerkkarte einrichten<a class="headerlink" href="#interne-netzwerkkarte-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Hierzu muss der Rechner eine zweite Netzwerkkarte(hier fxp0) besitzen,
 welche mit dem lokalen Netzwerk (z.B. ein Switch) verbunden ist, in dem
@@ -594,8 +590,8 @@ zugewiesen bekommen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ifconfig_fxp0</span><span class="o">=</span><span class="s2">&quot;inet 192.168.32.99  netmask 255.255.255.0&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="ip-forward-aktivieren">
+</div>
+<div class="section" id="ip-forward-aktivieren">
 <h2><span class="section-number">1.2.13. </span>IP-Forward aktivieren<a class="headerlink" href="#ip-forward-aktivieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Damit der Rechner überhaupt erst Pakete zwischen internem Netz und
 Internet weiterleitet, muss dies wie folgt aktiviert werden:</p>
@@ -603,8 +599,8 @@ Internet weiterleitet, muss dies wie folgt aktiviert werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gateway_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="nat-aktivieren">
+</div>
+<div class="section" id="nat-aktivieren">
 <h2><span class="section-number">1.2.14. </span>NAT aktivieren<a class="headerlink" href="#nat-aktivieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Da die Rechner im internen Netzwerk in den meisten Fällen keine
 offizielle IP-Adresse besitzen können, besitzt nur die PPPoe-Seite
@@ -640,7 +636,7 @@ pass out on $ext_if all keep state
 block in on $ext_if all
 </pre></div>
 </div>
-<section id="maximale-segment-grosze">
+<div class="section" id="maximale-segment-grosze">
 <h3><span class="section-number">1.2.14.1. </span>Maximale Segment Größe<a class="headerlink" href="#maximale-segment-grosze" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Falls Probleme beim Aufrufen bestimmter Seiten auftreten, kann das an
 der Paketgröße liegen (Stichwort MTU, Maximum Transmission Uni). Statt
@@ -664,9 +660,9 @@ NFS.</p>
 (MSS)</a> allerdings
 nicht sehr sauber. Nunja, NAT ist ja auch nicht das Gelbe vom Ei,
 demnach…</p>
-</section>
-</section>
-<section id="nameserver-und-dhcp-server-einrichten">
+</div>
+</div>
+<div class="section" id="nameserver-und-dhcp-server-einrichten">
 <h2><span class="section-number">1.2.15. </span>Nameserver und DHCP-Server einrichten<a class="headerlink" href="#nameserver-und-dhcp-server-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mit der bisherigen Konfiguration können alle internen Rechner bereits
 das Internet erreichen. Um Namen wie „www.google.de“ zu IP-Adressen
@@ -686,12 +682,12 @@ dargestellten Einsatzzweck eigent sich <strong>dnsmasq</strong> da dieser einfac
 konfigurieren ist, wenig Speicher verbraucht, auf das
 wählverbindungsbedingte Wechseln der Internet-Nameserver vorbereitet ist
 und noch einen DHCP-Server mitbringt.</p>
-<section id="dnsmasq-installieren">
+<div class="section" id="dnsmasq-installieren">
 <h3><span class="section-number">1.2.15.1. </span>dnsmasq installieren<a class="headerlink" href="#dnsmasq-installieren" title="Link zu dieser Überschrift">¶</a></h3>
 <p>dnsmasq kann z.B. wie folgt über die Ports installiert werden: &lt;xterm&gt; #
 cd /usr/ports/dns/dnsmasq # make install clean &lt;/file&gt;</p>
-</section>
-<section id="dnsmasq-konfigurieren">
+</div>
+<div class="section" id="dnsmasq-konfigurieren">
 <h3><span class="section-number">1.2.15.2. </span>dnsmasq konfigurieren<a class="headerlink" href="#dnsmasq-konfigurieren" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Datei /usr/local/etc/dnsmasq.conf.sample| enthält eine
 Beispielkonfiguration, welche man als Schablone verwenden kann.</p>
@@ -716,8 +712,8 @@ Beispielkonfiguration, welche man als Schablone verwenden kann.</p>
 <span class="n">dhcp</span><span class="o">-</span><span class="n">leasefile</span><span class="o">=/</span><span class="n">var</span><span class="o">/</span><span class="n">db</span><span class="o">/</span><span class="n">dnsmasq</span><span class="o">.</span><span class="n">leases</span>
 </pre></div>
 </div>
-</section>
-<section id="dnsmasq-automatisch-mitstarten">
+</div>
+<div class="section" id="dnsmasq-automatisch-mitstarten">
 <h3><span class="section-number">1.2.15.3. </span>dnsmasq automatisch mitstarten<a class="headerlink" href="#dnsmasq-automatisch-mitstarten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Damit der dnsmasq-Dienst direkt bei jedem Rechnerstart automatisch
 mitgestartet wird, muss muss die /etc/rc.conf.local| um folgende Zeile
@@ -726,8 +722,8 @@ erweitert werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnsmasq_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="dnsmasq-zusammenfassung">
+</div>
+<div class="section" id="dnsmasq-zusammenfassung">
 <h3><span class="section-number">1.2.15.4. </span>dnsmasq Zusammenfassung<a class="headerlink" href="#dnsmasq-zusammenfassung" title="Link zu dieser Überschrift">¶</a></h3>
 <p>An diesen Rechner können jetzt immer Namensanfragen der internen Rechner
 gestellt werden, welche er stets mit Hilfe der aktuellen
@@ -751,41 +747,38 @@ Nebeneffekte. FreeBSD|</p>
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
 <p>Zuletzt geändert: date|</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="apache_mit_php5_installieren.txt.html" class="btn btn-neutral float-right" title="1.3. Apache mit php5 installieren" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="3d-grafik-beschleunigung.txt.html" class="btn btn-neutral float-left" title="1.1. 3D-Grafik-Beschleunigung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="apache_mit_php5_installieren.txt.html" class="btn btn-neutral float-right" title="1.3. Apache mit php5 installieren" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="3d-grafik-beschleunigung.txt.html" class="btn btn-neutral float-left" title="1.1. 3D-Grafik-Beschleunigung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

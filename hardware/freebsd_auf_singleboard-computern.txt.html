@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>3.3. FreeBSD auf Singleboard-Computern &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="3.4. Hardware-Guide" href="hardware-guide.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -155,6 +158,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -168,8 +173,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/hardware/freebsd_auf_singleboard-computern.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/hardware/freebsd_auf_singleboard-computern.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -177,34 +182,25 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="hardware-guide.txt.html" class="btn btn-neutral float-right" title="3.4. Hardware-Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="dell_inspiron_640m.txt.html" class="btn btn-neutral float-left" title="3.2. Dell Inspiron 640m" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="freebsd-auf-singleboard-computern">
+  <div class="section" id="freebsd-auf-singleboard-computern">
 <h1><span class="section-number">3.3. </span>FreeBSD auf Singleboard-Computern<a class="headerlink" href="#freebsd-auf-singleboard-computern" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>FreeBSD kann man problemlos auf sogenannten Appliances (kleinen,
 engeriesparenden Rechnern ohne Bildschirm, Maus oder Tastatur)
 einsetzen. Bisher habe ich das mit einer Soekris net4801 und einer PC
 Engines wrap 2e.1 ausprobiert.</p>
-<section id="hardware-beschreibung">
+<div class="section" id="hardware-beschreibung">
 <h2><span class="section-number">3.3.1. </span>Hardware-Beschreibung<a class="headerlink" href="#hardware-beschreibung" title="Link zu dieser Überschrift">¶</a></h2>
-</section>
-<section id="pc-engines-wrap">
+</div>
+<div class="section" id="pc-engines-wrap">
 <h2><span class="section-number">3.3.2. </span>PC-Engines WRAP<a class="headerlink" href="#pc-engines-wrap" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die <a class="reference external" href="http://www.pcengines.ch/wrap.htm">Wireless Router Application
 Platform</a> (kurz: WRAP) ist ein
@@ -218,8 +214,8 @@ selbst eingelötet werden. Die Geode-CPU ist mit 233 MHz ausreichend
 schnell, um Router jeder Art zu bauen. Da sowohl IDE- als auch
 SCSI-Schnittstellen fehlen, eignet sich die Hardware nicht für
 Fileserver.</p>
-</section>
-<section id="soekris-net4801">
+</div>
+<div class="section" id="soekris-net4801">
 <h2><span class="section-number">3.3.3. </span>Soekris net4801<a class="headerlink" href="#soekris-net4801" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die <a class="reference external" href="http://www.soekris.com/net4801.htm">net4801</a> ist ein Produkt der
 amerikanischen Firma <a class="reference external" href="http://www.soekris.com/">Soekris</a>. Auch hier
@@ -228,8 +224,8 @@ Verfügung; Tastatur-, Maus- und Video-Schnittstellen fehlen. Darüber
 hinaus bietet die Soekris serienmässig USB und eine zweite interne
 serielle Schnittstelle sowie einen IDE-Notebook-Stecker, über den
 2,5“-Platten auch mit Strom versorgt werden.</p>
-</section>
-<section id="freebsd-unterstutzung">
+</div>
+<div class="section" id="freebsd-unterstutzung">
 <h2><span class="section-number">3.3.4. </span>FreeBSD-Unterstützung<a class="headerlink" href="#freebsd-unterstutzung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Seit FreeBSD 5.4 unterstützt FreeBSD mit der Kernel-Option <code class="docutils literal notranslate"><span class="pre">CPU_GEODE</span></code>
 die in beiden Appliances verbaute CPU. Für Soekris-Hardware gibt es
@@ -243,14 +239,14 @@ die Einstellungen am Build-System auch das Host-FreeBSD betreffen, kann
 man diese Arbeiten auch in einem <a class="reference external" href="/howto/Jails">Jail</a> oder einer
 <code class="docutils literal notranslate"><span class="pre">chroot-Umgebung</span></code> durchführen; z.B. mittels
 <a class="reference external" href="http://www.minibsd.org/">MiniBSD</a>.</p>
-</section>
-<section id="system-an-sbcs-mit-geode-prozessor-anpassen">
+</div>
+<div class="section" id="system-an-sbcs-mit-geode-prozessor-anpassen">
 <h2><span class="section-number">3.3.5. </span>System an SBCs mit GEODE-Prozessor anpassen<a class="headerlink" href="#system-an-sbcs-mit-geode-prozessor-anpassen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die SBC-Hardware unterscheidet sich in einigen Punkten von Standard-PCs,
 insbesondere muss man die CPU-Optimierung an den Prozessor anpassen und
 sich um einen Hardware-Bug im Timer der CPU herumprogrammieren.</p>
-</section>
-<section id="kernel-konfigurationsdatei">
+</div>
+<div class="section" id="kernel-konfigurationsdatei">
 <h2><span class="section-number">3.3.6. </span>Kernel-Konfigurationsdatei<a class="headerlink" href="#kernel-konfigurationsdatei" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Folgende Konfigurationsdatei ist sowohl für Soekris als auch WRAP
 einsetzbar. Optionale Teile sind unterhalb der Konfigurationsdatei
@@ -409,13 +405,13 @@ USB-Sticks und USB-Festplatten) benötigt die SCSI-Einträge <code class="docuti
 <p>Der WLAN-Abschnitt kann vollständig entfallen, wenn keine WLAN-Geräte
 unterstützt werden sollen. Andernfalls aktiviert man ausschliesslich die
 benötigten Treiber.</p>
-</section>
-<section id="betriebssystem-an-sbcs-anpassen">
+</div>
+<div class="section" id="betriebssystem-an-sbcs-anpassen">
 <h2><span class="section-number">3.3.7. </span>Betriebssystem an SBCs anpassen<a class="headerlink" href="#betriebssystem-an-sbcs-anpassen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">/etc/make.conf</span></code> schaltet man all die Teile des Betriebssystems
 aus, die man auf Appliances nicht benötigt.</p>
-</section>
-<section id="file-etc-make-conf">
+</div>
+<div class="section" id="file-etc-make-conf">
 <h2><span class="section-number">3.3.8. </span><a class="reference external" href="File:/etc/make.conf">File:/etc/make.conf</a><a class="headerlink" href="#file-etc-make-conf" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>KERNCONF=           WRAP
 CPUTYPE?=           i586/mmx
@@ -482,8 +478,8 @@ Schalter bewirken wird in <code class="docutils literal notranslate"><span class
 <span class="n">NO_MODULES</span><span class="o">=</span>         <span class="n">true</span> <span class="c1">#</span>
 </pre></div>
 </div>
-</section>
-<section id="quellen">
+</div>
+<div class="section" id="quellen">
 <h2><span class="section-number">3.3.9. </span>Quellen<a class="headerlink" href="#quellen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Grosse Teile dieser Artikels beruhen auf dem Artikel
 „<a class="reference external" href="https://www.bsdforen.de/threads/freebsd-auf-pc-engines-wrap.7987/FreeBSDaufPC-EnginesWRAP">https://www.bsdforen.de/threads/freebsd-auf-pc-engines-wrap.7987/ FreeBSD auf
@@ -491,41 +487,38 @@ PC-Engines WRAP</a>“ von <a class="reference external" href="https://www.bsdfo
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="hardware-guide.txt.html" class="btn btn-neutral float-right" title="3.4. Hardware-Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="dell_inspiron_640m.txt.html" class="btn btn-neutral float-left" title="3.2. Dell Inspiron 640m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="hardware-guide.txt.html" class="btn btn-neutral float-right" title="3.4. Hardware-Guide" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="dell_inspiron_640m.txt.html" class="btn btn-neutral float-left" title="3.2. Dell Inspiron 640m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

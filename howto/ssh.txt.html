@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.115. ssh &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.116. Suspend und Resume bei Thinkpads" href="suspend_resume_thinkpad.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -305,6 +308,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -318,8 +323,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/ssh.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/ssh.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -327,34 +332,25 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="suspend_resume_thinkpad.txt.html" class="btn btn-neutral float-right" title="1.116. Suspend und Resume bei Thinkpads" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="speaker_deaktivieren.txt.html" class="btn btn-neutral float-left" title="1.114. PC-Speaker deaktivieren" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="ssh">
+  <div class="section" id="ssh">
 <h1><span class="section-number">1.115. </span>ssh<a class="headerlink" href="#ssh" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</aside>
+</div>
 <p>Tipps und Tricks zum Umgang mit OpenSSH unter *BSD und Linux. Ein SSH-Client
 für Windows ist <a class="reference external" href="PuTTY">PuTTY</a>.</p>
-<section id="sshd-zum-starten-verfugbar-machen">
+<div class="section" id="sshd-zum-starten-verfugbar-machen">
 <h2><span class="section-number">1.115.1. </span>sshd zum Starten verfügbar machen<a class="headerlink" href="#sshd-zum-starten-verfugbar-machen" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="freebsd">
+<div class="section" id="freebsd">
 <h3><span class="section-number">1.115.1.1. </span>FreeBSD<a class="headerlink" href="#freebsd" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sysrc <span class="nv">sshd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
 </pre></div>
@@ -364,24 +360,24 @@ für Windows ist <a class="reference external" href="PuTTY">PuTTY</a>.</p>
 </pre></div>
 </div>
 <p>eintragen.</p>
-</section>
-<section id="openbsd">
+</div>
+<div class="section" id="openbsd">
 <h3><span class="section-number">1.115.1.2. </span>OpenBSD<a class="headerlink" href="#openbsd" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In die Datei <code class="docutils literal notranslate"><span class="pre">/etc/rc.conf.local</span></code> oder die Datei <code class="docutils literal notranslate"><span class="pre">/etc/rc.conf</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshd_flags</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
 </pre></div>
 </div>
 <p>eintragen.</p>
-</section>
-<section id="netbsd">
+</div>
+<div class="section" id="netbsd">
 <h3><span class="section-number">1.115.1.3. </span>NetBSD<a class="headerlink" href="#netbsd" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In die Datei <code class="docutils literal notranslate"><span class="pre">/etc/rc.conf</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshd</span><span class="o">=</span><span class="n">YES</span>
 </pre></div>
 </div>
 <p>eintragen.</p>
-</section>
-<section id="dragonflybsd">
+</div>
+<div class="section" id="dragonflybsd">
 <h3><span class="section-number">1.115.1.4. </span>DragonFlyBSD<a class="headerlink" href="#dragonflybsd" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In die Datei <code class="docutils literal notranslate"><span class="pre">/etc/rc.conf</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
@@ -389,24 +385,24 @@ für Windows ist <a class="reference external" href="PuTTY">PuTTY</a>.</p>
 </div>
 <p>eintragen.</p>
 <p>Alternativ sollte auch die Version von NetBSD funktionieren.</p>
-</section>
-</section>
-<section id="einloggen-uber-ssh-ohne-passworteingabe">
+</div>
+</div>
+<div class="section" id="einloggen-uber-ssh-ohne-passworteingabe">
 <h2><span class="section-number">1.115.2. </span>Einloggen über SSH ohne Passworteingabe<a class="headerlink" href="#einloggen-uber-ssh-ohne-passworteingabe" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Das Einloggen ohne Passwort kann mitunter ein Sicherheitsrisiko
 darstellen.</p>
 </div>
-<section id="sinn-der-sache">
+<div class="section" id="sinn-der-sache">
 <h3><span class="section-number">1.115.2.1. </span>Sinn der Sache<a class="headerlink" href="#sinn-der-sache" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Viele haben zu Hause (oder sonstwo) mehrere Rechner, auf denen ein
 SSH-Daemon läuft - sei es zur Verwaltung des Rechners oder sonstigem.
 Jedoch kann es, wenn man sich oft auf den Maschinen einloggen muss,
 mitunter recht nervig werden, jedes Mal das Passwort einzutippen. Der
 Austausch der Public-Keys schafft hier Abhilfe.</p>
-</section>
-<section id="vorgehen">
+</div>
+<div class="section" id="vorgehen">
 <h3><span class="section-number">1.115.2.2. </span>Vorgehen<a class="headerlink" href="#vorgehen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In meinem Beispiel arbeite ich jetzt erst einmal mit dem imaginären User
 <code class="docutils literal notranslate"><span class="pre">bob</span></code>, welcher einen Account sowohl auf <code class="docutils literal notranslate"><span class="pre">rechner1.domain.bla</span></code> als
@@ -445,15 +441,15 @@ erledigt ist, kann <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 <p>auf <code class="docutils literal notranslate"><span class="pre">rechner2.domain.bla</span></code> ohne Passwort einloggen.</p>
-</section>
-<section id="alternativen">
+</div>
+<div class="section" id="alternativen">
 <h3><span class="section-number">1.115.2.3. </span>Alternativen<a class="headerlink" href="#alternativen" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.phil.uu.nl/~xges/ssh/">ssh-agent</a></p></li>
 <li><p>Login per pam_ssh</p></li>
 </ul>
-</section>
-<section id="vorgehensweise-bei-ssh-agent-nach-mrfixit">
+</div>
+<div class="section" id="vorgehensweise-bei-ssh-agent-nach-mrfixit">
 <h3><span class="section-number">1.115.2.4. </span>Vorgehensweise bei ssh-agent nach MrFixit<a class="headerlink" href="#vorgehensweise-bei-ssh-agent-nach-mrfixit" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Man muss den Passphrase nur einmal eingeben, dann wird der Schlüssel
 dekodiert und im Speicher gehalten. Solange bis man den ssh-agent wieder
@@ -468,8 +464,8 @@ normalen xdm/login-Login sparen.</p>
 die Passphrase meines priv. Schluessels eingeben und auch nur einmal)</p></li>
 <li><p>Schnelle ssh-logins bis ich mich aus X wieder abmelde</p></li>
 </ul>
-</section>
-<section id="ssh-multiplexing">
+</div>
+<div class="section" id="ssh-multiplexing">
 <h3><span class="section-number">1.115.2.5. </span>ssh-multiplexing<a class="headerlink" href="#ssh-multiplexing" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Viele Leute öffnen eine ssh-session, geben 2-3 Befehle ein und melden
 sich wieder ab. Mit ssh-multiplexing, das seit <a class="reference external" href="OpenBSD">OpenBSD</a> 3.6
@@ -479,9 +475,9 @@ $ ssh server ls /root
 $ ssh server /usr/local/etc/rc.d/foo.sh stop
 </pre></div>
 </div>
-</section>
-</section>
-<section id="siehe-auch">
+</div>
+</div>
+<div class="section" id="siehe-auch">
 <h2><span class="section-number">1.115.3. </span>Siehe auch<a class="headerlink" href="#siehe-auch" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="/howto/Ssh-blocker">Ssh-blocker</a></p></li>
@@ -491,41 +487,38 @@ $ ssh server /usr/local/etc/rc.d/foo.sh stop
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="suspend_resume_thinkpad.txt.html" class="btn btn-neutral float-right" title="1.116. Suspend und Resume bei Thinkpads" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="speaker_deaktivieren.txt.html" class="btn btn-neutral float-left" title="1.114. PC-Speaker deaktivieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="suspend_resume_thinkpad.txt.html" class="btn btn-neutral float-right" title="1.116. Suspend und Resume bei Thinkpads" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="speaker_deaktivieren.txt.html" class="btn btn-neutral float-left" title="1.114. PC-Speaker deaktivieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

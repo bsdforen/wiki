@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.27. CUPS - Installation und Konfiguration &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.29. Datenrettung" href="datenrettung.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -307,6 +310,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -320,8 +325,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/cups_-_installation_und_konfiguration.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/cups_-_installation_und_konfiguration.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -329,33 +334,24 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="datenrettung.txt.html" class="btn btn-neutral float-right" title="1.29. Datenrettung" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="cups_-_drucken_in_heterogener_umgebung.txt.html" class="btn btn-neutral float-left" title="1.26. CUPS - Drucken in heterogener Umgebung" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="cups-installation-und-konfiguration">
+  <div class="section" id="cups-installation-und-konfiguration">
 <h1><span class="section-number">1.27. </span>CUPS - Installation und Konfiguration<a class="headerlink" href="#cups-installation-und-konfiguration" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Dieser Artikel behandelt die grundlegende Installation des Common UNIX
 Printing System (<a class="reference external" href="http://www.cups.org/">http://www.cups.org/</a>) und anschließende Einrichtung
 eines Druckers. Das HowTo beschreibt hierbei Vorgehensweise zur
 Installation eines Brother HL-2030. Der Artikel entstand in Anlehnung an
 den nicht mehr verfügbaren Artikel „CUPS unter FreeBSD einrichten“ von
 <a class="reference external" href="http://www.newbie-net.de/">http://www.newbie-net.de/</a></p>
-<section id="verwandte-artikel">
+<div class="section" id="verwandte-artikel">
 <h2><span class="section-number">1.27.1. </span>Verwandte Artikel<a class="headerlink" href="#verwandte-artikel" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="cups_-_drucken_in_heterogener_umgebung">CUPS - Drucken in heterogener
@@ -363,8 +359,8 @@ Umgebung</a></p></li>
 <li><p><a class="reference external" href="http://de.wikipedia.org/wiki/Common_Unix_Printing_System">Wikipedia.de Common Unix Printing
 System</a></p></li>
 </ul>
-</section>
-<section id="installation-der-benotigten-pakete">
+</div>
+<div class="section" id="installation-der-benotigten-pakete">
 <h2><span class="section-number">1.27.2. </span>Installation der benötigten Pakete<a class="headerlink" href="#installation-der-benotigten-pakete" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line">Zur korrekten Installation von CUPS ist es ratsam, alle anderen evtl.
@@ -413,12 +409,12 @@ installierten Druckersysteme (z.B. LPD) zu deinstallieren.</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/print/foomatic-filters/ &amp;&amp; make install clean</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration">
+</div>
+<div class="section" id="konfiguration">
 <h2><span class="section-number">1.27.3. </span>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Nachdem alle Pakete korrekt installiert wurden, müssen ein paar kleine
 Änderungen im System vorgenommen werden.</p>
-<section id="etc-devfs-rules-anpassen">
+<div class="section" id="etc-devfs-rules-anpassen">
 <h3><span class="section-number">1.27.3.1. </span>/etc/devfs.rules anpassen<a class="headerlink" href="#etc-devfs-rules-anpassen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>&lt;note&gt;Diese Einstellung ist für Netzwerkdrucker nicht notwendig. Weiter
 mit <a class="reference external" href="cups_-_installation_und_konfiguration#etcrc.conf_anpassen">/etc/rc.conf
@@ -437,8 +433,8 @@ existiert, muss sie angelegt werden.)</div>
 <span class="n">add</span> <span class="n">path</span> <span class="s1">&#39;unlpt*&#39;</span> <span class="n">mode</span> <span class="mi">0660</span> <span class="n">group</span> <span class="n">cups</span>
 </pre></div>
 </div>
-</section>
-<section id="etc-rc-conf-anpassen">
+</div>
+<div class="section" id="etc-rc-conf-anpassen">
 <h3><span class="section-number">1.27.3.2. </span>/etc/rc.conf anpassen<a class="headerlink" href="#etc-rc-conf-anpassen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der nächste Eintrag hat folgende Bewandtnis:</p>
 <ul class="simple">
@@ -451,8 +447,8 @@ existiert, muss sie angelegt werden.)</div>
 <span class="n">devfs_system_ruleset</span><span class="o">=</span><span class="s2">&quot;system&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="etc-make-conf-anpassen">
+</div>
+<div class="section" id="etc-make-conf-anpassen">
 <h3><span class="section-number">1.27.3.3. </span>/etc/make.conf anpassen<a class="headerlink" href="#etc-make-conf-anpassen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die folgenden Einträge erfolgen, um einen Konflikt mit dem systemeigenen
 <em>lpd</em> zu vermeiden:</p>
@@ -461,8 +457,8 @@ existiert, muss sie angelegt werden.)</div>
 <span class="n">WITH_CUPS</span><span class="o">=</span><span class="n">yes</span>
 </pre></div>
 </div>
-</section>
-<section id="symbolische-links-fur-das-cups-backend">
+</div>
+<div class="section" id="symbolische-links-fur-das-cups-backend">
 <h3><span class="section-number">1.27.3.4. </span>symbolische Links für das CUPS-Backend<a class="headerlink" href="#symbolische-links-fur-das-cups-backend" title="Link zu dieser Überschrift">¶</a></h3>
 <p>CUPS installiert in <strong>/usr/local/bin</strong> eigene lpr, lpq und lprm. Damit
 z.B. lpr korrekt auf das CUPS-Backend zugreifen kann, sollten folgende
@@ -470,8 +466,8 @@ symbolische Links gesetzt werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ln -sf /usr/local/bin/lp* /usr/bin</span>
 </pre></div>
 </div>
-</section>
-<section id="foomatic-skripte-downloaden-und-installieren">
+</div>
+<div class="section" id="foomatic-skripte-downloaden-und-installieren">
 <h3><span class="section-number">1.27.3.5. </span>foomatic Skripte downloaden und installieren<a class="headerlink" href="#foomatic-skripte-downloaden-und-installieren" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die meisten von uns werden die foomatic Skripte einsetzen, da sie
 benötigt werden, wenn kein postscript-fähiger Drucker zur Verfügung
@@ -485,10 +481,10 @@ steht.</p>
 </div>
 <p>&lt;note important&gt;An dieser Stelle sollte man nun einmal neustarten, damit
 alle Einstellungen wirksam werden!&lt;/note&gt;</p>
-</section>
-</section>
-</section>
-<section id="drucker-einrichten-unter-cups">
+</div>
+</div>
+</div>
+<div class="section" id="drucker-einrichten-unter-cups">
 <h1><span class="section-number">1.28. </span>Drucker einrichten unter CUPS<a class="headerlink" href="#drucker-einrichten-unter-cups" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="line-block">
 <div class="line">Nun kommen wir zur eigentlichen Installation des Druckers. Dafür
@@ -513,7 +509,7 @@ Starten/Stoppen/Neustarten:</p>
 </div>
 <p>Im Frontend wählt man nun „Add Printer“ aus, um einen Drucker
 hinzuzufügen.</p>
-<section id="usb-drucker">
+<div class="section" id="usb-drucker">
 <h2><span class="section-number">1.28.1. </span>USB-Drucker<a class="headerlink" href="#usb-drucker" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Für meinen Brother HL-2030 habe ich folgende Einstellungen vorgenommen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span><span class="p">:</span> <span class="n">BrotherHL</span><span class="o">-</span><span class="mi">2030</span>
@@ -532,10 +528,10 @@ PPD-Datei aus dem Internet unter
 <a class="reference external" href="http://openprinting.org/printer_list.cgi">http://openprinting.org/printer_list.cgi</a> downloaden.</div>
 <div class="line">Das sollte es gewesen sein.</div>
 </div>
-</section>
-<section id="virtuelle-drucker">
+</div>
+<div class="section" id="virtuelle-drucker">
 <h2><span class="section-number">1.28.2. </span>Virtuelle Drucker<a class="headerlink" href="#virtuelle-drucker" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="ausgabe-in-eine-pdf-datei">
+<div class="section" id="ausgabe-in-eine-pdf-datei">
 <h3><span class="section-number">1.28.2.1. </span>Ausgabe in eine PDF-Datei<a class="headerlink" href="#ausgabe-in-eine-pdf-datei" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Soll ein Ausdruck nicht auf einem Drucker erfolgen, sondern in eine
 PDF-Datei, wird der Port /usr/ports/print/cups-pdf installiert:</p>
@@ -571,9 +567,9 @@ werden zB: Name: PDF, Ort: Büro, Beschreibung: Ausdruck in PDF-Datei</p></li>
 hinzugefügt.</p></li>
 </ul>
 <p>Nun ist der Virtuelle Drucker installiert.</p>
-</section>
-</section>
-<section id="abschlieszende-einstellungen">
+</div>
+</div>
+<div class="section" id="abschlieszende-einstellungen">
 <h2><span class="section-number">1.28.3. </span>Abschließende Einstellungen<a class="headerlink" href="#abschlieszende-einstellungen" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line">Abschließend sollte man unter <strong>Set Printer Options</strong> bzw.
@@ -585,41 +581,38 @@ die Auflösung einstellen.</div>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="datenrettung.txt.html" class="btn btn-neutral float-right" title="1.29. Datenrettung" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="cups_-_drucken_in_heterogener_umgebung.txt.html" class="btn btn-neutral float-left" title="1.26. CUPS - Drucken in heterogener Umgebung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="datenrettung.txt.html" class="btn btn-neutral float-right" title="1.29. Datenrettung" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cups_-_drucken_in_heterogener_umgebung.txt.html" class="btn btn-neutral float-left" title="1.26. CUPS - Drucken in heterogener Umgebung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

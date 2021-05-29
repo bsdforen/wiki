@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>4.4. Starcraft &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="4.5. Unreal" href="unreal.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -156,6 +159,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -169,8 +174,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/spiele/starcraft.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/spiele/starcraft.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -178,27 +183,18 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="unreal.txt.html" class="btn btn-neutral float-right" title="4.5. Unreal" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="diablo_ii.txt.html" class="btn btn-neutral float-left" title="4.3. Diablo II" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="starcraft">
+  <div class="section" id="starcraft">
 <h1><span class="section-number">4.4. </span>Starcraft<a class="headerlink" href="#starcraft" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
-</aside>
+</div>
 <p>Hier wird eine Empfehlung dafür gegeben wie man Starcraft mit Hilfe von wine
 betreibt.</p>
 <div class="admonition note">
@@ -207,7 +203,7 @@ betreibt.</p>
 Starcraft leider nicht ohne weiteres unter wine. Die Verwendung der Binary
 <a class="reference external" href="/howto/wine#wine-kthread">wine#wine-kthread</a> schafft hier Abhilfe.</p>
 </div>
-<section id="installation">
+<div class="section" id="installation">
 <h2><span class="section-number">4.4.1. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die Installation muss leider unter Windows erfolgen, da sie mit wine
 nicht durchführbar ist. Meine Spiele liegen auf einer Fat32 Partition
@@ -234,13 +230,13 @@ Computer-&gt;HKEY_CURRENT_USER-&gt;Software-&gt;Blizzard-&gt;Starcraft</strong>.
 man <strong>Edit-&gt;new-&gt;String Value</strong>. Den neuen String benennt man nun in
 <strong>InstallPath</strong> um und weist ihm den Wert
 <strong>z:mntmsdossoftwaregamesrtsStarcraft</strong> zu.</p>
-</section>
-<section id="konfiguration">
+</div>
+<div class="section" id="konfiguration">
 <h2><span class="section-number">4.4.2. </span>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Ab hier geht man wie in dem Artikel <a class="reference external" href="/howto/Wine">Wine</a> beschrieben
 vor. Ich liste hier lediglich die Einstellungen die für mich persönlich
 am besten funktionieren.</p>
-<section id="graphics">
+<div class="section" id="graphics">
 <h3><span class="section-number">4.4.2.1. </span>Graphics<a class="headerlink" href="#graphics" title="Link zu dieser Überschrift">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -279,8 +275,8 @@ am besten funktionieren.</p>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="audio">
+</div>
+<div class="section" id="audio">
 <h3><span class="section-number">4.4.2.2. </span>Audio<a class="headerlink" href="#audio" title="Link zu dieser Überschrift">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -302,9 +298,9 @@ am besten funktionieren.</p>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-<section id="updates-und-battle-net">
+</div>
+</div>
+<div class="section" id="updates-und-battle-net">
 <h2><span class="section-number">4.4.3. </span>Updates und Battle.net<a class="headerlink" href="#updates-und-battle-net" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um Starcraft auf den neusten Stand zu bringen kann man eine Verbindung
 zum Battle.net herstellen. Von dort aus kann man auch an Spielen auf
@@ -322,8 +318,8 @@ Starcraft Engine zurückkehrt muss man eine Weile warten. Geduld, das
 Spiel ist nicht abgestürzt.</p>
 <p>Damit heruntergeladene Updates funktionieren muss man wie zu Beginn
 beschrieben InstallPath in der Registry richtig gesetzt haben.</p>
-</section>
-<section id="wrapper">
+</div>
+<div class="section" id="wrapper">
 <h2><span class="section-number">4.4.4. </span>Wrapper<a class="headerlink" href="#wrapper" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um das Spiel komfortabler zu starten habe ich mir in <strong>~/bin</strong> ein
 Skript angelegt. Das Skript setzt das Skript im <a class="reference external" href="/howto/Wine#ProgrammedieImagesbenötigen">Wine
@@ -349,41 +345,38 @@ die mount_images-Option kann im Script also auch verzichtet werden!</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="unreal.txt.html" class="btn btn-neutral float-right" title="4.5. Unreal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="diablo_ii.txt.html" class="btn btn-neutral float-left" title="4.3. Diablo II" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="unreal.txt.html" class="btn btn-neutral float-right" title="4.5. Unreal" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="diablo_ii.txt.html" class="btn btn-neutral float-left" title="4.3. Diablo II" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

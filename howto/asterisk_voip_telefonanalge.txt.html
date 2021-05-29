@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.4. Asterisk &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.5. Audio-CD rippen" href="audio-cd_rippen.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -309,6 +312,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -322,8 +327,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/asterisk_voip_telefonanalge.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/asterisk_voip_telefonanalge.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -331,30 +336,21 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="audio-cd_rippen.txt.html" class="btn btn-neutral float-right" title="1.5. Audio-CD rippen" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="apache_mit_php5_installieren.txt.html" class="btn btn-neutral float-left" title="1.3. Apache mit php5 installieren" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="asterisk">
+  <div class="section" id="asterisk">
 <h1><span class="section-number">1.4. </span>Asterisk<a class="headerlink" href="#asterisk" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>In diesem HowTo wird erklärt, wie man Asterisk auf BSD installiert und
 eine einfache Telefonanlage mit SIP und IAX Konten erstellt, externe
 VoIP Provider einbindet und zwei Asterisk mittels IAX verbindet.</p>
-<section id="was-kann-asterisk">
+<div class="section" id="was-kann-asterisk">
 <h2><span class="section-number">1.4.1. </span>Was kann Asterisk?<a class="headerlink" href="#was-kann-asterisk" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Asterisk kann so gut wie alles, was von einer modernen Telefonanlage im
 Business Bereich erwartet wird. Aber auch für kleine private Anlagen ist
@@ -369,16 +365,16 @@ Asterisk eine gute Wahl!</p>
 <li><p>Blacklists für unerwünschte Anrufer</p></li>
 <li><p>Manager Interface für Call-Center</p></li>
 </ul>
-</section>
-<section id="was-kann-asterisk-nicht">
+</div>
+<div class="section" id="was-kann-asterisk-nicht">
 <h2><span class="section-number">1.4.2. </span>Was kann Asterisk nicht?<a class="headerlink" href="#was-kann-asterisk-nicht" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Asterisk unterstützt SRTP und IAX2 (AES128) jedoch kein ZRTP (Zimmermann
 RTP). Wer ZRTP nutzen möchte, sollte einen zusätzlichen Kamailio Server
 einrichten.</p>
 <p>Die Einrichtung eines Kamailio Server ist einfach, wird in diesem HowTo
 jedoch nicht behandelt.</p>
-</section>
-<section id="installation-von-asterisk">
+</div>
+<div class="section" id="installation-von-asterisk">
 <h2><span class="section-number">1.4.3. </span>Installation von Asterisk<a class="headerlink" href="#installation-von-asterisk" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Vorzugsweise installieren wir Asterisk in einer Jail. Wie man Jails
 erstellt, wird hier erklärt <a class="reference external" href="/howto/jails">jails</a>.</p>
@@ -393,10 +389,10 @@ nutzen will, muss Asterisk aus den Ports bauen. Siehe Notes:
 <div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>pkg -c <span class="nv">$jail</span> install -y asterisk13
 </pre></div>
 </div>
-</section>
-<section id="konfiguration">
+</div>
+<div class="section" id="konfiguration">
 <h2><span class="section-number">1.4.4. </span>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="jail">
+<div class="section" id="jail">
 <h3><span class="section-number">1.4.4.1. </span>Jail<a class="headerlink" href="#jail" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Konfiguration unserer Jail sieht wie folgt aus</p>
 <div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="nv">$EDITOR</span> /etc/jail.conf
@@ -424,8 +420,8 @@ path = &quot;/${name}&quot;;
 Realtek-Karten <code class="docutils literal notranslate"><span class="pre">re0</span></code> und <code class="docutils literal notranslate"><span class="pre">re1</span></code>. Diese müssen auf die jeweilige
 Hardware und Konfigurationswünsche angepasst werden. Intel wäre <code class="docutils literal notranslate"><span class="pre">em0</span></code>
 und respektive <code class="docutils literal notranslate"><span class="pre">em1</span></code>.</p>
-</section>
-<section id="asterisk-1">
+</div>
+<div class="section" id="asterisk-1">
 <span id="id1"></span><h3><span class="section-number">1.4.4.2. </span>Asterisk<a class="headerlink" href="#asterisk-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Es gibt eine Menge Files im Ordner <code class="docutils literal notranslate"><span class="pre">/usr/local/etc/asterisk/</span></code> und beim
 ersten Blick ist man etwas erschrocken. Aber keine Angst, wir werden
@@ -454,7 +450,7 @@ der Asterisk CLI beim Start einige Fehlermeldungen, dass keine Konfig gefunden
 wurde. Das ist nicht weiter schlimm, wenn Asterisk nach seinen Wünschen
 konfiguriert ist, kann mann die nicht benötigten Module auf <strong>noload</strong> setzen</p>
 </div>
-<section id="asterisk-conf">
+<div class="section" id="asterisk-conf">
 <h4><span class="section-number">1.4.4.2.1. </span>asterisk.conf<a class="headerlink" href="#asterisk-conf" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Kontrolliert, ob diese beiden Zeilen nicht auskommentiert sind. Wir
 wollen Asterisk als User Asterisk laufen lassen.</p>
@@ -462,8 +458,8 @@ wollen Asterisk als User Asterisk laufen lassen.</p>
 <span class="nv">rungroup</span> <span class="o">=</span> asterisk             <span class="p">;</span> The group to run as.
 </pre></div>
 </div>
-</section>
-<section id="rtp-conf">
+</div>
+<div class="section" id="rtp-conf">
 <h4><span class="section-number">1.4.4.2.2. </span>rtp.conf<a class="headerlink" href="#rtp-conf" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Hier definieren wir nur die RTP-Ports. Bei den meisten SIP-Telefonen
 sind diese zwischen 5004-5020 als Standard vordefiniert (im Zweifel also
@@ -479,8 +475,8 @@ erstmal ins Menü des Telefons schauen), also sieht unser File so aus.</p>
 Gespräche! Bei Bedarf muss diese beim Asterisk sowie bei den Clients
 angepasst werden. Bsp.: Konferenz, Music-on-hold, Weiterleitung usw.</p>
 </div>
-</section>
-<section id="sip-conf">
+</div>
+<div class="section" id="sip-conf">
 <h4><span class="section-number">1.4.4.2.3. </span>sip.conf<a class="headerlink" href="#sip-conf" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Hier sind unsere Zugangsdaten für alle SIP Verbindungen hinterlegt. Egal
 ob interne Telefone oder externer Provider.</p>
@@ -534,8 +530,8 @@ Zeilen denkt der Angreifer, dass er einen Treffer erzielt hat, obwohl diese
 Nebenstelle nicht existiert. Ein Brute Force Angriff auf ein Benutzer Konto
 das nicht existiert, wird keinen Erfolg liefern.</p>
 </div>
-</section>
-<section id="iax-conf">
+</div>
+<div class="section" id="iax-conf">
 <h4><span class="section-number">1.4.4.2.4. </span>iax.conf<a class="headerlink" href="#iax-conf" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Wie der Name schon sagt, geht es um IAX Konten. IAX ist ein spezielles
 Protokoll, welches von Digium, dem Asterisk Erfinder entworfen wurde und
@@ -614,8 +610,8 @@ leider kein IAX Client bekannt, der verschlüsselte Anrufe unterstützt.</p>
 <span class="nv">qualify</span> <span class="o">=</span> yes
 </pre></div>
 </div>
-</section>
-<section id="extensions-conf">
+</div>
+<div class="section" id="extensions-conf">
 <h4><span class="section-number">1.4.4.2.5. </span>extensions.conf<a class="headerlink" href="#extensions-conf" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Jetzt geht es los, wir wollen telefonieren und dazu muss Asterisk
 wissen, wohin</p>
@@ -702,10 +698,10 @@ beendet.</p>
 <p>Ist der SIP User <strong>offline</strong> so wird das TIMEOUT NICHT berücksichtigt und
 sofort zum nächsten Schritt weitergeleitet!</p>
 </div>
-</section>
-</section>
-</section>
-<section id="starten-der-jail-fur-asterisk">
+</div>
+</div>
+</div>
+<div class="section" id="starten-der-jail-fur-asterisk">
 <h2><span class="section-number">1.4.5. </span>Starten der Jail für Asterisk<a class="headerlink" href="#starten-der-jail-fur-asterisk" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Jail starten</p>
 <div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>jexec -c asterisk
@@ -715,7 +711,7 @@ sofort zum nächsten Schritt weitergeleitet!</p>
 <div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>jexec -r asterisk
 </pre></div>
 </div>
-<section id="konfiguration-der-jail-fur-asterisk">
+<div class="section" id="konfiguration-der-jail-fur-asterisk">
 <h3><span class="section-number">1.4.5.1. </span>Konfiguration der Jail für Asterisk<a class="headerlink" href="#konfiguration-der-jail-fur-asterisk" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wir setzen folgenden Eintrag in der JAIL /etc/rc.conf!</p>
 <div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="nv">asterisk_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
@@ -725,7 +721,7 @@ sofort zum nächsten Schritt weitergeleitet!</p>
 <div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>jexec &lt;JID&gt; asterisk
 </pre></div>
 </div>
-<section id="asterisk-cli">
+<div class="section" id="asterisk-cli">
 <h4><span class="section-number">1.4.5.1.1. </span>Asterisk CLI<a class="headerlink" href="#asterisk-cli" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Wir verbinden uns mit der Asterisk Command Line.</p>
 <div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span>jexec &lt;JID&gt; asterisk -r
@@ -791,10 +787,10 @@ der extensions.conf definiert, dass alle 7XX Nummer über den IAX2 Peer
 (Asterisk-Server-B) geroutet werden. Dieser Versucht nun das Gespräch zu
 vemitteln, folglich muss auf dem zweiten Asterisk eine Wahlregel für den
 Bereich 700 erstellt sein.</p>
-</section>
-</section>
-</section>
-<section id="nutzliche-infos">
+</div>
+</div>
+</div>
+<div class="section" id="nutzliche-infos">
 <h2><span class="section-number">1.4.6. </span>nützliche Infos<a class="headerlink" href="#nutzliche-infos" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mit dem Kommando <code class="docutils literal notranslate"><span class="pre">core</span> <span class="pre">show</span> <span class="pre">help</span></code> kann sich Hilfe für die
 verschiedenen Asterisk Module ausgegeben werden. Hier ein Auszug.</p>
@@ -869,7 +865,7 @@ Durchwahlnummer</p></li>
 <p>Es gibt keine Regel die eine nicht existierende Durchwahl behandeln würde.
 Der Anruf wird in so einem Fall abgebrochen.</p>
 </div>
-<section id="blacklist">
+<div class="section" id="blacklist">
 <h3><span class="section-number">1.4.6.1. </span>Blacklist<a class="headerlink" href="#blacklist" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In der heutigen Zeit wird man immer öfter dazu gezwungen eine Rufnummer
 als „böse“ zu markieren und natürlich ist auch das kein Problem für
@@ -902,8 +898,8 @@ springen in den Block „blacklisted“.</p>
 <span class="n">exten</span> <span class="o">=&gt;</span> <span class="n">s</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">Hangup</span>
 </pre></div>
 </div>
-</section>
-<section id="externe-einwahl">
+</div>
+<div class="section" id="externe-einwahl">
 <h3><span class="section-number">1.4.6.2. </span>Externe Einwahl<a class="headerlink" href="#externe-einwahl" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Möchte man eine <strong>interne</strong> Leitung von aussen, dann kann man folgendes
 in der extensions.conf eintragen. Der Anrufer muss eine
@@ -929,8 +925,8 @@ exten =&gt; s,n,Hangup
 gewisse Risiken, deshalb empfiehlt es sich immer die eingehenden Rufnummer zu
 überprüfen!</p>
 </div>
-</section>
-<section id="offnungszeiten-im-dialplan">
+</div>
+<div class="section" id="offnungszeiten-im-dialplan">
 <h3><span class="section-number">1.4.6.3. </span>Öffnungszeiten im Dialplan<a class="headerlink" href="#offnungszeiten-im-dialplan" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Möchte man die Geschäftszeiten definieren könnte der Wählplan so
 aussehen.</p>
@@ -957,9 +953,9 @@ exten =&gt; ,n,Hangup();
 <p>Während den Öffnungszeiten leiten wir Anrufe an [open] und der
 entsprechenden Extension [{EXTEN:-3}] weiter. Die -3 bedeutet, wir
 verwenden nur die letzten 3 Stellen.</p>
-</section>
-</section>
-<section id="sicherheit">
+</div>
+</div>
+<div class="section" id="sicherheit">
 <h2><span class="section-number">1.4.7. </span>Sicherheit<a class="headerlink" href="#sicherheit" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Angriffe auf VoIP Anlagen sind sehr populär, es gibt daher einige
 Vorsichtsmaßnahmen welche zu beachten sind. Wird die Anlage privat
@@ -991,8 +987,8 @@ zugewiesen</p>
 8.8.8.0/24 befindet. Dies bedingt natürlich, dass er eine statische IP
 Adresse besitzt.</p>
 </div>
-</section>
-<section id="debugging">
+</div>
+<div class="section" id="debugging">
 <h2><span class="section-number">1.4.8. </span>Debugging<a class="headerlink" href="#debugging" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Gibt es Probleme mit SIP oder IAX Konten so kann man das Debugging in
 der Asterisk CLI aktivieren.</p>
@@ -1006,41 +1002,38 @@ der Asterisk CLI aktivieren.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="audio-cd_rippen.txt.html" class="btn btn-neutral float-right" title="1.5. Audio-CD rippen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="apache_mit_php5_installieren.txt.html" class="btn btn-neutral float-left" title="1.3. Apache mit php5 installieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="audio-cd_rippen.txt.html" class="btn btn-neutral float-right" title="1.5. Audio-CD rippen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="apache_mit_php5_installieren.txt.html" class="btn btn-neutral float-left" title="1.3. Apache mit php5 installieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

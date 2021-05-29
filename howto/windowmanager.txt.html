@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.140. Windowmanager &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.141. Windows-Freigabe" href="windows-freigabe.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -383,6 +386,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -396,8 +401,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/windowmanager.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/windowmanager.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -405,29 +410,20 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="windows-freigabe.txt.html" class="btn btn-neutral float-right" title="1.141. Windows-Freigabe" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="vpn_openbsd.txt.html" class="btn btn-neutral float-left" title="1.139. VPN (OpenBSD)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="windowmanager">
+  <div class="section" id="windowmanager">
 <h1><span class="section-number">1.140. </span>Windowmanager<a class="headerlink" href="#windowmanager" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Dieses HowTo behandelt die Installation und die Konfiguration diverser
 Windowmanager.</p>
-<section id="was-ist-ein-windowmanager">
+<div class="section" id="was-ist-ein-windowmanager">
 <h2><span class="section-number">1.140.1. </span>Was ist ein Windowmanager<a class="headerlink" href="#was-ist-ein-windowmanager" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Windowmanager haben die Aufgabe, den Anwendungsprogrammen das
 Verschieben, Minimieren, Vergrößern und Schließen von Fenstern zu
@@ -444,8 +440,8 @@ Gnome 3 ist es Mutter.</p>
 <p>Die einfachen Windowmanager unterscheiden sich jeweils durch ihre
 unterschiedliche Erweiterbarkeit, der Art und Weise der Bedienung sowie
 durch ihre Art und ihr Design, Fenster darzustellen.</p>
-</section>
-<section id="warum-windowmanager">
+</div>
+<div class="section" id="warum-windowmanager">
 <h2><span class="section-number">1.140.2. </span>Warum Windowmanager<a class="headerlink" href="#warum-windowmanager" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wann ist der Einsatz von Windowmanagern sinnvoll?</p>
 <p>Wem komplette Desktop Umgebungen wie KDE oder Gnome mit ihren
@@ -455,13 +451,13 @@ Individualisten gibt es als resourcensparende Alternative die
 sogenannten Windowmanager. Sie sind schnell installiert, brauchen nur
 wenig Arbeitsspeicher und sind auch auf älteren Rechnern durchaus
 performant.</p>
-</section>
-<section id="auswahl-windowmanager">
+</div>
+<div class="section" id="auswahl-windowmanager">
 <h2><span class="section-number">1.140.3. </span>Auswahl Windowmanager<a class="headerlink" href="#auswahl-windowmanager" title="Link zu dieser Überschrift">¶</a></h2>
-</section>
-<section id="twm">
+</div>
+<div class="section" id="twm">
 <h2><span class="section-number">1.140.4. </span>twm<a class="headerlink" href="#twm" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="beschreibung">
+<div class="section" id="beschreibung">
 <h3><span class="section-number">1.140.4.1. </span>Beschreibung<a class="headerlink" href="#beschreibung" title="Link zu dieser Überschrift">¶</a></h3>
 <p>twm (für Tom’s Window Manager oder Tab Window Manager) ist ein
 Windowmanager für das X Window System. Vorteile sind seine geringe Größe
@@ -483,8 +479,8 @@ Implementierungen dabei. twm ist freie Software und steht unter der
 MIT-Lizenz (auch „X11-Lizenz“ genannt, um Verwechslungen mit anderen
 Lizenzen des MIT zu verhindern).</p>
 <p>Quelle: <a class="reference external" href="https://de.wikipedia.org/wiki/Twm">Wikipedia</a></p>
-</section>
-<section id="geschichte">
+</div>
+<div class="section" id="geschichte">
 <h3><span class="section-number">1.140.4.2. </span>Geschichte<a class="headerlink" href="#geschichte" title="Link zu dieser Überschrift">¶</a></h3>
 <p>1987 schrieb Tom LaStrange die erste twm-Version aus Frustration über
 den damaligen Standard-WIndowmanager uwm. twm ist damit einer der
@@ -492,8 +488,8 @@ den damaligen Standard-WIndowmanager uwm. twm ist damit einer der
 Standard-Windowmanager für das X-Window-System und läuft dadurch auf
 jedem System, auf dem X11 installiert ist.</p>
 <p>Quelle: <a class="reference external" href="https://de.wikipedia.org/wiki/Twm">Wikipedia</a></p>
-</section>
-<section id="beschaffung-und-installation">
+</div>
+<div class="section" id="beschaffung-und-installation">
 <h3><span class="section-number">1.140.4.3. </span>Beschaffung und Installation<a class="headerlink" href="#beschaffung-und-installation" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Aus den Ports :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/x11-wm/twm</span>
@@ -501,8 +497,8 @@ jedem System, auf dem X11 installiert ist.</p>
 </div>
 <p>Als fertiges Binärpaket : ist durch die Grundinstallation von FreeBSD
 mit dem Paket xorg bereits vorhanden.</p>
-</section>
-<section id="konfiguration">
+</div>
+<div class="section" id="konfiguration">
 <h3><span class="section-number">1.140.4.4. </span>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die globale Konfigurationsdatei system.twmrc befindet sich im Ordner
 /usr/local/share/X11/twm/system.twmrc.</p>
@@ -510,8 +506,8 @@ mit dem Paket xorg bereits vorhanden.</p>
 um in .twmrc.</p>
 <p>Nun können wir die .twmrc mit einem Editor unserer Wahl editieren und
 unseren Wünschen gemäß anpassen.</p>
-</section>
-<section id="start">
+</div>
+<div class="section" id="start">
 <h3><span class="section-number">1.140.4.5. </span>Start<a class="headerlink" href="#start" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn wir ohne Loginmanager arbeiten und X mit startx von der Konsole
 starten, müssen wir im Homeverzeichnis eine .xinitrc erstellen und
@@ -528,15 +524,15 @@ Auswahlmenu des KDM Loginmanagers von KDE auf.</p>
 <p>Dieser Windowmanager spielt in der Praxis kaum noch eine Rolle, wird aber aus
 historischen Gründen mitaufgeführt.</p>
 </div>
-</section>
-<section id="screenshot">
+</div>
+<div class="section" id="screenshot">
 <h3><span class="section-number">1.140.4.6. </span>Screenshot<a class="headerlink" href="#screenshot" title="Link zu dieser Überschrift">¶</a></h3>
 <p><img alt="image1" src="../_images/twm.png" /></p>
-</section>
-</section>
-<section id="mwm">
+</div>
+</div>
+<div class="section" id="mwm">
 <h2><span class="section-number">1.140.5. </span>mwm<a class="headerlink" href="#mwm" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="beschreibung-4">
+<div class="section" id="beschreibung-4">
 <span id="id1"></span><h3><span class="section-number">1.140.5.1. </span>Beschreibung<a class="headerlink" href="#beschreibung-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Motif Window Manager (mwm) ist ein in die Jahre gekommener
 Dinosaurier und Urahn aller Fenster-Manager unter UNIX-Systemen.
@@ -545,8 +541,8 @@ openmotif vorhanden. Er zeichnet sich dadurch aus, dass er keinerlei
 Hintergrundprozesse startet. Der mwm ist somit auch für langsame Rechner
 bestens geeignet. Er stellt eine Iconbox bereit, der Bildschirm sieht
 somit immer aufgeräumt aus.</p>
-</section>
-<section id="geschichte-4">
+</div>
+<div class="section" id="geschichte-4">
 <span id="id2"></span><h3><span class="section-number">1.140.5.2. </span>Geschichte<a class="headerlink" href="#geschichte-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Motif ist nicht nur ein Window-Manager sondern in erster Linie ein
 Toolkit zur Erstellung graphischer Benutzeroberflächen mit X11. Dieses
@@ -557,8 +553,8 @@ Original-Source-Code, eingefroren auf Version 2.1.30, steht nach wie vor
 unter der Ägide der Open Group und ist gebührenpflichtig. Der Source
 Code dieser Version wurde von der Open Group unter der Bezeichnung Open
 Motif eingeschränkt freigegeben.</p>
-</section>
-<section id="beschaffung-und-installation-4">
+</div>
+<div class="section" id="beschaffung-und-installation-4">
 <span id="id3"></span><h3><span class="section-number">1.140.5.3. </span>Beschaffung und Installation<a class="headerlink" href="#beschaffung-und-installation-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Aus den Ports:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/x11-toolkits/open-motif</span>
@@ -570,8 +566,8 @@ Motif eingeschränkt freigegeben.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg install open-motif</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-4">
+</div>
+<div class="section" id="konfiguration-4">
 <span id="id4"></span><h3><span class="section-number">1.140.5.4. </span>Konfiguration<a class="headerlink" href="#konfiguration-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die globale Konfigurationsdatei <strong>system.mwmrc</strong> befindet sich im Ordner
 <strong>/usr/local/lib/X11/system.mwmrc</strong>.</p>
@@ -579,8 +575,8 @@ Motif eingeschränkt freigegeben.</p>
 sie um in <strong>.mwmrc</strong>.</p>
 <p>Nun können wir die <strong>.mwmrc</strong> mit einem Editor unserer Wahl editieren
 und unseren Wünschen gemäß anpassen.</p>
-</section>
-<section id="start-4">
+</div>
+<div class="section" id="start-4">
 <span id="id5"></span><h3><span class="section-number">1.140.5.5. </span>Start<a class="headerlink" href="#start-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn wir ohne Loginmanager arbeiten und X mit startx von der Konsole
 starten, müssen wir im Homeverzeichnis eine .xinitrc erstellen und
@@ -596,15 +592,15 @@ tragen dort folgendes ein:</p>
 <span class="n">exec</span> <span class="n">mwm</span>
 </pre></div>
 </div>
-</section>
-<section id="screenshot-4">
+</div>
+<div class="section" id="screenshot-4">
 <span id="id6"></span><h3><span class="section-number">1.140.5.6. </span>Screenshot<a class="headerlink" href="#screenshot-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p><img alt="image2" src="../_images/mwm.png" /></p>
-</section>
-</section>
-<section id="fvwm">
+</div>
+</div>
+<div class="section" id="fvwm">
 <h2><span class="section-number">1.140.6. </span>fvwm<a class="headerlink" href="#fvwm" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="beschreibung-2">
+<div class="section" id="beschreibung-2">
 <span id="id7"></span><h3><span class="section-number">1.140.6.1. </span>Beschreibung<a class="headerlink" href="#beschreibung-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>FVWM (F Virtual Window Manager) ist ein freier, ICCCM-konformer und
 modularer Fenstermanager für das X Window System.</p>
@@ -614,8 +610,8 @@ die Verwendung von virtuellen Arbeitsplätzen. Viele aktuelle
 Fensterverwalter sind mit FVWM verwandt, unter anderem AfterStep, Xfce
 oder Enlightenment.</p>
 <p><a class="reference external" href="https://de.wikipedia.org/wiki/FVWM">Quelle: Wikipedia</a></p>
-</section>
-<section id="geschichte-2">
+</div>
+<div class="section" id="geschichte-2">
 <span id="id8"></span><h3><span class="section-number">1.140.6.2. </span>Geschichte<a class="headerlink" href="#geschichte-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Robert Nation beschloss im Juli des Jahres 1993, sich genauer mit dem
 damals allgegenwärtigen Twm zu beschäftigen, da ihn TWM bei der Analyse
@@ -640,8 +636,8 @@ Jahr 2005) fvwm-1.24r auf modernen Linuxsystemen immer noch ohne
 Probleme kompiliert und ausgeführt werden kann, gibt es immer noch eine
 kleine Anzahl von Benutzern, die dieses ältere FVWM-Release verwenden.</p>
 <p><a class="reference external" href="https://de.wikipedia.org/wiki/FVWM">Quelle: Wikipedia</a></p>
-</section>
-<section id="beschaffung-und-installation-2">
+</div>
+<div class="section" id="beschaffung-und-installation-2">
 <span id="id9"></span><h3><span class="section-number">1.140.6.3. </span>Beschaffung und Installation<a class="headerlink" href="#beschaffung-und-installation-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Aus den Ports:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/x11-wm/fvwm</span>
@@ -653,8 +649,8 @@ kleine Anzahl von Benutzern, die dieses ältere FVWM-Release verwenden.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg install fvwm</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-2">
+</div>
+<div class="section" id="konfiguration-2">
 <span id="id10"></span><h3><span class="section-number">1.140.6.4. </span>Konfiguration<a class="headerlink" href="#konfiguration-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die globale Konfigurationsdatei <strong>system.fvwm2rc</strong> befindet sich im
 Ordner <strong>/usr/local/etc/system.fvwm2rc</strong> Wir kopieren die
@@ -741,8 +737,8 @@ Zeile:</p>
 <p>Eine wichtige Anlaufstelle ist auch www.fvwm.org</p>
 <p>Dort ist alles dokumentiert und es gibt auch viele Screenshots, zum Teil
 auch mit herunterladbarer Konfigurationsdatei.</p>
-</section>
-<section id="id11">
+</div>
+<div class="section" id="id11">
 <h3><span class="section-number">1.140.6.5. </span>Start<a class="headerlink" href="#id11" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn wir ohne Loginmanager arbeiten und X mit startx von der Konsole
 starten, müssen wir im Homeverzeichnis eine .xinitrc erstellen und
@@ -758,15 +754,15 @@ tragen dort folgendes ein:</p>
 <span class="n">exec</span> <span class="n">fvwm</span>
 </pre></div>
 </div>
-</section>
-<section id="screenshot-2">
+</div>
+<div class="section" id="screenshot-2">
 <span id="id12"></span><h3><span class="section-number">1.140.6.6. </span>Screenshot<a class="headerlink" href="#screenshot-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p><img alt="image3" src="../_images/fvwm.png" /></p>
-</section>
-</section>
-<section id="windowmaker">
+</div>
+</div>
+<div class="section" id="windowmaker">
 <h2><span class="section-number">1.140.7. </span>Windowmaker<a class="headerlink" href="#windowmaker" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="beschreibung-3">
+<div class="section" id="beschreibung-3">
 <span id="id13"></span><h3><span class="section-number">1.140.7.1. </span>Beschreibung<a class="headerlink" href="#beschreibung-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Window Maker (kurz wmaker) ist ein von Alfredo Kojima geschriebener
 Fenstermanager für das X Window System.</p>
@@ -781,8 +777,8 @@ werden.</p>
 <p>Window Maker kommt mit einem eigenen grafischen Kontrollzentrum daher
 und läßt sich daher schnell und einfach an die persönlichen Bedürfnissen
 anpassen.</p>
-</section>
-<section id="geschichte-3">
+</div>
+<div class="section" id="geschichte-3">
 <span id="id14"></span><h3><span class="section-number">1.140.7.2. </span>Geschichte<a class="headerlink" href="#geschichte-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Mac-OS-X-Bedienphilosophie erfreut sich auch auch heute noch einiger
 Beliebtheit. Window Maker ist als Nachbau der Oberfläche von „NeXTStep“
@@ -792,8 +788,8 @@ nunmehr über 20 Jahren seines Bestehens nicht wesentlich verändert, wird
 aber nach einer Pause von ein paar Jahren wider aktiv weiter entwickelt.</p>
 <p>Die Oberfläche strahlt etwas sehr archaisches, individuelles aus, ist
 aber technisch sehr wohl auf der Höhe der Zeit.</p>
-</section>
-<section id="beschaffung-und-installation-3">
+</div>
+<div class="section" id="beschaffung-und-installation-3">
 <span id="id15"></span><h3><span class="section-number">1.140.7.3. </span>Beschaffung und Installation<a class="headerlink" href="#beschaffung-und-installation-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Aus den Ports:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/x11-wm/windowmaker</span>
@@ -805,11 +801,11 @@ aber technisch sehr wohl auf der Höhe der Zeit.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg install windowmaker</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-3">
+</div>
+<div class="section" id="konfiguration-3">
 <span id="id16"></span><h3><span class="section-number">1.140.7.4. </span>Konfiguration<a class="headerlink" href="#konfiguration-3" title="Link zu dieser Überschrift">¶</a></h3>
-</section>
-<section id="start-3">
+</div>
+<div class="section" id="start-3">
 <span id="id17"></span><h3><span class="section-number">1.140.7.5. </span>Start<a class="headerlink" href="#start-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn wir ohne Loginmanager arbeiten und X mit startx von der Konsole
 starten, müssen wir im Homeverzeichnis eine .xinitrc erstellen und
@@ -825,15 +821,15 @@ tragen dort folgendes ein:</p>
 <span class="n">exec</span> <span class="n">wmaker</span>
 </pre></div>
 </div>
-</section>
-<section id="screenshot-3">
+</div>
+<div class="section" id="screenshot-3">
 <span id="id18"></span><h3><span class="section-number">1.140.7.6. </span>Screenshot<a class="headerlink" href="#screenshot-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p><img alt="image4" class="align-center" src="../_images/wmaker.png" /></p>
-</section>
-</section>
-<section id="fluxbox">
+</div>
+</div>
+<div class="section" id="fluxbox">
 <h2><span class="section-number">1.140.8. </span>Fluxbox<a class="headerlink" href="#fluxbox" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="beschreibung-5">
+<div class="section" id="beschreibung-5">
 <span id="id19"></span><h3><span class="section-number">1.140.8.1. </span>Beschreibung<a class="headerlink" href="#beschreibung-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Fluxbox ist ein Fenstermanager für das X Window System in unixoiden
 Betriebssystemen. Der Fokus der Entwickler liegt auf einem möglichst
@@ -863,13 +859,13 @@ vorteilhaft sein. Die Distribution Damn Small Linux verwendet Fluxbox
 standardmäßig. Auch von Ubuntu gab es mit Fluxbuntu und Linux Mint
 Fluxbox speziell für Fluxbox gestaltete Derivate.</p>
 <p><a class="reference external" href="https://de.wikipedia.org/wiki/Fluxbox">Quelle Wikipedia</a></p>
-</section>
-<section id="geschichte-5">
+</div>
+<div class="section" id="geschichte-5">
 <span id="id20"></span><h3><span class="section-number">1.140.8.2. </span>Geschichte<a class="headerlink" href="#geschichte-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Fluxbox ging als Abspaltung aus Blackbox hervor und ist mit diesem von
 Konfiguration und Handhabung her zu einem großen Teil identisch.</p>
-</section>
-<section id="beschaffung-und-installation-5">
+</div>
+<div class="section" id="beschaffung-und-installation-5">
 <span id="id21"></span><h3><span class="section-number">1.140.8.3. </span>Beschaffung und Installation<a class="headerlink" href="#beschaffung-und-installation-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Aus den Ports:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/x11-wm/fluxbox</span>
@@ -881,8 +877,8 @@ Konfiguration und Handhabung her zu einem großen Teil identisch.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg install fluxbox</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-5">
+</div>
+<div class="section" id="konfiguration-5">
 <span id="id22"></span><h3><span class="section-number">1.140.8.4. </span>Konfiguration<a class="headerlink" href="#konfiguration-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Um bereits installierte Anwendungen ins fluxbox Menu automatisch
 einzubinden, installieren wird das Paket menumaker.</p>
@@ -915,8 +911,8 @@ an den Anfang nach</p>
 <span class="p">[</span><span class="n">separator</span><span class="p">]</span>
 </pre></div>
 </div>
-</section>
-<section id="start-5">
+</div>
+<div class="section" id="start-5">
 <span id="id23"></span><h3><span class="section-number">1.140.8.5. </span>Start<a class="headerlink" href="#start-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn wir ohne Loginmanager arbeiten und X mit startx von der Konsole
 starten, müssen wir im Homeverzeichnis eine .xinitrc erstellen und
@@ -932,22 +928,22 @@ tragen dort folgendes ein:</p>
 <span class="n">exec</span> <span class="n">startfluxbox</span>
 </pre></div>
 </div>
-</section>
-<section id="screenshot-5">
+</div>
+<div class="section" id="screenshot-5">
 <span id="id24"></span><h3><span class="section-number">1.140.8.6. </span>Screenshot<a class="headerlink" href="#screenshot-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p><img alt="image5" class="align-center" src="../_images/fluxbox.png" /></p>
-</section>
-</section>
-<section id="icewm">
+</div>
+</div>
+<div class="section" id="icewm">
 <h2><span class="section-number">1.140.9. </span>IceWM<a class="headerlink" href="#icewm" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="beschreibung-6">
+<div class="section" id="beschreibung-6">
 <span id="id25"></span><h3><span class="section-number">1.140.9.1. </span>Beschreibung<a class="headerlink" href="#beschreibung-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p>IceWM ist ein in C++ programmierter, unter LGPL stehender Fenstermanager
 für das X11-Fenstersystem. Er ist ein resourcensparender, performanter
 Windowmanager, der durch seine Einfachheit und unkomplizierte
 Konfiguration besticht. Er glänzt auch durch seine Themenvielfalt.</p>
-</section>
-<section id="geschichte-6">
+</div>
+<div class="section" id="geschichte-6">
 <span id="id26"></span><h3><span class="section-number">1.140.9.2. </span>Geschichte<a class="headerlink" href="#geschichte-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p>IceWM wurde bereits 1997 von Marko Macek präsentiert, der seinen
 Fenstermanager nach wie vor weiterentwickelt. Sein Ziel lag dabei auf
@@ -959,8 +955,8 @@ startet.</p>
 <p>Bereits seit Ende der neunziger Jahre des letzten Jahrtausends in
 Entwicklung, erlangte IceWM durch die Vorinstallation auf den ersten
 Asus Eee PCs ab 2007 größere Verbreitung.</p>
-</section>
-<section id="beschaffung-und-installation-6">
+</div>
+<div class="section" id="beschaffung-und-installation-6">
 <span id="id27"></span><h3><span class="section-number">1.140.9.3. </span>Beschaffung und Installation<a class="headerlink" href="#beschaffung-und-installation-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Aus den Ports:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/x11-wm/icewm</span>
@@ -972,8 +968,8 @@ Asus Eee PCs ab 2007 größere Verbreitung.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg install icewm</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-6">
+</div>
+<div class="section" id="konfiguration-6">
 <span id="id28"></span><h3><span class="section-number">1.140.9.4. </span>Konfiguration<a class="headerlink" href="#konfiguration-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Um bereits installierte Anwendungen ins Icewm Menu automatisch
 einzubinden, installieren wird das Paket <strong>menumaker</strong>.</p>
@@ -991,8 +987,8 @@ unserer Wahl an unsere eigenen Bedürfnisse angepaßt werden.</p>
 <p>Im Menu unter <strong>Settings - Motive</strong> kann das Theme gewechselt werden. Es
 stehen eine Vielfalt von unterschiedlichen Themen wie Motif oder win95
 für die Liebhaber klassischer Designs zur Verfügung.</p>
-</section>
-<section id="start-6">
+</div>
+<div class="section" id="start-6">
 <span id="id29"></span><h3><span class="section-number">1.140.9.5. </span>Start<a class="headerlink" href="#start-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn wir ohne Loginmanager arbeiten und X mit startx von der Konsole
 starten, müssen wir im Homeverzeichnis eine .xinitrc erstellen und
@@ -1008,15 +1004,15 @@ tragen dort folgendes ein:</p>
 <span class="n">exec</span> <span class="n">icewm</span><span class="o">-</span><span class="n">session</span>
 </pre></div>
 </div>
-</section>
-<section id="screenshot-6">
+</div>
+<div class="section" id="screenshot-6">
 <span id="id30"></span><h3><span class="section-number">1.140.9.6. </span>Screenshot<a class="headerlink" href="#screenshot-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p><img alt="image6" class="align-center" src="../_images/icewm.png" /></p>
-</section>
-</section>
-<section id="openbox">
+</div>
+</div>
+<div class="section" id="openbox">
 <h2><span class="section-number">1.140.10. </span>Openbox<a class="headerlink" href="#openbox" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="beschreibung-7">
+<div class="section" id="beschreibung-7">
 <span id="id31"></span><h3><span class="section-number">1.140.10.1. </span>Beschreibung<a class="headerlink" href="#beschreibung-7" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Openbox ist ein sehr stabiler und schneller Fenstermanager. Er zeichnet
 sich durch seine seine hohe Anpassungsfähigkeit und einen geringen
@@ -1031,8 +1027,8 @@ Auswahlmenü, ähnlich dem, das die meisten Desktop-Umgebungen bei Klick
 auf die Taskleiste zu Verfügung stellen. Mit diesem vollständig
 konfigurierbaren Menü kann man Openbox beenden oder die nach Gruppen
 gegliederten Programme starten.</p>
-</section>
-<section id="geschichte-7">
+</div>
+<div class="section" id="geschichte-7">
 <span id="id32"></span><h3><span class="section-number">1.140.10.2. </span>Geschichte<a class="headerlink" href="#geschichte-7" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ursprünglich wurde Openbox vom X-Fenstermanager Blackbox abgeleitet.
 Blackbox wurde 1997 als ein leichter X Window-Manager entwickelt und
@@ -1046,8 +1042,8 @@ Desktop-Umgebung.</p>
 <p>Das Projekt startete 2002, für Version 3 wurde Openbox komplett neu
 geschrieben, lehnt sich jedoch immer noch an das Aussehen von Blackbox
 an.</p>
-</section>
-<section id="beschaffung-und-installation-7">
+</div>
+<div class="section" id="beschaffung-und-installation-7">
 <span id="id33"></span><h3><span class="section-number">1.140.10.3. </span>Beschaffung und Installation<a class="headerlink" href="#beschaffung-und-installation-7" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Aus den Ports:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/x11-wm/openbox</span>
@@ -1087,8 +1083,8 @@ auch Untermenüs erzeugen.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg install obmenu</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-7">
+</div>
+<div class="section" id="konfiguration-7">
 <span id="id34"></span><h3><span class="section-number">1.140.10.4. </span>Konfiguration<a class="headerlink" href="#konfiguration-7" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Zum Konfigurieren von Openbox gibt es ein Hilfsprogramm namens ObConf,
 den Openbox Configuration Manager.</p>
@@ -1149,16 +1145,16 @@ gelesen und beschrieben/geändert werden können.</p>
 <p>Nun können wir die <strong>menu.xml</strong> mit dem Konfigurationstool <strong>obmenu</strong>
 editieren und unseren Wünschen gemäß anpassen.</p>
 <p><a class="align-center reference internal" href="../_images/obmenu.png"><img alt="image8" class="align-center" src="../_images/obmenu.png" style="width: 400px;" /></a></p>
-</section>
-<section id="wallpaper-einrichten">
+</div>
+<div class="section" id="wallpaper-einrichten">
 <h3><span class="section-number">1.140.10.5. </span>Wallpaper einrichten<a class="headerlink" href="#wallpaper-einrichten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wir installieren <strong>feh</strong>, um ein Wallpaper unserer Wahl anzuzeigen.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg install feh</span>
 </pre></div>
 </div>
 <p><strong>feh</strong> wird in der <strong>autostart</strong> Datei gestartet (siehe Autostart).</p>
-</section>
-<section id="autostart">
+</div>
+<div class="section" id="autostart">
 <h3><span class="section-number">1.140.10.6. </span>Autostart<a class="headerlink" href="#autostart" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Fenstermanager Openbox kommt in der Standard Ausführung ziemlich
 spartanisch daher. Deshalb erweitern wir ihn durch zusätzliche nützliche
@@ -1186,11 +1182,11 @@ Schriftgröße 11 und bestimmen den Ort mit der geometrie.</p>
 <p>Wir positionieren eine analoge Uhr und bestimmen den Ort mit der
 geometrie.</p>
 <p>Mit <strong>feh</strong> wird ein Wallpaper geladen und angezeigt.</p>
-</section>
-<section id="weitere-tools-und-erweiterungewn">
+</div>
+<div class="section" id="weitere-tools-und-erweiterungewn">
 <h3><span class="section-number">1.140.10.7. </span>Weitere Tools und Erweiterungewn<a class="headerlink" href="#weitere-tools-und-erweiterungewn" title="Link zu dieser Überschrift">¶</a></h3>
-</section>
-<section id="start-7">
+</div>
+<div class="section" id="start-7">
 <span id="id35"></span><h3><span class="section-number">1.140.10.8. </span>Start<a class="headerlink" href="#start-7" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn wir ohne Loginmanager arbeiten und X mit startx von der Konsole
 starten, müssen wir im Homeverzeichnis eine .xinitrc erstellen und
@@ -1206,8 +1202,8 @@ tragen dort folgendes ein:</p>
 <span class="n">exec</span> <span class="n">openbox</span><span class="o">-</span><span class="n">session</span>
 </pre></div>
 </div>
-</section>
-<section id="fazit">
+</div>
+<div class="section" id="fazit">
 <h3><span class="section-number">1.140.10.9. </span>Fazit<a class="headerlink" href="#fazit" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Openbox macht Sinn und ist daher empfehlenswert, wenn konsequent auch
 leichtgewichtige Software wie</p>
@@ -1224,15 +1220,15 @@ automatisch gestartet werden und keine Abhängigkeiten den Speicherbedarf
 unnötig vergrößern und aufblähen. Openbox kann mit zusätzlichen Tools
 aufgewertet werden bis zu einem vollwertigen Desktop. Die große
 Flexibilität ist eines der großen Stärken von Openbox.</p>
-</section>
-<section id="screenshot-7">
+</div>
+<div class="section" id="screenshot-7">
 <span id="id36"></span><h3><span class="section-number">1.140.10.10. </span>Screenshot<a class="headerlink" href="#screenshot-7" title="Link zu dieser Überschrift">¶</a></h3>
 <p><img alt="image9" src="../_images/openbox.png" /></p>
-</section>
-</section>
-<section id="enlightenment">
+</div>
+</div>
+<div class="section" id="enlightenment">
 <h2><span class="section-number">1.140.11. </span>Enlightenment<a class="headerlink" href="#enlightenment" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="beschreibung-8">
+<div class="section" id="beschreibung-8">
 <span id="id37"></span><h3><span class="section-number">1.140.11.1. </span>Beschreibung<a class="headerlink" href="#beschreibung-8" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Enlightenment (meist kurz mit E bezeichnet), zu deutsch „Erleuchtung“,
 ist eine freie Desktop-Umgebung für X sowie Wayland, die 1997 von
@@ -1242,8 +1238,8 @@ Im Laufe der Zeit ist die Zahl der Komponenten und der Funktionsumfang
 so weit angewachsen, dass nun nicht mehr ein bloßer Fenstermanager,
 sondern eine vollwertige Desktop-Umgebung vorliegt.</p>
 <p><a class="reference external" href="https://de.wikipedia.org/wiki/Enlightenment">Quelle Wikipedia</a></p>
-</section>
-<section id="geschichte-8">
+</div>
+<div class="section" id="geschichte-8">
 <span id="id38"></span><h3><span class="section-number">1.140.11.2. </span>Geschichte<a class="headerlink" href="#geschichte-8" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Enlightenment wurde in der Folge jedoch als eigenständiges System
 entwickelt und erfreute sich lange Zeit großer Beliebtheit wegen seiner
@@ -1280,8 +1276,8 @@ Desktop bekam eine neue Mixer-Infrastruktur sowie ein überarbeitetes
 Audio-Gadget. Eine weitere Änderung ist die neue
 Screen-Management-Infrastruktur.</p>
 <p><a class="reference external" href="https://de.wikipedia.org/wiki/Enlightenment">Quelle Wikipedia</a></p>
-</section>
-<section id="beschaffung-und-installation-8">
+</div>
+<div class="section" id="beschaffung-und-installation-8">
 <span id="id39"></span><h3><span class="section-number">1.140.11.3. </span>Beschaffung und Installation<a class="headerlink" href="#beschaffung-und-installation-8" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Aus den Ports:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/x11-wm/enlightenment</span>
@@ -1293,8 +1289,8 @@ Screen-Management-Infrastruktur.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg install enlightenment</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-8">
+</div>
+<div class="section" id="konfiguration-8">
 <span id="id40"></span><h3><span class="section-number">1.140.11.4. </span>Konfiguration<a class="headerlink" href="#konfiguration-8" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nach dem ersten Start von Enlightenment öffnet sich ein
 Konfigurationsmanager, der eine grundlegende Basiseinstellung der
@@ -1303,8 +1299,8 @@ die Aktivierung/Deaktivierung des Composit abfragt. Diese Einstellungen
 sowie das Feintuning aller verwendeten Module lassen sich zu jeder Zeit
 nachträglich ändern. Enlightenment ist hochkonfigurierbar und läßt keine
 Wünsche offen.</p>
-</section>
-<section id="start-8">
+</div>
+<div class="section" id="start-8">
 <span id="id41"></span><h3><span class="section-number">1.140.11.5. </span>Start<a class="headerlink" href="#start-8" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn wir ohne Loginmanager arbeiten und X mit startx von der Konsole
 starten, müssen wir im Homeverzeichnis eine .xinitrc erstellen und
@@ -1320,15 +1316,15 @@ tragen dort folgendes ein:</p>
 <span class="n">exec</span> <span class="n">enlightenment_start</span>
 </pre></div>
 </div>
-</section>
-<section id="screenshot-8">
+</div>
+<div class="section" id="screenshot-8">
 <span id="id42"></span><h3><span class="section-number">1.140.11.6. </span>Screenshot<a class="headerlink" href="#screenshot-8" title="Link zu dieser Überschrift">¶</a></h3>
 <p><img alt="image10" class="align-center" src="../_images/enlightenment.png" /></p>
-</section>
-</section>
-<section id="jwm">
+</div>
+</div>
+<div class="section" id="jwm">
 <h2><span class="section-number">1.140.12. </span>JWM<a class="headerlink" href="#jwm" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="beschreibung-9">
+<div class="section" id="beschreibung-9">
 <span id="id43"></span><h3><span class="section-number">1.140.12.1. </span>Beschreibung<a class="headerlink" href="#beschreibung-9" title="Link zu dieser Überschrift">¶</a></h3>
 <p>JWM (Joe’s Window Manager) ist ein leichtgewichtiger Fenstermanager für
 das X Window System, welcher von Joe Wingbermuehle in C geschrieben
@@ -1344,14 +1340,14 @@ Manager und WM gedacht sind.</p>
 Linux, Puppy Linux, Simplix, Slitaz (&lt; 2.0) und SystemRescueCd (&lt;
 1.1.7).</p>
 <p>Quelle: <a class="reference external" href="https://de.wikipedia.org/wiki/JWM">Wikipedia</a></p>
-</section>
-<section id="geschichte-9">
+</div>
+<div class="section" id="geschichte-9">
 <span id="id44"></span><h3><span class="section-number">1.140.12.2. </span>Geschichte<a class="headerlink" href="#geschichte-9" title="Link zu dieser Überschrift">¶</a></h3>
 <p>JWM wird noch unterstützt und weiterentwickelt. Die Homepage ist
 erreichbar unter:</p>
 <p><a class="reference external" href="http://joewing.net/projects/jwm/index.shtml">JWM Homepage</a></p>
-</section>
-<section id="beschaffung-und-installation-9">
+</div>
+<div class="section" id="beschaffung-und-installation-9">
 <span id="id45"></span><h3><span class="section-number">1.140.12.3. </span>Beschaffung und Installation<a class="headerlink" href="#beschaffung-und-installation-9" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Aus den Ports:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /usr/ports/x11-wm/jwm</span>
@@ -1363,8 +1359,8 @@ erreichbar unter:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pkg install jwm</span>
 </pre></div>
 </div>
-</section>
-<section id="konfiguration-9">
+</div>
+<div class="section" id="konfiguration-9">
 <span id="id46"></span><h3><span class="section-number">1.140.12.4. </span>Konfiguration<a class="headerlink" href="#konfiguration-9" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Original Dokumentation: <a class="reference external" href="http://joewing.net/projects/jwm/config-2.3.shtml">JWM
 Doku</a></p>
@@ -1373,8 +1369,8 @@ Ordner <strong>/usr/local/etc/system.jwmrc</strong> Wir kopieren die <strong>sys
 in unser Home Verzeichnis und benennen sie um in <strong>.jwmrc</strong>.</p>
 <p>Nun können wir die <strong>.jwmrc</strong> mit einem Editor unserer Wahl editieren
 und unseren Wünschen gemäß anpassen.</p>
-</section>
-<section id="fontgrosze-der-bildschirmauflosung-anpassen">
+</div>
+<div class="section" id="fontgrosze-der-bildschirmauflosung-anpassen">
 <h3><span class="section-number">1.140.12.5. </span>Fontgröße der Bildschirmauflösung anpassen<a class="headerlink" href="#fontgrosze-der-bildschirmauflosung-anpassen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In diesen Bereichen finden wir die Konfiguration der Fonts</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- Visual Styles --&gt; Dies ist ein Kommentar
@@ -1405,8 +1401,8 @@ Fontgröße:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Font</span><span class="o">&gt;</span><span class="n">Sans</span><span class="o">-</span><span class="mi">12</span><span class="p">:</span><span class="n">bold</span><span class="o">&lt;/</span><span class="n">Font</span><span class="o">&gt;</span> <span class="n">oder</span> <span class="n">normal</span> <span class="o">&lt;</span><span class="n">Font</span><span class="o">&gt;</span><span class="n">Sans</span><span class="o">-</span><span class="mi">12</span><span class="o">&lt;/</span><span class="n">Font</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="wallpaper-einrichten-4">
+</div>
+<div class="section" id="wallpaper-einrichten-4">
 <span id="id47"></span><h3><span class="section-number">1.140.12.6. </span>Wallpaper einrichten<a class="headerlink" href="#wallpaper-einrichten-4" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- &lt;Background type=&quot;image&quot;&gt;Pfad zum Bild/wallpaper.jpg&lt;/Background&gt; --&gt;
 </pre></div>
@@ -1416,16 +1412,16 @@ Fontgröße:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Background</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;solid&quot;</span><span class="o">&gt;</span><span class="n">SteelBlue</span><span class="o">&lt;/</span><span class="n">Background</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="fokus-bestimmen">
+</div>
+<div class="section" id="fokus-bestimmen">
 <h3><span class="section-number">1.140.12.7. </span>Fokus bestimmen<a class="headerlink" href="#fokus-bestimmen" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- The focus model (sloppy or click) --&gt; Kommentar
 
 &lt;FocusModel&gt;click&lt;/FocusModel&gt;
 </pre></div>
 </div>
-</section>
-<section id="autostart-4">
+</div>
+<div class="section" id="autostart-4">
 <span id="id48"></span><h3><span class="section-number">1.140.12.8. </span>Autostart<a class="headerlink" href="#autostart-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wir benötigen im Panel einen Lautstärkeregler. Dafür eignet sich
 <strong>volumeicon</strong>.</p>
@@ -1438,8 +1434,8 @@ Fontgröße:</p>
 </div>
 <p>Mit einem Rechtsklick auf dem Lautstärkeregler können wir ihn
 konfigurieren.</p>
-</section>
-<section id="weitere-tools-und-erweiterungen">
+</div>
+<div class="section" id="weitere-tools-und-erweiterungen">
 <h3><span class="section-number">1.140.12.9. </span>Weitere Tools und Erweiterungen<a class="headerlink" href="#weitere-tools-und-erweiterungen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wir können einen Compositmanager einsetzen für Transparenz und
 Schattenwurf:</p>
@@ -1462,8 +1458,8 @@ angepasst werden kann.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">StartupCommand</span><span class="o">&gt;</span><span class="n">xosview</span> <span class="o">-</span><span class="n">geometry</span> <span class="mi">200</span><span class="n">x200</span><span class="o">-</span><span class="mi">50</span><span class="o">+</span><span class="mi">50</span><span class="o">&lt;/</span><span class="n">StartupCommand</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="start-9">
+</div>
+<div class="section" id="start-9">
 <span id="id49"></span><h3><span class="section-number">1.140.12.10. </span>Start<a class="headerlink" href="#start-9" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn wir ohne Loginmanager arbeiten und X mit startx von der Konsole
 starten, müssen wir im Homeverzeichnis eine .xinitrc erstellen und
@@ -1479,8 +1475,8 @@ tragen dort folgendes ein:</p>
 <span class="n">exec</span> <span class="n">jwm</span>
 </pre></div>
 </div>
-</section>
-<section id="fazit-4">
+</div>
+<div class="section" id="fazit-4">
 <span id="id50"></span><h3><span class="section-number">1.140.12.11. </span>Fazit<a class="headerlink" href="#fazit-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der JWM ist sehr resourcensparend, schnell angepaßt und konfiguriert. Er
 bringt bereits ein Panel mit und benötigt kein Extra Tool, um Wallpaper
@@ -1488,49 +1484,46 @@ anzuzeigen. Er ist sehr flexiblel, es können auch mehrere Panels
 verwendet werden. Hier wurden nur die wichtigsten Möglichkeiten
 thematisiert. Für eine weitergehende Dokumentation ist die Original Doku
 zu lesen.</p>
-</section>
-<section id="screenshot-9">
+</div>
+<div class="section" id="screenshot-9">
 <span id="id51"></span><h3><span class="section-number">1.140.12.12. </span>Screenshot<a class="headerlink" href="#screenshot-9" title="Link zu dieser Überschrift">¶</a></h3>
 <p><img alt="image11" src="../_images/jwm.png" /></p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="windows-freigabe.txt.html" class="btn btn-neutral float-right" title="1.141. Windows-Freigabe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="vpn_openbsd.txt.html" class="btn btn-neutral float-left" title="1.139. VPN (OpenBSD)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="windows-freigabe.txt.html" class="btn btn-neutral float-right" title="1.141. Windows-Freigabe" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="vpn_openbsd.txt.html" class="btn btn-neutral float-left" title="1.139. VPN (OpenBSD)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

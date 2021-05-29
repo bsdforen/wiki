@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.76. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD) &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.77. M0n0wall &amp; SIP" href="m0n0wall_sip.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -311,6 +314,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -324,8 +329,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -333,26 +338,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="m0n0wall_sip.txt.html" class="btn btn-neutral float-right" title="1.77. M0n0wall &amp; SIP" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="konsole_nach_systemstart_und_logout_loeschen.txt.html" class="btn btn-neutral float-left" title="1.75. Konsole nach Systemstart und Logout löschen" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="kopplung-zweier-stationen-mittels-rfc3378-via-wlan-freebsd">
+  <div class="section" id="kopplung-zweier-stationen-mittels-rfc3378-via-wlan-freebsd">
 <h1><span class="section-number">1.76. </span>Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)<a class="headerlink" href="#kopplung-zweier-stationen-mittels-rfc3378-via-wlan-freebsd" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Ein weiterer Anwendungsfall von ipsec(4) eröffnet sich u. a. zum
 Absichern von Kommunikationsbeziehungen, welche auf dem in
 <a class="reference external" href="http://tools.ietf.org/html/rfc3378">RFC3378</a> beschriebenen
@@ -439,7 +435,7 @@ und <a class="reference external" href="http://www.cl.cam.ac.uk/cgi-bin/manpage?
 Kontext zu dem Artikel <a class="reference external" href="/howto/ipsec-vpn">ipsec-vpn</a> und <a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/ipsec.html">Kapitel
 15.9</a>
 des FreeBSD-Benutzerhandbuches zu betrachten.</p>
-<section id="aufbau-des-etherip-tunnels-beim-dsl-router">
+<div class="section" id="aufbau-des-etherip-tunnels-beim-dsl-router">
 <h2><span class="section-number">1.76.1. </span>Aufbau des EtherIP-Tunnels beim DSL-Router<a class="headerlink" href="#aufbau-des-etherip-tunnels-beim-dsl-router" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Zuallererst sollte ein unbenutztes wlan(4) Interface konfiguriert
 werden:</p>
@@ -468,7 +464,7 @@ mit (physischen) Ethernet Interfaces.</p>
 <span class="c1"># ifconfig bridge0 create # ifconfig bridge0 addm ngeth0 addm gif0 up</span>
 </pre></div>
 </div>
-<section id="etc-rc-conf">
+<div class="section" id="etc-rc-conf">
 <h3><span class="section-number">1.76.1.1. </span>/etc/rc.conf<a class="headerlink" href="#etc-rc-conf" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wird ergänzt mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wlans_ath0</span><span class="o">=</span><span class="s2">&quot;wlan0&quot;</span>
@@ -483,23 +479,23 @@ mit (physischen) Ethernet Interfaces.</p>
 <span class="n">ifconfig_bridge0</span><span class="o">=</span><span class="s2">&quot;addm ngeth0 addm gif0 up&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="etc-sysctl-conf">
+</div>
+<div class="section" id="etc-sysctl-conf">
 <h3><span class="section-number">1.76.1.2. </span>/etc/sysctl.conf<a class="headerlink" href="#etc-sysctl-conf" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wird ergänzt mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">gif</span><span class="o">.</span><span class="n">parallel_tunnels</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
-</section>
-<section id="etc-ppp-ppp-conf">
+</div>
+<div class="section" id="etc-ppp-ppp-conf">
 <h3><span class="section-number">1.76.1.3. </span>/etc/ppp/ppp.conf<a class="headerlink" href="#etc-ppp-ppp-conf" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wird ergänzt mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">gif</span><span class="o">.</span><span class="n">parallel_tunnels</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="aufbau-des-etherip-tunnels-beim-switch">
+</div>
+</div>
+<div class="section" id="aufbau-des-etherip-tunnels-beim-switch">
 <h2><span class="section-number">1.76.2. </span>Aufbau des EtherIP-Tunnels beim Switch<a class="headerlink" href="#aufbau-des-etherip-tunnels-beim-switch" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das Switch besitzt (hier) drei Ethernet Interfaces (fxp0, fxp1, fxp2)
 und ein wlan(4) Interface, wobei fxp0 mit dem DSL-Modem verbunden werden
@@ -565,14 +561,14 @@ gekoppelt sein.</p>
 und das
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=bpf&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+8.2-RELEASE&amp;format=html">bpf(4)</a>
 Interface geeignet zum Überprüfen des Verbindungsstatus.</p>
-<section id="etc-start-if-wlan0">
+<div class="section" id="etc-start-if-wlan0">
 <h3><span class="section-number">1.76.2.1. </span>/etc/start_if.wlan0<a class="headerlink" href="#etc-start-if-wlan0" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ngctl mkpeer . eiface hook ether
 ifconfig ngeth0 ether $mac_adresse up
 </pre></div>
 </div>
-</section>
-<section id="etcrc-conf-3">
+</div>
+<div class="section" id="etcrc-conf-3">
 <span id="id1"></span><h3><span class="section-number">1.76.2.2. </span>/etc/rc.conf<a class="headerlink" href="#etcrc-conf-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wird ergänzt mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wlans_ath0</span><span class="o">=</span><span class="s2">&quot;wlan0&quot;</span>
@@ -587,15 +583,15 @@ ifconfig ngeth0 ether $mac_adresse up
 <span class="n">ifconfig_bridge0</span><span class="o">=</span><span class="s2">&quot;addm ngeth0 addm gif0 up&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="etcsysctl-conf-3">
+</div>
+<div class="section" id="etcsysctl-conf-3">
 <span id="id2"></span><h3><span class="section-number">1.76.2.3. </span>/etc/sysctl.conf<a class="headerlink" href="#etcsysctl-conf-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wird ergänzt mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">gif</span><span class="o">.</span><span class="n">parallel_tunnels</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
-</section>
-<section id="wie-wird-jetzt-mit-ng-bridge-4-umgegangen">
+</div>
+<div class="section" id="wie-wird-jetzt-mit-ng-bridge-4-umgegangen">
 <h3><span class="section-number">1.76.2.4. </span>Wie wird jetzt mit ng_bridge(4) umgegangen?<a class="headerlink" href="#wie-wird-jetzt-mit-ng-bridge-4-umgegangen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Das Shellscript /usr/share/examples/netgraph/ether.bridge sollte
 angepasst werden:</p>
@@ -764,13 +760,13 @@ bridge_stats<span class="o">()</span> <span class="o">{</span>
 werden. Tiefergehende Informationen bzgl. rc.d scripting sind in diesem
 <a class="reference external" href="http://www.FreeBSD.org/doc/en_US.ISO8859-1/articles/rc-scripting/index.html">Artikel</a>
 beschrieben.</p>
-</section>
-</section>
-<section id="absichern-des-etherip-tunnels-mittels-ipsec-4">
+</div>
+</div>
+<div class="section" id="absichern-des-etherip-tunnels-mittels-ipsec-4">
 <h2><span class="section-number">1.76.3. </span>Absichern des EtherIP-Tunnels mittels ipsec(4)<a class="headerlink" href="#absichern-des-etherip-tunnels-mittels-ipsec-4" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Hierbei wird vorausgesetzt, dass ipsec(4) im Kernel aktiviert und
 racoon(8) auf beiden Stationen installiert ist.</p>
-<section id="etc-ipsec-conf">
+<div class="section" id="etc-ipsec-conf">
 <h3><span class="section-number">1.76.3.1. </span>/etc/ipsec.conf<a class="headerlink" href="#etc-ipsec-conf" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Im gegebenen Kontext müsste der DSL-Router wie folgt konfiguriert
 werden:</p>
@@ -787,8 +783,8 @@ werden:</p>
   <span class="n">ipsec</span> <span class="n">esp</span><span class="o">/</span><span class="n">transport</span><span class="o">/</span><span class="mf">192.168.0.1</span> <span class="mf">192.168.0.2</span><span class="o">/</span><span class="n">require</span><span class="p">;</span>
 </pre></div>
 </div>
-</section>
-<section id="usr-local-etc-racoon-racoon-conf">
+</div>
+<div class="section" id="usr-local-etc-racoon-racoon-conf">
 <h3><span class="section-number">1.76.3.2. </span>/usr/local/etc/racoon/racoon.conf<a class="headerlink" href="#usr-local-etc-racoon-racoon-conf" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Sowie auf beiden Stationen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>path pre_shared_key &quot;/usr/local/etc/racoon/psk.txt&quot; ;
@@ -849,8 +845,8 @@ sainfo anonymous
 }
 </pre></div>
 </div>
-</section>
-<section id="usr-local-etc-racoon-psk-txt">
+</div>
+<div class="section" id="usr-local-etc-racoon-psk-txt">
 <h3><span class="section-number">1.76.3.3. </span>/usr/local/etc/racoon/psk.txt<a class="headerlink" href="#usr-local-etc-racoon-psk-txt" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ip_von_wlan_interface_der_gegenstelle $ich_bin_das_selbe_geheime_passwort
 </pre></div>
@@ -858,8 +854,8 @@ sainfo anonymous
 <p>&lt;note warning&gt; Diese Datei muss mit den Benutzerrechten 0600 und in
 Besitz stehend von dem User mit UID 0 auf jeder Station angelegt werden.
 &lt;/note&gt;</p>
-</section>
-<section id="etcrc-conf-2">
+</div>
+<div class="section" id="etcrc-conf-2">
 <span id="id3"></span><h3><span class="section-number">1.76.3.4. </span>/etc/rc.conf<a class="headerlink" href="#etcrc-conf-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die auf ipsec(4) und racoon(8) verweisenden Einträge sollten auf beiden
 Stationen ergänzt werden:</p>
@@ -868,8 +864,8 @@ Stationen ergänzt werden:</p>
 <span class="n">racoon_enable</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="etc-rc-firewall">
+</div>
+<div class="section" id="etc-rc-firewall">
 <h3><span class="section-number">1.76.3.5. </span>/etc/rc.firewall<a class="headerlink" href="#etc-rc-firewall" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Könnte sich auf dem Switch wie folgt gestalten:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
@@ -909,8 +905,8 @@ $fwcmd add allow esp from 192.168.0.2 to 192.168.0.1 in via $wlanif
 $fwcmd add allow udp from 192.168.0.2 500 to 192.168.0.1 500 in via $wlanif
 </pre></div>
 </div>
-</section>
-<section id="absichern-des-etherip-tunnels-ohne-neustart">
+</div>
+<div class="section" id="absichern-des-etherip-tunnels-ohne-neustart">
 <h3><span class="section-number">1.76.3.6. </span>Absichern des EtherIP-Tunnels ohne Neustart<a class="headerlink" href="#absichern-des-etherip-tunnels-ohne-neustart" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ist ein Neustart beider Stationen nicht erwünscht, kann die
 Verschlüsselung des EtherIP-Tunnels wie folgt „manuell“ auf dem Router
@@ -947,42 +943,39 @@ näher zu beschäftigen.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="m0n0wall_sip.txt.html" class="btn btn-neutral float-right" title="1.77. M0n0wall &amp; SIP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="konsole_nach_systemstart_und_logout_loeschen.txt.html" class="btn btn-neutral float-left" title="1.75. Konsole nach Systemstart und Logout löschen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="m0n0wall_sip.txt.html" class="btn btn-neutral float-right" title="1.77. M0n0wall &amp; SIP" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="konsole_nach_systemstart_und_logout_loeschen.txt.html" class="btn btn-neutral float-left" title="1.75. Konsole nach Systemstart und Logout löschen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.83. Mehrmonitor-Betrieb &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.84. mkisofs und cdrecord" href="mkisofs_und_cdrecord.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -315,6 +318,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -328,8 +333,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/mehrmonitor-betrieb.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/mehrmonitor-betrieb.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -337,29 +342,20 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="mkisofs_und_cdrecord.txt.html" class="btn btn-neutral float-right" title="1.84. mkisofs und cdrecord" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="make_world.txt.html" class="btn btn-neutral float-left" title="1.82. make world" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="mehrmonitor-betrieb">
+  <div class="section" id="mehrmonitor-betrieb">
 <h1><span class="section-number">1.83. </span>Mehrmonitor-Betrieb<a class="headerlink" href="#mehrmonitor-betrieb" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</aside>
+</div>
 <p>Ab Xorg 7.3 wurde der Mehrmonitor-Betrieb deutlich verbessert. Fast alles lässt
 sich nun zur Laufzeit konfigurieren. Dieses HowTo erklärt wie zur Laufzeit ein
 weiterer Monitor in Betrieb genommen und nach Wunsch angeordnet wird. Zudem
@@ -369,14 +365,14 @@ wird auch erklärt wie diese Konfiguration in der <code class="docutils literal 
 </pre></div>
 </div>
 <p>mindestens die Versionsnummer <code class="docutils literal notranslate"><span class="pre">1.4.0</span></code> ausgeben.</p>
-<section id="verwandte-artikel">
+<div class="section" id="verwandte-artikel">
 <h2><span class="section-number">1.83.1. </span>Verwandte Artikel<a class="headerlink" href="#verwandte-artikel" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Besitzer von NVidia Grafikkarten sollten statt diesem den Artikel
 <a class="reference external" href="MultiheadmitNV">Multihead mit NV</a> lesen.</p></li>
 </ul>
-</section>
-<section id="virtual">
+</div>
+<div class="section" id="virtual">
 <h2><span class="section-number">1.83.2. </span>Virtual<a class="headerlink" href="#virtual" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Xorg blendet die Monitore in ein virtuelles Gesamtbild ein. Dieses
 Gesamtbild muss alles umfassen, wenn sie also 2 TFTs mit <code class="docutils literal notranslate"><span class="pre">1280x1024</span></code>
@@ -387,7 +383,7 @@ mehr möglich und Xorg wählt das Fenster entsprechend so, dass die
 3D-Beschleunigung möglich bleibt. Hier gilt abzuwägen was einem
 wichtiger ist, da <strong>Virtual</strong> der einzige Parameter ist, der sich nicht
 zur Laufzeit ändern lässt.</p>
-<section id="aktuelle-grosze-ermitteln">
+<div class="section" id="aktuelle-grosze-ermitteln">
 <h3><span class="section-number">1.83.2.1. </span>aktuelle Größe ermitteln<a class="headerlink" href="#aktuelle-grosze-ermitteln" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die aktuelle Größe ermittelt man von einem Terminal wie <code class="docutils literal notranslate"><span class="pre">xterm</span></code> aus
 mit folgendem Befehl:</p>
@@ -410,14 +406,14 @@ Grafikkarten zu einem Arbeitsbereich zusammengefasst werden.</p>
 werden.</p>
 <p>Von besonderem Interesse ist hier natürlich die maximale Größe. Genügt
 sie den Ansprüchen oder muss sie geändert werden?</p>
-</section>
-<section id="maximale-grosze-des-bildbereiches-anpassen">
+</div>
+<div class="section" id="maximale-grosze-des-bildbereiches-anpassen">
 <h3><span class="section-number">1.83.2.2. </span>maximale Größe des Bildbereiches anpassen<a class="headerlink" href="#maximale-grosze-des-bildbereiches-anpassen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Da diese Größe zur Laufzeit nicht geändert werden kann sollte vorher
 genau überlegt werden. Überschreitet die Größe den zur 3D-Beschleunigung
 nötigen Bereich, kann natürlich gleich ein großzügig gewählter Bereich
 gewählt werden.</p>
-<section id="benotigten-bereich-berechnen">
+<div class="section" id="benotigten-bereich-berechnen">
 <h4><span class="section-number">1.83.2.2.1. </span>benötigten Bereich berechnen<a class="headerlink" href="#benotigten-bereich-berechnen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Als Beispiel wird ein Notebook-Monitor mit <code class="docutils literal notranslate"><span class="pre">1400x1050</span></code> Bildpunkten
 betrachtet, an dem noch ein Röhrenmonitor der mit <code class="docutils literal notranslate"><span class="pre">1600x1200</span></code>
@@ -429,8 +425,8 @@ verwendet werden. Nebeneinander wäre der korrekte Wert also
 <p>Werden die Bildschirme übereinander angeordnet, werden natürlich die
 Rollen von X- und Y-Achse bei der Berechnung getauscht. In diesem Fall
 wäre das Ergebnis also <code class="docutils literal notranslate"><span class="pre">1600x2250</span></code>.</p>
-</section>
-<section id="xorg-conf-anpassen">
+</div>
+<div class="section" id="xorg-conf-anpassen">
 <h4><span class="section-number">1.83.2.2.2. </span>xorg.conf anpassen<a class="headerlink" href="#xorg-conf-anpassen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Für die <code class="docutils literal notranslate"><span class="pre">xorg.conf</span></code> gibt es mehrere mögliche Orte. Bei den Meisten
 befindet sie sich unter <code class="docutils literal notranslate"><span class="pre">/etc/X11/xorg.conf</span></code>, sie kann aber auch unter
@@ -457,17 +453,17 @@ Dies ist ein Beispeil vom Notebook des Autors:</p>
 <span class="n">EndSection</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
-<section id="xrandr">
+</div>
+</div>
+</div>
+<div class="section" id="xrandr">
 <h2><span class="section-number">1.83.3. </span>xrandr<a class="headerlink" href="#xrandr" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mit Hilfe des Programms <code class="docutils literal notranslate"><span class="pre">xrandr</span></code> lassen sich Zahlreiche Einstellungen
 zur Laufzeit ändern. Das geht so weit, dass man zur Laufzeit Modelines
 hinzufügen und einem Monitor zuweisen und auch wieder entfernen kann.
 Das ist natürlich optimal zum Testen, bevor solche Einstellungen in der
 <code class="docutils literal notranslate"><span class="pre">xorg.conf</span></code> eingetragen werden.</p>
-<section id="ausgange-entdecken">
+<div class="section" id="ausgange-entdecken">
 <h3><span class="section-number">1.83.3.1. </span>Ausgänge entdecken<a class="headerlink" href="#ausgange-entdecken" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Schlüssel zur Arbeit mit <code class="docutils literal notranslate"><span class="pre">xrandr</span></code> ist Einstellungen für
 Monitorausgänge jeweils seperat vorzunehmen. Dazu müssen erst einmal die
@@ -490,8 +486,8 @@ erkannten Ausgänge ermittelt werden. Dazu kann der Befehl:</p>
 die Ausgabe von <code class="docutils literal notranslate"><span class="pre">xrandr</span></code> nicht die benötigten Ausgänge liefert kann
 das Unterfangen bereits aufgegeben werden. Ohne in die
 Treiberentwicklung einzusteigen ist hier nichts weiter zu erreichen.</p>
-</section>
-<section id="auflosung-einstellen">
+</div>
+<div class="section" id="auflosung-einstellen">
 <h3><span class="section-number">1.83.3.2. </span>Auflösung einstellen<a class="headerlink" href="#auflosung-einstellen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Mit dem Kommando:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xrandr
@@ -540,8 +536,8 @@ zurückversetzt werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xrandr --output LVDS --auto
 </pre></div>
 </div>
-</section>
-<section id="modelines-zur-laufzeit-testen">
+</div>
+<div class="section" id="modelines-zur-laufzeit-testen">
 <h3><span class="section-number">1.83.3.3. </span>Modelines zur Laufzeit testen<a class="headerlink" href="#modelines-zur-laufzeit-testen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Für das folgende Beispiel wurde am Notebook des Autors ein Röhrenmonitor
 des Typs <strong>Sun GDM-5410</strong> angeschlossen:</p>
@@ -619,8 +615,8 @@ $ xrandr --rmmode 1024x768
 </div>
 <p>Das erste Kommando entfernt die Bindung von Modus und Ausgang, das
 Zweite löscht den Modus.</p>
-</section>
-<section id="monitore-anordnen">
+</div>
+<div class="section" id="monitore-anordnen">
 <h3><span class="section-number">1.83.3.4. </span>Monitore anordnen<a class="headerlink" href="#monitore-anordnen" title="Link zu dieser Überschrift">¶</a></h3>
 <p><a class="align-right reference internal" href="../_images/mehrmonitor-betrieb.jpg"><img alt="DualScreen Betrieb mit einem externen 16:10 LCD-Monitor und dem Notebook LCD." class="align-right" src="../_images/mehrmonitor-betrieb.jpg" style="width: 180px;" /></a> Der Clone-Modus hat seine Vorzüge, zum Beispiel bei
 Präsentation, jedoch gibt es auch einen Nachteil, der Overlay-Modus (in
@@ -688,23 +684,23 @@ sein, dass Anwendungen nach dem Starten verschollen bleiben. Diese
 Anwendungen haben ihr Fenster außerhalb des Bildbereichs geöffnet.
 Window-Manager bieten normalerweise eine Funktion um solche Fenster
 wieder zurückzuholen.</p>
-</section>
-<section id="monitore-abschalten">
+</div>
+<div class="section" id="monitore-abschalten">
 <h3><span class="section-number">1.83.3.5. </span>Monitore abschalten<a class="headerlink" href="#monitore-abschalten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Bevor der Stecker gezogen wird ist es nicht unbedingt eine schlechte
 Idee die Monitor-Ansteuerung abzuschalten. Dazu genügt das Kommando:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xrandr --output VGA-0 --off
 </pre></div>
 </div>
-</section>
-</section>
-<section id="xorg-conf-anpassen-1">
+</div>
+</div>
+<div class="section" id="xorg-conf-anpassen-1">
 <span id="id1"></span><h2><span class="section-number">1.83.4. </span>xorg.conf anpassen<a class="headerlink" href="#xorg-conf-anpassen-1" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Will man bestimmte ModeLines festhalten oder eine Konfiguration
 festzurren, zum Beispiel weil der Mehr-Monitor-Betrieb die Regel und
 nicht die Ausnahme ist, lohnt es sich die gewünschten Einstellungen in
 der <code class="docutils literal notranslate"><span class="pre">xorg.conf</span></code> einzutragen.</p>
-<section id="probleme-vermeiden">
+<div class="section" id="probleme-vermeiden">
 <h3><span class="section-number">1.83.4.1. </span>Probleme vermeiden<a class="headerlink" href="#probleme-vermeiden" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Vor dem Ändern der <code class="docutils literal notranslate"><span class="pre">xorg.conf</span></code> sollten einige Vorsichtsmaßnahmen
 getroffen werden. Ein Backup der <code class="docutils literal notranslate"><span class="pre">xorg.conf</span></code> sollte erfolgen und
@@ -713,7 +709,7 @@ Display-Manager wie <a class="reference external" href="/anwendungen/xdm">xdm</a
 deaktiviert werden. Zum Testen sollte <code class="docutils literal notranslate"><span class="pre">startx</span></code> verwendet werden. Nach
 erfolgreicher Konfiguration kann der Display-Manager wieder aktiviert
 werden.</p>
-<section id="xdm-deaktivieren">
+<div class="section" id="xdm-deaktivieren">
 <h4><span class="section-number">1.83.4.1.1. </span>xdm deaktivieren<a class="headerlink" href="#xdm-deaktivieren" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Um <code class="docutils literal notranslate"><span class="pre">xdm</span></code> zu deaktivieren genügt es die entsprechende Zeile in der
 <code class="docutils literal notranslate"><span class="pre">/etc/ttys</span></code> auf <code class="docutils literal notranslate"><span class="pre">off</span></code> zu setzen und den Befehl:</p>
@@ -724,9 +720,9 @@ werden.</p>
 ein. Nach dem Beenden von X wird es dann nicht mehr automatisch neu
 starten. Nach dem Zurücksetzen auf <code class="docutils literal notranslate"><span class="pre">on</span></code> kann mit dem gleichen Befehl
 der <code class="docutils literal notranslate"><span class="pre">xdm</span></code> wieder geweckt werden.</p>
-</section>
-</section>
-<section id="section-monitor">
+</div>
+</div>
+<div class="section" id="section-monitor">
 <h3><span class="section-number">1.83.4.2. </span>Section „Monitor“<a class="headerlink" href="#section-monitor" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Es empfiehlt sich den Monitoren Bezeichner zu geben, die widerspiegeln
 an welchen Ausgang sie gebunden werden. Die Möglichkeiten zur Anordnung
@@ -746,8 +742,8 @@ Clone-Mode erwünscht ist wird einfach keine Anordnung angegeben.</p>
 <strong>PreferredMode</strong> zurückzugreifen. Beim Autor hat das auf einigen System
 leider dazu geführt, dass der X-Server nicht mehr startet, auf Anderen
 ging es aber ohne Probleme.</p>
-</section>
-<section id="section-device">
+</div>
+<div class="section" id="section-device">
 <h3><span class="section-number">1.83.4.3. </span>Section „Device“<a class="headerlink" href="#section-device" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In der Device Section werden die Monitore dann den Ausgängen zugewiesen.
 Dazu verwendet man die <strong>Option</strong> mit dem Namen <strong>Monitor-Ausgang</strong>,
@@ -761,8 +757,8 @@ Grafikkarte zu ersetzen ist, so wie er von <code class="docutils literal notrans
 <span class="n">EndSection</span>
 </pre></div>
 </div>
-</section>
-<section id="section-screen">
+</div>
+<div class="section" id="section-screen">
 <h3><span class="section-number">1.83.4.4. </span>Section „Screen“<a class="headerlink" href="#section-screen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Zu guter letzt müssen in die <strong>Screen</strong>-<strong>Section</strong> alle Monitore die
 Verwendung finden sollen eingetragen werden.</p>
@@ -776,12 +772,12 @@ Verwendung finden sollen eingetragen werden.</p>
 <span class="n">EndSection</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="probleme-und-losungen">
+</div>
+</div>
+<div class="section" id="probleme-und-losungen">
 <h2><span class="section-number">1.83.5. </span>Probleme und Lösungen<a class="headerlink" href="#probleme-und-losungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Hier finden sich bekannte Probleme und Lösungen.</p>
-<section id="overlay-modus">
+<div class="section" id="overlay-modus">
 <h3><span class="section-number">1.83.5.1. </span>Overlay Modus<a class="headerlink" href="#overlay-modus" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wenn es Probleme mit der Vollbild-Overlay-Darstellung gibt (zum Beispiel
 mit mplayer) kann es helfen, den Monitor auf dem die Darstellung
@@ -807,9 +803,9 @@ Monitor aktiviert:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xvattr -a XV_CRTC -v 1
 </pre></div>
 </div>
-</section>
-</section>
-<section id="quellen">
+</div>
+</div>
+<div class="section" id="quellen">
 <h2><span class="section-number">1.83.6. </span>Quellen<a class="headerlink" href="#quellen" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Die <strong>xrandr(1)</strong> Manpage.</p></li>
@@ -818,41 +814,38 @@ Monitor aktiviert:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="mkisofs_und_cdrecord.txt.html" class="btn btn-neutral float-right" title="1.84. mkisofs und cdrecord" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="make_world.txt.html" class="btn btn-neutral float-left" title="1.82. make world" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="mkisofs_und_cdrecord.txt.html" class="btn btn-neutral float-right" title="1.84. mkisofs und cdrecord" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="make_world.txt.html" class="btn btn-neutral float-left" title="1.82. make world" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

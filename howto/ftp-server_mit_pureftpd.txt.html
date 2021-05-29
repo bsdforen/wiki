@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.57. FTP-Server mit PureFTPd &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.58. GnuPG" href="gnupg.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -304,6 +307,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -317,8 +322,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/ftp-server_mit_pureftpd.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/ftp-server_mit_pureftpd.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -326,26 +331,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="gnupg.txt.html" class="btn btn-neutral float-right" title="1.58. GnuPG" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="freebsd_boot_manager_und_vista.txt.html" class="btn btn-neutral float-left" title="1.56. FreeBSD Boot Manager" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="ftp-server-mit-pureftpd">
+  <div class="section" id="ftp-server-mit-pureftpd">
 <h1><span class="section-number">1.57. </span>FTP-Server mit PureFTPd<a class="headerlink" href="#ftp-server-mit-pureftpd" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
-</aside>
+</div>
 <p>In diesem Artikel wird das Aufsetzen einer FTP-Server-Maschine beschrieben. Auf
 diesem System sollen zwei FTP-Serverdienste (im Folgenden „Server“ genannt)
 laufen. Anonymes FTP soll nicht zugelassen sein. Der eine der beiden Server
@@ -353,7 +349,7 @@ soll Clients als Zugang dienen, die über eine feste IP-Adresse verfügen. Der
 andere bedient Clients mit dynamischer IP-Adresse. Diese Verbindungen sollen
 aus Sicherheitsgründen mit Hilfe von TLS aufgebaut werden. Es soll mit
 virtuellen Usern gearbeitet werden.</p>
-<section id="vorbereitungen">
+<div class="section" id="vorbereitungen">
 <h2><span class="section-number">1.57.1. </span>Vorbereitungen<a class="headerlink" href="#vorbereitungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Als erstes benötigt man eine Maschine mit einem lauffähigen
 OpenBSD-System. Diese sollte voll gepatcht sein.</p>
@@ -387,8 +383,8 @@ der virtuellen Accounts angelegt werden.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mkdir -p /data/ftp</span>
 </pre></div>
 </div>
-</section>
-<section id="funktionsweise">
+</div>
+<div class="section" id="funktionsweise">
 <h2><span class="section-number">1.57.2. </span>Funktionsweise<a class="headerlink" href="#funktionsweise" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die beiden Server werden mit unterschiedlichen Startparametern aus der
 <code class="docutils literal notranslate"><span class="pre">/etc/rc.local</span></code> heraus gestartet.</p>
@@ -409,7 +405,7 @@ Accountdaten. Es wird mit Hilfe des pure-pw-Kommandos manipuliert:</p>
 <span class="c1"># pure-pw passwd USER -f /etc/pureftpd.passwd</span>
 </pre></div>
 </div>
-<section id="accountparameter">
+<div class="section" id="accountparameter">
 <h3><span class="section-number">1.57.2.1. </span>Accountparameter<a class="headerlink" href="#accountparameter" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Es ist möglich, jedem Account spezielle Eigenschaften zuzuweisen. Dies
 kann sowohl beim Anlegen des Accounts (<code class="docutils literal notranslate"><span class="pre">useradd</span></code>) als auch später
@@ -449,9 +445,9 @@ Datenbanken erzeugen möchte, will ich selbige explizit angeben. Deshalb
 verzichte ich auf die Benutzung von <code class="docutils literal notranslate"><span class="pre">-m</span></code> und generiere meine
 Datenbanken händisch mit <code class="docutils literal notranslate"><span class="pre">pure-pw</span> <span class="pre">mkdb</span></code>.</p>
 </div>
-</section>
-</section>
-<section id="tls-zertifikate">
+</div>
+</div>
+<div class="section" id="tls-zertifikate">
 <h2><span class="section-number">1.57.3. </span>TLS-Zertifikate<a class="headerlink" href="#tls-zertifikate" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um TLS benutzen zu können, benötigt der Server ein Zertifikat. Der
 DoItYourself-Weg:</p>
@@ -462,12 +458,12 @@ DoItYourself-Weg:</p>
 <span class="c1"># chmod 600 /etc/ssl/private/*.pem</span>
 </pre></div>
 </div>
-</section>
-<section id="serverstart">
+</div>
+<div class="section" id="serverstart">
 <h2><span class="section-number">1.57.4. </span>Serverstart<a class="headerlink" href="#serverstart" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Ich benutze für den Start der beiden Server jeweils ein eigenes
 Startscript, das aus <code class="docutils literal notranslate"><span class="pre">/etc/rc.local</span></code> heraus aufgerufen wird.</p>
-<section id="script-fur-den-server-ohne-erzwungenes-tls">
+<div class="section" id="script-fur-den-server-ohne-erzwungenes-tls">
 <h3><span class="section-number">1.57.4.1. </span>Script für den Server ohne erzwungenes TLS<a class="headerlink" href="#script-fur-den-server-ohne-erzwungenes-tls" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
 params=&quot; &quot;
@@ -567,8 +563,8 @@ feststellen musste, dass in der durch mich verwendeten Version nicht
 jeder Upload registriert wurde.</p></li>
 </ul>
 </div>
-</section>
-<section id="script-fur-den-server-mit-erzwungenem-tls">
+</div>
+<div class="section" id="script-fur-den-server-mit-erzwungenem-tls">
 <h3><span class="section-number">1.57.4.2. </span>Script für den Server mit erzwungenem TLS<a class="headerlink" href="#script-fur-den-server-mit-erzwungenem-tls" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
 params=&quot; &quot;
@@ -656,8 +652,8 @@ $ftpd $params &amp;
 exit $?
 </pre></div>
 </div>
-</section>
-<section id="eintrag-in-etc-rc-local">
+</div>
+<div class="section" id="eintrag-in-etc-rc-local">
 <h3><span class="section-number">1.57.4.3. </span>Eintrag in /etc/rc.local<a class="headerlink" href="#eintrag-in-etc-rc-local" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pure-ftp stuff</span>
 <span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">x</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">homegrown</span><span class="o">/</span><span class="n">ftp</span><span class="o">/</span><span class="n">runftpd</span><span class="o">.</span><span class="n">sh</span> <span class="p">];</span> <span class="n">then</span>
@@ -668,9 +664,9 @@ exit $?
 <span class="n">fi</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="firewalleinstellungen">
+</div>
+</div>
+<div class="section" id="firewalleinstellungen">
 <h2><span class="section-number">1.57.5. </span>Firewalleinstellungen<a class="headerlink" href="#firewalleinstellungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wir benutzen bpf als Firewall. Das folgende sollte in die
 <code class="docutils literal notranslate"><span class="pre">/etc/pf.conf</span></code> eingetragen werden:</p>
@@ -699,16 +695,16 @@ pass in on { $EXT0 } proto { tcp, udp } \
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pf</span><span class="o">=</span><span class="n">YES</span>
 </pre></div>
 </div>
-</section>
-<section id="clients">
+</div>
+<div class="section" id="clients">
 <h2><span class="section-number">1.57.6. </span>Clients<a class="headerlink" href="#clients" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Für den TLS-losen Server eignet sich jeder anständige Client. Will man
 allerdings TLS benutzen, bedarf es TLS-unterstützender Clients. Unter
 Windows habe ich die besten Erfahrungen mit CoreFTP gemacht. Der hat
 alles, was der gemeine User braucht. Für weitere Empfehlungen
 diesbezüglich wäre ich sehr dankbar.</p>
-</section>
-<section id="quellen">
+</div>
+<div class="section" id="quellen">
 <h2><span class="section-number">1.57.7. </span>Quellen<a class="headerlink" href="#quellen" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.pureftpd.org">http://www.pureftpd.org</a></p></li>
@@ -716,41 +712,38 @@ diesbezüglich wäre ich sehr dankbar.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="gnupg.txt.html" class="btn btn-neutral float-right" title="1.58. GnuPG" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="freebsd_boot_manager_und_vista.txt.html" class="btn btn-neutral float-left" title="1.56. FreeBSD Boot Manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="gnupg.txt.html" class="btn btn-neutral float-right" title="1.58. GnuPG" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="freebsd_boot_manager_und_vista.txt.html" class="btn btn-neutral float-left" title="1.56. FreeBSD Boot Manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

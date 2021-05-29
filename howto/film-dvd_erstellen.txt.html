@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.51. Film-DVD erstellen &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.52. Firewall-Regeln" href="firewall-regeln.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -310,6 +313,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -323,8 +328,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/film-dvd_erstellen.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/film-dvd_erstellen.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -332,31 +337,22 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="firewall-regeln.txt.html" class="btn btn-neutral float-right" title="1.52. Firewall-Regeln" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="festplattenverschluesselung_mit_pefs.txt.html" class="btn btn-neutral float-left" title="1.50. Festplattenverschlüsselung mit pefs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="film-dvd-erstellen">
+  <div class="section" id="film-dvd-erstellen">
 <h1><span class="section-number">1.51. </span>Film-DVD erstellen<a class="headerlink" href="#film-dvd-erstellen" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</aside>
+</div>
 <p>Dieser Artikel beschäftigt sich mit dem Erstellen von Film-DVDs mit Menüs.</p>
-<section id="einleitung">
+<div class="section" id="einleitung">
 <h2><span class="section-number">1.51.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Dieses Tutorial beschreibt wie man aus einem Film
 (<em>AVI/MPEG/MP4/MKV/OGG</em>) oder einem DVD Backup wieder eine DVD macht.
@@ -364,11 +360,11 @@ Des weiteren wird behandelt, wie man DVD-Menüs erstellt. Soweit nichts
 anderes geschrieben steht, gilt für alle vier BSDs das Gleiche. Die
 Mencoder-Einstellungen sind zum Teil von der Mplayer-Dokumentation
 übernommen.</p>
-</section>
-<section id="aus-den-ports-installieren">
+</div>
+<div class="section" id="aus-den-ports-installieren">
 <h2><span class="section-number">1.51.2. </span>Aus den Ports installieren<a class="headerlink" href="#aus-den-ports-installieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wir müssen nun einige Programme aus den Ports installieren.</p>
-<section id="openbsd">
+<div class="section" id="openbsd">
 <h3><span class="section-number">1.51.2.1. </span>OpenBSD<a class="headerlink" href="#openbsd" title="Link zu dieser Überschrift">¶</a></h3>
 <ol class="arabic simple">
 <li><p>x11/mplayer</p></li>
@@ -381,8 +377,8 @@ Mencoder-Einstellungen sind zum Teil von der Mplayer-Dokumentation
 <li><p>audio/normalize</p></li>
 <li><p>multimedia/gimp</p></li>
 </ol>
-</section>
-<section id="netbsd">
+</div>
+<div class="section" id="netbsd">
 <h3><span class="section-number">1.51.2.2. </span>NetBSD<a class="headerlink" href="#netbsd" title="Link zu dieser Überschrift">¶</a></h3>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://www.google.com/search?q=multimedia/mplayer&amp;btnI=lucky">multimedia/mplayer</a></p></li>
@@ -395,8 +391,8 @@ Mencoder-Einstellungen sind zum Teil von der Mplayer-Dokumentation
 <li><p><a class="reference external" href="https://www.google.com/search?q=audio/normalize&amp;btnI=lucky">audio/normalize</a></p></li>
 <li><p><a class="reference external" href="https://www.google.com/search?q=graphics/gimp&amp;btnI=lucky">graphics/gimp</a></p></li>
 </ol>
-</section>
-<section id="freebsd">
+</div>
+<div class="section" id="freebsd">
 <h3><span class="section-number">1.51.2.3. </span>FreeBSD<a class="headerlink" href="#freebsd" title="Link zu dieser Überschrift">¶</a></h3>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://www.google.com/search?q=multimedia/mplayer&amp;btnI=lucky">multimedia/mplayer</a></p></li>
@@ -409,9 +405,9 @@ Mencoder-Einstellungen sind zum Teil von der Mplayer-Dokumentation
 <li><p><a class="reference external" href="https://www.google.com/search?q=audio/normalize&amp;btnI=lucky">audio/normalize</a></p></li>
 <li><p><a class="reference external" href="https://www.google.com/search?q=graphics/gimp&amp;btnI=lucky">graphics/gimp</a></p></li>
 </ol>
-</section>
-</section>
-<section id="film-ins-dvd-format">
+</div>
+</div>
+<div class="section" id="film-ins-dvd-format">
 <h2><span class="section-number">1.51.3. </span>Film ins „DVD“-Format<a class="headerlink" href="#film-ins-dvd-format" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um einen Film ins MPEG2-Format zu konvertieren, verwenden wir hier den
 <a class="reference external" href="/anwendungen/mplayer#mencoder">Mencoder</a>. Man könnte auch den
@@ -484,7 +480,7 @@ du natürlich spielen. Zu erst müssen wir unseren Film in ein
 DVD-konforme Datei umwandeln. Dazu verwenden wir den Mencoder. Wenn du
 dich nicht an die Tabelle hältst, wird der Film nicht mehr konform und
 er wird nicht abgespielt!</p>
-<section id="kontainer">
+<div class="section" id="kontainer">
 <h3><span class="section-number">1.51.3.1. </span>Kontainer<a class="headerlink" href="#kontainer" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wir brauchen noch einen Kontainer für unsere Audio- und Video-Spur. Es
 gibt nur einen Kontainer, der auch DVD-konform ist, und das ist der
@@ -493,8 +489,8 @@ gebrauchen soll, geben wir ihm folgende Syntax mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">of</span> <span class="n">mpeg</span> <span class="o">-</span><span class="n">mpegopts</span> <span class="nb">format</span><span class="o">=</span><span class="n">dvd</span>
 </pre></div>
 </div>
-</section>
-<section id="video-und-audio">
+</div>
+<div class="section" id="video-und-audio">
 <h3><span class="section-number">1.51.3.2. </span>Video und Audio<a class="headerlink" href="#video-und-audio" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nun kommt die Video- und Audio-Spur an die Reihe. Um es etwas zu
 vereinfachen, wird hier die komplette Syntax angegeben und erst danach
@@ -504,7 +500,7 @@ angegeben sind, gibt es mehrere Möglichkeiten. In diesem Fall kannst du
 selbst aus der Tabelle die Werte einsetzen. Die Bitrate ist immer mit
 <em>BR</em> angegeben. Auch hier heißt es selbst einsetzen. Tipps gibt es
 dennoch.</p>
-<section id="pal-dvd-16-9">
+<div class="section" id="pal-dvd-16-9">
 <h4><span class="section-number">1.51.3.2.1. </span>PAL DVD 16/9<a class="headerlink" href="#pal-dvd-16-9" title="Link zu dieser Überschrift">¶</a></h4>
 <p><strong>-lavcopts</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vcodec</span><span class="o">=</span><span class="n">mpeg2video</span><span class="p">:</span><span class="n">vrc_buf_size</span><span class="o">=</span><span class="mi">1835</span><span class="p">:</span><span class="n">vrc_maxrate</span><span class="o">=</span><span class="mi">9800</span><span class="p">:</span><span class="n">vbitrate</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="sa">BR</span><span class="s1">&#39;&#39;</span><span class="p">:</span>\
@@ -524,8 +520,8 @@ dennoch.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">srate</span> <span class="mi">48000</span> <span class="o">-</span><span class="n">ofps</span> <span class="mi">25</span>
 </pre></div>
 </div>
-</section>
-<section id="pal-dvd-4-3">
+</div>
+<div class="section" id="pal-dvd-4-3">
 <h4><span class="section-number">1.51.3.2.2. </span>PAL DVD 4/3<a class="headerlink" href="#pal-dvd-4-3" title="Link zu dieser Überschrift">¶</a></h4>
 <p><strong>-lavcopts</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vcodec</span><span class="o">=</span><span class="n">mpeg2video</span><span class="p">:</span><span class="n">vrc_buf_size</span><span class="o">=</span><span class="mi">1835</span><span class="p">:</span><span class="n">vrc_maxrate</span><span class="o">=</span><span class="mi">9800</span><span class="p">:</span><span class="n">vbitrate</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="sa">BR</span><span class="s1">&#39;&#39;</span><span class="p">:</span>\
@@ -545,8 +541,8 @@ dennoch.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">srate</span> <span class="mi">48000</span> <span class="o">-</span><span class="n">ofps</span> <span class="mi">25</span>
 </pre></div>
 </div>
-</section>
-<section id="erklarung-der-syntax">
+</div>
+<div class="section" id="erklarung-der-syntax">
 <h4><span class="section-number">1.51.3.2.3. </span>Erklärung der Syntax<a class="headerlink" href="#erklarung-der-syntax" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Leider kann man hier nicht genau auf die einzelnen Punkte eingehen. Das
 würde den Rahmen für dieses HowTo sprengen. Wer mehr wissen will, kann
@@ -591,14 +587,14 @@ beste Qualität liefern.</p>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="tipps">
+</div>
+<div class="section" id="tipps">
 <h4><span class="section-number">1.51.3.2.4. </span>Tipps<a class="headerlink" href="#tipps" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Nun gibt es einige Tipps und etwas Fachwissen. Das Encoder-Wissen muss
 man sich aneignen, aber mit Hilfe dieses HowTos sollte man im Stande
 sein, eine qualitativ hochwertige DVD zu erstellen. Kommt halt auch
 etwas auf das Ausgangsmaterial an.</p>
-<section id="ton-ac3">
+<div class="section" id="ton-ac3">
 <h5><span class="section-number">1.51.3.2.4.1. </span>Ton (AC3)<a class="headerlink" href="#ton-ac3" title="Link zu dieser Überschrift">¶</a></h5>
 <p>AC3 ist nicht gerade der beste Audio-Codec, da er verlustbehaftet ist.
 Mit etwas Wissen kann man es aber etwas erträglicher machen. AC3 ist ein
@@ -622,8 +618,8 @@ fügt man einfach folgendes an:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">channels</span> <span class="mi">6</span> <span class="o">-</span><span class="n">af</span> <span class="n">pan</span><span class="o">=</span><span class="mi">6</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">delay</span><span class="p">,</span><span class="n">volnorm</span>
 </pre></div>
 </div>
-</section>
-<section id="bild-filter">
+</div>
+<div class="section" id="bild-filter">
 <h5><span class="section-number">1.51.3.2.4.2. </span>Bild (Filter)<a class="headerlink" href="#bild-filter" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Jetzt kommt ein wichtiges Thema. Mplayer kennt Filter. Diese Filter kann
 man dazu gebrauchen, die Qualität des Ausgangsmaterials etwas zu
@@ -642,8 +638,8 @@ sollte nach <em>harddup</em> stehen.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kerndeint</span>
 </pre></div>
 </div>
-</section>
-<section id="anamorph">
+</div>
+<div class="section" id="anamorph">
 <h5><span class="section-number">1.51.3.2.4.3. </span>Anamorph<a class="headerlink" href="#anamorph" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Ein analoges Bild, welches im 16/9-Format ist, aber durch schwarze
 Balken ein 4/3-Seitenverhältnis hat, ist nicht anamorph. Ein anamorphes
@@ -655,8 +651,8 @@ einfach auf gut Deutsch die schwarzen Balken zu entfernen, kann man den
 Filter <em>crop</em> nehmen. Das ist sinnvoll, weil man so Bitrate für die
 schwarzen Balken spart.</p>
 <p>Wie man die zwei Filter verwendet, steht in der Manpage von Mplayer.</p>
-</section>
-<section id="bild-bitrate">
+</div>
+<div class="section" id="bild-bitrate">
 <h5><span class="section-number">1.51.3.2.4.4. </span>Bild (Bitrate)<a class="headerlink" href="#bild-bitrate" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Eine Frage, die sich jeder hier stellen wird, ist, welche Bitrate ich
 für mein Bild brauche. Das ist auch etwas Erfahrungssache. Auch eine
@@ -668,14 +664,14 @@ Bitrate von 2000kbps ergibt ein Bild. Also Vergleich:</p>
 <p>Spiele am besten etwas bei deinem ersten Versuch. Du kannst ja während
 des Encodens das Ergebnis betrachten (mit Mplayer). So kannst du noch
 Anpassungen machen.</p>
-</section>
-</section>
-<section id="zusammenfassung">
+</div>
+</div>
+<div class="section" id="zusammenfassung">
 <h4><span class="section-number">1.51.3.2.5. </span>Zusammenfassung<a class="headerlink" href="#zusammenfassung" title="Link zu dieser Überschrift">¶</a></h4>
 <p>So, nun fügen wir alles zusammen. Wer den Mencoder nicht kennt, kann
 jetzt alles mit Copy-&amp;-Paste übernehmen und die Werte eintragen.
 Vielleicht auch noch einen Filter mehr einbauen.</p>
-<section id="pal-dvd-169-1">
+<div class="section" id="pal-dvd-169-1">
 <span id="id1"></span><h5><span class="section-number">1.51.3.2.5.1. </span>PAL DVD 16/9<a class="headerlink" href="#pal-dvd-169-1" title="Link zu dieser Überschrift">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mencoder</span> <span class="n">eingabe_film</span><span class="o">.</span><span class="n">avi</span> <span class="o">-</span><span class="n">oac</span> <span class="n">lavc</span> <span class="o">-</span><span class="n">ovc</span> <span class="n">lavc</span> <span class="o">-</span><span class="n">vf</span> <span class="n">scale</span><span class="o">=</span><span class="mi">720</span><span class="p">:</span><span class="mi">576</span><span class="p">,</span><span class="n">harddup</span> \
 <span class="o">-</span><span class="n">srate</span> <span class="mi">48000</span> <span class="o">-</span><span class="n">af</span> <span class="n">lavcresample</span><span class="o">=</span><span class="mi">48000</span> <span class="o">-</span><span class="n">lavcopts</span> <span class="n">vcodec</span><span class="o">=</span><span class="n">mpeg2video</span><span class="p">:</span><span class="n">vrc_buf_size</span><span class="o">=</span><span class="mi">1835</span><span class="p">:</span>\
@@ -684,8 +680,8 @@ Vielleicht auch noch einen Filter mehr einbauen.</p>
 <span class="o">-</span><span class="n">ofps</span> <span class="mi">25</span> <span class="o">-</span><span class="n">of</span> <span class="n">mpeg</span> <span class="o">-</span><span class="n">mpegopts</span> <span class="nb">format</span><span class="o">=</span><span class="n">dvd</span> <span class="o">-</span><span class="n">o</span> <span class="n">ausgabe_fim</span><span class="o">.</span><span class="n">mpg</span>
 </pre></div>
 </div>
-</section>
-<section id="pal-dvd-43-1">
+</div>
+<div class="section" id="pal-dvd-43-1">
 <span id="id2"></span><h5><span class="section-number">1.51.3.2.5.2. </span>PAL DVD 4/3<a class="headerlink" href="#pal-dvd-43-1" title="Link zu dieser Überschrift">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mencoder</span> <span class="n">eingabe_film</span><span class="o">.</span><span class="n">avi</span> <span class="o">-</span><span class="n">oac</span> <span class="n">lavc</span> <span class="o">-</span><span class="n">ovc</span> <span class="n">lavc</span> <span class="o">-</span><span class="n">vf</span> <span class="n">scale</span><span class="o">=</span><span class="n">B_W</span><span class="p">:</span><span class="n">H_W</span><span class="p">,</span><span class="n">harddup</span> \
 <span class="o">-</span><span class="n">srate</span> <span class="mi">48000</span> <span class="o">-</span><span class="n">af</span> <span class="n">lavcresample</span><span class="o">=</span><span class="mi">48000</span> <span class="o">-</span><span class="n">lavcopts</span> <span class="n">vcodec</span><span class="o">=</span><span class="n">mpeg2video</span><span class="p">:</span><span class="n">vrc_buf_size</span><span class="o">=</span><span class="mi">1835</span><span class="p">:</span>\
@@ -694,18 +690,18 @@ Vielleicht auch noch einen Filter mehr einbauen.</p>
 <span class="o">-</span><span class="n">ofps</span> <span class="mi">25</span> <span class="o">-</span><span class="n">of</span> <span class="n">mpeg</span> <span class="o">-</span><span class="n">mpegopts</span> <span class="nb">format</span><span class="o">=</span><span class="n">dvd</span> <span class="o">-</span><span class="n">o</span> <span class="n">ausgabe_fim</span><span class="o">.</span><span class="n">mpg</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
-</section>
-<section id="dvd-struktur-mit-dvdauthor">
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dvd-struktur-mit-dvdauthor">
 <h2><span class="section-number">1.51.4. </span>DVD-Struktur mit DVDAuthor<a class="headerlink" href="#dvd-struktur-mit-dvdauthor" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um eine DVD-Struktur zu erzeugen brauchen wir den DVDauthor. Wir
 schreiben zuerst eine XML-Datei. Für die ganz faulen gibt es auch GUIs,
 die machen aber bekanntlich selten was man will. Es wird nun nicht mehr
 eine 16/9- und 4/3-Variante geben, da ich nun davon ausgehe, dass jeder
 selbst die Werte ersetzen kann.</p>
-<section id="nur-abspielen">
+<div class="section" id="nur-abspielen">
 <h3><span class="section-number">1.51.4.1. </span>Nur abspielen<a class="headerlink" href="#nur-abspielen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die einfachste DVD-Struktur ist die „Einlegen und Abspielen“-Variante.
 Dazu schreiben wir folgende XML-Datei.</p>
@@ -741,8 +737,8 @@ machen:</p>
 <span class="p">[</span><span class="o">...</span><span class="p">]</span>
 </pre></div>
 </div>
-</section>
-<section id="mit-menus-und-knopfen">
+</div>
+<div class="section" id="mit-menus-und-knopfen">
 <h3><span class="section-number">1.51.4.2. </span>Mit Menüs und Knöpfen<a class="headerlink" href="#mit-menus-und-knopfen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Mit Menüs und Knöpfen ist es etwas komplizierter. Wer es lieber einfach
 haben will, sollte die „einlegen und abspielen“-Methode nehmen. Ich
@@ -831,12 +827,12 @@ der Sound 30 Sekunden lang.</p></li>
 <span class="o">&lt;/</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="beispiel-code-fur-erweiterte-menus">
+</div>
+<div class="section" id="beispiel-code-fur-erweiterte-menus">
 <h3><span class="section-number">1.51.4.3. </span>Beispiel-Code für erweiterte Menüs<a class="headerlink" href="#beispiel-code-fur-erweiterte-menus" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Das sind Beispiele aus der Doku. Wenn man sie ganau betrachtet, versteht
 man sie sehr gut. Darum gibt es auch keine Erklärung.</p>
-<section id="dvd-menu-mit-kapitel">
+<div class="section" id="dvd-menu-mit-kapitel">
 <h4><span class="section-number">1.51.4.3.1. </span>DVD-Menü mit Kapitel<a class="headerlink" href="#dvd-menu-mit-kapitel" title="Link zu dieser Überschrift">¶</a></h4>
 <p>dvdauthor.xml:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
@@ -872,8 +868,8 @@ man sie sehr gut. Darum gibt es auch keine Erklärung.</p>
 <span class="o">&lt;/</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="dvd-mit-sprachauswahl">
+</div>
+<div class="section" id="dvd-mit-sprachauswahl">
 <h4><span class="section-number">1.51.4.3.2. </span>DVD mit Sprachauswahl<a class="headerlink" href="#dvd-mit-sprachauswahl" title="Link zu dieser Überschrift">¶</a></h4>
 <p>dvdauthor.xml</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
@@ -932,9 +928,9 @@ man sie sehr gut. Darum gibt es auch keine Erklärung.</p>
 <span class="o">&lt;/</span><span class="n">dvdauthor</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="dvd-struktur-erstellen">
+</div>
+</div>
+<div class="section" id="dvd-struktur-erstellen">
 <h3><span class="section-number">1.51.4.4. </span>DVD-Struktur erstellen<a class="headerlink" href="#dvd-struktur-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
 <p>So, nun sind wir fast am Ende. Aus dem XML-File und den Video-Files
 müssen wir jetzt nur noch einen Ordner erstellen, der die DVD-Struktur
@@ -942,17 +938,17 @@ wiederspiegelt. Das macht der DVDauthor zum Glück von selbst.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dvdauthor</span> <span class="o">-</span><span class="n">o</span> <span class="n">DVD_DIR</span> <span class="o">-</span><span class="n">x</span> <span class="n">dvdauthor</span><span class="o">.</span><span class="n">xml</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="brennen">
+</div>
+</div>
+<div class="section" id="brennen">
 <h2><span class="section-number">1.51.5. </span>Brennen<a class="headerlink" href="#brennen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Noch wenige Minuten, bis wir uns einen gemütlichen DVD-Abend machen
 können.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">growisofs</span> <span class="o">-</span><span class="n">Z</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">CD</span> <span class="n">ROM_DEVICE</span> <span class="o">-</span><span class="n">dvd</span><span class="o">-</span><span class="n">video</span> <span class="n">DVD_DIR</span>
 </pre></div>
 </div>
-</section>
-<section id="verweise">
+</div>
+<div class="section" id="verweise">
 <h2><span class="section-number">1.51.6. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.mplayerhq.hu/DOCS/HTML/de/menc-feat-vcd-dvd.html">Mplayer-DVD-Anleitung</a>
@@ -961,41 +957,38 @@ können.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="firewall-regeln.txt.html" class="btn btn-neutral float-right" title="1.52. Firewall-Regeln" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="festplattenverschluesselung_mit_pefs.txt.html" class="btn btn-neutral float-left" title="1.50. Festplattenverschlüsselung mit pefs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="firewall-regeln.txt.html" class="btn btn-neutral float-right" title="1.52. Firewall-Regeln" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="festplattenverschluesselung_mit_pefs.txt.html" class="btn btn-neutral float-left" title="1.50. Festplattenverschlüsselung mit pefs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

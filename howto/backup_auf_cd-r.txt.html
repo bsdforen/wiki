@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.13. Backup auf CD-R &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.14. Backup mit HAMMER" href="backup_mit_hammer.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -293,6 +296,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -306,8 +311,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/backup_auf_cd-r.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/backup_auf_cd-r.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -315,26 +320,17 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="backup_mit_hammer.txt.html" class="btn btn-neutral float-right" title="1.14. Backup mit HAMMER" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="awk.txt.html" class="btn btn-neutral float-left" title="1.12. AWK" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="backup-auf-cd-r">
+  <div class="section" id="backup-auf-cd-r">
 <h1><span class="section-number">1.13. </span>Backup auf CD-R<a class="headerlink" href="#backup-auf-cd-r" title="Link zu dieser Überschrift">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</aside>
+</div>
 <p>Wer keinen Streamer hat, nur eine Platte, kein RAID am Laufen oder wer keine
 200 Disketten kaufen möchte, der kann ein Backup auch auf CD-ROM machen. Dazu
 sollte <a class="reference external" href="https://www.google.com/search?q=sysutils/mkisofs&amp;btnI=lucky">sysutils/mkisofs</a> installiert
@@ -347,7 +343,7 @@ sein.</p>
 /boot
 </pre></div>
 </div>
-<section id="grosse-der-verzeichnisse-bestimmen">
+<div class="section" id="grosse-der-verzeichnisse-bestimmen">
 <h2><span class="section-number">1.13.1. </span>Grösse der Verzeichnisse bestimmen<a class="headerlink" href="#grosse-der-verzeichnisse-bestimmen" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># du -sh /home/$USER</span>
 </pre></div>
@@ -375,8 +371,8 @@ gesichert werden muß.</p>
 <p>Angenommen die Grösse der gesamten Dateien würde, wenn diese mittels
 <code class="docutils literal notranslate"><span class="pre">tar</span></code> zusammengeführt würden, auf eine CD passen, können wir wie folgt
 weitermachen:</p>
-</section>
-<section id="verzeichnisse-archivieren-und-zippen">
+</div>
+<div class="section" id="verzeichnisse-archivieren-und-zippen">
 <h2><span class="section-number">1.13.2. </span>Verzeichnisse archivieren und zippen<a class="headerlink" href="#verzeichnisse-archivieren-und-zippen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Hierbei ist anzumerken, daß ein Backup nicht unbedingt komprimiert
 werden sollte, da nur ein falsches Bit die komplette Sicherung wertlos
@@ -412,8 +408,8 @@ folgende Bezeichnung haben: xaa, xab xac, …</p>
 gebrannt. Man kann den Befehl <code class="docutils literal notranslate"><span class="pre">cat</span></code> nutzen, um die Dateien später
 wieder zusammenzufügen und die Datei mp3dateien.tgz zu erhalten. Diese
 kann man dann wieder entpacken und schon hat man seine mp3 wieder.</p>
-</section>
-<section id="iso-files-erstellen">
+</div>
+<div class="section" id="iso-files-erstellen">
 <h2><span class="section-number">1.13.3. </span>ISO files erstellen<a class="headerlink" href="#iso-files-erstellen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um die Dateien auf CD zu brennen, müssen wir mit dem Programm
 <code class="docutils literal notranslate"><span class="pre">mkisofs</span></code> noch ISO-Dateien erstellen.</p>
@@ -427,8 +423,8 @@ kann man dann wieder entpacken und schon hat man seine mp3 wieder.</p>
 </div>
 <p>Alle Dateien die sich unter <code class="docutils literal notranslate"><span class="pre">/storage/backup</span></code> befinden werden unter
 <code class="docutils literal notranslate"><span class="pre">/storage</span></code> zu dem ISO file <code class="docutils literal notranslate"><span class="pre">backup_datum.iso</span></code> zusammengefaßt.</p>
-</section>
-<section id="brennen">
+</div>
+<div class="section" id="brennen">
 <h2><span class="section-number">1.13.4. </span>Brennen<a class="headerlink" href="#brennen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Dazu gibt es bei IDE-Brennern das Programm <code class="docutils literal notranslate"><span class="pre">burncd</span></code>, welches zur
 Standardinstallation gehört.</p>
@@ -455,41 +451,38 @@ gesichert, sowie die angepassten Konfigurationsdateien des Systems
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="backup_mit_hammer.txt.html" class="btn btn-neutral float-right" title="1.14. Backup mit HAMMER" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="awk.txt.html" class="btn btn-neutral float-left" title="1.12. AWK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="backup_mit_hammer.txt.html" class="btn btn-neutral float-right" title="1.14. Backup mit HAMMER" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="awk.txt.html" class="btn btn-neutral float-left" title="1.12. AWK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

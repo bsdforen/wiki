@@ -1,26 +1,36 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>1.12. AWK &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -33,13 +43,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.13. Backup auf CD-R" href="backup_auf_cd-r.txt.html" />
@@ -57,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> BSDForen.de
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
 
           
@@ -71,7 +74,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -300,6 +303,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -313,8 +318,8 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/howto/awk.txt.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/howto/awk.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
           
         
       </li>
@@ -322,28 +327,19 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="backup_auf_cd-r.txt.html" class="btn btn-neutral float-right" title="1.13. Backup auf CD-R" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="automount.txt.html" class="btn btn-neutral float-left" title="1.11. Automount" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="awk">
+  <div class="section" id="awk">
 <h1><span class="section-number">1.12. </span>AWK<a class="headerlink" href="#awk" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Dies ist eine Ergänzung zu <a class="reference external" href="shell-scripting">shell-scripting</a> in der
 es um die Sprache AWK geht.</p>
 <p>Es wird eine allgemeine Schnelleinführung geben und ein Sammlung von
 nützlichen awk-Schnipseln, die awk erläutern und auch so für den
 täglichen BSD-Einsatz nützlich sind.</p>
-<section id="awk-basics">
+<div class="section" id="awk-basics">
 <h2><span class="section-number">1.12.1. </span>AWK-Basics<a class="headerlink" href="#awk-basics" title="Link zu dieser Überschrift">¶</a></h2>
 <p>AWK ist eine Skriptsprache die als einfacher Vorgänger von Perl gilt.
 AWK zerlegt die Eingabedaten, <code class="docutils literal notranslate"><span class="pre">/dev/stdin</span></code> oder eine Datei, in so
@@ -374,16 +370,16 @@ schreiben, die nicht destruktiv für die übergebenen Parameter sind.</p>
 <p>AWK stört sich nicht daran, wenn einer Funktion weniger Parameter als
 definiert übergeben werden. Deshalb kann man über den Umweg der
 Funktionsparameter lokale Variable erzeugen.</p>
-</section>
-<section id="nutzliche-minibeispiele">
+</div>
+<div class="section" id="nutzliche-minibeispiele">
 <h2><span class="section-number">1.12.2. </span>nützliche Minibeispiele<a class="headerlink" href="#nutzliche-minibeispiele" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="alle-pakete-auflisten-die-von-keinem-anderen-paket-benotigt-werden">
+<div class="section" id="alle-pakete-auflisten-die-von-keinem-anderen-paket-benotigt-werden">
 <h3><span class="section-number">1.12.2.1. </span>Alle Pakete auflisten, die von keinem anderen Paket benötigt werden<a class="headerlink" href="#alle-pakete-auflisten-die-von-keinem-anderen-paket-benotigt-werden" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg_info -aQR <span class="p">|</span> awk <span class="s1">&#39;$0 ~ &quot;:&quot; { split($1,arr,&quot;:&quot;); if (arr[2]==&quot;&quot;) print arr[1];}&#39;</span>
 </pre></div>
 </div>
-</section>
-<section id="alle-installierten-pakete-mit-origin-auflisten">
+</div>
+<div class="section" id="alle-installierten-pakete-mit-origin-auflisten">
 <h3><span class="section-number">1.12.2.2. </span>Alle installierten Pakete mit Origin auflisten<a class="headerlink" href="#alle-installierten-pakete-mit-origin-auflisten" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find /var/db/pkg/ -name <span class="s2">&quot;+CONTENTS&quot;</span> <span class="p">|</span> xargs awk <span class="s1">&#39;$1==&quot;@comment&quot; &amp;&amp; substr($2,1,6)==&quot;ORIGIN&quot; { split(FILENAME,a,&quot;/&quot;); print a[5] &quot;:&quot; substr($2,8) }&#39;</span>
 </pre></div>
@@ -393,8 +389,8 @@ Funktionsparameter lokale Variable erzeugen.</p>
 </pre></div>
 </div>
 <p>(und ist auch nicht wirklich schneller) TODO ergänzen</p>
-</section>
-<section id="duplikate-ohne-sortieren-entfernen">
+</div>
+<div class="section" id="duplikate-ohne-sortieren-entfernen">
 <h3><span class="section-number">1.12.2.3. </span>Duplikate ohne Sortieren entfernen<a class="headerlink" href="#duplikate-ohne-sortieren-entfernen" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk <span class="s1">&#39;!occured[$0]++&#39;</span>
 </pre></div>
@@ -405,8 +401,8 @@ Spalte und das Trennzeichen „:“).</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk -F: <span class="s1">&#39;!occured[$1]++&#39;</span>
 </pre></div>
 </div>
-</section>
-<section id="nur-mehrfach-vorkommende-zeilen-ausgeben">
+</div>
+<div class="section" id="nur-mehrfach-vorkommende-zeilen-ausgeben">
 <h3><span class="section-number">1.12.2.4. </span>Nur mehrfach vorkommende Zeilen ausgeben<a class="headerlink" href="#nur-mehrfach-vorkommende-zeilen-ausgeben" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der folgende Aufruf gibt nur Zeilen aus, die schon einmal aufgetaucht
 sind:</p>
@@ -418,8 +414,8 @@ egal wie oft sie vorkommen:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk <span class="s1">&#39;occured[$0]++ == 1&#39;</span>
 </pre></div>
 </div>
-</section>
-<section id="pakete-die-dateien-in-einen-bestimmten-pfad-installieren">
+</div>
+<div class="section" id="pakete-die-dateien-in-einen-bestimmten-pfad-installieren">
 <h3><span class="section-number">1.12.2.5. </span>Pakete die Dateien in einen bestimmten Pfad installieren<a class="headerlink" href="#pakete-die-dateien-in-einen-bestimmten-pfad-installieren" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Listet alle Pakete die Dateien in denen im Pfad <code class="docutils literal notranslate"><span class="pre">PFAD</span></code> vorkommt
 installiert haben.</p>
@@ -430,9 +426,9 @@ installiert haben.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkg_info -La <span class="p">|</span> awk <span class="s1">&#39;BEGIN{path=ARGV[1];delete ARGV[1]} /^Information for/ {pkg=$3;sub(&quot;:&quot;,&quot;&quot;,pkg)} pkg &amp;&amp; $0 ~ path {print pkg;pkg=0}&#39;</span> PFAD
 </pre></div>
 </div>
-</section>
-</section>
-<section id="nutzliche-awk-skripte">
+</div>
+</div>
+<div class="section" id="nutzliche-awk-skripte">
 <h2><span class="section-number">1.12.3. </span>nützliche AWK-Skripte<a class="headerlink" href="#nutzliche-awk-skripte" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Dieses Skript rückt XML-Dateien automatisch ein.</p>
 <div class="highlight-perl notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/awk -f</span>
@@ -491,8 +487,8 @@ installiert haben.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="verweise">
+</div>
+<div class="section" id="verweise">
 <h2><span class="section-number">1.12.4. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Die Manpage <strong>awk(1)</strong>.</p></li>
@@ -504,41 +500,38 @@ hoher AWK-Dichte</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-24</p>
-</section>
-</section>
+<p>Zuletzt geändert: 2021-05-29</p>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="backup_auf_cd-r.txt.html" class="btn btn-neutral float-right" title="1.13. Backup auf CD-R" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="automount.txt.html" class="btn btn-neutral float-left" title="1.11. Automount" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="backup_auf_cd-r.txt.html" class="btn btn-neutral float-right" title="1.13. Backup auf CD-R" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="automount.txt.html" class="btn btn-neutral float-left" title="1.11. Automount" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2019, BSDForen.de
+        &#169; Copyright 2021, BSDForen.de.
 
     </p>
   </div>
     
     
-      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
