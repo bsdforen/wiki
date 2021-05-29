@@ -1,4 +1,4 @@
-# Sphinx Dokumentation für BSDForen.de
+# Sphinx Wiki für BSDForen.de
 
 ![build](https://github.com/bsdforen/wiki/workflows/build/badge.svg)
 ![deploy](https://github.com/bsdforen/wiki/workflows/deploy/badge.svg)
@@ -6,7 +6,7 @@
 ## Virtuelle Python Umgebung erstellen
 
 ~~~bash
-~% python3.7 -m venv sphinx
+~% python -m venv sphinx
 ~% source sphinx/bin/activate
 ~% pip install --upgrade pip
 ~~~
