@@ -6,7 +6,7 @@ Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokument
 
 ### Added
 
-- Ein Changelogerstellt und als Datei: `CHANGELOG.md` im Repository gespeichert.
+- Ein Changelog erstellt und als Datei: `CHANGELOG.md` im Repository gespeichert.
 
 ### Changed
 
