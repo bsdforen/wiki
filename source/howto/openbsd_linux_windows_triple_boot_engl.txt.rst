@@ -17,11 +17,14 @@ I have a special setup! My computer has 2 hard drives, and I wanted to install 3
 I was also forced to use UEFI (Damn you Ubuntu 21.04), luckily this is no longer a problem for my favorite OS, OpenBSD 6.9. And because I like playing StarCraft 2, I needed a Windows 10 as well.
 
 Here it goes...
-First of all: NO BACKUP, NO MERCY!
-Secondly: The order of installing the Operating systems is important. Mine was Windows, OpenBSD, Ubuntu.
 
-Windows got the first hard drive, (actually nvme).
-OpenBSD got the first 50% of the second drive, Ubuntu the second 50%.
+.. hint::
+
+  First of all: NO BACKUP, NO MERCY!
+  Secondly: The order of installing the Operating systems is important. Mine was Windows, OpenBSD, Ubuntu.
+
+  Windows got the first hard drive, (actually nvme).
+  OpenBSD got the first 50% of the second drive, Ubuntu the second 50%.
 
 For the impatient ones: This is what it looks like from the Ubuntu point of view in the end.
 
@@ -168,17 +171,10 @@ All that was left now was running
   (I ignored the warnings about those extra partitions. )
   So now, at boot time, I can choose any of my three Operating systems.
 
-
 Keywords: Tutorial. Tripe Boot. Dual Boot. Grub. UEFI. OpenBSD. Linux. Ubuntu. Windows.
 
-
-
-
 This howto was originally created by dettus  `dettus <https://www.bsdforen.de/members/dettus.1918/>`_ and postet in our `forum <https://www.bsdforen.de/threads/uefi-openbsd-6-9-ubuntu-21-04-windows-10-triple-boot-on-2-hard-drives.36218/>`_ .
-
-
 
 * :ref:`genindex`
 
 Zuletzt geändert: |date|
-
