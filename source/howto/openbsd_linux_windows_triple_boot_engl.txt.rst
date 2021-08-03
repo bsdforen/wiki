@@ -11,19 +11,20 @@ Als Ausnahme für unser Wiki dieser englische Artikel von Dettus, damit er nicht
 
 Usally this wiki is only in German, but we thought this might be intresting for everyone.
 
-So, I am posting this in English, since I googled A LOT to find it. I am sure there are other people out there with the same problem.
+So, I am posting this in English, since I googled A LOT to find it. I am sure there are other people
+out there with the same problem.
 
-I have a special setup! My computer has 2 hard drives, and I wanted to install 3 operating systems. So why Dual Boot when you can TRIPLE BOOT?
-I was also forced to use UEFI (Damn you Ubuntu 21.04), luckily this is no longer a problem for my favorite OS, OpenBSD 6.9. And because I like playing StarCraft 2, I needed a Windows 10 as well.
+I have a special setup! My computer has 2 hard drives, and I wanted to install 3 operating systems.
+So why Dual Boot when you can TRIPLE BOOT? I was also forced to use UEFI (Damn you Ubuntu 21.04),
+luckily this is no longer a problem for my favorite OS, OpenBSD 6.9. And because I like playing
+StarCraft 2, I needed a Windows 10 as well.
 
 Here it goes...
 
 .. hint::
 
-  First of all: NO BACKUP, NO MERCY!
-  Secondly: The order of installing the Operating systems is important. Mine was Windows, OpenBSD, Ubuntu.
-
-  Windows got the first hard drive, (actually nvme).
+  First of all: NO BACKUP, NO MERCY! Secondly: The order of installing the Operating systems is
+  important. Mine was Windows, OpenBSD, Ubuntu. Windows got the first hard drive, (actually nvme).
   OpenBSD got the first 50% of the second drive, Ubuntu the second 50%.
 
 For the impatient ones: This is what it looks like from the Ubuntu point of view in the end.
@@ -69,12 +70,10 @@ For the impatient ones: This is what it looks like from the Ubuntu point of view
   % update-grub
 
 
-STEP1: I started by doing a backup. (NO BACKUP, NO MERCY).
+**STEP1:** I started by doing a backup. (NO BACKUP, NO MERCY).
 
-STEP 2: I used a different machine to create 3 USB drives for my 3 operating systems.
-One for Windows: https://www.microsoft.com/en-us/software-download/
-One for OpenBSD: https://ftp.openbsd.org/pub/OpenBSD/6.9/amd64/install69.img
-One for Ubuntu: https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview
+**STEP 2:** I used a different machine to create 3 USB drives for my 3 operating systems. One for
+`Windows`_, `OpenBSD`_ and `Ubuntu`_.
 
 Creating the USB drive for the OpenBSD install works best on a Unix system:
 
@@ -85,7 +84,7 @@ Creating the USB drive for the OpenBSD install works best on a Unix system:
 
 For the other two, I used Windows.
 
-STEP 3: I erased the first sector from my drives, to clear the partition table
+**STEP 3:** I erased the first sector from my drives, to clear the partition table
 
 ::
 
@@ -94,9 +93,10 @@ STEP 3: I erased the first sector from my drives, to clear the partition table
 
 Now there was no way back. Luckily, I had a backup ;)
 
-STEP 4: I installed Windows. My BIOS required me to press F12 to see the boot options, I chose UEFI boot from the USB drive. I installed it on the first hard disk.
+**STEP 4:** I installed Windows. My BIOS required me to press F12 to see the boot options, I chose
+UEFI boot from the USB drive. I installed it on the first hard disk.
 
-STEP 5: I booted the OpenBSD stick. At the prompt, I chose (S)hell.
+**STEP 5:** I booted the OpenBSD stick. At the prompt, I chose (S)hell.
 
 ::
 
@@ -113,22 +113,28 @@ set up the partions. In the following order: 0, 1, 3, 2
   3: type A6. From 1024-1000100100
   2: type 83. From 1000100124-end
 
-The exit and (I)nstall. I used the OpenBSD partition.
-To be honest: I am writing this one down from memory. If it does now work, I guess that starting the installation, choosing (WHOLE) when prompted, and Interrupting during the disklabel setup, and then doing an fdisk might also be an option.
+The exit and (I)nstall. I used the OpenBSD partition. To be honest: I am writing this one down from
+memory. If it does now work, I guess that starting the installation, choosing ``WHOLE`` when
+prompted, and Interrupting during the disklabel setup, and then doing an fdisk might also be an
+option.
 
-The next time I booted using the boot options, I had a new UEFI entry which was giving me OpenBSD. NICE!
+The next time I booted using the boot options, I had a new UEFI entry which was giving me OpenBSD.
+NICE!
 
-STEP 6: I installed Ubuntu. When asked about the partitioning, I chose "Something else" and was LUCKY THAT Ubuntu used the Windows-UEFI-Partition for its bootloader.
-The GRUB bootloader was able to find Windows on its own. I rebooted twice: Once to see if Linux was booting. Once to see if windows was booting, and if I could select which one using GRUB menu.
+**STEP 6:** I installed Ubuntu. When asked about the partitioning, I chose ``Something else`` and
+was LUCKY THAT Ubuntu used the Windows-UEFI-Partition for its bootloader. The GRUB bootloader was
+able to find Windows on its own. I rebooted twice: Once to see if Linux was booting. Once to see if
+windows was booting, and if I could select which one using GRUB menu.
 
-STEP 7: I had to figure out which harddrive the OpenBSD efi bootloader was on.
-So when the grub screen showed up, I pressed (c) for command line options.
+**STEP 7:** I had to figure out which harddrive the OpenBSD efi bootloader was on. So when the grub
+screen showed up, I pressed ``c`` for command line options.
 
 ::
 
   grub> ls
 
-Which showed me some partitions. Since I installed the OpenBSD efi loader on partition 1 and OpenBSD on partition 3, I was able to find what i needed on (hd0,gpt2) and (hd0,gpt4).
+Which showed me some partitions. Since I installed the OpenBSD efi loader on partition 1 and OpenBSD
+on partition 3, I was able to find what i needed on ``hd0,gpt2`` and ``hd0,gpt4``.
 
 ::
 
@@ -147,7 +153,8 @@ I tried it out, using
 
 And it booted!
 
-STEP 8: I rebooted into Linux, and updated grub. More precisely /etc/grub.d/40_custom. This is what it looked like afterwards:
+**STEP 8:** I rebooted into Linux, and updated grub. More precisely ``/etc/grub.d/40_custom``. This
+is what it looked like afterwards:
 
 ::
 
@@ -173,8 +180,14 @@ All that was left now was running
 
 Keywords: Tutorial. Tripe Boot. Dual Boot. Grub. UEFI. OpenBSD. Linux. Ubuntu. Windows.
 
-This howto was originally created by dettus  `dettus <https://www.bsdforen.de/members/dettus.1918/>`_ and postet in our `forum <https://www.bsdforen.de/threads/uefi-openbsd-6-9-ubuntu-21-04-windows-10-triple-boot-on-2-hard-drives.36218/>`_ .
+This howto was originally created by `dettus`_ and postet in our `forum`_.
 
 * :ref:`genindex`
 
 Zuletzt geändert: |date|
+
+.. _dettus: https://www.bsdforen.de/members/dettus.1918
+.. _forum: https://www.bsdforen.de/threads/uefi-openbsd-6-9-ubuntu-21-04-windows-10-triple-boot-on-2-hard-drives.36218
+.. _Windows: https://www.microsoft.com/en-us/software-download
+.. _OpenBSD: https://ftp.openbsd.org/pub/OpenBSD/6.9/amd64/install69.img
+.. _Ubuntu: https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview
