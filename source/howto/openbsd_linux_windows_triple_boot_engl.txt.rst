@@ -32,7 +32,7 @@ For the impatient ones: This is what it looks like from the Ubuntu point of view
 ::
 
   % fdisk /dev/nvme0n1
- 
+
   ..
   Command (m for help): p
   ...
