@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1.93. UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl) &mdash; BSDForen.de 1.0 Dokumentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.94. OpenOffice unter FreeBSD" href="openoffice_unter_freebsd.txt.html" />
+    <link rel="prev" title="1.92. OpenBSD 6.7 auf dem RaspberryPI 4 installieren" href="openbsd_raspberry4_installieren.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BSDForen.de
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.37. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.38. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.39. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.40. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.41. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.42. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.43. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.44. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.45. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.46. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.47. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.48. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.49. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.50. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.51. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.52. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.53. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.54. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.55. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.56. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.57. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.58. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.59. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.60. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.61. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.62. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.63. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.64. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.65. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.66. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.67. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.68. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.69. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.70. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.71. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.72. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.73. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.74. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.75. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.76. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.77. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.78. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.79. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.80. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.81. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.82. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.83. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.84. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.85. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.86. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.87. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.88. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.89. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.90. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.91. nVidia Twinview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.92. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.93. UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.94. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.95. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.96. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.97. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.98. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.99. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.100. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.101. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.102. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.103. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.104. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.105. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.106. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.107. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.108. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.109. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.110. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.111. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.112. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.113. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.114. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.115. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.116. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.117. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.118. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.119. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.120. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.121. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.122. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.123. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.124. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.125. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.126. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.127. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.128. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.129. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.130. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.131. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.132. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.133. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.134. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.135. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.136. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.137. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.138. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.139. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.140. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.141. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.142. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.143. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.144. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.145. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.146. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.147. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.148. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.149. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
+        
+      <li><span class="section-number">1.93. </span>UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/howto/openbsd_linux_windows_triple_boot_engl.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="uefi-openbsd-6-9-ubuntu-21-04-windows-10-triple-boot-on-2-hard-drives-engl">
+<h1><span class="section-number">1.93. </span>UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)<a class="headerlink" href="#uefi-openbsd-6-9-ubuntu-21-04-windows-10-triple-boot-on-2-hard-drives-engl" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Info</p>
+<img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
+</div>
+<p>Als Ausnahme für unser Wiki dieser englische Artikel von Dettus, damit er nicht im Forum verloren geht.</p>
+<p>Usally this wiki is only in German, but we thought this might be intresting for everyone.</p>
+<p>So, I am posting this in English, since I googled A LOT to find it. I am sure there are other people
+out there with the same problem.</p>
+<p>I have a special setup! My computer has 2 hard drives, and I wanted to install 3 operating systems.
+So why Dual Boot when you can TRIPLE BOOT? I was also forced to use UEFI (Damn you Ubuntu 21.04),
+luckily this is no longer a problem for my favorite OS, OpenBSD 6.9. And because I like playing
+StarCraft 2, I needed a Windows 10 as well.</p>
+<p>Here it goes…</p>
+<div class="admonition hint">
+<p class="admonition-title">Hinweis</p>
+<p>First of all: NO BACKUP, NO MERCY! Secondly: The order of installing the Operating systems is
+important. Mine was Windows, OpenBSD, Ubuntu. Windows got the first hard drive, (actually nvme).
+OpenBSD got the first 50% of the second drive, Ubuntu the second 50%.</p>
+</div>
+<p>For the impatient ones: This is what it looks like from the Ubuntu point of view in the end.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> % fdisk /dev/nvme0n1
+
+ ..
+ Command (m for help): p
+ ...
+ Device              Start        End    Sectors   Size Type
+ /dev/nvme0n1p1       2048     206847     204800   100M EFI System
+ /dev/nvme0n1p2     206848     239615      32768    16M Microsoft reserved
+ /dev/nvme0n1p3     239616 1999364205 1999124590 953,3G Microsoft basic data
+ /dev/nvme0n1p4 1999366144 2000406527    1040384   508M Windows recovery environm
+ ...
+ Command (m for help): q
+ ...
+ % fdisk /dev/nvme1n1
+ ...
+ Command (m for help): p
+ ...
+ Device              Start        End    Sectors   Size Type
+ /dev/nvme1n1p2         64       1023        960   480K EFI System
+ /dev/nvme1n1p3 1000101124 2000409200 1000308077   477G Linux filesystem
+/dev/nvme1n1p4       1024 1000101123 1000100100 476,9G OpenBSD data
+ ...
+
+ Command (m for help): q
+ ...
+
+ % cat /etc/grub.d/40_custom
+ #!/bin/sh
+ exec tail -n +3 $0
+ # This file provides an easy way to add custom menu entries.  Simply type the
+ # menu entries you want to add after this comment.  Be careful not to change
+ # the &#39;exec tail&#39; line above.
+ menuentry &#39;OpenBSD 6.9/amd64&#39; {
+   set root=&#39;(hd0,gpt4)&#39;
+   chainloader (hd0,gpt2)/efi/boot/bootx64.efi
+ }
+ % update-grub
+</pre></div>
+</div>
+<p><strong>STEP1:</strong> I started by doing a backup. (NO BACKUP, NO MERCY).</p>
+<p><strong>STEP 2:</strong> I used a different machine to create 3 USB drives for my 3 operating systems. One for
+<a class="reference external" href="https://www.microsoft.com/en-us/software-download">Windows</a>, <a class="reference external" href="https://ftp.openbsd.org/pub/OpenBSD/6.9/amd64/install69.img">OpenBSD</a> and <a class="reference external" href="https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview">Ubuntu</a>.</p>
+<p>Creating the USB drive for the OpenBSD install works best on a Unix system:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">openbsd</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">OpenBSD</span><span class="o">/</span><span class="mf">6.9</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">install69</span><span class="o">.</span><span class="n">img</span>
+<span class="o">%</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=</span><span class="n">install69</span><span class="o">.</span><span class="n">img</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">XXXX</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span>
+</pre></div>
+</div>
+<p>For the other two, I used Windows.</p>
+<p><strong>STEP 3:</strong> I erased the first sector from my drives, to clear the partition table</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">zero</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">nvme0XXXX</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span> <span class="n">count</span><span class="o">=</span><span class="mi">16</span>
+<span class="o">%</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">zero</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">nvme1XXXX</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span> <span class="n">count</span><span class="o">=</span><span class="mi">16</span>
+</pre></div>
+</div>
+<p>Now there was no way back. Luckily, I had a backup ;)</p>
+<p><strong>STEP 4:</strong> I installed Windows. My BIOS required me to press F12 to see the boot options, I chose
+UEFI boot from the USB drive. I installed it on the first hard disk.</p>
+<p><strong>STEP 5:</strong> I booted the OpenBSD stick. At the prompt, I chose (S)hell.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd /dev/</span>
+<span class="c1"># sh MAKEDEV sd1</span>
+<span class="c1"># fdisk -e /dev/rsd1c</span>
+</pre></div>
+</div>
+<p>set up the partions. In the following order: 0, 1, 3, 2</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span><span class="p">:</span> <span class="n">unused</span>
+<span class="mi">1</span><span class="p">:</span> <span class="nb">type</span> <span class="n">EF</span><span class="o">.</span> <span class="n">From</span> <span class="mi">64</span><span class="o">-</span><span class="mi">960</span>
+<span class="mi">3</span><span class="p">:</span> <span class="nb">type</span> <span class="n">A6</span><span class="o">.</span> <span class="n">From</span> <span class="mi">1024</span><span class="o">-</span><span class="mi">1000100100</span>
+<span class="mi">2</span><span class="p">:</span> <span class="nb">type</span> <span class="mf">83.</span> <span class="n">From</span> <span class="mi">1000100124</span><span class="o">-</span><span class="n">end</span>
+</pre></div>
+</div>
+<p>The exit and (I)nstall. I used the OpenBSD partition. To be honest: I am writing this one down from
+memory. If it does now work, I guess that starting the installation, choosing <code class="docutils literal notranslate"><span class="pre">WHOLE</span></code> when
+prompted, and Interrupting during the disklabel setup, and then doing an fdisk might also be an
+option.</p>
+<p>The next time I booted using the boot options, I had a new UEFI entry which was giving me OpenBSD.
+NICE!</p>
+<p><strong>STEP 6:</strong> I installed Ubuntu. When asked about the partitioning, I chose <code class="docutils literal notranslate"><span class="pre">Something</span> <span class="pre">else</span></code> and
+was LUCKY THAT Ubuntu used the Windows-UEFI-Partition for its bootloader. The GRUB bootloader was
+able to find Windows on its own. I rebooted twice: Once to see if Linux was booting. Once to see if
+windows was booting, and if I could select which one using GRUB menu.</p>
+<p><strong>STEP 7:</strong> I had to figure out which harddrive the OpenBSD efi bootloader was on. So when the grub
+screen showed up, I pressed <code class="docutils literal notranslate"><span class="pre">c</span></code> for command line options.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grub</span><span class="o">&gt;</span> <span class="n">ls</span>
+</pre></div>
+</div>
+<p>Which showed me some partitions. Since I installed the OpenBSD efi loader on partition 1 and OpenBSD
+on partition 3, I was able to find what i needed on <code class="docutils literal notranslate"><span class="pre">hd0,gpt2</span></code> and <code class="docutils literal notranslate"><span class="pre">hd0,gpt4</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grub</span><span class="o">&gt;</span> <span class="n">ls</span> <span class="p">(</span><span class="n">hd0</span><span class="p">,</span><span class="n">gpt2</span><span class="p">)</span><span class="o">/</span><span class="n">efi</span><span class="o">/</span><span class="n">boot</span>
+<span class="n">bootx64</span><span class="o">.</span><span class="n">efi</span> <span class="o">...</span>
+<span class="n">grub</span><span class="o">&gt;</span> <span class="n">ls</span> <span class="p">(</span><span class="n">hd0</span><span class="p">,</span><span class="n">gpt4</span><span class="p">)</span><span class="o">/</span>
+<span class="n">bsd</span> <span class="n">bsd</span><span class="o">.</span><span class="n">rd</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>I tried it out, using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grub</span><span class="o">&gt;</span> <span class="nb">set</span> <span class="n">root</span><span class="o">=</span><span class="s1">&#39;(hd0,gpt4)&#39;</span>
+<span class="n">grub</span><span class="o">&gt;</span> <span class="n">chainloader</span> <span class="p">(</span><span class="n">hd0</span><span class="p">,</span><span class="n">gpt2</span><span class="p">)</span><span class="o">/</span><span class="n">efi</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">bootx64</span><span class="o">.</span><span class="n">efi</span>
+<span class="n">grub</span><span class="o">&gt;</span> <span class="n">boot</span>
+</pre></div>
+</div>
+<p>And it booted!</p>
+<p><strong>STEP 8:</strong> I rebooted into Linux, and updated grub. More precisely <code class="docutils literal notranslate"><span class="pre">/etc/grub.d/40_custom</span></code>. This
+is what it looked like afterwards:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the &#39;exec tail&#39; line above.
+menuentry &#39;OpenBSD 6.9/amd64&#39; {
+    set root=&#39;(hd0,gpt4)&#39;
+    chainloader (hd0,gpt2)/efi/boot/bootx64.efi
+}
+</pre></div>
+</div>
+<p>All that was left now was running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">update</span><span class="o">-</span><span class="n">grub</span>
+
+<span class="p">(</span><span class="n">I</span> <span class="n">ignored</span> <span class="n">the</span> <span class="n">warnings</span> <span class="n">about</span> <span class="n">those</span> <span class="n">extra</span> <span class="n">partitions</span><span class="o">.</span> <span class="p">)</span>
+<span class="n">So</span> <span class="n">now</span><span class="p">,</span> <span class="n">at</span> <span class="n">boot</span> <span class="n">time</span><span class="p">,</span> <span class="n">I</span> <span class="n">can</span> <span class="n">choose</span> <span class="nb">any</span> <span class="n">of</span> <span class="n">my</span> <span class="n">three</span> <span class="n">Operating</span> <span class="n">systems</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Keywords: Tutorial. Tripe Boot. Dual Boot. Grub. UEFI. OpenBSD. Linux. Ubuntu. Windows.</p>
+<p>This howto was originally created by <a class="reference external" href="https://www.bsdforen.de/members/dettus.1918">dettus</a> and postet in our <a class="reference external" href="https://www.bsdforen.de/threads/uefi-openbsd-6-9-ubuntu-21-04-windows-10-triple-boot-on-2-hard-drives.36218">forum</a>.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+</ul>
+<p>Zuletzt geändert: 2021-08-03</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="openoffice_unter_freebsd.txt.html" class="btn btn-neutral float-right" title="1.94. OpenOffice unter FreeBSD" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="openbsd_raspberry4_installieren.txt.html" class="btn btn-neutral float-left" title="1.92. OpenBSD 6.7 auf dem RaspberryPI 4 installieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, BSDForen.de.
+
+    </p>
+  </div>
+    
+    
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>1.96. Paketsysteme &mdash; BSDForen.de 1.0 Dokumentation</title>
+  <title>1.97. Paketsysteme &mdash; BSDForen.de 1.0 Dokumentation</title>
   
 
   
@@ -45,8 +45,8 @@
     
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="1.97. Festplattenpartitionierung unter FreeBSD" href="partitionierung.txt.html" />
-    <link rel="prev" title="1.95. Pakete deinstallieren" href="pakete_deinstallieren.txt.html" /> 
+    <link rel="next" title="1.98. Festplattenpartitionierung unter FreeBSD" href="partitionierung.txt.html" />
+    <link rel="prev" title="1.96. Pakete deinstallieren" href="pakete_deinstallieren.txt.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -185,73 +185,74 @@
 <li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.90. Multihead mit nv</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.91. nVidia Twinview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.92. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.93. OpenOffice unter FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.94. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.95. Pakete deinstallieren</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1.96. Paketsysteme</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#grundsatzliches">1.96.1. Grundsätzliches</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#terminologie">1.96.2. Terminologie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installieren-eines-programms-uber-die-ports-pkgsrc">1.96.3. Installieren eines Programms über die Ports/PkgSrc</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installieren-eines-programms-uber-die-pakete">1.96.4. Installieren eines Programms über die Pakete</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#loschen-eines-installierten-pakets">1.96.5. Löschen eines installierten Pakets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#upgrade-eines-installierten-pakets">1.96.6. Upgrade eines installierten Pakets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#aktualisieren-der-ports-pkgsrc">1.96.7. Aktualisieren der Ports / PkgSrc</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#grafische-oberflachen-zur-paketverwaltung">1.96.8. Grafische Oberflächen zur Paketverwaltung</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#verweise">1.96.9. Verweise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_linux_windows_triple_boot_engl.txt.html">1.93. UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.94. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.95. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.96. Pakete deinstallieren</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.97. Paketsysteme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#grundsatzliches">1.97.1. Grundsätzliches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#terminologie">1.97.2. Terminologie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installieren-eines-programms-uber-die-ports-pkgsrc">1.97.3. Installieren eines Programms über die Ports/PkgSrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installieren-eines-programms-uber-die-pakete">1.97.4. Installieren eines Programms über die Pakete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loschen-eines-installierten-pakets">1.97.5. Löschen eines installierten Pakets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upgrade-eines-installierten-pakets">1.97.6. Upgrade eines installierten Pakets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aktualisieren-der-ports-pkgsrc">1.97.7. Aktualisieren der Ports / PkgSrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grafische-oberflachen-zur-paketverwaltung">1.97.8. Grafische Oberflächen zur Paketverwaltung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verweise">1.97.9. Verweise</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.97. Festplattenpartitionierung unter FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.98. pkg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.99. Postfix Antivirus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.100. Postfix Courier OpenLDAP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.101. Postfix DSPAM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.102. PostgreSQL Update auf einen neueren Zweig</a></li>
-<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.103. Poudriere</a></li>
-<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.104. Poudriere Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.105. PuTTY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.106. Remount RW Read/Write</a></li>
-<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.107. Revision Control System</a></li>
-<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.108. runit auf FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.109. Samsung SMT-7020S</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.110. scharfe Windows Schriften</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.111. Schöne Schriften in Xorg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.112. Shell-Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.113. Soundkarte einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.114. PC-Speaker deaktivieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.115. ssh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.116. Suspend und Resume bei Thinkpads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.117. System in RAID1 verwandeln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.118. Systemüberwachung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.119. TeXlive aus dem Quellcode installieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.120. Tomcat 6 Installation und Stolpersteine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.121. Tor (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.122. Tor und Privoxy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.123. Tortoise like SVN Menu in Nautilus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.124. TV-Karte benutzen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.125. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.126. UMTS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.127. UMTS mit HUAWEI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.128. UMTS mit Sunrise und Swisscom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.129. UNICODE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.130. Unicode auf der Konsole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.131. Unix-Freigabe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.132. Updaten von OpenBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.133. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.134. USB-Stick Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.135. USB-Stick Unterstützung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.136. USB Automount ohne HAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.137. VDSL and OpenBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.138. VLAN-Konfiguration mit FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.139. VPN (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.140. Windowmanager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.141. Windows-Freigabe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.142. Wine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.143. Xfce4 mit gdm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.144. Xmodmap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.145. Xorg Konfigurieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.146. Zeit synchronisieren mit ntp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.147. ZFS auf FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.148. ZFS (raidz), Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.98. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.99. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.100. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.101. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.102. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.103. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.104. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.105. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.106. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.107. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.108. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.109. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.110. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.111. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.112. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.113. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.114. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.115. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.116. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.117. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.118. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.119. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.120. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.121. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.122. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.123. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.124. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.125. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.126. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.127. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.128. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.129. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.130. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.131. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.132. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.133. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.134. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.135. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.136. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.137. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.138. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.139. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.140. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.141. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.142. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.143. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.144. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.145. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.146. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.147. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.148. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.149. ZFS (raidz), Geli und USB Boot</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
@@ -311,7 +312,7 @@
         
           <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
         
-      <li><span class="section-number">1.96. </span>Paketsysteme</li>
+      <li><span class="section-number">1.97. </span>Paketsysteme</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -331,7 +332,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="paketsysteme">
-<h1><span class="section-number">1.96. </span>Paketsysteme<a class="headerlink" href="#paketsysteme" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">1.97. </span>Paketsysteme<a class="headerlink" href="#paketsysteme" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
@@ -340,7 +341,7 @@
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
 </div>
 <div class="section" id="grundsatzliches">
-<h2><span class="section-number">1.96.1. </span>Grundsätzliches<a class="headerlink" href="#grundsatzliches" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.97.1. </span>Grundsätzliches<a class="headerlink" href="#grundsatzliches" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Auf den meisten unixoiden Betriebsystemen gibt es Paketsysteme. Sie
 regeln Installation, Upgrades etc. und lösen Abhängigkeiten auf. Bei den
 BSDs gibt es drei:</p>
@@ -373,7 +374,7 @@ müssen DragonFlyBSD-Nutzer und andere Nicht-NetBSD-Nutzer von PkgSrc
 stattdessen <strong>bmake</strong> nehmen!</p>
 </div>
 <div class="section" id="terminologie">
-<h2><span class="section-number">1.96.2. </span>Terminologie<a class="headerlink" href="#terminologie" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.97.2. </span>Terminologie<a class="headerlink" href="#terminologie" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die Terminologie ist nicht sehr eindeutig oder konsistent, aber
 grundsätzlich kann man folgende Dinge festhalten:</p>
 <ul class="simple">
@@ -414,7 +415,7 @@ bezeichnet, die ORIGIN von Links wäre also <strong>www/links</strong>.</div>
 </div>
 </div>
 <div class="section" id="installieren-eines-programms-uber-die-ports-pkgsrc">
-<h2><span class="section-number">1.96.3. </span>Installieren eines Programms über die Ports/PkgSrc<a class="headerlink" href="#installieren-eines-programms-uber-die-ports-pkgsrc" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.97.3. </span>Installieren eines Programms über die Ports/PkgSrc<a class="headerlink" href="#installieren-eines-programms-uber-die-ports-pkgsrc" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Möchte man ein noch nicht installiertes Programm aus den Quellen
 installieren, so geht man nach $BAUM/$ORIGIN und gibt <strong>make install
 clean</strong> ein. Also z.B.: &lt;xterm&gt; # cd /usr/ports/net-im/pidgin # make
@@ -436,7 +437,7 @@ gepatcht, kompiliert und installiert. Zum Schluß werden die nicht mehr
 benötigten Sourcen und Objektdateien wieder gelöscht.</p>
 </div>
 <div class="section" id="installieren-eines-programms-uber-die-pakete">
-<h2><span class="section-number">1.96.4. </span>Installieren eines Programms über die Pakete<a class="headerlink" href="#installieren-eines-programms-uber-die-pakete" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.97.4. </span>Installieren eines Programms über die Pakete<a class="headerlink" href="#installieren-eines-programms-uber-die-pakete" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die BSDs bieten für viele (nicht alle) der <em>Ports</em> vorkompilierte Pakete
 an. Diese sind nicht immer aktuell oder vollständig (auch abhängig von
 Rechnerarchitektur), aber wenn es für einen <em>Port</em> ein <em>Paket</em> gibt,
@@ -452,7 +453,7 @@ die Pakete von -STABLE zu verwenden, siehe dazu
 <a class="reference external" href="FreeBSD-Zweige">FreeBSD-Zweige</a>.</p>
 </div>
 <div class="section" id="loschen-eines-installierten-pakets">
-<h2><span class="section-number">1.96.5. </span>Löschen eines installierten Pakets<a class="headerlink" href="#loschen-eines-installierten-pakets" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.97.5. </span>Löschen eines installierten Pakets<a class="headerlink" href="#loschen-eines-installierten-pakets" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line">Mit <strong>pkg_info</strong> erhält man eine Liste der installierten Pakete.
 Möchte man ein Paket löschen, das von keinem anderen benötigt wird,
@@ -477,7 +478,7 @@ Löschvorgang überflüssig gewordene Abhängigkeiten mitlöscht.</div>
 </div>
 </div>
 <div class="section" id="upgrade-eines-installierten-pakets">
-<h2><span class="section-number">1.96.6. </span>Upgrade eines installierten Pakets<a class="headerlink" href="#upgrade-eines-installierten-pakets" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.97.6. </span>Upgrade eines installierten Pakets<a class="headerlink" href="#upgrade-eines-installierten-pakets" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line">Grundsätzlich kann man so vorgehen, dass man ein Paket erst löscht
 (wenn nötig mit <strong>-f</strong> bzw. <strong>-F</strong>) und dann neuinstalliert (über
@@ -498,7 +499,7 @@ ist es jedoch auch Möglich mit Paketen zu aktualisieren.</div>
 </div>
 </div>
 <div class="section" id="aktualisieren-der-ports-pkgsrc">
-<h2><span class="section-number">1.96.7. </span>Aktualisieren der Ports / PkgSrc<a class="headerlink" href="#aktualisieren-der-ports-pkgsrc" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.97.7. </span>Aktualisieren der Ports / PkgSrc<a class="headerlink" href="#aktualisieren-der-ports-pkgsrc" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="line-block">
 <div class="line"><em>Pakete</em> werden auf den Mirrors automatisch aktualisiert, bei seinen
 Ports muss man das selber machen. Unter PkgSrc und den FreeBSD-Ports
@@ -517,7 +518,7 @@ FreeBSD-Zweige).</div>
 </div>
 </div>
 <div class="section" id="grafische-oberflachen-zur-paketverwaltung">
-<h2><span class="section-number">1.96.8. </span>Grafische Oberflächen zur Paketverwaltung<a class="headerlink" href="#grafische-oberflachen-zur-paketverwaltung" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.97.8. </span>Grafische Oberflächen zur Paketverwaltung<a class="headerlink" href="#grafische-oberflachen-zur-paketverwaltung" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="/anwendungen/bpm">bpm</a> <a class="footnote-reference brackets" href="#id10" id="id4">4</a> - Ein GTK+ basiertes Ports-Frontend
 (Nur FreeBSD-Ports)</p></li>
@@ -532,7 +533,7 @@ Gtk2-basiertes Frontend. (Nur FreeBSD-Ports)</p></li>
 </ul>
 </div>
 <div class="section" id="verweise">
-<h2><span class="section-number">1.96.9. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.97.9. </span>Verweise<a class="headerlink" href="#verweise" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>FreeBSD Man-Seiten:
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=ports">ports(7)</a>,
@@ -578,7 +579,7 @@ Gtk2-basiertes Frontend. (Nur FreeBSD-Ports)</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-05-29</p>
+<p>Zuletzt geändert: 2021-08-03</p>
 </div>
 </div>
 
@@ -588,8 +589,8 @@ Gtk2-basiertes Frontend. (Nur FreeBSD-Ports)</p></li>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="partitionierung.txt.html" class="btn btn-neutral float-right" title="1.97. Festplattenpartitionierung unter FreeBSD" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="pakete_deinstallieren.txt.html" class="btn btn-neutral float-left" title="1.95. Pakete deinstallieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="partitionierung.txt.html" class="btn btn-neutral float-right" title="1.98. Festplattenpartitionierung unter FreeBSD" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pakete_deinstallieren.txt.html" class="btn btn-neutral float-left" title="1.96. Pakete deinstallieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
 
   <hr/>
