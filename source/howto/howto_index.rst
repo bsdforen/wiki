@@ -100,6 +100,7 @@ Die hier aufgeführten Artikel sind in der Regel
    multihead_mit_nv.txt.rst
    nvidia_twinview.txt.rst
    openbsd_raspberry4_installieren.txt.rst
+   openbsd_linux_windows_triple_boot_engl.txt.rst
    openoffice_unter_freebsd.txt.rst
    openvpn_als_tunnel_zum_eigenen_netzwerk.txt.rst
    pakete_deinstallieren.txt.rst
