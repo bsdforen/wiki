@@ -3,11 +3,13 @@ OpenBSD 7.3 on an APU-PC as a DSL Router
 
 .. |date| date::
 
-.. sidebar:: Info
+.. sidebar::
+
+  .. image:: ../images/logo-openbsd.png
 
 .. note::
 
-  DISCLAIMER: USE AT YOUR OWN RISK!!!!
+  **DISCLAIMER: USE AT YOUR OWN RISK!!!!**
 
 
 
@@ -84,7 +86,8 @@ Installing OpenBSD
 ------------------
 If you have done it once, you can do this in your sleep. If not, do not hesitate to press CTRL+C and CTRL+D to start the installation over.
 
-* I must apologize, I do not remember the order in which those questions came up. *
+**I must apologize, I do not remember the order in which those questions came up.**
+
 One thing you will have to decide on is the HOSTNAME, I have decided to use router.dettus.privates.
 
 The (W)hole Disk can be used for OpenBSD, I wanted to create a (C)ustom Layout:
@@ -103,12 +106,13 @@ When the packages are to be selected, I deselected the Xenocara packages by typi
 As for the installation medium: Chose the cd0 option, it is the fastest. Or a network mirror if you prefer.
 
 
-* VERY IMPORTANT *
-Set up a dumbuser.
-(Y)es, run sshd
-(N)o, do not permit root login
-(Y)es, change the console to COM0
-Baud rate: 115200
+**VERY IMPORTANT**
+
+* Set up a dumbuser.
+* (Y)es, run sshd
+* (N)o, do not permit root login
+* (Y)es, change the console to COM0
+* Baud rate: 115200
 
 The APU PC comes with a vintage UART on the front side, so Answering the last two questions will allow you to access the console in case of a Network meltdown.
 
@@ -266,7 +270,7 @@ Afterwards, it should be possible to enable unbound.
   root@router> echo "nameserver 127.0.0.1" >/etc/resolv.conf
 
 
-* IF YOU ARE STILL INSIDE THE VM, IT WILL FAIL TO START THE UNBOUND SERVER! *
+**IF YOU ARE STILL INSIDE THE VM, IT WILL FAIL TO START THE UNBOUND SERVER!**
 
 
 
