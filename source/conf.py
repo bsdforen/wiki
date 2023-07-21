@@ -20,7 +20,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'BSDForen.de'
-copyright = '2021, BSDForen.de'
+copyright = '2023, BSDForen.de'
 author = 'BSDForen.de'
 
 # The full version, including alpha/beta/rc tags
