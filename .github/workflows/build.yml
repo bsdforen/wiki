@@ -7,50 +7,25 @@ on:
   pull_request:
     branches:
       - master
-
 jobs:
   build:
-
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
-        python-version: [3.9]
-
+        python-version: [3.10]
     steps:
-      - uses: actions/checkout@v2
-
+      - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-
+          cache: 'pip'
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip wheel
           pip install -r requirements.txt
-
       - name: Test sphinx-build
         run: |
           sphinx-build -d build/doctrees -b html source build -nW
           touch build/.nojekyll
           echo "wiki.bsdforen.de" > build/CNAME
-
-      # - name: Push message to IRC
-        # uses: rectalogic/notify-irc@v1
-        # if: github.event_name == 'push'
-        # with:
-          # channel: "##team.bsdforen.de"
-          # channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
-          # nickname: "bsdforen-git"
-          # message: |-
-            # ${{ github.repository }}: new ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }}
-
-      # - name: PR message to IRC
-        # uses: rectalogic/notify-irc@v1
-        # if: github.event_name == 'pull_request'
-        # with:
-          # channel: "##team.bsdforen.de"
-          # channel_key: ${{ secrets.IRC_PASSWORD_CHANNEL }}
-          # nickname: "bsdforen-git"
-          # message: |-
-            # ${{ github.repository }}: new ${{ github.event_name }} (by ${{ github.actor }}) -> ${{ job.status }}
