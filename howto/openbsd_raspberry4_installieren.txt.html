@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1.92. OpenBSD 6.7 auf dem RaspberryPI 4 installieren &mdash; BSDForen.de 1.0 Dokumentation</title>
+  <title>1.93. OpenBSD 6.7 auf dem RaspberryPI 4 installieren &mdash; BSDForen.de 1.0 Dokumentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="1.93. UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)" href="openbsd_linux_windows_triple_boot_engl.txt.html" />
-    <link rel="prev" title="1.91. nVidia Twinview" href="nvidia_twinview.txt.html" /> 
+    <link rel="next" title="1.94. UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)" href="openbsd_linux_windows_triple_boot_engl.txt.html" />
+    <link rel="prev" title="1.92. OpenBSD 7.3 on an APU-PC as a DSL Router" href="openbsd73_on_an_apu-pc_as_a_dsk_router.txt.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -138,73 +138,74 @@
 <li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.89. MPI auf FreeBSD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.90. Multihead mit nv</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.91. nVidia Twinview</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1.92. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#openbsd-auf-raspberry-4-8gb">1.92.1. OpenBSD auf Raspberry 4 (8GB)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#firmware-beschaffen">1.92.2. Firmware beschaffen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#firmware-auf-einem-rechner-in-meinem-fall-einer-mit-openbsd-6-7-entpacken">1.92.3. Firmware auf einem Rechner (in meinem Fall einer mit OpenBSD 6.7) entpacken.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sd-karte-no-1-vorbereiten">1.92.4. SD Karte No.1 vorbereiten.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sd-karte-no-2-vorbereiten">1.92.5. SD Karte No.2 vorbereiten.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#die-installation">1.92.6. Die Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#der-normale-bootvorgang">1.92.7. Der normale Bootvorgang</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd73_on_an_apu-pc_as_a_dsk_router.txt.html">1.92. OpenBSD 7.3 on an APU-PC as a DSL Router</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.93. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#openbsd-auf-raspberry-4-8gb">1.93.1. OpenBSD auf Raspberry 4 (8GB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#firmware-beschaffen">1.93.2. Firmware beschaffen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#firmware-auf-einem-rechner-in-meinem-fall-einer-mit-openbsd-6-7-entpacken">1.93.3. Firmware auf einem Rechner (in meinem Fall einer mit OpenBSD 6.7) entpacken.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sd-karte-no-1-vorbereiten">1.93.4. SD Karte No.1 vorbereiten.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sd-karte-no-2-vorbereiten">1.93.5. SD Karte No.2 vorbereiten.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#die-installation">1.93.6. Die Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#der-normale-bootvorgang">1.93.7. Der normale Bootvorgang</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="openbsd_linux_windows_triple_boot_engl.txt.html">1.93. UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.94. OpenOffice unter FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.95. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.96. Pakete deinstallieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.97. Paketsysteme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.98. Festplattenpartitionierung unter FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.99. pkg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.100. Postfix Antivirus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.101. Postfix Courier OpenLDAP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.102. Postfix DSPAM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.103. PostgreSQL Update auf einen neueren Zweig</a></li>
-<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.104. Poudriere</a></li>
-<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.105. Poudriere Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.106. PuTTY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.107. Remount RW Read/Write</a></li>
-<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.108. Revision Control System</a></li>
-<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.109. runit auf FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.110. Samsung SMT-7020S</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.111. scharfe Windows Schriften</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.112. Schöne Schriften in Xorg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.113. Shell-Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.114. Soundkarte einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.115. PC-Speaker deaktivieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.116. ssh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.117. Suspend und Resume bei Thinkpads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.118. System in RAID1 verwandeln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.119. Systemüberwachung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.120. TeXlive aus dem Quellcode installieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.121. Tomcat 6 Installation und Stolpersteine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.122. Tor (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.123. Tor und Privoxy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.124. Tortoise like SVN Menu in Nautilus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.125. TV-Karte benutzen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.126. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.127. UMTS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.128. UMTS mit HUAWEI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.129. UMTS mit Sunrise und Swisscom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.130. UNICODE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.131. Unicode auf der Konsole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.132. Unix-Freigabe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.133. Updaten von OpenBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.134. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.135. USB-Stick Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.136. USB-Stick Unterstützung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.137. USB Automount ohne HAL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.138. VDSL and OpenBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.139. VLAN-Konfiguration mit FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.140. VPN (OpenBSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.141. Windowmanager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.142. Windows-Freigabe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.143. Wine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.144. Xfce4 mit gdm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.145. Xmodmap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.146. Xorg Konfigurieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.147. Zeit synchronisieren mit ntp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.148. ZFS auf FreeBSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.149. ZFS (raidz), Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_linux_windows_triple_boot_engl.txt.html">1.94. UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.118. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.119. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.120. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.121. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.122. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.123. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.124. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.125. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.126. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.127. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.128. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.129. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.130. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.131. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.132. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.133. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.134. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.135. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.136. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.137. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.138. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.139. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.140. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.141. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.142. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.143. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.144. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.145. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.146. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.147. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.148. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.149. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.150. ZFS (raidz), Geli und USB Boot</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
@@ -231,7 +232,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="howto_index.html"><span class="section-number">1. </span>Howto</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">1.92. </span>OpenBSD 6.7 auf dem RaspberryPI 4 installieren</li>
+      <li class="breadcrumb-item active"><span class="section-number">1.93. </span>OpenBSD 6.7 auf dem RaspberryPI 4 installieren</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/howto/openbsd_raspberry4_installieren.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
@@ -242,37 +243,37 @@
            <div itemprop="articleBody">
              
   <section id="openbsd-6-7-auf-dem-raspberrypi-4-installieren">
-<h1><span class="section-number">1.92. </span>OpenBSD 6.7 auf dem RaspberryPI 4 installieren<a class="headerlink" href="#openbsd-6-7-auf-dem-raspberrypi-4-installieren" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">1.93. </span>OpenBSD 6.7 auf dem RaspberryPI 4 installieren<a class="headerlink" href="#openbsd-6-7-auf-dem-raspberrypi-4-installieren" title="Permalink to this heading"></a></h1>
 <aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 </aside>
 <p>Bei der Installation von OpenBSD auf dem RaspberryPI 4 sind einige dinge zu beachten.</p>
 <section id="openbsd-auf-raspberry-4-8gb">
-<h2><span class="section-number">1.92.1. </span>OpenBSD auf Raspberry 4 (8GB)<a class="headerlink" href="#openbsd-auf-raspberry-4-8gb" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.93.1. </span>OpenBSD auf Raspberry 4 (8GB)<a class="headerlink" href="#openbsd-auf-raspberry-4-8gb" title="Permalink to this heading"></a></h2>
 <p>Benötigt: 2 µSD Karten, eine für die Firmware, eine für das OpenBSD Image.</p>
 </section>
 <section id="firmware-beschaffen">
-<h2><span class="section-number">1.92.2. </span>Firmware beschaffen<a class="headerlink" href="#firmware-beschaffen" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.93.2. </span>Firmware beschaffen<a class="headerlink" href="#firmware-beschaffen" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pftf</span><span class="o">/</span><span class="n">RPi4</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">v1</span><span class="mf">.16</span><span class="o">/</span><span class="n">RPi4_UEFI_Firmware_v1</span><span class="mf">.16</span><span class="o">.</span><span class="n">zip</span>
 </pre></div>
 </div>
 </section>
 <section id="firmware-auf-einem-rechner-in-meinem-fall-einer-mit-openbsd-6-7-entpacken">
-<h2><span class="section-number">1.92.3. </span>Firmware auf einem Rechner (in meinem Fall einer mit OpenBSD 6.7) entpacken.<a class="headerlink" href="#firmware-auf-einem-rechner-in-meinem-fall-einer-mit-openbsd-6-7-entpacken" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.93.3. </span>Firmware auf einem Rechner (in meinem Fall einer mit OpenBSD 6.7) entpacken.<a class="headerlink" href="#firmware-auf-einem-rechner-in-meinem-fall-einer-mit-openbsd-6-7-entpacken" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unzip</span> <span class="n">RPi4_UEFI_Firmware</span><span class="o">*.</span><span class="n">zip</span>
 </pre></div>
 </div>
 </section>
 <section id="sd-karte-no-1-vorbereiten">
-<h2><span class="section-number">1.92.4. </span>SD Karte No.1 vorbereiten.<a class="headerlink" href="#sd-karte-no-1-vorbereiten" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.93.4. </span>SD Karte No.1 vorbereiten.<a class="headerlink" href="#sd-karte-no-1-vorbereiten" title="Permalink to this heading"></a></h2>
 <p>Eine kleine SD-Karte reicht, sind nur ein paar MB, die drauf kommen.</p>
 <p>Auf der SD-Karte nur eine Partition FAT32 erstellen und das Boot-flag setzen.</p>
 <p>Die entpackte Firmware (6 Dateien und der Ordner overlays) auf die SD-Karte kopieren.</p>
 <p>Die SD-Karte ist damit bereit, die Firmware auf dem Raspi zu booten. Sie wird jetzt in den µSD-Slot des Raspi gesteckt und dort verbleiben.</p>
 </section>
 <section id="sd-karte-no-2-vorbereiten">
-<h2><span class="section-number">1.92.5. </span>SD Karte No.2 vorbereiten.<a class="headerlink" href="#sd-karte-no-2-vorbereiten" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.93.5. </span>SD Karte No.2 vorbereiten.<a class="headerlink" href="#sd-karte-no-2-vorbereiten" title="Permalink to this heading"></a></h2>
 <p>Diese zweite SD-Karte wird zunächst das Bootimage von OpenBSD bekommen, ich hab das mit miniroot67.fs gemacht.
 Gleichzeitig wird die Karte aber das installierte OpenBSD bekommen, also nicht zu klein wählen. Auf 64 GB bekommt man aber locker alles drauf und kann später noch reichlich dazu installieren.
 Jetzt also das Bootimage und die entsprechende SHA Datei herunter geladen:</p>
@@ -288,7 +289,7 @@ Jetzt also das Bootimage und die entsprechende SHA Datei herunter geladen:</p>
 Damit ist auch die zweite Karte vorbereitet. Sie kommt nun mittels eines USB-SD-Adapters an einen USB Port des Raspi.</p>
 </section>
 <section id="die-installation">
-<h2><span class="section-number">1.92.6. </span>Die Installation<a class="headerlink" href="#die-installation" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.93.6. </span>Die Installation<a class="headerlink" href="#die-installation" title="Permalink to this heading"></a></h2>
 <p>Ich gehe jetzt davon aus, dass ihr einen Monitor am Raspi habt. Ist das nicht der Fall, muss über einen usb-uart-Adappter eine serielle Verbindung von einem anderen Rechner auf den Raspi aufgebaut werden.
 Dieser Adapter wird in einen USB Port eines PC eingesteckt und mit drei Leitungen an die GPIO-Leiste des Raspi angeschlossen: TxD an RxD, RxD an TxD, Gnd an Gnd.
 Als Programm ist eine simple Terminalsoftware wie cu geeignet:</p>
@@ -325,7 +326,7 @@ Während der Installation wird übrigens nicht das Tastaturlayout abgefragt, sod
 <p>Nach ca. 15 Minuten ist die Installation abgeschlossen und das Installationsprogramm schlägt einen Neustart vor. Machen wir.</p>
 </section>
 <section id="der-normale-bootvorgang">
-<h2><span class="section-number">1.92.7. </span>Der normale Bootvorgang<a class="headerlink" href="#der-normale-bootvorgang" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.93.7. </span>Der normale Bootvorgang<a class="headerlink" href="#der-normale-bootvorgang" title="Permalink to this heading"></a></h2>
 <p>Beide SD-Karten verbleiben ab jetzt dauerhaft im Raspi: Firmware-Karte im SD-Slot, OpenBSD-Karte am USB-Port.
 Der Raspi fährt also wieder hoch, es erscheint das bunte Quadrat, dann das Menü der Firmware. Wieder mit ESC das Setup wählen,
 dann das USB Mass Storage Device als Bootmedium auswählen.
@@ -345,8 +346,8 @@ Abgesehen von diesen beiden Eingaben habt ihr jetzt ein schönes, stabiles und s
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="nvidia_twinview.txt.html" class="btn btn-neutral float-left" title="1.91. nVidia Twinview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="openbsd_linux_windows_triple_boot_engl.txt.html" class="btn btn-neutral float-right" title="1.93. UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="openbsd73_on_an_apu-pc_as_a_dsk_router.txt.html" class="btn btn-neutral float-left" title="1.92. OpenBSD 7.3 on an APU-PC as a DSL Router" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="openbsd_linux_windows_triple_boot_engl.txt.html" class="btn btn-neutral float-right" title="1.94. UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

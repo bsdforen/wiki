@@ -99,6 +99,7 @@ Die hier aufgeführten Artikel sind in der Regel
    mpi.txt.rst
    multihead_mit_nv.txt.rst
    nvidia_twinview.txt.rst
+   openbsd73_on_an_apu-pc_as_a_dsk_router.txt.rst
    openbsd_raspberry4_installieren.txt.rst
    openbsd_linux_windows_triple_boot_engl.txt.rst
    openoffice_unter_freebsd.txt.rst

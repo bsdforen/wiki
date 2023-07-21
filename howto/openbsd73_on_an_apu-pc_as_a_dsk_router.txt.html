@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.92. OpenBSD 7.3 on an APU-PC as a DSL Router &mdash; BSDForen.de 1.0 Dokumentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="1.93. OpenBSD 6.7 auf dem RaspberryPI 4 installieren" href="openbsd_raspberry4_installieren.txt.html" />
+    <link rel="prev" title="1.91. nVidia Twinview" href="nvidia_twinview.txt.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            BSDForen.de
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anschluss_an_das_internet_mit_pppoe_mpd_und_firewall_pf.txt.html">1.2. Anschluss an das Internet mit PPPoe (mpd) und Firewall (pf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apache_mit_php5_installieren.txt.html">1.3. Apache mit php5 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asterisk_voip_telefonanalge.txt.html">1.4. Asterisk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio-cd_rippen.txt.html">1.5. Audio-CD rippen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufloesung_der_konsole_aendern.txt.html">1.6. Auflösung der Konsole ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authpf.txt.html">1.7. authpf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autologin_auf_der_konsole.txt.html">1.8. Autologin auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatische_proxy-konfiguration.txt.html">1.9. Automatische Proxy-Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatisches_beenden_von_diensten.txt.html">1.10. Automatisches Beenden von Diensten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automount.txt.html">1.11. Automount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="awk.txt.html">1.12. AWK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_auf_cd-r.txt.html">1.13. Backup auf CD-R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_mit_hammer.txt.html">1.14. Backup mit HAMMER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup_ueber_das_netzwerk.txt.html">1.15. Backup über das Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batterieueberwachung.txt.html">1.16. Batterieüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beseitigen_von_problemen_und_fehlern.txt.html">1.17. Beseitigen von Problemen und Fehlern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bluetooth.txt.html">1.18. Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bootvorgang_verschoenern.txt.html">1.19. Bootvorgang verschönern/verkürzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="canon_eos_1100d_mit_gphoto_und_gimp_betreiben.txt.html">1.20. Verwendung einer Canon EOS 1100D mit Gimp im Tethering Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd_iso_to_usb.txt.html">1.21. FreeBSD CD-ISO in USB Stick Image umwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chinesisch_schreiben.txt.html">1.22. Chinesisch schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu_stepping.txt.html">1.23. CPU Stepping (cpufreq, powerd)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crossbuilding_freebsd.txt.html">1.24. Crossbuilding FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crunchbsd.txt.html">1.25. CrunchBang Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_drucken_in_heterogener_umgebung.txt.html">1.26. CUPS - Drucken in heterogener Umgebung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html">1.27. CUPS - Installation und Konfiguration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cups_-_installation_und_konfiguration.txt.html#drucker-einrichten-unter-cups">1.28. Drucker einrichten unter CUPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datenrettung.txt.html">1.29. Datenrettung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html">1.30. Deutsche Sprachausgabe mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deutsche_sprachausgabe_mit_festival.txt.html#kmouth-mit-festival">1.31. KMouth mit Festival</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devfs.txt.html">1.32. devfs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp-server_einrichten.txt.html">1.33. DHCP-Server einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns-cache.txt.html">1.34. DNS-Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_apsfilter.txt.html">1.35. Drucken mit Apsfilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drucken_mit_windows.txt.html">1.36. Drucken mit Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsl_konfigurieren_netbsd.txt.html">1.37. DSL konfigurieren (NetBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb-t_karte_hauppauge_wintv-hvr_1300.txt.html">1.38. DVB-T Karte Hauppauge WinTV-HVR 1300</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvb_unter_freebsd.txt.html">1.39. DVB unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvd-rip_mit_mencoder.txt.html">1.40. DVD-Rip mit mencoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dvds_brennen.txt.html">1.41. DVDs brennen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ed2k-protokoll.txt.html">1.42. ed2k-Protokoll beim Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigenes_live-system_auf_usb-stick_installieren.txt.html">1.43. Eigenes Live-System auf USB-Stick installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="externe_projekte.txt.html">1.44. Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ezjail.txt.html">1.45. Ezjail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten.txt.html">1.46. Festplatte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplatte_einrichten_gpt.txt.html">1.47. Manuelle Verwaltung von Festplatten nach neuem GUID Partition Table (GPT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_geli_und_usb_boot.txt.html">1.48. Festplattenverschlüsselung mit Geli und USB Boot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_netbsd.txt.html">1.49. Festplattenverschlüsselung mit NetBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="festplattenverschluesselung_mit_pefs.txt.html">1.50. Festplattenverschlüsselung mit pefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="film-dvd_erstellen.txt.html">1.51. Film-DVD erstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall-regeln.txt.html">1.52. Firewall-Regeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floppy.txt.html">1.53. Floppy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxbox_mit_gdm.txt.html">1.54. Fluxbox mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_als_gast_unter_vmware.txt.html">1.55. FreeBSD als Gast unter VMware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="freebsd_boot_manager_und_vista.txt.html">1.56. FreeBSD Boot Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp-server_mit_pureftpd.txt.html">1.57. FTP-Server mit PureFTPd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnupg.txt.html">1.58. GnuPG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpsdrive.txt.html">1.59. GPSDrive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grafikausgabe_im_netzwerk.txt.html">1.60. Grafikausgabe im Netzwerk: X11, XDM und XDMCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grub2-anleitung.txt.html">1.61. GRUB2-Anleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibm_thinkpad_bios-update.txt.html">1.62. IBM Thinkpad BIOS-Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel2200bg.txt.html">1.63. Intel 2200BG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec-vpn.txt.html">1.64. IPSEC-VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6_netzwerke.txt.html">1.65. IPv6-Netzwerke mit FreeBSD als Router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="irc-protokoll.txt.html">1.66. irc-Protokoll im Mozilla, Seamonkey und Firefox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_mounten.txt.html">1.67. ISO-Images mounten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iso-images_von_optischen_medien_erzeugen.txt.html">1.68. ISO-Images von optischen Medien erzeugen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jails.txt.html">1.69. Jails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java_installation.txt.html">1.70. Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k3b_einrichten.txt.html">1.71. K3B einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kde4-tipps.txt.html">1.72. KDE4 Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kdm.txt.html">1.73. KDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kerio_mailserver.txt.html">1.74. Kerio Mailserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="konsole_nach_systemstart_und_logout_loeschen.txt.html">1.75. Konsole nach Systemstart und Logout löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.html">1.76. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="m0n0wall_sip.txt.html">1.77. M0n0wall &amp; SIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailhamster.txt.html">1.78. Mailhamster (Mailsammler)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailsystem.txt.html">1.79. Das eigene Mailsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="majordomo_postfix.txt.html">1.80. Majordomo Postfix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make.conf_optimieren.txt.html">1.81. make.conf optimieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="make_world.txt.html">1.82. make world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mehrmonitor-betrieb.txt.html">1.83. Mehrmonitor-Betrieb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkisofs_und_cdrecord.txt.html">1.84. mkisofs und cdrecord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mounten_als_benutzer.txt.html">1.85. Mounten als Benutzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moused_einrichten.txt.html">1.86. moused einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mozilla_mit_java-_und_flashsupport.txt.html">1.87. Mozilla mit Java- und Flashsupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpd_einrichten.txt.html">1.88. MPD einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpi.txt.html">1.89. MPI auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multihead_mit_nv.txt.html">1.90. Multihead mit nv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvidia_twinview.txt.html">1.91. nVidia Twinview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.92. OpenBSD 7.3 on an APU-PC as a DSL Router</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bill-of-materials">1.92.1. Bill of materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-in-qemu">1.92.2. Installation in QEMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-openbsd">1.92.3. Installing OpenBSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-vm">1.92.4. Running the VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#base-configuration">1.92.5. Base configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-configuration">1.92.6. Network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dns-configuration-unbound">1.92.7. DNS configuration: unbound</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dhcp-configuration-dhcpd">1.92.8. DHCP configuration: dhcpd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-pf-conf">1.92.9. The pf.conf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my-patches-aka-spit-and-duct-tape">1.92.10. My patches (aka spit and duct-tape)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finally-prepare-the-sd-card-for-the-apu-pc">1.92.11. Finally: Prepare the SD-Card for the APU-PC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#first-boot">1.92.12. First boot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_raspberry4_installieren.txt.html">1.93. OpenBSD 6.7 auf dem RaspberryPI 4 installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openbsd_linux_windows_triple_boot_engl.txt.html">1.94. UEFI &amp; OpenBSD 6.9 &amp; Ubuntu 21.04 &amp; Windows 10 Triple boot on 2 hard drives (engl)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openoffice_unter_freebsd.txt.html">1.95. OpenOffice unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openvpn_als_tunnel_zum_eigenen_netzwerk.txt.html">1.96. OpenVPN als Tunnel zum eigenen Netzwerk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pakete_deinstallieren.txt.html">1.97. Pakete deinstallieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paketsysteme.txt.html">1.98. Paketsysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partitionierung.txt.html">1.99. Festplattenpartitionierung unter FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pkg.txt.html">1.100. pkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_antivirus.txt.html">1.101. Postfix Antivirus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_courier_openldap.txt.html">1.102. Postfix Courier OpenLDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postfix_dspam.txt.html">1.103. Postfix DSPAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postgresql_update.txt.html">1.104. PostgreSQL Update auf einen neueren Zweig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere.txt.html">1.105. Poudriere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poudriere_guide.txt.html">1.106. Poudriere Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.txt.html">1.107. PuTTY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remount_rw.txt.html">1.108. Remount RW Read/Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revision_control_system.txt.html">1.109. Revision Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runit.txt.html">1.110. runit auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samsung_smt_7020s.txt.html">1.111. Samsung SMT-7020S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scharfe_windows_schriften.txt.html">1.112. scharfe Windows Schriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schoene_schriften_in_xorg.txt.html">1.113. Schöne Schriften in Xorg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-scripting.txt.html">1.114. Shell-Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundkarte_einrichten.txt.html">1.115. Soundkarte einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speaker_deaktivieren.txt.html">1.116. PC-Speaker deaktivieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.txt.html">1.117. ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="suspend_resume_thinkpad.txt.html">1.118. Suspend und Resume bei Thinkpads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_in_raid1_verwandeln.txt.html">1.119. System in RAID1 verwandeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemueberwachung.txt.html">1.120. Systemüberwachung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texlive_aus_den_quellen.txt.html">1.121. TeXlive aus dem Quellcode installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tomcat_6_installation_und_stolpersteine.txt.html">1.122. Tomcat 6 Installation und Stolpersteine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor.txt.html">1.123. Tor (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tor_und_privoxy.txt.html">1.124. Tor und Privoxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tortoise-like_svn_menu_in_nautilus_mit_rabbitcvs.txt.html">1.125. Tortoise like SVN Menu in Nautilus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tv-karte_benutzen.txt.html">1.126. TV-Karte benutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="twinview_mit_nvidia.txt.html">1.127. TwinView mit dem nVidia-Treiber für FreeBSD, Linux und Solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts.txt.html">1.128. UMTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_huawei.txt.html">1.129. UMTS mit HUAWEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umts_mit_sunrise_und_swisscom.txt.html">1.130. UMTS mit Sunrise und Swisscom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.txt.html">1.131. UNICODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode_auf_der_konsole.txt.html">1.132. Unicode auf der Konsole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unix-freigabe.txt.html">1.133. Unix-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="updaten_von_openbsd.txt.html">1.134. Updaten von OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_als_system-laufwerk_nutzen_mit_netbsd_livekey.txt.html">1.135. USB-Stick als System-Laufwerk nutzen mit „NetBSD LiveKey“</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_installation.txt.html">1.136. USB-Stick Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb-stick_unterstuetzung.txt.html">1.137. USB-Stick Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usb_automount_ohne_hal.txt.html">1.138. USB Automount ohne HAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsl_mit_openbsd.txt.html">1.139. VDSL and OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vlans_mit_freebsd.txt.html">1.140. VLAN-Konfiguration mit FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn_openbsd.txt.html">1.141. VPN (OpenBSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windowmanager.txt.html">1.142. Windowmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-freigabe.txt.html">1.143. Windows-Freigabe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wine.txt.html">1.144. Wine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xfce4_mit_gdm.txt.html">1.145. Xfce4 mit gdm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmodmap.txt.html">1.146. Xmodmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xorg_config.txt.html">1.147. Xorg Konfigurieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zeit_synchronisieren_mit_ntp.txt.html">1.148. Zeit synchronisieren mit ntp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs.txt.html">1.149. ZFS auf FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zfs_geli_und_usb_boot.txt.html">1.150. ZFS (raidz), Geli und USB Boot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anwendungen/anwendungen_index.html">2. Anwendungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_index.html">3. Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spiele/spiele_index.html">4. Spiele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freebsd/freebsd_index.html">5. FreeBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openbsd/openbsd_index.html">6. OpenBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netbsd/netbsd_index.html">7. NetBSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BSDForen.de</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="howto_index.html"><span class="section-number">1. </span>Howto</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.92. </span>OpenBSD 7.3 on an APU-PC as a DSL Router</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/howto/openbsd73_on_an_apu-pc_as_a_dsk_router.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="openbsd-7-3-on-an-apu-pc-as-a-dsl-router">
+<h1><span class="section-number">1.92. </span>OpenBSD 7.3 on an APU-PC as a DSL Router<a class="headerlink" href="#openbsd-7-3-on-an-apu-pc-as-a-dsl-router" title="Permalink to this heading"></a></h1>
+<aside class="sidebar">
+<img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
+</aside>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p><strong>DISCLAIMER: USE AT YOUR OWN RISK!!!!</strong></p>
+</div>
+<p>The purpose of this howto is to show what my configuration looks like after I installed OpenBSD 7.3 on my APU-PC, so that it can act as a router.
+Some of the steps are being done with the help of QEMU on my Desktop. Hence, the QEMU-Commandlines are specific to the particular Operating system on it. Which, concidentally, is also OpenBSD 7.3.
+It is going to use unbound as DNS, and dhcpd, along with pf as firewall and PPPoE for Internet connectivity.
+In addition to this, an Ethernet Connected Phone will also be added. When ready, the machine can be used as a replacement for any Fritz-Box.</p>
+<section id="bill-of-materials">
+<h2><span class="section-number">1.92.1. </span>Bill of materials<a class="headerlink" href="#bill-of-materials" title="Permalink to this heading"></a></h2>
+<p>My hardware setup looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="n">DSL</span> <span class="n">Connection</span> <span class="n">by</span> <span class="n">M</span><span class="o">-</span><span class="n">Net</span>
+<span class="mi">1</span> <span class="n">DSL</span> <span class="n">Modem</span> <span class="p">(</span><span class="n">Not</span> <span class="n">a</span> <span class="n">DSL</span> <span class="n">router</span><span class="p">)</span>
+<span class="mi">1</span> <span class="n">APU</span><span class="o">-</span><span class="n">PC</span> <span class="p">(</span><span class="n">But</span> <span class="nb">any</span> <span class="n">other</span> <span class="n">PC</span> <span class="n">would</span> <span class="n">do</span><span class="p">)</span>
+<span class="mi">1</span> <span class="n">Printer</span>
+<span class="mi">1</span> <span class="n">TV</span>
+<span class="mi">1</span> <span class="n">Telephone</span> <span class="p">(</span><span class="n">VoIP</span><span class="p">,</span> <span class="n">Ethernet</span> <span class="n">connection</span><span class="p">)</span>
+<span class="mi">1</span> <span class="n">WiFi</span> <span class="n">Access</span> <span class="n">Point</span>
+<span class="mi">1</span> <span class="n">Hub</span>
+<span class="n">Several</span> <span class="n">Notebooks</span><span class="o">/</span><span class="n">PCs</span><span class="o">/</span><span class="n">SGI</span> <span class="n">Indigos</span><span class="o">/</span><span class="n">Sun</span> <span class="n">Ultras</span><span class="o">...</span>
+</pre></div>
+</div>
+<p>(Phew! Quite the collection)</p>
+<p>Since the APU-PC has 3 Ethernet connections, I decided to create 2 subnets:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">192.168.3.0</span><span class="o">/</span><span class="mi">24</span> <span class="k">for</span> <span class="n">wired</span> <span class="n">Ethernet</span>
+<span class="mf">192.168.70.0</span><span class="o">/</span><span class="mi">24</span> <span class="k">for</span> <span class="n">WiFi</span> <span class="n">Ethernet</span>
+</pre></div>
+</div>
+<p>Why those numbers, you might ask? WTF not? ;)</p>
+<p>My subnet will be called dettus.privates</p>
+</section>
+<section id="installation-in-qemu">
+<h2><span class="section-number">1.92.2. </span>Installation in QEMU<a class="headerlink" href="#installation-in-qemu" title="Permalink to this heading"></a></h2>
+<p>The APU-PC has an SD-Card slot, and it boots from there. Since it was more conveniant for me, I decided to prepare the Image for the SD Card in QEMU.
+I used my trusty OpenBSD desktop for that.
+The SD Card I had was 4 GByte in size, but 3 Gigabyte are enough for a DSL router. The closest OpenBSD mirror to my home is in Erlangen, so downloading the latest installation ISO, and starting the virtual machine can be done with the following commands:</p>
+<p>Bash:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dumbuser</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">su</span> <span class="o">-</span>
+<span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">zero</span> <span class="n">of</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">img</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span> <span class="n">count</span><span class="o">=</span><span class="mi">3096</span>
+<span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">ftp</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">fau</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">OpenBSD</span><span class="o">/</span><span class="mf">7.3</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">install73</span><span class="o">.</span><span class="n">iso</span>
+<span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">qemu</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">x86_64</span> <span class="o">-</span><span class="n">m</span> <span class="mi">1024</span> <span class="o">-</span><span class="n">smp</span> <span class="n">cpus</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">cores</span><span class="o">=</span><span class="mi">1</span> \
+    <span class="o">-</span><span class="n">drive</span> <span class="nb">format</span><span class="o">=</span><span class="n">raw</span><span class="p">,</span><span class="n">file</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">img</span> \
+    <span class="o">-</span><span class="n">cdrom</span> <span class="n">install73</span><span class="o">.</span><span class="n">iso</span> <span class="o">-</span><span class="n">boot</span> <span class="n">d</span> \
+    <span class="o">-</span><span class="n">device</span> <span class="n">virtio</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">pci</span><span class="p">,</span><span class="n">netdev</span><span class="o">=</span><span class="n">network0</span> \
+    <span class="o">-</span><span class="n">netdev</span> <span class="n">user</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">network0</span><span class="p">,</span><span class="n">hostfwd</span><span class="o">=</span><span class="n">tcp</span><span class="p">::</span><span class="mi">2001</span><span class="o">-</span><span class="p">:</span><span class="mi">22</span> \
+    <span class="o">-</span><span class="n">serial</span> <span class="n">telnet</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">4321</span><span class="p">,</span><span class="n">server</span><span class="p">,</span><span class="n">nowait</span>     \
+    <span class="o">-</span><span class="n">display</span> <span class="n">vnc</span><span class="o">=</span><span class="p">:</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Pro Tip: You are going to copy and paste those lines anyways. Paste them in a shell script. WAY easier to correct typos this way.</p>
+<p>Once QEMU is running, it can be accessed with the vnc viewer on console :1</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dumbuser</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">vncviewer</span> <span class="p">:</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>(side note: I used tigervnc.)</p>
+</section>
+<section id="installing-openbsd">
+<h2><span class="section-number">1.92.3. </span>Installing OpenBSD<a class="headerlink" href="#installing-openbsd" title="Permalink to this heading"></a></h2>
+<p>If you have done it once, you can do this in your sleep. If not, do not hesitate to press CTRL+C and CTRL+D to start the installation over.</p>
+<p><strong>I must apologize, I do not remember the order in which those questions came up.</strong></p>
+<p>One thing you will have to decide on is the HOSTNAME, I have decided to use router.dettus.privates.</p>
+<p>The (W)hole Disk can be used for OpenBSD, I wanted to create a (C)ustom Layout:
+In the disklabel editor, I created three slices:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">:</span> <span class="n">size</span> <span class="mi">2</span><span class="n">G</span><span class="p">,</span> <span class="n">mount</span> <span class="n">point</span> <span class="o">/</span>
+<span class="n">b</span><span class="p">:</span> <span class="n">size</span> <span class="mi">512</span><span class="n">M</span><span class="p">,</span> <span class="nb">type</span> <span class="n">swap</span>
+<span class="n">d</span><span class="p">:</span> <span class="n">size</span> <span class="mi">512</span><span class="n">M</span> <span class="p">(</span><span class="n">the</span> <span class="n">rest</span><span class="p">),</span> <span class="n">mount</span> <span class="n">point</span> <span class="o">/</span><span class="n">tmp</span>
+</pre></div>
+</div>
+<p>When the packages are to be selected, I deselected the Xenocara packages by typing in</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">x</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>As for the installation medium: Chose the cd0 option, it is the fastest. Or a network mirror if you prefer.</p>
+<p><strong>VERY IMPORTANT</strong></p>
+<ul class="simple">
+<li><p>Set up a dumbuser.</p></li>
+<li><p>(Y)es, run sshd</p></li>
+<li><p>(N)o, do not permit root login</p></li>
+<li><p>(Y)es, change the console to COM0</p></li>
+<li><p>Baud rate: 115200</p></li>
+</ul>
+<p>The APU PC comes with a vintage UART on the front side, so Answering the last two questions will allow you to access the console in case of a Network meltdown.</p>
+<p>(H)alt the machine when everything has been installed.</p>
+</section>
+<section id="running-the-vm">
+<h2><span class="section-number">1.92.4. </span>Running the VM<a class="headerlink" href="#running-the-vm" title="Permalink to this heading"></a></h2>
+<p>In theory, you are ready to write the image to the SD Card and perform the next couple of steps directly on the APU-PC. TRUST ME: This is easier.</p>
+<p>The installation required a graphic console, and VNC was used to do the job. But since the console was changed to COM0, it is now possible to have the serial output in the same terminal window in which QEMU is running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">qemu</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">x86_64</span> <span class="o">-</span><span class="n">m</span> <span class="mi">1024</span> <span class="o">-</span><span class="n">smp</span> <span class="n">cpus</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">cores</span><span class="o">=</span><span class="mi">1</span> \
+    <span class="o">-</span><span class="n">drive</span> <span class="nb">format</span><span class="o">=</span><span class="n">raw</span><span class="p">,</span><span class="n">file</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">img</span> \
+    <span class="o">-</span><span class="n">cdrom</span> <span class="n">install73</span><span class="o">.</span><span class="n">iso</span> <span class="o">-</span><span class="n">boot</span> <span class="n">c</span> \
+    <span class="o">-</span><span class="n">device</span> <span class="n">virtio</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">pci</span><span class="p">,</span><span class="n">netdev</span><span class="o">=</span><span class="n">network0</span> \
+    <span class="o">-</span><span class="n">netdev</span> <span class="n">user</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">network0</span><span class="p">,</span><span class="n">hostfwd</span><span class="o">=</span><span class="n">tcp</span><span class="p">::</span><span class="mi">2001</span><span class="o">-</span><span class="p">:</span><span class="mi">22</span> \
+    <span class="o">-</span><span class="n">nographic</span>
+</pre></div>
+</div>
+<p>With this, it is now possible to connect from a second terminal window with ssh . Do this, become root:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dumbuser</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">p</span> <span class="mi">2001</span> <span class="n">dumbuser</span><span class="nd">@localhost</span>
+<span class="n">dumbuser</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">su</span> <span class="o">-</span>
+<span class="n">Password</span><span class="p">:</span>
+<span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">whoami</span>
+</pre></div>
+</div>
+</section>
+<section id="base-configuration">
+<h2><span class="section-number">1.92.5. </span>Base configuration<a class="headerlink" href="#base-configuration" title="Permalink to this heading"></a></h2>
+<p>In the /etc/rc.conf, I changed the following lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library_aslr</span><span class="o">=</span><span class="n">NO</span>        <span class="c1"># NOT reordering the libraries at boot time is faster</span>
+<span class="n">dhcpd_flags</span><span class="o">=</span><span class="n">NO</span>        <span class="c1"># This is correct</span>
+<span class="n">unbound_flags</span><span class="o">=</span><span class="s2">&quot;&quot;</span>    <span class="c1"># Not sure if this is the proper way to write, it worked</span>
+<span class="n">resolvd_flags</span><span class="o">=</span><span class="n">NO</span>    <span class="c1"># Otherwise, it screws up the resolv.conf</span>
+</pre></div>
+</div>
+<p>I also created an /etc/sysctl.conf:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;net.inet.ip.forwarding=1&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>And changed the installation source:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;https://ftp.fau.de/pub/OpenBSD&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">installurl</span>
+</pre></div>
+</div>
+<p>At this point, it is a good idea to reboot</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">reboot</span>
+</pre></div>
+</div>
+</section>
+<section id="network-configuration">
+<h2><span class="section-number">1.92.6. </span>Network configuration<a class="headerlink" href="#network-configuration" title="Permalink to this heading"></a></h2>
+<p>The APU-PC has three Ethernet connectors: em0, em1 and em2.
+The connection to the internet is realized through PPPoE, and my Internet provider needed vlan40 for some reason.</p>
+<p>I wanted to have two networks: 192.168.3.0/24 and 192.168.70.0/24. I decided to use em0 for the 3.x subnet, em1 for connecting the DSL modem and em2 for the 70.x subnet.</p>
+<p>So, in the end, I had to create 5 hostname files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">echo</span> <span class="s2">&quot;inet 192.168.3.1 255.255.255.0 NONE&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">hostname</span><span class="o">.</span><span class="n">em0</span>
+<span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">echo</span> <span class="s2">&quot;up&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">hostname</span><span class="o">.</span><span class="n">em1</span>
+<span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">echo</span> <span class="s2">&quot;inet 192.168.70.1 255.255.255.0 NONE&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">hostname</span><span class="o">.</span><span class="n">em2</span>
+<span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">echo</span> <span class="s2">&quot;vlan 40 vlandev em1 up&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">hostname</span><span class="o">.</span><span class="n">vlan40</span>
+<span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">echo</span> <span class="s2">&quot;inet 0.0.0.0 0.0.0.1 pppoedev vlan40 autoproto chap authname NOTGONNAWRITEHERE@mdsl.mnet-online.de authkey NOTTHISONEEITHER mtu 1452 up&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">hostname</span><span class="o">.</span><span class="n">pppoe0</span>
+</pre></div>
+</div>
+<p>Spoiler alert: hostname.pppoe0 does not work for you. ;)</p>
+</section>
+<section id="dns-configuration-unbound">
+<h2><span class="section-number">1.92.7. </span>DNS configuration: unbound<a class="headerlink" href="#dns-configuration-unbound" title="Permalink to this heading"></a></h2>
+<p>Again, I had two subnets. 192.168.3.0/24 and 192.168.70.0/24. In the previous chapter, I set my IP addresses for this machine to the IP addresses 192.168.3.1 and 192.168.70.1
+I had a TV and a printer, and I wanted those to have the same IP addresses
+with the DHCP later, as well as the access point.</p>
+<p>So, in the end, my /var/unbound/unbound.conf looked like this</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">server</span><span class="p">:</span>
+    <span class="n">access</span><span class="o">-</span><span class="n">control</span><span class="p">:</span> <span class="mf">0.0.0.0</span><span class="o">/</span><span class="mi">0</span> <span class="n">refuse</span>
+    <span class="n">access</span><span class="o">-</span><span class="n">control</span><span class="p">:</span> <span class="mf">127.0.0.0</span><span class="o">/</span><span class="mi">8</span> <span class="n">allow</span>
+    <span class="n">access</span><span class="o">-</span><span class="n">control</span><span class="p">:</span> <span class="p">::</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span> <span class="n">refuse</span>
+    <span class="n">access</span><span class="o">-</span><span class="n">control</span><span class="p">:</span> <span class="p">::</span><span class="mi">1</span> <span class="n">allow</span>
+    <span class="n">access</span><span class="o">-</span><span class="n">control</span><span class="p">:</span> <span class="mf">192.168.3.0</span><span class="o">/</span><span class="mi">24</span> <span class="n">allow</span>
+    <span class="n">access</span><span class="o">-</span><span class="n">control</span><span class="p">:</span> <span class="mf">192.168.70.0</span><span class="o">/</span><span class="mi">24</span> <span class="n">allow</span>
+
+    <span class="n">verbosity</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="n">interface</span><span class="p">:</span> <span class="mf">127.0.0.1</span>
+    <span class="n">interface</span><span class="p">:</span> <span class="mf">192.168.3.1</span>
+    <span class="n">interface</span><span class="p">:</span> <span class="mf">192.168.70.1</span>
+    <span class="n">port</span><span class="p">:</span>    <span class="mi">53</span>
+    <span class="n">do</span><span class="o">-</span><span class="n">ip4</span><span class="p">:</span>    <span class="n">yes</span>
+    <span class="n">do</span><span class="o">-</span><span class="n">ip6</span><span class="p">:</span>    <span class="n">no</span>
+    <span class="n">do</span><span class="o">-</span><span class="n">udp</span><span class="p">:</span> <span class="n">yes</span>
+    <span class="n">do</span><span class="o">-</span><span class="n">tcp</span><span class="p">:</span>    <span class="n">yes</span>
+
+    <span class="n">prefer</span><span class="o">-</span><span class="n">ip6</span><span class="p">:</span> <span class="n">no</span>
+    <span class="n">harden</span><span class="o">-</span><span class="n">glue</span><span class="p">:</span> <span class="n">yes</span>
+    <span class="n">harden</span><span class="o">-</span><span class="n">dnssec</span><span class="o">-</span><span class="n">stripped</span><span class="p">:</span> <span class="n">yes</span>
+
+    <span class="n">use</span><span class="o">-</span><span class="n">caps</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="nb">id</span><span class="p">:</span> <span class="n">no</span>
+
+    <span class="n">edns</span><span class="o">-</span><span class="n">buffer</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">1232</span>
+    <span class="n">prefetch</span><span class="p">:</span> <span class="n">yes</span>
+    <span class="n">num</span><span class="o">-</span><span class="n">threads</span><span class="p">:</span> <span class="mi">1</span>
+
+    <span class="n">so</span><span class="o">-</span><span class="n">rcvbuf</span><span class="p">:</span> <span class="mi">1</span><span class="n">m</span>
+
+    <span class="n">private</span><span class="o">-</span><span class="n">address</span><span class="p">:</span> <span class="mf">192.168.0.0</span><span class="o">/</span><span class="mi">16</span>
+
+
+<span class="n">local</span><span class="o">-</span><span class="n">zone</span><span class="p">:</span>    <span class="s2">&quot;dettus.privates.&quot;</span> <span class="n">static</span>
+    <span class="c1"># wired network</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="p">:</span>    <span class="s2">&quot;router.dettus.privates. IN A 192.168.3.1&quot;</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="p">:</span>    <span class="s2">&quot;printer.dettus.privates. IN A 192.168.3.2&quot;</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="p">:</span>    <span class="s2">&quot;television.dettus.privates. IN A 192.168.3.3&quot;</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="p">:</span>    <span class="s2">&quot;telephone.dettus.privates. IN A 192.168.3.4&quot;</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">ptr</span><span class="p">:</span>    <span class="s2">&quot;192.168.3.1 router.dettus.privates&quot;</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">ptr</span><span class="p">:</span> <span class="s2">&quot;192.168.3.2 printer.dettus.privates&quot;</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">ptr</span><span class="p">:</span>    <span class="s2">&quot;192.168.3.3 television.dettus.privates&quot;</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">ptr</span><span class="p">:</span>    <span class="s2">&quot;192.168.3.4 telephone.dettus.privates&quot;</span>
+    <span class="c1"># WiFi network</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="p">:</span>    <span class="s2">&quot;router2.dettus.privates. IN A 192.168.70.1&quot;</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="p">:</span>    <span class="s2">&quot;access-point.dettus.privates IN A 192.168.70.2&quot;</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">ptr</span><span class="p">:</span>    <span class="s2">&quot;192.168.70.1 router2.dettus.privates&quot;</span>
+    <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">ptr</span><span class="p">:</span>    <span class="s2">&quot;192.168.70.2 access-point.dettus.privates&quot;</span>
+</pre></div>
+</div>
+<p>Afterwards, it should be possible to enable unbound.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">unbound</span><span class="o">-</span><span class="n">checkconf</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">unbound</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">unbound</span><span class="o">.</span><span class="n">conf</span>
+<span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">rcctl</span> <span class="n">enable</span> <span class="n">unbound</span>
+<span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">rcctl</span> <span class="n">disable</span> <span class="n">resolvd</span>  <span class="c1"># this program screws up the resolv.conf</span>
+<span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">echo</span> <span class="s2">&quot;nameserver 127.0.0.1&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p><strong>IF YOU ARE STILL INSIDE THE VM, IT WILL FAIL TO START THE UNBOUND SERVER!</strong></p>
+</section>
+<section id="dhcp-configuration-dhcpd">
+<h2><span class="section-number">1.92.8. </span>DHCP configuration: dhcpd<a class="headerlink" href="#dhcp-configuration-dhcpd" title="Permalink to this heading"></a></h2>
+<p>The way I did it was by creating two configuration files, and to start the
+dhcpd twice, one for each interface em0 and em2.</p>
+<p>I wanted my appliances to have the same IP address. So after I found out their MAC-Adress, I was able to write the configurations.</p>
+<p>Since the IP addresses where already configured in the nameserver, it was possible to use hostnames in the /etc/dhcpd.em0: (Note the special nameserver for the printer)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shared</span><span class="o">-</span><span class="n">network</span> <span class="n">LOCAL</span><span class="o">-</span><span class="n">NET</span>
+<span class="p">{</span>
+    <span class="n">option</span>  <span class="n">domain</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;dettus.privates&quot;</span><span class="p">;</span>
+    <span class="n">option</span>  <span class="n">domain</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">servers</span> <span class="mf">192.168.3.1</span><span class="p">;</span>
+
+    <span class="n">default</span><span class="o">-</span><span class="n">lease</span><span class="o">-</span><span class="n">time</span> <span class="mi">5000</span><span class="p">;</span>
+    <span class="nb">max</span><span class="o">-</span><span class="n">lease</span><span class="o">-</span><span class="n">time</span> <span class="mi">7200</span><span class="p">;</span>
+
+    <span class="n">subnet</span> <span class="mf">192.168.3.0</span> <span class="n">netmask</span> <span class="mf">255.255.255.0</span>
+    <span class="p">{</span>
+        <span class="nb">range</span> <span class="mf">192.168.3.111</span> <span class="mf">192.168.3.150</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">routers</span> <span class="mf">192.168.3.1</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">domain</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">servers</span> <span class="mf">192.168.3.1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">host</span> <span class="n">printer</span>
+    <span class="p">{</span>
+        <span class="n">hardware</span> <span class="n">ethernet</span> <span class="n">ab</span><span class="p">:</span><span class="n">cd</span><span class="p">:</span><span class="n">ef</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mi">23</span><span class="p">;</span>
+        <span class="n">fixed</span><span class="o">-</span><span class="n">address</span> <span class="n">printer</span><span class="o">.</span><span class="n">dettus</span><span class="o">.</span><span class="n">privates</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">routers</span> <span class="mf">192.168.3.1</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">domain</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">servers</span> <span class="mf">127.0.0.1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">host</span> <span class="n">television</span>
+    <span class="p">{</span>
+        <span class="n">hardware</span> <span class="n">ethernet</span> <span class="n">ab</span><span class="p">:</span><span class="n">cd</span><span class="p">:</span><span class="n">ef</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">42</span><span class="p">;</span>
+        <span class="n">fixed</span><span class="o">-</span><span class="n">address</span> <span class="n">television</span><span class="o">.</span><span class="n">dettus</span><span class="o">.</span><span class="n">privates</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">routers</span> <span class="mf">192.168.3.1</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">domain</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">servers</span> <span class="mf">192.168.23.1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">host</span> <span class="n">telephone</span>
+    <span class="p">{</span>
+        <span class="n">hardware</span> <span class="n">ethernet</span> <span class="n">be</span><span class="p">:</span><span class="n">af</span><span class="p">:</span><span class="mi">87</span><span class="p">:</span><span class="mi">81</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">65</span><span class="p">;</span>
+        <span class="n">fixed</span><span class="o">-</span><span class="n">address</span> <span class="n">telephone</span><span class="o">.</span><span class="n">dettus</span><span class="o">.</span><span class="n">privates</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">routers</span> <span class="mf">192.168.3.1</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">domain</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">servers</span> <span class="mf">192.168.23.1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The /etc/dhcpd.em2 looked similar, albeit for different subnet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shared</span><span class="o">-</span><span class="n">network</span> <span class="n">LOCAL</span><span class="o">-</span><span class="n">NET</span>
+<span class="p">{</span>
+    <span class="n">option</span>  <span class="n">domain</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;dettus.privates&quot;</span><span class="p">;</span>
+    <span class="n">option</span>  <span class="n">domain</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">servers</span> <span class="mf">192.168.70.1</span><span class="p">;</span>
+
+    <span class="n">default</span><span class="o">-</span><span class="n">lease</span><span class="o">-</span><span class="n">time</span> <span class="mi">5000</span><span class="p">;</span>
+    <span class="nb">max</span><span class="o">-</span><span class="n">lease</span><span class="o">-</span><span class="n">time</span> <span class="mi">7200</span><span class="p">;</span>
+
+    <span class="n">subnet</span> <span class="mf">192.168.70.0</span> <span class="n">netmask</span> <span class="mf">255.255.255.0</span>
+    <span class="p">{</span>
+        <span class="nb">range</span> <span class="mf">192.168.70.211</span> <span class="mf">192.168.3.250</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">routers</span> <span class="mf">192.168.70.1</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">domain</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">servers</span> <span class="mf">192.168.70.1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">host</span> <span class="n">access</span><span class="o">-</span><span class="n">point</span>
+    <span class="p">{</span>
+        <span class="n">hardware</span> <span class="n">ethernet</span> <span class="mi">80</span><span class="p">:</span><span class="mi">86</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="n">de</span><span class="p">:</span><span class="n">ad</span><span class="p">:</span><span class="mi">42</span><span class="p">;</span>
+        <span class="n">fixed</span><span class="o">-</span><span class="n">address</span> <span class="n">access</span><span class="o">-</span><span class="n">point</span><span class="o">.</span><span class="n">dettus</span><span class="o">.</span><span class="n">privates</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">routers</span> <span class="mf">192.168.70.1</span><span class="p">;</span>
+        <span class="n">option</span> <span class="n">domain</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">servers</span> <span class="mf">192.168.70.1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="the-pf-conf">
+<h2><span class="section-number">1.92.9. </span>The pf.conf<a class="headerlink" href="#the-pf-conf" title="Permalink to this heading"></a></h2>
+<p>Apparently, port 5060 is needed for the VoIP telephone. In the end, my /etc/pf.conf looked like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>set skip on lo
+block return
+pass
+block return in on ! lo0 proto tcp to port 6000:6010
+ext_if=&quot;pppoe0&quot;
+int0_if=&quot;em0&quot;
+int2_if=&quot;em2&quot;
+match on $ext_if scrub (max-mss 1340)
+match out on pppoe0 inet from $int0_if:network to any nat-to ($ext_if)
+match out on pppoe0 inet from $int2_if:network to any nat-to ($ext_if)
+#match in on $ext_if proto { tcp, udp } from any to any port 80 rdr-to 192.168.3.14 port 8080  # In case I want to run a HTTP server one day
+# For the telephone
+pass in quick on $ext_if proto { tcp, udp } from $ext_if to any port 5060 keep state
+</pre></div>
+</div>
+</section>
+<section id="my-patches-aka-spit-and-duct-tape">
+<h2><span class="section-number">1.92.10. </span>My patches (aka spit and duct-tape)<a class="headerlink" href="#my-patches-aka-spit-and-duct-tape" title="Permalink to this heading"></a></h2>
+<p>The way I configured everything was somehow incompatible with the way OpenBSD works. For some reason, the PPPoE network was not coming up at the right point in time, so I had to hack my /etc/rc.</p>
+<p>Usually, the /etc/rc ends like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Re-link the kernel, placing the objects in a random order.</span>
+<span class="c1"># Replace current with relinked kernel and inform root about it.</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">reorder_kernel</span> <span class="o">&amp;</span>
+
+<span class="n">date</span>
+<span class="n">exit</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>I took the liberty of adding a few lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Re-link the kernel, placing the objects in a random order.
+# Replace current with relinked kernel and inform root about it.
+/usr/libexec/reorder_kernel &amp;
+
+
+# go online
+ifconfig pppoe0 `cat /etc/hostname.pppoe0`
+sleep 5
+# set the proper default route
+route add default `ifconfig pppoe0 | grep &quot;inet &quot; | awk -F&quot; &quot; &#39;{ print $4; }&#39; -`
+# restart the firewall
+pfctl -d
+pfctl -e -f /etc/pf.conf
+# start the dhcp daemons
+dhcpd -c /etc/dhcpd.em0 em0
+dhcpd -c /etc/dhcpd.em2 em2
+
+date
+exit 0
+</pre></div>
+</div>
+<p>THERE IS MAYBE A PROPER WAY TO DO THIS, AND THOSE CHANGES WILL BE LOST DURING A SYSUPGRADE, but it worked for me! :)</p>
+</section>
+<section id="finally-prepare-the-sd-card-for-the-apu-pc">
+<h2><span class="section-number">1.92.11. </span>Finally: Prepare the SD-Card for the APU-PC<a class="headerlink" href="#finally-prepare-the-sd-card-for-the-apu-pc" title="Permalink to this heading"></a></h2>
+<p>Once the changes are done, shut down the VM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">halt</span>
+</pre></div>
+</div>
+<p>Plug in the SD Card to your desktop. Find out which the proper device for the SD card is.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">dmesg</span>
+</pre></div>
+</div>
+<p>Lets assume it is sd9. (Even if you are doing this on Linux, you should find it out the same way)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">img</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">rsd9c</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span>
+</pre></div>
+</div>
+</section>
+<section id="first-boot">
+<h2><span class="section-number">1.92.12. </span>First boot<a class="headerlink" href="#first-boot" title="Permalink to this heading"></a></h2>
+<p>Once the SD card has been prepared, put it inside your APU-PC, connect it via serial cable to your desktop and connect to it. Personally, I recommend minicom.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">minicom</span> <span class="o">-</span><span class="n">s</span>    <span class="c1"># to set it up</span>
+</pre></div>
+</div>
+<p>The device on my machine was /dev/ttyU0. I had to disable the hardware flow control, but once I have saved the configuration, I was able to use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">minicom</span>
+</pre></div>
+</div>
+<p>I suppose, cu works as well, but I have not used it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">cu</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyU0</span> <span class="o">-</span><span class="n">s</span> <span class="mi">115200</span>
+</pre></div>
+</div>
+<p>Make sure your APU-PC boots correctly. Have a look at the /etc/resolv.conf, or
+if resolvd screwed it up before:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="o">.</span><span class="n">conf</span>
+<span class="n">nameserver</span> <span class="mf">127.0.0.1</span>
+</pre></div>
+</div>
+<p>If it did, make sure resolvd is disabled, reboot, rewrite /etc/resolv.conf.</p>
+<p>Test your DSL connection</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">ifconfig</span> <span class="n">pppoe0</span>
+<span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">ping</span> <span class="mf">131.188.12.211</span>
+</pre></div>
+</div>
+<p>Test unbound by using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">nameserver</span>
+<span class="o">&gt;</span> <span class="n">server</span> <span class="mf">127.0.0.1</span>
+<span class="o">&gt;</span> <span class="n">ftp</span><span class="o">.</span><span class="n">fau</span><span class="o">.</span><span class="n">de</span>
+<span class="n">Server</span><span class="p">:</span>        <span class="mf">127.0.0.1</span>
+<span class="n">Address</span><span class="p">:</span>    <span class="mf">127.0.0.1</span><span class="c1">#53</span>
+
+<span class="n">Non</span><span class="o">-</span><span class="n">authoritative</span> <span class="n">answer</span><span class="p">:</span>
+<span class="n">Name</span><span class="p">:</span>    <span class="n">ftp</span><span class="o">.</span><span class="n">fau</span><span class="o">.</span><span class="n">de</span>
+<span class="n">Address</span><span class="p">:</span> <span class="mf">131.188.12.211</span>
+<span class="o">&gt;</span> <span class="n">exit</span>
+</pre></div>
+</div>
+<p>Make sure the dhcpds are working</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>root@router&gt; ps auxww | grep -i dhcp
+_dhcp    12458  0.0  0.0   832  1532 ??  Ipc     7:00AM    0:00.01 dhcpd -c /etc/dhcpd.em0 em0
+_dhcp     2055  0.0  0.0   824  1492 ??  Ipc     7:00AM    0:00.01 dhcpd -c /etc/dhcpd.em2 em2
+</pre></div>
+</div>
+<p>And your new router is ready.
+Enjoy!</p>
+<p>P.S.: Check out my retro gameserver on <a class="reference external" href="https://magneticscrolls.net">https://magneticscrolls.net</a></p>
+<p>Keywords: OpenBSD, DSL, pppoe, unbound, dhcpd, pf.conf forwarding, Internet router, DSL router</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="nvidia_twinview.txt.html" class="btn btn-neutral float-left" title="1.91. nVidia Twinview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="openbsd_raspberry4_installieren.txt.html" class="btn btn-neutral float-right" title="1.93. OpenBSD 6.7 auf dem RaspberryPI 4 installieren" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, BSDForen.de.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
