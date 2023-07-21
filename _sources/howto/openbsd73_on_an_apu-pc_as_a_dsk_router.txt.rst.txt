@@ -524,8 +524,4 @@ And your new router is ready.
 Enjoy!
 
 
-P.S.: Check out my retro gameserver on https://magneticscrolls.net
-
-
-
 Keywords: OpenBSD, DSL, pppoe, unbound, dhcpd, pf.conf forwarding, Internet router, DSL router
