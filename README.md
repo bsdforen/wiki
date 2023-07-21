@@ -31,7 +31,7 @@
 ~% firefox build/html/index.html
 ~~~
 
-...oder
+oder
 
 ~~~bash
 ~% sphinx-autobuild -i "*.swp" -i "*.swx" -b html source build/livehtml
