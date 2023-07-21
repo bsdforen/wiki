@@ -7,7 +7,6 @@ on:
   pull_request:
     branches:
       - prod
-
 jobs:
   build:
     runs-on: ubuntu-22.04
