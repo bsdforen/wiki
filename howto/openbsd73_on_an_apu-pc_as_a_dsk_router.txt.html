@@ -250,16 +250,19 @@
   <section id="openbsd-7-3-on-an-apu-pc-as-a-dsl-router">
 <h1><span class="section-number">1.92. </span>OpenBSD 7.3 on an APU-PC as a DSL Router<a class="headerlink" href="#openbsd-7-3-on-an-apu-pc-as-a-dsl-router" title="Permalink to this heading"></a></h1>
 <aside class="sidebar">
+<p class="sidebar-title">Info</p>
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
 </aside>
-<div class="admonition note">
+<div class="admonition note" id="index-0">
 <p class="admonition-title">Bemerkung</p>
-<p><strong>DISCLAIMER: USE AT YOUR OWN RISK!!!!</strong></p>
+<p>DISCLAIMER: USE AT YOUR OWN RISK!</p>
 </div>
-<p>The purpose of this howto is to show what my configuration looks like after I installed OpenBSD 7.3 on my APU-PC, so that it can act as a router.
-Some of the steps are being done with the help of QEMU on my Desktop. Hence, the QEMU-Commandlines are specific to the particular Operating system on it. Which, concidentally, is also OpenBSD 7.3.
-It is going to use unbound as DNS, and dhcpd, along with pf as firewall and PPPoE for Internet connectivity.
-In addition to this, an Ethernet Connected Phone will also be added. When ready, the machine can be used as a replacement for any Fritz-Box.</p>
+<p>The purpose of this howto is to show what my configuration looks like after I installed OpenBSD 7.3
+on my APU-PC, so that it can act as a router. Some of the steps are being done with the help of QEMU
+on my Desktop. Hence, the QEMU-Commandlines are specific to the particular Operating system on it.
+Which, concidentally, is also OpenBSD 7.3. It is going to use unbound as DNS, and dhcpd, along with
+pf as firewall and PPPoE for Internet connectivity. In addition to this, an Ethernet Connected Phone
+will also be added. When ready, the machine can be used as a replacement for any Fritz-Box.</p>
 <section id="bill-of-materials">
 <h2><span class="section-number">1.92.1. </span>Bill of materials<a class="headerlink" href="#bill-of-materials" title="Permalink to this heading"></a></h2>
 <p>My hardware setup looks like this:</p>
@@ -285,24 +288,29 @@ In addition to this, an Ethernet Connected Phone will also be added. When ready,
 </section>
 <section id="installation-in-qemu">
 <h2><span class="section-number">1.92.2. </span>Installation in QEMU<a class="headerlink" href="#installation-in-qemu" title="Permalink to this heading"></a></h2>
-<p>The APU-PC has an SD-Card slot, and it boots from there. Since it was more conveniant for me, I decided to prepare the Image for the SD Card in QEMU.
-I used my trusty OpenBSD desktop for that.
-The SD Card I had was 4 GByte in size, but 3 Gigabyte are enough for a DSL router. The closest OpenBSD mirror to my home is in Erlangen, so downloading the latest installation ISO, and starting the virtual machine can be done with the following commands:</p>
-<p>Bash:</p>
+<p>The APU-PC has an SD-Card slot, and it boots from there. Since it was more conveniant for me, I
+decided to prepare the Image for the SD Card in QEMU. I used my trusty OpenBSD desktop for that. The
+SD Card I had was 4 GByte in size, but 3 Gigabyte are enough for a DSL router. The closest OpenBSD
+mirror to my home is in Erlangen, so downloading the latest installation ISO, and starting the
+virtual machine can be done with the following commands:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dumbuser</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">su</span> <span class="o">-</span>
 <span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">zero</span> <span class="n">of</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">img</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span> <span class="n">count</span><span class="o">=</span><span class="mi">3096</span>
 <span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">ftp</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">fau</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">OpenBSD</span><span class="o">/</span><span class="mf">7.3</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">install73</span><span class="o">.</span><span class="n">iso</span>
 <span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">qemu</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">x86_64</span> <span class="o">-</span><span class="n">m</span> <span class="mi">1024</span> <span class="o">-</span><span class="n">smp</span> <span class="n">cpus</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">cores</span><span class="o">=</span><span class="mi">1</span> \
-    <span class="o">-</span><span class="n">drive</span> <span class="nb">format</span><span class="o">=</span><span class="n">raw</span><span class="p">,</span><span class="n">file</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">img</span> \
-    <span class="o">-</span><span class="n">cdrom</span> <span class="n">install73</span><span class="o">.</span><span class="n">iso</span> <span class="o">-</span><span class="n">boot</span> <span class="n">d</span> \
-    <span class="o">-</span><span class="n">device</span> <span class="n">virtio</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">pci</span><span class="p">,</span><span class="n">netdev</span><span class="o">=</span><span class="n">network0</span> \
-    <span class="o">-</span><span class="n">netdev</span> <span class="n">user</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">network0</span><span class="p">,</span><span class="n">hostfwd</span><span class="o">=</span><span class="n">tcp</span><span class="p">::</span><span class="mi">2001</span><span class="o">-</span><span class="p">:</span><span class="mi">22</span> \
-    <span class="o">-</span><span class="n">serial</span> <span class="n">telnet</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">4321</span><span class="p">,</span><span class="n">server</span><span class="p">,</span><span class="n">nowait</span>     \
-    <span class="o">-</span><span class="n">display</span> <span class="n">vnc</span><span class="o">=</span><span class="p">:</span><span class="mi">1</span>
+  <span class="o">-</span><span class="n">drive</span> <span class="nb">format</span><span class="o">=</span><span class="n">raw</span><span class="p">,</span><span class="n">file</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">img</span> \
+  <span class="o">-</span><span class="n">cdrom</span> <span class="n">install73</span><span class="o">.</span><span class="n">iso</span> <span class="o">-</span><span class="n">boot</span> <span class="n">d</span> \
+  <span class="o">-</span><span class="n">device</span> <span class="n">virtio</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">pci</span><span class="p">,</span><span class="n">netdev</span><span class="o">=</span><span class="n">network0</span> \
+  <span class="o">-</span><span class="n">netdev</span> <span class="n">user</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">network0</span><span class="p">,</span><span class="n">hostfwd</span><span class="o">=</span><span class="n">tcp</span><span class="p">::</span><span class="mi">2001</span><span class="o">-</span><span class="p">:</span><span class="mi">22</span> \
+  <span class="o">-</span><span class="n">serial</span> <span class="n">telnet</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">4321</span><span class="p">,</span><span class="n">server</span><span class="p">,</span><span class="n">nowait</span>     \
+  <span class="o">-</span><span class="n">display</span> <span class="n">vnc</span><span class="o">=</span><span class="p">:</span><span class="mi">1</span>
 </pre></div>
 </div>
-<p>Pro Tip: You are going to copy and paste those lines anyways. Paste them in a shell script. WAY easier to correct typos this way.</p>
-<p>Once QEMU is running, it can be accessed with the vnc viewer on console :1</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Pro Tip: You are going to copy and paste those lines anyways. Paste them in a shell script. WAY
+easier to correct typos this way.</p>
+</div>
+<p>Once QEMU is running, it can be accessed with the vnc viewer on console:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dumbuser</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">vncviewer</span> <span class="p">:</span><span class="mi">1</span>
 </pre></div>
 </div>
@@ -310,45 +318,53 @@ The SD Card I had was 4 GByte in size, but 3 Gigabyte are enough for a DSL route
 </section>
 <section id="installing-openbsd">
 <h2><span class="section-number">1.92.3. </span>Installing OpenBSD<a class="headerlink" href="#installing-openbsd" title="Permalink to this heading"></a></h2>
-<p>If you have done it once, you can do this in your sleep. If not, do not hesitate to press CTRL+C and CTRL+D to start the installation over.</p>
-<p><strong>I must apologize, I do not remember the order in which those questions came up.</strong></p>
-<p>One thing you will have to decide on is the HOSTNAME, I have decided to use router.dettus.privates.</p>
-<p>The (W)hole Disk can be used for OpenBSD, I wanted to create a (C)ustom Layout:
-In the disklabel editor, I created three slices:</p>
+<p>If you have done it once, you can do this in your sleep. If not, do not hesitate to press CTRL+C and
+CTRL+D to start the installation over.</p>
+<ul class="simple">
+<li><p>I must apologize, I do not remember the order in which those questions came up. * One thing you
+will have to decide on is the HOSTNAME, I have decided to use router.dettus.privates.</p></li>
+</ul>
+<p>The (W)hole Disk can be used for OpenBSD, I wanted to create a (C)ustom Layout: In the disklabel
+editor, I created three slices:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">:</span> <span class="n">size</span> <span class="mi">2</span><span class="n">G</span><span class="p">,</span> <span class="n">mount</span> <span class="n">point</span> <span class="o">/</span>
 <span class="n">b</span><span class="p">:</span> <span class="n">size</span> <span class="mi">512</span><span class="n">M</span><span class="p">,</span> <span class="nb">type</span> <span class="n">swap</span>
 <span class="n">d</span><span class="p">:</span> <span class="n">size</span> <span class="mi">512</span><span class="n">M</span> <span class="p">(</span><span class="n">the</span> <span class="n">rest</span><span class="p">),</span> <span class="n">mount</span> <span class="n">point</span> <span class="o">/</span><span class="n">tmp</span>
 </pre></div>
 </div>
-<p>When the packages are to be selected, I deselected the Xenocara packages by typing in</p>
+<p>When the packages are to be selected, I deselected the Xenocara packages by typing in:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">x</span><span class="o">*</span>
 </pre></div>
 </div>
-<p>As for the installation medium: Chose the cd0 option, it is the fastest. Or a network mirror if you prefer.</p>
-<p><strong>VERY IMPORTANT</strong></p>
-<ul class="simple">
-<li><p>Set up a dumbuser.</p></li>
-<li><p>(Y)es, run sshd</p></li>
-<li><p>(N)o, do not permit root login</p></li>
-<li><p>(Y)es, change the console to COM0</p></li>
-<li><p>Baud rate: 115200</p></li>
-</ul>
-<p>The APU PC comes with a vintage UART on the front side, so Answering the last two questions will allow you to access the console in case of a Network meltdown.</p>
-<p>(H)alt the machine when everything has been installed.</p>
+<p>As for the installation medium: Chose the cd0 option, it is the fastest. Or a network mirror if you
+prefer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">VERY</span> <span class="n">IMPORTANT</span> <span class="o">*</span>
+<span class="n">Set</span> <span class="n">up</span> <span class="n">a</span> <span class="n">dumbuser</span><span class="o">.</span>
+<span class="p">(</span><span class="n">Y</span><span class="p">)</span><span class="n">es</span><span class="p">,</span> <span class="n">run</span> <span class="n">sshd</span>
+<span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="n">o</span><span class="p">,</span> <span class="n">do</span> <span class="ow">not</span> <span class="n">permit</span> <span class="n">root</span> <span class="n">login</span>
+<span class="p">(</span><span class="n">Y</span><span class="p">)</span><span class="n">es</span><span class="p">,</span> <span class="n">change</span> <span class="n">the</span> <span class="n">console</span> <span class="n">to</span> <span class="n">COM0</span>
+<span class="n">Baud</span> <span class="n">rate</span><span class="p">:</span> <span class="mi">115200</span>
+</pre></div>
+</div>
+<p>The APU PC comes with a vintage UART on the front side, so Answering the last two questions will
+allow you to access the console in case of a Network meltdown. (H)alt the machine when everything
+has been installed.</p>
 </section>
 <section id="running-the-vm">
 <h2><span class="section-number">1.92.4. </span>Running the VM<a class="headerlink" href="#running-the-vm" title="Permalink to this heading"></a></h2>
-<p>In theory, you are ready to write the image to the SD Card and perform the next couple of steps directly on the APU-PC. TRUST ME: This is easier.</p>
-<p>The installation required a graphic console, and VNC was used to do the job. But since the console was changed to COM0, it is now possible to have the serial output in the same terminal window in which QEMU is running:</p>
+<p>In theory, you are ready to write the image to the SD Card and perform the next couple of steps
+directly on the APU-PC. TRUST ME: This is easier. The installation required a graphic console, and
+VNC was used to do the job. But since the console was changed to COM0, it is now possible to have
+the serial output in the same terminal window in which QEMU is running:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">qemu</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">x86_64</span> <span class="o">-</span><span class="n">m</span> <span class="mi">1024</span> <span class="o">-</span><span class="n">smp</span> <span class="n">cpus</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">cores</span><span class="o">=</span><span class="mi">1</span> \
-    <span class="o">-</span><span class="n">drive</span> <span class="nb">format</span><span class="o">=</span><span class="n">raw</span><span class="p">,</span><span class="n">file</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">img</span> \
-    <span class="o">-</span><span class="n">cdrom</span> <span class="n">install73</span><span class="o">.</span><span class="n">iso</span> <span class="o">-</span><span class="n">boot</span> <span class="n">c</span> \
-    <span class="o">-</span><span class="n">device</span> <span class="n">virtio</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">pci</span><span class="p">,</span><span class="n">netdev</span><span class="o">=</span><span class="n">network0</span> \
-    <span class="o">-</span><span class="n">netdev</span> <span class="n">user</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">network0</span><span class="p">,</span><span class="n">hostfwd</span><span class="o">=</span><span class="n">tcp</span><span class="p">::</span><span class="mi">2001</span><span class="o">-</span><span class="p">:</span><span class="mi">22</span> \
-    <span class="o">-</span><span class="n">nographic</span>
+  <span class="o">-</span><span class="n">drive</span> <span class="nb">format</span><span class="o">=</span><span class="n">raw</span><span class="p">,</span><span class="n">file</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">img</span> \
+  <span class="o">-</span><span class="n">cdrom</span> <span class="n">install73</span><span class="o">.</span><span class="n">iso</span> <span class="o">-</span><span class="n">boot</span> <span class="n">c</span> \
+  <span class="o">-</span><span class="n">device</span> <span class="n">virtio</span><span class="o">-</span><span class="n">net</span><span class="o">-</span><span class="n">pci</span><span class="p">,</span><span class="n">netdev</span><span class="o">=</span><span class="n">network0</span> \
+  <span class="o">-</span><span class="n">netdev</span> <span class="n">user</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="n">network0</span><span class="p">,</span><span class="n">hostfwd</span><span class="o">=</span><span class="n">tcp</span><span class="p">::</span><span class="mi">2001</span><span class="o">-</span><span class="p">:</span><span class="mi">22</span> \
+  <span class="o">-</span><span class="n">nographic</span>
 </pre></div>
 </div>
-<p>With this, it is now possible to connect from a second terminal window with ssh . Do this, become root:</p>
+<p>With this, it is now possible to connect from a second terminal window with ssh . Do this, become
+root:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dumbuser</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">p</span> <span class="mi">2001</span> <span class="n">dumbuser</span><span class="nd">@localhost</span>
 <span class="n">dumbuser</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">su</span> <span class="o">-</span>
 <span class="n">Password</span><span class="p">:</span>
@@ -373,16 +389,17 @@ In the disklabel editor, I created three slices:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;https://ftp.fau.de/pub/OpenBSD&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">installurl</span>
 </pre></div>
 </div>
-<p>At this point, it is a good idea to reboot</p>
+<p>At this point, it is a good idea to reboot:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">reboot</span>
 </pre></div>
 </div>
 </section>
 <section id="network-configuration">
 <h2><span class="section-number">1.92.6. </span>Network configuration<a class="headerlink" href="#network-configuration" title="Permalink to this heading"></a></h2>
-<p>The APU-PC has three Ethernet connectors: em0, em1 and em2.
-The connection to the internet is realized through PPPoE, and my Internet provider needed vlan40 for some reason.</p>
-<p>I wanted to have two networks: 192.168.3.0/24 and 192.168.70.0/24. I decided to use em0 for the 3.x subnet, em1 for connecting the DSL modem and em2 for the 70.x subnet.</p>
+<p>The APU-PC has three Ethernet connectors: em0, em1 and em2. The connection to the internet is
+realized through PPPoE, and my Internet provider needed vlan40 for some reason. I wanted to have two
+networks: 192.168.3.0/24 and 192.168.70.0/24. I decided to use em0 for the 3.x subnet, em1 for
+connecting the DSL modem and em2 for the 70.x subnet.</p>
 <p>So, in the end, I had to create 5 hostname files:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">echo</span> <span class="s2">&quot;inet 192.168.3.1 255.255.255.0 NONE&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">hostname</span><span class="o">.</span><span class="n">em0</span>
 <span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">echo</span> <span class="s2">&quot;up&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">hostname</span><span class="o">.</span><span class="n">em1</span>
@@ -395,10 +412,11 @@ The connection to the internet is realized through PPPoE, and my Internet provid
 </section>
 <section id="dns-configuration-unbound">
 <h2><span class="section-number">1.92.7. </span>DNS configuration: unbound<a class="headerlink" href="#dns-configuration-unbound" title="Permalink to this heading"></a></h2>
-<p>Again, I had two subnets. 192.168.3.0/24 and 192.168.70.0/24. In the previous chapter, I set my IP addresses for this machine to the IP addresses 192.168.3.1 and 192.168.70.1
-I had a TV and a printer, and I wanted those to have the same IP addresses
-with the DHCP later, as well as the access point.</p>
-<p>So, in the end, my /var/unbound/unbound.conf looked like this</p>
+<p>Again, I had two subnets. 192.168.3.0/24 and 192.168.70.0/24. In the previous chapter, I set my IP
+addresses for this machine to the IP addresses 192.168.3.1 and 192.168.70.1 I had a TV and a
+printer, and I wanted those to have the same IP addresses with the DHCP later, as well as the access
+point.</p>
+<p>So, in the end, my /var/unbound/unbound.conf looked like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">server</span><span class="p">:</span>
     <span class="n">access</span><span class="o">-</span><span class="n">control</span><span class="p">:</span> <span class="mf">0.0.0.0</span><span class="o">/</span><span class="mi">0</span> <span class="n">refuse</span>
     <span class="n">access</span><span class="o">-</span><span class="n">control</span><span class="p">:</span> <span class="mf">127.0.0.0</span><span class="o">/</span><span class="mi">8</span> <span class="n">allow</span>
@@ -431,7 +449,6 @@ with the DHCP later, as well as the access point.</p>
 
     <span class="n">private</span><span class="o">-</span><span class="n">address</span><span class="p">:</span> <span class="mf">192.168.0.0</span><span class="o">/</span><span class="mi">16</span>
 
-
 <span class="n">local</span><span class="o">-</span><span class="n">zone</span><span class="p">:</span>    <span class="s2">&quot;dettus.privates.&quot;</span> <span class="n">static</span>
     <span class="c1"># wired network</span>
     <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="p">:</span>    <span class="s2">&quot;router.dettus.privates. IN A 192.168.3.1&quot;</span>
@@ -449,21 +466,25 @@ with the DHCP later, as well as the access point.</p>
     <span class="n">local</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">ptr</span><span class="p">:</span>    <span class="s2">&quot;192.168.70.2 access-point.dettus.privates&quot;</span>
 </pre></div>
 </div>
-<p>Afterwards, it should be possible to enable unbound.</p>
+<p>Afterwards, it should be possible to enable unbound:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">unbound</span><span class="o">-</span><span class="n">checkconf</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">unbound</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">unbound</span><span class="o">.</span><span class="n">conf</span>
 <span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">rcctl</span> <span class="n">enable</span> <span class="n">unbound</span>
 <span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">rcctl</span> <span class="n">disable</span> <span class="n">resolvd</span>  <span class="c1"># this program screws up the resolv.conf</span>
 <span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">echo</span> <span class="s2">&quot;nameserver 127.0.0.1&quot;</span> <span class="o">&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
 </div>
-<p><strong>IF YOU ARE STILL INSIDE THE VM, IT WILL FAIL TO START THE UNBOUND SERVER!</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>If you are still inside the vm, it will fail to start the unbound server!</p>
+</div>
 </section>
 <section id="dhcp-configuration-dhcpd">
 <h2><span class="section-number">1.92.8. </span>DHCP configuration: dhcpd<a class="headerlink" href="#dhcp-configuration-dhcpd" title="Permalink to this heading"></a></h2>
-<p>The way I did it was by creating two configuration files, and to start the
-dhcpd twice, one for each interface em0 and em2.</p>
-<p>I wanted my appliances to have the same IP address. So after I found out their MAC-Adress, I was able to write the configurations.</p>
-<p>Since the IP addresses where already configured in the nameserver, it was possible to use hostnames in the /etc/dhcpd.em0: (Note the special nameserver for the printer)</p>
+<p>The way I did it was by creating two configuration files, and to start the dhcpd twice, one for each
+interface em0 and em2. I wanted my appliances to have the same IP address. So after I found out
+their MAC-Adress, I was able to write the configurations. Since the IP addresses where already
+configured in the nameserver, it was possible to use hostnames in the /etc/dhcpd.em0 (Note the
+special nameserver for the printer):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shared</span><span class="o">-</span><span class="n">network</span> <span class="n">LOCAL</span><span class="o">-</span><span class="n">NET</span>
 <span class="p">{</span>
     <span class="n">option</span>  <span class="n">domain</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;dettus.privates&quot;</span><span class="p">;</span>
@@ -532,7 +553,8 @@ dhcpd twice, one for each interface em0 and em2.</p>
 </section>
 <section id="the-pf-conf">
 <h2><span class="section-number">1.92.9. </span>The pf.conf<a class="headerlink" href="#the-pf-conf" title="Permalink to this heading"></a></h2>
-<p>Apparently, port 5060 is needed for the VoIP telephone. In the end, my /etc/pf.conf looked like this:</p>
+<p>Apparently, port 5060 is needed for the VoIP telephone. In the end, my /etc/pf.conf looked like
+this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>set skip on lo
 block return
 pass
@@ -551,7 +573,8 @@ pass in quick on $ext_if proto { tcp, udp } from $ext_if to any port 5060 keep s
 </section>
 <section id="my-patches-aka-spit-and-duct-tape">
 <h2><span class="section-number">1.92.10. </span>My patches (aka spit and duct-tape)<a class="headerlink" href="#my-patches-aka-spit-and-duct-tape" title="Permalink to this heading"></a></h2>
-<p>The way I configured everything was somehow incompatible with the way OpenBSD works. For some reason, the PPPoE network was not coming up at the right point in time, so I had to hack my /etc/rc.</p>
+<p>The way I configured everything was somehow incompatible with the way OpenBSD works. For some
+reason, the PPPoE network was not coming up at the right point in time, so I had to hack my /etc/rc.</p>
 <p>Usually, the /etc/rc ends like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Re-link the kernel, placing the objects in a random order.</span>
 <span class="c1"># Replace current with relinked kernel and inform root about it.</span>
@@ -565,7 +588,6 @@ pass in quick on $ext_if proto { tcp, udp } from $ext_if to any port 5060 keep s
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Re-link the kernel, placing the objects in a random order.
 # Replace current with relinked kernel and inform root about it.
 /usr/libexec/reorder_kernel &amp;
-
 
 # go online
 ifconfig pppoe0 `cat /etc/hostname.pppoe0`
@@ -583,7 +605,11 @@ date
 exit 0
 </pre></div>
 </div>
-<p>THERE IS MAYBE A PROPER WAY TO DO THIS, AND THOSE CHANGES WILL BE LOST DURING A SYSUPGRADE, but it worked for me! :)</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>There is maybe a proper way to do this, and those changes will be lost during a sysupgrade, but
+it worked for me! :)</p>
+</div>
 </section>
 <section id="finally-prepare-the-sd-card-for-the-apu-pc">
 <h2><span class="section-number">1.92.11. </span>Finally: Prepare the SD-Card for the APU-PC<a class="headerlink" href="#finally-prepare-the-sd-card-for-the-apu-pc" title="Permalink to this heading"></a></h2>
@@ -591,22 +617,24 @@ exit 0
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">halt</span>
 </pre></div>
 </div>
-<p>Plug in the SD Card to your desktop. Find out which the proper device for the SD card is.</p>
+<p>Plug in the SD Card to your desktop. Find out which the proper device for the SD card is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">dmesg</span>
 </pre></div>
 </div>
-<p>Lets assume it is sd9. (Even if you are doing this on Linux, you should find it out the same way)</p>
+<p>Lets assume it is sd9. (Even if you are doing this on Linux, you should find it out the same way):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=</span><span class="n">router</span><span class="o">.</span><span class="n">img</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">rsd9c</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span>
 </pre></div>
 </div>
 </section>
 <section id="first-boot">
 <h2><span class="section-number">1.92.12. </span>First boot<a class="headerlink" href="#first-boot" title="Permalink to this heading"></a></h2>
-<p>Once the SD card has been prepared, put it inside your APU-PC, connect it via serial cable to your desktop and connect to it. Personally, I recommend minicom.</p>
+<p>Once the SD card has been prepared, put it inside your APU-PC, connect it via serial cable to your
+desktop and connect to it. Personally, I recommend minicom.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">minicom</span> <span class="o">-</span><span class="n">s</span>    <span class="c1"># to set it up</span>
 </pre></div>
 </div>
-<p>The device on my machine was /dev/ttyU0. I had to disable the hardware flow control, but once I have saved the configuration, I was able to use</p>
+<p>The device on my machine was /dev/ttyU0. I had to disable the hardware flow control, but once I have
+saved the configuration, I was able to use:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">minicom</span>
 </pre></div>
 </div>
@@ -614,19 +642,19 @@ exit 0
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@desktop</span><span class="o">&gt;</span> <span class="n">cu</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyU0</span> <span class="o">-</span><span class="n">s</span> <span class="mi">115200</span>
 </pre></div>
 </div>
-<p>Make sure your APU-PC boots correctly. Have a look at the /etc/resolv.conf, or
-if resolvd screwed it up before:</p>
+<p>Make sure your APU-PC boots correctly. Have a look at the /etc/resolv.conf, or if resolvd screwed it
+up before:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="o">.</span><span class="n">conf</span>
 <span class="n">nameserver</span> <span class="mf">127.0.0.1</span>
 </pre></div>
 </div>
 <p>If it did, make sure resolvd is disabled, reboot, rewrite /etc/resolv.conf.</p>
-<p>Test your DSL connection</p>
+<p>Test your DSL connection:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">ifconfig</span> <span class="n">pppoe0</span>
 <span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">ping</span> <span class="mf">131.188.12.211</span>
 </pre></div>
 </div>
-<p>Test unbound by using</p>
+<p>Test unbound by using:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@router</span><span class="o">&gt;</span> <span class="n">nameserver</span>
 <span class="o">&gt;</span> <span class="n">server</span> <span class="mf">127.0.0.1</span>
 <span class="o">&gt;</span> <span class="n">ftp</span><span class="o">.</span><span class="n">fau</span><span class="o">.</span><span class="n">de</span>
@@ -639,15 +667,14 @@ if resolvd screwed it up before:</p>
 <span class="o">&gt;</span> <span class="n">exit</span>
 </pre></div>
 </div>
-<p>Make sure the dhcpds are working</p>
+<p>Make sure the dhcpds are working:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>root@router&gt; ps auxww | grep -i dhcp
 _dhcp    12458  0.0  0.0   832  1532 ??  Ipc     7:00AM    0:00.01 dhcpd -c /etc/dhcpd.em0 em0
 _dhcp     2055  0.0  0.0   824  1492 ??  Ipc     7:00AM    0:00.01 dhcpd -c /etc/dhcpd.em2 em2
 </pre></div>
 </div>
-<p>And your new router is ready.
-Enjoy!</p>
-<p>Keywords: OpenBSD, DSL, pppoe, unbound, dhcpd, pf.conf forwarding, Internet router, DSL router</p>
+<p>And your new router is ready.</p>
+<p>Enjoy!</p>
 </section>
 </section>
 

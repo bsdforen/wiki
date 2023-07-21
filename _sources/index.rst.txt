@@ -58,10 +58,6 @@ Eine kleine Anleitung für `Git`_ gibt es `hier`_.
 Zuletzt geändert
 ----------------
 
-.. git_commit_detail::
-   :uncommitted:
-   :untracked:
-
 .. git_changelog::
 
 Anhang
