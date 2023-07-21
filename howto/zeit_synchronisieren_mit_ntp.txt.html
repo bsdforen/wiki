@@ -1,96 +1,50 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>1.147. Zeit synchronisieren mit ntp &mdash; BSDForen.de 1.0 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.148. ZFS auf FreeBSD" href="zfs.txt.html" />
     <link rel="prev" title="1.146. Xorg Konfigurieren" href="xorg_config.txt.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            BSDForen.de
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
@@ -287,84 +241,42 @@
 <li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BSDForen.de</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
-        
-      <li><span class="section-number">1.147. </span>Zeit synchronisieren mit ntp</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="howto_index.html"><span class="section-number">1. </span>Howto</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.147. </span>Zeit synchronisieren mit ntp</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/howto/zeit_synchronisieren_mit_ntp.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="zeit-synchronisieren-mit-ntp">
-<h1><span class="section-number">1.147. </span>Zeit synchronisieren mit ntp<a class="headerlink" href="#zeit-synchronisieren-mit-ntp" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+             
+  <section id="zeit-synchronisieren-mit-ntp">
+<h1><span class="section-number">1.147. </span>Zeit synchronisieren mit ntp<a class="headerlink" href="#zeit-synchronisieren-mit-ntp" title="Permalink to this heading"></a></h1>
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</div>
+</aside>
 <p>Echtzeituhren eines modernen PCs haben teilweise eine geringere Genauigkeit als
 beispielsweise eine Werbegeschenk-Armbanduhr.  Dieser Artikel beschreibt den
 automatischen Abgleich der Systemuhr.</p>
-<div class="section" id="einleitung">
-<h2><span class="section-number">1.147.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
+<section id="einleitung">
+<h2><span class="section-number">1.147.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Permalink to this heading"></a></h2>
 <p>Anstatt die Zeit beim Starten des Rechners oder via eines Cron-Jobs
 einzustellen, hat die hier beschriebene Lösung folgende Vorteile:</p>
 <ul class="simple">
@@ -389,9 +301,9 @@ einstellbaren Zeitgeber (Software-PLL) überwacht und korrigiert, kann er
 selbst anhand des gemessenen Fehlers abschätzen, wann es notwendig ist,
 die Uhrzeit zu synchronisieren. Ausserdem geschieht das Verändern der
 Systemzeit nur in notwendigen Fällen und sanft.</p>
-</div>
-<div class="section" id="voraussetzung">
-<h2><span class="section-number">1.147.2. </span>Voraussetzung<a class="headerlink" href="#voraussetzung" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="voraussetzung">
+<h2><span class="section-number">1.147.2. </span>Voraussetzung<a class="headerlink" href="#voraussetzung" title="Permalink to this heading"></a></h2>
 <p>Gerade durch die (sinnlose) Uhrzeitumstellung auf Sommer- oder
 Winterzeit kommt es vor, dass ntpd (FreeBSD ntpd und OpenNTPD)
 durcheinanderkommt. In vielen FreeBSD-Installationen läuft die CMOS-Uhr
@@ -408,8 +320,8 @@ eingeschaltet werden - führt das zu Problemen.</p>
 <p>Bei Systemen, bei denen nur FreeBSD (oder Linux, Solaris im UTC-Modus)
 installiert ist, empfiehlt es sich die CMOS-Uhr auf UTC laufen zu
 lassen, um solchen Problemem schon im Vorfeld aus dem Weg zu gehen.</p>
-<div class="section" id="cmos-uhr-auf-utc-modus-stellen">
-<h3><span class="section-number">1.147.2.1. </span>CMOS-Uhr auf UTC-Modus stellen<a class="headerlink" href="#cmos-uhr-auf-utc-modus-stellen" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="cmos-uhr-auf-utc-modus-stellen">
+<h3><span class="section-number">1.147.2.1. </span>CMOS-Uhr auf UTC-Modus stellen<a class="headerlink" href="#cmos-uhr-auf-utc-modus-stellen" title="Permalink to this heading"></a></h3>
 <p>Das Betriebssystem erkennt an dem Vorhandensein der Datei
 <code class="docutils literal notranslate"><span class="pre">/etc/wall_cmos_clock</span></code>, dass die CMOS-Uhr auf lokaler Zeit läuft.
 Daher wird diese Datei gelöscht, damit die CMOS-Uhr danach auf UTC
@@ -421,16 +333,16 @@ läuft.</p>
 durch die veränderte Interpretation der CMOS-Uhr die Uhrzeit nun um eine
 oder zwei Stunden falsch geht. Das kann z.B. mit
 <code class="docutils literal notranslate"><span class="pre">ntpdate</span> <span class="pre">de.pool.ntp.org</span></code> schnell korrigiert werden.</p>
-</div>
-</div>
-<div class="section" id="ntpd-auswahlen">
-<h2><span class="section-number">1.147.3. </span>ntpd auswählen<a class="headerlink" href="#ntpd-auswahlen" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="ntpd-auswahlen">
+<h2><span class="section-number">1.147.3. </span>ntpd auswählen<a class="headerlink" href="#ntpd-auswahlen" title="Permalink to this heading"></a></h2>
 <p>Im ersten Schritt soll abegwägt werden, welche ntpd verwendet werden
 soll. Es ist möglich den mitgelieferten ntpd von FreeBSD oder den von
 OpenNTP zu nutzen. Dieser Artikel deckt die Konfiguration beider Systeme
 ab, es darf aber nur einer installiert werden.</p>
-<div class="section" id="openntp">
-<h3><span class="section-number">1.147.3.1. </span>OpenNTP<a class="headerlink" href="#openntp" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="openntp">
+<h3><span class="section-number">1.147.3.1. </span>OpenNTP<a class="headerlink" href="#openntp" title="Permalink to this heading"></a></h3>
 <p>Im Gegensatz zu dem FreeBSD ntpd wurde dieser neu entwickelt. Hier wurde
 besonders Wert auf Quelltext-Sauberkeit und Zuverlässigkeit gelegt
 gelegt, was vorrang vor dem Erreichen der letzten Mikrosekunde
@@ -442,9 +354,9 @@ nicht auch bei vielen Internetverbindungsproblemen und sorgt stets für
 korrekte Zeit. In fast allen Fällen sollte daher OpenNTP die bessere
 Wahl sein, auch wenn dieser nicht Teil des Betriebssystems ist und
 nachinstalliert werden muss.</p>
-</div>
-<div class="section" id="freebsd-ntpd">
-<h3><span class="section-number">1.147.3.2. </span>FreeBSD ntpd<a class="headerlink" href="#freebsd-ntpd" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="freebsd-ntpd">
+<h3><span class="section-number">1.147.3.2. </span>FreeBSD ntpd<a class="headerlink" href="#freebsd-ntpd" title="Permalink to this heading"></a></h3>
 <p>Der ntpd von FreeBSD ist über viele Jahre durch viele Personen auf
 höchste Genauigkeit optimiert, wodurch die Stabilität und
 Quelltextqualität etwas in Mitleidenschaft gezogen wurde. Dieser ntpd
@@ -455,12 +367,12 @@ sonderlich gut und verliert seine Verbindungen zu den ntp-Servern
 dauerhaft ohne dies ins Syslog zu vermerken. Der Wechsel von
 Sommer/Winterzeit ist auch nicht der beste Freund von diesem ntpd. Der
 notwendige Workaround ist weiter unten im Artikel beschrieben.</p>
-</div>
-</div>
-<div class="section" id="openntpd">
-<h2><span class="section-number">1.147.4. </span>OpenNTPD<a class="headerlink" href="#openntpd" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="installation-von-openntpd">
-<h3><span class="section-number">1.147.4.1. </span>Installation von OpenNTPD<a class="headerlink" href="#installation-von-openntpd" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+</section>
+<section id="openntpd">
+<h2><span class="section-number">1.147.4. </span>OpenNTPD<a class="headerlink" href="#openntpd" title="Permalink to this heading"></a></h2>
+<section id="installation-von-openntpd">
+<h3><span class="section-number">1.147.4.1. </span>Installation von OpenNTPD<a class="headerlink" href="#installation-von-openntpd" title="Permalink to this heading"></a></h3>
 <p>Über die Ports</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">openntpd</span>
 <span class="n">make</span> <span class="n">install</span> <span class="n">clean</span>
@@ -472,9 +384,9 @@ notwendige Workaround ist weiter unten im Artikel beschrieben.</p>
 </div>
 <p>OpenNTPD hat keine abhängigen Pakete und ist insgesamt sehr sparsam mit
 Speicherplatz.</p>
-</div>
-<div class="section" id="konfiguration-von-openntp">
-<h3><span class="section-number">1.147.4.2. </span>Konfiguration von OpenNTP<a class="headerlink" href="#konfiguration-von-openntp" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="konfiguration-von-openntp">
+<h3><span class="section-number">1.147.4.2. </span>Konfiguration von OpenNTP<a class="headerlink" href="#konfiguration-von-openntp" title="Permalink to this heading"></a></h3>
 <p>Die Konfiguration befindet sich in der Datei
 <code class="docutils literal notranslate"><span class="pre">/usr/local/etc/ntpd.conf</span></code> und hat beispielsweise folgenden Inhalt.
 Die Auslieferungszustand kann hier z.B. direkt übernommen werden.</p>
@@ -500,9 +412,9 @@ Teilweise kann es sich um Server handeln, die für die öffentliche
 Nutzung nicht vorgesehen sind. Es gibt alternative Pool-Adressen. Dort
 wird ein legaler Server dem System zugewiesen. Dies sind z.B.
 <strong>pool.ntp.org</strong>, aber auch <strong>de.pool.ntp.org</strong>. &lt;/note&gt;</p>
-</div>
-<div class="section" id="konfiguration-von-openntp-als-server">
-<h3><span class="section-number">1.147.4.3. </span>Konfiguration von OpenNTP als Server<a class="headerlink" href="#konfiguration-von-openntp-als-server" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="konfiguration-von-openntp-als-server">
+<h3><span class="section-number">1.147.4.3. </span>Konfiguration von OpenNTP als Server<a class="headerlink" href="#konfiguration-von-openntp-als-server" title="Permalink to this heading"></a></h3>
 <p>Um den OpenNTPD als Zeit-Server im netzwerk zur verfügung zu stellen,
 muß lediglich die zeile <code class="docutils literal notranslate"><span class="pre">listen</span> <span class="pre">on</span> <span class="pre">*</span></code> in der ntpd.conf auskommentiert
 werden. Anschließend nicht vergessen den dienst neu zu starten. Soll der
@@ -524,9 +436,9 @@ die entsprechende IP angeben.</p>
 <span class="n">servers</span> <span class="n">pool</span><span class="o">.</span><span class="n">ntp</span><span class="o">.</span><span class="n">org</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="aktivieren-von-openntp">
-<h3><span class="section-number">1.147.4.4. </span>Aktivieren von OpenNTP<a class="headerlink" href="#aktivieren-von-openntp" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="aktivieren-von-openntp">
+<h3><span class="section-number">1.147.4.4. </span>Aktivieren von OpenNTP<a class="headerlink" href="#aktivieren-von-openntp" title="Permalink to this heading"></a></h3>
 <p>Aktiviert wird OpenNTPD wie bei FreeBSD typisch mit folgendem Eintrag in
 der Datei <strong>``/etc/rc.conf.local``</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openntpd_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
@@ -539,12 +451,12 @@ lassen, da eine fließende Korrektur mit <em>adjtime()</em> Stunden dauern kann.
 Die Option <em>„-s“</em> sorgt dafür, dass Abweichungen größer als 180 Sekunden
 sofort korrigiert werden beim Systemstart - danach wird wieder
 <em>adjtime()</em> verwendet.</p>
-</div>
-</div>
-<div class="section" id="freebsd-ntpd-1">
-<span id="id1"></span><h2><span class="section-number">1.147.5. </span>FreeBSD ntpd<a class="headerlink" href="#freebsd-ntpd-1" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="konfiguration-von-ntpd">
-<h3><span class="section-number">1.147.5.1. </span>Konfiguration von ntpd<a class="headerlink" href="#konfiguration-von-ntpd" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+</section>
+<section id="freebsd-ntpd-1">
+<span id="id1"></span><h2><span class="section-number">1.147.5. </span>FreeBSD ntpd<a class="headerlink" href="#freebsd-ntpd-1" title="Permalink to this heading"></a></h2>
+<section id="konfiguration-von-ntpd">
+<h3><span class="section-number">1.147.5.1. </span>Konfiguration von ntpd<a class="headerlink" href="#konfiguration-von-ntpd" title="Permalink to this heading"></a></h3>
 <p>Die Konfiguration befindet sich in der Datei <code class="docutils literal notranslate"><span class="pre">/etc/ntp.conf</span></code> und hat
 beispielsweise folgenden Inhalt</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">server</span> <span class="n">ptbtime1</span><span class="o">.</span><span class="n">ptb</span><span class="o">.</span><span class="n">de</span> <span class="n">prefer</span>
@@ -575,17 +487,17 @@ wirklich sinnvoll wäre.</p>
 <span class="n">Oct</span> <span class="mi">31</span> <span class="mi">14</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">14</span> <span class="n">box</span> <span class="n">ntpd</span><span class="p">[</span><span class="mi">67238</span><span class="p">]:</span> <span class="n">time</span> <span class="n">correction</span> <span class="n">of</span> <span class="o">-</span><span class="mi">3599</span> <span class="n">seconds</span> <span class="n">exceeds</span> <span class="n">sanity</span> <span class="n">limit</span> <span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="nb">set</span> <span class="n">clock</span> <span class="n">manually</span> <span class="n">to</span> <span class="n">the</span> <span class="n">correct</span> <span class="n">UTC</span> <span class="n">time</span><span class="o">.</span>
 </pre></div>
 </div>
-<div class="section" id="aktivieren-von-ntpd">
-<h4><span class="section-number">1.147.5.1.1. </span>Aktivieren von ntpd<a class="headerlink" href="#aktivieren-von-ntpd" title="Link zu dieser Überschrift">¶</a></h4>
+<section id="aktivieren-von-ntpd">
+<h4><span class="section-number">1.147.5.1.1. </span>Aktivieren von ntpd<a class="headerlink" href="#aktivieren-von-ntpd" title="Permalink to this heading"></a></h4>
 <p>In die Datei /etc/rc.conf muss folgende Zeile hinzugefügt werden
 ntpd_enable=“YES“</p>
-</div>
-</div>
-</div>
-<div class="section" id="anmerkungen">
-<h2><span class="section-number">1.147.6. </span>Anmerkungen<a class="headerlink" href="#anmerkungen" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="setzen-einer-ganz-falsch-gehenden-systemuhr">
-<h3><span class="section-number">1.147.6.1. </span>Setzen einer ganz falsch gehenden Systemuhr<a class="headerlink" href="#setzen-einer-ganz-falsch-gehenden-systemuhr" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="anmerkungen">
+<h2><span class="section-number">1.147.6. </span>Anmerkungen<a class="headerlink" href="#anmerkungen" title="Permalink to this heading"></a></h2>
+<section id="setzen-einer-ganz-falsch-gehenden-systemuhr">
+<h3><span class="section-number">1.147.6.1. </span>Setzen einer ganz falsch gehenden Systemuhr<a class="headerlink" href="#setzen-einer-ganz-falsch-gehenden-systemuhr" title="Permalink to this heading"></a></h3>
 <p>Dieses Kapitel bespricht den Sonderfall, wenn die Systemuhr des Rechners
 absolut falsche Werte liefert. Die Ursache dafuer kann z.B. eine leere
 oder nicht vorhandenen CMOS-Pufferbatterien wie z.B. enbedded Systemen
@@ -604,10 +516,10 @@ werden.</p>
 <p>Die rc.conf-Einstellung ntpd_sync_on_start=“YES“ soll den gleichen Zweck
 haben, funktioniert aber nicht (getestet FreeBSD 5.5 und FreeBSD
 Prerelease 6.2).</p>
-</div>
-</div>
-<div class="section" id="fehlersuche-bei-ntpd">
-<h2><span class="section-number">1.147.7. </span>Fehlersuche bei ntpd<a class="headerlink" href="#fehlersuche-bei-ntpd" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="fehlersuche-bei-ntpd">
+<h2><span class="section-number">1.147.7. </span>Fehlersuche bei ntpd<a class="headerlink" href="#fehlersuche-bei-ntpd" title="Permalink to this heading"></a></h2>
 <p>Gerade der ntpd von FreeBSD neigt dazu, nach einiger Zeit bei nicht
 immer vorhandener Verbindung zu den Zeit-Servern die Verbindung zu
 verlieren. Mit folgendem Befehl können Informationen abgefragt werden:</p>
@@ -622,9 +534,9 @@ verlieren. Mit folgendem Befehl können Informationen abgefragt werden:</p>
 <p>Hier werden alle Zeit-Server aufgelistet, zu denen Kontakt besteht. Ist
 diese Liste beim FreeBSD-ntpd mehrfach leer, sollte auf OpenNTPD
 gewechselt werden.</p>
-</div>
-<div class="section" id="die-parameter-haben-folgende-bedeutung">
-<h2><span class="section-number">1.147.8. </span>Die Parameter haben folgende Bedeutung:<a class="headerlink" href="#die-parameter-haben-folgende-bedeutung" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="die-parameter-haben-folgende-bedeutung">
+<h2><span class="section-number">1.147.8. </span>Die Parameter haben folgende Bedeutung:<a class="headerlink" href="#die-parameter-haben-folgende-bedeutung" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Remote</span></code>: Name oder IP des entfernten Zeit-Servers</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">refid</span></code>: Die Quelle, von dem der entfernte Zeit-Server selbst seine
@@ -653,12 +565,12 @@ Gegensatz zu den Laufzeiten stört dieser Faktor die Genauigkeit der
 Uhrzeitsynchronisation. Eine ständig stark wechselnd belastete
 Internetverbindung verschlechtert diesen Wert z.B. .</p></li>
 </ul>
-</div>
-<div class="section" id="hintergrundinformationen-echtzeituhren-im-betriebssystem">
-<h2><span class="section-number">1.147.9. </span>Hintergrundinformationen: Echtzeituhren im Betriebssystem<a class="headerlink" href="#hintergrundinformationen-echtzeituhren-im-betriebssystem" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="hintergrundinformationen-echtzeituhren-im-betriebssystem">
+<h2><span class="section-number">1.147.9. </span>Hintergrundinformationen: Echtzeituhren im Betriebssystem<a class="headerlink" href="#hintergrundinformationen-echtzeituhren-im-betriebssystem" title="Permalink to this heading"></a></h2>
 <p>In jedem Computer gibt es zwei Arten von Echtzeituhren:</p>
-<div class="section" id="cmos-uhr">
-<h3><span class="section-number">1.147.9.1. </span>CMOS-Uhr<a class="headerlink" href="#cmos-uhr" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="cmos-uhr">
+<h3><span class="section-number">1.147.9.1. </span>CMOS-Uhr<a class="headerlink" href="#cmos-uhr" title="Permalink to this heading"></a></h3>
 <p>Die CMOS-Uhr (aka Hardware-Clock), die batteriegepuffert auch im
 ausgeschaltetem Zustand mehr oder weniger richtig läuft, ist auf dem
 Mainboard in der Hardware integriert. Wenn die Batterie (früher Akku)
@@ -669,9 +581,9 @@ dort hineinschreibt (weg. CMOS Checksum Error). Die Zeitdarstellung
 dieser Uhr ist ähnlich einem klassischem Datum aufgebaut (z.B. 19.10.06
 22:36:22) und die kleinste Einheit ist die Sekunden. Die CMOS-Uhr hat
 einen eigenen Kalender.</p>
-</div>
-<div class="section" id="betriebssystem-uhr">
-<h3><span class="section-number">1.147.9.2. </span>Betriebssystem-Uhr<a class="headerlink" href="#betriebssystem-uhr" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="betriebssystem-uhr">
+<h3><span class="section-number">1.147.9.2. </span>Betriebssystem-Uhr<a class="headerlink" href="#betriebssystem-uhr" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">Fast alle Betriebssysteme haben eine interne Software-Echtzeituhr, die
 das Betriebssystem beim Systemstart nach der CMOS-Uhr stellt. Danach
@@ -698,57 +610,40 @@ berücksichtigt.</div>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-08-03</p>
-</div>
-</div>
-</div>
+<p>Zuletzt geändert: 2023-07-21</p>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="zfs.txt.html" class="btn btn-neutral float-right" title="1.148. ZFS auf FreeBSD" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="xorg_config.txt.html" class="btn btn-neutral float-left" title="1.146. Xorg Konfigurieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="zfs.txt.html" class="btn btn-neutral float-right" title="1.148. ZFS auf FreeBSD" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, BSDForen.de.
-
-    </p>
+    <p>&#169; Copyright 2023, BSDForen.de.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

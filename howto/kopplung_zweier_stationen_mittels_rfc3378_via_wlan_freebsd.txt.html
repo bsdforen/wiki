@@ -1,96 +1,50 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>1.76. Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD) &mdash; BSDForen.de 1.0 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.77. M0n0wall &amp; SIP" href="m0n0wall_sip.txt.html" />
     <link rel="prev" title="1.75. Konsole nach Systemstart und Logout löschen" href="konsole_nach_systemstart_und_logout_loeschen.txt.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            BSDForen.de
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
@@ -277,79 +231,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BSDForen.de</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
-        
-      <li><span class="section-number">1.76. </span>Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="howto_index.html"><span class="section-number">1. </span>Howto</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.76. </span>Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/howto/kopplung_zweier_stationen_mittels_rfc3378_via_wlan_freebsd.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="kopplung-zweier-stationen-mittels-rfc3378-via-wlan-freebsd">
-<h1><span class="section-number">1.76. </span>Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)<a class="headerlink" href="#kopplung-zweier-stationen-mittels-rfc3378-via-wlan-freebsd" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+             
+  <section id="kopplung-zweier-stationen-mittels-rfc3378-via-wlan-freebsd">
+<h1><span class="section-number">1.76. </span>Kopplung zweier Stationen mittels RFC3378 via WLAN (FreeBSD)<a class="headerlink" href="#kopplung-zweier-stationen-mittels-rfc3378-via-wlan-freebsd" title="Permalink to this heading"></a></h1>
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</div>
+</aside>
 <p>Ein weiterer Anwendungsfall von ipsec(4) eröffnet sich u. a. zum
 Absichern von Kommunikationsbeziehungen, welche auf dem in
 <a class="reference external" href="http://tools.ietf.org/html/rfc3378">RFC3378</a> beschriebenen
@@ -382,12 +294,6 @@ Interface und bilden gemeinsam ein
 <a class="reference external" href="http://tools.ietf.org/html/rfc1918">RFC1918</a> konformes
 <a class="reference external" href="http://de.wikipedia.org/wiki/CIDR">/30</a> Ad-hoc-Netz.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 27%" />
-<col style="width: 21%" />
-<col style="width: 27%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>DSL-Router</strong></p></th>
 <th class="head"></th>
@@ -436,8 +342,8 @@ und <a class="reference external" href="http://www.cl.cam.ac.uk/cgi-bin/manpage?
 Kontext zu dem Artikel <a class="reference external" href="/howto/ipsec-vpn">ipsec-vpn</a> und <a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/ipsec.html">Kapitel
 15.9</a>
 des FreeBSD-Benutzerhandbuches zu betrachten.</p>
-<div class="section" id="aufbau-des-etherip-tunnels-beim-dsl-router">
-<h2><span class="section-number">1.76.1. </span>Aufbau des EtherIP-Tunnels beim DSL-Router<a class="headerlink" href="#aufbau-des-etherip-tunnels-beim-dsl-router" title="Link zu dieser Überschrift">¶</a></h2>
+<section id="aufbau-des-etherip-tunnels-beim-dsl-router">
+<h2><span class="section-number">1.76.1. </span>Aufbau des EtherIP-Tunnels beim DSL-Router<a class="headerlink" href="#aufbau-des-etherip-tunnels-beim-dsl-router" title="Permalink to this heading"></a></h2>
 <p>Zuallererst sollte ein unbenutztes wlan(4) Interface konfiguriert
 werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ifconfig wlan0 create wlandev ath0 wlanmode adhoc</span>
@@ -465,8 +371,8 @@ mit (physischen) Ethernet Interfaces.</p>
 <span class="c1"># ifconfig bridge0 create # ifconfig bridge0 addm ngeth0 addm gif0 up</span>
 </pre></div>
 </div>
-<div class="section" id="etc-rc-conf">
-<h3><span class="section-number">1.76.1.1. </span>/etc/rc.conf<a class="headerlink" href="#etc-rc-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="etc-rc-conf">
+<h3><span class="section-number">1.76.1.1. </span>/etc/rc.conf<a class="headerlink" href="#etc-rc-conf" title="Permalink to this heading"></a></h3>
 <p>Wird ergänzt mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wlans_ath0</span><span class="o">=</span><span class="s2">&quot;wlan0&quot;</span>
 <span class="n">create_args_wlan0</span><span class="o">=</span><span class="s2">&quot;wlanmode adhoc&quot;</span>
@@ -480,24 +386,24 @@ mit (physischen) Ethernet Interfaces.</p>
 <span class="n">ifconfig_bridge0</span><span class="o">=</span><span class="s2">&quot;addm ngeth0 addm gif0 up&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="etc-sysctl-conf">
-<h3><span class="section-number">1.76.1.2. </span>/etc/sysctl.conf<a class="headerlink" href="#etc-sysctl-conf" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="etc-sysctl-conf">
+<h3><span class="section-number">1.76.1.2. </span>/etc/sysctl.conf<a class="headerlink" href="#etc-sysctl-conf" title="Permalink to this heading"></a></h3>
 <p>Wird ergänzt mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">gif</span><span class="o">.</span><span class="n">parallel_tunnels</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="etc-ppp-ppp-conf">
-<h3><span class="section-number">1.76.1.3. </span>/etc/ppp/ppp.conf<a class="headerlink" href="#etc-ppp-ppp-conf" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="etc-ppp-ppp-conf">
+<h3><span class="section-number">1.76.1.3. </span>/etc/ppp/ppp.conf<a class="headerlink" href="#etc-ppp-ppp-conf" title="Permalink to this heading"></a></h3>
 <p>Wird ergänzt mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">gif</span><span class="o">.</span><span class="n">parallel_tunnels</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="aufbau-des-etherip-tunnels-beim-switch">
-<h2><span class="section-number">1.76.2. </span>Aufbau des EtherIP-Tunnels beim Switch<a class="headerlink" href="#aufbau-des-etherip-tunnels-beim-switch" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="aufbau-des-etherip-tunnels-beim-switch">
+<h2><span class="section-number">1.76.2. </span>Aufbau des EtherIP-Tunnels beim Switch<a class="headerlink" href="#aufbau-des-etherip-tunnels-beim-switch" title="Permalink to this heading"></a></h2>
 <p>Das Switch besitzt (hier) drei Ethernet Interfaces (fxp0, fxp1, fxp2)
 und ein wlan(4) Interface, wobei fxp0 mit dem DSL-Modem verbunden werden
 sollte. Die Betrachtung des Switches wird zunächst auf die einer
@@ -562,15 +468,15 @@ gekoppelt sein.</p>
 und das
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=bpf&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+8.2-RELEASE&amp;format=html">bpf(4)</a>
 Interface geeignet zum Überprüfen des Verbindungsstatus.</p>
-<div class="section" id="etc-start-if-wlan0">
-<h3><span class="section-number">1.76.2.1. </span>/etc/start_if.wlan0<a class="headerlink" href="#etc-start-if-wlan0" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="etc-start-if-wlan0">
+<h3><span class="section-number">1.76.2.1. </span>/etc/start_if.wlan0<a class="headerlink" href="#etc-start-if-wlan0" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ngctl mkpeer . eiface hook ether
 ifconfig ngeth0 ether $mac_adresse up
 </pre></div>
 </div>
-</div>
-<div class="section" id="etcrc-conf-3">
-<span id="id1"></span><h3><span class="section-number">1.76.2.2. </span>/etc/rc.conf<a class="headerlink" href="#etcrc-conf-3" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="etcrc-conf-3">
+<span id="id1"></span><h3><span class="section-number">1.76.2.2. </span>/etc/rc.conf<a class="headerlink" href="#etcrc-conf-3" title="Permalink to this heading"></a></h3>
 <p>Wird ergänzt mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wlans_ath0</span><span class="o">=</span><span class="s2">&quot;wlan0&quot;</span>
 <span class="n">create_args_wlan0</span><span class="o">=</span><span class="s2">&quot;wlanmode adhoc&quot;</span>
@@ -584,16 +490,16 @@ ifconfig ngeth0 ether $mac_adresse up
 <span class="n">ifconfig_bridge0</span><span class="o">=</span><span class="s2">&quot;addm ngeth0 addm gif0 up&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="etcsysctl-conf-3">
-<span id="id2"></span><h3><span class="section-number">1.76.2.3. </span>/etc/sysctl.conf<a class="headerlink" href="#etcsysctl-conf-3" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="etcsysctl-conf-3">
+<span id="id2"></span><h3><span class="section-number">1.76.2.3. </span>/etc/sysctl.conf<a class="headerlink" href="#etcsysctl-conf-3" title="Permalink to this heading"></a></h3>
 <p>Wird ergänzt mit:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">gif</span><span class="o">.</span><span class="n">parallel_tunnels</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="wie-wird-jetzt-mit-ng-bridge-4-umgegangen">
-<h3><span class="section-number">1.76.2.4. </span>Wie wird jetzt mit ng_bridge(4) umgegangen?<a class="headerlink" href="#wie-wird-jetzt-mit-ng-bridge-4-umgegangen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="wie-wird-jetzt-mit-ng-bridge-4-umgegangen">
+<h3><span class="section-number">1.76.2.4. </span>Wie wird jetzt mit ng_bridge(4) umgegangen?<a class="headerlink" href="#wie-wird-jetzt-mit-ng-bridge-4-umgegangen" title="Permalink to this heading"></a></h3>
 <p>Das Shellscript /usr/share/examples/netgraph/ether.bridge sollte
 angepasst werden:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
@@ -634,126 +540,126 @@ angepasst werden:</p>
 <span class="c1">#### Modefied by user.</span>
 
 <span class="c1"># Routine to verify node&#39;s existence.</span>
-bridge_verify<span class="o">()</span> <span class="o">{</span>
-    ngctl info <span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span>: &gt;/dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
-    <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span><span class="s2">: bridge network not found&quot;</span>
-        <span class="nb">exit</span> <span class="m">1</span>
-    <span class="k">fi</span>
+bridge_verify<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>ngctl<span class="w"> </span>info<span class="w"> </span><span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span>:<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span><span class="s2">: bridge network not found&quot;</span>
+<span class="w">        </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
 <span class="o">}</span>
 
 <span class="c1"># Routine to get and display link stats.</span>
-bridge_linkstats<span class="o">()</span> <span class="o">{</span>
-    <span class="nv">STATS</span><span class="o">=</span><span class="sb">`</span>ngctl msg <span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span>: getstats <span class="nv">$1</span><span class="sb">`</span>
-    <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="nb">exit</span> <span class="m">1</span>
-    <span class="k">fi</span>
-    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">STATS</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">|</span> fmt <span class="m">2</span> <span class="p">|</span> awk <span class="s1">&#39;/=/ { fl=index($0, &quot;=&quot;); \</span>
+bridge_linkstats<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">STATS</span><span class="o">=</span><span class="sb">`</span>ngctl<span class="w"> </span>msg<span class="w"> </span><span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span>:<span class="w"> </span>getstats<span class="w"> </span><span class="nv">$1</span><span class="sb">`</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">STATS</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>fmt<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;/=/ { fl=index($0, &quot;=&quot;); \</span>
 <span class="s1">        printf &quot;%20s = %s\n&quot;, substr($0, 0, fl - 1), substr($0, fl + 1); }&#39;</span>
 <span class="o">}</span>
 
 <span class="c1"># Start/restart routine.</span>
-bridge_start<span class="o">()</span> <span class="o">{</span>
+bridge_start<span class="o">()</span><span class="w"> </span><span class="o">{</span>
 
-    <span class="c1"># Load netgraph KLD&#39;s as necessary.</span>
-    <span class="k">for</span> KLD <span class="k">in</span> ng_ether ng_bridge ng_eiface<span class="p">;</span> <span class="k">do</span>
-        <span class="k">if</span> ! kldstat -v <span class="p">|</span> grep -qw <span class="si">${</span><span class="nv">KLD</span><span class="si">}</span><span class="p">;</span> <span class="k">then</span>
-            <span class="nb">echo</span> -n <span class="s2">&quot;Loading </span><span class="si">${</span><span class="nv">KLD</span><span class="si">}</span><span class="s2">.ko... &quot;</span>
-            kldload <span class="si">${</span><span class="nv">KLD</span><span class="si">}</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">1</span>
-            <span class="nb">echo</span> <span class="s2">&quot;done&quot;</span>
-        <span class="k">fi</span>
-    <span class="k">done</span>
+<span class="w">    </span><span class="c1"># Load netgraph KLD&#39;s as necessary.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>KLD<span class="w"> </span><span class="k">in</span><span class="w"> </span>ng_ether<span class="w"> </span>ng_bridge<span class="w"> </span>ng_eiface<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>kldstat<span class="w"> </span>-v<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-qw<span class="w"> </span><span class="si">${</span><span class="nv">KLD</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;Loading </span><span class="si">${</span><span class="nv">KLD</span><span class="si">}</span><span class="s2">.ko... &quot;</span>
+<span class="w">            </span>kldload<span class="w"> </span><span class="si">${</span><span class="nv">KLD</span><span class="si">}</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;done&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">done</span>
 
-    <span class="c1"># Reset all interfaces.</span>
-    bridge_stop
+<span class="w">    </span><span class="c1"># Reset all interfaces.</span>
+<span class="w">    </span>bridge_stop
 
-    <span class="c1"># Verify all interfaces exist.</span>
-    <span class="k">for</span> ETHER <span class="k">in</span> <span class="si">${</span><span class="nv">PHYSICAL_IFACES</span><span class="si">}</span> <span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
-        <span class="k">if</span> ! ngctl info <span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>: &gt;/dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span> <span class="k">then</span>
-            <span class="nb">echo</span> <span class="s2">&quot;Error: interface </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span><span class="s2"> does not exist&quot;</span>
-            <span class="nb">exit</span> <span class="m">1</span>
-        <span class="k">fi</span>
-        ifconfig <span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span> up <span class="o">||</span> <span class="nb">exit</span> <span class="m">1</span>
-    <span class="k">done</span>
+<span class="w">    </span><span class="c1"># Verify all interfaces exist.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>ETHER<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">PHYSICAL_IFACES</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>ngctl<span class="w"> </span>info<span class="w"> </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>:<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Error: interface </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span><span class="s2"> does not exist&quot;</span>
+<span class="w">            </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">        </span>ifconfig<span class="w"> </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span><span class="w"> </span>up<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">done</span>
 
-    <span class="c1"># Create new ng_bridge(4) node, attached to the first virtual interface.</span>
-    <span class="nv">FIRSTIF</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span> <span class="p">|</span> awk <span class="s1">&#39;{ print $1 }&#39;</span><span class="sb">`</span>
-    ngctl mkpeer <span class="si">${</span><span class="nv">FIRSTIF</span><span class="si">}</span>: bridge ether link0 <span class="o">||</span> <span class="nb">exit</span> <span class="m">1</span>
-    ngctl name <span class="si">${</span><span class="nv">FIRSTIF</span><span class="si">}</span>:ether <span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">1</span>
+<span class="w">    </span><span class="c1"># Create new ng_bridge(4) node, attached to the first virtual interface.</span>
+<span class="w">    </span><span class="nv">FIRSTIF</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{ print $1 }&#39;</span><span class="sb">`</span>
+<span class="w">    </span>ngctl<span class="w"> </span>mkpeer<span class="w"> </span><span class="si">${</span><span class="nv">FIRSTIF</span><span class="si">}</span>:<span class="w"> </span>bridge<span class="w"> </span>ether<span class="w"> </span>link0<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span>ngctl<span class="w"> </span>name<span class="w"> </span><span class="si">${</span><span class="nv">FIRSTIF</span><span class="si">}</span>:ether<span class="w"> </span><span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
 
-    <span class="c1"># Attach other virtual interfaces as well.</span>
-    <span class="nv">LINKNUM</span><span class="o">=</span><span class="m">1</span>
-        <span class="nv">VIRTUAL_IFACES</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span> <span class="p">|</span> cut -d<span class="s2">&quot; &quot;</span> -f2-<span class="sb">`</span>
-    <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">FIRSTIF</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span>
-    <span class="k">then</span>
-        <span class="k">for</span> ETHER <span class="k">in</span> <span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
-            ngctl connect <span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>: <span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span>: <span class="se">\</span>
-                    ether link<span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">1</span>
+<span class="w">    </span><span class="c1"># Attach other virtual interfaces as well.</span>
+<span class="w">    </span><span class="nv">LINKNUM</span><span class="o">=</span><span class="m">1</span>
+<span class="w">        </span><span class="nv">VIRTUAL_IFACES</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s2">&quot; &quot;</span><span class="w"> </span>-f2-<span class="sb">`</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">FIRSTIF</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="k">then</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span>ETHER<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">            </span>ngctl<span class="w"> </span>connect<span class="w"> </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>:<span class="w"> </span><span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span>:<span class="w"> </span><span class="se">\</span>
+<span class="w">                    </span>ether<span class="w"> </span>link<span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
 
-            <span class="nv">LINKNUM</span><span class="o">=</span><span class="sb">`</span>expr <span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span> + <span class="m">1</span><span class="sb">`</span>
-        <span class="k">done</span>
-    <span class="k">fi</span>
+<span class="w">            </span><span class="nv">LINKNUM</span><span class="o">=</span><span class="sb">`</span>expr<span class="w"> </span><span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span><span class="w"> </span>+<span class="w"> </span><span class="m">1</span><span class="sb">`</span>
+<span class="w">        </span><span class="k">done</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    <span class="c1"># Attach other physical interfaces as well.</span>
-    <span class="k">for</span> ETHER <span class="k">in</span> <span class="si">${</span><span class="nv">PHYSICAL_IFACES</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
-            ngctl connect <span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>: <span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span>: <span class="se">\</span>
-                lower link<span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">1</span>
-        <span class="nv">LINKNUM</span><span class="o">=</span><span class="sb">`</span>expr <span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span> + <span class="m">1</span><span class="sb">`</span>
-    <span class="k">done</span>
+<span class="w">    </span><span class="c1"># Attach other physical interfaces as well.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>ETHER<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">PHYSICAL_IFACES</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">            </span>ngctl<span class="w"> </span>connect<span class="w"> </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>:<span class="w"> </span><span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span>:<span class="w"> </span><span class="se">\</span>
+<span class="w">                </span>lower<span class="w"> </span>link<span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">        </span><span class="nv">LINKNUM</span><span class="o">=</span><span class="sb">`</span>expr<span class="w"> </span><span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span><span class="w"> </span>+<span class="w"> </span><span class="m">1</span><span class="sb">`</span>
+<span class="w">    </span><span class="k">done</span>
 
 <span class="c1"># Set all physical interfaces in promiscuous mode and don&#39;t overwrite src addr.</span>
-    <span class="k">for</span> ETHER <span class="k">in</span> <span class="si">${</span><span class="nv">PHYSICAL_IFACES</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
-        ngctl msg <span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>: setpromisc <span class="m">1</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">1</span>
-        ngctl msg <span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>: setautosrc <span class="m">0</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">1</span>
-    <span class="k">done</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>ETHER<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">PHYSICAL_IFACES</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>ngctl<span class="w"> </span>msg<span class="w"> </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>:<span class="w"> </span>setpromisc<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">        </span>ngctl<span class="w"> </span>msg<span class="w"> </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>:<span class="w"> </span>setautosrc<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">done</span>
 <span class="o">}</span>
 
 <span class="c1"># Stop routine.</span>
-bridge_stop<span class="o">()</span> <span class="o">{</span>
-    ngctl <span class="nb">kill</span> <span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span>: &gt;/dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
-    <span class="k">for</span> ETHER <span class="k">in</span> <span class="si">${</span><span class="nv">PHYSICAL_IFACES</span><span class="si">}</span> <span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
-        ngctl <span class="nb">kill</span> <span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>: &gt;/dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
-    <span class="k">done</span>
+bridge_stop<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>ngctl<span class="w"> </span><span class="nb">kill</span><span class="w"> </span><span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span>:<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>ETHER<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">PHYSICAL_IFACES</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>ngctl<span class="w"> </span><span class="nb">kill</span><span class="w"> </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span>:<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="w">    </span><span class="k">done</span>
 <span class="o">}</span>
 
 <span class="c1"># Stats routine.</span>
-bridge_stats<span class="o">()</span> <span class="o">{</span>
+bridge_stats<span class="o">()</span><span class="w"> </span><span class="o">{</span>
 
-    <span class="c1"># Make sure node exists.</span>
-    bridge_verify
+<span class="w">    </span><span class="c1"># Make sure node exists.</span>
+<span class="w">    </span>bridge_verify
 
-    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
-    <span class="nb">echo</span> <span class="s2">&quot;Statistics for bridging network </span><span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span><span class="s2">:&quot;</span>
-    <span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
-    <span class="nv">LINKNUM</span><span class="o">=</span><span class="m">0</span>
-    <span class="k">for</span> VIRTUAL_IFACE <span class="k">in</span> <span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
-        <span class="nb">echo</span> <span class="s2">&quot;Virtual interface </span><span class="si">${</span><span class="nv">VIRTUAL_IFACE</span><span class="si">}</span><span class="s2">:&quot;</span>
-        bridge_linkstats <span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span>
-        <span class="nv">LINKNUM</span><span class="o">=</span><span class="sb">`</span>expr <span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span> + <span class="m">1</span><span class="sb">`</span>
-    <span class="k">done</span>
-    <span class="k">for</span> ETHER <span class="k">in</span> <span class="si">${</span><span class="nv">PHYSICAL_IFACES</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
-        <span class="nb">echo</span> <span class="s2">&quot;Network interface </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span><span class="s2">:&quot;</span>
-        bridge_linkstats <span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span>
-        <span class="nv">LINKNUM</span><span class="o">=</span><span class="sb">`</span>expr <span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span> + <span class="m">1</span><span class="sb">`</span>
-    <span class="k">done</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Statistics for bridging network </span><span class="si">${</span><span class="nv">BRIDGE_NAME</span><span class="si">}</span><span class="s2">:&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="nv">LINKNUM</span><span class="o">=</span><span class="m">0</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>VIRTUAL_IFACE<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">VIRTUAL_IFACES</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Virtual interface </span><span class="si">${</span><span class="nv">VIRTUAL_IFACE</span><span class="si">}</span><span class="s2">:&quot;</span>
+<span class="w">        </span>bridge_linkstats<span class="w"> </span><span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span>
+<span class="w">        </span><span class="nv">LINKNUM</span><span class="o">=</span><span class="sb">`</span>expr<span class="w"> </span><span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span><span class="w"> </span>+<span class="w"> </span><span class="m">1</span><span class="sb">`</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>ETHER<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">PHYSICAL_IFACES</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Network interface </span><span class="si">${</span><span class="nv">ETHER</span><span class="si">}</span><span class="s2">:&quot;</span>
+<span class="w">        </span>bridge_linkstats<span class="w"> </span><span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span>
+<span class="w">        </span><span class="nv">LINKNUM</span><span class="o">=</span><span class="sb">`</span>expr<span class="w"> </span><span class="si">${</span><span class="nv">LINKNUM</span><span class="si">}</span><span class="w"> </span>+<span class="w"> </span><span class="m">1</span><span class="sb">`</span>
+<span class="w">    </span><span class="k">done</span>
 <span class="o">}</span>
 
 <span class="c1"># Main entry point.</span>
-<span class="k">case</span> <span class="nv">$1</span> <span class="k">in</span>
-    start<span class="o">)</span>
-        bridge_start
-        <span class="p">;;</span>
-    stats<span class="o">)</span>
-        bridge_verify
-        bridge_stats
-        <span class="p">;;</span>
-    stop<span class="o">)</span>
-        bridge_verify
-        bridge_stop
-        <span class="p">;;</span>
-    *<span class="o">)</span>
-        <span class="nb">echo</span> <span class="s2">&quot;usage: </span><span class="nv">$0</span><span class="s2"> [ start | stop | stats ]&quot;</span>
-        <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">case</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="k">in</span>
+<span class="w">    </span>start<span class="o">)</span>
+<span class="w">        </span>bridge_start
+<span class="w">        </span><span class="p">;;</span>
+<span class="w">    </span>stats<span class="o">)</span>
+<span class="w">        </span>bridge_verify
+<span class="w">        </span>bridge_stats
+<span class="w">        </span><span class="p">;;</span>
+<span class="w">    </span>stop<span class="o">)</span>
+<span class="w">        </span>bridge_verify
+<span class="w">        </span>bridge_stop
+<span class="w">        </span><span class="p">;;</span>
+<span class="w">    </span>*<span class="o">)</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;usage: </span><span class="nv">$0</span><span class="s2"> [ start | stop | stats ]&quot;</span>
+<span class="w">        </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
 <span class="k">esac</span>
 </pre></div>
 </div>
@@ -761,14 +667,14 @@ bridge_stats<span class="o">()</span> <span class="o">{</span>
 werden. Tiefergehende Informationen bzgl. rc.d scripting sind in diesem
 <a class="reference external" href="http://www.FreeBSD.org/doc/en_US.ISO8859-1/articles/rc-scripting/index.html">Artikel</a>
 beschrieben.</p>
-</div>
-</div>
-<div class="section" id="absichern-des-etherip-tunnels-mittels-ipsec-4">
-<h2><span class="section-number">1.76.3. </span>Absichern des EtherIP-Tunnels mittels ipsec(4)<a class="headerlink" href="#absichern-des-etherip-tunnels-mittels-ipsec-4" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="absichern-des-etherip-tunnels-mittels-ipsec-4">
+<h2><span class="section-number">1.76.3. </span>Absichern des EtherIP-Tunnels mittels ipsec(4)<a class="headerlink" href="#absichern-des-etherip-tunnels-mittels-ipsec-4" title="Permalink to this heading"></a></h2>
 <p>Hierbei wird vorausgesetzt, dass ipsec(4) im Kernel aktiviert und
 racoon(8) auf beiden Stationen installiert ist.</p>
-<div class="section" id="etc-ipsec-conf">
-<h3><span class="section-number">1.76.3.1. </span>/etc/ipsec.conf<a class="headerlink" href="#etc-ipsec-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="etc-ipsec-conf">
+<h3><span class="section-number">1.76.3.1. </span>/etc/ipsec.conf<a class="headerlink" href="#etc-ipsec-conf" title="Permalink to this heading"></a></h3>
 <p>Im gegebenen Kontext müsste der DSL-Router wie folgt konfiguriert
 werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spdadd</span> <span class="mf">192.168.0.1</span> <span class="mf">192.168.0.2</span> <span class="nb">any</span> <span class="o">-</span><span class="n">P</span> <span class="n">out</span> \
@@ -784,9 +690,9 @@ werden:</p>
   <span class="n">ipsec</span> <span class="n">esp</span><span class="o">/</span><span class="n">transport</span><span class="o">/</span><span class="mf">192.168.0.1</span> <span class="mf">192.168.0.2</span><span class="o">/</span><span class="n">require</span><span class="p">;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="usr-local-etc-racoon-racoon-conf">
-<h3><span class="section-number">1.76.3.2. </span>/usr/local/etc/racoon/racoon.conf<a class="headerlink" href="#usr-local-etc-racoon-racoon-conf" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="usr-local-etc-racoon-racoon-conf">
+<h3><span class="section-number">1.76.3.2. </span>/usr/local/etc/racoon/racoon.conf<a class="headerlink" href="#usr-local-etc-racoon-racoon-conf" title="Permalink to this heading"></a></h3>
 <p>Sowie auf beiden Stationen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>path pre_shared_key &quot;/usr/local/etc/racoon/psk.txt&quot; ;
 log debug;
@@ -846,18 +752,18 @@ sainfo anonymous
 }
 </pre></div>
 </div>
-</div>
-<div class="section" id="usr-local-etc-racoon-psk-txt">
-<h3><span class="section-number">1.76.3.3. </span>/usr/local/etc/racoon/psk.txt<a class="headerlink" href="#usr-local-etc-racoon-psk-txt" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="usr-local-etc-racoon-psk-txt">
+<h3><span class="section-number">1.76.3.3. </span>/usr/local/etc/racoon/psk.txt<a class="headerlink" href="#usr-local-etc-racoon-psk-txt" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ip_von_wlan_interface_der_gegenstelle $ich_bin_das_selbe_geheime_passwort
 </pre></div>
 </div>
 <p>&lt;note warning&gt; Diese Datei muss mit den Benutzerrechten 0600 und in
 Besitz stehend von dem User mit UID 0 auf jeder Station angelegt werden.
 &lt;/note&gt;</p>
-</div>
-<div class="section" id="etcrc-conf-2">
-<span id="id3"></span><h3><span class="section-number">1.76.3.4. </span>/etc/rc.conf<a class="headerlink" href="#etcrc-conf-2" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="etcrc-conf-2">
+<span id="id3"></span><h3><span class="section-number">1.76.3.4. </span>/etc/rc.conf<a class="headerlink" href="#etcrc-conf-2" title="Permalink to this heading"></a></h3>
 <p>Die auf ipsec(4) und racoon(8) verweisenden Einträge sollten auf beiden
 Stationen ergänzt werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ipsec_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
@@ -865,9 +771,9 @@ Stationen ergänzt werden:</p>
 <span class="n">racoon_enable</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="etc-rc-firewall">
-<h3><span class="section-number">1.76.3.5. </span>/etc/rc.firewall<a class="headerlink" href="#etc-rc-firewall" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="etc-rc-firewall">
+<h3><span class="section-number">1.76.3.5. </span>/etc/rc.firewall<a class="headerlink" href="#etc-rc-firewall" title="Permalink to this heading"></a></h3>
 <p>Könnte sich auf dem Switch wie folgt gestalten:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 
@@ -876,25 +782,25 @@ Stationen ergänzt werden:</p>
 <span class="nv">wlanif</span><span class="o">=</span><span class="s2">&quot;wlan0&quot;</span>
 <span class="nv">intrfc_table</span><span class="o">=</span><span class="s2">&quot;lo0 fxp0 fxp1 fxp2 ngeth0 gif0&quot;</span>
 
-<span class="nv">$fwcmd</span> -f flush
+<span class="nv">$fwcmd</span><span class="w"> </span>-f<span class="w"> </span>flush
 
-<span class="nv">$fwcmd</span> add deny log ip from any to any <span class="k">in</span> via <span class="nv">$wlanif</span> not verrevpath
+<span class="nv">$fwcmd</span><span class="w"> </span>add<span class="w"> </span>deny<span class="w"> </span>log<span class="w"> </span>ip<span class="w"> </span>from<span class="w"> </span>any<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span><span class="k">in</span><span class="w"> </span>via<span class="w"> </span><span class="nv">$wlanif</span><span class="w"> </span>not<span class="w"> </span>verrevpath
 
-<span class="k">for</span> intrfc <span class="k">in</span> <span class="nv">$intrfc_table</span>
+<span class="k">for</span><span class="w"> </span>intrfc<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$intrfc_table</span>
 <span class="k">do</span>
-    <span class="nv">$fwcmd</span> add allow all from any to any via <span class="nv">$intrfc</span>
+<span class="w">    </span><span class="nv">$fwcmd</span><span class="w"> </span>add<span class="w"> </span>allow<span class="w"> </span>all<span class="w"> </span>from<span class="w"> </span>any<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>via<span class="w"> </span><span class="nv">$intrfc</span>
 <span class="k">done</span>
 
-<span class="nv">$fwcmd</span> add deny all from any to <span class="m">127</span>.0.0.0/8
-<span class="nv">$fwcmd</span> add deny ip from <span class="m">127</span>.0.0.0/8 to any
+<span class="nv">$fwcmd</span><span class="w"> </span>add<span class="w"> </span>deny<span class="w"> </span>all<span class="w"> </span>from<span class="w"> </span>any<span class="w"> </span>to<span class="w"> </span><span class="m">127</span>.0.0.0/8
+<span class="nv">$fwcmd</span><span class="w"> </span>add<span class="w"> </span>deny<span class="w"> </span>ip<span class="w"> </span>from<span class="w"> </span><span class="m">127</span>.0.0.0/8<span class="w"> </span>to<span class="w"> </span>any
 
-<span class="nv">$fwcmd</span> add allow esp from <span class="m">192</span>.168.0.2 to <span class="m">192</span>.168.0.1 out via <span class="nv">$wlanif</span>
-<span class="nv">$fwcmd</span> add allow udp from <span class="m">192</span>.168.0.2 <span class="m">500</span> to <span class="m">192</span>.168.0.1 <span class="m">500</span> out via <span class="nv">$wlanif</span>
+<span class="nv">$fwcmd</span><span class="w"> </span>add<span class="w"> </span>allow<span class="w"> </span>esp<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.0.2<span class="w"> </span>to<span class="w"> </span><span class="m">192</span>.168.0.1<span class="w"> </span>out<span class="w"> </span>via<span class="w"> </span><span class="nv">$wlanif</span>
+<span class="nv">$fwcmd</span><span class="w"> </span>add<span class="w"> </span>allow<span class="w"> </span>udp<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.0.2<span class="w"> </span><span class="m">500</span><span class="w"> </span>to<span class="w"> </span><span class="m">192</span>.168.0.1<span class="w"> </span><span class="m">500</span><span class="w"> </span>out<span class="w"> </span>via<span class="w"> </span><span class="nv">$wlanif</span>
 
-<span class="nv">$fwcmd</span> add allow esp from <span class="m">192</span>.168.0.1 to <span class="m">192</span>.168.0.2 <span class="k">in</span> via <span class="nv">$wlanif</span>
-<span class="nv">$fwcmd</span> add allow udp from <span class="m">192</span>.168.0.1 <span class="m">500</span> to <span class="m">192</span>.168.0.2 <span class="m">500</span> <span class="k">in</span> via <span class="nv">$wlanif</span>
+<span class="nv">$fwcmd</span><span class="w"> </span>add<span class="w"> </span>allow<span class="w"> </span>esp<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.0.1<span class="w"> </span>to<span class="w"> </span><span class="m">192</span>.168.0.2<span class="w"> </span><span class="k">in</span><span class="w"> </span>via<span class="w"> </span><span class="nv">$wlanif</span>
+<span class="nv">$fwcmd</span><span class="w"> </span>add<span class="w"> </span>allow<span class="w"> </span>udp<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.0.1<span class="w"> </span><span class="m">500</span><span class="w"> </span>to<span class="w"> </span><span class="m">192</span>.168.0.2<span class="w"> </span><span class="m">500</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>via<span class="w"> </span><span class="nv">$wlanif</span>
 
-<span class="nv">$fwcmd</span> add deny log ip from any to any
+<span class="nv">$fwcmd</span><span class="w"> </span>add<span class="w"> </span>deny<span class="w"> </span>log<span class="w"> </span>ip<span class="w"> </span>from<span class="w"> </span>any<span class="w"> </span>to<span class="w"> </span>any
 </pre></div>
 </div>
 <p>sowie bspw. beim DSL-Router um folgende Zeilen ergänzt werden:</p>
@@ -906,9 +812,9 @@ $fwcmd add allow esp from 192.168.0.2 to 192.168.0.1 in via $wlanif
 $fwcmd add allow udp from 192.168.0.2 500 to 192.168.0.1 500 in via $wlanif
 </pre></div>
 </div>
-</div>
-<div class="section" id="absichern-des-etherip-tunnels-ohne-neustart">
-<h3><span class="section-number">1.76.3.6. </span>Absichern des EtherIP-Tunnels ohne Neustart<a class="headerlink" href="#absichern-des-etherip-tunnels-ohne-neustart" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="absichern-des-etherip-tunnels-ohne-neustart">
+<h3><span class="section-number">1.76.3.6. </span>Absichern des EtherIP-Tunnels ohne Neustart<a class="headerlink" href="#absichern-des-etherip-tunnels-ohne-neustart" title="Permalink to this heading"></a></h3>
 <p>Ist ein Neustart beider Stationen nicht erwünscht, kann die
 Verschlüsselung des EtherIP-Tunnels wie folgt „manuell“ auf dem Router
 aktiviert werden:</p>
@@ -944,57 +850,40 @@ näher zu beschäftigen.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-08-03</p>
-</div>
-</div>
-</div>
+<p>Zuletzt geändert: 2023-07-21</p>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="m0n0wall_sip.txt.html" class="btn btn-neutral float-right" title="1.77. M0n0wall &amp; SIP" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="konsole_nach_systemstart_und_logout_loeschen.txt.html" class="btn btn-neutral float-left" title="1.75. Konsole nach Systemstart und Logout löschen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="m0n0wall_sip.txt.html" class="btn btn-neutral float-right" title="1.77. M0n0wall &amp; SIP" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, BSDForen.de.
-
-    </p>
+    <p>&#169; Copyright 2023, BSDForen.de.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,96 +1,50 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>1.140. VPN (OpenBSD) &mdash; BSDForen.de 1.0 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.141. Windowmanager" href="windowmanager.txt.html" />
     <link rel="prev" title="1.139. VLAN-Konfiguration mit FreeBSD" href="vlans_mit_freebsd.txt.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            BSDForen.de
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
@@ -278,79 +232,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BSDForen.de</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
-        
-      <li><span class="section-number">1.140. </span>VPN (OpenBSD)</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="howto_index.html"><span class="section-number">1. </span>Howto</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.140. </span>VPN (OpenBSD)</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/howto/vpn_openbsd.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="vpn-openbsd">
-<h1><span class="section-number">1.140. </span>VPN (OpenBSD)<a class="headerlink" href="#vpn-openbsd" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+             
+  <section id="vpn-openbsd">
+<h1><span class="section-number">1.140. </span>VPN (OpenBSD)<a class="headerlink" href="#vpn-openbsd" title="Permalink to this heading"></a></h1>
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-openbsd.png" src="../_images/logo-openbsd.png" />
-</div>
+</aside>
 <p>Das folgende HOWTO beschreibt einige wesentliche Elemente der
 Konfiguration eines VPN-Routers. Das Gerät ist lüfterlos und bootet von
 einer CF-Karte. Das System läuft im RAM-Drive. Die Anbindung an DAS
@@ -364,10 +276,10 @@ Weiterhin mussten sie schnell updatebar sein. Aus diesem Grund wurde
 eine zentrale Masterstation (baugleich mit den Stationen an den
 Standorten) aufgesetzt, die die CF-Karten bespielt, mit denen die
 VPN-Gateways an den Standorten bestückt werden.</p>
-<div class="section" id="dsl-einwahl">
-<h2><span class="section-number">1.140.1. </span>DSL-Einwahl<a class="headerlink" href="#dsl-einwahl" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="etc-rc-local">
-<h3><span class="section-number">1.140.1.1. </span>/etc/rc.local<a class="headerlink" href="#etc-rc-local" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="dsl-einwahl">
+<h2><span class="section-number">1.140.1. </span>DSL-Einwahl<a class="headerlink" href="#dsl-einwahl" title="Permalink to this heading"></a></h2>
+<section id="etc-rc-local">
+<h3><span class="section-number">1.140.1.1. </span>/etc/rc.local<a class="headerlink" href="#etc-rc-local" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span><span class="n">other</span> <span class="n">stuff</span>
 <span class="c1"># PPPOE</span>
 <span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">ifconfig</span> <span class="n">re0</span> <span class="n">up</span> <span class="o">&amp;&amp;</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">ppp</span> <span class="o">-</span><span class="n">ddial</span> <span class="n">pppoe</span>
@@ -379,9 +291,9 @@ VPN-Gateways an den Standorten bestückt werden.</p>
 <li><p>re0 ist in diesem Fall das zu benutzende Interface.</p></li>
 <li><p>Das Interface muss vor der Einwahl auf UP gesetzt werden.</p></li>
 </ul>
-</div>
-<div class="section" id="etc-ppp-ppp-conf">
-<h3><span class="section-number">1.140.1.2. </span>/etc/ppp/ppp.conf<a class="headerlink" href="#etc-ppp-ppp-conf" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="etc-ppp-ppp-conf">
+<h3><span class="section-number">1.140.1.2. </span>/etc/ppp/ppp.conf<a class="headerlink" href="#etc-ppp-ppp-conf" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span><span class="p">:</span>
  <span class="nb">set</span> <span class="n">log</span> <span class="n">Phase</span> <span class="n">Chat</span> <span class="n">LCP</span> <span class="n">IPCP</span> <span class="n">CCP</span> <span class="n">tun</span> <span class="n">command</span>
  <span class="nb">set</span> <span class="n">redial</span> <span class="mi">10</span> <span class="mi">0</span>
@@ -409,9 +321,9 @@ VPN-Gateways an den Standorten bestückt werden.</p>
 <li><p>authname und authkey muessen natürlich die entsprechenden Werte
 enthalten.</p></li>
 </ul>
-</div>
-<div class="section" id="etc-ppp-ppp-linkup">
-<h3><span class="section-number">1.140.1.3. </span>/etc/ppp/ppp.linkup<a class="headerlink" href="#etc-ppp-ppp-linkup" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="etc-ppp-ppp-linkup">
+<h3><span class="section-number">1.140.1.3. </span>/etc/ppp/ppp.linkup<a class="headerlink" href="#etc-ppp-ppp-linkup" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>pppoe:
  ! sh -c &quot;/sbin/pfctl -F all -f /etc/ppp/pf.conf -D EXT0IF=INTERFACE&quot;
  !bg sh -c &quot;/usr/local/sbin/ddclient -daemon=0 -syslog -quiet retry -mail root&quot;
@@ -431,9 +343,9 @@ registrierten kanonischen Names anhand der dynamisch vergebenen
 IP-Adresse.</p></li>
 <li><p>Der ISAKMPD stellt die VPN-Verbindung zum VPN-Gateway her.</p></li>
 </ul>
-</div>
-<div class="section" id="etc-ppp-ppp-linkdown">
-<h3><span class="section-number">1.140.1.4. </span>/etc/ppp/ppp.linkdown<a class="headerlink" href="#etc-ppp-ppp-linkdown" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="etc-ppp-ppp-linkdown">
+<h3><span class="section-number">1.140.1.4. </span>/etc/ppp/ppp.linkdown<a class="headerlink" href="#etc-ppp-ppp-linkdown" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>MYADDR:
  !bg sh -c &quot;/bin/kill -KILL `/bin/cat /var/run/isakmpd.pid`&quot;
  ! sh -c &quot;/sbin/pfctl -F all -f /etc/pf.conf&quot;
@@ -444,21 +356,21 @@ IP-Adresse.</p></li>
 <li><p>Der ISAKMPD wird gestoppt.</p></li>
 <li><p>Die Standard-Firewallregeln werden geladen.</p></li>
 </ul>
-</div>
-<div class="section" id="tagliche-neuanmeldung">
-<h3><span class="section-number">1.140.1.5. </span>Tägliche Neuanmeldung<a class="headerlink" href="#tagliche-neuanmeldung" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="tagliche-neuanmeldung">
+<h3><span class="section-number">1.140.1.5. </span>Tägliche Neuanmeldung<a class="headerlink" href="#tagliche-neuanmeldung" title="Permalink to this heading"></a></h3>
 <p>Die DTAG erzwingt alle &gt;24h eine Abmeldung der bestehenden
 DSL-Verbindung. Um diesen Reset zu einem von uns bestimmten Zeitpunkt
 kontrolliert zu gestalten, melden wir uns einmal alle 24h ab und wieder
 an.</p>
-<div class="section" id="crontab">
-<h4><span class="section-number">1.140.1.5.1. </span>crontab<a class="headerlink" href="#crontab" title="Link zu dieser Überschrift">¶</a></h4>
+<section id="crontab">
+<h4><span class="section-number">1.140.1.5.1. </span>crontab<a class="headerlink" href="#crontab" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">restart</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="restart-sh">
-<h4><span class="section-number">1.140.1.5.2. </span>restart.sh<a class="headerlink" href="#restart-sh" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="restart-sh">
+<h4><span class="section-number">1.140.1.5.2. </span>restart.sh<a class="headerlink" href="#restart-sh" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
 PPPID=`ps wax | awk &#39;{if ($5 ~ &quot;ppp&quot; &amp;&amp; $6 == &quot;-ddial&quot;) {print $1}}&#39;`
 if [ $PPPID -gt 0 ]; then
@@ -471,18 +383,18 @@ fi
 exit 0
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="firewall">
-<h2><span class="section-number">1.140.2. </span>Firewall<a class="headerlink" href="#firewall" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="firewall">
+<h2><span class="section-number">1.140.2. </span>Firewall<a class="headerlink" href="#firewall" title="Permalink to this heading"></a></h2>
 <p>Die Firewall sollte beim Systemstart aktiviert werden. Dazu muss in der
 <code class="docutils literal notranslate"><span class="pre">/etc/rc.conf</span></code> <code class="docutils literal notranslate"><span class="pre">PF=YES</span></code> gesetzt werden. Es existieren zwei
 <code class="docutils literal notranslate"><span class="pre">pf.conf</span></code>. Die eine, <code class="docutils literal notranslate"><span class="pre">/etc/pf.conf</span></code>, wird im Zustand ohne
 DSL-Anbindung, die andere <code class="docutils literal notranslate"><span class="pre">/etc/ppp/pf.conf</span></code> wird nach dem Aufbau der
 DSL-Verbindung geladen.</p>
-<div class="section" id="etc-pf-conf">
-<h3><span class="section-number">1.140.2.1. </span>/etc/pf.conf<a class="headerlink" href="#etc-pf-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="etc-pf-conf">
+<h3><span class="section-number">1.140.2.1. </span>/etc/pf.conf<a class="headerlink" href="#etc-pf-conf" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>INT0IF=&quot;rl0&quot;
 set skip on lo0
 scrub in
@@ -491,8 +403,8 @@ pass out keep state
 antispoof quick for { lo0 $INT0IF }
 </pre></div>
 </div>
-<div class="section" id="etc-ppp-pf-conf">
-<h4><span class="section-number">1.140.2.1.1. </span>/etc/ppp/pf.conf<a class="headerlink" href="#etc-ppp-pf-conf" title="Link zu dieser Überschrift">¶</a></h4>
+<section id="etc-ppp-pf-conf">
+<h4><span class="section-number">1.140.2.1.1. </span>/etc/ppp/pf.conf<a class="headerlink" href="#etc-ppp-pf-conf" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>INT0IF=&quot;rl0&quot;
 EXT0IF=&quot;tun0&quot;
 VPNGATE=&quot;aaa.bbb.ccc.ddd/xx&quot;
@@ -563,16 +475,16 @@ pass in quick on $EXT0IF proto udp from &lt;VPN_T&gt; to any port = 500
 </div>
 <p><em>Kommentar:</em> Der CRYPT-Abschnitt sollte analog in der pf.conf des
 VPN-Gateways auftauchen.</p>
-</div>
-</div>
-</div>
-<div class="section" id="ddclient">
-<h2><span class="section-number">1.140.3. </span>ddclient<a class="headerlink" href="#ddclient" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="ddclient">
+<h2><span class="section-number">1.140.3. </span>ddclient<a class="headerlink" href="#ddclient" title="Permalink to this heading"></a></h2>
 <p>Der <code class="docutils literal notranslate"><span class="pre">ddclient</span></code> aktualisiert einen zuvor unter
 <a class="reference external" href="www.dyndns.org">www.dyndns.org</a> angelegten Dynamischen DNS Host mit
 dem Namen <code class="docutils literal notranslate"><span class="pre">myvpnrouter.homeunix.net</span></code>.</p>
-<div class="section" id="etc-ddclient-conf">
-<h3><span class="section-number">1.140.3.1. </span>/etc/ddclient.conf<a class="headerlink" href="#etc-ddclient-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="etc-ddclient-conf">
+<h3><span class="section-number">1.140.3.1. </span>/etc/ddclient.conf<a class="headerlink" href="#etc-ddclient-conf" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">daemon</span><span class="o">=</span><span class="mi">300</span>                              <span class="c1"># check every 300 seconds</span>
 <span class="n">syslog</span><span class="o">=</span><span class="n">yes</span>                              <span class="c1"># log update msgs to syslog</span>
 <span class="n">mail</span><span class="o">=</span><span class="n">root</span>                               <span class="c1"># mail all msgs to root</span>
@@ -589,16 +501,16 @@ dem Namen <code class="docutils literal notranslate"><span class="pre">myvpnrout
 <span class="n">myvpnrouter</span><span class="o">.</span><span class="n">homeunix</span><span class="o">.</span><span class="n">net</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="isakmpd">
-<h2><span class="section-number">1.140.4. </span>ISAKMPD<a class="headerlink" href="#isakmpd" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="isakmpd">
+<h2><span class="section-number">1.140.4. </span>ISAKMPD<a class="headerlink" href="#isakmpd" title="Permalink to this heading"></a></h2>
 <p>Der ISAKMPD wird benutzt, um eine VPN-Verbindung zum Haupt-LAN
 herzustellen. Zur Authentifizierung werden x509-Zertifikate verwendet.
 Die Maschine die den Zugang zum Haupt-LAN verwaltet nennen wir
 <strong>myvpngate</strong>. Unseren VPN-Router nennen wir <strong>myvpnrouter00</strong>.</p>
-<div class="section" id="etc-isakmpd-isakmpd-policy">
-<h3><span class="section-number">1.140.4.1. </span>/etc/isakmpd/isakmpd.policy<a class="headerlink" href="#etc-isakmpd-isakmpd-policy" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="etc-isakmpd-isakmpd-policy">
+<h3><span class="section-number">1.140.4.1. </span>/etc/isakmpd/isakmpd.policy<a class="headerlink" href="#etc-isakmpd-isakmpd-policy" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Keynote</span><span class="o">-</span><span class="n">version</span><span class="p">:</span><span class="mi">2</span>
 <span class="n">Authorizer</span><span class="p">:</span> <span class="s2">&quot;POLICY&quot;</span>
 <span class="n">Conditions</span><span class="p">:</span> <span class="n">app_domain</span> <span class="o">==</span> <span class="s2">&quot;IPsec policy&quot;</span> <span class="o">&amp;&amp;</span>
@@ -610,15 +522,15 @@ Die Maschine die den Zugang zum Haupt-LAN verwaltet nennen wir
 <ul class="simple">
 <li><p>Diese Datei ist auf beiden Maschinen gleich.</p></li>
 </ul>
-</div>
-<div class="section" id="vpn-gateway">
-<h3><span class="section-number">1.140.4.2. </span>VPN-Gateway<a class="headerlink" href="#vpn-gateway" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="vpn-gateway">
+<h3><span class="section-number">1.140.4.2. </span>VPN-Gateway<a class="headerlink" href="#vpn-gateway" title="Permalink to this heading"></a></h3>
 <p>Die Gegenstelle unseres VPN-Routers ist ein VPN-Gateway, der Zugang zum
 eigentlichen LAN. Dieses wird wie folgt konfiguriert um mit mehreren
 VPN-Routern mit dynamischen Adressen jeweils einen VPN-Tunnel aufbauen
 zu können:</p>
-<div class="section" id="etc-isakmpd-isakmpd-conf">
-<h4><span class="section-number">1.140.4.2.1. </span>/etc/isakmpd/isakmpd.conf<a class="headerlink" href="#etc-isakmpd-isakmpd-conf" title="Link zu dieser Überschrift">¶</a></h4>
+<section id="etc-isakmpd-isakmpd-conf">
+<h4><span class="section-number">1.140.4.2.1. </span>/etc/isakmpd/isakmpd.conf<a class="headerlink" href="#etc-isakmpd-isakmpd-conf" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Phase</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">Default</span><span class="o">=</span>                <span class="n">myvpnrouters</span>
 <span class="p">[</span><span class="n">Phase</span> <span class="mi">2</span><span class="p">]</span>
@@ -700,13 +612,13 @@ zu können:</p>
 <span class="n">LIFE_DURATION</span><span class="o">=</span>          <span class="mi">86400</span><span class="p">,</span><span class="mi">79200</span><span class="p">:</span><span class="mi">93600</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="vpn-router">
-<h3><span class="section-number">1.140.4.3. </span>VPN-Router<a class="headerlink" href="#vpn-router" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+</section>
+<section id="vpn-router">
+<h3><span class="section-number">1.140.4.3. </span>VPN-Router<a class="headerlink" href="#vpn-router" title="Permalink to this heading"></a></h3>
 <p>Diese Sektion beschreibt die Konfiguration unseres VPN-Routers.</p>
-<div class="section" id="etcisakmpdisakmpd-conf-1">
-<span id="id1"></span><h4><span class="section-number">1.140.4.3.1. </span>/etc/isakmpd/isakmpd.conf<a class="headerlink" href="#etcisakmpdisakmpd-conf-1" title="Link zu dieser Überschrift">¶</a></h4>
+<section id="etcisakmpdisakmpd-conf-1">
+<span id="id1"></span><h4><span class="section-number">1.140.4.3.1. </span>/etc/isakmpd/isakmpd.conf<a class="headerlink" href="#etcisakmpdisakmpd-conf-1" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Phase</span> <span class="mi">1</span><span class="p">]</span>
 <span class="c1"># Statische IP des VPN-Gateways</span>
 <span class="n">aaa</span><span class="o">.</span><span class="n">bbb</span><span class="o">.</span><span class="n">ccc</span><span class="o">.</span><span class="n">ddd</span><span class="o">=</span>          <span class="n">myvpngate</span>
@@ -780,11 +692,11 @@ zu können:</p>
 <span class="n">LIFE_DURATION</span><span class="o">=</span>          <span class="mi">86400</span><span class="p">,</span><span class="mi">79200</span><span class="p">:</span><span class="mi">93600</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="x509-zertifikate">
-<h2><span class="section-number">1.140.5. </span>x509-Zertifikate<a class="headerlink" href="#x509-zertifikate" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="x509-zertifikate">
+<h2><span class="section-number">1.140.5. </span>x509-Zertifikate<a class="headerlink" href="#x509-zertifikate" title="Permalink to this heading"></a></h2>
 <p>Auf die Funktionsweise von Zertifikaten wird an dieser Stelle nicht
 weiter eingegangen. Um unsere Zertifikate erstellen zu können, müssen
 wir uns von einer autorisierten Stelle zertifizieren lassen: Das kostet
@@ -847,56 +759,39 @@ eigenen Maschine und wird so platziert, wie in der lokalen
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-08-03</p>
-</div>
-</div>
+<p>Zuletzt geändert: 2023-07-21</p>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="windowmanager.txt.html" class="btn btn-neutral float-right" title="1.141. Windowmanager" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="vlans_mit_freebsd.txt.html" class="btn btn-neutral float-left" title="1.139. VLAN-Konfiguration mit FreeBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="windowmanager.txt.html" class="btn btn-neutral float-right" title="1.141. Windowmanager" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, BSDForen.de.
-
-    </p>
+    <p>&#169; Copyright 2023, BSDForen.de.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

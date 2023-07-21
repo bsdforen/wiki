@@ -1,96 +1,50 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>1.148. ZFS auf FreeBSD &mdash; BSDForen.de 1.0 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.149. ZFS (raidz), Geli und USB Boot" href="zfs_geli_und_usb_boot.txt.html" />
     <link rel="prev" title="1.147. Zeit synchronisieren mit ntp" href="zeit_synchronisieren_mit_ntp.txt.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            BSDForen.de
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
@@ -291,81 +245,39 @@
 <li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BSDForen.de</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
-        
-      <li><span class="section-number">1.148. </span>ZFS auf FreeBSD</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="howto_index.html"><span class="section-number">1. </span>Howto</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.148. </span>ZFS auf FreeBSD</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/howto/zfs.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="zfs-auf-freebsd">
-<h1><span class="section-number">1.148. </span>ZFS auf FreeBSD<a class="headerlink" href="#zfs-auf-freebsd" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+             
+  <section id="zfs-auf-freebsd">
+<h1><span class="section-number">1.148. </span>ZFS auf FreeBSD<a class="headerlink" href="#zfs-auf-freebsd" title="Permalink to this heading"></a></h1>
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</div>
-<div class="section" id="was-ist-zfs">
-<h2><span class="section-number">1.148.1. </span>Was ist ZFS?<a class="headerlink" href="#was-ist-zfs" title="Link zu dieser Überschrift">¶</a></h2>
+</aside>
+<section id="was-ist-zfs">
+<h2><span class="section-number">1.148.1. </span>Was ist ZFS?<a class="headerlink" href="#was-ist-zfs" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line">Seit ZFS im Jahr 2004 das erste Mal von Sun vorgestellt wurde, schlägt
 es Wellen und weckt Begehrlichkeiten. Grund ist vor allem, das ZFS ein
@@ -419,18 +331,18 @@ bösen Überraschungen auftreten. Zudem beschleunigt die „Copy on Write“
 Technik das Kopieren von Daten innerhalb eines Zpool erheblich,
 verglichen mit zum Beispiel UFS2.</div>
 </div>
-</div>
-<div class="section" id="anforderungen">
-<h2><span class="section-number">1.148.2. </span>Anforderungen<a class="headerlink" href="#anforderungen" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="anforderungen">
+<h2><span class="section-number">1.148.2. </span>Anforderungen<a class="headerlink" href="#anforderungen" title="Permalink to this heading"></a></h2>
 <p>ZFS hat leider relativ hohe Hardwareanforderungen. Um es wirklich sauber
 und schnell nutzen zu können, sollte das System unter FreeBSD/amd64
 laufen und über mindestens ein Gigabyte RAM verfügen. Der Betrieb unter
 FreeBSD/i386 und auch mit weniger als einem Gigabyte RAM ist nur unter
 Einschränkungen möglich. Siehe hierzu
 <a class="reference external" href="http://wiki.freebsd.org/ZFSTuningGuide">http://wiki.freebsd.org/ZFSTuningGuide</a>.</p>
-</div>
-<div class="section" id="implementationsstatus">
-<h2><span class="section-number">1.148.3. </span>Implementationsstatus<a class="headerlink" href="#implementationsstatus" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="implementationsstatus">
+<h2><span class="section-number">1.148.3. </span>Implementationsstatus<a class="headerlink" href="#implementationsstatus" title="Permalink to this heading"></a></h2>
 <p>ZFS ist mittlerweile stabiler Bestandteil von FreeBSD und kann
 bedenkenlos auch für Produktivsysteme eingesetzt werden. Mittlerweile
 ist auch das Booten von ZFS möglich. Das in FreeBSD eingesetzte ZFS
@@ -438,9 +350,9 @@ basiert auf der OpenZFS-Entwicklung und unterstützt Featureflags. Als
 integraler Bestandteil von FreeBSD ist es seit einiger Zeit auch möglich
 während der Installation über den Installer ein System komplett auf ZFS
 aufsetzen zu lassen.</p>
-</div>
-<div class="section" id="zpool-und-zfs">
-<h2><span class="section-number">1.148.4. </span>Zpool und ZFS<a class="headerlink" href="#zpool-und-zfs" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="zpool-und-zfs">
+<h2><span class="section-number">1.148.4. </span>Zpool und ZFS<a class="headerlink" href="#zpool-und-zfs" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line">Bevor wir zu ZFS kommen, werden wir uns mit der integrierten
 Volumenverwaltung Zpool beschäftigen. Grundsätzlich gilt: Ein ZFS kann
@@ -484,15 +396,15 @@ benötigt mindestens fünf Platten und es können bis zu drei ausfallen
 ohne Datenverlust. Die drei Ebenen haben gemeinsam, dass ein RaidZ
 nach der Erstellung nicht mehr vergrößert werden kann.</div>
 </div>
-</div>
-<div class="section" id="administration-eines-zpool">
-<h2><span class="section-number">1.148.5. </span>Administration eines ZPool<a class="headerlink" href="#administration-eines-zpool" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="administration-eines-zpool">
+<h2><span class="section-number">1.148.5. </span>Administration eines ZPool<a class="headerlink" href="#administration-eines-zpool" title="Permalink to this heading"></a></h2>
 <p>Die Administration eines ZPool ist nicht sonderlich kompliziert, jeder
 der schon mit ähnlichen Systemen wie gmirror oder auch Raid-Controllern
 gearbeitet hat, dürfte schnell Ergebnisse erzielen. Aber auch für
 Anfänger sollte es sich schnell erschließen.</p>
-<div class="section" id="anlegen-eines-zpool">
-<h3><span class="section-number">1.148.5.1. </span>Anlegen eines Zpool<a class="headerlink" href="#anlegen-eines-zpool" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="anlegen-eines-zpool">
+<h3><span class="section-number">1.148.5.1. </span>Anlegen eines Zpool<a class="headerlink" href="#anlegen-eines-zpool" title="Permalink to this heading"></a></h3>
 <p>Angelegt wird ein ZPool mit dem Kommando</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="n">create</span> <span class="o">-</span><span class="n">m</span> <span class="n">mountpunkt</span> <span class="n">name</span> <span class="n">art</span> <span class="n">gerät1</span> <span class="n">gerät2</span> <span class="n">spare</span> <span class="n">gerät3</span> <span class="n">gerät4</span>
 </pre></div>
@@ -520,9 +432,9 @@ sind also rohe Festplatten, was empfohlen ist, aber auch Slices,
 GEOM-Geräte und ähnliches. Es sind sogar Dateien als Geräte möglich,
 doch dies ist nur zu Testzwecken zu empfehlen.</div>
 </div>
-</div>
-<div class="section" id="loschen-eines-zpool">
-<h3><span class="section-number">1.148.5.2. </span>Löschen eines Zpool<a class="headerlink" href="#loschen-eines-zpool" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="loschen-eines-zpool">
+<h3><span class="section-number">1.148.5.2. </span>Löschen eines Zpool<a class="headerlink" href="#loschen-eines-zpool" title="Permalink to this heading"></a></h3>
 <p>Gelöscht wird ein Zpool mit dem Kommando</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="n">destroy</span> <span class="n">name</span>
 </pre></div>
@@ -530,9 +442,9 @@ doch dies ist nur zu Testzwecken zu empfehlen.</div>
 <p>Dies Kommando hängt alle Datensätze aus, exportiert den Zpool und
 zerstört ihn. Dies geschieht ohne eine Sicherheitsnachfrage und alle
 Daten gehen dabei verloren!</p>
-</div>
-<div class="section" id="entfernen-eines-gerates-aus-einem-zpool">
-<h3><span class="section-number">1.148.5.3. </span>Entfernen eines Gerätes aus einem ZPool<a class="headerlink" href="#entfernen-eines-gerates-aus-einem-zpool" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="entfernen-eines-gerates-aus-einem-zpool">
+<h3><span class="section-number">1.148.5.3. </span>Entfernen eines Gerätes aus einem ZPool<a class="headerlink" href="#entfernen-eines-gerates-aus-einem-zpool" title="Permalink to this heading"></a></h3>
 <p>Ein Gerät wird aus einem ZPool entfernt mit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="n">remove</span> <span class="n">gerät</span>
 </pre></div>
@@ -541,9 +453,9 @@ Daten gehen dabei verloren!</p>
 werden müssen. Außerdem muss der Pool alle seine Daten auch ohne das zu
 entfernende Gerät aufnehmen können. Aus einem RaidZ kann kein Gerät
 entfernt werden.</p>
-</div>
-<div class="section" id="hinzufugen-eines-gerates-zu-einem-zpool">
-<h3><span class="section-number">1.148.5.4. </span>Hinzufügen eines Gerätes zu einem ZPool<a class="headerlink" href="#hinzufugen-eines-gerates-zu-einem-zpool" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="hinzufugen-eines-gerates-zu-einem-zpool">
+<h3><span class="section-number">1.148.5.4. </span>Hinzufügen eines Gerätes zu einem ZPool<a class="headerlink" href="#hinzufugen-eines-gerates-zu-einem-zpool" title="Permalink to this heading"></a></h3>
 <p>Ein Gerät wird so in einen Zpool eingefügt</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="n">attach</span> <span class="n">name</span> <span class="n">gerät</span>
 </pre></div>
@@ -551,9 +463,9 @@ entfernt werden.</p>
 <p>Das Gerät steht sofort zur Verfügung, ein Neuaufbauen ist nicht
 notwenig. Zu beachten ist, dass man zu einem RaidZ kein gerät hinzufügen
 kann und ein Spiegel zwei neue Geräte benötigt.</p>
-</div>
-<div class="section" id="ein-gerat-ersetzen">
-<h3><span class="section-number">1.148.5.5. </span>Ein Gerät ersetzen<a class="headerlink" href="#ein-gerat-ersetzen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="ein-gerat-ersetzen">
+<h3><span class="section-number">1.148.5.5. </span>Ein Gerät ersetzen<a class="headerlink" href="#ein-gerat-ersetzen" title="Permalink to this heading"></a></h3>
 <p>Wer ein defektes oder zu kleines Gerät ersetzen möchte, kann dies mit
 diesem Kommando machen</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="n">replace</span> <span class="n">name</span> <span class="n">altes_gerät</span> <span class="n">neues_gerät</span>
@@ -565,9 +477,9 @@ das alte sein muss. Im RaidZ und im Mirror kann zusätzlicher
 Speicherplatz nicht verwendet werden bis alle Festplatten durch größere
 ausgetauscht wurden und der Zpool dazu angestoßen wird den größeren
 Platz zu nutzen.</p>
-</div>
-<div class="section" id="sonstiges">
-<h3><span class="section-number">1.148.5.6. </span>Sonstiges<a class="headerlink" href="#sonstiges" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="sonstiges">
+<h3><span class="section-number">1.148.5.6. </span>Sonstiges<a class="headerlink" href="#sonstiges" title="Permalink to this heading"></a></h3>
 <p>Dies waren die wichtigsten Kommandos. Desweiteren ist es möglich mittels</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zpool</span> <span class="nb">list</span> <span class="n">name</span>
 </pre></div>
@@ -600,12 +512,12 @@ mit dem Kommando</p>
 <p>Für weitere Möglichkeiten, wie dem Abschalten von Geräten innerhalb
 eines Pools oder dem Aktualisieren auf eine neuere ZFS Version sei
 wieder auf die Handbuchseite zpool(1) verwiesen.</p>
-</div>
-</div>
-<div class="section" id="zfs">
-<h2><span class="section-number">1.148.6. </span>ZFS<a class="headerlink" href="#zfs" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="das-konzept">
-<h3><span class="section-number">1.148.6.1. </span>Das Konzept<a class="headerlink" href="#das-konzept" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+</section>
+<section id="zfs">
+<h2><span class="section-number">1.148.6. </span>ZFS<a class="headerlink" href="#zfs" title="Permalink to this heading"></a></h2>
+<section id="das-konzept">
+<h3><span class="section-number">1.148.6.1. </span>Das Konzept<a class="headerlink" href="#das-konzept" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">Ein oder mehrere ZFS schwimmen wie oben erwähnt auf einem Zpool. Wir
 werden und hier an die Notation von Sun halten und sie als Datensätze
@@ -622,9 +534,9 @@ System einzuhängen, wodurch sich jedoch nur ihre logische
 Repräsentation ändert, in Wirklichkeit befinden sie sich immer noch
 relativ zur Wurzel des Zpool.</div>
 </div>
-</div>
-<div class="section" id="anlegen-eines-datensatzes">
-<h3><span class="section-number">1.148.6.2. </span>Anlegen eines Datensatzes<a class="headerlink" href="#anlegen-eines-datensatzes" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="anlegen-eines-datensatzes">
+<h3><span class="section-number">1.148.6.2. </span>Anlegen eines Datensatzes<a class="headerlink" href="#anlegen-eines-datensatzes" title="Permalink to this heading"></a></h3>
 <p>Mit dem Kommando</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">create</span> <span class="n">pool</span><span class="o">/</span><span class="n">pfad</span><span class="o">/</span><span class="n">zu</span><span class="o">/</span><span class="n">datensatz</span>
 </pre></div>
@@ -632,9 +544,9 @@ relativ zur Wurzel des Zpool.</div>
 <p>wird ein neuer Datensatz erstellt und an der angebenen Position relativ
 zur Wurzel des Zpool eingehängt. Eventuell fehlende Verzeichnisse werden
 dabei automatisch erstellt.</p>
-</div>
-<div class="section" id="loschen-eines-datensatzes">
-<h3><span class="section-number">1.148.6.3. </span>Löschen eines Datensatzes<a class="headerlink" href="#loschen-eines-datensatzes" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="loschen-eines-datensatzes">
+<h3><span class="section-number">1.148.6.3. </span>Löschen eines Datensatzes<a class="headerlink" href="#loschen-eines-datensatzes" title="Permalink to this heading"></a></h3>
 <p>Mit dem Kommando</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">destroy</span> <span class="n">pool</span><span class="o">/</span><span class="n">pfad</span><span class="o">/</span><span class="n">zu</span><span class="o">/</span><span class="n">datensatz</span>
 </pre></div>
@@ -649,17 +561,17 @@ mehr löschen lassen, mit dem Hinweis: No space left on device.</p>
 </div>
 <p>eine Datei löschen um anschließend wieder regulär dateien mir rm löschen
 zu können. &lt;/note&gt;</p>
-</div>
-<div class="section" id="verschieben-und-umbennen">
-<h3><span class="section-number">1.148.6.4. </span>Verschieben und umbennen<a class="headerlink" href="#verschieben-und-umbennen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="verschieben-und-umbennen">
+<h3><span class="section-number">1.148.6.4. </span>Verschieben und umbennen<a class="headerlink" href="#verschieben-und-umbennen" title="Permalink to this heading"></a></h3>
 <p>Natürlich kann man einen Datensatz verschieben und umbenennen. Gibt man</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">rename</span> <span class="n">pool</span><span class="o">/</span><span class="n">pfad</span><span class="o">/</span><span class="n">zu</span><span class="o">/</span><span class="n">datensatz</span> <span class="n">pool</span><span class="o">/</span><span class="n">neuer</span><span class="o">/</span><span class="n">pfad</span><span class="o">/</span><span class="n">zu</span><span class="o">/</span><span class="n">datensatz</span>
 </pre></div>
 </div>
 <p>ein verschiebt man den Datensatz innerhalb der ZFS-Hirachie.</p>
-</div>
-<div class="section" id="andern-von-optionen">
-<h3><span class="section-number">1.148.6.5. </span>Ändern von Optionen<a class="headerlink" href="#andern-von-optionen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="andern-von-optionen">
+<h3><span class="section-number">1.148.6.5. </span>Ändern von Optionen<a class="headerlink" href="#andern-von-optionen" title="Permalink to this heading"></a></h3>
 <p>Jeder Datensatz hat eine Unmenge von Einstellungsmöglichkeiten. Hier
 werden nur die wichtigsten durchgesprochen werden, für weitere sei auf
 die Manpage zfs(1) verwiesen. Gesetzt werden Einstellungen mit</p>
@@ -694,17 +606,17 @@ schneller, kann aber auch viele Programme verwirren.</p></li>
 </ul>
 <p>Die geänderten Optionen sind sofort wirksam, weitere Dinge neben dem
 Setzen sind nicht notwendig.</p>
-</div>
-</div>
-<div class="section" id="snapshots-und-klone">
-<h2><span class="section-number">1.148.7. </span>Snapshots und Klone<a class="headerlink" href="#snapshots-und-klone" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="snapshots-und-klone">
+<h2><span class="section-number">1.148.7. </span>Snapshots und Klone<a class="headerlink" href="#snapshots-und-klone" title="Permalink to this heading"></a></h2>
 <p>Einen wesentlichen Vorteil bietet ZFS durch seine - wie oben besprochen
 günstigen - Snapshots und die eng mit diesen verbundenen Klone, welche
 es erlauben komplette Datensätze in wenigen Sekunden zu kopieren. ZFS
 Snapshots sind deutlich günstiger als ihre Kollegen vom UFS2, weshalb
 man ohne bedenken auch sehr viele von ihnen parallel nutzen kann.</p>
-<div class="section" id="erstellen-eines-snapshots">
-<h3><span class="section-number">1.148.7.1. </span>Erstellen eines Snapshots<a class="headerlink" href="#erstellen-eines-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="erstellen-eines-snapshots">
+<h3><span class="section-number">1.148.7.1. </span>Erstellen eines Snapshots<a class="headerlink" href="#erstellen-eines-snapshots" title="Permalink to this heading"></a></h3>
 <p>Ein Snapshot wird mit dem Kommando</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">snapshot</span> <span class="n">datensatz</span><span class="nd">@name</span>
 </pre></div>
@@ -714,18 +626,18 @@ erstellt werden soll und Name ist entsprechend der Name des Snapshots.
 Dies Benennungsschema ist vorgegeben, ein Snapshot heißt immer
 <a class="reference external" href="mailto:ursprung&#37;&#52;&#48;eigener">ursprung<span>&#64;</span>eigener</a> name. Der Snapshot „gutes_beispiel“ von /banane/test1
 wäre also <a class="reference external" href="mailto:/banane/test1&#37;&#52;&#48;gutes_beispiel">/banane/test1<span>&#64;</span>gutes_beispiel</a>.</p>
-</div>
-<div class="section" id="loschen-eines-snapshots">
-<h3><span class="section-number">1.148.7.2. </span>Löschen eines Snapshots<a class="headerlink" href="#loschen-eines-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="loschen-eines-snapshots">
+<h3><span class="section-number">1.148.7.2. </span>Löschen eines Snapshots<a class="headerlink" href="#loschen-eines-snapshots" title="Permalink to this heading"></a></h3>
 <p>Snapshots werden exat wie Datensätze gelöscht.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">destroy</span> <span class="n">datensatz</span><span class="nd">@name</span>
 </pre></div>
 </div>
 <p>Dies ist nicht möglich, wenn von dem Snapshot noch Dinge wie Klone
 abhängig sind.</p>
-</div>
-<div class="section" id="zuruckrollen-eines-snapshots">
-<h3><span class="section-number">1.148.7.3. </span>Zurückrollen eines Snapshots<a class="headerlink" href="#zuruckrollen-eines-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="zuruckrollen-eines-snapshots">
+<h3><span class="section-number">1.148.7.3. </span>Zurückrollen eines Snapshots<a class="headerlink" href="#zuruckrollen-eines-snapshots" title="Permalink to this heading"></a></h3>
 <p>Mittels</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">rollback</span> <span class="n">datensatz</span><span class="nd">@name</span>
 </pre></div>
@@ -733,9 +645,9 @@ abhängig sind.</p>
 <p>wird der per Snapshot gesicherte Datensatz innerhalb von Sekunden auf
 den Zustand des Snapshots zurückgesetzt. Alle Änderungen an ihm sind
 unwiderbringlich verloren. Der Snapshot wird dabei nicht gelöscht.</p>
-</div>
-<div class="section" id="zugriff-auf-snapshots">
-<h3><span class="section-number">1.148.7.4. </span>Zugriff auf Snapshots<a class="headerlink" href="#zugriff-auf-snapshots" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="zugriff-auf-snapshots">
+<h3><span class="section-number">1.148.7.4. </span>Zugriff auf Snapshots<a class="headerlink" href="#zugriff-auf-snapshots" title="Permalink to this heading"></a></h3>
 <p>Die Snapshots können mit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="nb">list</span>
 </pre></div>
@@ -746,9 +658,9 @@ unser oben angelegter Snapshot in
 /banane/test1/.zfs/snapshot/gutes_beispiel/. Das das Verzeichnis
 unsichtbar ist bedeutet, dass Programme wie ls(1) oder die
 Autovervollständigung der Shell es nicht sehen können!</p>
-</div>
-<div class="section" id="klone-erstellen">
-<h3><span class="section-number">1.148.7.5. </span>Klone erstellen<a class="headerlink" href="#klone-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="klone-erstellen">
+<h3><span class="section-number">1.148.7.5. </span>Klone erstellen<a class="headerlink" href="#klone-erstellen" title="Permalink to this heading"></a></h3>
 <p>Klone sind nichts anderes als beschreibbare Snapshots. Zum derzeitigen
 Zeitpunkt können sie lediglich von Snapshots erstellt werden, nicht
 jedoch von Datensätzen. Daher muss man von einem Datensatz erst einen
@@ -763,9 +675,9 @@ existieren.</p>
 des Zpool ein. Dort kann er wie ein normaler Datensatz behandelt werden.
 Leider können Klone zur Zeit nicht auf den Datensatz, von dem der ihm
 zugrundeliegende Snapshot stammt, zurückgerollt werden.</p>
-</div>
-<div class="section" id="klone-in-datensatze-umwandeln">
-<h3><span class="section-number">1.148.7.6. </span>Klone in Datensätze umwandeln<a class="headerlink" href="#klone-in-datensatze-umwandeln" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="klone-in-datensatze-umwandeln">
+<h3><span class="section-number">1.148.7.6. </span>Klone in Datensätze umwandeln<a class="headerlink" href="#klone-in-datensatze-umwandeln" title="Permalink to this heading"></a></h3>
 <p>Ein Klon kann jederzeit zu einem vollständigen Datensatz umgewandelt
 werden.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">promote</span> <span class="n">pool</span><span class="o">/</span><span class="n">pfad</span><span class="o">/</span><span class="n">zu</span><span class="o">/</span><span class="n">klone</span>
@@ -775,18 +687,18 @@ werden.</p>
 verwendet werden. Man kann den Datensatz allerdings nicht wieder in
 einen Klon zurückwandeln. Die Abhängigkeit zum Snapshot, welche der Klon
 hatte, verschwindet bei dieser Operation.</p>
-</div>
-</div>
-<div class="section" id="andere-dateisysteme-auf-zpool">
-<h2><span class="section-number">1.148.8. </span>Andere Dateisysteme auf Zpool<a class="headerlink" href="#andere-dateisysteme-auf-zpool" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="andere-dateisysteme-auf-zpool">
+<h2><span class="section-number">1.148.8. </span>Andere Dateisysteme auf Zpool<a class="headerlink" href="#andere-dateisysteme-auf-zpool" title="Permalink to this heading"></a></h2>
 <p>Neben Datensätzen, Snapshots und Klonen kann auf einem Zpool wie oben
 bereits besprochen auch ein Volume erstellt werden. Dieser taucht in
 /dev/zvol als ein normales Gerät auf und kann mit jedem anderen
 Dateisystem formatiert werden. So kann jede Dateisystem auf die Vorteile
 des Zpool zurückgreifen. Mounten muss man allerdings herkömmlich, auch
 dateisystemspezifische Dinge wie fsck kann der Zpool nicht ersetzen.</p>
-<div class="section" id="erstellen-eines-volumes">
-<h3><span class="section-number">1.148.8.1. </span>Erstellen eines Volumes<a class="headerlink" href="#erstellen-eines-volumes" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="erstellen-eines-volumes">
+<h3><span class="section-number">1.148.8.1. </span>Erstellen eines Volumes<a class="headerlink" href="#erstellen-eines-volumes" title="Permalink to this heading"></a></h3>
 <p>Ein Volume wird wie ein Datensatz mit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zfs</span> <span class="n">create</span> <span class="o">-</span><span class="n">V</span> <span class="n">größe</span> <span class="n">pool</span><span class="o">/</span><span class="n">name</span>
 </pre></div>
@@ -794,17 +706,17 @@ dateisystemspezifische Dinge wie fsck kann der Zpool nicht ersetzen.</p>
 <p>erstellt. Wobei Name der Name des Volumens ist und auch sein Gerät in
 /dev/zvol so heißt. Ein Volume muss immer im Wurzelverzeichnis des Zpool
 angelegt werden.</p>
-</div>
-<div class="section" id="warten-eines-volumes">
-<h3><span class="section-number">1.148.8.2. </span>Warten eines Volumes<a class="headerlink" href="#warten-eines-volumes" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="warten-eines-volumes">
+<h3><span class="section-number">1.148.8.2. </span>Warten eines Volumes<a class="headerlink" href="#warten-eines-volumes" title="Permalink to this heading"></a></h3>
 <p>Ein Volume kann wie ein normaler Datensatz behandelt werden. Es können
 Snapshots erstellt und zurückgerollt werden, ebenso kann man wie bereits
 erklärt Klone nutzen. Sogar diverse Optionen können wie oben beschrieben
 eingestellt werden. Auch das Löschen läuft wie bei normalen Datensätzen
 ab.</p>
-</div>
-<div class="section" id="swap-auf-zpool">
-<h3><span class="section-number">1.148.8.3. </span>Swap auf Zpool<a class="headerlink" href="#swap-auf-zpool" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="swap-auf-zpool">
+<h3><span class="section-number">1.148.8.3. </span>Swap auf Zpool<a class="headerlink" href="#swap-auf-zpool" title="Permalink to this heading"></a></h3>
 <p>Theoretisch ist es natürlich auch möglich ein Volume mittels swapon(8)
 als Swap zu nutzen. Dies ist derzeit allerdings sowohl unter FreeBSD als
 auch unter Solaris sehr problematisch. Das Problem ist, dass das System
@@ -816,57 +728,40 @@ Daher ist von Swap auf Zpool dringenst abzuraten!</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-08-03</p>
-</div>
-</div>
-</div>
+<p>Zuletzt geändert: 2023-07-21</p>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="zfs_geli_und_usb_boot.txt.html" class="btn btn-neutral float-right" title="1.149. ZFS (raidz), Geli und USB Boot" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="zeit_synchronisieren_mit_ntp.txt.html" class="btn btn-neutral float-left" title="1.147. Zeit synchronisieren mit ntp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="zfs_geli_und_usb_boot.txt.html" class="btn btn-neutral float-right" title="1.149. ZFS (raidz), Geli und USB Boot" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, BSDForen.de.
-
-    </p>
+    <p>&#169; Copyright 2023, BSDForen.de.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

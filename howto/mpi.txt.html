@@ -1,96 +1,50 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>1.89. MPI auf FreeBSD &mdash; BSDForen.de 1.0 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.90. Multihead mit nv" href="multihead_mit_nv.txt.html" />
     <link rel="prev" title="1.88. MPD einrichten" href="mpd_einrichten.txt.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            BSDForen.de
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
@@ -268,90 +222,48 @@
 <li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BSDForen.de</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
-        
-      <li><span class="section-number">1.89. </span>MPI auf FreeBSD</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="howto_index.html"><span class="section-number">1. </span>Howto</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.89. </span>MPI auf FreeBSD</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/howto/mpi.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="mpi-auf-freebsd">
-<h1><span class="section-number">1.89. </span>MPI auf FreeBSD<a class="headerlink" href="#mpi-auf-freebsd" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+             
+  <section id="mpi-auf-freebsd">
+<h1><span class="section-number">1.89. </span>MPI auf FreeBSD<a class="headerlink" href="#mpi-auf-freebsd" title="Permalink to this heading"></a></h1>
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</div>
-<div class="section" id="was-ist-mpi">
-<h2><span class="section-number">1.89.1. </span>Was ist MPI?<a class="headerlink" href="#was-ist-mpi" title="Link zu dieser Überschrift">¶</a></h2>
+</aside>
+<section id="was-ist-mpi">
+<h2><span class="section-number">1.89.1. </span>Was ist MPI?<a class="headerlink" href="#was-ist-mpi" title="Permalink to this heading"></a></h2>
 <p>MPI, das s.g. <a class="reference external" href="http://de.wikipedia.org/wiki/Message_Passing_Interface">Message Passing
 Interface</a>,
 dient dazu um Nachrichten und Daten zwischen verteilten Rechnern und
 parallelisierten Programmen auszutauschen. Es wird insbesonde für
 numerische Berechnungen auf mehreren Rechnern und sogar auf großen
 Clustern eingesetzt, um die Berechnungen erheblich zu beschleunigen.</p>
-</div>
-<div class="section" id="was-bringt-mit-das">
-<h2><span class="section-number">1.89.2. </span>Was bringt mit das?<a class="headerlink" href="#was-bringt-mit-das" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="was-bringt-mit-das">
+<h2><span class="section-number">1.89.2. </span>Was bringt mit das?<a class="headerlink" href="#was-bringt-mit-das" title="Permalink to this heading"></a></h2>
 <p>MPI lohnt sich zB schon, wenn man 2 Kerne hat, oder mehrere Rechner, die
 man benutzen möchte. Aber es muss gesagt werden, das sich das nur auf
 MPI basierte Programme beschränkt. Im folgenden wird es eine kleine
@@ -361,11 +273,11 @@ ausreizt. HPL, der High Performance Linpack ist ein Benchmark, um die
 Leistungsfähigkeit von Clustern zu testen, mit dem übrigens auch die
 Floating Point Operations per second (Flops) der Top500 Supercomputer
 gemessen werden.</p>
-</div>
-<div class="section" id="installation">
-<h2><span class="section-number">1.89.3. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="openmpi">
-<h3><span class="section-number">1.89.3.1. </span>OpenMPI<a class="headerlink" href="#openmpi" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="installation">
+<h2><span class="section-number">1.89.3. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<section id="openmpi">
+<h3><span class="section-number">1.89.3.1. </span>OpenMPI<a class="headerlink" href="#openmpi" title="Permalink to this heading"></a></h3>
 <p>Zuerst sollte man sein System und insbesondere die Ports auf den
 aktuellsten Stand bringen. Dann installiert man mit einem:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd /usr/ports/net/openmpi
@@ -374,8 +286,8 @@ $ make install clean
 </div>
 <p>OpenMPI auf allen Rechnern, die man für seinen „Cluster“ benutzen möchte
 und damit ist die Installation auch schon abgeschlossen.</p>
-<div class="section" id="einrichtung-von-ssh-fur-openmpi">
-<h4><span class="section-number">1.89.3.1.1. </span>Einrichtung von SSH für OpenMPI<a class="headerlink" href="#einrichtung-von-ssh-fur-openmpi" title="Link zu dieser Überschrift">¶</a></h4>
+<section id="einrichtung-von-ssh-fur-openmpi">
+<h4><span class="section-number">1.89.3.1.1. </span>Einrichtung von SSH für OpenMPI<a class="headerlink" href="#einrichtung-von-ssh-fur-openmpi" title="Permalink to this heading"></a></h4>
 <p>Für den Fall das man mehr als einen Rechner für seinen „Cluster“
 benutzen möchte, lohnt es sich den ssh-agent zu benutzen. So erspart man
 sich das lästige eintippen des Passworts nachdem man sein Programm
@@ -405,10 +317,10 @@ Identity added: /home/michi/.ssh/id_rsa (/home/michi/.ssh/id_rsa)
 ssh-add fügt den Schlüssel hinzu. Jetzt muss man nur noch einmal die
 Passphrase eingeben und solte sich einloggen können ohne Passphrase,
 solange man mit „exit“ diese Shell nicht verlässt.</p>
-</div>
-</div>
-<div class="section" id="hpl">
-<h3><span class="section-number">1.89.3.2. </span>HPL<a class="headerlink" href="#hpl" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+</section>
+<section id="hpl">
+<h3><span class="section-number">1.89.3.2. </span>HPL<a class="headerlink" href="#hpl" title="Permalink to this heading"></a></h3>
 <p>HPL kann <a class="reference external" href="http://www.netlib.org/benchmark/hpl/">hier</a> geholt werden.
 Es braucht aber noch zuerst eine s.g. BLAS Library, die algebraische
 Routinen enthält. Es gibt verschiedene BLAS Libraries, wovon sich die
@@ -418,16 +330,16 @@ herausgestellt hat. Sie ist
 wofür man sich aber anmelden muss. Möchte man das nicht kann man auch zu
 einer anderen BLAS Library greifen. zb der cBLAS, die auch in den Ports
 vorhanden ist.</p>
-<div class="section" id="vorraussetzungen">
-<h4><span class="section-number">1.89.3.2.1. </span>Vorraussetzungen<a class="headerlink" href="#vorraussetzungen" title="Link zu dieser Überschrift">¶</a></h4>
+<section id="vorraussetzungen">
+<h4><span class="section-number">1.89.3.2.1. </span>Vorraussetzungen<a class="headerlink" href="#vorraussetzungen" title="Permalink to this heading"></a></h4>
 <p>Folgende Dinge sollten installiert sein:</p>
 <ul class="simple">
 <li><p>gmake</p></li>
 <li><p>gcc42</p></li>
 </ul>
-</div>
-<div class="section" id="bauen-der-gotoblas-library">
-<h4><span class="section-number">1.89.3.2.2. </span>Bauen der GotoBLAS Library<a class="headerlink" href="#bauen-der-gotoblas-library" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="bauen-der-gotoblas-library">
+<h4><span class="section-number">1.89.3.2.2. </span>Bauen der GotoBLAS Library<a class="headerlink" href="#bauen-der-gotoblas-library" title="Permalink to this heading"></a></h4>
 <p>Als erstes würde ich empfehlen das man die GotoBLAS Library aus den
 Ports baut. Dazu meldet man sich wie oben beschrieben auf der Seite an
 und lädt das Targeknäuell runter und kopiert es in sein
@@ -457,9 +369,9 @@ umfangreich ist. Falls man sich durch die ganzen Makefiles gewühlt hat,
 </div>
 <p>Es hilft auf jeden Fall mal einen Blick in die Ports Patchfiles zu
 werfen.</p>
-</div>
-<div class="section" id="bauen-von-hpl">
-<h4><span class="section-number">1.89.3.2.3. </span>Bauen von HPL<a class="headerlink" href="#bauen-von-hpl" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="bauen-von-hpl">
+<h4><span class="section-number">1.89.3.2.3. </span>Bauen von HPL<a class="headerlink" href="#bauen-von-hpl" title="Permalink to this heading"></a></h4>
 <p>Da der fleißige Leser bestimmt schon HPL heruntergeladen hat kann dieses
 nun jetzt auch ausgepackt werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tar -zxvf hpl.tar.gz $ cd hpl
@@ -704,11 +616,11 @@ lohnt sich ein:</p>
 </div>
 <p>bevor man es versucht erneut zu bauen.</p>
 <p>Danach sollte in „bin/i386/“ eine „HPL.dat“ und eine „xhpl“ liegen.</p>
-</div>
-</div>
-</div>
-<div class="section" id="bedienung-von-openmpi-am-beispiel-von-hpl">
-<h2><span class="section-number">1.89.4. </span>Bedienung von OpenMPI am Beispiel von HPL<a class="headerlink" href="#bedienung-von-openmpi-am-beispiel-von-hpl" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="bedienung-von-openmpi-am-beispiel-von-hpl">
+<h2><span class="section-number">1.89.4. </span>Bedienung von OpenMPI am Beispiel von HPL<a class="headerlink" href="#bedienung-von-openmpi-am-beispiel-von-hpl" title="Permalink to this heading"></a></h2>
 <p>Jetzt wo wir HPL installiert haben, müssen wir zuerst die HPL.dat
 anpassen. Doch zuerst sollte man wissen, was HPL eigentlich macht: HPL
 erzeugt eine Matrix und führt anschließend LR-Zerlegung durch und das
@@ -761,8 +673,8 @@ Gitter gewählt:</p>
 <p>In diesem Fall würden wir 2 Prozesse (2*1) brauchen. Die 3 bedeutet das wir 3
 verschiedene Gitter angegeben haben die HPL alle probieren soll, wobei 2 davon
 gleich sind.</p>
-<div class="section" id="mpi-starten">
-<h3><span class="section-number">1.89.4.1. </span>MPI Starten<a class="headerlink" href="#mpi-starten" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="mpi-starten">
+<h3><span class="section-number">1.89.4.1. </span>MPI Starten<a class="headerlink" href="#mpi-starten" title="Permalink to this heading"></a></h3>
 <p>Wenn man einen Dual-Core Rechner hat, kann man das sogar auf einem
 Rechner ausprobieren, ohne einen anderen Computer über ein LAN, oder IB
 zu haben. Das sähe dann wie folgt aus:</p>
@@ -845,14 +757,14 @@ jeder Prozess auf einen eigenen Kern gelegt wird, 12,3 GFlops erreicht.</p>
 <p>Das Leben kann man sich auch erleichtern in dem man einfach eine Datei
 der Namen seiner Rechner anlegt und sie dann mit: -machinefile
 &lt;dateinamen&gt; aufruft, wobei jeder Rechner in eine eigene Zeile kommt.</p>
-</div>
-</div>
-<div class="section" id="fragen">
-<h2><span class="section-number">1.89.5. </span>Fragen?<a class="headerlink" href="#fragen" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="fragen">
+<h2><span class="section-number">1.89.5. </span>Fragen?<a class="headerlink" href="#fragen" title="Permalink to this heading"></a></h2>
 <p>Bei Anregungen, Fragen, oder Problemen bitte im Forum melden.</p>
-</div>
-<div class="section" id="links">
-<h2><span class="section-number">1.89.6. </span>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="links">
+<h2><span class="section-number">1.89.6. </span>Links<a class="headerlink" href="#links" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www-unix.mcs.anl.gov/mpi/">MPI</a></p></li>
 <li><p><a class="reference external" href="http://www.open-mpi.org/">OpenMPI</a></p></li>
@@ -865,56 +777,39 @@ möchte.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-08-03</p>
-</div>
-</div>
+<p>Zuletzt geändert: 2023-07-21</p>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="multihead_mit_nv.txt.html" class="btn btn-neutral float-right" title="1.90. Multihead mit nv" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="mpd_einrichten.txt.html" class="btn btn-neutral float-left" title="1.88. MPD einrichten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="multihead_mit_nv.txt.html" class="btn btn-neutral float-right" title="1.90. Multihead mit nv" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, BSDForen.de.
-
-    </p>
+    <p>&#169; Copyright 2023, BSDForen.de.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,96 +1,50 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>1.117. Suspend und Resume bei Thinkpads &mdash; BSDForen.de 1.0 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.118. System in RAID1 verwandeln" href="system_in_raid1_verwandeln.txt.html" />
     <link rel="prev" title="1.116. ssh" href="ssh.txt.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            BSDForen.de
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
@@ -276,79 +230,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BSDForen.de</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
-        
-      <li><span class="section-number">1.117. </span>Suspend und Resume bei Thinkpads</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="howto_index.html"><span class="section-number">1. </span>Howto</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.117. </span>Suspend und Resume bei Thinkpads</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/howto/suspend_resume_thinkpad.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="suspend-und-resume-bei-thinkpads">
-<h1><span class="section-number">1.117. </span>Suspend und Resume bei Thinkpads<a class="headerlink" href="#suspend-und-resume-bei-thinkpads" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+             
+  <section id="suspend-und-resume-bei-thinkpads">
+<h1><span class="section-number">1.117. </span>Suspend und Resume bei Thinkpads<a class="headerlink" href="#suspend-und-resume-bei-thinkpads" title="Permalink to this heading"></a></h1>
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</div>
+</aside>
 <p>FreeBSD lässt sich auf Notebook sehr gut installieren und betreiben. Allerdings
 gehört zur Notebook-Funktionalität auch „suspend“ und „resume“. Das bedeutet,
 dass entweder durch drücken einer Tastenkombination oder durch Zuklappen des
@@ -365,8 +277,8 @@ des Geräts führt. Es zeigen sich folgende Stolpersteine:</p>
 <li><p>Trennen und Wiederherstellen einer WLAN-Verbindung</p></li>
 <li><p>Powermanagement der Notebook-Festplatten</p></li>
 </ul>
-<div class="section" id="begriffe">
-<h2><span class="section-number">1.117.1. </span>Begriffe<a class="headerlink" href="#begriffe" title="Link zu dieser Überschrift">¶</a></h2>
+<section id="begriffe">
+<h2><span class="section-number">1.117.1. </span>Begriffe<a class="headerlink" href="#begriffe" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>ACPI</strong> steht für <strong>A</strong>dvanced <strong>C</strong>onfiguration and <strong>P</strong>ower
 <strong>I</strong>nterface und ist ein offener Industriestandard für
@@ -377,10 +289,6 @@ bedeutet und rein garnichts mit ACPI zu tun hat.</p></li>
 oder Modi, die in der folgenden Tabelle dargestellt sind:</p></li>
 </ul>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 2%" />
-<col style="width: 98%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Modus</p></th>
 <th class="head"><p>Beschreibung</p></th>
@@ -416,9 +324,9 @@ werden unter anderem die Register der Grafikkarte wieder
 zurückgeschrieben oder USB eingeschaltet. Dieser Vorgang ist sehr
 heikel.</p></li>
 </ul>
-</div>
-<div class="section" id="vorbereitung">
-<h2><span class="section-number">1.117.2. </span>Vorbereitung<a class="headerlink" href="#vorbereitung" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="vorbereitung">
+<h2><span class="section-number">1.117.2. </span>Vorbereitung<a class="headerlink" href="#vorbereitung" title="Permalink to this heading"></a></h2>
 <p>Aus dem Kernel werden alle Gerätetreiber entfernt, die für die
 Kommunikation mit der USB-Hardware zuständig sind. Ebenso muss die
 VESA-Unterstützung entfernt werden, da sie sonst für erhebliche
@@ -426,16 +334,16 @@ Schwierigkeiten sorgen wird. &lt;note warning&gt;Wer sein Notebook produktiv
 einsetzt, sollte auf das ab FreeBSD 10 mögliche Kernel-Mode-Setting
 (KMS) verzichten. Die dafür notwendigen Konsolentreiber „newcons“
 sollten somit nicht in den Kernel aufgenommen werden&lt;/note&gt;</p>
-<div class="section" id="kernelkonfiguration">
-<h3><span class="section-number">1.117.2.1. </span>Kernelkonfiguration<a class="headerlink" href="#kernelkonfiguration" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="kernelkonfiguration">
+<h3><span class="section-number">1.117.2.1. </span>Kernelkonfiguration<a class="headerlink" href="#kernelkonfiguration" title="Permalink to this heading"></a></h3>
 <p>Bevor ein spezieller Kernel erstellt wird, sollte man sich unbedingt
 damit vertraut machen. Dazu leistet das Handbuch wie immer gute Dienste.
 Im <a class="reference external" href="http://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/kernelconfig.html">Kapitel
 neun</a>
 ist alles notwendige beschrieben.</p>
-</div>
-<div class="section" id="patch-fur-acpi-ibm">
-<h3><span class="section-number">1.117.2.2. </span>Patch für acpi_ibm<a class="headerlink" href="#patch-fur-acpi-ibm" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="patch-fur-acpi-ibm">
+<h3><span class="section-number">1.117.2.2. </span>Patch für acpi_ibm<a class="headerlink" href="#patch-fur-acpi-ibm" title="Permalink to this heading"></a></h3>
 <p>Bei manchen Thinkpad-Modellen kommt es vor, dass bei einem Resume die
 USB-Ports nicht mehr aktiv werden. Teilweise liegt dies an
 BIOS-Einstellungen. Dankenswerter Weise wurde für diesen Missstand ein
@@ -451,14 +359,14 @@ patch acpi_ibm.c &lt;path to patchfile&gt; &lt;/xterm&gt; Anschließend wird der
 Kernel neu kompiliert und installiert: &lt;xterm&gt; # cd /usr/src # make
 buildkernel KERNCONF=&lt;Kernelkonfiguration&gt; # make installkernel
 KERNCONF=&lt;Kernelkonfiguration&gt; &lt;/xterm&gt;</p>
-</div>
-</div>
-<div class="section" id="konfigurationsdateien">
-<h2><span class="section-number">1.117.3. </span>Konfigurationsdateien<a class="headerlink" href="#konfigurationsdateien" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="konfigurationsdateien">
+<h2><span class="section-number">1.117.3. </span>Konfigurationsdateien<a class="headerlink" href="#konfigurationsdateien" title="Permalink to this heading"></a></h2>
 <p>Die weitere Konfiguration erfolgt in <code class="docutils literal notranslate"><span class="pre">'/boot/loader.conf</span></code>‘ und
 <code class="docutils literal notranslate"><span class="pre">'/etc/sysctl.conf</span></code>‘.</p>
-<div class="section" id="module-laden-boot-loader-conf">
-<h3><span class="section-number">1.117.3.1. </span>Module laden /boot/loader.conf<a class="headerlink" href="#module-laden-boot-loader-conf" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="module-laden-boot-loader-conf">
+<h3><span class="section-number">1.117.3.1. </span>Module laden /boot/loader.conf<a class="headerlink" href="#module-laden-boot-loader-conf" title="Permalink to this heading"></a></h3>
 <p>In dieser Datei werden die Module eingetragen, die weitere Gerätetreiber
 dem Kernel zur Verfügung stellen. In diesem Fall sind es das ACPI-Modul
 für IBM-Rechner, womit sich die speziellen ACPI-Funktionen ansprechen
@@ -482,9 +390,9 @@ in diese Datei ein.</p>
 <span class="n">ukbd_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="konfiguration-etc-sysctl-conf">
-<h3><span class="section-number">1.117.3.2. </span>Konfiguration /etc/sysctl.conf<a class="headerlink" href="#konfiguration-etc-sysctl-conf" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="konfiguration-etc-sysctl-conf">
+<h3><span class="section-number">1.117.3.2. </span>Konfiguration /etc/sysctl.conf<a class="headerlink" href="#konfiguration-etc-sysctl-conf" title="Permalink to this heading"></a></h3>
 <p>Damit Suspend/Resume die richtigen ACPI-Modi nutzt, wird diese
 Konfigurationsdatei entsprechend ergänzt. Das Zuklappen des Notebooks
 beziehungsweise das Drücken der Sleep-Taste sollen den Rechner in den
@@ -500,16 +408,16 @@ hingegen vollständig ab.</p>
 <span class="n">dev</span><span class="o">.</span><span class="n">acpi_ibm</span><span class="mf">.0</span><span class="o">.</span><span class="n">events</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="systemskripte">
-<h2><span class="section-number">1.117.4. </span>Systemskripte<a class="headerlink" href="#systemskripte" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="systemskripte">
+<h2><span class="section-number">1.117.4. </span>Systemskripte<a class="headerlink" href="#systemskripte" title="Permalink to this heading"></a></h2>
 <p>Die folgenden drei Systemskripte werden einerseits beim Bootvorgang
 aufgerufen und andererseits beim Wechsel in den Suspend-Modus
 beziehungsweise in den Resume-Modus aufgerufen. Alle drei Skripte müssen
 ergänzt werden, um eine einwandfreie Funktionalität zu erreichen.</p>
-<div class="section" id="skript-etc-rc-local">
-<h3><span class="section-number">1.117.4.1. </span>Skript /etc/rc.local<a class="headerlink" href="#skript-etc-rc-local" title="Link zu dieser Überschrift">¶</a></h3>
+<section id="skript-etc-rc-local">
+<h3><span class="section-number">1.117.4.1. </span>Skript /etc/rc.local<a class="headerlink" href="#skript-etc-rc-local" title="Permalink to this heading"></a></h3>
 <p>Das beim Booten aufgerufene Skript wird um ein Kommando ergänzt. Damit
 erreicht man, dass das Powermanagement der Festplatte(n) abgeschaltet
 wird.</p>
@@ -519,9 +427,9 @@ wird.</p>
 <span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">camcontrol</span> <span class="n">cmd</span> <span class="n">ada0</span> <span class="o">-</span><span class="n">a</span> <span class="s2">&quot;EF 85 00 00 00 00 00 00 00 00 00 00&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="skript-etc-rc-suspend">
-<h3><span class="section-number">1.117.4.2. </span>Skript /etc/rc.suspend<a class="headerlink" href="#skript-etc-rc-suspend" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="skript-etc-rc-suspend">
+<h3><span class="section-number">1.117.4.2. </span>Skript /etc/rc.suspend<a class="headerlink" href="#skript-etc-rc-suspend" title="Permalink to this heading"></a></h3>
 <p>Das Skript, das beim Wechsel in den Suspend-Modus aufgerufen wird,
 ergänzt man um einige Zeilen. Zunächst werden WLAN und der Maus-Daemon
 terminiert. Anschließend werden alle USB-Module aus dem Speicher
@@ -540,9 +448,9 @@ entfernt, damit beim späteren Resume USB sauber initialiert wird.</p>
 <span class="n">kldunload</span> <span class="n">usb</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="skript-etc-rc-resume">
-<h3><span class="section-number">1.117.4.3. </span>Skript /etc/rc.resume<a class="headerlink" href="#skript-etc-rc-resume" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="skript-etc-rc-resume">
+<h3><span class="section-number">1.117.4.3. </span>Skript /etc/rc.resume<a class="headerlink" href="#skript-etc-rc-resume" title="Permalink to this heading"></a></h3>
 <p>Dieses Skript wird beim Auswachen des Notebooks aufgerufen. Dabei werden
 zuächst die USB-Module geladen und damit auch USB initialisiert. Enbenso
 startet der Maus-Daemon und das WLAN nimmt die Arbeit wieder auf.
@@ -565,10 +473,10 @@ deaktivieren.</p>
 <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">camcontrol</span> <span class="n">cmd</span> <span class="n">ada0</span> <span class="o">-</span><span class="n">a</span> <span class="s2">&quot;EF 85 00 00 00 00 00 00 00 00 00 00&quot;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="erganzungen">
-<h2><span class="section-number">1.117.5. </span>Ergänzungen<a class="headerlink" href="#erganzungen" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+</section>
+<section id="erganzungen">
+<h2><span class="section-number">1.117.5. </span>Ergänzungen<a class="headerlink" href="#erganzungen" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>ATi-Grafikchip - Suspend und Resume funktioniert!</strong> In vielen
 Thinkpads ist neben einem Intel-Grafikchip auch eine ATi Mobility
@@ -579,18 +487,18 @@ Intel-Grafikchip auskommentieren - man weiß nie! Außerdem sind aus
 der Konfiguration für XOrg in <code class="docutils literal notranslate"><span class="pre">'/etc/X11/xorg.conf</span></code>‘ alle
 Intel-spezifischen Einträge auszukommentieren.</p></li>
 </ul>
-</div>
-<div class="section" id="fazit">
-<h2><span class="section-number">1.117.6. </span>Fazit<a class="headerlink" href="#fazit" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="fazit">
+<h2><span class="section-number">1.117.6. </span>Fazit<a class="headerlink" href="#fazit" title="Permalink to this heading"></a></h2>
 <p>Es ist nicht trivial, Suspend und Resume unter FreeBSD zu konfigurieren.
 Auf manchen Gerät muss nichts gemacht werden, auf anderen dagegen geht
 nichts. Die Thinkpads liegen irgendwo dazwischen und wer glaubt, bei
 Linux sei alles besser, der sollte sich mal nicht täuschen!</p>
 <p>„Es wäre so einfach, wenn sich die Hersteller an die von ihnen selbst
 gesetzten Standards halten würden“</p>
-</div>
-<div class="section" id="man-pages">
-<h2><span class="section-number">1.117.7. </span>Man-Pages<a class="headerlink" href="#man-pages" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="man-pages">
+<h2><span class="section-number">1.117.7. </span>Man-Pages<a class="headerlink" href="#man-pages" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=kldload&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+10.0-RELEASE&amp;arch=default&amp;format=html">kldload(8)</a>
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=kldunload&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+10.0-RELEASE&amp;arch=default&amp;format=html">kldunload(8)</a>
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=wpa_cli&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+10.0-RELEASE&amp;arch=default&amp;format=html">wpa_cli(8)</a>
@@ -599,9 +507,9 @@ gesetzten Standards halten würden“</p>
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=sysctl.conf&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+10.0-RELEASE&amp;arch=default&amp;format=html">sysctl.conf(5)</a>
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=loader.conf&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+10.0-RELEASE&amp;arch=default&amp;format=html">loader.conf(5)</a>
 <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=rc.local&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+10.0-RELEASE&amp;arch=default&amp;format=html">rc.local(8)</a></p>
-</div>
-<div class="section" id="danksagung">
-<h2><span class="section-number">1.117.8. </span>Danksagung<a class="headerlink" href="#danksagung" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="danksagung">
+<h2><span class="section-number">1.117.8. </span>Danksagung<a class="headerlink" href="#danksagung" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Mein Dank gilt Yamagi, der mit Rat und Tat zur Seite stand.</p>
@@ -609,56 +517,39 @@ gesetzten Standards halten würden“</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-08-03</p>
-</div>
-</div>
+<p>Zuletzt geändert: 2023-07-21</p>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="system_in_raid1_verwandeln.txt.html" class="btn btn-neutral float-right" title="1.118. System in RAID1 verwandeln" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ssh.txt.html" class="btn btn-neutral float-left" title="1.116. ssh" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="system_in_raid1_verwandeln.txt.html" class="btn btn-neutral float-right" title="1.118. System in RAID1 verwandeln" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, BSDForen.de.
-
-    </p>
+    <p>&#169; Copyright 2023, BSDForen.de.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

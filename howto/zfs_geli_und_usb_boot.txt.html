@@ -1,96 +1,50 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>1.149. ZFS (raidz), Geli und USB Boot &mdash; BSDForen.de 1.0 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="2. Anwendungen" href="../anwendungen/anwendungen_index.html" />
     <link rel="prev" title="1.148. ZFS auf FreeBSD" href="zfs.txt.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            BSDForen.de
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
@@ -281,83 +235,41 @@
 <li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BSDForen.de</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
-        
-      <li><span class="section-number">1.149. </span>ZFS (raidz), Geli und USB Boot</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="howto_index.html"><span class="section-number">1. </span>Howto</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.149. </span>ZFS (raidz), Geli und USB Boot</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/howto/zfs_geli_und_usb_boot.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="zfs-raidz-geli-und-usb-boot">
-<h1><span class="section-number">1.149. </span>ZFS (raidz), Geli und USB Boot<a class="headerlink" href="#zfs-raidz-geli-und-usb-boot" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+             
+  <section id="zfs-raidz-geli-und-usb-boot">
+<h1><span class="section-number">1.149. </span>ZFS (raidz), Geli und USB Boot<a class="headerlink" href="#zfs-raidz-geli-und-usb-boot" title="Permalink to this heading"></a></h1>
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
-</div>
-<div class="section" id="einleitung">
-<h2><span class="section-number">1.149.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="info">
-<h3><span class="section-number">1.149.1.1. </span>Info<a class="headerlink" href="#info" title="Link zu dieser Überschrift">¶</a></h3>
+</aside>
+<section id="einleitung">
+<h2><span class="section-number">1.149.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Permalink to this heading"></a></h2>
+<section id="info">
+<h3><span class="section-number">1.149.1.1. </span>Info<a class="headerlink" href="#info" title="Permalink to this heading"></a></h3>
 <p>Ich habe hier exakt meine Anleitung aufgeschrieben, wie ich mein System
 installiert habe. Es gibt allerdings noch ein paar Unklarheiten, die ich
 nicht klären konnte.</p>
@@ -375,9 +287,9 @@ die Performance zwischen 128bit und 256bit AES Verschlüsselung ist. Bitte
 ggf. erweitern.</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="vorraussetzungen">
-<h3><span class="section-number">1.149.1.2. </span>Vorraussetzungen<a class="headerlink" href="#vorraussetzungen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="vorraussetzungen">
+<h3><span class="section-number">1.149.1.2. </span>Vorraussetzungen<a class="headerlink" href="#vorraussetzungen" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>USB Bootfähiges Mainboard</p></li>
 <li><p>FreeBSD DVD (wegen Install Daten und Fixit Shell) ab 8-RC1</p></li>
@@ -385,24 +297,24 @@ ggf. erweitern.</p></li>
 <li><p>3x HDD Terminologi: ad10, ad12, ad14</p></li>
 <li><p>USB Stick Terminologi: da0</p></li>
 </ul>
-</div>
-<div class="section" id="zielsetzung">
-<h3><span class="section-number">1.149.1.3. </span>Zielsetzung<a class="headerlink" href="#zielsetzung" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="zielsetzung">
+<h3><span class="section-number">1.149.1.3. </span>Zielsetzung<a class="headerlink" href="#zielsetzung" title="Permalink to this heading"></a></h3>
 <p>Es soll ein komplett verschlüsseltes FreeBSD System mit ZFS (raidz1)
 aufgesetzt werden, was von einem USB Stick startet.</p>
-</div>
-</div>
-<div class="section" id="installation">
-<h2><span class="section-number">1.149.2. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="fixit-shell-starten">
-<h3><span class="section-number">1.149.2.1. </span>Fixit Shell starten<a class="headerlink" href="#fixit-shell-starten" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+</section>
+<section id="installation">
+<h2><span class="section-number">1.149.2. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<section id="fixit-shell-starten">
+<h3><span class="section-number">1.149.2.1. </span>Fixit Shell starten<a class="headerlink" href="#fixit-shell-starten" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>FreeBSD mit der Install DVD Booten.</p></li>
 <li><p>Fixit Shell starten ( sysinstall-&gt;fixit-&gt;2 CDROM/DVD )</p></li>
 </ul>
-</div>
-<div class="section" id="setup-permissions">
-<h3><span class="section-number">1.149.2.2. </span>Setup Permissions<a class="headerlink" href="#setup-permissions" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="setup-permissions">
+<h3><span class="section-number">1.149.2.2. </span>Setup Permissions<a class="headerlink" href="#setup-permissions" title="Permalink to this heading"></a></h3>
 <p>Die fixit shell gibt am Anfang den Hinweis /etc/pwd und /etc/group zu
 symlinken, da ansonsten die Rechte beim entpacken von tar archiven
 verloren gehen könnten. Da diese Dateien allerdings schon existieren,
@@ -415,9 +327,9 @@ lösche ich diese erst und linke sie neu.</p>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">mnt2</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">group</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">group</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sonstige-vorbereitungen">
-<h3><span class="section-number">1.149.2.3. </span>Sonstige Vorbereitungen<a class="headerlink" href="#sonstige-vorbereitungen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="sonstige-vorbereitungen">
+<h3><span class="section-number">1.149.2.3. </span>Sonstige Vorbereitungen<a class="headerlink" href="#sonstige-vorbereitungen" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### needed for kernel modules</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">kernel</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">kernel</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="n">lib</span> <span class="o">/</span><span class="n">lib</span>
@@ -427,9 +339,9 @@ lösche ich diese erst und linke sie neu.</p>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">kldload</span> <span class="n">zfs</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="create-gpart-containter">
-<h3><span class="section-number">1.149.2.4. </span>Create gpart containter<a class="headerlink" href="#create-gpart-containter" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="create-gpart-containter">
+<h3><span class="section-number">1.149.2.4. </span>Create gpart containter<a class="headerlink" href="#create-gpart-containter" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">create</span> <span class="o">-</span><span class="n">s</span> <span class="n">GPT</span> <span class="n">ad10</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">create</span> <span class="o">-</span><span class="n">s</span> <span class="n">GPT</span> <span class="n">ad12</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">create</span> <span class="o">-</span><span class="n">s</span> <span class="n">GPT</span> <span class="n">ad14</span>
@@ -448,9 +360,9 @@ lösche ich diese erst und linke sie neu.</p>
               <span class="mi">34</span> <span class="mi">1953525101</span>             <span class="o">-</span> <span class="n">free</span> <span class="o">-</span>  <span class="p">(</span><span class="mi">932</span><span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="create-gpart-containter-1">
-<span id="id1"></span><h3><span class="section-number">1.149.2.5. </span>Create gpart containter<a class="headerlink" href="#create-gpart-containter-1" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="create-gpart-containter-1">
+<span id="id1"></span><h3><span class="section-number">1.149.2.5. </span>Create gpart containter<a class="headerlink" href="#create-gpart-containter-1" title="Permalink to this heading"></a></h3>
 <p>So wie ich es gelesen habe, sollte man die swap Partition nicht mit in
 den ZFS Container packen, darum wird dieser extra gebaut und wir zweigen
 uns von jeder Platte jeweils 1GB ab.</p>
@@ -483,27 +395,27 @@ uns von jeder Platte jeweils 1GB ab.</p>
          <span class="mi">2048068</span> <span class="mi">1951477067</span>        <span class="mi">2</span>    <span class="n">freebsd</span><span class="o">-</span><span class="n">zfs</span> <span class="p">(</span><span class="mi">931</span><span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="geli">
-<h3><span class="section-number">1.149.2.6. </span>Geli<a class="headerlink" href="#geli" title="Link zu dieser Überschrift">¶</a></h3>
-<div class="section" id="create-keys">
-<h4><span class="section-number">1.149.2.6.1. </span>create Keys<a class="headerlink" href="#create-keys" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="geli">
+<h3><span class="section-number">1.149.2.6. </span>Geli<a class="headerlink" href="#geli" title="Permalink to this heading"></a></h3>
+<section id="create-keys">
+<h4><span class="section-number">1.149.2.6.1. </span>create Keys<a class="headerlink" href="#create-keys" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad10</span><span class="o">.</span><span class="n">key</span> <span class="n">bs</span><span class="o">=</span><span class="mi">128</span><span class="n">k</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad12</span><span class="o">.</span><span class="n">key</span> <span class="n">bs</span><span class="o">=</span><span class="mi">128</span><span class="n">k</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad14</span><span class="o">.</span><span class="n">key</span> <span class="n">bs</span><span class="o">=</span><span class="mi">128</span><span class="n">k</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="encrypt">
-<h4><span class="section-number">1.149.2.6.2. </span>Encrypt<a class="headerlink" href="#encrypt" title="Link zu dieser Überschrift">¶</a></h4>
-<div class="section" id="todo1">
-<h5><span class="section-number">1.149.2.6.2.1. </span>TODO1:<a class="headerlink" href="#todo1" title="Link zu dieser Überschrift">¶</a></h5>
+</section>
+<section id="encrypt">
+<h4><span class="section-number">1.149.2.6.2. </span>Encrypt<a class="headerlink" href="#encrypt" title="Permalink to this heading"></a></h4>
+<section id="todo1">
+<h5><span class="section-number">1.149.2.6.2.1. </span>TODO1:<a class="headerlink" href="#todo1" title="Permalink to this heading"></a></h5>
 <p>Hier muss noch abgewogen werden, ob eine 128bit oder 256bit
 Verschlüsselung zum Einsatz kommen soll. Ist 128bit ausreichend?</p>
-</div>
-<div class="section" id="todo2">
-<h5><span class="section-number">1.149.2.6.2.2. </span>TODO2:<a class="headerlink" href="#todo2" title="Link zu dieser Überschrift">¶</a></h5>
+</section>
+<section id="todo2">
+<h5><span class="section-number">1.149.2.6.2.2. </span>TODO2:<a class="headerlink" href="#todo2" title="Permalink to this heading"></a></h5>
 <p>Ich habe es irgendwie nur so hinbekommen, dass ich die „-b“ Option
 (Passwort während dem Bootvorgang eingeben) angeben MUSS, da er sonst
 beim booten die Platten nicht entschlüsselt. Es muss noch geklärt
@@ -514,23 +426,23 @@ keys funktioniert.</p>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">geli</span> <span class="n">init</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">K</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad14</span><span class="o">.</span><span class="n">key</span> <span class="o">-</span><span class="n">s</span> <span class="mi">4096</span> <span class="o">-</span><span class="n">l</span> <span class="mi">256</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad14p2</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="note">
-<h5><span class="section-number">1.149.2.6.2.3. </span>Note:<a class="headerlink" href="#note" title="Link zu dieser Überschrift">¶</a></h5>
+</section>
+<section id="note">
+<h5><span class="section-number">1.149.2.6.2.3. </span>Note:<a class="headerlink" href="#note" title="Permalink to this heading"></a></h5>
 <p>Wenn der Fehler „geli: Cannot open /var/backups/ad10.eli: No such file
 or directory.“ kommt, dann einfach /var/backups anlegen</p>
-</div>
-</div>
-<div class="section" id="attach">
-<h4><span class="section-number">1.149.2.6.3. </span>Attach<a class="headerlink" href="#attach" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+</section>
+<section id="attach">
+<h4><span class="section-number">1.149.2.6.3. </span>Attach<a class="headerlink" href="#attach" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">geli</span> <span class="n">attach</span> <span class="o">-</span><span class="n">k</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad10</span><span class="o">.</span><span class="n">key</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad10p1</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">geli</span> <span class="n">attach</span> <span class="o">-</span><span class="n">k</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad12</span><span class="o">.</span><span class="n">key</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad12p1</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">geli</span> <span class="n">attach</span> <span class="o">-</span><span class="n">k</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ad14</span><span class="o">.</span><span class="n">key</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad14p1</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="override-optional">
-<h4><span class="section-number">1.149.2.6.4. </span>Override (Optional)<a class="headerlink" href="#override-optional" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="override-optional">
+<h4><span class="section-number">1.149.2.6.4. </span>Override (Optional)<a class="headerlink" href="#override-optional" title="Permalink to this heading"></a></h4>
 <p>Falls es sich um eine schon benutzte Festplatte handelt, kann diese hier
 mit /dev/random komplett überschrieben werden.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad10p1</span><span class="o">.</span><span class="n">eli</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">m</span>
@@ -538,18 +450,18 @@ mit /dev/random komplett überschrieben werden.</p>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">random</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">ad14p1</span><span class="o">.</span><span class="n">eli</span> <span class="n">bs</span><span class="o">=</span><span class="mi">1</span><span class="n">m</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="zfs">
-<h3><span class="section-number">1.149.2.7. </span>ZFS<a class="headerlink" href="#zfs" title="Link zu dieser Überschrift">¶</a></h3>
-<div class="section" id="raidz-pool-anlegen">
-<h4><span class="section-number">1.149.2.7.1. </span>Raidz Pool anlegen<a class="headerlink" href="#raidz-pool-anlegen" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+</section>
+<section id="zfs">
+<h3><span class="section-number">1.149.2.7. </span>ZFS<a class="headerlink" href="#zfs" title="Permalink to this heading"></a></h3>
+<section id="raidz-pool-anlegen">
+<h4><span class="section-number">1.149.2.7.1. </span>Raidz Pool anlegen<a class="headerlink" href="#raidz-pool-anlegen" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zpool</span> <span class="n">create</span> <span class="o">-</span><span class="n">m</span> <span class="o">/</span><span class="n">tank</span> <span class="n">tank</span> <span class="n">raidz1</span> <span class="n">ad10p2</span><span class="o">.</span><span class="n">eli</span> <span class="n">ad12p2</span><span class="o">.</span><span class="n">eli</span> <span class="n">ad14p2</span><span class="o">.</span><span class="n">eli</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="mountpoints-erzeugen">
-<h4><span class="section-number">1.149.2.7.2. </span>Mountpoints erzeugen<a class="headerlink" href="#mountpoints-erzeugen" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="mountpoints-erzeugen">
+<h4><span class="section-number">1.149.2.7.2. </span>Mountpoints erzeugen<a class="headerlink" href="#mountpoints-erzeugen" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zfs</span> <span class="n">create</span> <span class="n">tank</span><span class="o">/</span><span class="n">usr</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zfs</span> <span class="n">create</span> <span class="n">tank</span><span class="o">/</span><span class="n">var</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zfs</span> <span class="n">create</span> <span class="n">tank</span><span class="o">/</span><span class="n">tmp</span>
@@ -557,15 +469,15 @@ mit /dev/random komplett überschrieben werden.</p>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zfs</span> <span class="n">create</span> <span class="n">tank</span><span class="o">/</span><span class="n">home</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="access-time-ausschalten">
-<h4><span class="section-number">1.149.2.7.3. </span>Access Time ausschalten<a class="headerlink" href="#access-time-ausschalten" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="access-time-ausschalten">
+<h4><span class="section-number">1.149.2.7.3. </span>Access Time ausschalten<a class="headerlink" href="#access-time-ausschalten" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span><span class="n">zfs</span> <span class="nb">set</span> <span class="n">atime</span><span class="o">=</span><span class="n">off</span> <span class="n">tank</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="zpool-exportieren">
-<h4><span class="section-number">1.149.2.7.4. </span>Zpool Exportieren<a class="headerlink" href="#zpool-exportieren" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="zpool-exportieren">
+<h4><span class="section-number">1.149.2.7.4. </span>Zpool Exportieren<a class="headerlink" href="#zpool-exportieren" title="Permalink to this heading"></a></h4>
 <p>Dies ist erforderlich, da beim export und danach Import die zpool.cache
 Datei erzeugt wird. Diese muss auf dem USB Stick sein, da ZFS sonst
 nicht weitermacht.</p>
@@ -574,10 +486,10 @@ nicht weitermacht.</p>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">zpool</span> <span class="kn">import</span> <span class="nn">tank</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="installieren">
-<h3><span class="section-number">1.149.2.8. </span>Installieren<a class="headerlink" href="#installieren" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+</section>
+<section id="installieren">
+<h3><span class="section-number">1.149.2.8. </span>Installieren<a class="headerlink" href="#installieren" title="Permalink to this heading"></a></h3>
 <p>Installations Pfad angeben und Base und Kernel installieren</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">export</span> <span class="n">DESTDIR</span><span class="o">=/</span><span class="n">fixed</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cd</span> <span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="mf">7.2</span><span class="o">-</span><span class="n">RELEASE</span><span class="o">/</span><span class="n">base</span> <span class="o">&amp;&amp;</span> <span class="o">./</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
@@ -592,11 +504,11 @@ nicht weitermacht.</p>
 </ul>
 <p>Diese konnte ich aber misachten, da alles trotzdem funktioniert Sollte
 jemand wissen was hier los ist, bitte ändern</p>
-</div>
-<div class="section" id="usb-stick-setup">
-<h3><span class="section-number">1.149.2.9. </span>USB Stick Setup<a class="headerlink" href="#usb-stick-setup" title="Link zu dieser Überschrift">¶</a></h3>
-<div class="section" id="formatieren-und-partitionieren">
-<h4><span class="section-number">1.149.2.9.1. </span>formatieren und partitionieren<a class="headerlink" href="#formatieren-und-partitionieren" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="usb-stick-setup">
+<h3><span class="section-number">1.149.2.9. </span>USB Stick Setup<a class="headerlink" href="#usb-stick-setup" title="Permalink to this heading"></a></h3>
+<section id="formatieren-und-partitionieren">
+<h4><span class="section-number">1.149.2.9.1. </span>formatieren und partitionieren<a class="headerlink" href="#formatieren-und-partitionieren" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">create</span> <span class="o">-</span><span class="n">s</span> <span class="n">GPT</span> <span class="n">da0</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">add</span> <span class="o">-</span><span class="n">b</span> <span class="mi">34</span> <span class="o">-</span><span class="n">s</span> <span class="mi">16</span> <span class="o">-</span><span class="n">t</span> <span class="n">freebsd</span><span class="o">-</span><span class="n">boot</span> <span class="n">da0</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gpart</span> <span class="n">add</span> <span class="o">-</span><span class="n">b</span> <span class="mi">50</span> <span class="o">-</span><span class="n">s</span> <span class="mi">31301548</span> <span class="o">-</span><span class="n">t</span> <span class="n">freebsd</span><span class="o">-</span><span class="n">ufs</span> <span class="n">da0</span>
@@ -604,24 +516,24 @@ jemand wissen was hier los ist, bitte ändern</p>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">newfs</span> <span class="o">-</span><span class="n">O2</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">da0p2</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="usb-directory-erzeugen-und-einhangen">
-<h4><span class="section-number">1.149.2.9.2. </span>USB Directory erzeugen und einhängen<a class="headerlink" href="#usb-directory-erzeugen-und-einhangen" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="usb-directory-erzeugen-und-einhangen">
+<h4><span class="section-number">1.149.2.9.2. </span>USB Directory erzeugen und einhängen<a class="headerlink" href="#usb-directory-erzeugen-und-einhangen" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">usb</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mount</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">da0p2</span> <span class="o">/</span><span class="n">usb</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="boot-ordner">
-<h4><span class="section-number">1.149.2.9.3. </span>Boot Ordner<a class="headerlink" href="#boot-ordner" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="boot-ordner">
+<h4><span class="section-number">1.149.2.9.3. </span>Boot Ordner<a class="headerlink" href="#boot-ordner" title="Permalink to this heading"></a></h4>
 <p>Den Boot Ordner vom Installierten System auf den USB Stick copieren</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cp</span> <span class="o">-</span><span class="n">Rpv</span> <span class="o">/</span><span class="n">tank</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="kernel">
-<h4><span class="section-number">1.149.2.9.4. </span>Kernel<a class="headerlink" href="#kernel" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="kernel">
+<h4><span class="section-number">1.149.2.9.4. </span>Kernel<a class="headerlink" href="#kernel" title="Permalink to this heading"></a></h4>
 <p>Damit man booten kann muss die kernel unter /boot/kernel/kernel zu
 finden sein. Also GENERIC nach kernel verschieben.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">rmdir</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">kernel</span>
@@ -629,9 +541,9 @@ finden sein. Also GENERIC nach kernel verschieben.</p>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cd</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">kernel</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="faster-boot">
-<h4><span class="section-number">1.149.2.9.5. </span>Faster Boot<a class="headerlink" href="#faster-boot" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="faster-boot">
+<h4><span class="section-number">1.149.2.9.5. </span>Faster Boot<a class="headerlink" href="#faster-boot" title="Permalink to this heading"></a></h4>
 <p>Damit der Systemstart schneller geht, kann man noch die kernel und die
 Kernelmodule gzippen</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">gzip</span> <span class="o">*</span>   <span class="c1"># compress to have faster loading</span>
@@ -648,24 +560,24 @@ Module löschen. Definitiv benötigte Module sind:</p>
 <li><p>zfs.ko</p></li>
 <li><p>opensolaris.ko</p></li>
 </ul>
-</div>
-<div class="section" id="copy-encryption-keys">
-<h4><span class="section-number">1.149.2.9.6. </span>Copy Encryption Keys<a class="headerlink" href="#copy-encryption-keys" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="copy-encryption-keys">
+<h4><span class="section-number">1.149.2.9.6. </span>Copy Encryption Keys<a class="headerlink" href="#copy-encryption-keys" title="Permalink to this heading"></a></h4>
 <p>Den Geli Encryption Keys auf den USB Stick kopieren.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">keys</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="copy-zpool-cache">
-<h4><span class="section-number">1.149.2.9.7. </span>Copy Zpool Cache<a class="headerlink" href="#copy-zpool-cache" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="copy-zpool-cache">
+<h4><span class="section-number">1.149.2.9.7. </span>Copy Zpool Cache<a class="headerlink" href="#copy-zpool-cache" title="Permalink to this heading"></a></h4>
 <p>copy zpool.cache file to usb stick</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">zfs</span>
 <span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">cp</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">zfs</span><span class="o">/</span><span class="n">zpool</span><span class="o">.</span><span class="n">cache</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boo</span><span class="o">/</span><span class="n">zfs</span><span class="o">/</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="geli-aktivieren">
-<h4><span class="section-number">1.149.2.9.8. </span>Geli Aktivieren<a class="headerlink" href="#geli-aktivieren" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="geli-aktivieren">
+<h4><span class="section-number">1.149.2.9.8. </span>Geli Aktivieren<a class="headerlink" href="#geli-aktivieren" title="Permalink to this heading"></a></h4>
 <p>Damit man die Festplatte entschlüsseln kann muss das Geli Modul geladen
 werden und der Pfad für das Keyfile angegeben werden. Hierzu wird
 folgender Eintrag in der loader.conf auf dem USB Stick angelegt:</p>
@@ -685,25 +597,25 @@ folgender Eintrag in der loader.conf auf dem USB Stick angelegt:</p>
     <span class="n">geli_ad14p2_keyfile2_name</span><span class="o">=</span><span class="s2">&quot;/keys/ad14.key&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="zfs-aktivieren">
-<h4><span class="section-number">1.149.2.9.9. </span>ZFS Aktivieren<a class="headerlink" href="#zfs-aktivieren" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="zfs-aktivieren">
+<h4><span class="section-number">1.149.2.9.9. </span>ZFS Aktivieren<a class="headerlink" href="#zfs-aktivieren" title="Permalink to this heading"></a></h4>
 <p>ZFS Support to the loader</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">vi</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">loader</span><span class="o">.</span><span class="n">conf</span>
     <span class="n">zfs_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
     <span class="n">vfs</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">mountfrom</span><span class="o">=</span><span class="s2">&quot;zfs:tank</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="boot-time-verkurzen">
-<h4><span class="section-number">1.149.2.9.10. </span>Boot Time verkürzen<a class="headerlink" href="#boot-time-verkurzen" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="boot-time-verkurzen">
+<h4><span class="section-number">1.149.2.9.10. </span>Boot Time verkürzen<a class="headerlink" href="#boot-time-verkurzen" title="Permalink to this heading"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fixit</span><span class="o">&gt;</span> <span class="n">vi</span> <span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">loader</span><span class="o">.</span><span class="n">conf</span>
     <span class="n">autoboot_delay</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="local-fstab">
-<h4><span class="section-number">1.149.2.9.11. </span>local fstab<a class="headerlink" href="#local-fstab" title="Link zu dieser Überschrift">¶</a></h4>
+</section>
+<section id="local-fstab">
+<h4><span class="section-number">1.149.2.9.11. </span>local fstab<a class="headerlink" href="#local-fstab" title="Permalink to this heading"></a></h4>
 <p>Nach dem Mount der root Partition ist der USB Stick aus dem namespace
 raus, darum muss noch eine fstab in der root Partition der Festplatte
 angelegt werden, wo dann der Rest geladen werden muss.</p>
@@ -723,13 +635,13 @@ angelegt werden, wo dann der Rest geladen werden muss.</p>
 </div>
 <p>Jetzt ist man fertig und kann das System rebooten. Beim reboot muss man
 dann das Passwort für die ad10s1 Partition eingeben.</p>
-</div>
-</div>
-</div>
-<div class="section" id="post-installation">
-<h2><span class="section-number">1.149.3. </span>Post-Installation<a class="headerlink" href="#post-installation" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="post-steps">
-<h3><span class="section-number">1.149.3.1. </span>Post Steps<a class="headerlink" href="#post-steps" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="post-installation">
+<h2><span class="section-number">1.149.3. </span>Post-Installation<a class="headerlink" href="#post-installation" title="Permalink to this heading"></a></h2>
+<section id="post-steps">
+<h3><span class="section-number">1.149.3.1. </span>Post Steps<a class="headerlink" href="#post-steps" title="Permalink to this heading"></a></h3>
 <p>Super User Passwort setzen</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># passwd</span>
 </pre></div>
@@ -752,27 +664,27 @@ dann das Passwort für die ad10s1 Partition eingeben.</p>
 <span class="n">nameserver</span>      <span class="mf">217.237.149.205</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="zusatzliche-packages-installieren">
-<h3><span class="section-number">1.149.3.2. </span>Zusätzliche Packages installieren<a class="headerlink" href="#zusatzliche-packages-installieren" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="zusatzliche-packages-installieren">
+<h3><span class="section-number">1.149.3.2. </span>Zusätzliche Packages installieren<a class="headerlink" href="#zusatzliche-packages-installieren" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mount_cd9660 /dev/acd0 /mnt</span>
 <span class="c1"># cd /mnt/8.0-RC1/manpages &amp;&amp; ./install.sh</span>
 <span class="c1"># cd /mnt/8.0-RC1/src &amp;&amp; ./install.sh all</span>
 <span class="o">...</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="ports-collection-installieren">
-<h3><span class="section-number">1.149.3.3. </span>Ports Collection installieren<a class="headerlink" href="#ports-collection-installieren" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="ports-collection-installieren">
+<h3><span class="section-number">1.149.3.3. </span>Ports Collection installieren<a class="headerlink" href="#ports-collection-installieren" title="Permalink to this heading"></a></h3>
 <p>Hierzu bnötigt man eine funktionierende Internetkonfiguration.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mkdir /usr/ports</span>
 <span class="c1"># cd /usr/ports</span>
 <span class="c1"># portsnap fetch extract</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="rc-conf">
-<h3><span class="section-number">1.149.3.4. </span>rc.conf<a class="headerlink" href="#rc-conf" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="rc-conf">
+<h3><span class="section-number">1.149.3.4. </span>rc.conf<a class="headerlink" href="#rc-conf" title="Permalink to this heading"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ifconfig_re0</span><span class="o">=</span><span class="s2">&quot;inet 192.168.0.133  netmask 255.255.255.0&quot;</span>    <span class="c1"># hier natürlich das entsprechende Interface und IP wählen.</span>
 <span class="n">defaultrouter</span><span class="o">=</span><span class="s2">&quot;192.168.0.1&quot;</span>                 <span class="c1"># Auch hier wirder dementsprechend anpassen</span>
 <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;hostname.domain.de&quot;</span>
@@ -782,9 +694,9 @@ dann das Passwort für die ad10s1 Partition eingeben.</p>
 <span class="n">syslogd_flags</span><span class="o">=</span><span class="s2">&quot;-ss&quot;</span>     <span class="c1"># disable logging from remote host</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="directory-permissions-setzen">
-<h3><span class="section-number">1.149.3.5. </span>Directory Permissions setzen<a class="headerlink" href="#directory-permissions-setzen" title="Link zu dieser Überschrift">¶</a></h3>
+</section>
+<section id="directory-permissions-setzen">
+<h3><span class="section-number">1.149.3.5. </span>Directory Permissions setzen<a class="headerlink" href="#directory-permissions-setzen" title="Permalink to this heading"></a></h3>
 <p>Man kann jetzt noch die Directory Permissions von root und den
 systemusern verbessern.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># chmod 700 /root</span>
@@ -794,57 +706,40 @@ systemusern verbessern.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-08-03</p>
-</div>
-</div>
-</div>
+<p>Zuletzt geändert: 2023-07-21</p>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../anwendungen/anwendungen_index.html" class="btn btn-neutral float-right" title="2. Anwendungen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="zfs.txt.html" class="btn btn-neutral float-left" title="1.148. ZFS auf FreeBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../anwendungen/anwendungen_index.html" class="btn btn-neutral float-right" title="2. Anwendungen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, BSDForen.de.
-
-    </p>
+    <p>&#169; Copyright 2023, BSDForen.de.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

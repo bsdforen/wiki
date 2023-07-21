@@ -1,96 +1,50 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>1.50. Festplattenverschlüsselung mit pefs &mdash; BSDForen.de 1.0 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="1.51. Film-DVD erstellen" href="film-dvd_erstellen.txt.html" />
     <link rel="prev" title="1.49. Festplattenverschlüsselung mit NetBSD" href="festplattenverschluesselung_mit_netbsd.txt.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> BSDForen.de
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            BSDForen.de
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="howto_index.html">1. Howto</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3d-grafik-beschleunigung.txt.html">1.1. 3D-Grafik-Beschleunigung</a></li>
@@ -263,81 +217,39 @@
 <li class="toctree-l1"><a class="reference internal" href="../dragonflybsd/dragonflybsd_index.html">8. DragonFlyBSD</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BSDForen.de</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="howto_index.html"><span class="section-number">1. </span>Howto</a> &raquo;</li>
-        
-      <li><span class="section-number">1.50. </span>Festplattenverschlüsselung mit pefs</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="howto_index.html"><span class="section-number">1. </span>Howto</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.50. </span>Festplattenverschlüsselung mit pefs</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/howto/festplattenverschluesselung_mit_pefs.txt.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="festplattenverschlusselung-mit-pefs">
-<h1><span class="section-number">1.50. </span>Festplattenverschlüsselung mit pefs<a class="headerlink" href="#festplattenverschlusselung-mit-pefs" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="sidebar">
+             
+  <section id="festplattenverschlusselung-mit-pefs">
+<h1><span class="section-number">1.50. </span>Festplattenverschlüsselung mit pefs<a class="headerlink" href="#festplattenverschlusselung-mit-pefs" title="Permalink to this heading"></a></h1>
+<aside class="sidebar">
 <p class="sidebar-title">Info</p>
 <img alt="../_images/logo-freebsd.png" src="../_images/logo-freebsd.png" />
 <img alt="../_images/logo-netbsd.png" src="../_images/logo-netbsd.png" />
 <img alt="../_images/logo-dragonflybsd.png" src="../_images/logo-dragonflybsd.png" />
-</div>
+</aside>
 <p><code class="docutils literal notranslate"><span class="pre">pefs</span></code> stellt eine stapelbare Dateisystemverschlüsselung zur
 Verfügung. Damit ist möglich, ohne weiteres mit Hilfe eines Passworts,
 eine kryptografische Transformation von Daten und Dateinamen zu
@@ -346,8 +258,8 @@ BSD-Stil (inkompatibel mit <code class="docutils literal notranslate"><span clas
 <p>Ergänzt wird <code class="docutils literal notranslate"><span class="pre">pefs</span></code> durch das Modul <code class="docutils literal notranslate"><span class="pre">pam_pefs</span></code>, welches erlaubt, das
 Passwort an PAM beim Login zu übergeben und so den <code class="docutils literal notranslate"><span class="pre">pefs</span></code>-Stapel zu
 initialisieren.</p>
-<div class="section" id="vorteile-gegenuber-anderen-verschlusselungsmethoden">
-<h2><span class="section-number">1.50.1. </span>Vorteile gegenüber anderen Verschlüsselungsmethoden<a class="headerlink" href="#vorteile-gegenuber-anderen-verschlusselungsmethoden" title="Link zu dieser Überschrift">¶</a></h2>
+<section id="vorteile-gegenuber-anderen-verschlusselungsmethoden">
+<h2><span class="section-number">1.50.1. </span>Vorteile gegenüber anderen Verschlüsselungsmethoden<a class="headerlink" href="#vorteile-gegenuber-anderen-verschlusselungsmethoden" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Der Rechner kann bis zum Login gestartet werden und kann hiermit ohne
 Hindernisse für andere Nutzer zur Verfügung stehen, die kein Passwort
@@ -359,9 +271,9 @@ zu entschlüsseln.</p></li>
 kann man seine Daten schützen, indem man einen Pseudonutzer anlegt,
 den man herausgibt und nicht den echten.</p></li>
 </ol>
-</div>
-<div class="section" id="vorgehen">
-<h2><span class="section-number">1.50.2. </span>Vorgehen<a class="headerlink" href="#vorgehen" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="vorgehen">
+<h2><span class="section-number">1.50.2. </span>Vorgehen<a class="headerlink" href="#vorgehen" title="Permalink to this heading"></a></h2>
 <p>Ich erkläre hier wie man es mit <code class="docutils literal notranslate"><span class="pre">pefs</span></code> und <code class="docutils literal notranslate"><span class="pre">pam_pefs</span></code> schafft, sein
 <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> für sich persönlich zu verschlüsseln. Man kann diese Anleitung
 natürlich beliebig variieren, je nach Geschmack.</p>
@@ -376,17 +288,17 @@ Login-Passwort tut das nicht. Ihr könnt Euch dennoch mit dem
 Login-Passwort einloggen, aber nur dann, wenn mindestens ein Mal das
 PEFS-Passwort (beim Login für PAM) eingebeben worden ist.</p>
 <p>Die Schritte muss man natürlich aus Administrator durchführen.</p>
-</div>
-<div class="section" id="vorsichtsmasznahmen">
-<h2><span class="section-number">1.50.3. </span>Vorsichtsmaßnahmen<a class="headerlink" href="#vorsichtsmasznahmen" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="vorsichtsmasznahmen">
+<h2><span class="section-number">1.50.3. </span>Vorsichtsmaßnahmen<a class="headerlink" href="#vorsichtsmasznahmen" title="Permalink to this heading"></a></h2>
 <p>Bitte beachtet, dass es um Daten und Dateien geht. Macht unbedingt eine
 Sicherung. Verlust von wichtigen Daten schmerzt immer. Ihr seid hiermit
 gewarnt, dass man nicht einfach blind auf meine Anleitung verlassen
 sollte und dass man leicht Fehler machen kann, die zum Datenverlust
 führen können.</p>
-</div>
-<div class="section" id="installation">
-<h2><span class="section-number">1.50.4. </span>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="installation">
+<h2><span class="section-number">1.50.4. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">pefs</span></code> installiert man mit dem Port
 <a class="reference external" href="https://www.google.com/search?q=sysutils/pefs-kmod&amp;btnI=lucky">sysutils/pefs-kmod</a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">portmaster</span> <span class="o">-</span><span class="n">d</span> <span class="n">sysutils</span><span class="o">/</span><span class="n">pefs</span><span class="o">-</span><span class="n">kmod</span>
@@ -398,9 +310,9 @@ man eine CPU hat, die AESNI unterstützt.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aesni_load</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="home-vorbereiten">
-<h2><span class="section-number">1.50.5. </span>$HOME vorbereiten<a class="headerlink" href="#home-vorbereiten" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="home-vorbereiten">
+<h2><span class="section-number">1.50.5. </span>$HOME vorbereiten<a class="headerlink" href="#home-vorbereiten" title="Permalink to this heading"></a></h2>
 <p>Bitte hier genau aufpassen. Schaut bitte auch was tatsächlich Euer
 <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> ist. Bei einigen FreeBSD-Installationen ist es oft
 <code class="docutils literal notranslate"><span class="pre">/usr/home/myuser</span></code>. Ich benutze hier <code class="docutils literal notranslate"><span class="pre">/home/myuser</span></code>. PEFS geht hier
@@ -432,9 +344,9 @@ werden. Dazu setzt man nur die Permissions korrekt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chown</span> <span class="n">myuser</span><span class="p">:</span><span class="n">myuser</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myuser</span><span class="o">/.</span><span class="n">pefs</span><span class="o">.</span><span class="n">db</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="daten-auf-das-verschlusselte-home-kopieren">
-<h2><span class="section-number">1.50.6. </span>Daten auf das verschlüsselte $HOME kopieren<a class="headerlink" href="#daten-auf-das-verschlusselte-home-kopieren" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="daten-auf-das-verschlusselte-home-kopieren">
+<h2><span class="section-number">1.50.6. </span>Daten auf das verschlüsselte $HOME kopieren<a class="headerlink" href="#daten-auf-das-verschlusselte-home-kopieren" title="Permalink to this heading"></a></h2>
 <p>Bitte beachtet den letzten Slash am Quellpfad!!</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">-</span><span class="n">Rp</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myuser</span><span class="o">.</span><span class="n">bak</span><span class="o">/</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myuser</span>
 </pre></div>
@@ -444,9 +356,9 @@ wenn man es nicht jetzt schon aus der Sicherung fischen muss, falls
 etwas schief gehen sollte. Denkt aber bitte daran, es zu löschen, wenn
 alles glatt gegangen ist. Es sind schließlich private Daten, die
 verschlüsselungswürdig sind.</p>
-</div>
-<div class="section" id="pam-vorbereiten">
-<h2><span class="section-number">1.50.7. </span>PAM vorbereiten<a class="headerlink" href="#pam-vorbereiten" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="pam-vorbereiten">
+<h2><span class="section-number">1.50.7. </span>PAM vorbereiten<a class="headerlink" href="#pam-vorbereiten" title="Permalink to this heading"></a></h2>
 <p>PAM wird so eingestellt, dass mit dem oben angegebenen <code class="docutils literal notranslate"><span class="pre">pefs</span></code>-Passwort
 ein entschlüsselnder Mount durchgeführt wird und beim normalen
 <code class="docutils literal notranslate"><span class="pre">passwd</span></code>-Passwort einfach ein Login ohne weiteres Entschlüsseln
@@ -475,9 +387,9 @@ darstellt.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">pefs</span> <span class="n">mount</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myuser</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myuser</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="testen-des-logins">
-<h2><span class="section-number">1.50.8. </span>Testen des Logins<a class="headerlink" href="#testen-des-logins" title="Link zu dieser Überschrift">¶</a></h2>
+</section>
+<section id="testen-des-logins">
+<h2><span class="section-number">1.50.8. </span>Testen des Logins<a class="headerlink" href="#testen-des-logins" title="Permalink to this heading"></a></h2>
 <p>Erstmal alle Schlüssel entfernen. Der <code class="docutils literal notranslate"><span class="pre">pefs</span></code>-Mountpoint bleibt dabei
 erhalten.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pefs</span> <span class="n">flushkeys</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myuser</span>
@@ -509,56 +421,39 @@ gehen wird.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
 </ul>
-<p>Zuletzt geändert: 2021-08-03</p>
-</div>
-</div>
+<p>Zuletzt geändert: 2023-07-21</p>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="film-dvd_erstellen.txt.html" class="btn btn-neutral float-right" title="1.51. Film-DVD erstellen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="festplattenverschluesselung_mit_netbsd.txt.html" class="btn btn-neutral float-left" title="1.49. Festplattenverschlüsselung mit NetBSD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="film-dvd_erstellen.txt.html" class="btn btn-neutral float-right" title="1.51. Film-DVD erstellen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, BSDForen.de.
-
-    </p>
+    <p>&#169; Copyright 2023, BSDForen.de.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
