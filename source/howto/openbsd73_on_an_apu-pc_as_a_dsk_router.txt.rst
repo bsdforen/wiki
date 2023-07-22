@@ -83,8 +83,10 @@ Installing OpenBSD
 If you have done it once, you can do this in your sleep. If not, do not hesitate to press CTRL+C and
 CTRL+D to start the installation over.
 
-* I must apologize, I do not remember the order in which those questions came up. * One thing you
-  will have to decide on is the HOSTNAME, I have decided to use router.dettus.privates.
+* I must apologize, I do not remember the order in which those questions came up.
+
+* One thing you will have to decide on is the HOSTNAME, I have decided to use
+  router.dettus.privates.
 
 The (W)hole Disk can be used for OpenBSD, I wanted to create a (C)ustom Layout: In the disklabel
 editor, I created three slices: ::
